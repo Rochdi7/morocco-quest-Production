@@ -1,0 +1,152 @@
+<?php
+// Set the deadline to March 22, 2025 at 23:59:59
+$target_date = strtotime("March 22, 2025 23:59:59");
+
+// Get the current server time
+$current_time = time();
+
+// Calculate remaining time in seconds
+$remaining_time = max(0, $target_date - $current_time);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Full Page Background */
+        body {
+            background: url('https://img.freepik.com/premium-vector/yellow-image-shows-construction-equipment-around-computer-screen-displaying-website-const_1135235-1972.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Dark Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Main Content */
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: nowrap;
+        }
+
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 20px 30px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 50px; /* Bigger numbers */
+            font-weight: bold;
+            min-width: 70px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .countdown {
+                flex-wrap: nowrap;
+                gap: 8px;
+                justify-content: center;
+            }
+
+            .countdown-box {
+                padding: 15px 18px;
+                font-size: 30px;
+                min-width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Under Construction</h1>
+        <p>We're working hard to bring you an amazing experience!</p>
+
+        <!-- Countdown Timer -->
+        <div class="countdown">
+            <div class="countdown-box" id="days">00</div>
+            <div class="countdown-box" id="hours">00</div>
+            <div class="countdown-box" id="minutes">00</div>
+        </div>
+    </div>
+
+    <script>
+        // Get the exact remaining time from the server
+        let remainingTime = <?php echo $remaining_time; ?>;
+
+        function updateCountdown() {
+            if (remainingTime <= 0) {
+                clearInterval(timer);
+                document.querySelector("h1").innerText = "We're Live!";
+                document.querySelector(".countdown").style.display = "none";
+                return;
+            }
+
+            let days = Math.floor(remainingTime / (60 * 60 * 24));
+            let hours = Math.floor((remainingTime % (60 * 60 * 24)) / (60 * 60));
+            let minutes = Math.floor((remainingTime % (60 * 60)) / 60);
+
+            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+
+            remainingTime--; // Reduce time by 1 second
+        }
+
+        // Immediately update countdown on page load
+        updateCountdown();
+
+        // Ensure countdown updates every second correctly
+        let timer = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+@extends('layouts.app2')
+
+@section('title', 'Explore Morocco Destinations | Private Morocco Tours & Exclusive Travel')
+
+@section('page_description',
+    'Explore top destinations in Morocco with Morocco Quest, offering private tours morocco,
+    small group tours morocco, exclusive morocco travel experiences, and vip morocco tours across Marrakech, Fes, the Sahara
+    Desert, and beyond.')
+
+@section('keywords',
+    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour
+    morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours,
+    morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to
+    travel to morocco, morocco travel visa requirements')
+
+
+@section('content')
+    <main> {{-- Semantic <main> tag --}}
+
+        {{-- Breadcrumb Section --}}
+        <section class="vs-breadcrumb"
+            data-bg-src="{{ asset('assets/img/rabat-royal-palace-tourists-guided-walking-tour.webp') }}">
+            <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
+                class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
+
+            <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="Decorative hot air balloon icon"
+                class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
+
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="breadcrumb-content">
+                            <h1 class="breadcrumb-title">Morocco Destinations & Private Tours</h1>
+                            <p class="breadcrumb-subtitle" style="color: white;">
+                                Small group tours morocco across the most iconic cities.
+                            </p>
+
+                            <figcaption class="image-caption visually-hidden">
+                                A group of tourists approaching the Royal Palace in Rabat during a guided walking tour
+                                on a clear day.
+                            </figcaption>
+
+                            <p class="visually-hidden">
+                                A guided group tour exploring the surroundings of the Royal Palace in Rabat, Morocco.
+                                This iconic landmark is a must-see attraction, known for its elegant architecture,
+                                historical significance, and serene atmosphere.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {{-- Main Destinations Listing Section --}}
+        <section class="vs-destination space">
+            <div class="container">
+                {{-- Check if $placesData exists and has items --}}
+                @if (isset($placesData) && $placesData->count() > 0)
+                    {{-- Row containing destination cards --}}
+                    {{-- Schema.org CollectionPage added via JSON-LD in the 'structured_data' section --}}
+                    <div class="row gx-3 gy-3">
+                        {{-- Loop through the paginated destination data --}}
+                        @foreach ($placesData as $place)
+                            {{-- $place->slug: URL-friendly identifier for the destination (e.g., "marrakech") --}}
+                            {{-- $place->name: Display name of the destination (e.g., "Marrakech") --}}
+                            {{-- $place->image_path: Path to the destination image relative to storage/app/public --}}
+                            {{-- $place->tours_count: Number of tours available in this destination --}}
+                            <div class="col-md-6 col-lg-3">
+                                {{-- Link to the page showing tours filtered by this destination --}}
+                                <a href="{{ route('tours.byPlace', ['slug' => $place->slug]) }}"
+                                    class="destination-box-2 d-block text-decoration-none"
+                                    aria-label="View tours in {{ e($place->name) }}"> {{-- Added e() for safety --}}
+                                    <figure class="destination-thumb">
+                                        @php
+                                            $imageUrl = asset('assets/img/destination/destination-1-1.png');
+                                            if (!empty($place->image_path)) {
+                                                $cleanedPath = trim(str_replace('\\', '/', $place->image_path), '/');
+                                                if (Storage::disk('public')->exists($cleanedPath)) {
+                                                    $imageUrl = asset('public/storage/' . $cleanedPath);
+                                                }
+                                            }
+                                        @endphp
+
+
+                                        {{-- Destination Image: Added loading="lazy", dynamic alt, onerror fallback --}}
+                                        <img src="{{ $imageUrl }}" alt="Explore tours in {{ e($place->name) }}, Morocco"
+                                            {{--
+                                                Added e() for safety --}} class="w-100" {{-- Ensure responsiveness --}} loading="lazy"
+                                            {{-- Added Lazy Loading --}}
+                                            onerror="this.onerror=null;this.src='{{ asset('assets/img/destination/destination-1-1.png') }}';"
+                                            {{-- Fallback on error --}} {{-- width="300" height="400" --}} {{-- CRITICAL: Add
+                                                actual width/height to prevent layout shift --}} />
+                                    </figure>
+                                    <div class="destination-content">
+                                        {{-- Destination Name (H5 appropriate within card) --}}
+                                        <h5 class="title">
+                                            {{ e($place->name) }}
+                                        </h5>
+                                        {{-- Tour Count Info --}}
+                                        <span class="info">
+                                            {{ $place->tours_count ?? 0 }}
+                                            {{ Str::plural('Tour', $place->tours_count ?? 0) }}
+                                            Available
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    {{-- Pagination Links --}}
+                    {{-- Check if $placesData is a paginator instance before trying to render links --}}
+                    @if ($placesData instanceof \Illuminate\Contracts\Pagination\LengthAwarePaginator)
+                        <div class="mt-4 d-flex justify-content-center">
+                            {{-- $placesData->links(): Renders Laravel's pagination view --}}
+                            {{ $placesData->links() }}
+                        </div>
+                    @endif
+                @else
+                    {{-- Fallback message if no destinations are found --}}
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>No destinations available at the moment. Please check back soon!</p>
+                            <a href="{{ route('home') ?? url('/') }}" class="vs-btn mt-3">Back to Home</a>
+                        </div>
+                    </div>
+                @endif
+            </div>
+        </section>
+    </main>
+@endsection
