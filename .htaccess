@@ -1,0 +1,181 @@
+<IfModule mod_headers.c>
+    <Files "sitemap.xml">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </Files>
+</IfModule>
+
+# =====================================================
+# Morocco Quest – Laravel .htaccess (GoDaddy Optimized)
+# =====================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # -------------------------------------------------
+    # Force HTTPS + non-www
+    # -------------------------------------------------
+    RewriteCond %{HTTPS} !=on [OR]
+    RewriteCond %{HTTP_HOST} ^www\.morocco-quest\.com$ [NC]
+    RewriteRule ^ https://morocco-quest.com%{REQUEST_URI} [L,R=301]
+
+    # -------------------------------------------------
+    # Remove trailing slash (SEO)
+    # -------------------------------------------------
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # -------------------------------------------------
+    # Authorization header fix (Laravel)
+    # -------------------------------------------------
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # -------------------------------------------------
+    # Laravel Front Controller
+    # -------------------------------------------------
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# =====================================================
+# Favicons & Manifest Fallbacks
+# =====================================================
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} ^/favicon\.ico$ [OR]
+    RewriteCond %{REQUEST_URI} ^/favicon-16x16\.png$ [OR]
+    RewriteCond %{REQUEST_URI} ^/favicon-32x32\.png$
+    RewriteRule ^ assets/img/favicons/favicon-32x32.png [L]
+
+    RewriteCond %{REQUEST_URI} ^/apple-touch-icon(?:-precomposed)?(?:-\d+x\d+)?\.png$
+    RewriteRule ^ assets/img/favicons/apple-touch-icon.png [L]
+
+    RewriteCond %{REQUEST_URI} ^/(site\.webmanifest|manifest\.json)$
+    RewriteRule ^ assets/img/favicons/site.webmanifest [L]
+</IfModule>
+
+# =====================================================
+# PERFORMANCE – Browser Caching (VERY IMPORTANT)
+# =====================================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Default
+    ExpiresDefault "access plus 7 days"
+
+    # CSS & JS
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+
+    # Images
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    ExpiresByType application/x-font-ttf "access plus 1 year"
+
+    # JSON / API
+    ExpiresByType application/json "access plus 0 seconds"
+</IfModule>
+
+# =====================================================
+# CACHE-CONTROL HEADERS
+# =====================================================
+
+<IfModule mod_headers.c>
+    # Static assets
+    <FilesMatch "\.(css|js|mjs)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.(png|jpe?g|gif|webp|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.(woff2?|ttf|eot|otf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Disable cache for HTML (Laravel pages)
+    <FilesMatch "\.(html)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Remove ETags (avoid cache conflicts)
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# =====================================================
+# COMPRESSION (GZIP)
+# =====================================================
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/ld+json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# =====================================================
+# SECURITY HEADERS
+# =====================================================
+
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always unset Server
+    Header always unset X-Powered-By
+</IfModule>
+
+# =====================================================
+# DIRECTORY SECURITY
+# =====================================================
+
+Options -Indexes
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# =====================================================
+# FONT MIME TYPES + CORS
+# =====================================================
+
+<IfModule mod_mime.c>
+    AddType font/woff .woff
+    AddType font/woff2 .woff2
+    AddType application/x-font-ttf .ttf
+    AddType application/vnd.ms-fontobject .eot
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(woff2?|ttf|eot|otf)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
