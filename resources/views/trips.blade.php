@@ -2,7 +2,9 @@
 {{-- Adjust extends and section names as per your project structure --}}
 @extends('layouts.app') {{-- Or your main layout file --}}
 
-@section('title', 'Our Trips') {{-- Set the page title --}}
+@section('title', 'Morocco Trips & Private Tours | Marrakech Desert Tours - Morocco Quest')
+@section('description', 'Multi-day morocco trips: morocco private tours, marrakech desert tours, sahara desert tour from marrakech, and luxury desert tours marrakech.')
+@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco')
 
 @section('content')
 

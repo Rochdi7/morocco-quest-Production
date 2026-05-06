@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $category->name)
+@section('title', $category->name . ' | Best Morocco Itinerary - Morocco Quest')
+@section('description', $category->name . ' articles on best morocco itinerary, marrakech desert tours, and morocco private tours.')
+@section('keywords', 'best morocco itinerary, marrakech desert tours, morocco private tours, sahara desert tour from marrakech, ' . Str::lower($category->name))
 
 @section('content')
 <div class="container py-5">

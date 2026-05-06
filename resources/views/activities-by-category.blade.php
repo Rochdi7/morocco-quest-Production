@@ -1,7 +1,9 @@
 @extends('layouts.app2') {{-- Or your main layout file --}}
 
 {{-- Dynamic title using the category name --}}
-@section('title', 'Activities in ' . $category->name)
+@section('title', $category->name . ' in Morocco | Marrakech Desert Tours - Morocco Quest')
+@section('description', $category->name . ' activities in Morocco. Marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.')
+@section('keywords', 'marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, morocco private tours, ' . Str::lower($category->name))
 
 @section('content')
     <main>

@@ -8,9 +8,50 @@
     <title>@yield('title', 'Morocco Quest')</title> {{-- Dynamic Title --}}
     <meta name="author" content="https://is.gd/a33FWT" />
     {{-- Consider making description/keywords dynamic per page using @yield --}}
-    <meta name="description" content="@yield('description', 'Morocco Quest - Your adventure starts here. Explore multi-day and one-day tours across Morocco.')" />
-    <meta name="keywords" content="@yield('keywords', 'Morocco, Quest, Tours, Travel, Marrakech, Fes, Desert, Atlas Mountains, Day Trips, Multi-day Tours')" />
+    <meta name="description" content="@yield('description', 'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.')" />
+    <meta name="keywords" content="@yield('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco')" />
     <meta name="robots" content="INDEX,FOLLOW" />
+
+    {{-- Canonical --}}
+    <link rel="canonical" href="@yield('canonical', url()->current())" />
+
+    {{-- Open Graph --}}
+    <meta property="og:site_name" content="Morocco Quest" />
+    <meta property="og:type" content="@yield('og_type', 'website')" />
+    <meta property="og:title" content="@yield('og_title', trim(strip_tags($__env->yieldContent('title', 'Morocco Quest'))))" />
+    <meta property="og:description" content="@yield('og_description', trim(strip_tags($__env->yieldContent('description', 'Morocco private tours and marrakech desert tours.'))))" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:image" content="@yield('og_image', asset('assets/img/logo-bg.png')) " />
+    <meta property="og:locale" content="en_US" />
+
+    {{-- Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@yield('og_title', trim(strip_tags($__env->yieldContent('title', 'Morocco Quest'))))" />
+    <meta name="twitter:description" content="@yield('og_description', trim(strip_tags($__env->yieldContent('description', 'Morocco private tours and marrakech desert tours.'))))" />
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/img/logo-bg.png'))" />
+
+    {{-- Global Organization JSON-LD --}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Morocco Quest",
+      "description": "Best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.",
+      "url": "{{ url('/') }}",
+      "logo": "{{ asset('assets/img/logo-bg.png') }}",
+      "image": "{{ asset('assets/img/logo-bg.png') }}",
+      "areaServed": {"@type": "Country", "name": "Morocco"},
+      "knowsAbout": [
+        "morocco private tours",
+        "marrakech desert tours",
+        "sahara desert tour from marrakech",
+        "luxury desert tours marrakech",
+        "private tours in morocco"
+      ]
+    }
+    </script>
+
+    @stack('jsonld')
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

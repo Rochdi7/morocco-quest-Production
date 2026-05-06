@@ -2,7 +2,9 @@
 @extends('layouts.app2')
 
 {{-- Set the dynamic page title --}}
-@section('title', $trip->title ?? 'Trip Details') {{-- Changed $tour to $trip, updated fallback --}}
+@section('title', ($trip->title ?? 'Trip Details') . ' | Morocco Private Tours')
+@section('description', Str::limit(strip_tags($trip->overview ?? ''), 140) . ' Morocco private tours and marrakech desert tours.')
+@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, ' . Str::lower($trip->title ?? ''))
 
 @section('content')
 

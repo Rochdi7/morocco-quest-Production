@@ -2,7 +2,49 @@
 @extends('layouts.app2')
 
 {{-- Set the dynamic page title --}}
-@section('title', $tour->title ?? 'Tour Details')
+@section('title', ($tour->title ?? 'Tour Details') . ' | Morocco Private Tours')
+@section('description', ($tour->subtitle ?? Str::limit(strip_tags($tour->overview ?? ''), 140)) . ' Private morocco tours and marrakech desert tours. Sahara desert tour from marrakech.')
+@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco, ' . Str::lower($tour->title ?? ''))
+
+@php
+    $tourSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'TouristTrip',
+        'name' => $tour->title ?? 'Morocco Private Tour',
+        'description' => Str::limit(strip_tags($tour->overview ?? $tour->subtitle ?? 'Morocco private tour and marrakech desert tour.'), 300),
+        'url' => url()->current(),
+        'touristType' => ['Adventure', 'Cultural', 'Desert', 'Luxury'],
+        'itinerary' => $tour->title ?? '',
+        'provider' => [
+            '@type' => 'TravelAgency',
+            'name' => 'Morocco Quest',
+            'url' => url('/'),
+        ],
+    ];
+    if (!empty($tour->price_adult)) {
+        $tourSchema['offers'] = [
+            '@type' => 'Offer',
+            'price' => (string) $tour->price_adult,
+            'priceCurrency' => 'USD',
+            'availability' => 'https://schema.org/InStock',
+            'url' => url()->current(),
+        ];
+    }
+    $tourBreadcrumb = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Marrakech Desert Tours', 'item' => url('/tours')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $tour->title ?? 'Tour', 'item' => url()->current()],
+        ],
+    ];
+@endphp
+
+@push('jsonld')
+<script type="application/ld+json">{!! json_encode($tourSchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+<script type="application/ld+json">{!! json_encode($tourBreadcrumb, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush
 
 @section('content')
 

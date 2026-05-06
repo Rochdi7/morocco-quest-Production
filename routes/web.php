@@ -14,6 +14,8 @@ use App\Http\Controllers\TripController;
 use App\Models\Blog;
 use App\Models\Tour;
 use App\Models\Activity;
+use App\Models\ActivityCategory;
+use App\Models\Place;
 use App\Models\Category; // Keep if CategoryController uses it directly
 use App\Models\Tag;       // Keep if TagController uses it directly
 
@@ -90,3 +92,33 @@ Route::post('/contact/submit', [InquiryController::class, 'storeContactInquiry']
 // require __DIR__.'/auth.php'; // Common location for auth routes
 Route::post('/trips/{slug}/inquire', [InquiryController::class, 'storeTripInquiry'])->name('trip.inquiry');
 Route::post('/inquire/{type}/{slug}', [InquiryController::class, 'storeUnifiedInquiry'])->name('inquiry.submit');
+
+// --- SEO: sitemap.xml and robots.txt ---
+Route::get('/sitemap.xml', function () {
+    $tours = Tour::select('slug', 'updated_at')->orderBy('updated_at', 'desc')->get();
+    $activities = Activity::select('slug', 'updated_at')->orderBy('updated_at', 'desc')->get();
+    $activityCategories = ActivityCategory::select('slug', 'updated_at')->get();
+    $blogs = Blog::select('slug', 'updated_at')->orderBy('updated_at', 'desc')->get();
+    $categories = Category::select('slug')->get();
+    $tags = Tag::select('slug')->get();
+    $places = Place::select('slug')->get();
+
+    return response()
+        ->view('sitemap', compact('tours', 'activities', 'activityCategories', 'blogs', 'categories', 'tags', 'places'))
+        ->header('Content-Type', 'application/xml; charset=utf-8');
+})->name('sitemap');
+
+Route::get('/robots.txt', function () {
+    $content = "User-agent: *\n"
+        . "Allow: /\n"
+        . "Disallow: /admin/\n"
+        . "Disallow: /login\n"
+        . "Disallow: /register\n"
+        . "Disallow: /password/\n"
+        . "Disallow: /storage/framework/\n"
+        . "Disallow: /vendor/\n"
+        . "\n"
+        . "Sitemap: " . url('/sitemap.xml') . "\n";
+
+    return response($content, 200)->header('Content-Type', 'text/plain; charset=utf-8');
+})->name('robots');

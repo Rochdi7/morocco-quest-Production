@@ -2,15 +2,82 @@
 
 @extends('layouts/app') {{-- Use the app.blade.php layout --}}
 
-@section('title', 'Morocco Quest - Find Your Holiday With Us') {{-- Set the title for this page --}}
+@section('title', 'Morocco Private Tours | Marrakech Desert Tours & Sahara - Morocco Quest')
+@section('description', 'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.')
+@section('keywords', 'morocco private tours, private morocco tours, marrakech desert tours, desert tours marrakech, sahara desert tour from marrakech, luxury desert tours marrakech, sahara desert tours morocco, private tours in morocco, best morocco private tour company, private tour morocco')
 
-{{-- Optional: Set meta description/keywords specifically for this page --}}
-{{--
-@section('description', 'Discover unforgettable holidays in Morocco with Morocco Quest. Explore top activities,
-multi-day tours, one-day trips, and more. Book your adventure today!')
-@section('keywords', 'Morocco tours, Morocco holidays, Marrakech tours, Fes cooking class, desert safari, Atlas
-Mountains, Morocco travel agency')
---}}
+@push('jsonld')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Morocco Quest",
+  "url": "{{ url('/') }}",
+  "description": "Morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ url('/tours/search') }}?query={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Marrakech Desert Tours and Morocco Private Tours",
+  "description": "Marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"morocco private tours","url":"{{ url('/tours') }}"},
+    {"@type":"ListItem","position":2,"name":"marrakech desert tours","url":"{{ url('/tours') }}"},
+    {"@type":"ListItem","position":3,"name":"sahara desert tour from marrakech","url":"{{ url('/tours') }}"},
+    {"@type":"ListItem","position":4,"name":"luxury desert tours marrakech","url":"{{ url('/tours') }}"},
+    {"@type":"ListItem","position":5,"name":"private tours in morocco","url":"{{ url('/tours') }}"},
+    {"@type":"ListItem","position":6,"name":"best morocco private tour company","url":"{{ url('/about') }}"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the best Marrakech desert tours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our most popular marrakech desert tours include the sahara desert tour from marrakech to Merzouga (3 to 4 days), luxury desert tours marrakech with private camp at Erg Chebbi, and the morocco desert tours from marrakech that combine the Atlas Mountains with the dunes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer private tours in Morocco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All our morocco private tours include a private vehicle, English-speaking driver, and tailor-made itineraries. We are recognized as one of the best morocco private tour company options for couples, families, and small groups."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long is a sahara desert tour from Marrakech?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A sahara desert tour from marrakech typically takes 3 days for Merzouga round trip, or 4 days for a deeper desert experience. We also offer luxury sahara desert tour from marrakech with premium camps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is the best morocco itinerary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best morocco itinerary depends on your time. The most popular is morocco itinerary one week (best 7 day morocco itinerary) covering Marrakech and the Sahara. For longer trips we recommend a morocco 14 day itinerary including imperial cities and the desert."
+      }
+    }
+  ]
+}
+</script>
+@endpush
 
 @section('content') {{-- Define the content section --}}
 
@@ -815,6 +882,35 @@ Mountains, Morocco travel agency')
                 </section>
 
                 <!--================= Blog Area end =================-->
+
+                <!--================= SEO Content (static, keyword-rich) =================-->
+                <section class="space-extra-bottom" aria-label="About our morocco private tours">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="title-area text-center">
+                                    <span class="sec-subtitle">Why Travel with Morocco Quest</span>
+                                    <h2 class="sec-title">Morocco Private Tours &amp; Marrakech Desert Tours</h2>
+                                </div>
+                                <p>Morocco Quest specialises in <strong>morocco private tours</strong> and <strong>marrakech desert tours</strong> tailored for travellers who want the real Morocco without compromise. Whether you are dreaming of a <strong>sahara desert tour from marrakech</strong>, a relaxed <strong>luxury desert tours marrakech</strong> escape, or a multi-city itinerary covering imperial cities, every journey is fully private with an English-speaking driver-guide.</p>
+                                <p>As one of the <strong>best morocco private tour company</strong> options for couples, families, and small groups, we craft <strong>private tours in morocco</strong> that move at your pace. Our <strong>desert tours marrakech</strong> reach the iconic Erg Chebbi dunes near Merzouga, with handpicked kasbahs along the way and a luxury camp under the stars.</p>
+                                <h3 class="h5 mt-4">Most Requested Itineraries</h3>
+                                <ul>
+                                    <li><strong>Marrakech desert tour 3 days</strong> &mdash; the most popular short Sahara escape</li>
+                                    <li><strong>Marrakech desert tours 4 days</strong> &mdash; one full day in the dunes</li>
+                                    <li><strong>Best 7 day morocco itinerary</strong> &mdash; Marrakech + Sahara, the classic morocco itinerary one week route</li>
+                                    <li><strong>Morocco 14 day itinerary</strong> &mdash; full country, north to south</li>
+                                    <li><strong>Fes to marrakech desert tour</strong> &mdash; one-way Sahara crossing, no backtracking</li>
+                                    <li><strong>Luxury sahara desert tour from marrakech</strong> &mdash; premium camp, fine dining, private 4x4</li>
+                                </ul>
+                                <h3 class="h5 mt-4">Departure Cities</h3>
+                                <p>We run <strong>morocco desert tours from marrakech</strong>, <strong>desert tour from marrakech</strong>, and reverse routes such as the <strong>marrakech to fes desert tour</strong>. We also offer Agafay desert day trips, Merzouga multi-day tours, and a <strong>private sahara desert tour from marrakech</strong> for travellers who want a fully customised desert experience.</p>
+                                <p class="text-center mt-4"><a href="{{ url('/contact') }}" class="vs-btn">Plan Your Private Morocco Tour</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--================= SEO Content end =================-->
 
             </main>
             <!-- ================= Main Section Wrapper End ================= -->

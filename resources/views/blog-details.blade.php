@@ -2,7 +2,43 @@
 @extends('layouts.app2')
 
 {{-- Dynamic page title from the blog post --}}
-@section('title', $blog->title) {{-- Use blog title for page title --}}
+@section('title', $blog->title . ' | Morocco Quest')
+@section('description', ($blog->summary ?? Str::limit(strip_tags($blog->content ?? ''), 140)) . ' Best morocco itinerary, marrakech desert tours, morocco private tours.')
+@section('keywords', 'best morocco itinerary, morocco itinerary one week, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, ' . Str::lower($blog->title))
+@section('og_type', 'article')
+
+@php
+    $blogSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Article',
+        'headline' => $blog->title,
+        'description' => Str::limit(strip_tags($blog->summary ?? $blog->content ?? ''), 300),
+        'author' => ['@type' => 'Person', 'name' => $blog->written_by ?? 'Morocco Quest'],
+        'publisher' => [
+            '@type' => 'Organization',
+            'name' => 'Morocco Quest',
+            'logo' => ['@type' => 'ImageObject', 'url' => asset('assets/img/logo-bg.png')],
+        ],
+        'datePublished' => optional($blog->created_at)->toIso8601String() ?? '',
+        'dateModified' => optional($blog->updated_at)->toIso8601String() ?? '',
+        'mainEntityOfPage' => url()->current(),
+        'keywords' => 'best morocco itinerary, morocco itinerary one week, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech',
+    ];
+    $blogBreadcrumb = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Blog', 'item' => url('/blog')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $blog->title, 'item' => url()->current()],
+        ],
+    ];
+@endphp
+
+@push('jsonld')
+<script type="application/ld+json">{!! json_encode($blogSchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+<script type="application/ld+json">{!! json_encode($blogBreadcrumb, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush
 
 @section('content')
 

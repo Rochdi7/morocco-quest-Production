@@ -2,7 +2,9 @@
 @extends('layouts.app2')
 
 {{-- Set the page title (static for the index page, or dynamic based on search/category/tag) --}}
-@section('title', isset($tag) ? 'Posts tagged: '.$tag->name : (isset($category) ? 'Posts in category: '.$category->name : (request('query') ? 'Search results for: '.request('query') : 'Latest News & Blog') ))
+@section('title', isset($tag) ? 'Posts tagged: '.$tag->name.' | Morocco Quest' : (isset($category) ? 'Posts in category: '.$category->name.' | Morocco Quest' : (request('query') ? 'Search results for: '.request('query').' | Morocco Quest' : 'Best Morocco Itinerary & Travel Blog | Morocco Quest') ))
+@section('description', isset($tag) ? 'Articles tagged '.$tag->name.' on best morocco itinerary, marrakech desert tours, and morocco private tours.' : (isset($category) ? $category->name.' articles on best morocco itinerary, morocco itinerary one week, and marrakech desert tours.' : 'Best morocco itinerary, morocco itinerary one week, and best 7 day morocco itinerary. Morocco 14 day itinerary, marrakech desert tour 3 days, and luxury desert tours marrakech.'))
+@section('keywords', 'best morocco itinerary, morocco itinerary one week, best 7 day morocco itinerary, morocco 14 day itinerary, marrakech desert tour 3 days, luxury sahara desert tour from marrakech')
 
 @section('content')
 

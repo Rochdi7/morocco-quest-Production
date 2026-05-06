@@ -1,15 +1,11 @@
 @extends('layouts.app2') {{-- Or your main layout file --}}
 
 {{-- Dynamic title based on context --}}
-@section('title')
-    @if($placeName)
-        Tours in {{ $placeName }}
-    @elseif($query)
-        Search Results for "{{ $query }}"
-    @else
-        Explore Our Tours
-    @endif
-@endsection
+@section('title', $placeName ? 'Tours in '.$placeName.' - Marrakech Desert Tours | Morocco Quest' : ($query ? 'Search Results for "'.$query.'" - Morocco Quest' : 'Marrakech Desert Tours | Desert Tours Marrakech & Sahara Desert Tour from Marrakech'))
+
+@section('description', $placeName ? 'Marrakech desert tours and private tours in '.$placeName.'. Sahara desert tour from marrakech, luxury desert tours marrakech, and morocco private tours.' : ($query ? 'Morocco private tours and marrakech desert tours search results for "'.$query.'".' : 'Marrakech desert tours, desert tours marrakech, and sahara desert tour from marrakech. Luxury desert tours marrakech and private morocco tours.'))
+
+@section('keywords', 'marrakech desert tours, desert tours marrakech, desert tour marrakech, marrakech desert tour, sahara desert tour from marrakech, sahara desert tours from marrakech, morocco desert tours from marrakech, marrakech sahara desert tour, desert tour from marrakech, desert tours from marrakech')
 
 @section('content')
     <main>
@@ -154,6 +150,34 @@
             </div> {{-- End container --}}
         </section>
         <!--================= Tours List Area end =================-->
+
+        @if(!$placeName && !$query)
+        <!--================= SEO Content (static, keyword-rich) =================-->
+        <section class="space-extra-bottom" aria-label="About marrakech desert tours">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="sec-title">Marrakech Desert Tours &amp; Sahara Desert Tour from Marrakech</h2>
+                        <p>Our <strong>marrakech desert tours</strong> are private from start to finish. Choose a <strong>sahara desert tour from marrakech</strong> to the iconic Erg Chebbi dunes near Merzouga, or a shorter <strong>desert tour marrakech</strong> to the Agafay stone desert. All tours include a private vehicle, English-speaking driver, and tailor-made itinerary.</p>
+                        <h3 class="h5 mt-4">Popular Marrakech Desert Tour Routes</h3>
+                        <ul>
+                            <li><strong>Marrakech desert tour 3 days</strong> &mdash; round trip to Merzouga via Ait Ben Haddou and Dades</li>
+                            <li><strong>Marrakech desert tours 4 days</strong> &mdash; deeper Sahara experience with one extra night</li>
+                            <li><strong>Fes to marrakech desert tour</strong> &mdash; one-way crossing through the Sahara, also offered in reverse as <strong>marrakech to fes desert tours</strong></li>
+                            <li><strong>Luxury desert tours marrakech</strong> &mdash; private 4x4 with luxury Sahara camp</li>
+                            <li><strong>Agafay desert tour from marrakech</strong> &mdash; same-day stone desert escape</li>
+                            <li><strong>Merzouga desert tour from marrakech</strong> &mdash; classic dune adventure</li>
+                        </ul>
+                        <h3 class="h5 mt-4">Why Choose a Private Tour?</h3>
+                        <p>All our <strong>private tours in morocco</strong> are non-shared. You set the pace, choose lunch stops, and travel only with your own group. As one of the <strong>best morocco private tour company</strong> options for couples and families, we focus on comfort, authenticity, and value.</p>
+                        <p class="text-center mt-4"><a href="{{ url('/contact') }}" class="vs-btn">Request Your Marrakech Desert Tour</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================= SEO Content end =================-->
+        @endif
+
     </main>
 @endsection
 

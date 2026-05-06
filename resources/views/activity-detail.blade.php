@@ -2,7 +2,44 @@
 @extends('layouts.app2')
 
 {{-- Set the dynamic page title --}}
-@section('title', $activity->title ?? 'Activity Details')
+@section('title', ($activity->title ?? 'Activity Details') . ' | Morocco Quest')
+@section('description', ($activity->subtitle ?? Str::limit(strip_tags($activity->overview ?? ''), 140)) . ' Morocco private tours and marrakech desert tours.')
+@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, ' . Str::lower($activity->title ?? ''))
+
+@php
+    $activitySchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'TouristAttraction',
+        'name' => $activity->title ?? 'Morocco Activity',
+        'description' => Str::limit(strip_tags($activity->overview ?? $activity->subtitle ?? ''), 300),
+        'url' => url()->current(),
+        'touristType' => ['Cultural', 'Adventure', 'Day Trip'],
+        'isAccessibleForFree' => false,
+    ];
+    if (!empty($activity->price_adult)) {
+        $activitySchema['offers'] = [
+            '@type' => 'Offer',
+            'price' => (string) $activity->price_adult,
+            'priceCurrency' => 'USD',
+            'availability' => 'https://schema.org/InStock',
+            'url' => url()->current(),
+        ];
+    }
+    $activityBreadcrumb = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Activities', 'item' => url('/activity-categories')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $activity->title ?? 'Activity', 'item' => url()->current()],
+        ],
+    ];
+@endphp
+
+@push('jsonld')
+<script type="application/ld+json">{!! json_encode($activitySchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+<script type="application/ld+json">{!! json_encode($activityBreadcrumb, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush
 
 @section('content')
 

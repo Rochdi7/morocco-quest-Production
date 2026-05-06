@@ -1,5 +1,8 @@
 <!-- FAQ Page -->
 @extends('layouts.app')
+@section('title', 'FAQ | Morocco Private Tours & Marrakech Desert Tours - Morocco Quest')
+@section('description', 'Frequently asked questions about morocco private tours, marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.')
+@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, luxury desert tours marrakech')
 @section('content')
 <!-- Paste content from faq.html here -->
 <!DOCTYPE html>

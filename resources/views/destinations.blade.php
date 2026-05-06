@@ -1,6 +1,8 @@
 @extends('layouts.app2') {{-- Make sure this points to your correct layout file --}}
 
-@section('title', 'Explore Destinations') {{-- Or set a more dynamic title if needed --}}
+@section('title', 'Morocco Destinations | Private Tours in Morocco - Morocco Quest')
+@section('description', 'Explore morocco destinations with private tours in morocco. Marrakech desert tours, sahara desert tour from marrakech, and morocco private tours across all major cities.')
+@section('keywords', 'private tours in morocco, morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private morocco tours')
 
 @section('content')
     {{-- The <main> tag might be part of your layout.
