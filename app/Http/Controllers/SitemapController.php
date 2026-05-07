@@ -8,6 +8,8 @@ use App\Models\Post;
 use App\Models\Blog;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Log;
 
 class SitemapController extends Controller
 {
@@ -16,159 +18,61 @@ class SitemapController extends Controller
         $now = Carbon::now()->toAtomString();
 
         $urls = [
-            [
-                'loc' => route('home'),
-                'lastmod' => $now,
-                'changefreq' => 'daily',
-                'priority' => '1.0',
-            ],
-            [
-                'loc' => route('about'),
-                'lastmod' => $now,
-                'changefreq' => 'monthly',
-                'priority' => '0.8',
-            ],
-            [
-                'loc' => route('faq'),
-                'lastmod' => $now,
-                'changefreq' => 'monthly',
-                'priority' => '0.8',
-            ],
-            [
-                'loc' => route('tours.index'),
-                'lastmod' => $now,
-                'changefreq' => 'daily',
-                'priority' => '0.9',
-            ],
-            [
-                'loc' => route('activities.index'),
-                'lastmod' => $now,
-                'changefreq' => 'daily',
-                'priority' => '0.9',
-            ],
-            [
-                'loc' => route('trips.index'),
-                'lastmod' => $now,
-                'changefreq' => 'daily',
-                'priority' => '0.9',
-            ],
-            [
-                'loc' => route('blog.index'),
-                'lastmod' => $now,
-                'changefreq' => 'weekly',
-                'priority' => '0.7',
-            ],
-            [
-                'loc' => route('contact.show'),
-                'lastmod' => $now,
-                'changefreq' => 'yearly',
-                'priority' => '0.5',
-            ],
+            ['loc' => route('home'),              'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '1.0'],
+            ['loc' => route('about'),             'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
+            ['loc' => route('faq'),               'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
+            ['loc' => route('tours.index'),       'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('activities.index'),  'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('trips.index'),       'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('blog.index'),        'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.7'],
+            ['loc' => route('contact.show'),      'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.5'],
         ];
 
-        $this->addTours($urls);
-        $this->addActivities($urls);
-        $this->addPosts($urls);
-        $this->addBlogs($urls);
+        $this->addModel($urls, Tour::class,     'tours.show',      'weekly', '0.8');
+        $this->addModel($urls, Activity::class, 'activities.show', 'weekly', '0.7');
+        $this->addModel($urls, Post::class,     'blog.show',       'weekly', '0.6');
+        $this->addModel($urls, Blog::class,     'blog.show',       'weekly', '0.6');
 
         return response()
             ->view('sitemap.index', compact('urls'))
             ->header('Content-Type', 'application/xml');
     }
 
-    private function addTours(array &$urls): void
+    private function addModel(array &$urls, string $modelClass, string $routeName, string $changefreq, string $priority): void
     {
-        if (!Route::has('tours.show')) {
-            return;
-        }
+        if (!Route::has($routeName)) return;
+        if (!class_exists($modelClass)) return;
 
-        Tour::query()
-            ->whereNotNull('slug')
-            ->where(function ($q) {
-                $q->whereNull('status')
-                  ->orWhereIn('status', ['published', 'active']);
-            })
-            ->chunk(200, function ($tours) use (&$urls) {
-                foreach ($tours as $tour) {
+        try {
+            $model = new $modelClass;
+            $table = $model->getTable();
+
+            if (!Schema::hasTable($table)) return;
+            if (!Schema::hasColumn($table, 'slug')) return;
+
+            $hasStatus = Schema::hasColumn($table, 'status');
+
+            $query = $modelClass::query()->whereNotNull('slug');
+
+            if ($hasStatus) {
+                $query->where(function ($q) {
+                    $q->whereNull('status')->orWhereIn('status', ['published', 'active']);
+                });
+            }
+
+            $query->chunk(200, function ($items) use (&$urls, $routeName, $changefreq, $priority) {
+                foreach ($items as $item) {
+                    if (empty($item->slug)) continue;
                     $urls[] = [
-                        'loc' => route('tours.show', $tour->slug),
-                        'lastmod' => optional($tour->updated_at)->toAtomString(),
-                        'changefreq' => 'weekly',
-                        'priority' => '0.8',
+                        'loc'        => route($routeName, $item->slug),
+                        'lastmod'    => optional($item->updated_at)->toAtomString(),
+                        'changefreq' => $changefreq,
+                        'priority'   => $priority,
                     ];
                 }
             });
-    }
-
-    private function addActivities(array &$urls): void
-    {
-        if (!Route::has('activities.show')) {
-            return;
+        } catch (\Throwable $e) {
+            Log::warning("Sitemap skip {$modelClass}: " . $e->getMessage());
         }
-
-        Activity::query()
-            ->whereNotNull('slug')
-            ->where(function ($q) {
-                $q->whereNull('status')
-                  ->orWhereIn('status', ['published', 'active']);
-            })
-            ->chunk(200, function ($activities) use (&$urls) {
-                foreach ($activities as $activity) {
-                    $urls[] = [
-                        'loc' => route('activities.show', $activity->slug),
-                        'lastmod' => optional($activity->updated_at)->toAtomString(),
-                        'changefreq' => 'weekly',
-                        'priority' => '0.7',
-                    ];
-                }
-            });
-    }
-
-    private function addPosts(array &$urls): void
-    {
-        if (!Route::has('blog.show')) {
-            return;
-        }
-
-        Post::query()
-            ->whereNotNull('slug')
-            ->where(function ($q) {
-                $q->whereNull('status')
-                  ->orWhereIn('status', ['published', 'active']);
-            })
-            ->chunk(200, function ($posts) use (&$urls) {
-                foreach ($posts as $post) {
-                    $urls[] = [
-                        'loc' => route('blog.show', $post->slug),
-                        'lastmod' => optional($post->updated_at)->toAtomString(),
-                        'changefreq' => 'weekly',
-                        'priority' => '0.6',
-                    ];
-                }
-            });
-    }
-
-    private function addBlogs(array &$urls): void
-    {
-        if (!Route::has('blog.show')) {
-            return;
-        }
-
-        Blog::query()
-            ->whereNotNull('slug')
-            ->where(function ($q) {
-                $q->whereNull('status')
-                  ->orWhereIn('status', ['published', 'active']);
-            })
-            ->chunk(200, function ($blogs) use (&$urls) {
-                foreach ($blogs as $blog) {
-                    $urls[] = [
-                        'loc' => route('blog.show', $blog->slug),
-                        'lastmod' => optional($blog->updated_at)->toAtomString(),
-                        'changefreq' => 'weekly',
-                        'priority' => '0.6',
-                    ];
-                }
-            });
     }
 }
