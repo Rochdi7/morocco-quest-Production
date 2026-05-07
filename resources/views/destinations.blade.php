@@ -1,17 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Explore Morocco Destinations | Private Morocco Tours & Exclusive Travel')
-
-@section('page_description',
-    'Explore top destinations in Morocco with Morocco Quest, offering private tours morocco,
-    small group tours morocco, exclusive morocco travel experiences, and vip morocco tours across Marrakech, Fes, the Sahara
-    Desert, and beyond.')
-
-@section('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour
-    morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours,
-    morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to
-    travel to morocco, morocco travel visa requirements')
+@section('title', 'Morocco Destinations | Private Tours in Morocco - Morocco Quest')
+@section('description', 'Explore morocco destinations with private tours in morocco. Marrakech desert tours, sahara desert tour from marrakech, and morocco private tours across all major cities.')
+@section('keywords', 'private tours in morocco, morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private morocco tours')
 
 
 @section('content')

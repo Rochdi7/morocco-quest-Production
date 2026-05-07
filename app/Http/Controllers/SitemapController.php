@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tour;
 use App\Models\Activity;
 use App\Models\Post;
+use App\Models\Blog;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
@@ -68,6 +69,7 @@ class SitemapController extends Controller
         $this->addTours($urls);
         $this->addActivities($urls);
         $this->addPosts($urls);
+        $this->addBlogs($urls);
 
         return response()
             ->view('sitemap.index', compact('urls'))
@@ -139,6 +141,30 @@ class SitemapController extends Controller
                     $urls[] = [
                         'loc' => route('blog.show', $post->slug),
                         'lastmod' => optional($post->updated_at)->toAtomString(),
+                        'changefreq' => 'weekly',
+                        'priority' => '0.6',
+                    ];
+                }
+            });
+    }
+
+    private function addBlogs(array &$urls): void
+    {
+        if (!Route::has('blog.show')) {
+            return;
+        }
+
+        Blog::query()
+            ->whereNotNull('slug')
+            ->where(function ($q) {
+                $q->whereNull('status')
+                  ->orWhereIn('status', ['published', 'active']);
+            })
+            ->chunk(200, function ($blogs) use (&$urls) {
+                foreach ($blogs as $blog) {
+                    $urls[] = [
+                        'loc' => route('blog.show', $blog->slug),
+                        'lastmod' => optional($blog->updated_at)->toAtomString(),
                         'changefreq' => 'weekly',
                         'priority' => '0.6',
                     ];

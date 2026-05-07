@@ -1,15 +1,7 @@
 @extends('layouts.app2')
-@section('title', 'About Morocco Quest | Private Morocco Tours & Exclusive Experiences')
-
-@section('page_description', 'Learn about Morocco Quest, your trusted private tours morocco company specializing in
-    private morocco tour, small group tours morocco, exclusive morocco travel experiences, and vip morocco tours.')
-
-@section('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour
-    morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours,
-    morocco
-    luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to travel to
-    morocco, morocco travel visa requirements')
+@section('title', 'About Morocco Quest | Best Morocco Private Tour Company')
+@section('description', 'About Morocco Quest, the best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, and luxury desert tours marrakech.')
+@section('keywords', 'best morocco private tour company, morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private tours in morocco')
 
 
     {{-- @section('structured_data')

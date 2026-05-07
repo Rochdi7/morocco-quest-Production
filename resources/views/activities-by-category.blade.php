@@ -1,18 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Activities in ' . $category->name . ' | Private Morocco Tours & Exclusive Experiences')
-
-@section('page_description',
-    'Explore premium activities in ' .
-    $category->name .
-    ' with Morocco Quest. Enjoy private
-    tours morocco, small group tours morocco, exclusive morocco travel experiences, and vip morocco tours.')
-
-@section('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour
-    morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours,
-    morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to
-    travel to morocco, morocco travel visa requirements')
+@section('title', $category->name . ' in Morocco | Marrakech Desert Tours - Morocco Quest')
+@section('description', $category->name . ' activities in Morocco. Marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.')
+@section('keywords', 'marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, morocco private tours, ' . Str::lower($category->name))
 
 @section('content')
     <main>

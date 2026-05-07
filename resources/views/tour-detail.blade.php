@@ -1,6 +1,37 @@
 @extends('layouts.app2')
-@section('title', $tour->title)
+@section('title', $tour->title . ' | Morocco Private Tours')
+@section('description', ($tour->subtitle ?? Str::limit(strip_tags($tour->overview ?? ''), 140)) . ' Private morocco tours and marrakech desert tours. Sahara desert tour from marrakech.')
+@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco, ' . Str::lower($tour->title))
 @section('page_description', Str::limit(strip_tags($tour->overview), 160))
+
+@php
+    $tourSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'TouristTrip',
+        'name' => $tour->title,
+        'description' => Str::limit(strip_tags($tour->overview ?? $tour->subtitle ?? 'Morocco private tour.'), 300),
+        'url' => url()->current(),
+        'touristType' => ['Adventure', 'Cultural', 'Desert', 'Luxury'],
+        'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/')],
+    ];
+    if (!empty($tour->price_adult)) {
+        $tourSchema['offers'] = ['@type' => 'Offer', 'price' => (string) $tour->price_adult, 'priceCurrency' => 'USD', 'availability' => 'https://schema.org/InStock', 'url' => url()->current()];
+    }
+    $tourBreadcrumb = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Marrakech Desert Tours', 'item' => url('/tours')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $tour->title, 'item' => url()->current()],
+        ],
+    ];
+@endphp
+
+@push('jsonld')
+<script type="application/ld+json">{!! json_encode($tourSchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+<script type="application/ld+json">{!! json_encode($tourBreadcrumb, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush
 
 @section('content')
 

@@ -22,29 +22,18 @@ class CategoryController extends Controller
         $categories = \App\Models\Category::withCount('blogs')->get();
         $tags = \App\Models\Tag::all();
 
-        $title = "{$category->name} - Private Morocco Tours & Exclusive Experiences | Morocco Quest";
+        $title = $category->name.' | Best Morocco Itinerary - Morocco Quest';
 
-        $description = "Explore {$category->name} with Morocco Quest. We offer private tours morocco, small group tours morocco, vip morocco tours, and exclusive experiences.";
+        $description = $category->name.' articles on best morocco itinerary, marrakech desert tours, and morocco private tours.';
 
         $url = url()->current();
 
         $keywords = array_filter([
+            'best morocco itinerary',
+            'marrakech desert tours',
             'morocco private tours',
-            'private morocco tours',
-            'private morocco tour',
-            'private tours morocco',
-            'private tour morocco',
-            'small group tours morocco',
-            'morocco small group tours',
-            'exclusive morocco travel experiences',
-            'vip morocco tours',
-            'morocco luxury travel',
-            'luxury travel morocco',
-            'morocco travel insurance',
-            'morocco travel agent',
-            'what is the best time to travel to morocco',
-            'morocco travel visa requirements',
-            Str::slug($category->name),
+            'sahara desert tour from marrakech',
+            strtolower($category->name),
         ]);
 
 

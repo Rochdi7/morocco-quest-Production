@@ -1,15 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Morocco Travel Blog | Private Morocco Tours & Exclusive Experiences | Morocco Quest')
-
-@section('page_description', 'Explore the Morocco Quest blog for insights on private tours morocco, small group tours
-    morocco, exclusive morocco travel experiences, vip morocco tours, and expert guides to morocco travel.')
-
-@section('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour
-    morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours,
-    morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to
-    travel to morocco, morocco travel visa requirements')
+@section('title', isset($tag) ? 'Posts tagged: '.$tag->name.' | Morocco Quest' : (isset($category) ? 'Posts in category: '.$category->name.' | Morocco Quest' : (request('query') ? 'Search results for: '.request('query').' | Morocco Quest' : 'Best Morocco Itinerary & Travel Blog | Morocco Quest')))
+@section('description', isset($tag) ? 'Articles tagged '.$tag->name.' on best morocco itinerary, marrakech desert tours, and morocco private tours.' : (isset($category) ? $category->name.' articles on best morocco itinerary and marrakech desert tours.' : 'Best morocco itinerary, morocco itinerary one week, best 7 day morocco itinerary, morocco 14 day itinerary, marrakech desert tour 3 days, and luxury desert tours marrakech.'))
+@section('keywords', 'best morocco itinerary, morocco itinerary one week, best 7 day morocco itinerary, morocco 14 day itinerary, marrakech desert tour 3 days, luxury sahara desert tour from marrakech')
 
 
 @section('content')

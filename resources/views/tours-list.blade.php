@@ -1,17 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'Private Morocco Tours | Small Group Tours Morocco')
-
-@section('page_description',
-    $description ??
-    'Explore private tours morocco, small group tours morocco, exclusive
-    morocco travel experiences, vip morocco tours with Morocco Quest across top destinations in Morocco.')
-
-@section('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour
-    morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours,
-    morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to
-    travel to morocco, morocco travel visa requirements')
+@section('title', !empty($placeName) ? 'Tours in '.$placeName.' - Marrakech Desert Tours | Morocco Quest' : ((isset($query) && !empty($query)) ? 'Search Results for "'.$query.'" - Morocco Quest' : 'Marrakech Desert Tours | Desert Tours Marrakech & Sahara Desert Tour from Marrakech'))
+@section('description', !empty($placeName) ? 'Marrakech desert tours and private tours in '.$placeName.'. Sahara desert tour from marrakech, luxury desert tours marrakech, and morocco private tours.' : ((isset($query) && !empty($query)) ? 'Morocco private tours and marrakech desert tours search results for "'.$query.'".' : 'Marrakech desert tours, desert tours marrakech, and sahara desert tour from marrakech. Luxury desert tours marrakech and private morocco tours.'))
+@section('keywords', 'marrakech desert tours, desert tours marrakech, desert tour marrakech, marrakech desert tour, sahara desert tour from marrakech, sahara desert tours from marrakech, morocco desert tours from marrakech, marrakech sahara desert tour, desert tour from marrakech')
 
 
 @section('content')

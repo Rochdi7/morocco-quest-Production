@@ -24,13 +24,37 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="google-site-verification" content="FT8pL55esPmKkEfXDLPA6ZAZtsS8M8xQS_euP4lcXVk" />
     <meta name="author" content="Morocco Quest Team" />
-    <meta name="keywords" content="@yield('keywords', 'luxury desert tour morocco, luxury sahara desert tour morocco, morocco luxury desert tour, luxury morocco tours, luxury tours morocco, private morocco tours, private tours morocco, best morocco private tour, company morocco sahara desert tour, sahara desert tours morocco')" />
+    <meta name="keywords" content="@yield('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco, best morocco private tour company, sahara desert tours morocco, desert tours marrakech, marrakech desert tour, fes to marrakech desert tour')" />
+    <meta name="description" content="@yield('description', 'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.')" />
     <meta name="msvalidate.01" content="27E449107B43D56EE655E22CCA5378A6" />
 
     <meta name="robots" content="INDEX,FOLLOW" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="canonical" href="{{ url()->current() }}" />
+
+    {{-- Global TravelAgency JSON-LD --}}
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'TravelAgency',
+        'name' => 'Morocco Quest',
+        'description' => 'Best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.',
+        'url' => url('/'),
+        'logo' => asset('assets/img/logo-bg.png'),
+        'image' => asset('assets/img/logo-bg.png'),
+        'areaServed' => ['@type' => 'Country', 'name' => 'Morocco'],
+        'knowsAbout' => [
+            'morocco private tours',
+            'marrakech desert tours',
+            'sahara desert tour from marrakech',
+            'luxury desert tours marrakech',
+            'private tours in morocco',
+        ],
+    ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+    </script>
+
+    @stack('jsonld')
 
     <!-- Favicons & App Icons (Updated 13/08/2025) -->
     <link rel="apple-touch-icon" sizes="57x57"

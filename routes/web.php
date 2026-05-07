@@ -119,4 +119,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     });
 });
 
+// SEO: sitemap.xml
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+
 Route::fallback(fn () => abort(404));

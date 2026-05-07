@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Our Trips')
+@section('title', 'Morocco Trips & Private Tours | Marrakech Desert Tours - Morocco Quest')
+@section('description', 'Multi-day morocco trips: morocco private tours, marrakech desert tours, sahara desert tour from marrakech, and luxury desert tours marrakech.')
+@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco')
 
 @section('content')
     <main>
