@@ -1,12 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Cookie Policy | Morocco Quest Travel Services')
-
-@section('page_description',
-    'Learn how Morocco Quest uses cookies to improve your browsing experience and analyze
-    website traffic. Read our cookie policy.')
-
-@section('keywords', 'cookie policy, website cookies, data tracking, Morocco Quest, travel services')
+@section('title', 'Cookie Policy | Morocco Quest')
+@section('description', 'Cookie Policy for Morocco Quest morocco private tours and marrakech desert tours.')
+@section('keywords', 'morocco private tours, marrakech desert tours')
 
 <link rel="canonical" href="{{ url()->current() }}">
 <meta property="og:title" content="Cookie Policy | Morocco Quest" />

@@ -1,4 +1,10 @@
 User-agent: *
-Disallow: /cgi-bin/
+Allow: /
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /password/
+Disallow: /storage/framework/
+Disallow: /vendor/
 
 Sitemap: https://morocco-quest.com/sitemap.xml

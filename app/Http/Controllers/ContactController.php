@@ -14,11 +14,13 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $title = 'Contact Us | Morocco Quest';
-        $description = 'Have questions or ready to book? Contact Morocco Quest today and let our travel experts help you plan your adventure.';
+        $title = 'Contact Morocco Quest | Book Morocco Private Tours';
+        $description = 'Contact Morocco Quest to book morocco private tours, marrakech desert tours, or a sahara desert tour from marrakech. Private tours in morocco tailored to you.';
+        $keywords = ['morocco private tours', 'marrakech desert tours', 'sahara desert tour from marrakech', 'private tours in morocco', 'best morocco private tour company'];
 
         SEOMeta::setTitle($title);
         SEOMeta::setDescription($description);
+        SEOMeta::addKeyword($keywords);
 
         OpenGraph::setTitle($title);
         OpenGraph::setDescription($description);

@@ -1,12 +1,45 @@
 @extends('layouts.app2')
 
-@section('title', $post->title . ' | Morocco Quest Blog')
+@section('title', $post->title . ' | Morocco Quest')
+@section('description', ($post->summary ?? Str::limit(strip_tags($post->content ?? ''), 140)) . ' Best morocco itinerary, marrakech desert tours, morocco private tours.')
+@section('keywords', 'best morocco itinerary, morocco itinerary one week, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, ' . Str::lower($post->title))
+@section('og_type', 'article')
 
 @section('page_description', Str::limit(strip_tags($post->content), 155))
 
-@section('keywords', $post->tags->pluck('name')->implode(', ') ?: 'private tours morocco, small group tours morocco,
-    morocco travel, exclusive morocco travel experiences, vip morocco tours, morocco travel insurance, morocco travel agent,
-    what is the best time to travel to morocco, morocco travel visa requirements')
+@php
+    $_blogModel = $post;
+    $blogSchema = $_blogModel ? [
+        '@context' => 'https://schema.org',
+        '@type' => 'Article',
+        'headline' => $_blogModel->title,
+        'description' => Str::limit(strip_tags($_blogModel->summary ?? $_blogModel->content ?? ''), 300),
+        'author' => ['@type' => 'Person', 'name' => $_blogModel->written_by ?? 'Morocco Quest'],
+        'publisher' => [
+            '@type' => 'Organization',
+            'name' => 'Morocco Quest',
+            'logo' => ['@type' => 'ImageObject', 'url' => asset('assets/img/logo-bg.png')],
+        ],
+        'datePublished' => optional($_blogModel->created_at)->toIso8601String() ?? '',
+        'dateModified' => optional($_blogModel->updated_at)->toIso8601String() ?? '',
+        'mainEntityOfPage' => url()->current(),
+        'keywords' => 'best morocco itinerary, marrakech desert tours, sahara desert tour from marrakech',
+    ] : null;
+    $blogBreadcrumb = $_blogModel ? [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Blog', 'item' => url('/blog')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $_blogModel->title, 'item' => url()->current()],
+        ],
+    ] : null;
+@endphp
+
+@push('jsonld')
+@if($blogSchema)<script type="application/ld+json">{!! json_encode($blogSchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>@endif
+@if($blogBreadcrumb)<script type="application/ld+json">{!! json_encode($blogBreadcrumb, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>@endif
+@endpush
 
 @section('content')
 

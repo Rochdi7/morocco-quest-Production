@@ -1,11 +1,8 @@
 @extends('layouts.app2')
 
 @section('title', 'Terms and Conditions | Morocco Quest')
-
-@section('page_description', 'Read the Terms and Conditions for Morocco Quest. Learn about booking policies, payments,
-    cancellations, and important travel information.')
-
-@section('keywords', 'terms and conditions, booking policies, Morocco Quest, travel services, cancellations')
+@section('description', 'Terms and Conditions for Morocco Quest morocco private tours and marrakech desert tours.')
+@section('keywords', 'morocco private tours, marrakech desert tours')
 {{-- @section('structured_data')
     <link rel="canonical" href="{{ url()->current() }}">
     <meta property="og:title" content="Terms & Conditions | Morocco Quest" />

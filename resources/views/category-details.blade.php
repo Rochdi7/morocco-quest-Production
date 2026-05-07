@@ -1,19 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $category->name . ' | Morocco Travel Blog')
-
-@section('page_description',
-    'Explore articles about ' .
-    $category->name .
-    ' on the Morocco Quest blog, featuring
-    insights into private tours morocco, small group tours morocco, exclusive morocco travel experiences, and vip morocco
-    tours.')
-
-@section('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour
-    morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours,
-    morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to
-    travel to morocco, morocco travel visa requirements')
+@section('title', $category->name . ' | Best Morocco Itinerary - Morocco Quest')
+@section('description', $category->name . ' articles on best morocco itinerary, marrakech desert tours, and morocco private tours.')
+@section('keywords', 'best morocco itinerary, marrakech desert tours, morocco private tours, sahara desert tour from marrakech, ' . Str::lower($category->name))
 
 
 @section('content')
