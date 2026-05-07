@@ -33,7 +33,7 @@ class HomeController extends Controller
             "name" => "Morocco Quest",
             "alternateName" => "MoroccoQuest",
             "url" => url('/'),
-            "description" => "Morocco Quest specializes in morocco luxury tours, private guided tours morocco, and luxury sahara desert tour morocco.",
+            "description" => "Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.",
             "image" => asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
             "logo" => [
                 "@type" => "ImageObject",

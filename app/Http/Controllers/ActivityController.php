@@ -50,9 +50,9 @@ class ActivityController extends Controller
             ->paginate(9);
 
         // ✅ SEO Setup
-        $title = "Private Morocco Tours & Exclusive Morocco Travel Experiences | Morocco Quest";
+        $title = "Morocco Activities & Day Tours | Marrakech Desert Tours - Morocco Quest";
 
-        $description = "Discover exclusive activities with Morocco Quest. We specialize in private morocco tours, small group tours morocco, vip morocco tours, and authentic experiences.";
+        $description = "Morocco activities and day tours: marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.";
 
 
         SEOMeta::setTitle($title)
@@ -80,8 +80,8 @@ class ActivityController extends Controller
             ->latest()
             ->paginate(9);
 
-        $title = "{$category->name} - Private Morocco Tours & Exclusive Morocco Travel Experiences";
-        $description = "Explore our curated {$category->name}. Book private tours morocco with Morocco Quest offering small group tours morocco and exclusive experiences.";
+        $title = "{$category->name} Activities | Marrakech Desert Tours - Morocco Quest";
+        $description = "Explore our curated {$category->name}. Marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco with Morocco Quest.";
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -118,12 +118,12 @@ class ActivityController extends Controller
         $category = $categorySlug ? ActivityCategory::where('slug', $categorySlug)->first() : null;
 
         $title = $category
-            ? "{$category->name} - Private Tours Morocco | Morocco Quest"
-            : "Private Morocco Tours & Exclusive Morocco Travel Experiences | Morocco Quest";
+            ? "{$category->name} | Marrakech Desert Tours - Morocco Quest"
+            : "Morocco Private Tours & Marrakech Desert Tours | Morocco Quest";
 
         $description = $category
-            ? "Explore {$category->name} in Morocco. We offer private tours morocco and exclusive morocco travel experiences with expert guides."
-            : "Discover the best private tour morocco with Morocco Quest. We specialize in small group tours morocco, vip morocco tours, and cultural excursions.";
+            ? "Explore {$category->name} in Morocco. Marrakech desert tours, sahara desert tour from marrakech, and morocco private tours with expert guides."
+            : "Discover the best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, and luxury desert tours marrakech.";
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -165,20 +165,20 @@ class ActivityController extends Controller
         $keywords = array_filter([
             'morocco private tours',
             'private morocco tours',
-            'private morocco tour',
-            'private tours morocco',
+            'marrakech desert tours',
+            'desert tours marrakech',
+            'sahara desert tour from marrakech',
+            'sahara desert tours from marrakech',
+            'luxury desert tours marrakech',
+            'private tours in morocco',
+            'private tours of morocco',
             'private tour morocco',
-            'small group tours morocco',
-            'morocco small group tours',
-            'exclusive morocco travel experiences',
-            'vip morocco tours',
-            'morocco luxury travel',
-            'luxury travel morocco',
-            'morocco travel insurance',
-            'morocco travel agent',
-            'what is the best time to travel to morocco',
-            'morocco travel visa requirements',
-            $activity->title,
+            'desert tour from marrakech',
+            'agafay desert tour from marrakech',
+            'merzouga desert tour from marrakech',
+            'private sahara desert tour from marrakech',
+            'private tour guide morocco',
+            strtolower($activity->title),
             optional($activity->category)->name,
         ]);
 
@@ -235,9 +235,9 @@ class ActivityController extends Controller
             ->with(['images', 'category'])
             ->paginate(12);
 
-        $title = "Morocco {$normalizedType} & Private Morocco Tours";
+        $title = "Morocco {$normalizedType} & Marrakech Desert Tours | Morocco Quest";
 
-        $description = "Experience {$normalizedType} with Morocco Quest. We organize private tours morocco, small group tours morocco, and exclusive morocco travel experiences.";
+        $description = "Experience {$normalizedType} with Morocco Quest. Morocco private tours, marrakech desert tours, and sahara desert tour from marrakech.";
 
 
         SEOMeta::setTitle($title)

@@ -26,15 +26,15 @@
     @php
         $metaTitle =
             trim($__env->yieldContent('title')) ?:
-            'private morocco tours | exclusive morocco travel experiences | Morocco Quest';
+            'Morocco Private Tours | Marrakech Desert Tours & Sahara Desert Tour from Marrakech - Morocco Quest';
 
         $metaDescription =
             trim($__env->yieldContent('description')) ?:
-            'private morocco tours, private tour morocco, small group tours morocco, exclusive morocco travel experiences, vip morocco tours, morocco travel.';
+            'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.';
 
         $metaKeywords =
             trim($__env->yieldContent('keywords')) ?:
-            'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours, morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to travel to morocco, morocco travel visa requirements';
+            'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco, best morocco private tour company, sahara desert tours morocco, desert tours marrakech, marrakech desert tour, fes to marrakech desert tour';
     @endphp
 
 
@@ -48,6 +48,42 @@
     <meta name="seobility" content="3e84be663a440d957975fd49dc5ee255">
 
     <link rel="canonical" href="{{ url()->current() }}" />
+
+    {{-- Open Graph + Twitter --}}
+    <meta property="og:site_name" content="Morocco Quest" />
+    <meta property="og:type" content="@yield('og_type', 'website')" />
+    <meta property="og:title" content="{{ $metaTitle }}" />
+    <meta property="og:description" content="{{ $metaDescription }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:image" content="@yield('og_image', asset('assets/img/logo-bg.png'))" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ $metaTitle }}" />
+    <meta name="twitter:description" content="{{ $metaDescription }}" />
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/img/logo-bg.png'))" />
+
+    {{-- Global TravelAgency JSON-LD --}}
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'TravelAgency',
+        'name' => 'Morocco Quest',
+        'description' => 'Best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.',
+        'url' => url('/'),
+        'logo' => asset('assets/img/logo-bg.png'),
+        'image' => asset('assets/img/logo-bg.png'),
+        'areaServed' => ['@type' => 'Country', 'name' => 'Morocco'],
+        'knowsAbout' => [
+            'morocco private tours',
+            'marrakech desert tours',
+            'sahara desert tour from marrakech',
+            'luxury desert tours marrakech',
+            'private tours in morocco',
+        ],
+    ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+    </script>
+
+    @stack('jsonld')
 
     <!-- Favicons (paths aligned to your /assets/img/favicons directory) -->
     <link rel="icon" type="image/svg+xml" href="{{ asset('assets/img/favicons/favicon.svg') }}">
@@ -70,20 +106,7 @@
     <meta name="apple-mobile-web-app-title" content="MoroccoQuest">
     <meta name="application-name" content="MoroccoQuest">
 
-    <!-- Open Graph -->
-    <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ $metaTitle }}" />
-    <meta property="og:description" content="{{ $metaDescription }}" />
-    <meta property="og:image" content="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}" />
-    <meta property="og:site_name" content="Morocco Quest" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@MoroccoQuest" />
-    <meta name="twitter:title" content="{{ $metaTitle }}" />
-    <meta name="twitter:description" content="{{ $metaDescription }}" />
-    <meta name="twitter:image" content="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}" />
 
     <!-- Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

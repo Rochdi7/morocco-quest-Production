@@ -25,32 +25,18 @@ class SearchBarController extends Controller
         $url = url()->current() . '?' . http_build_query($request->only(['place', 'guests']));
 
         $description = $place
-            ? "Find private tours morocco and small group tours morocco in $place for $guests+ guests. We offer exclusive morocco travel experiences, vip morocco tours, and authentic local experiences."
-            : "Search for the best private tour morocco for your next trip. Discover small group tours morocco, exclusive morocco travel experiences, and vip morocco tours tailored to you.";
+            ? 'Search results for "'.$place.'" on marrakech desert tours and morocco private tours.'
+            : 'Search marrakech desert tours, sahara desert tour from marrakech, and morocco private tours. Find your perfect private tours in morocco.';
 
         $title = $place
-            ? "Private Morocco Tours in $place | Morocco Quest"
-            : "Private Morocco Tours & Exclusive Morocco Travel Experiences Search | Morocco Quest";
+            ? 'Search Results for "'.$place.'" - Morocco Quest'
+            : 'Search Morocco Tours | Marrakech Desert Tours - Morocco Quest';
 
         $keywords = array_filter([
+            'marrakech desert tours',
+            'sahara desert tour from marrakech',
             'morocco private tours',
-            'private morocco tours',
-            'private morocco tour',
-            'private tours morocco',
-            'private tour morocco',
-            'small group tours morocco',
-            'morocco small group tours',
-            'exclusive morocco travel experiences',
-            'vip morocco tours',
-            'morocco luxury travel',
-            'luxury travel morocco',
-            'morocco travel insurance',
-            'morocco travel agent',
-            'what is the best time to travel to morocco',
-            'morocco travel visa requirements',
-            // Existing dynamic inputs
-            $place,
-            $guests ? "private tours morocco for $guests guests" : null,
+            'private tours in morocco',
         ]);
 
 

@@ -1,12 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'FAQ - Morocco Travel Questions | Morocco Quest')
-
-@section('page_description', 'Find answers to frequently asked questions about booking private tours morocco with
-    Morocco Quest, visa requirements, safety, packing tips, currency, and more. Prepare for your Moroccan adventure!')
-
-@section('keywords', 'morocco travel, private tours morocco, small group tours morocco, morocco travel insurance,
-    morocco travel agent, what is the best time to travel to morocco, morocco travel visa requirements')
+@section('title', 'FAQ | Morocco Private Tours & Marrakech Desert Tours - Morocco Quest')
+@section('description', 'Frequently asked questions about morocco private tours, marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.')
+@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, luxury desert tours marrakech')
     {{-- @section('structured_data')
 <link rel="canonical" href="{{ url()->current() }}">
 <meta property="og:title" content="FAQ - Morocco Travel Frequently Asked Questions | Morocco Quest" />

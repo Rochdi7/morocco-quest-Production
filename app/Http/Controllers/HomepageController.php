@@ -23,8 +23,8 @@ class HomepageController extends Controller
         | SEO – Core Meta (OPTIMIZED)
         |--------------------------------------------------------------------------
         */
-        $title = 'Private Morocco Tours & Exclusive Morocco Travel Experiences | Morocco Quest';
-        $description = 'Book private tours morocco and small group tours morocco with Morocco Quest. We are a trusted private tour operator offering unforgettable exclusive morocco travel experiences.';
+        $title = 'Morocco Private Tours | Marrakech Desert Tours & Sahara Desert Tour from Marrakech - Morocco Quest';
+        $description = 'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.';
         $url = url('/');
         $image = asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp');
 
@@ -34,19 +34,20 @@ class HomepageController extends Controller
             ->addKeyword([
                 'morocco private tours',
                 'private morocco tours',
-                'private morocco tour',
-                'private tours morocco',
+                'marrakech desert tours',
+                'desert tours marrakech',
+                'sahara desert tour from marrakech',
+                'luxury desert tours marrakech',
+                'private tours in morocco',
+                'best morocco private tour company',
+                'sahara desert tours morocco',
                 'private tour morocco',
-                'small group tours morocco',
-                'morocco small group tours',
-                'exclusive morocco travel experiences',
-                'vip morocco tours',
-                'morocco luxury travel',
-                'luxury travel morocco',
-                'morocco travel insurance',
-                'morocco travel agent',
-                'what is the best time to travel to morocco',
-                'morocco travel visa requirements',
+                'fes to marrakech desert tour',
+                'morocco desert tours from marrakech',
+                'best morocco itinerary',
+                'morocco itinerary one week',
+                'merzouga desert tour from marrakech',
+                'agafay desert tour from marrakech',
             ]);
 
         /*

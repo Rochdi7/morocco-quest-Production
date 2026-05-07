@@ -1,11 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Privacy Policy | Morocco Quest Travel')
-
-@section('page_description', 'Learn how Morocco Quest collects, uses, and protects your personal data when you visit our
-    website or book a tour. Read our privacy practices and your rights.')
-
-@section('keywords', 'privacy policy, data protection, Morocco Quest, travel bookings, personal data')
+@section('title', 'Privacy Policy | Morocco Quest')
+@section('description', 'Privacy Policy for Morocco Quest morocco private tours and marrakech desert tours.')
+@section('keywords', 'morocco private tours, marrakech desert tours')
 {{-- @section('structured_data')
     <link rel="canonical" href="{{ url()->current() }}">
     <meta property="og:title" content="Privacy Policy | Morocco Quest" />

@@ -29,29 +29,18 @@ class TagController extends Controller
         $categories = Category::withCount('blogs')->orderBy('name')->get();
         $tags = Tag::all();
 
-        $title = "Articles Tagged: {$tag->name} | Morocco Quest Travel Blog";
+        $title = 'Posts tagged: '.$tag->name.' | Morocco Quest';
 
-        $description = "Read blog posts related to \"{$tag->name}\" on Morocco Quest. Discover private tours morocco, small group tours morocco, and exclusive morocco travel experiences.";
+        $description = 'Articles tagged '.$tag->name.' on best morocco itinerary, marrakech desert tours, and morocco private tours.';
 
         $url = url()->current();
 
         $keywords = array_filter([
-            $tag->name,
+            'best morocco itinerary',
+            'marrakech desert tours',
             'morocco private tours',
-            'private morocco tours',
-            'private morocco tour',
-            'private tours morocco',
-            'private tour morocco',
-            'small group tours morocco',
-            'morocco small group tours',
-            'exclusive morocco travel experiences',
-            'vip morocco tours',
-            'morocco luxury travel',
-            'luxury travel morocco',
-            'morocco travel insurance',
-            'morocco travel agent',
-            'what is the best time to travel to morocco',
-            'morocco travel visa requirements',
+            'sahara desert tour from marrakech',
+            strtolower($tag->name),
         ]);
 
 

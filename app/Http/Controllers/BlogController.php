@@ -46,21 +46,21 @@ class BlogController extends Controller
 
         // Build SEO keywords (base + dynamic from categories/tags)
         $baseKeywords = [
+            'best morocco itinerary',
+            'morocco itinerary one week',
+            'best 7 day morocco itinerary',
+            'morocco 14 day itinerary',
+            'marrakech desert tour 3 days',
+            'marrakech desert tours 4 days',
+            'luxury sahara desert tour from marrakech',
+            'marrakech desert tours',
+            'sahara desert tour from marrakech',
             'morocco private tours',
             'private morocco tours',
-            'private morocco tour',
-            'private tours morocco',
+            'private tours in morocco',
             'private tour morocco',
-            'small group tours morocco',
-            'morocco small group tours',
-            'exclusive morocco travel experiences',
-            'vip morocco tours',
-            'morocco luxury travel',
-            'luxury travel morocco',
-            'morocco travel insurance',
-            'morocco travel agent',
-            'what is the best time to travel to morocco',
-            'morocco travel visa requirements',
+            'luxury desert tours marrakech',
+            'desert tour from marrakech',
         ];
 
         $dynamicKeywords = array_filter(array_merge(
@@ -78,17 +78,17 @@ class BlogController extends Controller
             ->all();
 
         // 🔥 SEO Meta for Blog Homepage
-        SEOMeta::setTitle('Morocco Travel Blog | Private Morocco Tours & Exclusive Experiences | Morocco Quest')
-            ->setDescription('Read the latest travel stories from Morocco Quest. Discover tips for private tours morocco, small group tours morocco, and exclusive morocco travel experiences.')
+        SEOMeta::setTitle('Best Morocco Itinerary & Travel Blog | Morocco Quest')
+            ->setDescription('Best morocco itinerary, morocco itinerary one week, best 7 day morocco itinerary, morocco 14 day itinerary, marrakech desert tour 3 days, and luxury desert tours marrakech.')
             ->setCanonical(url()->current())
             ->addKeyword($keywords);
 
-        OpenGraph::setTitle('Morocco Travel Blog | Private Morocco Tours & Exclusive Experiences | Morocco Quest')
-            ->setDescription('Expert guides on private morocco tours and exclusive morocco travel experiences. Plan your perfect private tour morocco with our travel insights.')
+        OpenGraph::setTitle('Best Morocco Itinerary & Travel Blog | Morocco Quest')
+            ->setDescription('Expert guides on best morocco itinerary, marrakech desert tours, and morocco private tours. Plan your perfect private tour morocco with our travel insights.')
             ->setUrl(url()->current());
 
-        JsonLd::setTitle('Morocco Travel Blog')
-            ->setDescription('Your guide to private tours morocco, featuring expert advice on small group tours morocco and vip morocco tours.')
+        JsonLd::setTitle('Best Morocco Itinerary & Travel Blog')
+            ->setDescription('Your guide to best morocco itinerary, marrakech desert tours, and sahara desert tour from marrakech.')
             ->setType('Blog');
 
         return view('blog', compact('posts', 'categories', 'tags'));
@@ -121,7 +121,7 @@ class BlogController extends Controller
 
         // 🔥 SEO for Blog Search
         $title = "Search results for \"{$query}\" | Morocco Travel Blog";
-        $description = "Find articles matching '{$query}' on Morocco Quest. Learn more about private morocco tours, small group tours morocco, and exclusive morocco travel experiences.";
+        $description = "Find articles matching '{$query}' on Morocco Quest. Learn more about morocco private tours, marrakech desert tours, and sahara desert tour from marrakech.";
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -167,31 +167,29 @@ class BlogController extends Controller
         $sidebarData = $this->getSidebarData();
 
         // ✅ SEO Meta
-        $description = Str::limit(strip_tags($post->summary ?? $post->content), 160);
+        $description = Str::limit(strip_tags($post->summary ?? $post->content), 140) . ' Best morocco itinerary, marrakech desert tours, morocco private tours.';
         $image = $post->featured_image ?? asset('images/default-blog.jpg');
         $url = url()->current();
         $keywords = $post->tags->pluck('name')->toArray();
 
         // Merge commercial keywords with post-specific keywords
         $commercialKeywords = [
+            'best morocco itinerary',
+            'morocco itinerary one week',
+            'best 7 day morocco itinerary',
+            'morocco 14 day itinerary',
+            'marrakech desert tours',
+            'sahara desert tour from marrakech',
+            'luxury desert tours marrakech',
             'morocco private tours',
             'private morocco tours',
-            'private morocco tour',
-            'private tours morocco',
+            'private tours in morocco',
             'private tour morocco',
-            'small group tours morocco',
-            'morocco small group tours',
-            'exclusive morocco travel experiences',
-            'vip morocco tours',
-            'morocco luxury travel',
-            'luxury travel morocco',
-            'morocco travel insurance',
-            'morocco travel agent',
-            'what is the best time to travel to morocco',
-            'morocco travel visa requirements',
+            'marrakech desert tour 3 days',
+            'desert tour from marrakech',
         ];
 
-        $allKeywords = array_merge([$post->title, 'Luxury Morocco Tours'], $keywords, $commercialKeywords);
+        $allKeywords = array_merge([strtolower($post->title)], $keywords, $commercialKeywords);
 
         SEOMeta::setTitle($post->title);
         SEOMeta::setDescription($description);
