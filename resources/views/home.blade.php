@@ -1223,9 +1223,6 @@
         </section>
 
 
-        <!-- jQuery (deferred) -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-
         <!-- Magnific Popup (deferred) -->
         <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js" defer></script>
 

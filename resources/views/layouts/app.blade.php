@@ -38,9 +38,9 @@
     @endphp
 
 
-    <title>{{ $metaTitle }}</title>
-    <meta name="description" content="{{ $metaDescription }}" />
-    <meta name="keywords" content="{{ $metaKeywords }}" />
+    <title>{!! $metaTitle !!}</title>
+    <meta name="description" content="{!! $metaDescription !!}" />
+    <meta name="keywords" content="{!! $metaKeywords !!}" />
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="google-site-verification" content="FT8pL55esPmKkEfXDLPA6ZAZtsS8M8xQS_euP4lcXVk" />
@@ -160,21 +160,21 @@
 
     @include('partials.footer')
 
-    <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('assets/js/moment.min.js') }}"></script>
-    <script src="{{ asset('assets/js/daterangepicker.min.js') }}"></script>
-    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
-    <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}"></script>
-    <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/moment.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/daterangepicker.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/gsap.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/SplitText.min.js') }}" defer></script>
 
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}" defer></script>
     <script>
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
