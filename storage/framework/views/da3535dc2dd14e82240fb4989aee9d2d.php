@@ -1,22 +1,67 @@
 
-<?php $__env->startSection('title', 'Private Morocco Tours & Small Group Tours Morocco | Morocco Quest'); ?>
+<?php $__env->startSection('title', 'Morocco Private Tours | Marrakech Desert Tours & Sahara Desert Tour from Marrakech - Morocco Quest'); ?>
+
+<?php $__env->startSection('description',
+    'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.'); ?>
 
 <?php $__env->startSection('page_description',
-    'Experience private morocco tours with Morocco Quest. Discover small group tours morocco,
-    exclusive morocco travel experiences, vip morocco tours, luxury travel morocco & more. Book your private tour morocco
-    adventure today.'); ?>
+    'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.'); ?>
 
 <?php $__env->startSection('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private
-    tour morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco
-    tours, morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best
-    time to travel to morocco, morocco travel visa requirements'); ?>
+    'morocco private tours, private morocco tours, marrakech desert tours, desert tours marrakech, sahara desert tour from marrakech, luxury desert tours marrakech, sahara desert tours morocco, private tours in morocco, best morocco private tour company, private tour morocco'); ?>
 
     <?php $__env->startPush('head'); ?>
         <script type="application/ld+json">
 <?php echo json_encode($schemaJson, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES, 512) ?>
 </script>
     <?php $__env->stopPush(); ?>
+
+<?php $__env->startPush('jsonld'); ?>
+<script type="application/ld+json">
+<?php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'WebSite',
+    'name' => 'Morocco Quest',
+    'url' => url('/'),
+    'description' => 'Morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.',
+    'potentialAction' => [
+        '@type' => 'SearchAction',
+        'target' => url('/search') . '?query={search_term_string}',
+        'query-input' => 'required name=search_term_string',
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE); ?>
+
+</script>
+<script type="application/ld+json">
+<?php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => 'What are the best Marrakech desert tours?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Our most popular marrakech desert tours include the sahara desert tour from marrakech to Merzouga (3 to 4 days), luxury desert tours marrakech with private camp at Erg Chebbi, and the morocco desert tours from marrakech that combine the Atlas Mountains with the dunes.'],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Do you offer private tours in Morocco?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Yes. All our morocco private tours include a private vehicle, English-speaking driver, and tailor-made itineraries. We are recognized as one of the best morocco private tour company options for couples, families, and small groups.'],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'How long is a sahara desert tour from Marrakech?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'A sahara desert tour from marrakech typically takes 3 days for Merzouga round trip, or 4 days for a deeper desert experience. We also offer luxury sahara desert tour from marrakech with premium camps.'],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Which is the best morocco itinerary?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'The best morocco itinerary depends on your time. The most popular is morocco itinerary one week (best 7 day morocco itinerary) covering Marrakech and the Sahara. For longer trips we recommend a morocco 14 day itinerary including imperial cities and the desert.'],
+        ],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE); ?>
+
+</script>
+<?php $__env->stopPush(); ?>
 
 
 <?php $__env->startSection('content'); ?>

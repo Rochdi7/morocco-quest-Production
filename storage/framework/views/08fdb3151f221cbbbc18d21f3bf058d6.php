@@ -26,15 +26,15 @@
     <?php
         $metaTitle =
             trim($__env->yieldContent('title')) ?:
-            'private morocco tours | exclusive morocco travel experiences | Morocco Quest';
+            'Morocco Private Tours | Marrakech Desert Tours & Sahara Desert Tour from Marrakech - Morocco Quest';
 
         $metaDescription =
             trim($__env->yieldContent('description')) ?:
-            'private morocco tours, private tour morocco, small group tours morocco, exclusive morocco travel experiences, vip morocco tours, morocco travel.';
+            'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.';
 
         $metaKeywords =
             trim($__env->yieldContent('keywords')) ?:
-            'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours, morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to travel to morocco, morocco travel visa requirements';
+            'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco, best morocco private tour company, sahara desert tours morocco, desert tours marrakech, marrakech desert tour, fes to marrakech desert tour';
     ?>
 
 
@@ -48,6 +48,43 @@
     <meta name="seobility" content="3e84be663a440d957975fd49dc5ee255">
 
     <link rel="canonical" href="<?php echo e(url()->current()); ?>" />
+
+    
+    <meta property="og:site_name" content="Morocco Quest" />
+    <meta property="og:type" content="<?php echo $__env->yieldContent('og_type', 'website'); ?>" />
+    <meta property="og:title" content="<?php echo e($metaTitle); ?>" />
+    <meta property="og:description" content="<?php echo e($metaDescription); ?>" />
+    <meta property="og:url" content="<?php echo e(url()->current()); ?>" />
+    <meta property="og:image" content="<?php echo $__env->yieldContent('og_image', asset('assets/img/logo-bg.png')); ?>" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<?php echo e($metaTitle); ?>" />
+    <meta name="twitter:description" content="<?php echo e($metaDescription); ?>" />
+    <meta name="twitter:image" content="<?php echo $__env->yieldContent('og_image', asset('assets/img/logo-bg.png')); ?>" />
+
+    
+    <script type="application/ld+json">
+    <?php echo json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'TravelAgency',
+        'name' => 'Morocco Quest',
+        'description' => 'Best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.',
+        'url' => url('/'),
+        'logo' => asset('assets/img/logo-bg.png'),
+        'image' => asset('assets/img/logo-bg.png'),
+        'areaServed' => ['@type' => 'Country', 'name' => 'Morocco'],
+        'knowsAbout' => [
+            'morocco private tours',
+            'marrakech desert tours',
+            'sahara desert tour from marrakech',
+            'luxury desert tours marrakech',
+            'private tours in morocco',
+        ],
+    ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE); ?>
+
+    </script>
+
+    <?php echo $__env->yieldPushContent('jsonld'); ?>
 
     <!-- Favicons (paths aligned to your /assets/img/favicons directory) -->
     <link rel="icon" type="image/svg+xml" href="<?php echo e(asset('assets/img/favicons/favicon.svg')); ?>">
@@ -70,20 +107,7 @@
     <meta name="apple-mobile-web-app-title" content="MoroccoQuest">
     <meta name="application-name" content="MoroccoQuest">
 
-    <!-- Open Graph -->
-    <meta property="og:url" content="<?php echo e(url()->current()); ?>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="<?php echo e($metaTitle); ?>" />
-    <meta property="og:description" content="<?php echo e($metaDescription); ?>" />
-    <meta property="og:image" content="<?php echo e(asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp')); ?>" />
-    <meta property="og:site_name" content="Morocco Quest" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@MoroccoQuest" />
-    <meta name="twitter:title" content="<?php echo e($metaTitle); ?>" />
-    <meta name="twitter:description" content="<?php echo e($metaDescription); ?>" />
-    <meta name="twitter:image" content="<?php echo e(asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp')); ?>" />
 
     <!-- Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
