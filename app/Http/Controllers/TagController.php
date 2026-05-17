@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\Blog;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
@@ -25,9 +26,18 @@ class TagController extends Controller
             ->latest()
             ->paginate(10);
 
-        $recentBlogs = Blog::latest()->take(5)->get();
-        $categories = Category::withCount('blogs')->orderBy('name')->get();
-        $tags = Tag::all();
+        // Same sidebar cache key as CategoryController + BlogController.
+        // Shared across all blog/category/tag pages; auto-expires after 1h.
+        $sidebar = Cache::remember('blog_sidebar_v1', 3600, function () {
+            return [
+                'recentBlogs' => Blog::latest()->take(5)->get(),
+                'categories'  => Category::withCount('blogs')->orderBy('name')->get(),
+                'tags'        => Tag::orderBy('name')->get(),
+            ];
+        });
+        $recentBlogs = $sidebar['recentBlogs'];
+        $categories  = $sidebar['categories'];
+        $tags        = $sidebar['tags'];
 
         $title = 'Posts tagged: '.$tag->name.' | Morocco Quest';
 

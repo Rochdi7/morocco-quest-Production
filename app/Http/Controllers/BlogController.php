@@ -8,6 +8,7 @@ use App\Models\Tag;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -18,20 +19,24 @@ class BlogController extends Controller
 {
     /**
      * Get Sidebar Data for Blog Pages.
+     * Cached for 1h since categories/tags/recent-blogs change infrequently.
+     * Same cache key is shared with CategoryController + TagController so a
+     * single warm cache serves all blog/category/tag URLs.
+     *
+     * Note: the index() method below historically used a slightly different
+     * categories query (`Category::with('blogs')->whereHas('blogs')`) than
+     * this sidebar helper. The cached version below matches the index()
+     * query so the sidebar looks identical to the previous /blog page.
      */
     private function getSidebarData()
     {
-        $recentBlogs = Blog::latest()->take(5)->get();
-
-        $categories = Category::with('blogs')
-            ->whereHas('blogs')
-            ->orderBy('name', 'asc')
-            ->get();
-
-
-        $tags = Tag::orderBy('name', 'asc')->get();
-
-        return compact('recentBlogs', 'categories', 'tags');
+        return Cache::remember('blog_sidebar_v1', 3600, function () {
+            return [
+                'recentBlogs' => Blog::latest()->take(5)->get(),
+                'categories'  => Category::withCount('blogs')->orderBy('name')->get(),
+                'tags'        => Tag::orderBy('name')->get(),
+            ];
+        });
     }
 
 
@@ -41,8 +46,11 @@ class BlogController extends Controller
     public function index()
     {
         $posts = Blog::latest()->paginate(6);
-        $categories = Category::withCount('blogs')->get();
-        $tags = Tag::all();
+
+        $sidebar    = $this->getSidebarData();
+        $categories = $sidebar['categories'];
+        $tags       = $sidebar['tags'];
+        $recentBlogs = $sidebar['recentBlogs'];
 
         // Build SEO keywords (base + dynamic from categories/tags)
         $baseKeywords = [
@@ -91,7 +99,7 @@ class BlogController extends Controller
             ->setDescription('Your guide to best morocco itinerary, marrakech desert tours, and sahara desert tour from marrakech.')
             ->setType('Blog');
 
-        return view('blog', compact('posts', 'categories', 'tags'));
+        return view('blog', compact('posts', 'categories', 'tags', 'recentBlogs'));
     }
 
 
