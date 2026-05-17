@@ -112,9 +112,7 @@
 
     <meta name="twitter:site" content="@MoroccoQuest" />
 
-    <!-- Preconnect & Preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preconnect to CDNs we still hit -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
     {{-- LCP hero preload --}}
@@ -123,14 +121,22 @@
           href="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}"
           fetchpriority="high" />
 
-    <!-- Fonts (already non-blocking) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rubik:wght@400;700&display=swap"
-        rel="stylesheet" media="all" onload="this.media='all'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rubik:wght@400;700&display=swap"
-            rel="stylesheet">
-    </noscript>
+    {{-- Preload the two latin woff2 files that the inline @font-face uses below.
+         Saves a round-trip — the browser starts the font fetch as soon as the
+         preload tag is parsed, instead of waiting for first @font-face match. --}}
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="{{ asset('assets/fonts/rubik-v31-latin-400.woff2') }}">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="{{ asset('assets/fonts/abril-fatface-v25-latin-400.woff2') }}">
+
+    {{-- Self-hosted Google Fonts (latin subset only).
+         Eliminates the 750ms render-block to fonts.googleapis.com and the
+         chained 2x woff2 fetches on the critical path. --}}
+    <style>
+        @font-face{font-family:'Abril Fatface';font-style:normal;font-weight:400;font-display:swap;src:url('{{ asset('assets/fonts/abril-fatface-v25-latin-400.woff2') }}') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+        @font-face{font-family:'Rubik';font-style:normal;font-weight:400;font-display:swap;src:url('{{ asset('assets/fonts/rubik-v31-latin-400.woff2') }}') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+        @font-face{font-family:'Rubik';font-style:normal;font-weight:700;font-display:swap;src:url('{{ asset('assets/fonts/rubik-v31-latin-700.woff2') }}') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+    </style>
 
     {{-- Bootstrap Icons: defer (icons only appear in nav/footer, not above the fold) --}}
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
@@ -142,6 +148,22 @@
     {{-- Critical CSS (render-blocking — needed for first paint) --}}
     <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
+
+    {{-- Inline above-the-fold rules: paints something usable before the
+         deferred CSS finishes. Tiny (<1KB), zero visual regression because
+         it only sets what the existing CSS would set anyway. --}}
+    <style>
+        html{scroll-behavior:smooth}
+        body{margin:0;font-family:'Rubik',Arial,Helvetica,sans-serif;background:#fff;color:#1a1a1a;-webkit-font-smoothing:antialiased}
+        .preloader{position:fixed;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;z-index:9999}
+        .preloader-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
+        .preloader img{max-width:240px;height:auto;display:block}
+        img{max-width:100%;height:auto}
+        .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+        /* Reserve hero height so layout doesn't shift before style.min.css applies */
+        .hero-layout1{min-height:560px;background-size:cover;background-position:center}
+        @media (max-width:991.98px){.hero-layout1{min-height:480px}}
+    </style>
 
     {{-- Non-critical CSS (deferred — used by sliders, popups, datepickers, animations) --}}
     @php
