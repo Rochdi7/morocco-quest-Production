@@ -18,12 +18,16 @@ class ContactController extends Controller
         $description = 'Contact Morocco Quest to book morocco private tours, marrakech desert tours, or a sahara desert tour from marrakech. Private tours in morocco tailored to you.';
         $keywords = ['morocco private tours', 'marrakech desert tours', 'sahara desert tour from marrakech', 'private tours in morocco', 'best morocco private tour company'];
 
+        $url = url()->current();
+
         SEOMeta::setTitle($title);
         SEOMeta::setDescription($description);
         SEOMeta::addKeyword($keywords);
+        SEOMeta::setCanonical($url);
 
         OpenGraph::setTitle($title);
         OpenGraph::setDescription($description);
+        OpenGraph::setUrl($url);
 
         JsonLd::setTitle($title);
         JsonLd::setDescription($description);

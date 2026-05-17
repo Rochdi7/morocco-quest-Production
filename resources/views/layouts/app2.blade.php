@@ -24,14 +24,18 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="google-site-verification" content="FT8pL55esPmKkEfXDLPA6ZAZtsS8M8xQS_euP4lcXVk" />
     <meta name="author" content="Morocco Quest Team" />
-    <meta name="keywords" content="@yield('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco, best morocco private tour company, sahara desert tours morocco, desert tours marrakech, marrakech desert tour, fes to marrakech desert tour')" />
-    <meta name="description" content="@yield('description', 'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.')" />
     <meta name="msvalidate.01" content="27E449107B43D56EE655E22CCA5378A6" />
-
-    <meta name="robots" content="INDEX,FOLLOW" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="canonical" href="{{ url()->current() }}" />
+
+    {{--
+        DO NOT add <meta name="description">, <meta name="keywords">,
+        <meta name="robots"> or <link rel="canonical"> here.
+        They are emitted by {!! SEOMeta::generate() !!} below.
+        Controllers populate them via SEOMeta::setDescription / setKeywords /
+        setCanonical, and config/seotools.php provides defaults.
+        Duplicating them here causes the "Multiple meta description tags"
+        Ahrefs issue (https://...). Use SEOMeta facade in the controller instead.
+    --}}
 
     {{-- Global TravelAgency JSON-LD --}}
     <script type="application/ld+json">
@@ -121,18 +125,22 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ url('/sitemap.xml') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    {{-- ✅ SEO TOOLS (dynamic) --}}
+    {{-- ✅ SEO TOOLS (dynamic — emits title, description, keywords, robots,
+         canonical, og:*, twitter:*, JSON-LD with per-page values from the
+         controller and config/seotools.php defaults) --}}
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
     {!! Twitter::generate() !!}
     {!! JsonLd::generate() !!}
 
-    {{-- Twitter Card --}}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@MoroccoQuest" />
-    <meta name="twitter:title" content="@yield('title', 'Morocco Quest: Authentic Tours & Travel')" />
-    <meta name="twitter:description" content="@yield('page_description', 'Discover unforgettable Morocco tours, day trips, Sahara desert excursions, Atlas Mountains activities, and car rentals with Morocco Quest. Plan your adventure today!')" />
-    <meta name="twitter:image" content="{{ asset('assets/img/morocco-quest-social-share.webp') }}" />
+    {{--
+        DO NOT add static <meta name="twitter:*"> here.
+        Twitter::generate() above already emits twitter:card, twitter:site,
+        twitter:title, twitter:description, and twitter:image — values come
+        from config/seotools.php twitter.defaults and from any
+        Twitter::setX(...) calls in controllers. Adding them here creates
+        the "Multiple meta description tags / duplicate twitter tags" issue.
+    --}}
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
