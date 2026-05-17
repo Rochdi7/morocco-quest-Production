@@ -2,22 +2,26 @@
 <html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (deferred to idle to protect LCP) -->
     <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WVCGDJ98');
+        (function () {
+            function loadGTM() {
+                var w = window, d = document, s = 'script', l = 'dataLayer', i = 'GTM-WVCGDJ98';
+                w[l] = w[l] || [];
+                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            }
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGTM, { timeout: 3000 });
+            } else {
+                setTimeout(loadGTM, 2500);
+            }
+        })();
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
@@ -112,12 +116,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preload" as="image" href="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}"
-        fetchpriority="high" />
 
-    <!-- Fonts and Icons (unchanged as requested) -->
+    {{-- LCP hero preload --}}
+    {{-- TODO (Phase 2.1): generate -768.webp / -1200.webp / -1920.webp variants and switch to imagesrcset --}}
+    <link rel="preload" as="image"
+          href="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}"
+          fetchpriority="high" />
+
+    <!-- Fonts (already non-blocking) -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rubik:wght@400;700&display=swap"
         rel="stylesheet" media="all" onload="this.media='all'">
     <noscript>
@@ -125,17 +132,39 @@
             rel="stylesheet">
     </noscript>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('assets/plugins/animate.min.css') }}">
+    {{-- Bootstrap Icons: defer (icons only appear in nav/footer, not above the fold) --}}
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </noscript>
+
+    {{-- Critical CSS (render-blocking — needed for first paint) --}}
     <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/magnific-popup.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/odometer.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/plugins/daterangepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/new_style.css') }}">
+
+    {{-- Non-critical CSS (deferred — used by sliders, popups, datepickers, animations) --}}
+    @php
+        $deferredCss = [
+            'assets/plugins/animate.min.css',
+            'assets/plugins/jquery-ui.min.css',
+            'assets/plugins/magnific-popup.min.css',
+            'assets/plugins/odometer.css',
+            'assets/plugins/swiper-bundle.min.css',
+            'assets/plugins/daterangepicker.css',
+            'assets/css/home.css',
+            'assets/css/new_style.css',
+        ];
+    @endphp
+    @foreach ($deferredCss as $css)
+        <link rel="preload" as="style" href="{{ asset($css) }}" onload="this.onload=null;this.rel='stylesheet'">
+    @endforeach
+    <noscript>
+        @foreach ($deferredCss as $css)
+            <link rel="stylesheet" href="{{ asset($css) }}">
+        @endforeach
+    </noscript>
+
     @stack('head')
     @stack('styles')
     @yield('structured_data')
