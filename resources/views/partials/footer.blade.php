@@ -59,6 +59,93 @@
             </div>
         </div>
     </div>
+    {{-- Internal-link sitemap block. Added to give every page a stable set of
+         incoming links so /activities, /trips, /tours, /destinations and the
+         tours/place/{slug} URLs are no longer orphan or single-inlink pages.
+         Pure semantic <nav> + <ul>, no JS, no extra CSS — relies on existing
+         .footer-links / .custom-ul styles already loaded by style.min.css. --}}
+    <nav class="footer-sitemap py-4 border-top border-bottom border-dark-subtle"
+         aria-label="Morocco Quest sitemap">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-6 col-md-3">
+                    <h5 class="widgets-title text-white-color text-capitalize mb-3">Tours</h5>
+                    <ul class="custom-ul list-unstyled">
+                        <li><a href="{{ url('/tours') }}">All Tours</a></li>
+                        <li><a href="{{ route('tours.multi_day') }}">Multi-Day Tours</a></li>
+                        <li><a href="{{ route('tours.type', 'Classical Tours') }}">Classical Tours</a></li>
+                        <li><a href="{{ route('tours.type', 'Art Tours') }}">Art Tours</a></li>
+                        <li><a href="{{ route('tours.type', 'Garden Tours') }}">Garden Tours</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h5 class="widgets-title text-white-color text-capitalize mb-3">Activities &amp; Trips</h5>
+                    <ul class="custom-ul list-unstyled">
+                        <li><a href="{{ url('/activities') }}">All Activities</a></li>
+                        <li><a href="{{ route('activity-categories.index') }}">Activity Categories</a></li>
+                        <li><a href="{{ url('/trips') }}">Trips</a></li>
+                        <li><a href="{{ route('activities.byCategory', 'day-trips') }}">Day Trips</a></li>
+                        <li><a href="{{ route('activities.byCategory', 'city-tours') }}">City Tours</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h5 class="widgets-title text-white-color text-capitalize mb-3">Destinations</h5>
+                    <ul class="custom-ul list-unstyled">
+                        <li><a href="{{ route('destinations.index') }}">All Destinations</a></li>
+                        <li><a href="{{ route('tours.byPlace', 'marrakech') }}">Marrakech</a></li>
+                        <li><a href="{{ route('tours.byPlace', 'fez') }}">Fez</a></li>
+                        <li><a href="{{ route('tours.byPlace', 'chefchaouen') }}">Chefchaouen</a></li>
+                        <li><a href="{{ route('tours.byPlace', 'casablanca') }}">Casablanca</a></li>
+                        <li><a href="{{ route('tours.byPlace', 'rabat') }}">Rabat</a></li>
+                        <li><a href="{{ route('tours.byPlace', 'tangier') }}">Tangier</a></li>
+                        <li><a href="{{ route('tours.byPlace', 'essaouira') }}">Essaouira</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h5 class="widgets-title text-white-color text-capitalize mb-3">Company</h5>
+                    <ul class="custom-ul list-unstyled">
+                        <li><a href="{{ url('/about') }}">About Us</a></li>
+                        <li><a href="{{ url('/blog') }}">Travel Blog</a></li>
+                        <li><a href="{{ url('/faq') }}">FAQ</a></li>
+                        <li><a href="{{ url('/contact') }}">Contact</a></li>
+                        <li><a href="{{ url('/sitemap.xml') }}">XML Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            {{-- Dynamic detail-page inlinks. $footerTours and $footerActivities
+                 come from the View::composer in AppServiceProvider, cached for
+                 6h. Renders only if data is present so this fails closed if a
+                 future deploy removes the composer. --}}
+            @if (!empty($footerTours) && $footerTours->count())
+                <div class="row gy-4 mt-3">
+                    <div class="col-md-6">
+                        <h5 class="widgets-title text-white-color text-capitalize mb-3">Latest Tours</h5>
+                        <ul class="custom-ul list-unstyled">
+                            @foreach ($footerTours as $ft)
+                                <li>
+                                    <a href="{{ route('tours.show', $ft->slug) }}">{{ $ft->title }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @if (!empty($footerActivities) && $footerActivities->count())
+                        <div class="col-md-6">
+                            <h5 class="widgets-title text-white-color text-capitalize mb-3">Popular Activities</h5>
+                            <ul class="custom-ul list-unstyled">
+                                @foreach ($footerActivities as $fa)
+                                    <li>
+                                        <a href="{{ route('activities.show', $fa->slug) }}">{{ $fa->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
+            @endif
+        </div>
+    </nav>
+
     <div class="footer-center space-extra">
         <div class="container">
             <div class="row gx-4 gy-4 gx-xl-2 justify-content-between">
