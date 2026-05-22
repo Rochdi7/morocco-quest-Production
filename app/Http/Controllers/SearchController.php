@@ -71,25 +71,29 @@ class SearchController extends Controller
         $url = url()->current() . '?' . http_build_query($request->only(['query', 'place', 'guests']));
 
         $title = $query
-            ? 'Search Results for "'.$query.'" - Morocco Quest'
-            : 'Search Morocco Tours | Marrakech Desert Tours - Morocco Quest';
+            ? 'Search Results for "' . $query . '" | Morocco Tours | Morocco Quest'
+            : 'Search Morocco Tours, Day Trips & Activities | Morocco Quest';
 
         $description = $query
-            ? 'Search results for "'.$query.'" on marrakech desert tours and morocco private tours.'
-            : 'Search marrakech desert tours, sahara desert tour from marrakech, and morocco private tours. Find your perfect private tours in morocco.';
+            ? 'Search results for "' . $query . '" across morocco tours, sahara desert tours, morocco day trips and travel articles.'
+            : 'Search morocco tours, private morocco tours, sahara desert tours from Marrakech, morocco day trips and morocco tour packages. Book direct with a local agency.';
 
-        $keywords = array_filter([
-            'marrakech desert tours',
-            'sahara desert tour from marrakech',
-            'morocco private tours',
-            'private tours in morocco',
+        $keywordArray = array_filter([
+            'morocco tours',
+            'morocco tour package',
+            'private morocco tours',
+            'sahara desert tours morocco',
+            'morocco day tours',
+            'morocco day trips',
+            $query ? strtolower($query) : null,
         ]);
+        $keywords = implode(', ', array_unique($keywordArray));
 
 
         SEOMeta::setTitle($title)
             ->setDescription(Str::limit($description, 160))
             ->setCanonical($url)
-            ->addKeyword($keywords);
+            ->addKeyword($keywordArray);
 
         OpenGraph::setTitle($title)
             ->setDescription($description)
@@ -111,7 +115,10 @@ class SearchController extends Controller
             'activities',
             'blogs',
             'place',
-            'guests'
+            'guests',
+            'title',
+            'description',
+            'keywords'
         ));
     }
 }

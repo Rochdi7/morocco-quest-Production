@@ -1,17 +1,11 @@
 @extends('layouts.app2')
-@section('title', isset($searchQuery) && $searchQuery ? 'Search Results for "' . e($searchQuery) . '" | Private Morocco
-    Tours' : 'Search Results | Private Morocco Tours & Exclusive Experiences')
+@section('title', $title ?? (isset($searchQuery) && $searchQuery ? 'Search Results for "' . e($searchQuery) . '" | Morocco Quest' : 'Search Morocco Tours, Day Trips & Activities | Morocco Quest'))
 
-@section('page_description', isset($searchQuery) && $searchQuery ? 'Browse private tours morocco, small group tours
-    morocco, exclusive morocco travel experiences, and vip morocco tours matching "' . e($searchQuery) . '" with Morocco
-    Quest.' : 'Explore private tours morocco, small group tours morocco, exclusive morocco travel experiences, vip morocco
-    tours, and morocco travel services available with Morocco Quest.')
+@section('description', $description ?? (isset($searchQuery) && $searchQuery ? 'Search results for "' . e($searchQuery) . '" on morocco tours, sahara desert tours from Marrakech and morocco day trips.' : 'Search morocco tours, private morocco tours, sahara desert tours from Marrakech, morocco day trips and morocco tour packages.'))
 
-@section('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private tour
-    morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco tours,
-    morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best time to
-    travel to morocco, morocco travel visa requirements')
+@section('page_description', $description ?? 'Search morocco tours, sahara desert tours from Marrakech, morocco day trips and morocco tour packages with a top-rated local agency.')
+
+@section('keywords', $keywords ?? 'morocco tours, morocco tour package, private morocco tours, sahara desert tours morocco, morocco day tours, morocco day trips, morocco guided tours')
 
 
 @section('content')

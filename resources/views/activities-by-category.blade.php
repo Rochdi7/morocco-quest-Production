@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $category->name . ' in Morocco | Marrakech Desert Tours - Morocco Quest')
-@section('description', $category->name . ' activities in Morocco. Marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.')
-@section('keywords', 'marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, morocco private tours, ' . Str::lower($category->name))
+@section('title', $title ?? $category->name . ' in Morocco | Private Tours & Day Trips | Morocco Quest')
+@section('description', $description ?? 'Book ' . $category->name . ' in Morocco with a top-rated local agency. Private morocco tours, small group tours morocco and morocco day tours.')
+@section('keywords', $keywords ?? 'morocco tours, morocco day tours, morocco tour package, private morocco tours, morocco guided tours, ' . Str::lower($category->name))
 
 @section('content')
     <main>

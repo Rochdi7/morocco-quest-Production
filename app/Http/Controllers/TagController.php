@@ -39,25 +39,28 @@ class TagController extends Controller
         $categories  = $sidebar['categories'];
         $tags        = $sidebar['tags'];
 
-        $title = 'Posts tagged: '.$tag->name.' | Morocco Quest';
+        $title = $tag->name . ' | Morocco Travel Blog | Morocco Quest';
 
-        $description = 'Articles tagged '.$tag->name.' on best morocco itinerary, marrakech desert tours, and morocco private tours.';
+        $description = 'Articles about ' . $tag->name . '. Read morocco tour guides, sahara desert tours from Marrakech, morocco day trips and morocco multi day tour itineraries.';
 
         $url = url()->current();
 
-        $keywords = array_filter([
-            'best morocco itinerary',
-            'marrakech desert tours',
-            'morocco private tours',
-            'sahara desert tour from marrakech',
+        $keywordArray = array_filter([
+            'morocco tours',
+            'morocco travel blog',
+            'morocco tour package',
+            'private morocco tours',
+            'sahara desert tours morocco',
+            'morocco day tours',
             strtolower($tag->name),
         ]);
+        $keywords = implode(', ', array_unique($keywordArray));
 
 
         SEOMeta::setTitle($title);
         SEOMeta::setDescription($description);
         SEOMeta::setCanonical($url);
-        SEOMeta::addKeyword($keywords);
+        SEOMeta::addKeyword($keywordArray);
 
         OpenGraph::setTitle($title)
             ->setDescription($description)
@@ -72,7 +75,10 @@ class TagController extends Controller
             'recentBlogs',
             'categories',
             'tags',
-            'tag'
+            'tag',
+            'title',
+            'description',
+            'keywords'
         ));
     }
 }

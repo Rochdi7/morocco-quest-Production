@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Morocco Trips & Private Tours | Marrakech Desert Tours - Morocco Quest')
-@section('description', 'Multi-day morocco trips: morocco private tours, marrakech desert tours, sahara desert tour from marrakech, and luxury desert tours marrakech.')
-@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco')
+@section('title', $title ?? 'Morocco Multi Day Tours & Trip Packages | Morocco Quest')
+@section('description', $description ?? 'Book morocco trips & multi day tour packages: 3, 5 & 7-day morocco tours with sahara desert from Marrakech. Private morocco tours and small group tours morocco.')
+@section('keywords', $keywords ?? 'morocco tours, morocco multi day tours, morocco tour package, morocco 7 day tour, private morocco tours, small group tours morocco, morocco guided tours')
 
 @section('content')
     <main>

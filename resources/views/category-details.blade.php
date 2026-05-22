@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $category->name . ' | Best Morocco Itinerary - Morocco Quest')
-@section('description', $category->name . ' articles on best morocco itinerary, marrakech desert tours, and morocco private tours.')
-@section('keywords', 'best morocco itinerary, marrakech desert tours, morocco private tours, sahara desert tour from marrakech, ' . Str::lower($category->name))
+@section('title', $title ?? $category->name . ' | Morocco Travel Blog | Morocco Quest')
+@section('description', $description ?? 'Latest articles on ' . $category->name . '. Read morocco tour guides, itineraries, sahara desert tours from Marrakech and morocco day trips.')
+@section('keywords', $keywords ?? 'morocco tours, morocco travel blog, morocco tour package, private morocco tours, sahara desert tours morocco, ' . Str::lower($category->name))
 
 
 @section('content')

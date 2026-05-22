@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $post->title . ' | Morocco Quest')
-@section('description', ($post->summary ?? Str::limit(strip_tags($post->content ?? ''), 140)) . ' Best morocco itinerary, marrakech desert tours, morocco private tours.')
-@section('keywords', 'best morocco itinerary, morocco itinerary one week, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, ' . Str::lower($post->title))
+@section('title', $title ?? $post->title . ' | Morocco Travel Blog | Morocco Quest')
+@section('description', $description ?? Str::limit(strip_tags($post->summary ?? $post->content ?? ''), 160))
+@section('keywords', $keywords ?? 'morocco tours, morocco travel blog, morocco tour package, private morocco tours, sahara desert tours morocco, ' . Str::lower($post->title))
 @section('og_type', 'article')
 
 @section('page_description', Str::limit(strip_tags($post->content), 155))

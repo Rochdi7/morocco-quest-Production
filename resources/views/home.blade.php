@@ -1,14 +1,14 @@
 @extends('layouts.app')
-@section('title', 'Morocco Private Tours | Marrakech Desert Tours & Sahara Desert Tour from Marrakech - Morocco Quest')
+@section('title', 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest')
 
 @section('description',
-    'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.')
+    'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.')
 
 @section('page_description',
-    'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.')
+    'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.')
 
 @section('keywords',
-    'morocco private tours, private morocco tours, marrakech desert tours, desert tours marrakech, sahara desert tour from marrakech, luxury desert tours marrakech, sahara desert tours morocco, private tours in morocco, best morocco private tour company, private tour morocco')
+    'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours')
 
     @push('head')
         <script type="application/ld+json">
@@ -38,23 +38,28 @@
     'mainEntity' => [
         [
             '@type' => 'Question',
-            'name' => 'What are the best Marrakech desert tours?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Our most popular marrakech desert tours include the sahara desert tour from marrakech to Merzouga (3 to 4 days), luxury desert tours marrakech with private camp at Erg Chebbi, and the morocco desert tours from marrakech that combine the Atlas Mountains with the dunes.'],
+            'name' => 'What are the best morocco tours from Marrakech?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'The best morocco tours from Marrakech are our 3-day sahara desert tour to Merzouga, the 7-day morocco tour combining Marrakech, Fes and the Sahara desert, and our private morocco tours covering the Atlas Mountains and Aït Benhaddou.'],
         ],
         [
             '@type' => 'Question',
-            'name' => 'Do you offer private tours in Morocco?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Yes. All our morocco private tours include a private vehicle, English-speaking driver, and tailor-made itineraries. We are recognized as one of the best morocco private tour company options for couples, families, and small groups.'],
+            'name' => 'How much does a private morocco tour cost?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Private morocco tour packages start from $280 per person for 3-day sahara desert tours from Marrakech and go up to $1,400 for 7-day luxury morocco tours with private desert camps and 4-star riads.'],
         ],
         [
             '@type' => 'Question',
-            'name' => 'How long is a sahara desert tour from Marrakech?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'A sahara desert tour from marrakech typically takes 3 days for Merzouga round trip, or 4 days for a deeper desert experience. We also offer luxury sahara desert tour from marrakech with premium camps.'],
+            'name' => 'Are sahara desert tours from Marrakech worth it?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Yes. Our morocco desert tours from Marrakech are the most popular trip in Morocco. You cross the Atlas Mountains, visit Aït Benhaddou, ride camels at Erg Chebbi, and sleep in a Sahara desert camp.'],
         ],
         [
             '@type' => 'Question',
-            'name' => 'Which is the best morocco itinerary?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'The best morocco itinerary depends on your time. The most popular is morocco itinerary one week (best 7 day morocco itinerary) covering Marrakech and the Sahara. For longer trips we recommend a morocco 14 day itinerary including imperial cities and the desert.'],
+            'name' => 'Do you offer small group tours of Morocco?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Yes, we run small group tours morocco with a maximum of 8 travelers. Our morocco group tours include shared 4x4 transport, English-speaking guide, accommodation, and most meals.'],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'What is the best 7 day morocco tour itinerary?',
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Our best 7 day morocco tour covers Marrakech (2 nights), the Atlas Mountains, Aït Benhaddou, Dades Valley, Sahara desert at Merzouga (1 night camp), and Fes.'],
         ],
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
@@ -65,11 +70,10 @@
 @section('content')
     <main class="main">
         <p class="visually-hidden">
-            Morocco Quest specializes in private morocco tours, small group tours morocco, and exclusive morocco travel
-            experiences.
-            Discover private tour morocco adventures, vip morocco tours, and luxury travel morocco with expert morocco
-            travel agent services.
-            We offer morocco travel insurance and provide essential morocco travel visa requirements guidance.
+            Morocco Quest specializes in morocco tours, private morocco tours, and sahara desert tours from Marrakech.
+            Discover our morocco tour packages, small group tours morocco, luxury morocco tours, and morocco guided tours
+            with expert local agents. Explore morocco desert tours from marrakech, morocco day trips, and tailor-made
+            morocco multi day tours covering Marrakech, Fes, the Atlas Mountains and the Sahara.
         </p>
 
         <section class="z-index-common hero-layout1 overflow-clip"
@@ -97,8 +101,8 @@
                         Find Your Unforgettable <br class="d-none d-xxl-block"> Holiday in Morocco
                     </h1> --}}
                                 <h1 class="sec-title text-white-color fade-anim" data-delay="0.76" data-direction="top">
-                                    Private Morocco Tours & Small Group Tours Morocco <br class="d-none d-xxl-block">
-                                    Exclusive Travel Experiences
+                                    Morocco Tours & Private Sahara Desert <br class="d-none d-xxl-block">
+                                    Trips from Marrakech
                                 </h1>
                                 <p class="visually-hidden">
                                     Book private tours morocco with Morocco Quest for authentic small group tours morocco.

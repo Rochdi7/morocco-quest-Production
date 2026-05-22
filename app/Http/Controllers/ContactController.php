@@ -14,9 +14,9 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $title = 'Contact Morocco Quest | Book Morocco Private Tours';
-        $description = 'Contact Morocco Quest to book morocco private tours, marrakech desert tours, or a sahara desert tour from marrakech. Private tours in morocco tailored to you.';
-        $keywords = ['morocco private tours', 'marrakech desert tours', 'sahara desert tour from marrakech', 'private tours in morocco', 'best morocco private tour company'];
+        $title       = 'Contact Morocco Quest | Book Morocco Tours & Sahara Trips';
+        $description = 'Contact Morocco Quest to book morocco tours, sahara desert tours from Marrakech, morocco day trips and private morocco tours. Reply within 24h.';
+        $keywords    = ['morocco tours', 'morocco tour agency', 'morocco tour company', 'private morocco tours', 'morocco tour package', 'contact morocco tour operator'];
 
         $url = url()->current();
 
@@ -33,7 +33,11 @@ class ContactController extends Controller
         JsonLd::setDescription($description);
         JsonLd::setType('ContactPage');
 
-        return view('contact');
+        return view('contact', [
+            'title' => $title,
+            'description' => $description,
+            'keywords' => implode(', ', $keywords),
+        ]);
     }
 
     public function store(Request $request)

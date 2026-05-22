@@ -23,8 +23,9 @@ class HomepageController extends Controller
         | SEO – Core Meta (OPTIMIZED)
         |--------------------------------------------------------------------------
         */
-        $title = 'Morocco Private Tours | Marrakech Desert Tours & Sahara Desert Tour from Marrakech - Morocco Quest';
-        $description = 'Morocco private tours and marrakech desert tours. Sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco. Best morocco private tour company.';
+        $title = 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest';
+        $description = 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.';
+        $keywords = 'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours';
         $url = url('/');
         $image = asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp');
 
@@ -32,22 +33,19 @@ class HomepageController extends Controller
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword([
-                'morocco private tours',
+                'morocco tours',
                 'private morocco tours',
-                'marrakech desert tours',
-                'desert tours marrakech',
-                'sahara desert tour from marrakech',
-                'luxury desert tours marrakech',
-                'private tours in morocco',
-                'best morocco private tour company',
+                'morocco tour package',
                 'sahara desert tours morocco',
-                'private tour morocco',
-                'fes to marrakech desert tour',
                 'morocco desert tours from marrakech',
-                'best morocco itinerary',
-                'morocco itinerary one week',
-                'merzouga desert tour from marrakech',
-                'agafay desert tour from marrakech',
+                'small group tours morocco',
+                'luxury morocco tours',
+                'morocco guided tours',
+                'morocco tour packages',
+                'best morocco tours',
+                'morocco private tour',
+                'morocco day tours',
+                'morocco multi day tours',
             ]);
 
         /*
@@ -111,7 +109,7 @@ class HomepageController extends Controller
         | Latest Blog Posts (Cached)
         |--------------------------------------------------------------------------
         */
-        $latestPosts = Cache::remember('home_latest_posts', 60, function () {
+        $latestPosts = Cache::remember('home_latest_posts', 3600, function () {
             return Blog::latest()
                 ->take(3)
                 ->get()
@@ -139,7 +137,7 @@ class HomepageController extends Controller
         | Top Tours
         |--------------------------------------------------------------------------
         */
-        $topTours = Cache::remember('home_top_tours', 60, function () {
+        $topTours = Cache::remember('home_top_tours', 3600, function () {
             return Tour::with(['firstImage', 'places'])
                 ->latest()
                 ->take(4)
@@ -151,7 +149,7 @@ class HomepageController extends Controller
         | Featured Activities
         |--------------------------------------------------------------------------
         */
-        $featuredActivities = Cache::remember('home_featured_activities', 60, function () {
+        $featuredActivities = Cache::remember('home_featured_activities', 3600, function () {
             return Activity::with('images')
                 ->latest()
                 ->take(6)
@@ -163,28 +161,34 @@ class HomepageController extends Controller
         | Filters (Locations / Seasons / Group Sizes)
         |--------------------------------------------------------------------------
         */
-        $locations = collect()
-            ->merge(Place::whereNotNull('name')->where('name', '!=', '')->pluck('name'))
-            ->merge(ActivityCategory::whereNotNull('name')->where('name', '!=', '')->pluck('name'))
-            ->unique()
-            ->sort()
-            ->values();
+        $locations = Cache::remember('home_locations', 3600, function () {
+            return collect()
+                ->merge(Place::whereNotNull('name')->where('name', '!=', '')->pluck('name'))
+                ->merge(ActivityCategory::whereNotNull('name')->where('name', '!=', '')->pluck('name'))
+                ->unique()
+                ->sort()
+                ->values();
+        });
 
-        $seasons = collect()
-            ->merge(Tour::whereNotNull('best_season')->pluck('best_season'))
-            ->merge(Activity::whereNotNull('best_season')->pluck('best_season'))
-            ->filter()
-            ->unique()
-            ->sort()
-            ->values();
+        $seasons = Cache::remember('home_seasons', 3600, function () {
+            return collect()
+                ->merge(Tour::whereNotNull('best_season')->pluck('best_season'))
+                ->merge(Activity::whereNotNull('best_season')->pluck('best_season'))
+                ->filter()
+                ->unique()
+                ->sort()
+                ->values();
+        });
 
-        $groupSizes = collect()
-            ->merge(Tour::whereNotNull('group_size')->pluck('group_size'))
-            ->merge(Activity::whereNotNull('group_size')->pluck('group_size'))
-            ->filter()
-            ->unique()
-            ->sort()
-            ->values();
+        $groupSizes = Cache::remember('home_group_sizes', 3600, function () {
+            return collect()
+                ->merge(Tour::whereNotNull('group_size')->pluck('group_size'))
+                ->merge(Activity::whereNotNull('group_size')->pluck('group_size'))
+                ->filter()
+                ->unique()
+                ->sort()
+                ->values();
+        });
 
         /*
         |--------------------------------------------------------------------------
@@ -198,7 +202,10 @@ class HomepageController extends Controller
             'locations',
             'seasons',
             'groupSizes',
-            'schemaJson'
+            'schemaJson',
+            'title',
+            'description',
+            'keywords'
         ));
     }
 }

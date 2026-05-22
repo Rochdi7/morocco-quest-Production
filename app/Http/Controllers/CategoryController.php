@@ -34,25 +34,28 @@ class CategoryController extends Controller
         $categories  = $sidebar['categories'];
         $tags        = $sidebar['tags'];
 
-        $title = $category->name.' | Best Morocco Itinerary - Morocco Quest';
+        $title = $category->name . ' | Morocco Travel Blog | Morocco Quest';
 
-        $description = $category->name.' articles on best morocco itinerary, marrakech desert tours, and morocco private tours.';
+        $description = 'Latest articles on ' . $category->name . '. Read morocco tour guides, itineraries, sahara desert tours from Marrakech and morocco day trips.';
 
         $url = url()->current();
 
-        $keywords = array_filter([
-            'best morocco itinerary',
-            'marrakech desert tours',
-            'morocco private tours',
-            'sahara desert tour from marrakech',
+        $keywordArray = array_filter([
+            'morocco tours',
+            'morocco travel blog',
+            'morocco tour package',
+            'private morocco tours',
+            'sahara desert tours morocco',
+            'morocco day tours',
             strtolower($category->name),
         ]);
+        $keywords = implode(', ', array_unique($keywordArray));
 
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
             ->setCanonical($url)
-            ->addKeyword($keywords);
+            ->addKeyword($keywordArray);
 
         OpenGraph::setTitle($title)
             ->setDescription($description)
@@ -73,7 +76,10 @@ class CategoryController extends Controller
             'recentBlogs',
             'categories',
             'tags',
-            'category'
+            'category',
+            'title',
+            'description',
+            'keywords'
         ));
     }
 }

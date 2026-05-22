@@ -25,25 +25,29 @@ class SearchBarController extends Controller
         $url = url()->current() . '?' . http_build_query($request->only(['place', 'guests']));
 
         $description = $place
-            ? 'Search results for "'.$place.'" on marrakech desert tours and morocco private tours.'
-            : 'Search marrakech desert tours, sahara desert tour from marrakech, and morocco private tours. Find your perfect private tours in morocco.';
+            ? 'Search results for "' . $place . '" on morocco tours, private morocco tours, sahara desert tours and morocco day trips.'
+            : 'Search morocco tours, sahara desert tours from Marrakech, morocco day trips and morocco tour packages. Book direct with a local agency.';
 
         $title = $place
-            ? 'Search Results for "'.$place.'" - Morocco Quest'
-            : 'Search Morocco Tours | Marrakech Desert Tours - Morocco Quest';
+            ? 'Tours in ' . $place . ' Morocco | Search Results | Morocco Quest'
+            : 'Search Morocco Tours, Day Trips & Activities | Morocco Quest';
 
-        $keywords = array_filter([
-            'marrakech desert tours',
-            'sahara desert tour from marrakech',
-            'morocco private tours',
-            'private tours in morocco',
+        $keywordArray = array_filter([
+            'morocco tours',
+            'morocco tour package',
+            'private morocco tours',
+            'sahara desert tours morocco',
+            'morocco day tours',
+            'morocco day trips',
+            $place ? strtolower($place) . ' tours' : null,
         ]);
+        $keywords = implode(', ', array_unique($keywordArray));
 
 
         SEOMeta::setTitle($title)
             ->setDescription(Str::limit($description, 160))
             ->setCanonical($url)
-            ->addKeyword($keywords);
+            ->addKeyword($keywordArray);
 
         OpenGraph::setTitle($title)
             ->setDescription($description)
@@ -61,7 +65,7 @@ class SearchBarController extends Controller
 
         // ✅ Skip filtering if not enough data
         if (!$place || !$guests) {
-            return view('search-bar', compact('tours', 'activities'))
+            return view('search-bar', compact('tours', 'activities', 'title', 'description', 'keywords'))
                 ->with('filters', $request->all());
         }
 
@@ -93,7 +97,7 @@ class SearchBarController extends Controller
             return $min !== null && $min >= $guests;
         });
 
-        return view('search-bar', compact('tours', 'activities'))
+        return view('search-bar', compact('tours', 'activities', 'title', 'description', 'keywords'))
             ->with('filters', $request->all());
     }
 }

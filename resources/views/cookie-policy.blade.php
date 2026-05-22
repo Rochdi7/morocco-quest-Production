@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Cookie Policy | Morocco Quest')
-@section('description', 'Cookie Policy for Morocco Quest morocco private tours and marrakech desert tours.')
-@section('keywords', 'morocco private tours, marrakech desert tours')
+@section('title', $title ?? 'Cookie Policy | Morocco Quest')
+@section('description', $description ?? 'Cookie Policy for the Morocco Quest website and our morocco tours booking platform.')
+@section('keywords', $keywords ?? 'morocco quest, morocco tours, cookie policy')
 
 <link rel="canonical" href="{{ url()->current() }}">
 <meta property="og:title" content="Cookie Policy | Morocco Quest" />

@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'FAQ | Morocco Private Tours & Marrakech Desert Tours - Morocco Quest')
-@section('description', 'Frequently asked questions about morocco private tours, marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.')
-@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, luxury desert tours marrakech')
+@section('title', $title ?? 'FAQ | Morocco Tours, Sahara Desert Trips & Booking | Morocco Quest')
+@section('description', $description ?? 'FAQs about morocco tours, sahara desert tours from Marrakech, morocco day trips, morocco multi day tours, booking, prices and travel tips.')
+@section('keywords', $keywords ?? 'morocco tours, private morocco tours, sahara desert tours morocco, morocco desert tours from marrakech, morocco day tours, morocco multi day tours, morocco tour package')
     {{-- @section('structured_data')
 <link rel="canonical" href="{{ url()->current() }}">
 <meta property="og:title" content="FAQ - Morocco Travel Frequently Asked Questions | Morocco Quest" />

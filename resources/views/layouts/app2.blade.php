@@ -42,18 +42,55 @@
     {!! json_encode([
         '@context' => 'https://schema.org',
         '@type' => 'TravelAgency',
+        '@id' => url('/') . '#organization',
         'name' => 'Morocco Quest',
-        'description' => 'Best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.',
+        'alternateName' => 'Morocco Quest Tours & Travel',
+        'description' => 'Morocco Quest is a licensed Moroccan travel agency offering private morocco tours, sahara desert tours from Marrakech, luxury desert camps, small group tours, and tailor-made morocco tour packages.',
         'url' => url('/'),
-        'logo' => asset('assets/img/logo-bg.png'),
-        'image' => asset('assets/img/logo-bg.png'),
-        'areaServed' => ['@type' => 'Country', 'name' => 'Morocco'],
+        'logo' => asset('assets/img/logo-bg-wide.webp'),
+        'image' => asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
+        'priceRange' => '$$-$$$',
+        'telephone' => '+212-654-069-718',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'addressLocality' => 'Marrakech',
+            'addressRegion' => 'Marrakech-Safi',
+            'addressCountry' => 'MA',
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => '31.6295',
+            'longitude' => '-7.9811',
+        ],
+        'areaServed' => [
+            ['@type' => 'Country', 'name' => 'Morocco'],
+            ['@type' => 'City', 'name' => 'Marrakech'],
+            ['@type' => 'City', 'name' => 'Fes'],
+            ['@type' => 'City', 'name' => 'Casablanca'],
+            ['@type' => 'Place', 'name' => 'Sahara Desert'],
+            ['@type' => 'Place', 'name' => 'Merzouga'],
+        ],
         'knowsAbout' => [
-            'morocco private tours',
-            'marrakech desert tours',
-            'sahara desert tour from marrakech',
-            'luxury desert tours marrakech',
-            'private tours in morocco',
+            'morocco tours',
+            'private morocco tours',
+            'sahara desert tours morocco',
+            'morocco desert tours from marrakech',
+            'morocco tour package',
+            'small group tours morocco',
+            'luxury morocco tours',
+            'morocco guided tours',
+        ],
+        'sameAs' => [
+            'https://www.facebook.com/codesommetagency/',
+            'https://www.instagram.com/moroccoquestdmc/',
+            'https://www.tripadvisor.com/Attraction_Review-g293734-d33367694-Reviews-Morocco_Quest_Dmc-Marrakech_Marrakech_Safi.html',
+        ],
+        'contactPoint' => [
+            '@type' => 'ContactPoint',
+            'telephone' => '+212-654-069-718',
+            'contactType' => 'customer service',
+            'areaServed' => ['MA', 'US', 'EU', 'UK'],
+            'availableLanguage' => ['English', 'French', 'Spanish'],
         ],
     ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
     </script>
@@ -201,9 +238,9 @@
     <style>
         html{scroll-behavior:smooth}
         body{margin:0;font-family:'Rubik',Arial,Helvetica,sans-serif;background:#fff;color:#1a1a1a;-webkit-font-smoothing:antialiased}
-        .preloader{position:fixed;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;z-index:9999}
-        .preloader-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
-        .preloader img{max-width:240px;height:auto;display:block}
+        .preloader{position:fixed;inset:0;background:#181613;z-index:9999}
+        .preloader-inner{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+        .preloader-inner img{display:block;margin:0 auto 10px auto}
         img{max-width:100%;height:auto}
         .visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     </style>

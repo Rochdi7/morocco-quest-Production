@@ -50,10 +50,11 @@ class ActivityController extends Controller
             ->paginate(9);
 
         // ✅ SEO Setup
-        $title = "Morocco Activities & Day Tours | Marrakech Desert Tours - Morocco Quest";
+        $title = "Morocco Activities & Day Tours | Camel, Quad, Hiking & Food Tours | Morocco Quest";
 
-        $description = "Morocco activities and day tours: marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.";
+        $description = "Top morocco activities: camel tours, quad biking marrakech, morocco hiking tours, food tours and morocco day tours. Book private morocco tours and small group experiences.";
 
+        $keywords = 'morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech, morocco trekking tours, morocco cycling tours';
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -67,7 +68,7 @@ class ActivityController extends Controller
             ->setDescription($description)
             ->setType('CollectionPage');
 
-        return view('activity-categories', compact('activityCategories'));
+        return view('activity-categories', compact('activityCategories', 'title', 'description', 'keywords'));
     }
 
 
@@ -80,8 +81,9 @@ class ActivityController extends Controller
             ->latest()
             ->paginate(9);
 
-        $title = "{$category->name} Activities | Marrakech Desert Tours - Morocco Quest";
-        $description = "Explore our curated {$category->name}. Marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco with Morocco Quest.";
+        $title = "{$category->name} in Morocco | Private Tours & Day Trips | Morocco Quest";
+        $description = "Book {$category->name} in Morocco with a top-rated local agency. Private morocco tours, small group tours morocco and morocco day tours.";
+        $keywords = strtolower($category->name) . ", morocco {$category->name}, morocco tours, morocco day tours, morocco tour package, private morocco tours, morocco guided tours";
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -95,7 +97,7 @@ class ActivityController extends Controller
             ->setDescription($description)
             ->setType('TouristTrip');
 
-        return view('activities-by-category', compact('category', 'activities'));
+        return view('activities-by-category', compact('category', 'activities', 'title', 'description', 'keywords'));
     }
 
 
@@ -118,12 +120,16 @@ class ActivityController extends Controller
         $category = $categorySlug ? ActivityCategory::where('slug', $categorySlug)->first() : null;
 
         $title = $category
-            ? "{$category->name} | Marrakech Desert Tours - Morocco Quest"
-            : "Morocco Private Tours & Marrakech Desert Tours | Morocco Quest";
+            ? "{$category->name} in Morocco | Tours & Day Trips | Morocco Quest"
+            : "Morocco Activities & Day Tours | Camel, Quad, Hiking, Food | Morocco Quest";
 
         $description = $category
-            ? "Explore {$category->name} in Morocco. Marrakech desert tours, sahara desert tour from marrakech, and morocco private tours with expert guides."
-            : "Discover the best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, and luxury desert tours marrakech.";
+            ? "Discover {$category->name} in Morocco with a top-rated local agency. Private morocco tours, small group tours morocco and morocco day tours."
+            : "Top morocco activities: camel tours, quad biking marrakech, hiking, food tours and morocco day tours. Book private morocco tours with a top-rated local agency.";
+
+        $keywords = $category
+            ? strtolower($category->name) . ", morocco tours, morocco day tours, morocco tour package, private morocco tours"
+            : 'morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech, morocco trekking tours';
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -137,7 +143,7 @@ class ActivityController extends Controller
             ->setDescription($description)
             ->setType('TouristTrip');
 
-        return view('activity-categories', compact('activities', 'category'));
+        return view('activity-categories', compact('activities', 'category', 'title', 'description', 'keywords'));
     }
 
 
@@ -161,49 +167,48 @@ class ActivityController extends Controller
         $image = $activity->images->first()->image ?? asset('images/default-activity.jpg');
         $url = url()->current();
 
+        $title = $activity->title . ' | Morocco Day Tours & Activities | Morocco Quest';
+
         // Extensive keyword integration for specific activity pages
-        $keywords = array_filter([
-            'morocco private tours',
+        $keywordArray = array_filter([
+            'morocco tours',
+            'morocco day tours',
+            'morocco day trips',
+            'morocco tour package',
             'private morocco tours',
-            'marrakech desert tours',
-            'desert tours marrakech',
-            'sahara desert tour from marrakech',
-            'sahara desert tours from marrakech',
-            'luxury desert tours marrakech',
-            'private tours in morocco',
-            'private tours of morocco',
-            'private tour morocco',
-            'desert tour from marrakech',
-            'agafay desert tour from marrakech',
-            'merzouga desert tour from marrakech',
-            'private sahara desert tour from marrakech',
-            'private tour guide morocco',
+            'morocco guided tours',
+            'small group tours morocco',
+            'morocco camel tours',
+            'morocco hiking tours',
+            'morocco food tour',
+            'quad biking marrakech',
             strtolower($activity->title),
             optional($activity->category)->name,
         ]);
+        $keywords = implode(', ', array_unique($keywordArray));
 
         // SEO Meta
-        SEOMeta::setTitle($activity->title . ' | Morocco Quest')
+        SEOMeta::setTitle($title)
             ->setDescription($description)
             ->setCanonical($url)
-            ->addKeyword($keywords);
+            ->addKeyword($keywordArray);
 
-        OpenGraph::setTitle($activity->title)
+        OpenGraph::setTitle($title)
             ->setDescription($description)
             ->setUrl($url)
             ->addImage($image)
             ->addProperty('twitter:card', 'summary_large_image')
-            ->addProperty('twitter:title', $activity->title)
+            ->addProperty('twitter:title', $title)
             ->addProperty('twitter:description', $description)
             ->addProperty('twitter:image', $image);
 
-        JsonLd::setTitle($activity->title)
+        JsonLd::setTitle($title)
             ->setDescription($description)
             ->setUrl($url)
             ->addImage($image)
             ->setType('TouristTrip');
 
-        return view('activity-detail', compact('activity', 'relatedActivities'));
+        return view('activity-detail', compact('activity', 'relatedActivities', 'title', 'description', 'keywords'));
     }
 
 
@@ -235,10 +240,11 @@ class ActivityController extends Controller
             ->with(['images', 'category'])
             ->paginate(12);
 
-        $title = "Morocco {$normalizedType} & Marrakech Desert Tours | Morocco Quest";
+        $title = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
 
-        $description = "Experience {$normalizedType} with Morocco Quest. Morocco private tours, marrakech desert tours, and sahara desert tour from marrakech.";
+        $description = "Book morocco {$normalizedType} with a top-rated local agency. Private morocco tours, small group tours morocco and luxury morocco tours.";
 
+        $keywords = "morocco tours, morocco {$normalizedType}, " . strtolower($normalizedType) . ", morocco tour package, private morocco tours, morocco guided tours, small group tours morocco";
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -255,7 +261,10 @@ class ActivityController extends Controller
         return view('type-filter', [
             'tours' => $tours,
             'activities' => $activities,
-            'type' => $normalizedType
+            'type' => $normalizedType,
+            'title' => $title,
+            'description' => $description,
+            'keywords' => $keywords,
         ]);
     }
 }

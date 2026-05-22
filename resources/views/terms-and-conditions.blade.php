@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Terms and Conditions | Morocco Quest')
-@section('description', 'Terms and Conditions for Morocco Quest morocco private tours and marrakech desert tours.')
-@section('keywords', 'morocco private tours, marrakech desert tours')
+@section('title', $title ?? 'Terms and Conditions | Morocco Quest')
+@section('description', $description ?? 'Terms and conditions for booking morocco tours and morocco tour packages with Morocco Quest.')
+@section('keywords', $keywords ?? 'morocco tours, morocco tour package, morocco tour agency')
 {{-- @section('structured_data')
     <link rel="canonical" href="{{ url()->current() }}">
     <meta property="og:title" content="Terms & Conditions | Morocco Quest" />

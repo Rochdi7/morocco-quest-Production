@@ -54,21 +54,20 @@ class BlogController extends Controller
 
         // Build SEO keywords (base + dynamic from categories/tags)
         $baseKeywords = [
-            'best morocco itinerary',
-            'morocco itinerary one week',
-            'best 7 day morocco itinerary',
-            'morocco 14 day itinerary',
-            'marrakech desert tour 3 days',
-            'marrakech desert tours 4 days',
-            'luxury sahara desert tour from marrakech',
-            'marrakech desert tours',
-            'sahara desert tour from marrakech',
-            'morocco private tours',
+            'morocco travel blog',
+            'morocco tours',
+            'morocco tour package',
             'private morocco tours',
-            'private tours in morocco',
-            'private tour morocco',
-            'luxury desert tours marrakech',
-            'desert tour from marrakech',
+            'morocco guided tours',
+            'sahara desert tours morocco',
+            'morocco desert tours from marrakech',
+            'morocco multi day tours',
+            'morocco day tours',
+            'morocco day trips',
+            'morocco 7 day tour',
+            'small group tours morocco',
+            'luxury morocco tours',
+            'best morocco tours',
         ];
 
         $dynamicKeywords = array_filter(array_merge(
@@ -77,29 +76,33 @@ class BlogController extends Controller
         ));
 
         // Normalize, de-duplicate, and cap list length
-        $keywords = collect($baseKeywords)
+        $keywordsArray = collect($baseKeywords)
             ->merge($dynamicKeywords)
             ->map(fn($k) => Str::of($k)->lower()->trim()->toString())
             ->unique()
-            ->take(40) // Increased limit to accommodate new keywords
+            ->take(40)
             ->values()
             ->all();
+        $keywords = implode(', ', $keywordsArray);
 
         // 🔥 SEO Meta for Blog Homepage
-        SEOMeta::setTitle('Best Morocco Itinerary & Travel Blog | Morocco Quest')
-            ->setDescription('Best morocco itinerary, morocco itinerary one week, best 7 day morocco itinerary, morocco 14 day itinerary, marrakech desert tour 3 days, and luxury desert tours marrakech.')
-            ->setCanonical(url()->current())
-            ->addKeyword($keywords);
+        $title       = 'Morocco Travel Blog | Tour Guides, Itineraries & Tips | Morocco Quest';
+        $description = 'Morocco travel blog with itineraries, guides and tips. Plan your morocco tours, sahara desert tours from Marrakech, morocco day trips and morocco multi day tours.';
 
-        OpenGraph::setTitle('Best Morocco Itinerary & Travel Blog | Morocco Quest')
-            ->setDescription('Expert guides on best morocco itinerary, marrakech desert tours, and morocco private tours. Plan your perfect private tour morocco with our travel insights.')
+        SEOMeta::setTitle($title)
+            ->setDescription($description)
+            ->setCanonical(url()->current())
+            ->addKeyword($keywordsArray);
+
+        OpenGraph::setTitle($title)
+            ->setDescription($description)
             ->setUrl(url()->current());
 
-        JsonLd::setTitle('Best Morocco Itinerary & Travel Blog')
-            ->setDescription('Your guide to best morocco itinerary, marrakech desert tours, and sahara desert tour from marrakech.')
+        JsonLd::setTitle($title)
+            ->setDescription($description)
             ->setType('Blog');
 
-        return view('blog', compact('posts', 'categories', 'tags', 'recentBlogs'));
+        return view('blog', compact('posts', 'categories', 'tags', 'recentBlogs', 'title', 'description', 'keywords'));
     }
 
 
@@ -128,8 +131,9 @@ class BlogController extends Controller
         $sidebarData = $this->getSidebarData();
 
         // 🔥 SEO for Blog Search
-        $title = "Search results for \"{$query}\" | Morocco Travel Blog";
-        $description = "Find articles matching '{$query}' on Morocco Quest. Learn more about morocco private tours, marrakech desert tours, and sahara desert tour from marrakech.";
+        $title = "Search results for \"{$query}\" | Morocco Travel Blog | Morocco Quest";
+        $description = "Articles matching '{$query}'. Read morocco tour guides, itineraries and tips on sahara desert tours from Marrakech and morocco day trips.";
+        $keywords = "morocco tours, morocco travel blog, {$query}, morocco tour package, private morocco tours, morocco day tours";
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -143,7 +147,7 @@ class BlogController extends Controller
             ->setDescription($description)
             ->setType('SearchResultsPage');
 
-        return view('blog', compact('posts', 'query'), $sidebarData);
+        return view('blog', array_merge(compact('posts', 'query', 'title', 'description', 'keywords'), $sidebarData));
     }
 
 
@@ -175,42 +179,41 @@ class BlogController extends Controller
         $sidebarData = $this->getSidebarData();
 
         // ✅ SEO Meta
-        $description = Str::limit(strip_tags($post->summary ?? $post->content), 140) . ' Best morocco itinerary, marrakech desert tours, morocco private tours.';
+        $description = Str::limit(strip_tags($post->summary ?? $post->content), 160);
         $image = $post->featured_image ?? asset('images/default-blog.jpg');
         $url = url()->current();
-        $keywords = $post->tags->pluck('name')->toArray();
+        $tagKeywords = $post->tags->pluck('name')->toArray();
 
-        // Merge commercial keywords with post-specific keywords
+        $title = $post->title . ' | Morocco Travel Blog | Morocco Quest';
+
+        // Merge commercial keywords with post-specific tag keywords
         $commercialKeywords = [
-            'best morocco itinerary',
-            'morocco itinerary one week',
-            'best 7 day morocco itinerary',
-            'morocco 14 day itinerary',
-            'marrakech desert tours',
-            'sahara desert tour from marrakech',
-            'luxury desert tours marrakech',
-            'morocco private tours',
+            'morocco tours',
+            'morocco tour package',
             'private morocco tours',
-            'private tours in morocco',
-            'private tour morocco',
-            'marrakech desert tour 3 days',
-            'desert tour from marrakech',
+            'morocco guided tours',
+            'sahara desert tours morocco',
+            'morocco desert tours from marrakech',
+            'morocco multi day tours',
+            'morocco day tours',
+            'morocco travel blog',
         ];
 
-        $allKeywords = array_merge([strtolower($post->title)], $keywords, $commercialKeywords);
+        $allKeywords = array_unique(array_merge([strtolower($post->title)], $tagKeywords, $commercialKeywords));
+        $keywords = implode(', ', $allKeywords);
 
-        SEOMeta::setTitle($post->title);
+        SEOMeta::setTitle($title);
         SEOMeta::setDescription($description);
         SEOMeta::setCanonical($url);
         SEOMeta::addKeyword($allKeywords);
 
-        OpenGraph::setTitle($post->title)
+        OpenGraph::setTitle($title)
             ->setDescription($description)
             ->setUrl($url)
             ->addImage($image);
 
         JsonLd::setType('BlogPosting')
-            ->setTitle($post->title)
+            ->setTitle($title)
             ->setDescription($description)
             ->addImage($image)
             ->addValue('datePublished', $post->created_at->toIso8601String())
@@ -218,14 +221,17 @@ class BlogController extends Controller
                 '@type' => 'Person',
                 'name' => $post->user->name ?? 'Morocco Quest Team'
             ])
-            ->addValue('keywords', implode(', ', $allKeywords));
+            ->addValue('keywords', $keywords);
 
 
         return view('blog-details', array_merge([
             'post' => $post,
             'previousPost' => $previousPost,
             'nextPost' => $nextPost,
-            'relatedPosts' => $relatedPosts
+            'relatedPosts' => $relatedPosts,
+            'title' => $title,
+            'description' => $description,
+            'keywords' => $keywords,
         ], $sidebarData));
     }
 

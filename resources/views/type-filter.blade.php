@@ -1,16 +1,12 @@
 @extends('layouts.app2')
 
-@section('title', 'Discover Exclusive Private Morocco Tours | Morocco Quest')
+@section('title', $title ?? (isset($type) ? 'Morocco '.$type.' | Private & Guided Tour Packages | Morocco Quest' : 'Morocco Tours & Tour Packages | Morocco Quest'))
 
-@section('page_description',
-    'Discover exclusive private tours morocco with Morocco Quest, featuring small group tours morocco,
-    exclusive morocco travel experiences, vip morocco tours, and private tour morocco across Morocco.')
+@section('description', $description ?? (isset($type) ? 'Book morocco '.$type.' with a top-rated local agency. Private morocco tours, small group tours morocco and luxury morocco tours.' : 'Morocco tour packages: private morocco tours, sahara desert tours from Marrakech, morocco multi day tours and morocco day trips.'))
 
-@section('keywords',
-    'morocco private tours, private morocco tours, private morocco tour, private tours morocco, private
-    tour morocco, small group tours morocco, morocco small group tours, exclusive morocco travel experiences, vip morocco
-    tours, morocco luxury travel, luxury travel morocco, morocco travel insurance, morocco travel agent, what is the best
-    time to travel to morocco, morocco travel visa requirements')
+@section('page_description', $description ?? 'Morocco tour packages: private morocco tours, sahara desert tours from Marrakech, morocco multi day tours and morocco day trips with a top-rated local agency.')
+
+@section('keywords', $keywords ?? 'morocco tours, morocco tour package, private morocco tours, morocco guided tours, sahara desert tours morocco, morocco multi day tours, morocco day tours, small group tours morocco')
 
     @push('styles')
         <style>

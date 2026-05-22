@@ -1,13 +1,11 @@
 @extends('layouts.app2')
-@section('title',
-    "Search Results for '" . e($query) . "' | Morocco Luxury Tours"
-)
+@section('title', $title ?? "Search Results for '" . e($query) . "' | Morocco Tours | Morocco Quest")
 
-@section('meta_description',
-    "Discover morocco luxury tours, luxury morocco tours, private guided tours morocco, vip morocco tours, and luxury desert tour morocco matching your search for '" .
-    e($query) .
-    "' with Morocco Quest."
-)
+@section('description', $description ?? "Search results for '" . e($query) . "' on morocco tours, sahara desert tours from Marrakech, morocco day trips and morocco tour packages.")
+
+@section('meta_description', $description ?? "Search morocco tours, private morocco tours and sahara desert tours from Marrakech with Morocco Quest.")
+
+@section('keywords', $keywords ?? 'morocco tours, morocco tour package, private morocco tours, sahara desert tours morocco, morocco day tours, morocco day trips')
 
 @section('content')
     <!--================= Breadcrumb Area start =================-->

@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Morocco Activities & Day Tours | Marrakech Desert Tours - Morocco Quest')
-@section('description', 'Morocco activities and day tours: marrakech desert tours, sahara desert tour from marrakech, and private tours in morocco.')
-@section('keywords', 'marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, morocco private tours, luxury desert tours marrakech')
+@section('title', $title ?? 'Morocco Activities & Day Tours | Camel, Quad, Hiking & Food Tours | Morocco Quest')
+@section('description', $description ?? 'Top morocco activities: camel tours, quad biking marrakech, morocco hiking tours, food tours and morocco day tours. Book private morocco tours and small group experiences.')
+@section('keywords', $keywords ?? 'morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech, morocco trekking tours, morocco cycling tours')
 
 
 @section('content')

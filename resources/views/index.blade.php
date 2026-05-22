@@ -1,19 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Private Morocco Tours & Desert Trips|Morocco Quest')
-@endsection
+@section('title', 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest')
 
-@section('page_description')
-Discover Morocco with expertly crafted travel packages, Marrakech and Tangier city guides,
-Sahara desert tours, and authentic cultural experiences. Plan your trip with Morocco Quest for the best Morocco travel
-packages and tours.
-@endsection
+@section('description', 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.')
 
-@section('keywords')
-morocco travel packages, morocco travel, morocco travel guide, morocco travel destinations, travel
-to morocco, tangier morocco travel guide, marrakech morocco travel guide, morocco tours for solo travellers, morocco
-travel packages tours, morocco travel tour packages
-@endsection
+@section('page_description', 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.')
+
+@section('keywords', 'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours')
 
 @section('structured_data')
 <script type="application/ld+json">

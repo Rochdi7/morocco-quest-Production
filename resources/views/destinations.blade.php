@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', 'Morocco Destinations | Private Tours in Morocco - Morocco Quest')
-@section('description', 'Explore morocco destinations with private tours in morocco. Marrakech desert tours, sahara desert tour from marrakech, and morocco private tours across all major cities.')
-@section('keywords', 'private tours in morocco, morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private morocco tours')
+@section('title', $title ?? 'Morocco Tour Destinations | Marrakech, Fes & Sahara Desert | Morocco Quest')
+@section('description', $description ?? 'Explore top morocco tour destinations: Marrakech, Fes, Casablanca and Sahara desert. Book private morocco tours, small group tours morocco and luxury morocco tours.')
+@section('keywords', $keywords ?? 'morocco tours, morocco tour package, private morocco tours, morocco guided tours, morocco tour destinations, marrakech tours, sahara desert tours morocco')
 
 
 @section('content')

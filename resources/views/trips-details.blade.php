@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', ($trip->title ?? 'Trip Details') . ' | Morocco Private Tours')
-@section('description', Str::limit(strip_tags($trip->overview ?? ''), 140) . ' Morocco private tours and marrakech desert tours.')
-@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private tours in morocco, ' . Str::lower($trip->title ?? ''))
+@section('title', $title ?? ($trip->title ?? 'Trip') . ' | Morocco Multi Day Tours | Morocco Quest')
+@section('description', $description ?? Str::limit(strip_tags($trip->overview ?? ''), 160))
+@section('keywords', $keywords ?? 'morocco tours, morocco multi day tours, morocco tour package, private morocco tours, small group tours morocco, ' . Str::lower($trip->title ?? ''))
 
 @section('content')
     <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/bg/breadcrumb-bg.png') }}">

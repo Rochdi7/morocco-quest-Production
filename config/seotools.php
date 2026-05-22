@@ -9,24 +9,24 @@ return [
     */
     'meta' => [
         'defaults' => [
-            'title'       => 'Morocco Quest: Authentic Tours and Travel',
-            'description' => 'Discover unforgettable Morocco tours, Sahara desert adventures, day trips, and cultural experiences with Morocco Quest – your trusted travel agency.',
+            'title'       => 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest',
+            'description' => 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.',
             'separator'   => ' | ',
             'keywords' => [
-                'morocco desert tours',
-                'sahara desert tours from marrakech',
-                'merzouga camel trekking',
-                '3 day desert tour morocco',
-                'ouzoud waterfalls day trip',
-                'atlas mountains trekking',
-                'fes to marrakech desert tour',
-                'chefchaouen excursions',
+                'morocco tours',
                 'private morocco tours',
-                'local berber guide',
-                'marrakech day trips',
-                'morocco adventure travel',
+                'morocco tour package',
+                'sahara desert tours morocco',
+                'morocco desert tours from marrakech',
+                'small group tours morocco',
+                'luxury morocco tours',
+                'morocco guided tours',
+                'morocco multi day tours',
+                'morocco day tours',
+                'morocco day trips',
+                'best morocco tours',
             ],
-            'canonical'   => null, // Set dynamically
+            'canonical'   => null,
             'robots'      => 'index,follow',
         ],
     ],
@@ -38,9 +38,9 @@ return [
     */
     'opengraph' => [
         'defaults' => [
-            'title'       => 'Morocco Quest: Authentic Tours and Travel',
-            'description' => 'Join expertly guided desert tours, private excursions, and cultural trips across Morocco with Morocco Quest.',
-            'url'         => null, // Set dynamically
+            'title'       => 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest',
+            'description' => 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.',
+            'url'         => null,
             'type'        => 'website',
             'site_name'   => 'Morocco Quest',
             'images'      => [
@@ -58,8 +58,8 @@ return [
         'defaults' => [
             'card'        => 'summary_large_image',
             'site'        => '@MoroccoQuest',
-            'title'       => 'Morocco Quest: Authentic Tours and Travel',
-            'description' => 'Explore Morocco with desert adventures, imperial city tours, and personalized travel packages.',
+            'title'       => 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest',
+            'description' => 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.',
             'image'       => 'https://morocco-quest.com/assets/img/morocco-quest-social-share.webp',
         ],
     ],
@@ -71,9 +71,9 @@ return [
     */
     'json-ld' => [
         'defaults' => [
-            'title'       => 'Morocco Quest: Authentic Tours and Travel',
-            'description' => 'Plan your Moroccan adventure with Sahara desert tours, cultural trips, and expert guides at Morocco Quest.',
-            'url'         => null, // Set dynamically
+            'title'       => 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest',
+            'description' => 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.',
+            'url'         => null,
             'type'        => 'WebPage',
             'images'      => [
                 'https://morocco-quest.com/assets/img/morocco-quest-social-share.webp',

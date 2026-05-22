@@ -1,7 +1,7 @@
 @extends('layouts.app2')
-@section('title', 'About Morocco Quest | Best Morocco Private Tour Company')
-@section('description', 'About Morocco Quest, the best morocco private tour company. Marrakech desert tours, sahara desert tour from marrakech, and luxury desert tours marrakech.')
-@section('keywords', 'best morocco private tour company, morocco private tours, marrakech desert tours, sahara desert tour from marrakech, private tours in morocco')
+@section('title', $title ?? 'About Morocco Quest | Local Morocco Tour Operator in Marrakech')
+@section('description', $description ?? 'About Morocco Quest, a local Moroccan travel agency offering private morocco tours, sahara desert tours from Marrakech, small group tours morocco and luxury morocco tours.')
+@section('keywords', $keywords ?? 'morocco tours, private morocco tours, morocco tour package, morocco guided tours, small group tours morocco, luxury morocco tours, morocco tour company, morocco tour agency')
 
 
     {{-- @section('structured_data')

@@ -1,7 +1,7 @@
 @extends('layouts.app2')
-@section('title', $tour->title . ' | Morocco Private Tours')
-@section('description', ($tour->subtitle ?? Str::limit(strip_tags($tour->overview ?? ''), 140)) . ' Private morocco tours and marrakech desert tours. Sahara desert tour from marrakech.')
-@section('keywords', 'morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, private tours in morocco, ' . Str::lower($tour->title))
+@section('title', $title ?? $tour->title . ' | Morocco Tours from Marrakech | Morocco Quest')
+@section('description', $description ?? Str::limit(strip_tags($tour->overview ?? ''), 160))
+@section('keywords', $keywords ?? 'morocco tours, private morocco tours, morocco tour package, morocco guided tours, sahara desert tours morocco, ' . Str::lower($tour->title))
 @section('page_description', Str::limit(strip_tags($tour->overview), 160))
 
 @php
