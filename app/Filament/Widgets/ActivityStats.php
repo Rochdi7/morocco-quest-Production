@@ -15,7 +15,10 @@ class ActivityStats extends ChartWidget
 
     protected static bool $isLazy = false;
 
-    protected int | string | array $columnSpan = 'full';
+    protected int | string | array $columnSpan = [
+        'md' => 2,
+        'xl' => 8,
+    ];
 
     protected function getData(): array
     {
@@ -25,9 +28,9 @@ class ActivityStats extends ChartWidget
 
         return [
             'datasets' => [
-                $this->makeDataset('Tours', Tour::class, $months, '#16a34a', 'rgba(22, 163, 74, 0.15)'),
-                $this->makeDataset('Activities', Activity::class, $months, '#ea580c', 'rgba(234, 88, 12, 0.15)'),
-                $this->makeDataset('Blogs', Blog::class, $months, '#2563eb', 'rgba(37, 99, 235, 0.15)'),
+                $this->makeDataset('Tours', Tour::class, $months, '#10b981', 'rgba(16, 185, 129, 0.1)'),
+                $this->makeDataset('Activities', Activity::class, $months, '#f59e0b', 'rgba(245, 158, 11, 0.1)'),
+                $this->makeDataset('Blogs', Blog::class, $months, '#3b82f6', 'rgba(59, 130, 246, 0.1)'),
             ],
             'labels' => $months->map(fn (Carbon $month) => $month->format('M Y'))->all(),
         ];

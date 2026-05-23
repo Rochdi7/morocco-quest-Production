@@ -16,7 +16,10 @@ class TripStats extends ChartWidget
 
     protected static bool $isLazy = false;
 
-    protected int | string | array $columnSpan = 'full';
+    protected int | string | array $columnSpan = [
+        'md' => 1,
+        'xl' => 4,
+    ];
 
     protected function getData(): array
     {
@@ -30,11 +33,11 @@ class TripStats extends ChartWidget
                     Category::count() + ActivityCategory::count(),
                 ],
                 'backgroundColor' => [
-                    '#16a34a',
-                    '#ea580c',
-                    '#2563eb',
-                    '#7c3aed',
-                    '#0f766e',
+                    '#10b981', // Emerald 500
+                    '#f59e0b', // Amber 500
+                    '#3b82f6', // Blue 500
+                    '#8b5cf6', // Violet 500
+                    '#06b6d4', // Cyan 500
                 ],
             ]],
             'labels' => [
