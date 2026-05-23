@@ -164,7 +164,7 @@ class ActivityController extends Controller
             ->get();
 
         $description = Str::limit(strip_tags($activity->overview ?? ''), 160);
-        $image = $activity->images->first()->image ?? asset('images/default-activity.jpg');
+        $image = $activity->first_image_url;
         $url = url()->current();
 
         $title = $activity->title . ' | Morocco Day Tours & Activities | Morocco Quest';

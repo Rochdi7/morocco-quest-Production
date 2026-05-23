@@ -118,7 +118,7 @@
                                 (assuming mb-4 is intended) --}}
                                 @php $image = $activity->images->first(); @endphp
                                 @if ($image)
-                                    <img src="{{ asset(Str::startsWith($image->image, 'public/storage/') ? $image->image : 'public/storage/' . ltrim($image->image, '/')) }}"
+                                    <img src="{{ $image->image_url }}"
                                         alt="{{ $image->alt ?? $activity->title }}"
                                         title="{{ $image->caption ?? $activity->title }}" class="w-100" loading="lazy"
                                         width="810" height="540" style="object-fit: cover;" />
@@ -835,14 +835,7 @@
                                         aria-label="View details for {{ e($relatedActivity->title) }}">
                                         {{-- ✅ 3. Lazy Loading for Images --}}
                                         @php
-                                            $image =
-                                                optional($relatedActivity->images->first())->image ??
-                                                ($relatedActivity->featured_image ?? 'default.webp');
-                                            $imageUrl = asset(
-                                                Str::startsWith($image, 'public/storage/')
-                                                    ? $image
-                                                    : 'public/storage/' . ltrim($image, '/'),
-                                            );
+                                            $imageUrl = $relatedActivity->first_image_url;
                                         @endphp
 
                                         <img src="{{ $imageUrl }}"

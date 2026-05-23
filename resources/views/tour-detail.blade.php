@@ -137,7 +137,7 @@
                                 @endphp
 
                                 @if ($image)
-                                    <img src="{{ asset(Str::startsWith($image->image_path, 'public/storage/') ? $image->image_path : 'public/storage/' . ltrim($image->image_path, '/')) }}"
+                                    <img src="{{ $image->image_url }}"
                                         alt="{{ $image->alt ?? $tour->title }}"
                                         title="{{ $image->caption ?? $tour->title }}" class="w-100" loading="lazy"
                                         width="810" height="540" style="object-fit: cover;" />
@@ -1014,20 +1014,7 @@
                                             $relatedTour->images && $relatedTour->images->isNotEmpty()
                                                 ? $relatedTour->images->first()
                                                 : null;
-                                        $relatedTourImageUrl = $relatedTourImageObject
-                                            ? asset(
-                                                Str::startsWith($relatedTourImageObject->image_path, 'public/storage/')
-                                                    ? $relatedTourImageObject->image_path
-                                                    : 'public/storage/' .
-                                                        ltrim($relatedTourImageObject->image_path, '/'),
-                                            )
-                                            : ($relatedTour->featured_image
-                                                ? asset(
-                                                    Str::startsWith($relatedTour->featured_image, 'public/storage/')
-                                                        ? $relatedTour->featured_image
-                                                        : 'public/storage/' . ltrim($relatedTour->featured_image, '/'),
-                                                )
-                                                : asset('assets/img/tour-packages/tour-package-3-1.png'));
+                                        $relatedTourImageUrl = $relatedTourImageObject?->image_url ?? $relatedTour->first_image_url;
                                         $relatedTourAlt =
                                             $relatedTourImageObject->caption ??
                                             ($relatedTour->title ??

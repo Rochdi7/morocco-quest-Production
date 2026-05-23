@@ -283,17 +283,10 @@ class ActivityResource extends Resource
     return $table
         ->columns([
             ImageColumn::make('firstImage.image')
-                ->disk('public')
                 ->label('Image')
                 ->circular()
-                ->getStateUsing(function ($record) {
-                    if ($record->firstImage && $record->firstImage->image) {
-                        $path = str_replace('public/', '', $record->firstImage->image);
-                        return url('public/storage/' . $path);
-                    }
-                    return url('/images/placeholder-activity.jpg'); // Fallback image if not found
-                })
-                ->defaultImageUrl(url('/images/placeholder-activity.jpg')),
+                ->getStateUsing(fn ($record) => $record->first_image_url)
+                ->defaultImageUrl(asset('assets/img/placeholder-image.webp')),
 
             TextColumn::make('title')
                 ->sortable()

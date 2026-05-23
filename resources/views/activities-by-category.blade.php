@@ -50,20 +50,7 @@
                                 <div class="tour-package-box bg-white-color h-100">
                                     <div class="tour-package-thumb">
                                         @php
-                                            $firstImage = optional($activity->images->first())->image;
-
-                                            if (is_array($firstImage)) {
-                                                $firstImage = $firstImage[0] ?? null;
-                                            }
-
-                                            $imageUrl =
-                                                $firstImage && is_string($firstImage)
-                                                    ? asset(
-                                                        Str::startsWith($firstImage, 'public/storage/')
-                                                            ? $firstImage
-                                                            : 'public/storage/' . ltrim($firstImage, '/'),
-                                                    )
-                                                    : asset('assets/img/tour-packages/tour-package-1-3.png');
+                                            $imageUrl = $activity->first_image_url;
                                         @endphp
 
 

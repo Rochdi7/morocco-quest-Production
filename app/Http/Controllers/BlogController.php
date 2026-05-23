@@ -180,7 +180,7 @@ class BlogController extends Controller
 
         // ✅ SEO Meta
         $description = Str::limit(strip_tags($post->summary ?? $post->content), 160);
-        $image = $post->featured_image ?? asset('images/default-blog.jpg');
+        $image = $post->featured_image_url;
         $url = url()->current();
         $tagKeywords = $post->tags->pluck('name')->toArray();
 

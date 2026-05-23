@@ -61,15 +61,7 @@
                         <div class="tour-package-box style-3 bg-white-color h-100 position-relative">
                             <div class="tour-package-thumb">
                                 @php
-                                    $firstImage = optional($tour->firstImage)->image_path;
-
-                                    $imageUrl = $firstImage
-                                        ? asset(
-                                            Str::startsWith($firstImage, 'public/storage/')
-                                                ? $firstImage
-                                                : 'public/storage/' . ltrim($firstImage, '/'),
-                                        )
-                                        : asset('assets/img/tour-packages/tour-package-1-1.png');
+                                    $imageUrl = $tour->first_image_url;
                                 @endphp
 
                                 <img src="{{ $imageUrl }}" alt="{{ $tour->title }}" class="w-100" loading="lazy" />
@@ -133,7 +125,7 @@
 
                             {{-- Tour Package Thumbnail --}}
                             <div class="tour-package-thumb">
-                                <img src="{{ optional($activity->images->first())->image ? asset(Str::startsWith(optional($activity->images->first())->image, 'public/storage/') ? optional($activity->images->first())->image : 'public/storage/' . ltrim(optional($activity->images->first())->image, '/')) : asset('assets/img/activities/activity-placeholder.png') }}"
+                                <img src="{{ $activity->first_image_url }}"
                                     alt="{{ $activity->title }}" class="w-100" loading="lazy" width="400"
                                     height="300"
                                     onerror="this.onerror=null;this.src='{{ asset('assets/img/activities/activity-placeholder.png') }}';" />
@@ -204,17 +196,7 @@
                             <figure class="blog-thumb">
                                 <a href="{{ route('blog.show', $blog->slug) }}">
                                     @php
-                                        $imagePath = $blog->featured_image
-                                            ? trim(str_replace('public/', '', $blog->featured_image), '/')
-                                            : null;
-
-                                        $featuredImage = $imagePath
-                                            ? asset(
-                                                Str::startsWith($imagePath, 'public/storage/')
-                                                    ? $imagePath
-                                                    : 'public/storage/' . ltrim($imagePath, '/'),
-                                            )
-                                            : asset('assets/img/blog/blog-placeholder.png');
+                                        $featuredImage = $blog->featured_image_url;
                                     @endphp
 
                                     <img class="w-100" src="{{ $featuredImage }}" alt="Blog: {{ $blog->title }}"

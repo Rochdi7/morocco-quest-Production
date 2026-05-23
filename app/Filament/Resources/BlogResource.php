@@ -99,6 +99,7 @@ class BlogResource extends Resource
                 Forms\Components\FileUpload::make('featured_image')
                     ->image()
                     ->directory('images/blogs')
+                    ->disk('public')
                     ->preserveFilenames()
                     ->label('Featured Image')
                     ->nullable(),
@@ -138,14 +139,8 @@ class BlogResource extends Resource
             Tables\Columns\ImageColumn::make('featured_image')
                 ->label('Image')
                 ->circular()
-                ->getStateUsing(function ($record) {
-                    if ($record->featured_image) {
-                        $path = str_replace('public/', '', $record->featured_image);
-                        return url('public/storage/' . $path);
-                    }
-                    return url('/images/placeholder-tour.jpg'); // Fallback image if not found
-                })
-                ->defaultImageUrl(url('/images/placeholder-tour.jpg')),
+                ->getStateUsing(fn ($record) => $record->featured_image_url)
+                ->defaultImageUrl(asset('assets/img/placeholder-image.webp')),
 
             Tables\Columns\TextColumn::make('created_at')
                 ->dateTime()

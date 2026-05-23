@@ -8,7 +8,6 @@ use App\Models\Activity;
 use App\Models\Place;
 use App\Models\ActivityCategory;
 use Illuminate\View\View;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
 use Carbon\Carbon;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -114,15 +113,11 @@ class HomepageController extends Controller
                 ->take(3)
                 ->get()
                 ->map(function ($post) {
-                    $imagePath = Str::startsWith($post->featured_image, 'public/storage/')
-                        ? $post->featured_image
-                        : 'public/storage/' . ltrim($post->featured_image, '/');
-
                     return (object) [
                         'title' => $post->title,
                         'slug' => $post->slug,
                         'written_by' => $post->written_by ?? 'Admin',
-                        'featured_image_url' => asset($imagePath),
+                        'featured_image_url' => $post->featured_image_url,
                         'created_day' => Carbon::parse($post->created_at)->format('d'),
                         'created_month' => Carbon::parse($post->created_at)->format('M'),
                         'comments_count' => method_exists($post, 'comments')

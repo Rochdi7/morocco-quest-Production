@@ -332,7 +332,22 @@
         });
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fallbackSrc = @json(asset('assets/img/placeholder-image.webp'));
 
+            document.querySelectorAll('img').forEach(function(img) {
+                img.addEventListener('error', function handleImageError() {
+                    if (img.dataset.fallbackApplied === '1') {
+                        return;
+                    }
+
+                    img.dataset.fallbackApplied = '1';
+                    img.src = fallbackSrc;
+                });
+            });
+        });
+    </script>
 
     @stack('scripts')
 

@@ -278,18 +278,10 @@ class TourResource extends Resource
     return $table
         ->columns([
             ImageColumn::make('firstImage.image_path')
-                ->disk('public')
                 ->label('Image')
                 ->circular()
-                ->getStateUsing(function ($record) {
-                    if ($record->firstImage && $record->firstImage->image_path) {
-                        $path = str_replace('public/', '', $record->firstImage->image_path);
-                        // Ensure the path is correct
-                        return url('public/storage/' . $path);
-                    }
-                    return url('/images/placeholder-tour.jpg');
-                })
-                ->defaultImageUrl(url('/images/placeholder-tour.jpg')),
+                ->getStateUsing(fn ($record) => $record->first_image_url)
+                ->defaultImageUrl(asset('assets/img/placeholder-image.webp')),
 
             TextColumn::make('title')->sortable()->searchable(),
             TextColumn::make('duration_days')->label('Duration')->sortable(),

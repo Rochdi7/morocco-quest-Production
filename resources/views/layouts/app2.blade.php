@@ -327,6 +327,23 @@
         gtag('config', 'G-YK31305QT6');
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fallbackSrc = @json(asset('assets/img/placeholder-image.webp'));
+
+            document.querySelectorAll('img').forEach(function(img) {
+                img.addEventListener('error', function handleImageError() {
+                    if (img.dataset.fallbackApplied === '1') {
+                        return;
+                    }
+
+                    img.dataset.fallbackApplied = '1';
+                    img.src = fallbackSrc;
+                });
+            });
+        });
+    </script>
+
     @stack('scripts')
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVCGDJ98" height="0" width="0"

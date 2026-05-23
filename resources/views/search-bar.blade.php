@@ -63,7 +63,7 @@
                             <div class="tour-package-box bg-white-color h-100 d-flex flex-column"> {{-- Added flex classes for consistent height --}}
                                 <div class="tour-package-thumb">
                                     {{-- 3. Lazy Loading Added --}}
-                                    <img src="{{ optional($tour->images->first())->image_path ? asset(Str::startsWith(optional($tour->images->first())->image_path, 'public/storage/') ? optional($tour->images->first())->image_path : 'public/storage/' . ltrim(optional($tour->images->first())->image_path, '/')) : asset('assets/img/tour-packages/tour-package-placeholder.png') }}"
+                                    <img src="{{ $tour->first_image_url }}"
                                         alt="{{ $tour->title }}" class="w-100" loading="lazy" />
 
                                 </div>
@@ -131,7 +131,7 @@
                             <div class="tour-package-box bg-white-color h-100 d-flex flex-column"> {{-- Added flex classes for consistent height --}}
                                 <div class="tour-package-thumb">
                                     {{-- 3. Lazy Loading Added --}}
-                                    <img src="{{ optional($activity->images->first())->image ? asset(Str::startsWith(optional($activity->images->first())->image, 'public/storage/') ? optional($activity->images->first())->image : 'public/storage/' . ltrim(optional($activity->images->first())->image, '/')) : asset('assets/img/activities/activity-placeholder.png') }}"
+                                    <img src="{{ $activity->first_image_url }}"
                                         alt="{{ $activity->title }}" class="w-100" loading="lazy" />
 
                                 </div>

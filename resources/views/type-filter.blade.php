@@ -72,10 +72,10 @@
                         <div class="tour-package-box style-3 bg-white-color h-100 position-relative">
                             <div class="tour-package-thumb">
                                 @php
-                                    $image = optional($tour->firstImage)->image_path;
+                                    $image = $tour->first_image_url;
                                 @endphp
                                 @if ($image)
-                                    <img src="{{ 'https://morocco-quest.com/public/storage/' . ltrim(str_replace(['public/storage/', 'storage/'], '', $image), '/') }}"
+                                    <img src="{{ $image }}"
                                         alt="Discover {{ $tour->title }} in {{ $tour->places->first()->name ?? ($tour->location ?? 'Morocco') }}"
                                         class="w-100" loading="lazy" style="aspect-ratio: 4/3; object-fit: cover;" />
                                 @endif
@@ -121,11 +121,7 @@
                         <div class="tour-package-box style-3 bg-white-color h-100 position-relative">
                             <div class="tour-package-thumb">
                                 @php
-                                    $image = optional($activity->images->first())->image;
-                                    $imagePath = $image
-                                        ? 'https://morocco-quest.com/public/storage/' .
-                                            ltrim(str_replace(['public/storage/', 'storage/'], '', $image), '/')
-                                        : 'https://morocco-quest.com/assets/img/activities/activity-placeholder.png';
+                                    $imagePath = $activity->first_image_url;
                                 @endphp
                                 <img src="{{ $imagePath }}"
                                     alt="Join {{ $activity->title }} in {{ $activity->location ?? 'Morocco' }}"

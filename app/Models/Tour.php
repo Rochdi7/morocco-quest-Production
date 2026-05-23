@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\TourImage;
 use App\Models\ItineraryDay;
 use App\Models\Place;
+use App\Support\MediaUrl;
 use Illuminate\Support\Str;
 
 class Tour extends Model
@@ -109,5 +110,10 @@ class Tour extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function getFirstImageUrlAttribute(): string
+    {
+        return $this->firstImage?->image_url ?? MediaUrl::placeholder();
     }
 }

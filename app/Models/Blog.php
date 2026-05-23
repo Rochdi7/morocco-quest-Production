@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Comment;
+use App\Support\MediaUrl;
 
 class Blog extends Model
 {
@@ -21,12 +22,10 @@ class Blog extends Model
         'featured_image_caption',
         'featured_image_description'
     ];
-
-
-   public function categories()
-{
-    return $this->belongsToMany(Category::class, 'blog_category');
-}
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'blog_category');
+    }
 
 
     public function tags()
@@ -41,10 +40,14 @@ class Blog extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function category()
-{
-    return $this->belongsTo(Category::class);
-}
-    
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function getFeaturedImageUrlAttribute(): string
+    {
+        return MediaUrl::resolve($this->featured_image);
+    }
 }

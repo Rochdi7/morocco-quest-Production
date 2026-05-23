@@ -443,7 +443,7 @@
                                     @php
                                         $image = $activity->images->first();
                                     @endphp
-                                    <img src="{{ $image ? url('public/storage/' . ltrim($image->image, '/')) : url('assets/img/activity-placeholder.png') }}"
+                                    <img src="{{ $image?->image_url ?? asset('assets/img/placeholder-image.webp') }}"
                                         alt="{{ $activity->title }}" class="activity-img">
 
                                     <div class="activity-info">

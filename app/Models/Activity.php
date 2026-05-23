@@ -10,6 +10,7 @@ use App\Models\ActivityImage; // For the images relationship
 use App\Models\ActivityCategory; // For the category relationship
 use App\Models\ItineraryDay; // <-- IMPORT THE ITINERARY DAY MODEL
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use App\Support\MediaUrl;
 
 class Activity extends Model
 {
@@ -97,5 +98,10 @@ class Activity extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function getFirstImageUrlAttribute(): string
+    {
+        return $this->firstImage?->image_url ?? MediaUrl::placeholder();
     }
 }

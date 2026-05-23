@@ -53,15 +53,7 @@
                                 <div class="tour-package-box bg-white-color h-100">
                                     <div class="tour-package-thumb">
                                         @php
-                                            $firstImage = optional($tour->firstImage)->image_path;
-
-                                            $imageUrl = $firstImage
-                                                ? asset(
-                                                    Str::startsWith($firstImage, 'public/storage/')
-                                                        ? $firstImage
-                                                        : 'public/storage/' . ltrim($firstImage, '/'),
-                                                )
-                                                : asset('assets/img/tour-packages/tour-package-1-1.png');
+                                            $imageUrl = $tour->first_image_url;
                                         @endphp
 
                                         <a href="{{ route('tours.show', $tour->slug) }}">

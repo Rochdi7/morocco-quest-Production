@@ -443,7 +443,7 @@
                                     @endphp
 
                                     @if ($image)
-                                        <img src="{{ asset(Str::startsWith($image->image_path, 'public/storage/') ? $image->image_path : 'public/storage/' . ltrim($image->image_path, '/')) }}"
+                                        <img src="{{ $image->image_url }}"
                                             alt="{{ $image->alt ?? $tour->title }}"
                                             title="{{ $image->caption ?? $tour->title }}" class="tour-img"
                                             loading="lazy" width="810" height="540" style="object-fit: cover;" />

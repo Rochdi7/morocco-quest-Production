@@ -288,11 +288,7 @@
                                                     @endif
 
                                                     @php
-                                                        $tourImageUrl = $tour->images->isNotEmpty()
-                                                            ? asset(
-                                                                'public/storage/' . $tour->images->first()->image_path,
-                                                            )
-                                                            : '';
+                                                        $tourImageUrl = $tour->first_image_url;
                                                     @endphp
 
                                                     @if ($tourImageUrl)
@@ -407,22 +403,7 @@
                                 <div class="destination-box-wrapper">
                                     @foreach ($featuredActivities->take(4) as $activity)
                                         @php
-                                            $activityImageUrl = asset('assets/img/destination/destination-1-1.png');
-                                            if ($activity->images && $activity->images->isNotEmpty()) {
-                                                $firstImage = $activity->images->first();
-                                                if ($firstImage && $firstImage->image) {
-                                                    $imagePath = $firstImage->image;
-                                                    if (filter_var($imagePath, FILTER_VALIDATE_URL)) {
-                                                        $activityImageUrl = $imagePath;
-                                                    } elseif (Str::startsWith($imagePath, 'public/storage/')) {
-                                                        $activityImageUrl = asset($imagePath);
-                                                    } elseif (Storage::disk('public')->exists($imagePath)) {
-                                                        $activityImageUrl = asset(
-                                                            'public/storage/' . ltrim($imagePath, '/'),
-                                                        );
-                                                    }
-                                                }
-                                            }
+                                            $activityImageUrl = $activity->first_image_url;
                                         @endphp
                                         <a href="{{ route('activities.show', $activity->slug) }}"
                                             class="destination-box d-block text-decoration-none @if ($loop->first) active @endif">

@@ -180,7 +180,7 @@ class TourController extends Controller
 
         // --- SEO Setup ---
         $description = Str::limit(strip_tags($tour->overview), 160);
-        $image = optional($tour->images->first())->image ?? asset('images/default-cover.jpg');
+        $image = $tour->first_image_url;
         $url = url()->current();
 
         $title = $tour->title . ' | Morocco Tours from Marrakech | Morocco Quest';
