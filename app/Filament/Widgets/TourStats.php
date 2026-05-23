@@ -36,7 +36,7 @@ class TourStats extends BaseWidget
         ];
     }
 
-    protected int | string | array $columnSpan = 3; // Displays three per row
+    protected int | string | array $columnSpan = 'full';
 
     /**
      * Force display in three columns per row.

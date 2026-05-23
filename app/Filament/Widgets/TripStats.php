@@ -21,6 +21,8 @@ class TripStats extends ChartWidget
         'xl' => 4,
     ];
 
+    protected static ?string $maxHeight = '300px';
+
     protected function getData(): array
     {
         return [

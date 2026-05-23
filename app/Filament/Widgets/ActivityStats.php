@@ -20,6 +20,8 @@ class ActivityStats extends ChartWidget
         'xl' => 8,
     ];
 
+    protected static ?string $maxHeight = '300px';
+
     protected function getData(): array
     {
         $months = collect(range(5, 0))

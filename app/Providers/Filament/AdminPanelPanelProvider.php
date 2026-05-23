@@ -14,6 +14,7 @@ use Filament\Widgets\AccountWidget;
 use App\Filament\Widgets\TourStats;
 use App\Filament\Widgets\TripStats;
 use App\Filament\Widgets\ActivityStats;
+use App\Filament\Widgets\WebsiteVisits;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -50,6 +51,7 @@ class AdminPanelPanelProvider extends PanelProvider
                 TourStats::class,
                 TripStats::class,
                 ActivityStats::class,
+                WebsiteVisits::class,
             ])
 
             ->middleware([
