@@ -8,11 +8,12 @@ use App\Models\Tour;
 use Carbon\Carbon;
 use Filament\Widgets\ChartWidget;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\DB;
 
 class ActivityStats extends ChartWidget
 {
     protected static ?string $heading = 'Publishing Trend';
+
+    protected static bool $isLazy = false;
 
     protected int | string | array $columnSpan = 'full';
 
@@ -61,11 +62,10 @@ class ActivityStats extends ChartWidget
     private function getMonthlyCounts(string $modelClass, Carbon $startMonth): array
     {
         return $modelClass::query()
-            ->selectRaw("DATE_FORMAT(created_at, '%Y-%m') as month_key, COUNT(*) as aggregate")
             ->where('created_at', '>=', $startMonth->copy()->startOfMonth())
-            ->groupBy(DB::raw("DATE_FORMAT(created_at, '%Y-%m')"))
-            ->orderBy('month_key')
-            ->pluck('aggregate', 'month_key')
+            ->get(['created_at'])
+            ->groupBy(fn ($record) => Carbon::parse($record->created_at)->format('Y-m'))
+            ->map(fn (Collection $records) => $records->count())
             ->all();
     }
 }
