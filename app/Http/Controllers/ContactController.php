@@ -55,7 +55,7 @@ class ContactController extends Controller
         ]);
 
         try {
-            $adminEmail = config('mail.from.address', 'contact@morocco-quest.com');
+            $adminEmail = config('mail.from.address', 'sales@morocco-quest.com');
 
             if (!$adminEmail || !filter_var($adminEmail, FILTER_VALIDATE_EMAIL)) {
                 Log::error('Admin email (MAIL_FROM_ADDRESS) is not configured properly. Value: ' . $adminEmail);

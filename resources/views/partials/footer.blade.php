@@ -38,8 +38,8 @@
                                         <div class="info">
                                             <h5 class="info-title text-white-color">Contact Us</h5>
                                             <p>
-                                                <a href="mailto:contact@morocco-quest.com"
-                                                    aria-label="Email Morocco Quest at contact@morocco-quest.com">contact@morocco-quest.com</a>
+                                                <a href="mailto:sales@morocco-quest.com"
+                                                    aria-label="Email Morocco Quest at sales@morocco-quest.com">sales@morocco-quest.com</a>
                                                 <a href="tel:+212654069718"
                                                     aria-label="Call Morocco Quest at +212654069718">+212654069718</a>
                                             </p>
@@ -489,20 +489,21 @@
     }
 
     .scroll-btn .icon-arrow-up svg {
-    width: 18px;
-    height: 18px;
-    stroke: #fff;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-    display: block;
-}
-.scroll-btn .icon-arrow-up {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        width: 18px;
+        height: 18px;
+        stroke: #fff;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        display: block;
+    }
+
+    .scroll-btn .icon-arrow-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .scroll-btn::before {
         content: "";
@@ -548,8 +549,7 @@
 
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/212654069718?text=Hello%2C%20I%20come%20from%20Morocco%20Quest%20and%20I%20am%20interested%20in%20your%20services."
-    class="floating-whatsapp" target="_blank"
-    aria-label="Chat on WhatsApp" data-gtm="whatsapp-button">
+    class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp" data-gtm="whatsapp-button">
 
     <div class="icon-whatsapp">
         <i class="bi bi-whatsapp"></i>

@@ -1,8 +1,10 @@
 @extends('layouts.app2')
 
 @section('title', $title ?? 'Contact Morocco Quest | Book Morocco Tours & Sahara Trips')
-@section('description', $description ?? 'Contact Morocco Quest to book morocco tours, sahara desert tours from Marrakech, morocco day trips and private morocco tours. Reply within 24h.')
-@section('keywords', $keywords ?? 'morocco tours, morocco tour agency, morocco tour company, private morocco tours, morocco tour package, contact morocco tour operator')
+@section('description', $description ?? 'Contact Morocco Quest to book morocco tours, sahara desert tours from
+    Marrakech, morocco day trips and private morocco tours. Reply within 24h.')
+@section('keywords', $keywords ?? 'morocco tours, morocco tour agency, morocco tour company, private morocco tours,
+    morocco tour package, contact morocco tour operator')
 
 
 @section('structured_data')
@@ -27,7 +29,7 @@
         $addressCountry = 'Morocco';
         $telephone1 = '+212654069718';
         $telephone2 = null;
-        $email = 'contact@morocco-quest.com';
+        $email = 'sales@morocco-quest.com';
         $websiteUrl = url('/');
         $contactPageUrl = url()->current();
         $heroImageUrl = asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp');
@@ -144,8 +146,8 @@
                                     <h6 class="info-title">Email Us:</h6>
                                     <p>
                                         {{-- Use mailto: link for email --}}
-                                        <a href="mailto:contact@morocco-quest.com"
-                                            aria-label="Email Morocco Quest at contact@morocco-quest.com">contact@morocco-quest.com</a>
+                                        <a href="mailto:sales@morocco-quest.com"
+                                            aria-label="Email Morocco Quest at sales@morocco-quest.com">sales@morocco-quest.com</a>
 
                                     </p>
                                 </div>

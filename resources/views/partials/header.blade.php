@@ -230,8 +230,7 @@
                                                     <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
                                                     <rect x="2" y="4" width="20" height="16" rx="2" />
                                                 </svg>
-                                                <a
-                                                    href="mailto:contact@morocco-quest.com">contact@morocco-quest.com</a>
+                                                <a href="mailto:sales@morocco-quest.com">sales@morocco-quest.com</a>
                                             </li>
                                         </ul>
                                     </div>

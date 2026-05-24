@@ -14,7 +14,7 @@ return [
     ],
 
     'email' => [
-        'info' => 'contact@morocco-quest.com', // <-- Updated Email
+        'info' => 'sales@morocco-quest.com', // <-- Updated Email
 
     ],
 

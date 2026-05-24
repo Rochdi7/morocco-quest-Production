@@ -198,8 +198,7 @@
                                             </li>
                                             <li>
                                                 <i class="fa-solid fa-envelope"></i>
-                                                <a
-                                                    href="mailto:contact@morocco-quest.com">contact@morocco-quest.com</a>
+                                                <a href="mailto:sales@morocco-quest.com">sales@morocco-quest.com</a>
                                             </li>
                                         </ul>
                                     </div>
