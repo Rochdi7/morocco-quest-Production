@@ -114,6 +114,45 @@ class Tour extends Model
 
     public function getFirstImageUrlAttribute(): string
     {
-        return $this->firstImage?->image_url ?? MediaUrl::placeholder();
+        if ($this->firstImage?->image_url) {
+            return $this->firstImage->image_url;
+        }
+
+        if (class_exists(MediaUrl::class)) {
+            return MediaUrl::placeholder();
+        }
+
+        return self::resolveMediaUrlFallback(null);
+    }
+
+    protected static function resolveMediaUrlFallback(?string $path, ?string $fallback = null): string
+    {
+        $fallback ??= asset('assets/img/placeholder-image.webp');
+
+        if (! is_string($path) || trim($path) === '') {
+            return $fallback;
+        }
+
+        $normalized = ltrim(str_replace('\\', '/', trim($path)), '/');
+
+        if ($normalized === '') {
+            return $fallback;
+        }
+
+        if (filter_var($normalized, FILTER_VALIDATE_URL)) {
+            return $normalized;
+        }
+
+        foreach (['assets/', 'build/', 'css/', 'js/', 'public/'] as $prefix) {
+            if (str_starts_with($normalized, $prefix)) {
+                return asset($normalized);
+            }
+        }
+
+        if (str_starts_with($normalized, 'storage/')) {
+            return asset('public/' . $normalized);
+        }
+
+        return asset('public/storage/' . $normalized);
     }
 }

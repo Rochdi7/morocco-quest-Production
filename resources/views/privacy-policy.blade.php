@@ -1,7 +1,9 @@
 @extends('layouts.app2')
 
 @section('title', $title ?? 'Privacy Policy | Morocco Quest')
-@section('description', $description ?? 'Privacy Policy for Morocco Quest. How we handle your data when you browse and
+@section('description',
+    $description ??
+    'Privacy Policy for Morocco Quest. How we handle your data when you browse and
     book morocco tours.')
 @section('keywords', $keywords ?? 'morocco quest, morocco tours, privacy policy')
 {{-- @section('structured_data')
@@ -181,8 +183,8 @@
                             For additional information or questions regarding our privacy policy, please contact us through:
                         </p>
                         <ul class="mb-4">
-                            <li><strong>Email:</strong> <a
-                                    href="mailto:contact@moroccoquest.com">sales@morocco-quest.com</a></li>
+                            <li><strong>Email:</strong> <a href="mailto:sales@morocco-quest.com">sales@morocco-quest.com</a>
+                            </li>
                             <li><strong>Phone:</strong> +212 666-789-012</li>
                             <li><strong>Address:</strong> Khalid Ibn Al Walid Street, Gueliz, Marrakech, 40000, Morocco</li>
                         </ul>

@@ -48,6 +48,41 @@ class Blog extends Model
 
     public function getFeaturedImageUrlAttribute(): string
     {
-        return MediaUrl::resolve($this->featured_image);
+        if (class_exists(MediaUrl::class)) {
+            return MediaUrl::resolve($this->featured_image);
+        }
+
+        return self::resolveMediaUrlFallback($this->featured_image);
+    }
+
+    protected static function resolveMediaUrlFallback(?string $path, ?string $fallback = null): string
+    {
+        $fallback ??= asset('assets/img/placeholder-image.webp');
+
+        if (! is_string($path) || trim($path) === '') {
+            return $fallback;
+        }
+
+        $normalized = ltrim(str_replace('\\', '/', trim($path)), '/');
+
+        if ($normalized === '') {
+            return $fallback;
+        }
+
+        if (filter_var($normalized, FILTER_VALIDATE_URL)) {
+            return $normalized;
+        }
+
+        foreach (['assets/', 'build/', 'css/', 'js/', 'public/'] as $prefix) {
+            if (str_starts_with($normalized, $prefix)) {
+                return asset($normalized);
+            }
+        }
+
+        if (str_starts_with($normalized, 'storage/')) {
+            return asset('public/' . $normalized);
+        }
+
+        return asset('public/storage/' . $normalized);
     }
 }

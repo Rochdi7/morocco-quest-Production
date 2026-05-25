@@ -19,6 +19,41 @@ class TourImage extends Model
 
     public function getImageUrlAttribute(): string
     {
-        return MediaUrl::resolve($this->image_path);
+        if (class_exists(MediaUrl::class)) {
+            return MediaUrl::resolve($this->image_path);
+        }
+
+        return self::resolveMediaUrlFallback($this->image_path);
+    }
+
+    protected static function resolveMediaUrlFallback(?string $path, ?string $fallback = null): string
+    {
+        $fallback ??= asset('assets/img/placeholder-image.webp');
+
+        if (! is_string($path) || trim($path) === '') {
+            return $fallback;
+        }
+
+        $normalized = ltrim(str_replace('\\', '/', trim($path)), '/');
+
+        if ($normalized === '') {
+            return $fallback;
+        }
+
+        if (filter_var($normalized, FILTER_VALIDATE_URL)) {
+            return $normalized;
+        }
+
+        foreach (['assets/', 'build/', 'css/', 'js/', 'public/'] as $prefix) {
+            if (str_starts_with($normalized, $prefix)) {
+                return asset($normalized);
+            }
+        }
+
+        if (str_starts_with($normalized, 'storage/')) {
+            return asset('public/' . $normalized);
+        }
+
+        return asset('public/storage/' . $normalized);
     }
 }
