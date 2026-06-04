@@ -12,7 +12,7 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
 [![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
 
-[**Visit Site**](https://morocco-quest.com) • [**Sitemap**](https://morocco-quest.com/sitemap.xml) • [**Admin Panel**](https://morocco-quest.com/admin)
+[**Visit Site**](https://morocco-quest.com) • [**Sitemap**](https://morocco-quest.com/sitemap.xml)
 
 ---
 
@@ -124,8 +124,8 @@ public_html/
 
 ```bash
 # Clone the repository
-git clone https://github.com/Rochdi7/morocco-quest-Production.git
-cd morocco-quest-Production
+git clone https://github.com/Rochdi7/morocco-quest.git
+cd morocco-quest
 
 # Install PHP dependencies
 composer install
@@ -182,25 +182,19 @@ php artisan migrate --force
 
 Key `.env` settings:
 
-```env
-APP_NAME="Morocco Quest"
-APP_ENV=production
-APP_DEBUG=false                     # NEVER true in production
-APP_URL=https://morocco-quest.com
+Copy `.env.example` to `.env` and fill in the required values. Key variables to configure:
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_DATABASE=morocco_quest
-DB_USERNAME=...
-DB_PASSWORD=...
+| Variable | Description |
+|---|---|
+| `APP_ENV` | Set to `production` on live server |
+| `APP_DEBUG` | Must be `false` in production |
+| `APP_URL` | Your full domain with HTTPS |
+| `DB_*` | Database connection credentials |
+| `SESSION_DRIVER` | Use `database` for multi-server setups |
+| `CACHE_STORE` | Use `database` or `redis` |
+| `MAIL_*` | SMTP credentials for outbound email |
 
-SESSION_DRIVER=database
-CACHE_STORE=database
-
-MAIL_MAILER=smtp
-MAIL_HOST=...
-MAIL_FROM_ADDRESS=hello@morocco-quest.com
-```
+> Never commit `.env` to version control. Refer to `.env.example` for the full list of required variables.
 
 ---
 
@@ -212,12 +206,10 @@ MAIL_FROM_ADDRESS=hello@morocco-quest.com
 | 2 | All Laravel caches built (config/routes/views/events) | Saves ~200ms per request |
 | 3 | All 14 frontend JS files use `defer` | Non-blocking page paint |
 | 4 | Duplicate jQuery removed | No JS race condition |
-| 5 | OPcache enabled (128MB) | Compiled PHP cached in memory |
+| 5 | OPcache enabled | Compiled PHP cached in memory |
 | 6 | Optimized Composer autoloader (`--classmap-authoritative`) | Faster class resolution |
 | 7 | Schema-safe sitemap controller | No crashes on missing DB columns |
 | 8 | Force HTTPS middleware | Single redirect, no chains |
-
-Detailed report in [HOSTING_PERFORMANCE_REPORT.md](HOSTING_PERFORMANCE_REPORT.md).
 
 ---
 
