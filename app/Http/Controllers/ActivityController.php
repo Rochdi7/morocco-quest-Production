@@ -50,11 +50,11 @@ class ActivityController extends Controller
             ->paginate(9);
 
         // ✅ SEO Setup
-        $title = "Morocco Activities & Day Tours | Camel, Quad, Hiking & Food Tours | Morocco Quest";
+        $title = "Things to Do in Morocco | Activities, Day Tours & Experiences | Morocco Quest";
 
-        $description = "Top morocco activities: camel tours, quad biking marrakech, morocco hiking tours, food tours and morocco day tours. Book private morocco tours and small group experiences.";
+        $description = "Best things to do in Morocco: camel rides, quad biking in Marrakech, desert hikes, food tours and day trips. Private & small group activities with a top-rated local agency.";
 
-        $keywords = 'morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech, morocco trekking tours, morocco cycling tours';
+        $keywords = 'things to do in marrakech, things to do in morocco, morocco activities, morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech, morocco trekking tours';
 
         SEOMeta::setTitle($title)
             ->setDescription($description)
@@ -121,15 +121,15 @@ class ActivityController extends Controller
 
         $title = $category
             ? "{$category->name} in Morocco | Tours & Day Trips | Morocco Quest"
-            : "Morocco Activities & Day Tours | Camel, Quad, Hiking, Food | Morocco Quest";
+            : "Morocco Day Tours & Activities | Browse All Experiences | Morocco Quest";
 
         $description = $category
-            ? "Discover {$category->name} in Morocco with a top-rated local agency. Private morocco tours, small group tours morocco and morocco day tours."
-            : "Top morocco activities: camel tours, quad biking marrakech, hiking, food tours and morocco day tours. Book private morocco tours with a top-rated local agency.";
+            ? "Discover {$category->name} in Morocco with a top-rated local agency. Private tours, small group experiences and morocco day trips — book direct."
+            : "Browse all morocco day tours and activities: camel rides, quad biking, desert hikes, food tours, day trips from Marrakech. Book private or small group with a local agency.";
 
         $keywords = $category
-            ? strtolower($category->name) . ", morocco tours, morocco day tours, morocco tour package, private morocco tours"
-            : 'morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech, morocco trekking tours';
+            ? strtolower($category->name) . " morocco, morocco {$category->name}, morocco day tours, things to do in marrakech, morocco activities, private morocco tours"
+            : 'morocco day tours, morocco activities, things to do in marrakech, morocco day trips, morocco camel tours, morocco hiking tours, quad biking marrakech, morocco food tour';
 
         SEOMeta::setTitle($title)
             ->setDescription($description)

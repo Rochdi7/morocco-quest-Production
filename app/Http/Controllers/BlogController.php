@@ -217,9 +217,23 @@ class BlogController extends Controller
             ->setDescription($description)
             ->addImage($image)
             ->addValue('datePublished', $post->created_at->toIso8601String())
+            ->addValue('dateModified', ($post->updated_at ?? $post->created_at)->toIso8601String())
             ->addValue('author', [
                 '@type' => 'Person',
-                'name' => $post->user->name ?? 'Morocco Quest Team'
+                'name' => $post->user->name ?? 'Morocco Quest Team',
+            ])
+            ->addValue('publisher', [
+                '@type' => 'Organization',
+                'name' => 'Morocco Quest',
+                'url'  => url('/'),
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url'   => asset('assets/img/logo-bg-wide.webp'),
+                ],
+            ])
+            ->addValue('mainEntityOfPage', [
+                '@type' => 'WebPage',
+                '@id'   => $url,
             ])
             ->addValue('keywords', $keywords);
 

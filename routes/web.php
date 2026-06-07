@@ -21,7 +21,10 @@ use App\Http\Controllers\TagController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourInquiryController;
 use App\Http\Controllers\TripController;
-use App\Http\Controllers\SitemapController; 
+use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\DmcController;
+
+Route::get('/dmc-marrakech', [DmcController::class, 'index'])->name('dmc.marrakech');
 
 Route::get('/', function () {
     return app(HomepageController::class)->index();

@@ -34,20 +34,19 @@ class CategoryController extends Controller
         $categories  = $sidebar['categories'];
         $tags        = $sidebar['tags'];
 
-        $title = $category->name . ' | Morocco Travel Blog | Morocco Quest';
+        $title = $category->name . ' — Morocco Travel Guides & Articles | Morocco Quest Blog';
 
-        $description = 'Latest articles on ' . $category->name . '. Read morocco tour guides, itineraries, sahara desert tours from Marrakech and morocco day trips.';
+        $description = 'Browse all ' . $category->name . ' articles on the Morocco Quest travel blog. In-depth guides, itineraries and practical tips for travelling in Morocco.';
 
         $url = url()->current();
 
         $keywordArray = array_filter([
-            'morocco tours',
-            'morocco travel blog',
-            'morocco tour package',
-            'private morocco tours',
-            'sahara desert tours morocco',
-            'morocco day tours',
             strtolower($category->name),
+            strtolower($category->name) . ' morocco',
+            'morocco travel blog',
+            'morocco travel guide',
+            'morocco itinerary',
+            'morocco travel tips',
         ]);
         $keywords = implode(', ', array_unique($keywordArray));
 

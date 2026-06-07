@@ -39,20 +39,19 @@ class TagController extends Controller
         $categories  = $sidebar['categories'];
         $tags        = $sidebar['tags'];
 
-        $title = $tag->name . ' | Morocco Travel Blog | Morocco Quest';
+        $title = $tag->name . ' — Morocco Travel Guides & Tips | Morocco Quest Blog';
 
-        $description = 'Articles about ' . $tag->name . '. Read morocco tour guides, sahara desert tours from Marrakech, morocco day trips and morocco multi day tour itineraries.';
+        $description = 'All articles tagged "' . $tag->name . '" on the Morocco Quest travel blog. Practical guides, itineraries and travel tips for your morocco trip.';
 
         $url = url()->current();
 
         $keywordArray = array_filter([
-            'morocco tours',
-            'morocco travel blog',
-            'morocco tour package',
-            'private morocco tours',
-            'sahara desert tours morocco',
-            'morocco day tours',
             strtolower($tag->name),
+            strtolower($tag->name) . ' morocco',
+            'morocco travel blog',
+            'morocco travel guide',
+            'morocco travel tips',
+            'morocco itinerary',
         ]);
         $keywords = implode(', ', array_unique($keywordArray));
 

@@ -117,16 +117,16 @@ class TourController extends Controller
 
         // --- SEO Setup ---
         $title = $placeName
-            ? "Morocco Tours in {$placeName} | Private & Guided Tour Packages | Morocco Quest"
-            : 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest';
+            ? "Tours in {$placeName} Morocco | Private Day Trips & Multi-Day Tours | Morocco Quest"
+            : 'Morocco Tour Packages | Browse All Private & Group Tours | Morocco Quest';
 
         $desc = $placeName
-            ? "Discover morocco tours in {$placeName}. Private morocco tours, small group tours morocco and luxury morocco tours with a top-rated local agency. Book online."
-            : 'Browse morocco tour packages: private morocco tours, sahara desert tours from Marrakech, small group tours morocco and luxury morocco tours. Book direct with a local agency.';
+            ? "Explore all tours in {$placeName}, Morocco. Compare private day trips, multi-day packages and small group tours. Book direct with a local Marrakech-based agency."
+            : 'Browse all morocco tour packages: private day trips, multi-day sahara desert tours, small group tours morocco and luxury morocco tours. Book direct with a top-rated local agency.';
 
         $keywords = $placeName
-            ? "morocco tours, {$placeName} tours, tours in {$placeName} morocco, morocco tour package, private morocco tours, morocco guided tours"
-            : 'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours';
+            ? "tours in {$placeName} morocco, {$placeName} day trips, {$placeName} tours, morocco tour package, private morocco tours, morocco guided tours, day trips from {$placeName}"
+            : 'morocco tour packages, morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, small group tours morocco, luxury morocco tours, morocco guided tours, best morocco tours';
 
         SEOMeta::setTitle($title)
             ->setDescription($desc)

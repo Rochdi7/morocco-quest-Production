@@ -23,7 +23,7 @@ class HomepageController extends Controller
         |--------------------------------------------------------------------------
         */
         $title = 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest';
-        $description = 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.';
+        $description = 'Morocco Quest — top-rated local agency for private morocco tours, sahara desert trips from Marrakech, small group tours & luxury morocco tour packages. Book direct, best price guaranteed.';
         $keywords = 'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours';
         $url = url('/');
         $image = asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp');
@@ -45,6 +45,9 @@ class HomepageController extends Controller
                 'morocco private tour',
                 'morocco day tours',
                 'morocco multi day tours',
+                'things to do in marrakech',
+                'morocco family tours',
+                'morocco adventure tours',
             ]);
 
         /*

@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? (!empty($placeName) ? 'Morocco Tours in '.$placeName.' | Private & Guided Tour Packages | Morocco Quest' : 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest'))
-@section('description', $description ?? (!empty($placeName) ? 'Discover morocco tours in '.$placeName.'. Private morocco tours, small group tours morocco and luxury morocco tours with a top-rated local agency.' : 'Browse morocco tour packages: private morocco tours, sahara desert tours from Marrakech, small group tours morocco and luxury morocco tours.'))
-@section('keywords', $keywords ?? 'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours')
+@section('title', $title ?? (!empty($placeName) ? 'Tours in '.$placeName.' Morocco | Private Day Trips & Multi-Day Tours | Morocco Quest' : 'Morocco Tour Packages | Browse All Private & Group Tours | Morocco Quest'))
+@section('description', $description ?? (!empty($placeName) ? 'Explore all tours in '.$placeName.', Morocco. Compare private day trips, multi-day packages and small group tours. Book direct with a local Marrakech-based agency.' : 'Browse all morocco tour packages: private day trips, multi-day sahara desert tours, small group tours and luxury morocco tours. Book direct with a top-rated local agency.'))
+@section('keywords', $keywords ?? 'morocco tour packages, morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, small group tours morocco, luxury morocco tours, morocco guided tours, best morocco tours')
 
 
 @section('content')

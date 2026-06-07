@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'Morocco Activities & Day Tours | Camel, Quad, Hiking & Food Tours | Morocco Quest')
-@section('description', $description ?? 'Top morocco activities: camel tours, quad biking marrakech, morocco hiking tours, food tours and morocco day tours. Book private morocco tours and small group experiences.')
-@section('keywords', $keywords ?? 'morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech, morocco trekking tours, morocco cycling tours')
+@section('title', $title ?? 'Things to Do in Morocco | Activities, Day Tours & Experiences | Morocco Quest')
+@section('description', $description ?? 'Best things to do in Morocco: camel rides, quad biking in Marrakech, desert hikes, food tours and day trips. Private & small group activities with a top-rated local agency.')
+@section('keywords', $keywords ?? 'things to do in marrakech, things to do in morocco, morocco activities, morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech')
 
 
 @section('content')

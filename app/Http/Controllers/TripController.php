@@ -1,23 +1,17 @@
 <?php
 
-// Defines the namespace for the controller. This helps Laravel find the file.
 namespace App\Http\Controllers;
 
-// Import necessary classes using the 'use' keyword.
-use App\Models\Trip; // Imports the Trip model to interact with the 'trips' database table.
-use Illuminate\Http\Request; // Imports the Request class (though not strictly needed in this simplified version, it's good practice to keep if you might add request handling later).
-use Illuminate\View\View; // Imports the View class for type hinting (helps code editors understand what the methods return).
+use App\Models\Trip;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\View\View;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\JsonLd;
 
-// Defines the TripController class, which extends Laravel's base Controller.
 class TripController extends Controller
 {
-    /**
-     * Display a listing of the trips (public facing).
-     * This method handles the page that shows multiple trips, like your main trips page.
-     * Example URL: yourwebsite.com/trips
-     *
-     * @return \Illuminate\View\View  // Indicates this method returns a View object.
-     */
     public function index(): View
     {
         $query = Trip::query();
@@ -25,18 +19,28 @@ class TripController extends Controller
         $query->latest();
         $trips = $query->paginate(9);
 
-        // This should point to your LISTING view file: resources/views/trips.blade.php
-        return view('trips', compact('trips'));
+        $title       = 'Morocco Trip Packages | Multi-Day Tours 3, 5 & 7 Days | Morocco Quest';
+        $description = 'Browse morocco trip packages: 3-day sahara desert trip, 5-day imperial cities tour, 7-day morocco tour from Marrakech. Private & small group packages with a local agency.';
+        $keywords    = 'morocco trip packages, morocco trips, morocco multi day tours, morocco 7 day tour, 7 day trip to morocco, morocco 5 day tour, small group tours morocco, private morocco tours, sahara desert overnight tour';
+
+        SEOMeta::setTitle($title)
+            ->setDescription($description)
+            ->setCanonical(url()->current())
+            ->addKeyword(explode(', ', $keywords));
+
+        OpenGraph::setTitle($title)
+            ->setDescription($description)
+            ->setUrl(url()->current())
+            ->setType('website')
+            ->setSiteName('Morocco Quest');
+
+        JsonLd::setTitle($title)
+            ->setDescription($description)
+            ->setType('CollectionPage');
+
+        return view('trips', compact('trips', 'title', 'description', 'keywords'));
     }
 
-    /**
-     * Display the specified trip details (public facing).
-     * This method handles the page that shows the details for ONE specific trip.
-     * Example URL: yourwebsite.com/trips/my-awesome-trip-slug
-     *
-     * @param string $slug The unique identifier (slug) for the trip, taken from the URL.
-     * @return \Illuminate\View\View // Indicates this method returns a View object.
-     */
     public function show(string $slug): View
     {
         $query = Trip::query();
@@ -44,23 +48,57 @@ class TripController extends Controller
         $query->where('slug', $slug);
         $trip = $query->firstOrFail();
 
-        // *** CHANGE THIS LINE ***
-        // Point to your DETAIL view file: resources/views/trips-details.blade.php
-        return view('trips-details', compact('trip')); // Changed from 'trips.show'
+        $relatedTrips = Trip::with('images')
+            ->where('id', '!=', $trip->id)
+            ->latest()
+            ->take(3)
+            ->get();
+
+        $description = Str::limit(strip_tags($trip->overview ?? ''), 160);
+        $image       = $trip->images?->first()
+            ? asset('storage/' . $trip->images->first()->image_path)
+            : asset('assets/img/morocco-quest-social-share.webp');
+        $url         = url()->current();
+
+        $title = $trip->title . ' | Morocco Trip Package | Morocco Quest';
+
+        $keywordArray = array_filter(array_unique([
+            'morocco trips',
+            'morocco trip packages',
+            'morocco multi day tours',
+            'morocco tour package',
+            'private morocco tours',
+            'small group tours morocco',
+            'sahara desert tours morocco',
+            'morocco guided tours',
+            strtolower($trip->title),
+            $trip->duration_days ? 'morocco ' . $trip->duration_days . ' day tour' : null,
+        ]));
+        $keywords = implode(', ', $keywordArray);
+
+        SEOMeta::setTitle($title)
+            ->setDescription($description)
+            ->setCanonical($url)
+            ->addKeyword($keywordArray);
+
+        OpenGraph::setTitle($title)
+            ->setDescription($description)
+            ->setUrl($url)
+            ->setType('article')
+            ->addImage($image, ['height' => 630, 'width' => 1200]);
+
+        OpenGraph::addProperty('twitter:card', 'summary_large_image');
+        OpenGraph::addProperty('twitter:title', $title);
+        OpenGraph::addProperty('twitter:description', $description);
+        OpenGraph::addProperty('twitter:image', $image);
+
+        JsonLd::setType('TouristTrip')
+            ->setTitle($title)
+            ->setDescription($description)
+            ->setUrl($url)
+            ->addImage($image);
+
+        return view('trips-details', compact('trip', 'relatedTrips', 'title', 'description', 'keywords'));
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Admin / CRUD Methods (REMOVED)
-    |--------------------------------------------------------------------------
-    | The methods for creating, saving, editing, updating, and deleting trips
-    | (like store(), update(), destroy(), create(), edit()) are NOT needed here anymore.
-    |
-    | WHY? Because you are using FILAMENT. Filament's "Resources" (like your TripResource)
-    | handle all the logic for managing trips within the admin panel.
-    |
-    | Keeping this controller focused ONLY on the public website pages makes
-    | your code cleaner and easier to understand.
-    */
-
-} // End of the TripController class
+}

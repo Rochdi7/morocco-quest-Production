@@ -1,8 +1,43 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? ($trip->title ?? 'Trip') . ' | Morocco Multi Day Tours | Morocco Quest')
+@section('title', $title ?? ($trip->title ?? 'Trip') . ' | Morocco Trip Package | Morocco Quest')
 @section('description', $description ?? Str::limit(strip_tags($trip->overview ?? ''), 160))
-@section('keywords', $keywords ?? 'morocco tours, morocco multi day tours, morocco tour package, private morocco tours, small group tours morocco, ' . Str::lower($trip->title ?? ''))
+@section('keywords', $keywords ?? 'morocco trips, morocco trip packages, morocco multi day tours, morocco tour package, private morocco tours, small group tours morocco, ' . Str::lower($trip->title ?? ''))
+
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",         "item": "{{ url('/') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Trip Packages","item": "{{ route('trips.index') }}" },
+        { "@type": "ListItem", "position": 3, "name": "{{ $trip->title ?? 'Trip Details' }}", "item": "{{ url()->current() }}" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "{{ $trip->title ?? '' }}",
+    "description": "{{ Str::limit(strip_tags($trip->overview ?? ''), 200) }}",
+    "url": "{{ url()->current() }}",
+    "touristType": "{{ $trip->tour_type ?? 'Multi-Day Tour' }}",
+    "provider": {
+        "@type": "TravelAgency",
+        "@id": "{{ url('/') }}#travel-agency",
+        "name": "Morocco Quest"
+    }@if($trip->images && $trip->images->isNotEmpty()),
+    "image": "{{ asset('storage/' . $trip->images->first()->image_path) }}"@endif@if($trip->duration_days),
+    "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": {{ $trip->duration_days }}
+    }@endif
+}
+</script>
+@endpush
+
 
 @section('content')
     <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/bg/breadcrumb-bg.png') }}">
@@ -175,66 +210,66 @@
                                 <div id="faq" class="destination-faq tab-content">
                                     <div class="d-flex justify-content-between align-items-center gap-2">
                                         <h4 class="title">FAQs</h4>
-                                        <a href="./faq.html" class="expand-btn">Expand all</a>
+                                        <a href="{{ route('faq') }}" class="expand-btn">See all FAQs</a>
                                     </div>
                                     <div class="accordion-style2 accordion" id="accordionExampleTwo">
                                         <div class="accordion-item">
                                             <h6 class="accordion-header">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                How fit do I need to be to do this trek?
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqOne" aria-expanded="true" aria-controls="tripFaqOne">
+                                                    What is included in this morocco trip package?
                                                 </button>
                                             </h6>
-                                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExampleTwo">
+                                            <div id="tripFaqOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExampleTwo">
                                                 <div class="accordion-body">
-                                                Travel is movement of people between relatively distant geograp location, andca involve travels byfo, bicycle, autmobile, train, boat, bus, airplane, or other means, without luggage, and can be one way or round trip. Travel can also include successive.
+                                                    Please refer to the Cost section above for the full list of inclusions and exclusions. All our morocco trip packages include professional English-speaking guides, private 4×4 transport and accommodation as stated in the itinerary. Meals are specified per trip.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
                                             <h6 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                How long do we walk every day when doing Annapurna Base Camp trekking?
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqTwo" aria-expanded="false" aria-controls="tripFaqTwo">
+                                                    Can this morocco tour be customised for private groups?
                                                 </button>
                                             </h6>
-                                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
+                                            <div id="tripFaqTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
                                                 <div class="accordion-body">
-                                                Travel is movement of people between relatively distant geograp location, andca involve travels byfo, bicycle, autmobile, train, boat, bus, airplane, or other means, without luggage, and can be one way or round trip. Travel can also include successive.
+                                                    Yes — all our morocco tour packages are fully customisable. We can adjust the duration, accommodation category, add or remove stops, and tailor the itinerary to your group size and interests. Use the Send Request form to tell us your preferences.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
                                             <h6 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                What about battery charging and hot shower facilities?
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqThree" aria-expanded="false" aria-controls="tripFaqThree">
+                                                    What is the best time of year for this Morocco trip?
                                                 </button>
                                             </h6>
-                                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
+                                            <div id="tripFaqThree" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
                                                 <div class="accordion-body">
-                                                Travel is movement of people between relatively distant geograp location, andca involve travels byfo, bicycle, autmobile, train, boat, bus, airplane, or other means, without luggage, and can be one way or round trip. Travel can also include successive.
+                                                    Morocco is a year-round destination. Spring (March–May) and autumn (September–November) offer the most comfortable temperatures for desert trips and mountain excursions. Summer can be very hot in the Sahara; winter nights in the desert are cold but days are clear and beautiful.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
                                             <h6 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                Are there ATMs on the way to Annapurna Base Camp?
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqFour" aria-expanded="false" aria-controls="tripFaqFour">
+                                                    How do I book and what deposit is required?
                                                 </button>
                                             </h6>
-                                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
+                                            <div id="tripFaqFour" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
                                                 <div class="accordion-body">
-                                                Travel is movement of people between relatively distant geograp location, andca involve travels byfo, bicycle, autmobile, train, boat, bus, airplane, or other means, without luggage, and can be one way or round trip. Travel can also include successive.
+                                                    You can book via the Send Request form on this page or by contacting us directly. We typically require a 20% deposit to confirm your booking, with the balance due before departure. We reply to all inquiries within 24 hours.
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
                                             <h6 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                What about internet access?
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tripFaqFive" aria-expanded="false" aria-controls="tripFaqFive">
+                                                    Is this trip suitable for families with children?
                                                 </button>
                                             </h6>
-                                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
+                                            <div id="tripFaqFive" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
                                                 <div class="accordion-body">
-                                                Travel is movement of people between relatively distant geograp location, andca involve travels byfo, bicycle, autmobile, train, boat, bus, airplane, or other means, without luggage, and can be one way or round trip. Travel can also include successive.
+                                                    Most of our morocco trip packages are family-friendly. We can provide child seats in vehicles, adjust activity intensity, and suggest family-oriented accommodation. Please mention the ages of children when you send your request so we can tailor the itinerary accordingly.
                                                 </div>
                                             </div>
                                         </div>
