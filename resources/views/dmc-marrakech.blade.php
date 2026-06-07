@@ -419,10 +419,46 @@
                     <p>Fill in the form below — we respond within 24 hours with a full costing. All enquiries are treated as strictly confidential.</p>
                 </div>
 
-                @if(session('dmc_success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Thank you!</strong> Your B2B enquiry has been received. We'll reply within 24 hours.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                @if(session('success'))
+                    <div class="alert alert-dismissible fade show d-flex align-items-start gap-3 mb-4"
+                         role="alert"
+                         style="background:#e9f7ef;border:1px solid #a8d5b5;border-radius:10px;padding:18px 20px;">
+                        <i class="fa-solid fa-circle-check" style="color:#27ae60;font-size:1.4rem;margin-top:2px;flex-shrink:0;"></i>
+                        <div>
+                            <div style="font-weight:700;color:#1a7a40;font-size:1rem;margin-bottom:2px;">Enquiry sent successfully!</div>
+                            <div style="color:#2d6a4f;font-size:.92rem;">{{ session('success') }}</div>
+                        </div>
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
+                @if(session('error'))
+                    <div class="alert alert-dismissible fade show d-flex align-items-start gap-3 mb-4"
+                         role="alert"
+                         style="background:#fdf0ef;border:1px solid #f5c6c2;border-radius:10px;padding:18px 20px;">
+                        <i class="fa-solid fa-circle-exclamation" style="color:#e74c3c;font-size:1.4rem;margin-top:2px;flex-shrink:0;"></i>
+                        <div>
+                            <div style="font-weight:700;color:#a93226;font-size:1rem;margin-bottom:2px;">Something went wrong</div>
+                            <div style="color:#922b21;font-size:.92rem;">{{ session('error') }}</div>
+                        </div>
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
+                @if($errors->any())
+                    <div class="alert alert-dismissible fade show d-flex align-items-start gap-3 mb-4"
+                         role="alert"
+                         style="background:#fdf0ef;border:1px solid #f5c6c2;border-radius:10px;padding:18px 20px;">
+                        <i class="fa-solid fa-triangle-exclamation" style="color:#e67e22;font-size:1.4rem;margin-top:2px;flex-shrink:0;"></i>
+                        <div>
+                            <div style="font-weight:700;color:#a04000;font-size:1rem;margin-bottom:6px;">Please fix the following errors:</div>
+                            <ul style="margin:0;padding-left:18px;color:#784212;font-size:.92rem;">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
 
@@ -642,6 +678,12 @@
             dateFormat: 'Y-m-d',
             minDate: 'today',
         });
+
+        // Auto-scroll to alert if present
+        const alert = document.querySelector('#dmc-enquiry .alert');
+        if (alert) {
+            alert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
     });
 </script>
 @endpush
