@@ -472,7 +472,7 @@
                             <label for="dmc_date" style="font-weight:600;margin-bottom:4px;display:block;">Travel Dates *</label>
                             <input id="dmc_date" name="arrival_date" type="text"
                                    class="form-control @error('arrival_date') is-invalid @enderror"
-                                   placeholder="Approximate travel dates"
+                                   placeholder="Select departure date"
                                    value="{{ old('arrival_date') }}" required readonly />
                             @error('arrival_date')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
@@ -638,7 +638,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         flatpickr('#dmc_date', {
-            mode: 'range',
+            mode: 'single',
             dateFormat: 'Y-m-d',
             minDate: 'today',
         });
