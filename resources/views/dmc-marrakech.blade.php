@@ -211,7 +211,7 @@
                 <a href="#dmc-enquiry" class="vs-btn mt-4">Request a B2B Quote</a>
             </div>
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}"
+                <img src="{{ asset('assets/img/dmc-in-morocco-moroccoquest.webp') }}"
                      alt="Morocco Quest DMC Marrakech — ground services for travel agents and tour operators"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
             </div>
@@ -550,7 +550,7 @@
                     <span class="sec-subtitle">FAQ</span>
                     <h2 class="sec-title">Frequently Asked Questions — DMC Marrakech</h2>
                 </div>
-                <div class="accordion accordion-style2" id="dmcFaq">
+                <div class="accordion accordion-style1" id="dmcFaq">
 
                     @php
                     $faqs = [

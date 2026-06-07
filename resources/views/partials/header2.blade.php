@@ -39,6 +39,9 @@
                 <li>
                     <a href="{{ url('/blog') }}">Blog</a>
                 </li>
+                <li>
+                    <a href="{{ route('dmc.marrakech') }}">DMC</a>
+                </li>
                 <li class="menu-item-has-children">
                     <a href="#">Info Hub</a>
                     <ul class="sub-menu">
@@ -112,6 +115,7 @@
                         </li>
 
                         <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                        <li><a href="{{ route('dmc.marrakech') }}">DMC</a></li>
 
                         <li class="menu-item-has-children">
                             <a href="#">Info Hub</a>
@@ -289,6 +293,9 @@
                                 </li>
                                 <li>
                                     <a href="{{ url('/blog') }}">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('dmc.marrakech') }}">DMC</a>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Info Hub</a>
