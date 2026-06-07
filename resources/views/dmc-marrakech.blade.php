@@ -304,21 +304,21 @@
         <div class="row g-3 mt-2 justify-content-center">
             @php
             $destinations = [
-                ['city' => 'Marrakech',    'label' => 'Gateway & base for most tours'],
-                ['city' => 'Fes',          'label' => 'Imperial city & medina'],
-                ['city' => 'Casablanca',   'label' => 'Business hub & arrivals'],
-                ['city' => 'Chefchaouen', 'label' => 'Blue city in the Rif'],
-                ['city' => 'Merzouga',     'label' => 'Sahara desert & camel treks'],
-                ['city' => 'Ouarzazate',   'label' => 'Kasbah route & film studios'],
-                ['city' => 'Essaouira',    'label' => 'Atlantic coast & wind sports'],
-                ['city' => 'Agadir',       'label' => 'Beach & resort groups'],
-                ['city' => 'Rabat',        'label' => 'Capital city tours'],
-                ['city' => 'Tangier',      'label' => 'Northern gateway & day trips'],
+                ['city' => 'Marrakech',   'label' => 'Gateway & base for most tours'],
+                ['city' => 'Fes',         'label' => 'Imperial city & medina'],
+                ['city' => 'Casablanca',  'label' => 'Business hub & arrivals'],
+                ['city' => 'Chefchaouen','label' => 'Blue city in the Rif'],
+                ['city' => 'Merzouga',    'label' => 'Sahara desert & camel treks'],
+                ['city' => 'Ouarzazate',  'label' => 'Kasbah route & film studios'],
+                ['city' => 'Essaouira',   'label' => 'Atlantic coast & wind sports'],
+                ['city' => 'Agadir',      'label' => 'Beach & resort groups'],
+                ['city' => 'Rabat',       'label' => 'Capital city tours'],
+                ['city' => 'Tangier',     'label' => 'Northern gateway & day trips'],
             ];
             @endphp
             @foreach($destinations as $d)
-            <div class="col-6 col-md-4 col-lg-2-4" style="flex:0 0 auto;width:20%;">
-                <div class="text-center p-3" style="border-radius:8px;background:#f8f8f8;">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="text-center p-3" style="border-radius:8px;background:#f8f8f8;height:100%;">
                     <i class="fa-solid fa-location-dot" style="color:#f7921e;font-size:1.2rem;display:block;margin-bottom:6px;"></i>
                     <div style="font-weight:700;font-size:.95rem;">{{ $d['city'] }}</div>
                     <div style="font-size:.78rem;color:#777;">{{ $d['label'] }}</div>
@@ -523,13 +523,13 @@
                         </div>
 
                         <div class="col-12 form-group mb-0">
-                            <button class="vs-btn" type="submit">
+                            <button class="vs-btn w-100 w-sm-auto" type="submit">
                                 <i class="fa-solid fa-paper-plane me-2"></i> Send B2B Enquiry
                             </button>
-                            <span style="margin-left:18px;font-size:.88rem;color:#777;">
+                            <div style="margin-top:12px;font-size:.88rem;color:#777;">
                                 We reply within <strong>24 hours</strong> — or call us:
                                 <a href="tel:+212654069718" style="color:#f7921e;font-weight:600;">+212 654 069 718</a>
-                            </span>
+                            </div>
                         </div>
 
                     </div>
@@ -550,7 +550,8 @@
                     <span class="sec-subtitle">FAQ</span>
                     <h2 class="sec-title">Frequently Asked Questions — DMC Marrakech</h2>
                 </div>
-                <div class="accordion accordion-style1" id="dmcFaq">
+                <div class="accordion accordion-style1" id="dmcFaq" style="--dmc-faq-pr:60px;">
+                <style>#dmcFaq .accordion-button{padding-right:60px;}</style>
 
                     @php
                     $faqs = [
@@ -613,14 +614,20 @@
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">
             Join 200+ travel agencies and operators who trust us as their Morocco ground partner. Send your brief today — net-rate quote within 24 hours.
         </p>
-        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-            <a href="#dmc-enquiry" class="vs-btn">Request a Quote</a>
-            <a href="mailto:sales@morocco-quest.com" class="vs-btn style2" style="background:transparent;border:2px solid #f7921e;color:#f7921e;">
-                <i class="fa-solid fa-envelope me-2"></i> sales@morocco-quest.com
-            </a>
-            <a href="tel:+212654069718" class="vs-btn style2" style="background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;">
-                <i class="fa-solid fa-phone me-2"></i> +212 654 069 718
-            </a>
+        <div class="row g-3 justify-content-center">
+            <div class="col-12 col-sm-auto">
+                <a href="#dmc-enquiry" class="vs-btn d-block">Request a Quote</a>
+            </div>
+            <div class="col-12 col-sm-auto">
+                <a href="mailto:sales@morocco-quest.com" class="vs-btn d-block" style="background:transparent;border:2px solid #f7921e;color:#f7921e;">
+                    <i class="fa-solid fa-envelope me-2"></i> sales@morocco-quest.com
+                </a>
+            </div>
+            <div class="col-12 col-sm-auto">
+                <a href="tel:+212654069718" class="vs-btn d-block" style="background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;">
+                    <i class="fa-solid fa-phone me-2"></i> +212 654 069 718
+                </a>
+            </div>
         </div>
     </div>
 </section>
