@@ -641,6 +641,19 @@
     </div>
 </section>
 
+{{-- Phase 5: Cross-links to tours + blog for topical authority --}}
+<section class="space">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Explore Our Morocco Products</h3>
+                <p>Looking for ready-made itineraries to build your packages from? Browse our full range of <a href="{{ route('tours.index') }}">private morocco tours</a> and <a href="{{ route('trips.index') }}">multi-day trip packages</a> — all are available as B2B net-rate products. For destination insights to share with your clients, our <a href="{{ route('blog.index') }}">Morocco travel blog</a> covers route planning, best travel seasons, packing guides, and city-by-city advice. For individual traveller bookings, see our <a href="{{ route('activity-categories.index') }}">Morocco activities</a> and <a href="{{ route('destinations.index') }}">destination guides</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- ═══════════════════════════════════════════════════════
      FINAL CTA
 ═══════════════════════════════════════════════════════ --}}

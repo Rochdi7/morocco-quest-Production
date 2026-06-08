@@ -2,8 +2,20 @@
 
 @section('title', $title ?? (!empty($placeName) ? 'Tours in '.$placeName.' Morocco | Private Day Trips & Multi-Day Tours | Morocco Quest' : 'Morocco Tour Packages | Browse All Private & Group Tours | Morocco Quest'))
 @section('description', $description ?? (!empty($placeName) ? 'Explore all tours in '.$placeName.', Morocco. Compare private day trips, multi-day packages and small group tours. Book direct with a local Marrakech-based agency.' : 'Browse all morocco tour packages: private day trips, multi-day sahara desert tours, small group tours and luxury morocco tours. Book direct with a top-rated local agency.'))
-@section('keywords', $keywords ?? 'morocco tour packages, morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, small group tours morocco, luxury morocco tours, morocco guided tours, best morocco tours')
+@section('keywords', $keywords ?? 'browse morocco tours, all morocco tour packages, private day trips morocco, morocco group tours, marrakech tour packages, best morocco tour deals')
 
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => !empty($placeName) ? 'Tours in '.$placeName : 'Morocco Tour Packages', 'item' => url()->current()],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
 @section('content')
     <main>
@@ -42,6 +54,19 @@
             </div>
         </section>
 
+
+        {{-- Phase 2: Hub intro — unique, departure-specific, entity-rich --}}
+        <section class="hub-intro space-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <p class="hub-intro-text">
+                            Every tour in this collection departs from <strong>Marrakech</strong> — Morocco's most-visited imperial city and the gateway to the High Atlas Mountains, the Drâa Valley, and the Sahara desert at <strong>Erg Chebbi, Merzouga</strong>. Whether you're comparing a <a href="{{ route('tours.show', '3-day-sahara-desert-tour-from-marrakech') }}">3-day sahara desert tour</a>, a <a href="{{ route('trips.index') }}">multi-day morocco trip package</a>, or a focused <a href="{{ route('activities.index') }}">Marrakech day activity</a>, each option is led by a licensed local guide. Prices are per person and include 4×4 transport on mountain and desert routes. Filter by duration, departure city or group size — or <a href="{{ route('contact.show') }}">contact us</a> for a tailor-made itinerary.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         {{-- Tour Listing Section --}}
         <section class="vs-tour-package space">

@@ -23,7 +23,7 @@
             <div class="row text-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title">Search Results for Tours & Activities</h1>
+                        <p class="breadcrumb-title">Search Results for Tours & Activities</p>
                         <p class="breadcrumb-subtitle" style="color: white;">
                             Experience breathtaking views of the Moroccan desert at sunrise with our hot air balloon tours.
                         </p>

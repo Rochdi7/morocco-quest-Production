@@ -5,15 +5,27 @@
 @section('page_description', Str::limit(strip_tags($tour->overview), 160))
 
 @php
+    // Parse ISO 8601 duration from slug or duration_days field
+    $durationDays = $tour->duration_days ?? null;
+    if (!$durationDays) {
+        preg_match('/(\d+)-days?/', $tour->slug ?? '', $dm);
+        $durationDays = $dm[1] ?? null;
+    }
     $tourSchema = [
         '@context' => 'https://schema.org',
         '@type' => 'TouristTrip',
         'name' => $tour->title,
         'description' => Str::limit(strip_tags($tour->overview ?? $tour->subtitle ?? 'Morocco private tour.'), 300),
         'url' => url()->current(),
+        'image' => $tour->images && $tour->images->isNotEmpty()
+            ? asset('storage/' . $tour->images->first()->image_path)
+            : asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'touristType' => ['Adventure', 'Cultural', 'Desert', 'Luxury'],
-        'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/')],
+        'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/'), '@id' => url('/') . '#organization'],
     ];
+    if ($durationDays) {
+        $tourSchema['duration'] = 'P' . $durationDays . 'D';
+    }
     if (!empty($tour->price_adult)) {
         $tourSchema['offers'] = ['@type' => 'Offer', 'price' => (string) $tour->price_adult, 'priceCurrency' => 'USD', 'availability' => 'https://schema.org/InStock', 'url' => url()->current()];
     }
@@ -459,6 +471,28 @@
                                             unavailable.</p>
                                     @endif
                                 </div>
+
+                                {{-- Phase 3: Departure-specific context section --}}
+                                @if(!empty($tour->departure))
+                                <div class="departure-context tab-content" style="margin-bottom:2rem;">
+                                    <h3 class="title">Departing from {{ $tour->departure }}</h3>
+                                    @php
+                                        $dep = strtolower(trim($tour->departure ?? ''));
+                                        $depContextMap = [
+                                            'marrakech' => 'This tour departs from <strong>Marrakech</strong> — the Red City and Morocco\'s most dynamic imperial hub. Travellers fly into Marrakech Menara Airport (RAK), ideally arriving the day before departure for an early start. From central Marrakech, your private 4×4 heads south through the <strong>Tizi n\'Tichka pass</strong> in the High Atlas, crossing the 2,260m col that separates the Atlantic-facing valleys from the pre-Saharan plateau. The visual contrast — from ochre medina walls to cedar forests to red gorges — begins within the first hour of driving. Browse <a href="' . route('tours.index') . '">all tours departing Marrakech</a>.',
+                                            'fes' => 'This tour departs from <strong>Fes</strong> — Morocco\'s spiritual and scholarly capital, home to the oldest walled medina in the world, Fes el-Bali, and the <strong>Al-Qarawiyyin University</strong>, founded in 859 AD. Fes airport (FEZ) handles direct flights from Europe; the city centre is a 15-minute transfer. Travellers departing Fes move east through the <strong>Middle Atlas cedar forests</strong>, past the <strong>Azrou cedar grove</strong> where wild Barbary macaques live, and south through <strong>Ifrane</strong> before reaching the Ziz Valley and the Sahara. Browse <a href="' . route('tours.index') . '">all tours departing Fes</a>.',
+                                            'casablanca' => 'This tour departs from <strong>Casablanca</strong> — Morocco\'s economic capital and the country\'s main international gateway via Mohammed V Airport (CMN). Casablanca is a 3-hour drive from Marrakech and a 3.5-hour drive from Fes by highway. Tours departing Casablanca are ideal for travellers with a CMN connection who want to begin their journey immediately rather than transferring to another city first. Browse <a href="' . route('tours.index') . '">all tours departing Casablanca</a>.',
+                                            'agadir' => 'This tour departs from <strong>Agadir</strong> — Morocco\'s resort coast city on the Atlantic, known for its 10km beach, Souss-Massa National Park, and the rebuilt Kasbah hill above the port. Agadir Airport (AGA) receives direct charter and low-cost flights from the UK and Europe year-round. Tours heading inland from Agadir enter the <strong>Anti-Atlas mountains</strong> through the Taroudant plain, with argan forests lining the route east toward <strong>Ouarzazate</strong> and the Drâa Valley. Browse <a href="' . route('tours.index') . '">all tours departing Agadir</a>.',
+                                        ];
+                                        $depContext = $depContextMap[$dep] ?? null;
+                                    @endphp
+                                    @if($depContext)
+                                        <p>{!! $depContext !!}</p>
+                                    @else
+                                        <p>This tour departs from <strong>{{ $tour->departure }}</strong>. Please <a href="{{ route('contact.show') }}">contact us</a> for transfer options and recommended arrival times from your city. Our team arranges pickups from hotels, riads, and airports across Morocco.</p>
+                                    @endif
+                                </div>
+                                @endif
 
                                 <div id="review" class="destination-request tab-content"> {{-- ID is 'review' but content is
                                     request form --}}

@@ -4,6 +4,18 @@
 @section('description', $description ?? 'Best things to do in Morocco: camel rides, quad biking in Marrakech, desert hikes, food tours and day trips. Private & small group activities with a top-rated local agency.')
 @section('keywords', $keywords ?? 'things to do in marrakech, things to do in morocco, morocco activities, morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech')
 
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Activities', 'item' => url('/activity-categories')],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
 @section('content')
     <main> {{-- Semantic <main> tag --}}
@@ -42,6 +54,19 @@
             </div>
         </section>
 
+
+        {{-- Phase 2: Hub intro — unique, entity-rich, cross-linked --}}
+        <section class="hub-intro space-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <p class="hub-intro-text">
+                            Beyond multi-day tours, Morocco Quest offers hands-on day experiences across several categories: camel treks into the <strong>Agafay Desert</strong> and <strong>Erg Chebbi dunes</strong>, quad-biking circuits around the <strong>Palmeraie of Marrakech</strong>, guided food tours through the souks of the <strong>Medina</strong>, sunrise hikes on <strong>Jebel Toubkal</strong> in the High Atlas, and cultural evenings with traditional Gnawa music. Each category below links to bookable activities with confirmed local guides. For longer experiences, explore our full <a href="{{ route('tours.index') }}">morocco tour packages</a> or <a href="{{ route('trips.index') }}">multi-day trip itineraries</a>. Have questions? See the <a href="{{ route('faq') }}">FAQ</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         {{-- Check if categories exist --}}
         @if (isset($activityCategories) && $activityCategories->count() > 0)

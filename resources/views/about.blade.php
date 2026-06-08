@@ -1,8 +1,20 @@
 @extends('layouts.app2')
 @section('title', $title ?? 'About Morocco Quest | Local Morocco Tour Operator in Marrakech')
 @section('description', $description ?? 'About Morocco Quest, a local Moroccan travel agency offering private morocco tours, sahara desert tours from Marrakech, small group tours morocco and luxury morocco tours.')
-@section('keywords', $keywords ?? 'morocco tours, private morocco tours, morocco tour package, morocco guided tours, small group tours morocco, luxury morocco tours, morocco tour company, morocco tour agency')
+@section('keywords', $keywords ?? 'morocco tour company, local morocco tour operator marrakech, morocco travel agency, morocco quest about, licensed morocco travel agency')
 
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'About Morocco Quest', 'item' => url('/about')],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
     {{-- @section('structured_data')
     <link rel="canonical" href="{{ url()->current() }}">
@@ -144,6 +156,10 @@
                                 values that drive everything we do. Whether you’re looking to explore the bustling souks of
                                 Marrakech, the golden dunes of the Sahara, or the serene coasts of Essaouira, Morocco Quest
                                 is here to make your journey unforgettable.
+                            </p>
+                            {{-- Phase 6: Entity mentions for topical authority and AI citation --}}
+                            <p>
+                                Our routes pass through some of Morocco's most significant named landmarks: the <strong>Tizi n'Tichka pass</strong> (2,260m) in the High Atlas, the UNESCO World Heritage Ksar of <strong>Aït Benhaddou</strong>, the rose-valley gorges of <strong>Dadès and Todra</strong>, the ancient caravan routes of the <strong>Drâa Valley</strong>, and the volcanic plateau of <strong>Jebel Saghro</strong>. In the north, our tours cover the blue-painted alleys of <strong>Chefchaouen</strong> in the Rif Mountains, the medersas of <strong>Fes el-Bali</strong>, and the Roman ruins of <strong>Volubilis</strong>. Every itinerary is built on direct local knowledge — our guides were born and trained here. Explore <a href="{{ route('tours.index') }}">all private morocco tours</a> or browse our <a href="{{ route('destinations.index') }}">Morocco destinations guide</a>.
                             </p>
                             <div class="services-lists">
                                 <ul class="custom-ul">
@@ -450,7 +466,7 @@
                     <img src="{{ asset('assets/img/guides/hicham.webp') }}" class="img-fluid w-100"
                         alt="Hicham Echerfaoui">
                     <div class="guide-info">
-                        <h1>Hicham Echerfaoui</h1>
+                        <h3>Hicham Echerfaoui</h3>
                         <p class="guide-subtitle">Rabat Expert Guide</p>
                         <p>Hicham Echerfaoui – Expert Rabat & Morocco Tour Guide. With over a decade of hands-on experience
                             as a professional Rabat tour guide, Hicham is passionate about crafting immersive Morocco
@@ -493,7 +509,7 @@
                     <img src="{{ asset('assets/img/guides/mohamed.webp') }}" class="img-fluid w-100"
                         alt="Mohamed Sahraoui">
                     <div class="guide-info">
-                        <h1>Mohamed Sahraoui</h1>
+                        <h3>Mohamed Sahraoui</h3>
                         <p class="guide-subtitle">Desert Expert Guide</p>
                         <p>Mohamed Sahraoui is a seasoned desert guide with over 10 years of experience leading travelers
                             through the enchanting landscapes of southern Morocco. Originally from a Berber village near
@@ -524,7 +540,7 @@
                 <div class="modal-body">
                     <img src="{{ asset('assets/img/guides/salwa.webp') }}" class="img-fluid w-100" alt="Salwa Benayyad">
                     <div class="guide-info">
-                        <h1>Salwa Benayyad</h1>
+                        <h3>Salwa Benayyad</h3>
                         <p class="guide-subtitle">Mountain Female Guide</p>
                         <p>Salwa Benayyad is a rising star among Morocco’s new generation of female mountain guides. With 5
                             years of experience leading treks through the stunning High Atlas Mountains, she brings both
@@ -556,7 +572,7 @@
                 <div class="modal-body">
                     <img src="{{ asset('assets/img/guides/hassan.webp') }}" class="img-fluid w-100" alt="Hassan Tebbal">
                     <div class="guide-info">
-                        <h1>Hassan Tebbal</h1>
+                        <h3>Hassan Tebbal</h3>
                         <p class="guide-subtitle">Fes Expert Guide</p>
                         <p>Hassan Tebbal is a skilled guide specializing in exploring the historic medina of Fes. With deep
                             knowledge of Moroccan history and culture, Hassan brings the ancient alleys and vibrant souks of

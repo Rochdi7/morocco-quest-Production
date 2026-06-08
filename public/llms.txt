@@ -1,0 +1,30 @@
+# Morocco Quest
+
+## What this site is
+Morocco Quest is a licensed Moroccan travel agency based in Marrakech offering private morocco tours, sahara desert tours from Marrakech, small group tours, luxury desert camps, and tailor-made multi-day morocco tour packages. All tours are operated by local guides with deep knowledge of Morocco's landscapes, culture, and history.
+
+## Key pages
+- Home: https://morocco-quest.com/ — Overview of all morocco tours, packages, and the agency
+- All Tours: https://morocco-quest.com/tours — Browse all private and group morocco tour packages
+- Multi-Day Trips: https://morocco-quest.com/trips — 3, 5, and 7-day morocco tour itineraries including sahara desert
+- Destinations: https://morocco-quest.com/destinations — Morocco tour destinations: Marrakech, Fes, Sahara, Atlas Mountains
+- Activities: https://morocco-quest.com/activities — Morocco day trips and activities by category
+- Activity Categories: https://morocco-quest.com/activity-categories — Browse activities by type
+- Blog: https://morocco-quest.com/blog — Morocco travel guide, tips, and itinerary advice
+- FAQ: https://morocco-quest.com/faq — Frequently asked questions about morocco tours, booking, visas, and safety
+- About: https://morocco-quest.com/about — About Morocco Quest travel agency and local team
+- Contact: https://morocco-quest.com/contact — Contact Morocco Quest to book or inquire about tours
+- DMC Marrakech: https://morocco-quest.com/dmc-marrakech — Destination Management Company services in Marrakech
+- Multi-Day Tours: https://morocco-quest.com/tours/type/multi-day — All multi-day morocco tours
+- One-Day Tours: https://morocco-quest.com/tours/type/one-day — All one-day morocco tours and day trips
+
+## About the agency
+- Name: Morocco Quest (also known as Morocco Quest DMC)
+- Location: Marrakech, Morocco
+- Phone: +212-654-069-718
+- Languages: English, French, Spanish
+- Specialties: Private sahara desert tours, Marrakech to Merzouga tours, Atlas Mountains trekking, Fes cultural tours, luxury riad stays, camel trekking, Aït Benhaddou visits
+- TripAdvisor: https://www.tripadvisor.com/Attraction_Review-g293734-d33367694-Reviews-Morocco_Quest_Dmc-Marrakech_Marrakech_Safi.html
+
+## Content notes
+All tour descriptions include departure city context, duration, itinerary highlights, pricing in USD/EUR, and inclusions. Blog posts cover practical Morocco travel advice written by local guides. The site is in English and targets travelers from US, UK, France, Spain, and EU countries.

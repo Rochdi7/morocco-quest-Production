@@ -2,10 +2,37 @@
 
 @section('title', $title ?? 'Morocco Multi Day Tours & Trip Packages | Morocco Quest')
 @section('description', $description ?? 'Book morocco trips & multi day tour packages: 3, 5 & 7-day morocco tours with sahara desert from Marrakech. Private morocco tours and small group tours morocco.')
-@section('keywords', $keywords ?? 'morocco tours, morocco multi day tours, morocco tour package, morocco 7 day tour, private morocco tours, small group tours morocco, morocco guided tours')
+@section('keywords', $keywords ?? 'morocco multi day tours, 3 day morocco tour, 5 day morocco tour, 7 day morocco tour, morocco trip packages, sahara desert trip marrakech, morocco itinerary')
+
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Multi-Day Trips', 'item' => url('/trips')],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
 @section('content')
     <main>
+        {{-- Phase 2: Hub intro — unique, entity-rich, cross-linked --}}
+        <section class="hub-intro space-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <h1 class="sec-title mb-3">Morocco Multi-Day Tours & Trip Packages</h1>
+                        <p class="hub-intro-text">
+                            Morocco Quest's multi-day trip packages are designed for travellers who want to move beyond Marrakech and see the full arc of the country: from the snowy peaks of the <strong>High Atlas</strong> and the red-clay kasbah at <strong>Aït Benhaddou</strong> to the black volcanic <strong>Drâa Valley</strong> and the golden dunes of <strong>Erg Chebbi</strong>. Packages range from 3 days to 10 days and include private 4×4 transport, English-speaking guide, Sahara desert camp, and selected riads and hotels. These are not coach tours — every departure is private or runs with a maximum of 8 travellers. Browse <a href="{{ route('tours.index') }}">all individual tours</a>, check out <a href="{{ route('activity-categories.index') }}">Morocco day activities</a>, or read the <a href="{{ route('blog.index') }}">travel blog</a> for itinerary inspiration before you book.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
       <section class="vs-tour-package style-2 space">
         <div class="container">
           <div class="row">

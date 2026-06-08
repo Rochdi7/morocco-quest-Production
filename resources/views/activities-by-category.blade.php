@@ -4,6 +4,20 @@
 @section('description', $description ?? 'Book ' . $category->name . ' in Morocco with a top-rated local agency. Private morocco tours, small group tours morocco and morocco day tours.')
 @section('keywords', $keywords ?? 'morocco tours, morocco day tours, morocco tour package, private morocco tours, morocco guided tours, ' . Str::lower($category->name))
 
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Activities', 'item' => url('/activity-categories')],
+        ['@type' => 'ListItem', 'position' => 3, 'name' => $category->name ?? 'Category', 'item' => url()->current()],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
+
 @section('content')
     <main>
         <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/sunset-luxury-desert-camp-morocco.webp') }}">

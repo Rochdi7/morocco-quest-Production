@@ -2,8 +2,21 @@
 
 @section('title', $title ?? $category->name . ' | Morocco Travel Blog | Morocco Quest')
 @section('description', $description ?? 'Latest articles on ' . $category->name . '. Read morocco tour guides, itineraries, sahara desert tours from Marrakech and morocco day trips.')
-@section('keywords', $keywords ?? 'morocco tours, morocco travel blog, morocco tour package, private morocco tours, sahara desert tours morocco, ' . Str::lower($category->name))
+@section('keywords', $keywords ?? 'morocco travel blog, morocco tour package, private morocco tours, sahara desert tours morocco, ' . Str::lower($category->name))
 
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Blog', 'item' => url('/blog')],
+        ['@type' => 'ListItem', 'position' => 3, 'name' => $category->name ?? 'Category', 'item' => url()->current()],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
 @section('content')
     {{-- Main container for the category archive page --}}

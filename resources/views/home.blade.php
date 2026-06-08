@@ -2,7 +2,7 @@
 @section('title', 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest')
 
 @section('description',
-    'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.')
+    'Morocco Quest offers private morocco tours & sahara desert tours from Marrakech. Book small group or luxury guided tour packages with a top-rated local agency.')
 
 @section('page_description',
     'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.')
@@ -17,20 +17,7 @@
     @endpush
 
 @push('jsonld')
-<script type="application/ld+json">
-{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'WebSite',
-    'name' => 'Morocco Quest',
-    'url' => url('/'),
-    'description' => 'Morocco private tours, marrakech desert tours, sahara desert tour from marrakech, luxury desert tours marrakech, and private tours in morocco.',
-    'potentialAction' => [
-        '@type' => 'SearchAction',
-        'target' => url('/search') . '?query={search_term_string}',
-        'query-input' => 'required name=search_term_string',
-    ],
-], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
-</script>
+{{-- WebSite schema is already emitted by structured-data-global.blade.php — no duplicate needed --}}
 <script type="application/ld+json">
 {!! json_encode([
     '@context' => 'https://schema.org',
@@ -1224,6 +1211,19 @@
                 }
             });
         </script>
+
+        {{-- Phase 4+5: Orphan rescue — DMC page + blog cross-link from homepage body --}}
+        <section class="space-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <p style="font-size:.95rem;color:#555;">
+                            Morocco Quest also operates as a <a href="{{ route('dmc.marrakech') }}" style="color:var(--theme-color);font-weight:600;">DMC in Marrakech</a> — providing ground services, net-rate packages, and MICE logistics for travel agents and tour operators worldwide. For destination inspiration, browse our <a href="{{ route('blog.index') }}" style="color:var(--theme-color);font-weight:600;">Morocco travel blog</a> with itinerary guides, packing tips, and local insights from our team.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!-- 🔒 Support Modal Popup -->

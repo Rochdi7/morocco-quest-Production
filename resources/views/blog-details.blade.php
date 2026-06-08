@@ -11,19 +11,22 @@
     $_blogModel = $post;
     $blogSchema = $_blogModel ? [
         '@context' => 'https://schema.org',
-        '@type' => 'Article',
+        '@type' => 'BlogPosting',
         'headline' => $_blogModel->title,
         'description' => Str::limit(strip_tags($_blogModel->summary ?? $_blogModel->content ?? ''), 300),
+        'image' => $_blogModel->cover_image
+            ? asset('storage/' . $_blogModel->cover_image)
+            : asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'author' => ['@type' => 'Person', 'name' => $_blogModel->written_by ?? 'Morocco Quest'],
         'publisher' => [
             '@type' => 'Organization',
             'name' => 'Morocco Quest',
-            'logo' => ['@type' => 'ImageObject', 'url' => asset('assets/img/logo-bg.png')],
+            'logo' => ['@type' => 'ImageObject', 'url' => asset('assets/img/logo-bg-wide.webp')],
         ],
         'datePublished' => optional($_blogModel->created_at)->toIso8601String() ?? '',
         'dateModified' => optional($_blogModel->updated_at)->toIso8601String() ?? '',
-        'mainEntityOfPage' => url()->current(),
-        'keywords' => 'best morocco itinerary, marrakech desert tours, sahara desert tour from marrakech',
+        'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => url()->current()],
+        'url' => url()->current(),
     ] : null;
     $blogBreadcrumb = $_blogModel ? [
         '@context' => 'https://schema.org',
@@ -164,6 +167,18 @@
                                     </div>
                                 </blockquote>
                             @endif
+                            {{-- Phase 5: Blog → hub cross-links --}}
+                            <div class="blog-related-tours" style="background:#f9f6f2;border-radius:10px;padding:20px 24px;margin-bottom:24px;">
+                                <p style="margin:0;font-size:.95rem;color:#444;">
+                                    <strong>Plan your Morocco trip:</strong>
+                                    Browse <a href="{{ route('tours.index') }}">private morocco tours</a> departing from Marrakech,
+                                    explore <a href="{{ route('trips.index') }}">multi-day morocco trip packages</a>,
+                                    or discover <a href="{{ route('activity-categories.index') }}">things to do in Morocco</a> —
+                                    from Sahara camel treks to Atlas Mountain hikes.
+                                    Questions? <a href="{{ route('faq') }}">Read our FAQ</a> or <a href="{{ route('contact.show') }}">contact our team</a>.
+                                </p>
+                            </div>
+
                             <div class="blog-footer flex-wrap">
                                 @if ($post->tags && $post->tags->count() > 0)
                                     <div class="block-tag-cloud">

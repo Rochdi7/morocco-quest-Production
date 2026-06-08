@@ -182,6 +182,13 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
+    {{-- Bootstrap Icons: defer (icons used in nav/header) --}}
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    </noscript>
+
     {{-- Preload latin woff2 (same files used by inline @font-face below). --}}
     <link rel="preload" as="font" type="font/woff2" crossorigin
           href="{{ asset('assets/fonts/rubik-v31-latin-400.woff2') }}">

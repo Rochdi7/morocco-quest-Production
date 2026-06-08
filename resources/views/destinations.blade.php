@@ -2,8 +2,20 @@
 
 @section('title', $title ?? 'Morocco Tour Destinations | Marrakech, Fes & Sahara Desert | Morocco Quest')
 @section('description', $description ?? 'Explore top morocco tour destinations: Marrakech, Fes, Casablanca and Sahara desert. Book private morocco tours, small group tours morocco and luxury morocco tours.')
-@section('keywords', $keywords ?? 'morocco tours, morocco tour package, private morocco tours, morocco guided tours, morocco tour destinations, marrakech tours, sahara desert tours morocco')
+@section('keywords', $keywords ?? 'morocco tour destinations, marrakech sightseeing, fes medina tours, sahara desert merzouga, casablanca day trip, morocco places to visit, atlas mountains tour')
 
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Destinations', 'item' => url('/destinations')],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
 @section('content')
     <main> {{-- Semantic <main> tag --}}
@@ -42,6 +54,19 @@
             </div>
         </section>
 
+
+        {{-- Phase 2: Hub intro — unique, entity-rich, cross-linked --}}
+        <section class="hub-intro space-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 text-center">
+                        <p class="hub-intro-text">
+                            Morocco Quest operates private and small group tours across Morocco's most rewarding destinations: the medina and Djemaa el-Fna square of <strong>Marrakech</strong>, the ancient tanneries and Bou Inania Medersa of <strong>Fes</strong>, the UNESCO-listed Ksar of <strong>Aït Benhaddou</strong>, the rose-valley gorges of <strong>Dadès and Todra</strong>, and the camel dunes of <strong>Erg Chebbi, Merzouga</strong>. Each destination page links directly to available <a href="{{ route('tours.index') }}">tour packages</a> and <a href="{{ route('activities.index') }}">day activities</a> departing from that location. Not sure where to start? Read our <a href="{{ route('blog.index') }}">Morocco travel blog</a> for route planning advice from local guides.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         {{-- Main Destinations Listing Section --}}
         <section class="vs-destination space">

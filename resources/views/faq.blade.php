@@ -2,7 +2,20 @@
 
 @section('title', $title ?? 'FAQ | Morocco Tours, Sahara Desert Trips & Booking | Morocco Quest')
 @section('description', $description ?? 'FAQs about morocco tours, sahara desert tours from Marrakech, morocco day trips, morocco multi day tours, booking, prices and travel tips.')
-@section('keywords', $keywords ?? 'morocco tours, private morocco tours, sahara desert tours morocco, morocco desert tours from marrakech, morocco day tours, morocco multi day tours, morocco tour package')
+@section('keywords', $keywords ?? 'morocco travel faq, morocco tour booking questions, morocco visa requirements, morocco safety tourists, morocco packing list, when to visit morocco, morocco tour prices')
+
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'FAQ', 'item' => url('/faq')],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
     {{-- @section('structured_data')
 <link rel="canonical" href="{{ url()->current() }}">
 <meta property="og:title" content="FAQ - Morocco Travel Frequently Asked Questions | Morocco Quest" />

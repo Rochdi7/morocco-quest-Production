@@ -2,7 +2,20 @@
 
 @section('title', $title ?? (isset($tag) ? $tag->name.' | Morocco Travel Blog | Morocco Quest' : (isset($category) ? $category->name.' | Morocco Travel Blog | Morocco Quest' : (request('query') ? 'Search "'.request('query').'" | Morocco Travel Blog | Morocco Quest' : 'Morocco Travel Blog | Tour Guides, Itineraries & Tips | Morocco Quest'))))
 @section('description', $description ?? (isset($tag) ? 'Articles about '.$tag->name.'. Read morocco tour guides, sahara desert tours from Marrakech and morocco day trips.' : (isset($category) ? 'Latest articles on '.$category->name.'. Morocco tour guides, itineraries and travel tips.' : 'Morocco travel blog with itineraries, guides and tips. Plan morocco tours, sahara desert tours from Marrakech and morocco day trips.')))
-@section('keywords', $keywords ?? 'morocco tours, morocco travel blog, morocco tour package, private morocco tours, sahara desert tours morocco, morocco day tours, morocco multi day tours')
+@section('keywords', $keywords ?? 'morocco travel blog, morocco travel tips, morocco itinerary ideas, best time visit morocco, morocco travel guide, marrakech travel advice, sahara desert travel')
+
+@push('jsonld')
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Travel Blog', 'item' => url('/blog')],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
 
 @section('content')
