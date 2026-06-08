@@ -207,15 +207,11 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
 
-    {{-- Font Awesome from cdnjs: deferred (was render-blocking). Local
-         assets/plugins/fontawesome.min.css is left out of the list because its
-         font files reference ../webfonts/ which doesn't exist on disk — the
-         cdnjs copy is the one that actually delivers the icon glyphs. --}}
-    <link rel="preload" as="style"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    {{-- Font Awesome Pro (local) — required for fal/light icons used in header/nav --}}
+    <link rel="preload" as="style" href="{{ asset('assets/plugins/fontawesome.min.css') }}"
           onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome.min.css') }}">
     </noscript>
 
     {{-- Other non-critical CSS, also deferred --}}
