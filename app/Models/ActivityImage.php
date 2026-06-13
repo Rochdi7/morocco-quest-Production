@@ -51,9 +51,9 @@ class ActivityImage extends Model
         }
 
         if (str_starts_with($normalized, 'storage/')) {
-            return asset('public/' . $normalized);
+            return asset($normalized);
         }
 
-        return asset('public/storage/' . $normalized);
+        return asset('storage/' . $normalized);
     }
 }

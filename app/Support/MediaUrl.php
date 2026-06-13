@@ -34,9 +34,9 @@ class MediaUrl
         }
 
         if (Str::startsWith($normalized, 'storage/')) {
-            return asset('public/' . $normalized);
+            return asset($normalized);
         }
 
-        return asset('public/storage/' . $normalized);
+        return asset('storage/' . $normalized);
     }
 }
