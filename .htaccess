@@ -45,7 +45,7 @@
     # -------------------------------------------------
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ public/index.php [L]
+    RewriteRule ^ index.php [L]
 </IfModule>
 
 # =====================================================
