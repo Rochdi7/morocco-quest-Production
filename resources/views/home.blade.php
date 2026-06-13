@@ -1212,18 +1212,6 @@
             });
         </script>
 
-        {{-- Phase 4+5: Orphan rescue — DMC page + blog cross-link from homepage body --}}
-        <section class="space-bottom">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-9 text-center">
-                        <p style="font-size:.95rem;color:#555;">
-                            Morocco Quest also operates as a <a href="{{ route('dmc.marrakech') }}" style="color:var(--theme-color);font-weight:600;">DMC in Marrakech</a> — providing ground services, net-rate packages, and MICE logistics for travel agents and tour operators worldwide. For destination inspiration, browse our <a href="{{ route('blog.index') }}" style="color:var(--theme-color);font-weight:600;">Morocco travel blog</a> with itinerary guides, packing tips, and local insights from our team.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     </main>
     <!-- 🔒 Support Modal Popup -->
