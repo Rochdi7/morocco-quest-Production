@@ -885,7 +885,60 @@
         }
 
         .dynamic-content-area.blog-text {
-            text-align: justify;
+            text-align: left;
+        }
+
+        @media (min-width: 768px) {
+            .dynamic-content-area.blog-text {
+                text-align: justify;
+                text-justify: inter-word;
+            }
+        }
+
+        /* Scale down headings inside blog post content */
+        .dynamic-content-area.blog-text h1 {
+            font-size: 1.75rem;
+            line-height: 1.3;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .dynamic-content-area.blog-text h2 {
+            font-size: 1.4rem;
+            line-height: 1.35;
+            margin-top: 1.5rem;
+            margin-bottom: 0.6rem;
+        }
+        .dynamic-content-area.blog-text h3 {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .dynamic-content-area.blog-text h4 {
+            font-size: 1.05rem;
+            line-height: 1.4;
+            margin-top: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 767px) {
+            .dynamic-content-area.blog-text h1 {
+                font-size: 1.4rem;
+            }
+            .dynamic-content-area.blog-text h2 {
+                font-size: 1.15rem;
+            }
+            .dynamic-content-area.blog-text h3 {
+                font-size: 1rem;
+            }
+            .dynamic-content-area.blog-text h4 {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Tighten paragraph spacing inside blog content */
+        .dynamic-content-area.blog-text p {
+            margin-bottom: 0.85rem;
         }
     </style>
 
