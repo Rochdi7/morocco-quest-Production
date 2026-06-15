@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use App\Filament\Resources\BlogResource\RelationManagers\CommentsRelationManager;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 
@@ -160,7 +161,7 @@ class BlogResource extends Resource
     public static function getRelations(): array
     {
         return [
-            // Example: RelationManagers\TagsRelationManager::class,
+            CommentsRelationManager::class,
         ];
     }
 

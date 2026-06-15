@@ -43,6 +43,17 @@ class ActivityStats extends ChartWidget
         return 'line';
     }
 
+    protected function getOptions(): array
+    {
+        return [
+            'plugins' => ['legend' => ['display' => true]],
+            'scales' => [
+                'y' => ['beginAtZero' => true, 'grid' => ['display' => false], 'ticks' => ['precision' => 0]],
+                'x' => ['grid' => ['display' => false]],
+            ],
+        ];
+    }
+
     private function makeDataset(
         string $label,
         string $modelClass,
@@ -50,24 +61,27 @@ class ActivityStats extends ChartWidget
         string $borderColor,
         string $backgroundColor
     ): array {
-        $counts = $this->getMonthlyCounts($modelClass, $months->first());
+        $counts = $this->getMonthlyCountsForRange($modelClass, $months->first(), $months->last());
 
         return [
-            'label' => $label,
-            'data' => $months
+            'label'           => $label,
+            'data'            => $months
                 ->map(fn (Carbon $month) => $counts[$month->format('Y-m')] ?? 0)
                 ->all(),
-            'borderColor' => $borderColor,
+            'borderColor'     => $borderColor,
             'backgroundColor' => $backgroundColor,
-            'tension' => 0.35,
-            'fill' => true,
+            'tension'         => 0.35,
+            'fill'            => true,
         ];
     }
 
-    private function getMonthlyCounts(string $modelClass, Carbon $startMonth): array
+    private function getMonthlyCountsForRange(string $modelClass, Carbon $start, Carbon $end): array
     {
         return $modelClass::query()
-            ->where('created_at', '>=', $startMonth->copy()->startOfMonth())
+            ->whereBetween('created_at', [
+                $start->copy()->startOfMonth(),
+                $end->copy()->endOfMonth(),
+            ])
             ->get(['created_at'])
             ->groupBy(fn ($record) => Carbon::parse($record->created_at)->format('Y-m'))
             ->map(fn (Collection $records) => $records->count())

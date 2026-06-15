@@ -3,11 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\CommentResource\Pages;
+use App\Models\Blog;
 use App\Models\Comment;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
 class CommentResource extends Resource
@@ -35,15 +37,21 @@ protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left';
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultSort('created_at', 'desc')
             ->columns([
-                Tables\Columns\TextColumn::make('name')->searchable(),
+                Tables\Columns\TextColumn::make('name')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('email')->searchable(),
-                Tables\Columns\TextColumn::make('content')->limit(50),
-                Tables\Columns\TextColumn::make('blog.title')->label('Blog'),
-                Tables\Columns\TextColumn::make('created_at')->dateTime('Y-m-d H:i'),
+                Tables\Columns\TextColumn::make('content')->limit(60)->wrap(),
+                Tables\Columns\TextColumn::make('blog.title')->label('Blog')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('parent_id')->label('Reply to #')->placeholder('—'),
+                Tables\Columns\TextColumn::make('created_at')->dateTime('Y-m-d H:i')->sortable(),
             ])
             ->filters([
-                //
+                SelectFilter::make('blog_id')
+                    ->label('Blog Post')
+                    ->options(Blog::pluck('title', 'id'))
+                    ->searchable()
+                    ->placeholder('All blogs'),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),

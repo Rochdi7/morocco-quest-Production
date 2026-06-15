@@ -2,11 +2,16 @@
 
 namespace App\Filament\Widgets;
 
+use App\Models\Comment;
+use Carbon\Carbon;
+use Carbon\CarbonPeriod;
 use Filament\Widgets\ChartWidget;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class WebsiteVisits extends ChartWidget
 {
-    protected static ?string $heading = 'Website Visits';
+    protected static ?string $heading = 'Engagement (Last 30 Days)';
 
     protected static bool $isLazy = false;
 
@@ -16,26 +21,39 @@ class WebsiteVisits extends ChartWidget
 
     protected function getData(): array
     {
+        $days    = 30;
+        $start   = now()->subDays($days - 1)->startOfDay();
+        $end     = now()->endOfDay();
+        $period  = CarbonPeriod::create($start, '1 day', $end);
+        $labels  = collect($period)->map(fn (Carbon $d) => $d->format('d M'))->all();
+
+        $comments   = $this->countPerDay(Comment::class, $start, $end);
+        $inquiries  = $this->countPerDayFromTable('contact_submissions', $start, $end);
+
         return [
             'datasets' => [
                 [
-                    'label' => 'Daily Visits',
-                    'data' => [1250, 1420, 1180, 1650, 1980, 2100, 1850, 2400, 2600, 2300, 2800, 3100, 2900, 3300],
-                    'borderColor' => '#8b5cf6',
+                    'label'           => 'Comments',
+                    'data'            => collect($period)
+                        ->map(fn (Carbon $d) => $comments[$d->format('Y-m-d')] ?? 0)
+                        ->all(),
+                    'borderColor'     => '#8b5cf6',
                     'backgroundColor' => 'rgba(139, 92, 246, 0.1)',
-                    'fill' => 'start',
-                    'tension' => 0.4,
+                    'fill'            => 'start',
+                    'tension'         => 0.4,
                 ],
                 [
-                    'label' => 'Unique Visitors',
-                    'data' => [800, 950, 780, 1100, 1300, 1450, 1200, 1600, 1800, 1500, 1900, 2100, 1950, 2200],
-                    'borderColor' => '#06b6d4',
+                    'label'           => 'Inquiries',
+                    'data'            => collect($period)
+                        ->map(fn (Carbon $d) => $inquiries[$d->format('Y-m-d')] ?? 0)
+                        ->all(),
+                    'borderColor'     => '#06b6d4',
                     'backgroundColor' => 'rgba(6, 182, 212, 0.1)',
-                    'fill' => 'start',
-                    'tension' => 0.4,
+                    'fill'            => 'start',
+                    'tension'         => 0.4,
                 ],
             ],
-            'labels' => ['10 May', '11 May', '12 May', '13 May', '14 May', '15 May', '16 May', '17 May', '18 May', '19 May', '20 May', '21 May', '22 May', '23 May'],
+            'labels' => $labels,
         ];
     }
 
@@ -47,23 +65,35 @@ class WebsiteVisits extends ChartWidget
     protected function getOptions(): array
     {
         return [
-            'plugins' => [
-                'legend' => [
-                    'display' => true,
-                ],
-            ],
+            'plugins' => ['legend' => ['display' => true]],
             'scales' => [
-                'y' => [
-                    'grid' => [
-                        'display' => false,
-                    ],
-                ],
-                'x' => [
-                    'grid' => [
-                        'display' => false,
-                    ],
-                ],
+                'y' => ['beginAtZero' => true, 'grid' => ['display' => false], 'ticks' => ['precision' => 0]],
+                'x' => ['grid' => ['display' => false]],
             ],
         ];
+    }
+
+    private function countPerDay(string $modelClass, Carbon $start, Carbon $end): array
+    {
+        return $modelClass::query()
+            ->whereBetween('created_at', [$start, $end])
+            ->get(['created_at'])
+            ->groupBy(fn ($r) => Carbon::parse($r->created_at)->format('Y-m-d'))
+            ->map(fn ($g) => $g->count())
+            ->all();
+    }
+
+    private function countPerDayFromTable(string $table, Carbon $start, Carbon $end): array
+    {
+        if (! Schema::hasTable($table)) {
+            return [];
+        }
+
+        return DB::table($table)
+            ->whereBetween('created_at', [$start, $end])
+            ->get(['created_at'])
+            ->groupBy(fn ($r) => Carbon::parse($r->created_at)->format('Y-m-d'))
+            ->map(fn ($g) => $g->count())
+            ->all();
     }
 }
