@@ -250,6 +250,10 @@
         @media (max-width:767px){
             .breadcrumb-title{font-size:1.5rem;line-height:1.3}
             .breadcrumb-subtitle{font-size:.9rem}
+            /* Tour & activity detail content titles */
+            .destination-single-title{font-size:1.3rem!important;line-height:1.35}
+            .vs-destination-single h2{font-size:1.3rem;line-height:1.35}
+            .vs-destination-single h3{font-size:1.15rem;line-height:1.4}
         }
     </style>
 
