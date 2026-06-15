@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\BlogResource\RelationManagers\CommentsRelationManager;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -15,6 +16,7 @@ use App\Filament\Widgets\TourStats;
 use App\Filament\Widgets\TripStats;
 use App\Filament\Widgets\ActivityStats;
 use App\Filament\Widgets\WebsiteVisits;
+use Livewire\Livewire;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -24,6 +26,18 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class AdminPanelPanelProvider extends PanelProvider
 {
+    public function register(): void
+    {
+        parent::register();
+
+        // Explicit alias so Livewire resolves this on POST /livewire/update
+        // regardless of opcache or autoload classmap state on production
+        Livewire::component(
+            'app.filament.resources.blog-resource.relation-managers.comments-relation-manager',
+            CommentsRelationManager::class
+        );
+    }
+
     public function panel(Panel $panel): Panel
     {
         return $panel
