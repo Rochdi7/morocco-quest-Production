@@ -205,6 +205,11 @@
         /* Reserve hero height so layout doesn't shift before style.min.css applies */
         .hero-layout1{min-height:560px;background-size:cover;background-position:center}
         @media (max-width:991.98px){.hero-layout1{min-height:480px}}
+        /* Mobile: scale down hero breadcrumb title on all pages */
+        @media (max-width:767px){
+            .breadcrumb-title{font-size:1.5rem;line-height:1.3}
+            .breadcrumb-subtitle{font-size:.9rem}
+        }
     </style>
 
     {{-- Non-critical CSS (deferred — used by sliders, popups, datepickers, animations) --}}

@@ -941,14 +941,6 @@
             margin-bottom: 0.85rem;
         }
 
-        /* Hero breadcrumb title — smaller on mobile */
-        @media (max-width: 767px) {
-            .breadcrumb-title {
-                font-size: 1.5rem;
-                line-height: 1.3;
-            }
-        }
-
         /* Scale down the blockquote text */
         .blog-single .blog-content .vs-quote .quote-content p {
             font-size: 1rem;
