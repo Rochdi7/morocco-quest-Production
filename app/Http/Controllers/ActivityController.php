@@ -60,7 +60,7 @@ class ActivityController extends Controller
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywords);
 
-        return view('activity-categories', compact('activityCategories', 'title', 'description', 'keywords'));
+        return view('activity-categories', compact('activityCategories', 'title', 'description') + ['keywords' => implode(', ', $keywords)]);
     }
 
 
@@ -86,7 +86,7 @@ class ActivityController extends Controller
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywords, $categoryImage);
 
-        return view('activities-by-category', compact('category', 'activities', 'title', 'description', 'keywords'));
+        return view('activities-by-category', compact('category', 'activities', 'title', 'description') + ['keywords' => implode(', ', $keywords)]);
     }
 
 
@@ -132,7 +132,7 @@ class ActivityController extends Controller
 
         SeoHelper::setCollection($title, $description, $canonical, $keywords, $categoryImage);
 
-        return view('activity-categories', compact('activities', 'category', 'title', 'description', 'keywords'));
+        return view('activity-categories', compact('activities', 'category', 'title', 'description') + ['keywords' => implode(', ', $keywords)]);
     }
 
 

@@ -31,7 +31,7 @@ class TripController extends Controller
 
         OpenGraph::setType('website')->setSiteName('Morocco Quest');
 
-        return view('trips', compact('trips', 'title', 'description', 'keywords'));
+        return view('trips', compact('trips', 'title', 'description') + ['keywords' => implode(', ', $keywords)]);
     }
 
     public function show(string $slug): View

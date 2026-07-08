@@ -40,7 +40,7 @@ class TourController extends Controller
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywords);
 
-        return view('destinations', compact('placesData', 'title', 'description', 'keywords'));
+        return view('destinations', compact('placesData', 'title', 'description') + ['keywords' => implode(', ', $keywords)]);
     }
 
     /**
@@ -140,7 +140,7 @@ class TourController extends Controller
 
         SeoHelper::setCollection($title, $desc, $canonical, $keywords);
 
-        return view('tours-list', compact('tours', 'locations', 'placeName', 'searchDate', 'selectedGuests', 'topTours', 'title', 'desc', 'keywords'));
+        return view('tours-list', compact('tours', 'locations', 'placeName', 'searchDate', 'selectedGuests', 'topTours', 'title', 'desc') + ['keywords' => implode(', ', $keywords)]);
     }
 
     /**
