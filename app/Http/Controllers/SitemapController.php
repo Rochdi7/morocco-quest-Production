@@ -6,6 +6,8 @@ use App\Models\Tour;
 use App\Models\Activity;
 use App\Models\Post;
 use App\Models\Blog;
+use App\Models\Trip;
+use App\Models\Place;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
@@ -18,25 +20,54 @@ class SitemapController extends Controller
         $now = Carbon::now()->toAtomString();
 
         $urls = [
-            ['loc' => route('home'),              'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '1.0'],
-            ['loc' => route('dmc.marrakech'),     'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
-            ['loc' => route('about'),             'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
-            ['loc' => route('faq'),               'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
-            ['loc' => route('tours.index'),       'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
-            ['loc' => route('activities.index'),  'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
-            ['loc' => route('trips.index'),       'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
-            ['loc' => route('blog.index'),        'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.7'],
-            ['loc' => route('contact.show'),      'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.5'],
+            ['loc' => route('home'),                        'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '1.0'],
+            ['loc' => route('tours.index'),                 'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('trips.index'),                 'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('activity-categories.index'),   'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('destinations.index'),          'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
+            ['loc' => route('dmc.marrakech'),               'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
+            ['loc' => route('tours.multi_day'),             'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.8'],
+            ['loc' => route('tours.one_day'),               'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.8'],
+            ['loc' => route('about'),                       'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
+            ['loc' => route('faq'),                         'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
+            ['loc' => route('blog.index'),                  'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.7'],
+            ['loc' => route('contact.show'),                'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.5'],
+            ['loc' => route('terms.conditions'),            'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.2'],
+            ['loc' => route('privacy.policy'),              'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.2'],
         ];
 
-        $this->addModel($urls, Tour::class,     'tours.show',      'weekly', '0.8');
-        $this->addModel($urls, Activity::class, 'activities.show', 'weekly', '0.7');
-        $this->addModel($urls, Post::class,     'blog.show',       'weekly', '0.6');
-        $this->addModel($urls, Blog::class,     'blog.show',       'weekly', '0.6');
+        $this->addModel($urls, Tour::class,     'tours.show',      'weekly',  '0.8');
+        $this->addModel($urls, Trip::class,     'trips.show',      'weekly',  '0.8');
+        $this->addModel($urls, Activity::class, 'activities.show', 'weekly',  '0.7');
+        $this->addModel($urls, Post::class,     'blog.show',       'weekly',  '0.6');
+        $this->addModel($urls, Blog::class,     'blog.show',       'weekly',  '0.6');
+        $this->addPlacePages($urls, $now);
 
         return response()
             ->view('sitemap.index', compact('urls'))
             ->header('Content-Type', 'application/xml');
+    }
+
+    private function addPlacePages(array &$urls, string $now): void
+    {
+        if (!Route::has('tours.byPlace')) return;
+        if (!class_exists(Place::class)) return;
+
+        try {
+            Place::whereNotNull('slug')->chunk(100, function ($places) use (&$urls, $now) {
+                foreach ($places as $place) {
+                    if (empty($place->slug)) continue;
+                    $urls[] = [
+                        'loc'        => route('tours.byPlace', $place->slug),
+                        'lastmod'    => $now,
+                        'changefreq' => 'weekly',
+                        'priority'   => '0.7',
+                    ];
+                }
+            });
+        } catch (\Throwable $e) {
+            Log::warning('Sitemap skip Place pages: ' . $e->getMessage());
+        }
     }
 
     private function addModel(array &$urls, string $modelClass, string $routeName, string $changefreq, string $priority): void

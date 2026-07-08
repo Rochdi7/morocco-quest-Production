@@ -21,6 +21,15 @@
 
 @push('jsonld')
 <script type="application/ld+json">{!! json_encode($activitySchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+<script type="application/ld+json">{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Activities', 'item' => route('activity-categories.index')],
+        ['@type' => 'ListItem', 'position' => 3, 'name' => $activity->title ?? 'Activity', 'item' => url()->current()],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
 @endpush
 
 @section('content')

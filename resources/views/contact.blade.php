@@ -1,69 +1,46 @@
 @extends('layouts.app2')
 
 @section('title', $title ?? 'Contact Morocco Quest | Book Morocco Tours & Sahara Trips')
-@section('description', $description ?? 'Contact Morocco Quest to book morocco tours, sahara desert tours from
-    Marrakech, morocco day trips and private morocco tours. Reply within 24h.')
+@section('description', $description ?? 'Contact Morocco Quest to book morocco tours, sahara desert tours from Marrakech, morocco day trips and private morocco tours. Reply within 24h.')
 @section('keywords', $keywords ?? 'contact morocco quest, book morocco tour, morocco tour inquiry, morocco travel agency contact, marrakech tour booking, email morocco tour operator')
+@section('og_image', asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp'))
 
 
-@section('structured_data')
-    <link rel="canonical" href="{{ url()->current() }}">
-    <meta property="og:title" content="Contact Morocco Quest | Morocco Tours and Activities" />
-    <meta property="og:description"
-        content="Get in touch with Morocco Quest to plan your Morocco tour, ask questions, or book your Moroccan adventure." />
-    <meta property="og:image" content="{{ asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp') }}" />
-    <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact Morocco Quest | Morocco Tours and Activities" />
-    <meta name="twitter:description"
-        content="Get in touch with Morocco Quest to plan your Morocco tour, ask questions, or book your Moroccan adventure." />
-    <meta name="twitter:image" content="{{ asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp') }}" />
-
-    @php
-        $agencyName = 'Morocco Quest';
-        $streetAddress = 'Khalid Ibn Al Walid Street';
-        $addressLocality = 'Marrakech';
-        $postalCode = '40000';
-        $addressCountry = 'Morocco';
-        $telephone1 = '+212654069718';
-        $telephone2 = null;
-        $email = 'sales@morocco-quest.com';
-        $websiteUrl = url('/');
-        $contactPageUrl = url()->current();
-        $heroImageUrl = asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp');
-        $mapsUrl =
-            'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217897.62579990417!2d-8.078064296050858!3d31.63460254321897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96175c59%3A0xb039616774c82317!2sMarrakesh!5e0!3m2!1sen!2sma!4v1716000000000!5m2!1sen!2sma';
-
-        $schemaData = [
-            '@context' => 'https://schema.org',
-            '@type' => 'TravelAgency',
-            'name' => $agencyName,
-            'url' => $contactPageUrl,
-            'image' => $heroImageUrl,
-            'address' => [
-                '@type' => 'PostalAddress',
-                'streetAddress' => $streetAddress,
-                'addressLocality' => $addressLocality,
-                'postalCode' => $postalCode,
-                'addressCountry' => $addressCountry,
-            ],
-            'telephone' => array_values(array_filter([$telephone1, $telephone2])),
-            'email' => $email,
-            'hasMap' => $mapsUrl,
-            'contactPoint' => [
-                '@type' => 'ContactPoint',
-                'telephone' => $telephone1,
-                'contactType' => 'Customer Service',
-                'availableLanguage' => ['English', 'French', 'Spanish'],
-            ],
-        ];
-    @endphp
-
-    <script type="application/ld+json">
-        {!! json_encode($schemaData, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
-    </script>
-@endsection
+@push('jsonld')
+@php
+    $contactSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'TravelAgency',
+        'name' => 'Morocco Quest',
+        'url' => url()->current(),
+        'image' => asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp'),
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Khalid Ibn Al Walid Street',
+            'addressLocality' => 'Marrakech',
+            'postalCode' => '40000',
+            'addressCountry' => 'MA',
+        ],
+        'telephone' => '+212654069718',
+        'email' => 'sales@morocco-quest.com',
+        'contactPoint' => [
+            '@type' => 'ContactPoint',
+            'telephone' => '+212654069718',
+            'contactType' => 'Customer Service',
+            'availableLanguage' => ['English', 'French', 'Spanish'],
+        ],
+    ];
+@endphp
+<script type="application/ld+json">{!! json_encode($contactSchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+<script type="application/ld+json">{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Contact', 'item' => url()->current()],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush
 
 
 @section('content')

@@ -171,7 +171,7 @@
                                     <ul class="custom-ul">
                                         <li>
                                             <a href="https://www.acces-maroc.ma" target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -184,7 +184,7 @@
                                         </li>
                                         <li>
                                             <a href="https://visaguide.world/africa/morocco-visa/" target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -197,7 +197,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.xe.com/currencyconverter/" target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -210,7 +210,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.accuweather.com/en/ma/morocco-weather"
-                                                target="_blank" rel="noopener noreferrer">
+                                                target="_blank" rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -223,7 +223,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.thebrokebackpacker.com/what-to-pack-for-morocco/"
-                                                target="_blank" rel="noopener noreferrer">
+                                                target="_blank" rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -243,7 +243,7 @@
                                     <ul class="custom-ul">
                                         <li>
                                             <a href="https://www.travelinsurance.com/" target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -256,7 +256,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.iatatravelcentre.com/world.php" target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -269,7 +269,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.who.int/countries/mar/" target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -282,7 +282,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.intrepidtravel.com/adventures/morocco-travel-tips/"
-                                                target="_blank" rel="noopener noreferrer">
+                                                target="_blank" rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -295,7 +295,7 @@
                                         </li>
                                         <li>
                                             <a href="https://www.power-plugs-sockets.com/morocco/" target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer nofollow">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

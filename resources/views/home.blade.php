@@ -1214,6 +1214,7 @@
 
 
     </main>
+    <style>.popup-heading{color:#000;font-size:1.5rem;font-weight:700;line-height:1.3;margin-bottom:.75rem}</style>
     <!-- 🔒 Support Modal Popup -->
     <div id="support-popup" class="mfp-hide service-popup">
         <div class="popup-inner">
@@ -1222,7 +1223,7 @@
                     alt="24/7 Support for Private Tours">
             </div>
             <div class="popup-content">
-                <h2 style="color: black;">24/7 Support for Private Morocco Tours</h2>
+                <p class="popup-heading">24/7 Support for Private Morocco Tours</p>
                 <p>
                     Our dedicated team supports travelers booking private tours morocco, small group tours morocco,
                     and exclusive morocco travel experiences. We are available 24/7 to assist with vip morocco tours,
@@ -1240,7 +1241,7 @@
                     alt="Adventures for Private Tours">
             </div>
             <div class="popup-content">
-                <h2 style="color: black;">Private Morocco Tours Adventures</h2>
+                <p class="popup-heading">Private Morocco Tours Adventures</p>
                 <p>
                     Experience unforgettable adventures through private tours morocco itineraries,
                     small group tours morocco, and exclusive morocco travel experiences.
@@ -1257,7 +1258,7 @@
                 <img src="{{ asset('assets/img/morocco-ocean-view-travel-guide.webp') }}" alt="Expert Travel Guide">
             </div>
             <div class="popup-content">
-                <h2 style="color: black;">Expert Morocco Travel Agent Guides</h2>
+                <p class="popup-heading">Expert Morocco Travel Agent Guides</p>
                 <p>
                     Discover Morocco with experienced professionals specializing in private morocco tours,
                     small group tours morocco, and exclusive morocco travel experiences.
@@ -1275,7 +1276,7 @@
                     alt="Fast Booking System">
             </div>
             <div class="popup-content">
-                <h2 style="color: black;">Fast Booking for Private Morocco Tours</h2>
+                <p class="popup-heading">Fast Booking for Private Morocco Tours</p>
                 <p>
                     Easily book private tours morocco, vip morocco tours, small group tours morocco,
                     and exclusive morocco travel experiences through our secure booking system.

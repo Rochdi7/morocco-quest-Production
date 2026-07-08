@@ -33,6 +33,13 @@
     "itinerary": {
         "@type": "ItemList",
         "numberOfItems": {{ $trip->duration_days }}
+    }@endif@if(!empty($trip->price_adult)),
+    "offers": {
+        "@type": "Offer",
+        "price": "{{ $trip->price_adult }}",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "{{ url()->current() }}"
     }@endif
 }
 </script>
