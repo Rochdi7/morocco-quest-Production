@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\ContactFormMail;
+use App\Rules\Recaptcha;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -52,6 +53,7 @@ class ContactController extends Controller
             'adults'        => 'required|integer|min:1',
             'children'      => 'nullable|integer|min:0',
             'travel_ideas'  => 'nullable|string|max:5000',
+            'g-recaptcha-response' => ['required', new Recaptcha],
         ]);
 
         try {

@@ -358,6 +358,7 @@
                                                             required>{{ old('message') }}</textarea>
                                                         @error('message') <span class="invalid-feedback d-block">{{ $message }}</span> @enderror
                                                     </div>
+                                                    @include('partials.recaptcha')
                                                     <div class="col-12 form-group mb-0">
                                                         <button class="vs-btn" type="submit">Send Request</button>
                                                     </div>

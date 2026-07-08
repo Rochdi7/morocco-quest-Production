@@ -500,6 +500,7 @@
                             </div>
                         </div>
 
+                        @include('partials.recaptcha')
                         <div class="col-12 form-group mb-0">
                             <button class="vs-btn w-100 w-sm-auto" type="submit">
                                 <i class="fa-solid fa-paper-plane me-2"></i> Send B2B Enquiry

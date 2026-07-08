@@ -8,6 +8,7 @@ use App\Models\Activity; // ** Import Activity model **
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\InquiryReceived; // ** Use the new Mailable **
+use App\Rules\Recaptcha;
 use Illuminate\Support\Facades\Log; // Import Log facade
 use Illuminate\Support\Arr; // Import Arr utility
 
@@ -22,6 +23,7 @@ class InquiryController extends Controller
             'phone' => 'required|string|max:50', // Kept required for consistency, make nullable if needed
             'country' => 'required|string|max:255', // Kept required, make nullable if needed
             'message' => 'required|string|max:5000|min:10',
+            'g-recaptcha-response' => ['required', new Recaptcha],
         ];
     }
 

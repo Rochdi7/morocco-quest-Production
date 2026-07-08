@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mail\NewsletterMail;
+use App\Rules\Recaptcha;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -18,6 +19,7 @@ class NewsletterController extends Controller
         // Validate the email
         $validator = Validator::make($request->all(), [
             'email' => 'required|email|unique:newsletters,email',
+            'g-recaptcha-response' => ['required', new Recaptcha],
         ]);
 
         if ($validator->fails()) {

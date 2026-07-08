@@ -276,6 +276,7 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
+                            @include('partials.recaptcha')
                             <div class="col-12 form-group mt-3 mb-0">
                                 <button class="vs-btn" type="submit" aria-label="Send Your Inquiry">Send
                                     Message</button>

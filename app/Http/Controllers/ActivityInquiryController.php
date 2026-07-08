@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Activity;
 use Illuminate\Http\Request;
 use App\Mail\ActivityInquiryMail;
+use App\Rules\Recaptcha;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -23,6 +24,7 @@ class ActivityInquiryController extends Controller
             'adults'          => 'required|integer|min:1',
             'children'        => 'nullable|integer|min:0',
             'inquiry_message' => 'required|string|min:10|max:5000',
+            'g-recaptcha-response' => ['required', new Recaptcha],
         ]);
 
         $validatedData['activity_title']   = $activity->title;

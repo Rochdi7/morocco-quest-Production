@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tour;
 use Illuminate\Http\Request;
 use App\Mail\TourInquiryMail;
+use App\Rules\Recaptcha;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 
@@ -30,6 +31,7 @@ class TourInquiryController extends Controller
             'adults'          => 'required|integer|min:1',
             'children'        => 'nullable|integer|min:0',
             'inquiry_message' => 'required|string|min:10|max:5000',
+            'g-recaptcha-response' => ['required', new Recaptcha],
         ]);
 
         // Add useful context to the data array (optional)

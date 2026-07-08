@@ -125,6 +125,9 @@
                         <div class="newsletter">
                             <form action="{{ route('newsletter.subscribe') }}" method="POST" class="w100">
                                 @csrf
+                                @if (config('recaptcha.enabled') && config('recaptcha.site_key'))
+                                    <div class="g-recaptcha-invisible" data-sitekey="{{ config('recaptcha.site_key') }}"></div>
+                                @endif
                                 <input type="email" name="email" class="form-control"
                                     placeholder="Enter Email Address" required aria-label="Newsletter Email Input">
                                 <button type="submit" class="text-uppercase text-color-5"
@@ -677,3 +680,81 @@
         toggleWhatsAppBtn(); // Run on page load
     });
 </script>
+
+{{-- Google reCAPTCHA v2 (Invisible) — loaded once globally (footer is on every
+     page). Explicit render lets us bind an independent invisible widget to each
+     form on the page (e.g. an inquiry form + the newsletter form). `async defer`
+     keeps it off the critical render path. Only emitted when configured, so
+     nothing changes when keys are absent. --}}
+@if (config('recaptcha.enabled') && config('recaptcha.site_key'))
+    <script>
+        // Bound-widget registry, keyed by form element.
+        window.mqRecaptcha = window.mqRecaptcha || { widgets: [] };
+
+        // Called by Google once api.js has loaded (see ?onload= below).
+        window.mqRecaptchaInit = function () {
+            document.querySelectorAll('.g-recaptcha-invisible').forEach(function (mount) {
+                var form = mount.closest('form');
+                if (!form || form.dataset.mqRecaptchaBound === '1') {
+                    return;
+                }
+                form.dataset.mqRecaptchaBound = '1';
+
+                var widgetId = grecaptcha.render(mount, {
+                    sitekey: mount.getAttribute('data-sitekey'),
+                    size: 'invisible',
+                    badge: 'bottomright',
+                    callback: function (token) {
+                        // Token received: mark validated and submit the real form.
+                        form.dataset.mqRecaptchaPassed = '1';
+                        if (typeof form.requestSubmit === 'function') {
+                            form.requestSubmit();
+                        } else {
+                            form.submit();
+                        }
+                    },
+                    'error-callback': function () {
+                        // Let the user retry; re-enable the submit button.
+                        form.dataset.mqRecaptchaPassed = '';
+                        mqReenable(form);
+                    },
+                    'expired-callback': function () {
+                        form.dataset.mqRecaptchaPassed = '';
+                    }
+                });
+
+                window.mqRecaptcha.widgets.push({ form: form, id: widgetId });
+
+                // Intercept submit: run the challenge first, then let the
+                // callback resubmit. Native HTML5 validation still runs because
+                // we only preventDefault after checkValidity() passes.
+                form.addEventListener('submit', function (e) {
+                    if (form.dataset.mqRecaptchaPassed === '1') {
+                        // Second pass (triggered by the token callback): allow it.
+                        return;
+                    }
+                    if (typeof form.checkValidity === 'function' && !form.checkValidity()) {
+                        // Let the browser show its native validation UI.
+                        return;
+                    }
+                    e.preventDefault();
+                    mqDisable(form);
+                    try {
+                        grecaptcha.reset(widgetId);
+                    } catch (err) { /* first run: nothing to reset */ }
+                    grecaptcha.execute(widgetId);
+                });
+            });
+        };
+
+        function mqDisable(form) {
+            var btn = form.querySelector('[type="submit"]');
+            if (btn) { btn.dataset.mqPrevDisabled = btn.disabled ? '1' : ''; btn.disabled = true; }
+        }
+        function mqReenable(form) {
+            var btn = form.querySelector('[type="submit"]');
+            if (btn && btn.dataset.mqPrevDisabled !== '1') { btn.disabled = false; }
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit&onload=mqRecaptchaInit" async defer></script>
+@endif
