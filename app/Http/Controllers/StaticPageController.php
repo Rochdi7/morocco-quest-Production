@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\JsonLd;
+use App\Support\SeoHelper;
 
 class StaticPageController extends Controller
 {
@@ -18,11 +19,6 @@ class StaticPageController extends Controller
             'morocco tour agency',
             'morocco tour operator',
             'local morocco tour company',
-            'best morocco tour companies',
-            'morocco tours',
-            'private morocco tours',
-            'small group tours morocco',
-            'luxury morocco tours',
             'marrakech tour operator',
         ];
         $this->setSeo($title, $description, 'AboutPage', $keywords);
@@ -43,11 +39,6 @@ class StaticPageController extends Controller
             'best time to visit morocco',
             'are sahara desert tours worth it',
             'morocco tour booking',
-            'morocco day tours',
-            'morocco multi day tours',
-            'morocco desert tours from marrakech',
-            'private morocco tours',
-            'morocco tour package',
         ];
         $this->setSeo($title, $description, 'FAQPage', $keywords);
         return view('faq', [
@@ -65,11 +56,7 @@ class StaticPageController extends Controller
             'contact morocco tour operator',
             'book morocco tour',
             'morocco tour agency',
-            'morocco tour company',
             'private morocco tours',
-            'morocco tours',
-            'sahara desert tours morocco',
-            'morocco tour package',
         ];
         $this->setSeo($title, $description, 'ContactPage', $keywords);
         return view('contact', [
@@ -118,9 +105,10 @@ class StaticPageController extends Controller
         ]);
     }
 
-    private function setSeo($title, $description, $type = 'WebPage', $keywords = [])
+    private function setSeo(string $title, string $description, string $type = 'WebPage', array $keywords = []): void
     {
-        $url = url()->current();
+        $url       = url()->current();
+        $ogImage   = SeoHelper::ogImage(null);
 
         SEOMeta::setTitle($title);
         SEOMeta::setDescription($description);
@@ -129,12 +117,11 @@ class StaticPageController extends Controller
 
         OpenGraph::setTitle($title)
             ->setDescription($description)
-            ->setUrl($url);
+            ->setUrl($url)
+            ->addImage($ogImage);
 
-        if ($type) {
-            JsonLd::setTitle($title)
-                ->setDescription($description)
-                ->setType($type);
-        }
+        JsonLd::setTitle($title)
+            ->setDescription($description)
+            ->setType($type);
     }
 }

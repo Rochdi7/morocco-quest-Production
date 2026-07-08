@@ -16,10 +16,8 @@ use App\Models\Activity;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 
-use Artesaos\SEOTools\Facades\SEOTools;
-use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\JsonLd;
+use App\Support\SeoHelper;
 
 class TourController extends Controller
 {
@@ -30,20 +28,17 @@ class TourController extends Controller
     {
         $placesData = DB::table('places')->join('place_tour', 'places.id', '=', 'place_tour.place_id')->select('places.name', 'places.slug', 'places.image_path', DB::raw('COUNT(DISTINCT place_tour.tour_id) as tours_count'))->whereNotNull('places.name')->where('places.name', '!=', '')->groupBy('places.name', 'places.slug', 'places.image_path')->orderBy('places.name', 'asc')->paginate(12);
 
-        // ✅ SEO Setup
         $title       = 'Morocco Tour Destinations | Marrakech, Fes & Sahara Desert | Morocco Quest';
         $description = 'Explore top morocco tour destinations: Marrakech, Fes, Casablanca and Sahara desert. Book private morocco tours, small group tours morocco and luxury morocco tours.';
-        $keywords    = 'morocco tours, morocco tour package, private morocco tours, morocco guided tours, morocco tour destinations, marrakech tours, sahara desert tours morocco';
+        $keywords    = [
+            'morocco tour destinations',
+            'morocco tours',
+            'marrakech tours',
+            'sahara desert tours morocco',
+            'private morocco tours',
+        ];
 
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
-
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)->setDescription($description)->setType('CollectionPage');
+        SeoHelper::setCollection($title, $description, url()->current(), $keywords);
 
         return view('destinations', compact('placesData', 'title', 'description', 'keywords'));
     }
@@ -53,8 +48,8 @@ class TourController extends Controller
      */
     public function index(Request $request)
     {
-        $placeName = $request->input('place');
-        $searchDate = $request->input('searchDate');
+        $placeName      = $request->input('place');
+        $searchDate     = $request->input('searchDate');
         $selectedGuests = $request->input('guests');
 
         $locations = Place::query()
@@ -79,7 +74,7 @@ class TourController extends Controller
 
         if ($searchDate) {
             try {
-                $date = Carbon::parse($searchDate);
+                $date      = Carbon::parse($searchDate);
                 $monthAbbr = $date->format('M');
                 $toursQuery->whereRaw('CONCAT(",", REPLACE(best_season, " ", ""), ",") LIKE ?', ['%,' . $monthAbbr . ',%']);
             } catch (\Exception $e) {
@@ -115,7 +110,22 @@ class TourController extends Controller
 
         $topTours = $popularTours->concat($nonPopularTours);
 
-        // --- SEO Setup ---
+        // Date/guest filter URLs are thin-content variants — noindex,follow.
+        // ?place= has a canonical clean URL at /tours/place/{slug} — noindex too so the clean URL ranks.
+        $isFiltered = $searchDate || $selectedGuests;
+        $hasPlace   = (bool) $placeName;
+
+        if ($isFiltered) {
+            $canonical = route('tours.index');
+            SeoHelper::noindex();
+        } elseif ($hasPlace) {
+            $place     = Place::where('name', $placeName)->whereNotNull('slug')->first();
+            $canonical = $place ? route('tours.byPlace', $place->slug) : route('tours.index');
+            SeoHelper::noindex();
+        } else {
+            $canonical = url()->current();
+        }
+
         $title = $placeName
             ? "Tours in {$placeName} Morocco | Private Day Trips & Multi-Day Tours | Morocco Quest"
             : 'Morocco Tour Packages | Browse All Private & Group Tours | Morocco Quest';
@@ -125,18 +135,10 @@ class TourController extends Controller
             : 'Browse all morocco tour packages: private day trips, multi-day sahara desert tours, small group tours morocco and luxury morocco tours. Book direct with a top-rated local agency.';
 
         $keywords = $placeName
-            ? "tours in {$placeName} morocco, {$placeName} day trips, {$placeName} tours, morocco tour package, private morocco tours, morocco guided tours, day trips from {$placeName}"
-            : 'morocco tour packages, morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, small group tours morocco, luxury morocco tours, morocco guided tours, best morocco tours';
+            ? ["tours in {$placeName} morocco", "{$placeName} day trips", 'morocco tour package', 'private morocco tours']
+            : ['morocco tour packages', 'morocco tours', 'private morocco tours', 'sahara desert tours morocco'];
 
-        SEOMeta::setTitle($title)
-            ->setDescription($desc)
-            ->setCanonical(url()->current());
-
-        OpenGraph::setTitle($title)
-            ->setDescription($desc)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)->setDescription($desc);
+        SeoHelper::setCollection($title, $desc, $canonical, $keywords);
 
         return view('tours-list', compact('tours', 'locations', 'placeName', 'searchDate', 'selectedGuests', 'topTours', 'title', 'desc', 'keywords'));
     }
@@ -160,11 +162,9 @@ class TourController extends Controller
             })->first();
 
             if ($possibleTour) {
-                // 🔥 301 redirect to the correct new slug
                 return redirect()->route('tours.show', $possibleTour->slug)->setStatusCode(301);
             }
 
-            // Still not found → real 404
             abort(404);
         }
 
@@ -178,43 +178,25 @@ class TourController extends Controller
             ->take(4)
             ->get();
 
-        // --- SEO Setup ---
-        $description = Str::limit(strip_tags($tour->overview), 160);
-        $image = $tour->first_image_url;
-        $url = url()->current();
+        $description = Str::limit(strip_tags($tour->overview), 155);
+        $image       = SeoHelper::ogImage($tour->first_image_url);
+        $url         = url()->current();
 
         $title = $tour->title . ' | Morocco Tours from Marrakech | Morocco Quest';
 
-        $keywordArray = array_filter([
+        $keywordArray = array_filter(array_unique([
+            strtolower($tour->title),
             'morocco tours',
             'private morocco tours',
             'morocco tour package',
-            'morocco guided tours',
-            'small group tours morocco',
-            'luxury morocco tours',
-            'sahara desert tours morocco',
-            'morocco desert tours from marrakech',
-            'morocco multi day tours',
-            'morocco day tours',
-            'morocco private tour',
-            strtolower($tour->title),
-            $tour->duration,
-            ...$tour->places->pluck('name')->toArray(),
-        ]);
-        $keywords = implode(', ', array_unique($keywordArray));
+            ...$tour->places->pluck('name')->map(fn($n) => strtolower($n))->toArray(),
+        ]));
+        $keywords = implode(', ', $keywordArray);
 
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical($url)
-            ->addKeyword($keywordArray);
+        SeoHelper::setDetail($title, $description, $url, $keywordArray, $image, 'TouristTrip');
 
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl($url)
-            ->setType('article')
+        OpenGraph::setType('article')
             ->addImage($image, ['height' => 630, 'width' => 1200]);
-
-        JsonLd::setType('TouristTrip')->setTitle($title)->setDescription($description)->setUrl($url)->addImage($image);
 
         return view('tour-detail', compact('tour', 'relatedTours', 'title', 'description', 'keywords'));
     }
@@ -224,53 +206,42 @@ class TourController extends Controller
      */
     public function store(Request $request)
     {
-        // Validation stays the same...
         $validatedData = $request->validate([
-            'title' => 'required|string|max:255|unique:tours,title',
-            // ... other fields
+            'title'       => 'required|string|max:255|unique:tours,title',
             'price_adult' => 'required|numeric|min:0',
-            // ... other fields
-            'images' => 'nullable|array',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
-            'places' => 'nullable|array', // Array of city/place names
-            'places.*' => 'nullable|string|max:255', // Each place name
+            'images'      => 'nullable|array',
+            'images.*'    => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'places'      => 'nullable|array',
+            'places.*'    => 'nullable|string|max:255',
         ]);
 
-        $tourData = collect($validatedData)
-            ->except(['images', 'places'])
-            ->toArray();
+        $tourData         = collect($validatedData)->except(['images', 'places'])->toArray();
         $tourData['slug'] = Str::slug($validatedData['title']);
 
-        // Handle potential slug collisions
         $originalSlug = $tourData['slug'];
-        $count = 1;
+        $count        = 1;
         while (Tour::where('slug', $tourData['slug'])->exists()) {
             $tourData['slug'] = $originalSlug . '-' . $count++;
         }
 
         $tour = Tour::create($tourData);
 
-        // Handle Image Uploads
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $file) {
                 $filename = time() . '_' . Str::random(10) . '.' . $file->getClientOriginalExtension();
-                $path = $file->storeAs('images/tours', $filename, 'public');
-                $tour->images()->create(['image' => 'storage/' . $path]); // Assumes TourImage model setup
+                $path     = $file->storeAs('images/tours', $filename, 'public');
+                $tour->images()->create(['image' => 'storage/' . $path]);
             }
         }
 
-        // Handle Places (Cities)
         if (!empty($validatedData['places'])) {
             foreach ($validatedData['places'] as $placeName) {
                 $trimmedName = trim($placeName);
                 if (!empty($trimmedName)) {
-                    // Creates a new Place record associated with this Tour
-                    $tour->places()->create(['name' => $trimmedName]); // Assumes Place model setup
+                    $tour->places()->create(['name' => $trimmedName]);
                 }
             }
         }
-
-        // Add itineraryDays logic here if needed
 
         return redirect()->route('tours.show', $tour->slug)->with('success', 'Tour created successfully!');
     }
@@ -280,11 +251,11 @@ class TourController extends Controller
      */
     public function edit($slug)
     {
-        $tour = Tour::with(['images', 'places', 'itineraryDays']) // Eager load places for the form
+        $tour = Tour::with(['images', 'places', 'itineraryDays'])
             ->where('slug', $slug)
             ->firstOrFail();
 
-        return view('admin.tours.edit', compact('tour')); // Ensure this view exists
+        return view('admin.tours.edit', compact('tour'));
     }
 
     /**
@@ -294,55 +265,44 @@ class TourController extends Controller
     {
         $tour = Tour::where('slug', $slug)->firstOrFail();
 
-        // Validation stays the same...
         $validatedData = $request->validate([
-            'title' => ['required', 'string', 'max:255', Rule::unique('tours')->ignore($tour->id)],
-            // ... other fields
+            'title'       => ['required', 'string', 'max:255', Rule::unique('tours')->ignore($tour->id)],
             'price_adult' => 'required|numeric|min:0',
-            // ... other fields
-            'places' => 'nullable|array',
-            'places.*' => 'nullable|string|max:255',
-            // Add image update validation if needed
+            'places'      => 'nullable|array',
+            'places.*'    => 'nullable|string|max:255',
         ]);
 
-        $tourData = collect($validatedData)
-            ->except(['places'])
-            ->toArray();
+        $tourData = collect($validatedData)->except(['places'])->toArray();
 
-        // Update slug only if title changed
         if ($request->input('title') !== $tour->title) {
             $tourData['slug'] = Str::slug($validatedData['title']);
-            $originalSlug = $tourData['slug'];
-            $count = 1;
+            $originalSlug     = $tourData['slug'];
+            $count            = 1;
             while (Tour::where('slug', $tourData['slug'])->where('id', '!=', $tour->id)->exists()) {
                 $tourData['slug'] = $originalSlug . '-' . $count++;
             }
         } else {
-            unset($tourData['slug']); // Don't update slug if title hasn't changed
+            unset($tourData['slug']);
         }
 
         $tour->update($tourData);
 
-        // Sync Places (Efficiently updates the relationship)
         $newPlaces = [];
         if (!empty($validatedData['places'])) {
             foreach ($validatedData['places'] as $placeName) {
                 $trimmedName = trim($placeName);
                 if (!empty($trimmedName)) {
-                    // Prepare data for createMany - doesn't save yet
                     $newPlaces[] = ['name' => $trimmedName];
                 }
             }
         }
-        $tour->places()->delete(); // Delete old places associated with this tour
+        $tour->places()->delete();
         if (!empty($newPlaces)) {
-            $tour->places()->createMany($newPlaces); // Create all new places at once
+            $tour->places()->createMany($newPlaces);
         }
 
-        // Add logic for image updates (upload new, delete selected) if needed
-
         return redirect()
-            ->route('tours.show', $tour->fresh()->slug) // Use fresh() in case slug changed
+            ->route('tours.show', $tour->fresh()->slug)
             ->with('success', 'Tour updated successfully!');
     }
 
@@ -352,16 +312,13 @@ class TourController extends Controller
     public function destroy($slug)
     {
         $tour = Tour::where('slug', $slug)->firstOrFail();
-
-        // Optional: Add manual file deletion logic if needed
-        // Storage::disk('public')->delete(...);
-
-        $tour->delete(); // This should cascade delete related places, images due to onDelete('cascade')
+        $tour->delete();
 
         return redirect()
-            ->route('tours.index') // Redirect to the main tours list
+            ->route('tours.index')
             ->with('success', 'Tour deleted successfully!');
     }
+
     public function byPlace($slug)
     {
         $place = Place::where('slug', $slug)->firstOrFail();
@@ -372,66 +329,56 @@ class TourController extends Controller
             ->latest()
             ->paginate(8);
 
-        // 🔥 SEO Meta for location-based tours
-        $title = "Tours in {$place->name} Morocco | Day Trips & Private Tours | Morocco Quest";
-
+        $title       = "Tours in {$place->name} Morocco | Day Trips & Private Tours | Morocco Quest";
         $description = "Best morocco tours in {$place->name}. Private morocco tours, day trips from {$place->name}, small group tours morocco and luxury morocco tour packages.";
+        $keywords    = [
+            "tours in {$place->name} morocco",
+            "{$place->name} tours",
+            "day trips from {$place->name}",
+            'private morocco tours',
+        ];
 
-        $keywords = "morocco tours, tours in {$place->name} morocco, {$place->name} tours, day trips from {$place->name} morocco, private morocco tours, morocco tour package";
+        $placeImage = $place->image_path ? asset('storage/' . $place->image_path) : null;
 
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
-
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)->setDescription($description)->setType('TouristTrip');
+        SeoHelper::setCollection($title, $description, url()->current(), $keywords, $placeImage);
 
         return view('tours-list', [
-            'tours' => $tours,
-            'placeName' => $place->name,
-            'query' => null,
-            'locations' => Place::pluck('name')->unique(),
-            'searchDate' => null,
+            'tours'          => $tours,
+            'placeName'      => $place->name,
+            'query'          => null,
+            'locations'      => Place::pluck('name')->unique(),
+            'searchDate'     => null,
             'selectedGuests' => null,
-            'title' => $title,
-            'description' => $description,
-            'keywords' => $keywords,
+            'title'          => $title,
+            'description'    => $description,
+            'keywords'       => implode(', ', $keywords),
         ]);
     }
 
     public function showMultiDay()
     {
-        $tours = Tour::with(['firstImage', 'places'])->paginate(12);
-
+        $tours      = Tour::with(['firstImage', 'places'])->paginate(12);
         $activities = new LengthAwarePaginator([], 0, 12);
 
-        // 🔥 SEO Meta for multi-day
-        $title = 'Morocco Multi Day Tours | 3, 5 & 7 Day Morocco Tour Packages | Morocco Quest';
-
+        $title       = 'Morocco Multi Day Tours | 3, 5 & 7 Day Morocco Tour Packages | Morocco Quest';
         $description = 'Book morocco multi day tours: 3-day sahara desert tour, 7 day morocco tour, multi-day tours in morocco. Private morocco tours and small group tours morocco from Marrakech.';
+        $keywords    = [
+            'morocco multi day tours',
+            'morocco 7 day tour',
+            'multi-day tours in morocco',
+            'morocco tour package',
+            'private morocco tours',
+        ];
 
-        $keywords = 'morocco multi day tours, morocco multi day tour, multi-day tours in morocco, morocco 7 day tour, 7 day trip to morocco, morocco tour package, private morocco tours, small group tours morocco';
-
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
-
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)->setDescription($description)->setType('TouristTrip');
+        SeoHelper::setCollection($title, $description, url()->current(), $keywords);
 
         return view('type-filter', [
-            'tours' => $tours,
-            'activities' => $activities,
-            'type' => 'Multi-Day Tours',
-            'title' => $title,
+            'tours'       => $tours,
+            'activities'  => $activities,
+            'type'        => 'Multi-Day Tours',
+            'title'       => $title,
             'description' => $description,
-            'keywords' => $keywords,
+            'keywords'    => implode(', ', $keywords),
         ]);
     }
 
@@ -447,30 +394,25 @@ class TourController extends Controller
             ->with(['images', 'category'])
             ->paginate(12);
 
-        // 🔥 SEO Meta for one-day experiences
-        $title = 'Morocco Day Tours & Day Trips from Marrakech | Morocco Quest';
-
+        $title       = 'Morocco Day Tours & Day Trips from Marrakech | Morocco Quest';
         $description = 'Best morocco day tours and day trips from Marrakech: Atlas Mountains, Ourika Valley, Essaouira, Agafay desert. Private morocco tours and small group day trips.';
+        $keywords    = [
+            'morocco day tours',
+            'morocco day trips',
+            'day trips from marrakech',
+            'atlas mountains day trip morocco',
+            'essaouira day trip morocco',
+        ];
 
-        $keywords = 'morocco day tours, morocco day trips, day trips from marrakech morocco, morocco day trips from marrakech, atlas mountains morocco day trip from marrakech, essaouira morocco day trip from marrakech, day tours in marrakech morocco';
-
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
-
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)->setDescription($description)->setType('TouristTrip');
+        SeoHelper::setCollection($title, $description, url()->current(), $keywords);
 
         return view('type-filter', [
-            'tours' => $tours,
-            'activities' => $activities,
-            'type' => 'One-Day Tours',
-            'title' => $title,
+            'tours'       => $tours,
+            'activities'  => $activities,
+            'type'        => 'One-Day Tours',
+            'title'       => $title,
             'description' => $description,
-            'keywords' => $keywords,
+            'keywords'    => implode(', ', $keywords),
         ]);
     }
 
@@ -479,21 +421,20 @@ class TourController extends Controller
         $type = urldecode($type);
 
         $map = [
-            'garden-tours' => 'Garden Tour',
-            'art-tours' => 'Art Tour',
-            'cultural-tours' => 'Cultural Tour',
-            'classical-tours' => 'Classical Tours',
-            'adventure-tours' => 'Adventure Tours',
-            'day-trips' => 'Day Trips',
-            'local-experiences' => 'Local Experiences',
+            'garden-tours'       => 'Garden Tour',
+            'art-tours'          => 'Art Tour',
+            'cultural-tours'     => 'Cultural Tour',
+            'classical-tours'    => 'Classical Tours',
+            'adventure-tours'    => 'Adventure Tours',
+            'day-trips'          => 'Day Trips',
+            'local-experiences'  => 'Local Experiences',
             'outdoor-activities' => 'Outdoor Activities',
-            'city-tours' => 'City Tours',
+            'city-tours'         => 'City Tours',
         ];
 
-        $slugifiedType = Str::slug($type);
+        $slugifiedType  = Str::slug($type);
         $normalizedType = $map[$slugifiedType] ?? $type;
 
-        // Handle redirects
         if ($slugifiedType === 'multi-day-tours') {
             return redirect()->route('tours.multi_day');
         }
@@ -509,30 +450,24 @@ class TourController extends Controller
             ->with(['images', 'category'])
             ->paginate(12);
 
-        // 🔥 SEO for specific tour types
-        $title = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
-
+        $title       = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
         $description = "Book morocco {$normalizedType} with a top-rated local agency. Private morocco tours, small group tours morocco, luxury morocco tours and morocco tour packages.";
+        $keywords    = [
+            'morocco ' . strtolower($normalizedType),
+            strtolower($normalizedType),
+            'morocco tours',
+            'private morocco tours',
+        ];
 
-        $keywords = "morocco tours, morocco {$normalizedType}, " . strtolower($normalizedType) . ", morocco tour package, private morocco tours, morocco guided tours, small group tours morocco";
-
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
-
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)->setDescription($description)->setType('TouristTrip');
+        SeoHelper::setCollection($title, $description, url()->current(), $keywords);
 
         return view('type-filter', [
-            'tours' => $tours,
-            'activities' => $activities,
-            'type' => $normalizedType,
-            'title' => $title,
+            'tours'       => $tours,
+            'activities'  => $activities,
+            'type'        => $normalizedType,
+            'title'       => $title,
             'description' => $description,
-            'keywords' => $keywords,
+            'keywords'    => implode(', ', $keywords),
         ]);
     }
 }

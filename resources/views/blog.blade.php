@@ -145,7 +145,7 @@
                                                     share <i class="fa-solid fa-share-nodes ms-2"></i>
                                                 </span>
                                                 <ul class="custom-ul">
-                                                    <li><a href="https://www.facebook.com/codesommetagency/sharer/sharer.php?u={{ urlencode(route('blog.show', $post->slug) ?? url('/')) }}"
+                                                    <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('blog.show', $post->slug) ?? url('/')) }}"
                                                             target="_blank" rel="noopener noreferrer"
                                                             aria-label="Share {{ $post->title }} on Facebook"><i
                                                                 class="fa-brands fa-facebook-f"></i></a></li>

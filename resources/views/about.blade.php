@@ -51,7 +51,7 @@
             "name": "Mounir Akajia"
         },
         "sameAs": [
-            "https://www.facebook.com/codesommetagency/",
+            "https://www.facebook.com/profile.php?id=61578772746041",
             "https://www.instagram.com/moroccoquestdmc/",
             "https://www.tripadvisor.com/Attraction_Review-g293734-d33367694-Reviews-Morocco_Quest_Dmc-Marrakech_Marrakech_Safi.html"
         ],

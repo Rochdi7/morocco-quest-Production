@@ -8,9 +8,8 @@ use App\Models\ActivityCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
-use Artesaos\SEOTools\Facades\JsonLd;
+use App\Support\SeoHelper;
 
 class ActivityController extends Controller
 {
@@ -49,24 +48,17 @@ class ActivityController extends Controller
             ->orderBy('name', 'asc')
             ->paginate(9);
 
-        // ✅ SEO Setup
-        $title = "Things to Do in Morocco | Activities, Day Tours & Experiences | Morocco Quest";
+        $title       = 'Things to Do in Morocco | Activities, Day Tours & Experiences | Morocco Quest';
+        $description = 'Best things to do in Morocco: camel rides, quad biking in Marrakech, desert hikes, food tours and day trips. Private & small group activities with a top-rated local agency.';
+        $keywords    = [
+            'things to do in morocco',
+            'things to do in marrakech',
+            'morocco activities',
+            'morocco day tours',
+            'morocco experiences',
+        ];
 
-        $description = "Best things to do in Morocco: camel rides, quad biking in Marrakech, desert hikes, food tours and day trips. Private & small group activities with a top-rated local agency.";
-
-        $keywords = 'things to do in marrakech, things to do in morocco, morocco activities, morocco day tours, morocco day trips, morocco camel tours, morocco hiking tours, morocco food tour, quad biking marrakech, morocco trekking tours';
-
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
-
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)
-            ->setDescription($description)
-            ->setType('CollectionPage');
+        SeoHelper::setCollection($title, $description, url()->current(), $keywords);
 
         return view('activity-categories', compact('activityCategories', 'title', 'description', 'keywords'));
     }
@@ -81,25 +73,21 @@ class ActivityController extends Controller
             ->latest()
             ->paginate(9);
 
-        $title = "{$category->name} in Morocco | Private Tours & Day Trips | Morocco Quest";
-        $description = "Book {$category->name} in Morocco with a top-rated local agency. Private morocco tours, small group tours morocco and morocco day tours.";
-        $keywords = strtolower($category->name) . ", morocco {$category->name}, morocco tours, morocco day tours, morocco tour package, private morocco tours, morocco guided tours";
+        $title       = "{$category->name} in Morocco | Private Tours & Day Trips | Morocco Quest";
+        $description = "Book {$category->name} in Morocco with a top-rated local agency. Private tours, small group experiences and morocco day trips — book direct.";
+        $keywords    = [
+            strtolower($category->name),
+            strtolower($category->name) . ' morocco',
+            'morocco activities',
+            'morocco day tours',
+        ];
 
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
+        $categoryImage = $category->image_path ? asset('storage/' . $category->image_path) : null;
 
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)
-            ->setDescription($description)
-            ->setType('TouristTrip');
+        SeoHelper::setCollection($title, $description, url()->current(), $keywords, $categoryImage);
 
         return view('activities-by-category', compact('category', 'activities', 'title', 'description', 'keywords'));
     }
-
 
 
     public function index(Request $request)
@@ -119,33 +107,33 @@ class ActivityController extends Controller
         $activities = $activitiesQuery->paginate(12);
         $category = $categorySlug ? ActivityCategory::where('slug', $categorySlug)->first() : null;
 
+        // When a category filter is active, point canonical to the clean category page
+        // and suppress indexing of the query-string URL to avoid duplicate content.
+        if ($categorySlug && $category) {
+            $canonical = route('activities.byCategory', $category->slug);
+            SeoHelper::noindex();
+        } else {
+            $canonical = url()->current();
+        }
+
         $title = $category
             ? "{$category->name} in Morocco | Tours & Day Trips | Morocco Quest"
-            : "Morocco Day Tours & Activities | Browse All Experiences | Morocco Quest";
+            : 'Morocco Day Tours & Activities | Browse All Experiences | Morocco Quest';
 
         $description = $category
             ? "Discover {$category->name} in Morocco with a top-rated local agency. Private tours, small group experiences and morocco day trips — book direct."
-            : "Browse all morocco day tours and activities: camel rides, quad biking, desert hikes, food tours, day trips from Marrakech. Book private or small group with a local agency.";
+            : 'Browse all morocco day tours and activities: camel rides, quad biking, desert hikes, food tours, day trips from Marrakech. Book private or small group with a local agency.';
 
         $keywords = $category
-            ? strtolower($category->name) . " morocco, morocco {$category->name}, morocco day tours, things to do in marrakech, morocco activities, private morocco tours"
-            : 'morocco day tours, morocco activities, things to do in marrakech, morocco day trips, morocco camel tours, morocco hiking tours, quad biking marrakech, morocco food tour';
+            ? [strtolower($category->name), strtolower($category->name) . ' morocco', 'morocco activities', 'morocco day tours']
+            : ['morocco day tours', 'morocco activities', 'things to do in marrakech', 'morocco day trips'];
 
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
+        $categoryImage = ($category && $category->image_path) ? asset('storage/' . $category->image_path) : null;
 
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)
-            ->setDescription($description)
-            ->setType('TouristTrip');
+        SeoHelper::setCollection($title, $description, $canonical, $keywords, $categoryImage);
 
         return view('activity-categories', compact('activities', 'category', 'title', 'description', 'keywords'));
     }
-
 
 
     public function show($slug)
@@ -163,54 +151,31 @@ class ActivityController extends Controller
             ->take(3)
             ->get();
 
-        $description = Str::limit(strip_tags($activity->overview ?? ''), 160);
-        $image = $activity->first_image_url;
-        $url = url()->current();
+        $description = Str::limit(strip_tags($activity->overview ?? ''), 155);
+        $image       = SeoHelper::ogImage($activity->first_image_url);
+        $url         = url()->current();
 
         $title = $activity->title . ' | Morocco Day Tours & Activities | Morocco Quest';
 
-        // Extensive keyword integration for specific activity pages
         $keywordArray = array_filter([
-            'morocco tours',
-            'morocco day tours',
-            'morocco day trips',
-            'morocco tour package',
-            'private morocco tours',
-            'morocco guided tours',
-            'small group tours morocco',
-            'morocco camel tours',
-            'morocco hiking tours',
-            'morocco food tour',
-            'quad biking marrakech',
             strtolower($activity->title),
-            optional($activity->category)->name,
+            optional($activity->category)->name ? strtolower(optional($activity->category)->name) : null,
+            'morocco activities',
+            'morocco day tours',
+            'morocco quest',
         ]);
         $keywords = implode(', ', array_unique($keywordArray));
 
-        // SEO Meta
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical($url)
-            ->addKeyword($keywordArray);
+        // Basic meta — richer TouristAttraction schema is in activity-detail.blade.php via @push('jsonld')
+        SeoHelper::setDetail($title, $description, $url, $keywordArray, $image, 'TouristAttraction');
 
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl($url)
-            ->addImage($image)
-            ->addProperty('twitter:card', 'summary_large_image')
+        OpenGraph::addProperty('twitter:card', 'summary_large_image')
             ->addProperty('twitter:title', $title)
             ->addProperty('twitter:description', $description)
             ->addProperty('twitter:image', $image);
 
-        JsonLd::setTitle($title)
-            ->setDescription($description)
-            ->setUrl($url)
-            ->addImage($image)
-            ->setType('TouristTrip');
-
         return view('activity-detail', compact('activity', 'relatedActivities', 'title', 'description', 'keywords'));
     }
-
 
 
     public function showByType($slugType)
@@ -218,53 +183,46 @@ class ActivityController extends Controller
         $slugType = urldecode($slugType);
 
         $map = [
-            'garden-tours' => 'Garden Tour',
-            'art-tours' => 'Art Tour',
-            'cultural-tours' => 'Cultural Tour',
-            'classical-tours' => 'Classical Tours',
-            'adventure-tours' => 'Adventure Tours',
-            'day-trips' => 'Day Trips',
-            'local-experiences' => 'Local Experiences',
+            'garden-tours'       => 'Garden Tour',
+            'art-tours'          => 'Art Tour',
+            'cultural-tours'     => 'Cultural Tour',
+            'classical-tours'    => 'Classical Tours',
+            'adventure-tours'    => 'Adventure Tours',
+            'day-trips'          => 'Day Trips',
+            'local-experiences'  => 'Local Experiences',
             'outdoor-activities' => 'Outdoor Activities',
-            'city-tours' => 'City Tours',
-            'multi-day-tours' => 'Multi-Day Tours',
-            'one-day-tours' => 'One-Day Tours',
+            'city-tours'         => 'City Tours',
+            'multi-day-tours'    => 'Multi-Day Tours',
+            'one-day-tours'      => 'One-Day Tours',
         ];
 
-        $slugifiedType = Str::slug($slugType);
+        $slugifiedType  = Str::slug($slugType);
         $normalizedType = $map[$slugifiedType] ?? $slugType;
 
-        $tours = collect(); // Not used here but might be later
+        $tours = collect();
 
         $activities = Activity::where('tour_type', 'LIKE', "%{$normalizedType}%")
             ->with(['images', 'category'])
             ->paginate(12);
 
-        $title = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
-
+        $title       = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
         $description = "Book morocco {$normalizedType} with a top-rated local agency. Private morocco tours, small group tours morocco and luxury morocco tours.";
+        $keywords    = [
+            'morocco ' . strtolower($normalizedType),
+            strtolower($normalizedType),
+            'morocco activities',
+            'morocco day tours',
+        ];
 
-        $keywords = "morocco tours, morocco {$normalizedType}, " . strtolower($normalizedType) . ", morocco tour package, private morocco tours, morocco guided tours, small group tours morocco";
-
-        SEOMeta::setTitle($title)
-            ->setDescription($description)
-            ->setCanonical(url()->current());
-
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
-            ->setUrl(url()->current());
-
-        JsonLd::setTitle($title)
-            ->setDescription($description)
-            ->setType('TouristTrip');
+        SeoHelper::setCollection($title, $description, url()->current(), $keywords);
 
         return view('type-filter', [
-            'tours' => $tours,
-            'activities' => $activities,
-            'type' => $normalizedType,
-            'title' => $title,
+            'tours'       => $tours,
+            'activities'  => $activities,
+            'type'        => $normalizedType,
+            'title'       => $title,
             'description' => $description,
-            'keywords' => $keywords,
+            'keywords'    => implode(', ', $keywords),
         ]);
     }
 }

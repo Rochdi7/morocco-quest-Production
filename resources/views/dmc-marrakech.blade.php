@@ -51,7 +51,7 @@
         "Morocco group travel"
     ],
     "sameAs": [
-        "https://www.facebook.com/codesommetagency/",
+        "https://www.facebook.com/profile.php?id=61578772746041",
         "https://www.instagram.com/moroccoquestdmc/",
         "https://www.tripadvisor.com/Attraction_Review-g293734-d33367694-Reviews-Morocco_Quest_Dmc-Marrakech_Marrakech_Safi.html"
     ],
@@ -155,20 +155,20 @@
 </section>
 
 {{-- ═══════════════════════════════════════════════════════
-     TRUST BAR — 4 quick stats
+     TRUST BAR — quick stats
 ═══════════════════════════════════════════════════════ --}}
-<section style="background:#f7921e;padding:22px 0;">
+<section style="background:var(--theme-color);padding:22px 0;">
     <div class="container">
         <div class="row text-center gy-3">
             <div class="col-6 col-md-3">
                 <div style="color:#fff;">
-                    <div style="font-size:2rem;font-weight:700;">500+</div>
+                    <div style="font-size:2rem;font-weight:700;">18+</div>
                     <div style="font-size:.85rem;opacity:.9;">Groups handled / year</div>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div style="color:#fff;">
-                    <div style="font-size:2rem;font-weight:700;">30+</div>
+                    <div style="font-size:2rem;font-weight:700;">11</div>
                     <div style="font-size:.85rem;opacity:.9;">Countries served</div>
                 </div>
             </div>
@@ -185,6 +185,16 @@
                 </div>
             </div>
         </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-12 text-center">
+                <div style="font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600;margin-bottom:12px;">Countries We Serve</div>
+                <ul class="custom-ul d-flex flex-wrap justify-content-center" style="gap:10px 12px;list-style:none;padding:0;margin:0;">
+                    @foreach(['England','Scotland','Norway','France','Italy','Spain','Germany','Sweden','Canada','USA','Russia'] as $country)
+                    <li style="background:#fff;color:var(--theme-color);font-size:.82rem;font-weight:700;padding:6px 16px;border-radius:20px;box-shadow:0 2px 6px rgba(0,0,0,.12);">{{ $country }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -197,10 +207,10 @@
             <div class="col-lg-6">
                 <div class="title-area">
                     <span class="sec-subtitle style-2">Your Ground Partner in Morocco</span>
-                    <h2 class="sec-title">What is a DMC in Marrakech?</h2>
+                    <h2 class="sec-title">What is a DMC Marrakech Partner?</h2>
                 </div>
                 <p>A <strong>Destination Management Company (DMC)</strong> is a local expert that handles every on-the-ground detail so travel agents, tour operators and corporate planners can sell Morocco with confidence — without managing the logistics themselves.</p>
-                <p>Morocco Quest has operated as a <strong>licensed DMC in Marrakech</strong> for years, working with agencies across Europe, North America, the Middle East and Asia on a confidential net-rate basis. We are your local eyes, ears and operational backbone.</p>
+                <p>Morocco Quest is a trusted <strong>DMC Morocco</strong> partner working with agencies across Europe, North America, the Middle East and Asia on a confidential net-rate basis. From private tours to full <strong>MICE Marrakech</strong> and <strong>events Marrakech</strong> programmes, we are your local eyes, ears and operational backbone.</p>
                 <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
                     <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Licensed Moroccan tour operator (IATA compatible)</li>
                     <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Net-rate pricing — no commissions visible to your clients</li>
@@ -215,74 +225,6 @@
                      alt="Morocco Quest DMC Marrakech — ground services for travel agents and tour operators"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
             </div>
-        </div>
-    </div>
-</section>
-
-{{-- ═══════════════════════════════════════════════════════
-     B2B SERVICES GRID
-═══════════════════════════════════════════════════════ --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">DMC Ground Services</span>
-                    <h2 class="sec-title">Everything Your Clients Need — Handled Locally</h2>
-                    <p>From a single transfer to a 500-person incentive programme, Morocco Quest provides the full spectrum of B2B ground services across Morocco.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-
-            {{-- Service card --}}
-            @php
-            $services = [
-                [
-                    'icon'  => 'fa-route',
-                    'title' => 'Tailor-Made Private Tours',
-                    'body'  => 'FIT and group itineraries built entirely to your brief — any duration, any budget, any style. Private vehicles with licensed guides across the whole country.',
-                ],
-                [
-                    'icon'  => 'fa-tent',
-                    'title' => 'Sahara Desert Camps',
-                    'body'  => 'Exclusive luxury camps and standard bivouac options in Merzouga and Zagora. We manage access, camel treks, dinner under the stars and overnight logistics.',
-                ],
-                [
-                    'icon'  => 'fa-van-shuttle',
-                    'title' => 'Airport & City Transfers',
-                    'body'  => 'Meet-and-greet, private minibuses, executive sedans and coaches for groups of any size — Marrakech, Casablanca, Fes, Agadir and all airports.',
-                ],
-                [
-                    'icon'  => 'fa-person-chalkboard',
-                    'title' => 'Licensed Guide Services',
-                    'body'  => 'Official licensed guides in English, French, Spanish, German and Italian. City tours, museum visits, medina walks and specialist cultural guides.',
-                ],
-                [
-                    'icon'  => 'fa-hotel',
-                    'title' => 'Hotel Sourcing & Contracting',
-                    'body'  => 'Pre-contracted rates at riads, boutique hotels and 5-star properties. We handle rooming lists, meal plans, room drops and VIP amenities.',
-                ],
-                [
-                    'icon'  => 'fa-trophy',
-                    'title' => 'Incentive & MICE Programmes',
-                    'body'  => 'End-to-end incentive travel and corporate event management: gala dinners in a riad, team-building in the Atlas, desert experiences for C-suite groups.',
-                ],
-            ];
-            @endphp
-
-            @foreach($services as $s)
-            <div class="col-md-6 col-lg-4">
-                <div class="bg-white-color h-100 p-4" style="border-radius:10px;border:1px solid #eee;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,.10)'" onmouseout="this.style.boxShadow='none'">
-                    <div style="width:52px;height:52px;background:#fff4e5;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-                        <i class="fa-solid {{ $s['icon'] }}" style="font-size:1.4rem;color:#f7921e;"></i>
-                    </div>
-                    <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:8px;">{{ $s['title'] }}</h3>
-                    <p style="font-size:.92rem;color:#555;margin:0;">{{ $s['body'] }}</p>
-                </div>
-            </div>
-            @endforeach
-
         </div>
     </div>
 </section>
@@ -319,7 +261,7 @@
             @foreach($destinations as $d)
             <div class="col-6 col-md-4 col-lg-2">
                 <div class="text-center p-3" style="border-radius:8px;background:#f8f8f8;height:100%;">
-                    <i class="fa-solid fa-location-dot" style="color:#f7921e;font-size:1.2rem;display:block;margin-bottom:6px;"></i>
+                    <i class="fa-solid fa-location-dot" style="color:var(--theme-color);font-size:1.2rem;display:block;margin-bottom:6px;"></i>
                     <div style="font-weight:700;font-size:.95rem;">{{ $d['city'] }}</div>
                     <div style="font-size:.78rem;color:#777;">{{ $d['label'] }}</div>
                 </div>
@@ -338,7 +280,7 @@
             <div class="col-lg-6 order-lg-2">
                 <div class="title-area">
                     <span class="sec-subtitle style-2">Why Partner With Us</span>
-                    <h2 class="sec-title">What Makes Morocco Quest Different as a DMC</h2>
+                    <h2 class="sec-title">What Makes Morocco Quest Different as a DMC Morocco Partner</h2>
                 </div>
                 <div class="row g-4 mt-1">
                     @php
@@ -352,7 +294,7 @@
                     @foreach($reasons as $r)
                     <div class="col-sm-6">
                         <div style="display:flex;gap:14px;align-items:flex-start;">
-                            <div style="width:44px;height:44px;background:#f7921e;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <div style="width:44px;height:44px;background:var(--theme-color);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                                 <i class="fa-solid {{ $r['icon'] }}" style="color:#fff;font-size:1.1rem;"></i>
                             </div>
                             <div>
@@ -367,7 +309,7 @@
             <div class="col-lg-6 order-lg-1">
                 {{-- Testimonial / social proof block --}}
                 <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:#f7921e;line-height:1;margin-bottom:12px;">"</div>
+                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
                     <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
                         "Morocco Quest handled our 120-person incentive group flawlessly — from the Marrakech airport pickup to the private Sahara camp dinner. Their local knowledge and responsiveness are unmatched. We've made them our exclusive Morocco DMC partner."
                     </p>
@@ -380,7 +322,7 @@
                             <div style="font-size:.82rem;color:#777;">Incentive Travel Director — Paris, France</div>
                         </div>
                         <div class="ms-auto">
-                            <span style="color:#f7921e;">★★★★★</span>
+                            <span style="color:var(--theme-color);">★★★★★</span>
                         </div>
                     </div>
                 </div>
@@ -397,7 +339,7 @@
                             <div style="font-size:.8rem;color:#777;">Tour Operator — London, UK</div>
                         </div>
                         <div class="ms-auto">
-                            <span style="color:#f7921e;">★★★★★</span>
+                            <span style="color:var(--theme-color);">★★★★★</span>
                         </div>
                     </div>
                 </div>
@@ -553,7 +495,7 @@
 
                         <div class="col-12">
                             <div style="background:#f8f8f8;border-radius:8px;padding:14px 18px;font-size:.88rem;color:#555;margin-bottom:8px;">
-                                <i class="fa-solid fa-lock me-2" style="color:#f7921e;"></i>
+                                <i class="fa-solid fa-lock me-2" style="color:var(--theme-color);"></i>
                                 Your enquiry is 100% confidential. We never share your client data or undercut your pricing.
                             </div>
                         </div>
@@ -564,7 +506,7 @@
                             </button>
                             <div style="margin-top:12px;font-size:.88rem;color:#777;">
                                 We reply within <strong>24 hours</strong> — or call us:
-                                <a href="tel:+212654069718" style="color:#f7921e;font-weight:600;">+212 654 069 718</a>
+                                <a href="tel:+212654069718" style="color:var(--theme-color);font-weight:600;">+212 654 069 718</a>
                             </div>
                         </div>
 
@@ -587,7 +529,11 @@
                     <h2 class="sec-title">Frequently Asked Questions — DMC Marrakech</h2>
                 </div>
                 <div class="accordion accordion-style1" id="dmcFaq" style="--dmc-faq-pr:60px;">
-                <style>#dmcFaq .accordion-button{padding-right:60px;}</style>
+                <style>
+                    #dmcFaq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #dmcFaq .accordion-button:not(.collapsed){color:var(--theme-color);}
+                    #dmcFaq .accordion-body{font-size:.92rem;}
+                </style>
 
                     @php
                     $faqs = [
@@ -661,14 +607,14 @@
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Ready to Partner with Morocco Quest DMC?</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">
-            Join 200+ travel agencies and operators who trust us as their Morocco ground partner. Send your brief today — net-rate quote within 24 hours.
+            Trusted by travel agencies and operators as their Morocco ground partner for MICE Morocco and events Morocco programmes. Send your brief today — net-rate quote within 24 hours.
         </p>
         <div class="row g-3 justify-content-center">
             <div class="col-12 col-sm-auto">
                 <a href="#dmc-enquiry" class="vs-btn d-block">Request a Quote</a>
             </div>
             <div class="col-12 col-sm-auto">
-                <a href="mailto:sales@morocco-quest.com" class="vs-btn d-block" style="background:transparent;border:2px solid #f7921e;color:#f7921e;">
+                <a href="mailto:sales@morocco-quest.com" class="vs-btn d-block" style="background:transparent;border:2px solid var(--theme-color);color:var(--theme-color);">
                     <i class="fa-solid fa-envelope me-2"></i> sales@morocco-quest.com
                 </a>
             </div>

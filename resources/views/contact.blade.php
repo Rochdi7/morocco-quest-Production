@@ -149,7 +149,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="https://www.facebook.com/codesommetagency/" target="_blank"
+                                    <a href="https://www.facebook.com/profile.php?id=61578772746041" target="_blank"
                                         rel="noopener noreferrer" aria-label="Follow Morocco Quest on Facebook">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </a>

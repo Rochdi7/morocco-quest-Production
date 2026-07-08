@@ -1,4 +1,8 @@
 {{-- resources/views/partials/footer.blade.php --}}
+<style>
+.footer-logo-img{width:auto;height:120px}
+@media(max-width:767px){.footer-logo-img{height:45px}}
+</style>
 
 <!-- ================= Footer Start ================= -->
 <footer class="vs-footer-style1" data-bg-src="{{ asset('assets/img/footer/footer-style1-bg.png') }}">
@@ -66,12 +70,12 @@
                     <div class="footer-widgets">
                         <a href="{{ url('/') }}" class="logo-footer">
                             <img src="{{ asset('assets/img/logo-bg-wide-white.webp') }}"
-                                alt="Morocco Quest Homepage Logo" style="width: auto; height: 120px;" loading="lazy"
+                                alt="Morocco Quest Homepage Logo" class="footer-logo-img" loading="lazy"
                                 width="300" height="120">
                         </a>
                         <div class="social-media">
                             <ul class="custom-ul">
-                                <li><a href="https://www.facebook.com/codesommetagency/" target="_blank"
+                                <li><a href="https://www.facebook.com/profile.php?id=61578772746041" target="_blank"
                                         rel="noopener noreferrer" aria-label="Follow Morocco Quest on Facebook">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

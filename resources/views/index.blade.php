@@ -26,7 +26,7 @@
             "addressCountry": "MA"
         },
         "sameAs": [
-            "https://www.facebook.com/codesommetagency/",
+            "https://www.facebook.com/profile.php?id=61578772746041",
             "https://www.instagram.com/moroccoquestdmc/",
             "https://www.tripadvisor.com/Attraction_Review-g293734-d33367694-Reviews-Morocco_Quest_Dmc-Marrakech_Marrakech_Safi.html"
         ],
@@ -950,12 +950,9 @@
                     <div class="award-box-style1">
                         <div class="award-box-style1-wrapper">
                             <figure class="award-box-icon small-award-icon">
-                                <a
-                                    href="https://cdnlogo.com/logo/tripadvisor-lockup-horizontal-secondary-registered_129359.html">
-                                    <img src="https://static.cdnlogo.com/logos/t/10/tripadvisor-lockup-horizontal-secondary-registered.svg"
-                                        alt="Tripadvisor Travellers' Choice Award Logo" class="award-logo"
-                                        width="240" height="220">
-                                </a>
+                                <img src="https://static.cdnlogo.com/logos/t/10/tripadvisor-lockup-horizontal-secondary-registered.svg"
+                                    alt="Tripadvisor Travellers' Choice Award Logo" class="award-logo"
+                                    width="240" height="220">
                             </figure>
                             <div
                                 class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">
@@ -983,11 +980,9 @@
                     <div class="award-box-style1">
                         <div class="award-box-style1-wrapper">
                             <figure class="award-box-icon small-award-icon">
-                                <a href="https://cdnlogo.com/logo/tui-cruises_20329.html">
-                                    <img src="https://static.cdnlogo.com/logos/t/9/tui-cruises.svg"
-                                        alt="Tui Cruises Sustainability Award Logo" class="award-logo" width="240"
-                                        height="220">
-                                </a>
+                                <img src="https://static.cdnlogo.com/logos/t/9/tui-cruises.svg"
+                                    alt="Tui Cruises Sustainability Award Logo" class="award-logo" width="240"
+                                    height="220">
                             </figure>
                             <div
                                 class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">
@@ -1014,10 +1009,8 @@
                     <div class="award-box-style1">
                         <div class="award-box-style1-wrapper">
                             <figure class="award-box-icon text-center">
-                                <a href="https://cdnlogo.com/logo/iagto_125939.html">
-                                    <img src="https://static.cdnlogo.com/logos/i/63/iagto.svg"
-                                        alt="IAGTO Supplier's Award Logo" width="140" height="220">
-                                </a>
+                                <img src="https://static.cdnlogo.com/logos/i/63/iagto.svg"
+                                    alt="IAGTO Supplier's Award Logo" width="140" height="220">
                             </figure>
                             <div
                                 class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">

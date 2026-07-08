@@ -35,7 +35,7 @@ return [
             'title' => 'Twitter/X',
         ],
         'facebook' => [
-            'url' => 'https://www.facebook.com/codesommetagency/', // <-- Updated Facebook
+            'url' => 'https://www.facebook.com/profile.php?id=61578772746041', // <-- Updated Facebook
             'icon' => 'fa-brands fa-facebook-f',
             'title' => 'Facebook',
         ],

@@ -11,7 +11,7 @@
     $longitude = -8.00639;
     $sameAs = array_values(
         array_filter([
-            'https://www.facebook.com/codesommetagency/',
+            'https://www.facebook.com/profile.php?id=61578772746041',
             'https://x.com/mounirakajia',
             'https://www.instagram.com/moroccoquestdmc/',
             'https://www.youtube.com/@coloredmoroccotourstravel6209',

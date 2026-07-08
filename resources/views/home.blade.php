@@ -87,10 +87,15 @@
                                 {{-- <h1 class="sec-title text-white-color fade-anim" data-delay="0.76" data-direction="top">
                         Find Your Unforgettable <br class="d-none d-xxl-block"> Holiday in Morocco
                     </h1> --}}
-                                <h1 class="sec-title text-white-color fade-anim" data-delay="0.76" data-direction="top">
+                                <h1 class="sec-title text-white-color fade-anim hero-home-title" data-delay="0.76" data-direction="top">
                                     Morocco Tours & Private Sahara Desert <br class="d-none d-xxl-block">
                                     Trips from Marrakech
                                 </h1>
+                                <style>
+                                    .hero-home-title { font-size: 48px; line-height: 1.25; }
+                                    @media (max-width: 991px) { .hero-home-title { font-size: 36px; } }
+                                    @media (max-width: 575px) { .hero-home-title { font-size: 28px; } }
+                                </style>
                                 <p class="visually-hidden">
                                     Book private tours morocco with Morocco Quest for authentic small group tours morocco.
                                     Our private morocco tour packages include exclusive morocco travel experiences, vip
@@ -960,12 +965,9 @@
                         <div class="award-box-style1">
                             <div class="award-box-style1-wrapper">
                                 <figure class="award-box-icon small-award-icon">
-                                    <a
-                                        href="https://cdnlogo.com/logo/tripadvisor-lockup-horizontal-secondary-registered_129359.html">
-                                        <img src="https://static.cdnlogo.com/logos/t/10/tripadvisor-lockup-horizontal-secondary-registered.svg"
-                                            alt="Tripadvisor Travellers' Choice Award Logo" class="award-logo"
-                                            width="240" height="220">
-                                    </a>
+                                    <img src="https://static.cdnlogo.com/logos/t/10/tripadvisor-lockup-horizontal-secondary-registered.svg"
+                                        alt="Tripadvisor Travellers' Choice Award Logo" class="award-logo"
+                                        width="240" height="220">
                                 </figure>
                                 <div
                                     class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">
@@ -993,11 +995,9 @@
                         <div class="award-box-style1">
                             <div class="award-box-style1-wrapper">
                                 <figure class="award-box-icon small-award-icon">
-                                    <a href="https://cdnlogo.com/logo/tui-cruises_20329.html">
-                                        <img src="https://static.cdnlogo.com/logos/t/9/tui-cruises.svg"
-                                            alt="Tui Cruises Sustainability Award Logo" class="award-logo" width="240"
-                                            height="220">
-                                    </a>
+                                    <img src="https://static.cdnlogo.com/logos/t/9/tui-cruises.svg"
+                                        alt="Tui Cruises Sustainability Award Logo" class="award-logo" width="240"
+                                        height="220">
                                 </figure>
                                 <div
                                     class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">
@@ -1024,10 +1024,8 @@
                         <div class="award-box-style1">
                             <div class="award-box-style1-wrapper">
                                 <figure class="award-box-icon text-center">
-                                    <a href="https://cdnlogo.com/logo/iagto_125939.html">
-                                        <img src="https://static.cdnlogo.com/logos/i/63/iagto.svg"
-                                            alt="IAGTO Supplier's Award Logo" width="140" height="220">
-                                    </a>
+                                    <img src="https://static.cdnlogo.com/logos/i/63/iagto.svg"
+                                        alt="IAGTO Supplier's Award Logo" width="140" height="220">
                                 </figure>
                                 <div
                                     class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">
