@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 class SeoHelper
 {
-    const FALLBACK_OG_IMAGE = 'assets/img/morocco-quest-og.webp';
+    const FALLBACK_OG_IMAGE = 'assets/img/placeholder-image.webp';
     const BRAND = 'Morocco Quest DMC';
 
     /**
