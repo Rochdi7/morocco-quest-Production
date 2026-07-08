@@ -39,8 +39,18 @@
                 <li>
                     <a href="{{ url('/blog') }}">Blog</a>
                 </li>
-                <li>
+                <li class="menu-item-has-children">
                     <a href="{{ route('dmc.marrakech') }}">DMC</a>
+                    <ul class="sub-menu">
+                        <li><a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a></li>
+                        <li><a href="{{ route('meetings-conventions.management') }}">Meetings & Conventions Management</a></li>
+                        <li><a href="{{ route('team-building.marrakech') }}">Team Building & Incentive Travel</a></li>
+                        <li><a href="{{ route('events-production.morocco') }}">Events Production & Communication</a></li>
+                        <li><a href="{{ route('congress-organization.morocco') }}">Professional Congress Organization</a></li>
+                        <li><a href="{{ route('destination-management.company') }}">Destination Management Company</a></li>
+                        <li><a href="{{ route('sustainable-events.morocco') }}">Sustainable Events</a></li>
+                        <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
+                    </ul>
                 </li>
                 <li class="menu-item-has-children">
                     <a href="#">Info Hub</a>
@@ -115,7 +125,19 @@
                         </li>
 
                         <li><a href="{{ route('blog.index') }}">Blog</a></li>
-                        <li><a href="{{ route('dmc.marrakech') }}">DMC</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="{{ route('dmc.marrakech') }}">DMC</a>
+                            <ul class="sub-menu">
+                                <li><a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a></li>
+                                <li><a href="{{ route('meetings-conventions.management') }}">Meetings & Conventions Management</a></li>
+                                <li><a href="{{ route('team-building.marrakech') }}">Team Building & Incentive Travel</a></li>
+                                <li><a href="{{ route('events-production.morocco') }}">Events Production & Communication</a></li>
+                                <li><a href="{{ route('congress-organization.morocco') }}">Professional Congress Organization</a></li>
+                                <li><a href="{{ route('destination-management.company') }}">Destination Management Company</a></li>
+                                <li><a href="{{ route('sustainable-events.morocco') }}">Sustainable Events</a></li>
+                                <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
+                            </ul>
+                        </li>
 
                         <li class="menu-item-has-children">
                             <a href="#">Info Hub</a>

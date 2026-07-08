@@ -703,7 +703,9 @@
                 var widgetId = grecaptcha.render(mount, {
                     sitekey: mount.getAttribute('data-sitekey'),
                     size: 'invisible',
-                    badge: 'bottomright',
+                    // bottom-right is already occupied by the WhatsApp button
+                    // and the scroll-to-top button, so the badge goes bottom-left.
+                    badge: 'bottomleft',
                     callback: function (token) {
                         // Token received: mark validated and submit the real form.
                         form.dataset.mqRecaptchaPassed = '1';

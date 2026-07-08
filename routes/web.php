@@ -23,8 +23,22 @@ use App\Http\Controllers\TourInquiryController;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\DmcController;
+use App\Http\Controllers\TeamBuildingController;
+use App\Http\Controllers\EventsProductionController;
+use App\Http\Controllers\DestinationManagementController;
+use App\Http\Controllers\SustainableEventsController;
+use App\Http\Controllers\EventSolutions360Controller;
+use App\Http\Controllers\CongressOrganizationController;
+use App\Http\Controllers\MeetingsConventionsController;
 
 Route::get('/dmc-marrakech', [DmcController::class, 'index'])->name('dmc.marrakech');
+Route::get('/meetings-conventions-management', [MeetingsConventionsController::class, 'index'])->name('meetings-conventions.management');
+Route::get('/professional-congress-organization', [CongressOrganizationController::class, 'index'])->name('congress-organization.morocco');
+Route::get('/destination-management-company', [DestinationManagementController::class, 'index'])->name('destination-management.company');
+Route::get('/team-building-marrakech', [TeamBuildingController::class, 'index'])->name('team-building.marrakech');
+Route::get('/events-production-morocco', [EventsProductionController::class, 'index'])->name('events-production.morocco');
+Route::get('/sustainable-events-morocco', [SustainableEventsController::class, 'index'])->name('sustainable-events.morocco');
+Route::get('/360-event-solutions', [EventSolutions360Controller::class, 'index'])->name('360-solutions.morocco');
 
 Route::get('/', function () {
     return app(HomepageController::class)->index();
