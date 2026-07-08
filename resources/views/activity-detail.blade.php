@@ -9,7 +9,7 @@
         '@context' => 'https://schema.org',
         '@type' => 'TouristAttraction',
         'name' => $activity->title ?? 'Morocco Activity',
-        'description' => Str::limit(strip_tags($activity->overview ?? $activity->subtitle ?? ''), 300),
+        'description' => Str::limit(html_entity_decode(strip_tags($activity->overview ?? $activity->subtitle ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8'), 300),
         'url' => url()->current(),
         'touristType' => ['Cultural', 'Adventure', 'Day Trip'],
         'isAccessibleForFree' => false,

@@ -152,7 +152,7 @@ class ActivityController extends Controller
             ->get();
 
         $description = $activity->meta_description
-            ?: Str::limit(strip_tags($activity->overview ?? ''), 155);
+            ?: Str::limit(html_entity_decode(strip_tags($activity->overview ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8'), 155);
         $image       = SeoHelper::ogImage($activity->first_image_url);
         $url         = url()->current();
 
@@ -171,6 +171,7 @@ class ActivityController extends Controller
         // Basic meta — richer TouristAttraction schema is in activity-detail.blade.php via @push('jsonld')
         SeoHelper::setDetail($title, $description, $url, $keywordArray, $image, 'TouristAttraction');
 
+        OpenGraph::setType('product');
         OpenGraph::addProperty('twitter:card', 'summary_large_image')
             ->addProperty('twitter:title', $title)
             ->addProperty('twitter:description', $description)

@@ -167,6 +167,7 @@ class BlogController extends Controller
         OpenGraph::setTitle($title)
             ->setDescription($description)
             ->setUrl($url)
+            ->setType('article')
             ->addImage($image);
 
         JsonLd::setType('BlogPosting')

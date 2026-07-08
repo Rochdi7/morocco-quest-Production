@@ -179,7 +179,7 @@ class TourController extends Controller
             ->get();
 
         $description = $tour->meta_description
-            ?: Str::limit(strip_tags($tour->overview), 155);
+            ?: Str::limit(html_entity_decode(strip_tags($tour->overview), ENT_QUOTES | ENT_HTML5, 'UTF-8'), 155);
         $image       = SeoHelper::ogImage($tour->first_image_url);
         $url         = url()->current();
 
@@ -197,7 +197,7 @@ class TourController extends Controller
 
         SeoHelper::setDetail($title, $description, $url, $keywordArray, $image, 'TouristTrip');
 
-        OpenGraph::setType('article')
+        OpenGraph::setType('product')
             ->addImage($image, ['height' => 630, 'width' => 1200]);
 
         return view('tour-detail', compact('tour', 'relatedTours', 'title', 'description', 'keywords'));

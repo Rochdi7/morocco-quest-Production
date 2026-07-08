@@ -167,7 +167,8 @@
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
     {!! Twitter::generate() !!}
-    {!! JsonLd::generate() !!}
+    {{-- JsonLd::generate() disabled: detail pages push richer hand-crafted schema via @stack('jsonld').
+         Emitting both would produce duplicate @type blocks on every tour/activity/blog page. --}}
 
     {{--
         DO NOT add static <meta name="twitter:*"> here.

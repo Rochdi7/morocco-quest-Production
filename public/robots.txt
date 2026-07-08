@@ -20,4 +20,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 Sitemap: https://morocco-quest.com/sitemap.xml

@@ -15,8 +15,28 @@
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
+<script type="application/ld+json">
+{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'name' => 'Frequently Asked Questions | Morocco Quest',
+    'description' => 'Find answers to common questions about our tours, activities, bookings, and travel policies.',
+    'url' => url('/faq'),
+    'mainEntity' => [
+        ['@type' => 'Question', 'name' => 'What travel documents do I need for Morocco?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Most travelers need a passport valid for at least six months from their entry date. Visa requirements depend on your nationality. We recommend checking with the official Moroccan consulate or embassy website for your country well before your trip.']],
+        ['@type' => 'Question', 'name' => 'Is Morocco safe for tourists, especially solo female travelers?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Morocco is generally considered safe for tourists, including solo female travelers. Standard precautions apply, like being aware of surroundings, especially in busy markets (souks). Traveling with a reputable guide or group like Morocco Quest can enhance safety and local insights.']],
+        ['@type' => 'Question', 'name' => 'What\'s the best time of year to visit Morocco?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Spring (March-May) and Autumn (September-November) offer the most pleasant weather across the country. Summers can be very hot, particularly in the desert and Marrakech.']],
+        ['@type' => 'Question', 'name' => 'What currency should I use and how accessible are ATMs?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'The currency is the Moroccan Dirham (MAD). Credit cards are accepted in cities, but cash is essential for small purchases. ATMs are widely available.']],
+        ['@type' => 'Question', 'name' => 'How do I book a tour with Morocco Quest?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'You can book directly on our website or contact us via email or the contact form for personalized help.']],
+        ['@type' => 'Question', 'name' => 'What is typically included in your tour price?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Tour prices generally include accommodation, transportation, some meals, guided sightseeing, and entrance fees. International flights are not included.']],
+        ['@type' => 'Question', 'name' => 'Can you cater to dietary restrictions (vegetarian, gluten-free)?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Yes. Please inform us during booking and we will coordinate with our accommodation and meal partners.']],
+        ['@type' => 'Question', 'name' => 'What should I pack for a trip to Morocco?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Bring layers for varying temperatures, modest clothing, walking shoes, sun protection, and personal medications.']],
+    ],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+</script>
 @endpush
-    {{-- @section('structured_data')
+    {{-- Legacy structured_data section (meta/og/twitter) — handled by app2.blade.php SEOTools, keep commented:
+    @section('structured_data')
 <link rel="canonical" href="{{ url()->current() }}">
 <meta property="og:title" content="FAQ - Morocco Travel Frequently Asked Questions | Morocco Quest" />
 <meta property="og:description" content="Get answers to your Morocco travel questions: visas, safety, packing tips, booking process, and more." />
