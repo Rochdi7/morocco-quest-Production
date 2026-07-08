@@ -181,6 +181,41 @@
     </div>
 </section>
 
+{{-- COMPLETE SOLUTIONS ICON GRID --}}
+<section class="space pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span class="sec-subtitle">What's Covered</span>
+                <h2 class="sec-title">Complete Meetings & Conventions Solutions</h2>
+                <p>Every component of a corporate meeting or convention, handled under one agreement.</p>
+            </div>
+        </div>
+        <div class="row g-4 mt-2">
+            @php
+            $solutions = [
+                ['icon'=>'fa-building',        'label'=>'Venue Sourcing'],
+                ['icon'=>'fa-bed',             'label'=>'Delegate Accommodation'],
+                ['icon'=>'fa-microphone-lines','label'=>'AV & Staging'],
+                ['icon'=>'fa-language',        'label'=>'Interpretation Services'],
+                ['icon'=>'fa-bus',             'label'=>'Transfers & Logistics'],
+                ['icon'=>'fa-id-badge',        'label'=>'Registration & Badging'],
+                ['icon'=>'fa-utensils',        'label'=>'Catering & Gala Dinners'],
+                ['icon'=>'fa-headset',         'label'=>'On-Site Delivery Team'],
+            ];
+            @endphp
+            @foreach($solutions as $s)
+            <div class="col-6 col-md-3">
+                <div class="text-center p-4" style="background:#fff;border:1px solid #ececec;border-radius:12px;height:100%;">
+                    <i class="fa-solid {{ $s['icon'] }}" style="font-size:1.8rem;color:var(--theme-color);display:block;margin-bottom:14px;"></i>
+                    <div style="font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.02em;">{{ $s['label'] }}</div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 {{-- SIGNATURE MODULE: VENUE FORMAT MATRIX --}}
 <section class="space bg-theme-07">
     <div class="container">

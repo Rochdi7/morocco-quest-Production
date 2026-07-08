@@ -181,6 +181,41 @@
     </div>
 </section>
 
+{{-- COMPLETE SOLUTIONS ICON GRID --}}
+<section class="space pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span class="sec-subtitle">What's Covered</span>
+                <h2 class="sec-title">Complete Congress Organization Solutions</h2>
+                <p>Every component of a scientific or association congress, handled under one agreement.</p>
+            </div>
+        </div>
+        <div class="row g-4 mt-2">
+            @php
+            $solutions = [
+                ['icon'=>'fa-file-lines',     'label'=>'Abstract Management'],
+                ['icon'=>'fa-id-badge',       'label'=>'Registration & Badging'],
+                ['icon'=>'fa-handshake',      'label'=>'Sponsor & Exhibitor Sales'],
+                ['icon'=>'fa-building-columns','label'=>'Venue & Accreditation Support'],
+                ['icon'=>'fa-microphone-lines','label'=>'AV & Session Production'],
+                ['icon'=>'fa-bed',            'label'=>'Delegate Accommodation'],
+                ['icon'=>'fa-chart-line',     'label'=>'Post-Congress Reporting'],
+                ['icon'=>'fa-headset',        'label'=>'On-Site Delivery Team'],
+            ];
+            @endphp
+            @foreach($solutions as $s)
+            <div class="col-6 col-md-3">
+                <div class="text-center p-4" style="background:#fff;border:1px solid #ececec;border-radius:12px;height:100%;">
+                    <i class="fa-solid {{ $s['icon'] }}" style="font-size:1.8rem;color:var(--theme-color);display:block;margin-bottom:14px;"></i>
+                    <div style="font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.02em;">{{ $s['label'] }}</div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 {{-- SIGNATURE MODULE: CONGRESS LIFECYCLE TIMELINE --}}
 <section class="space bg-theme-07">
     <div class="container">

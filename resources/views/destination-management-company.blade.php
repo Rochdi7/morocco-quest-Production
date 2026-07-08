@@ -181,6 +181,41 @@
     </div>
 </section>
 
+{{-- COMPLETE SOLUTIONS ICON GRID --}}
+<section class="space pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span class="sec-subtitle">What's Covered</span>
+                <h2 class="sec-title">Complete Destination Management Solutions</h2>
+                <p>Every component of a Morocco ground programme, handled under one agreement.</p>
+            </div>
+        </div>
+        <div class="row g-4 mt-2">
+            @php
+            $solutions = [
+                ['icon'=>'fa-car-side',        'label'=>'Transport & Transfers'],
+                ['icon'=>'fa-hotel',           'label'=>'Hotel & Venue Sourcing'],
+                ['icon'=>'fa-mountain-sun',    'label'=>'Activity Programming'],
+                ['icon'=>'fa-headset',         'label'=>'On-Site Management'],
+                ['icon'=>'fa-file-contract',   'label'=>'Licensing & Insurance'],
+                ['icon'=>'fa-users',           'label'=>'Group Coordination'],
+                ['icon'=>'fa-utensils',        'label'=>'Catering & Dining'],
+                ['icon'=>'fa-triangle-exclamation', 'label'=>'24/7 Crisis Response'],
+            ];
+            @endphp
+            @foreach($solutions as $s)
+            <div class="col-6 col-md-3">
+                <div class="text-center p-4" style="background:#fff;border:1px solid #ececec;border-radius:12px;height:100%;">
+                    <i class="fa-solid {{ $s['icon'] }}" style="font-size:1.8rem;color:var(--theme-color);display:block;margin-bottom:14px;"></i>
+                    <div style="font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.02em;">{{ $s['label'] }}</div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 {{-- SIGNATURE MODULE: HOW TO EVALUATE A DMC PARTNER --}}
 <section class="space bg-theme-07">
     <div class="container">

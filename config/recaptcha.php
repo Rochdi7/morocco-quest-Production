@@ -9,7 +9,7 @@ return [
     |
     | Keys are pulled from the environment so they are never hard-coded.
     | Obtain them from https://www.google.com/recaptcha/admin
-    | (choose "reCAPTCHA v2" -> "Invisible reCAPTCHA badge").
+    | (choose "reCAPTCHA v2" -> "I'm not a robot" Checkbox).
     |
     */
 
