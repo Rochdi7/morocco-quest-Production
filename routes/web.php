@@ -104,13 +104,6 @@ Route::get('/terms-and-conditions', [StaticPageController::class, 'terms'])->nam
 Route::get('/cookie-policy', [StaticPageController::class, 'cookie'])->name('cookie.policy');
 Route::get('/privacy-policy', [StaticPageController::class, 'privacy'])->name('privacy.policy');
 
-Route::get('/test-mail', function () {
-    Mail::raw('Test email from Morocco Quest', function ($message) {
-        $message->to('morocco.quests@gmail.com')->subject('Test Email');
-    });
-    return 'Mail sent';
-});
-
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::prefix('tours')->name('tours.')->controller(TourController::class)->group(function () {
