@@ -159,6 +159,7 @@ class BlogController extends Controller
         )));
         $keywords = implode(', ', $allKeywords);
 
+        SEOMeta::setTitleDefault('');
         SEOMeta::setTitle($title);
         SEOMeta::setDescription($description);
         SEOMeta::setCanonical($url);

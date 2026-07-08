@@ -33,6 +33,7 @@ class SeoHelper
     ): void {
         $safeImage = self::ogImage($image);
 
+        SEOMeta::setTitleDefault('');
         SEOMeta::setTitle($title)
             ->setDescription($description)
             ->setCanonical($canonicalUrl)
@@ -67,6 +68,7 @@ class SeoHelper
     ): void {
         $safeImage = self::ogImage($image);
 
+        SEOMeta::setTitleDefault('');
         SEOMeta::setTitle($title)
             ->setDescription($description)
             ->setCanonical($canonicalUrl)
