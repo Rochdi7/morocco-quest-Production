@@ -120,6 +120,29 @@ class BlogResource extends Resource
                     ->label('Image Description')
                     ->rows(3)
                     ->nullable(),
+
+                Forms\Components\Section::make('SEO')
+                    ->description('Optional. Override the auto-generated meta title and description for search engines.')
+                    ->collapsible()
+                    ->collapsed()
+                    ->schema([
+                        Forms\Components\TextInput::make('seo_title')
+                            ->label('SEO Title')
+                            ->nullable()
+                            ->maxLength(70)
+                            ->helperText('Max 70 characters. Leave blank to auto-generate from blog title.')
+                            ->placeholder('e.g. Best Time to Visit Morocco 2025 | Morocco Quest Blog')
+                            ->columnSpanFull(),
+
+                        Forms\Components\Textarea::make('meta_description')
+                            ->label('Meta Description')
+                            ->nullable()
+                            ->maxLength(160)
+                            ->rows(3)
+                            ->helperText('Max 160 characters. Leave blank to auto-generate from blog summary.')
+                            ->placeholder('e.g. Discover the best time to visit Morocco by season — weather, festivals, crowds, and insider tips from a local travel expert.')
+                            ->columnSpanFull(),
+                    ]),
             ]);
     }
 

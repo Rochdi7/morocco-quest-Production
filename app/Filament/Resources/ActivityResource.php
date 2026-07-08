@@ -267,13 +267,36 @@ class ActivityResource extends Resource
                             ->nullable(),
                     ]),
 
+                Section::make('SEO')
+                    ->description('Optional. Override the auto-generated meta title and description for search engines.')
+                    ->collapsible()
+                    ->collapsed()
+                    ->schema([
+                        TextInput::make('seo_title')
+                            ->label('SEO Title')
+                            ->nullable()
+                            ->maxLength(70)
+                            ->helperText('Max 70 characters. Leave blank to auto-generate from activity title.')
+                            ->placeholder('e.g. Hot Air Balloon Ride Marrakech | Morocco Quest')
+                            ->columnSpanFull(),
+
+                        Textarea::make('meta_description')
+                            ->label('Meta Description')
+                            ->nullable()
+                            ->maxLength(160)
+                            ->rows(3)
+                            ->helperText('Max 160 characters. Leave blank to auto-generate from activity overview.')
+                            ->placeholder('e.g. Book a magical sunrise hot air balloon ride over Marrakech. Includes Berber breakfast, 4×4 transfer, and local guide.')
+                            ->columnSpanFull(),
+                    ]),
+
                 Section::make('Activity Status')
                     ->schema([
                         Toggle::make('is_popular')
                             ->label('Mark as Popular')
                             ->inline(false)
                             ->default(false),
-                    
+
                     ]),
             ]);
     }

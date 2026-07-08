@@ -178,11 +178,13 @@ class TourController extends Controller
             ->take(4)
             ->get();
 
-        $description = Str::limit(strip_tags($tour->overview), 155);
+        $description = $tour->meta_description
+            ?: Str::limit(strip_tags($tour->overview), 155);
         $image       = SeoHelper::ogImage($tour->first_image_url);
         $url         = url()->current();
 
-        $title = $tour->title . ' | Morocco Tours from Marrakech | Morocco Quest';
+        $title = $tour->seo_title
+            ?: $tour->title . ' | Morocco Tours from Marrakech | Morocco Quest';
 
         $keywordArray = array_filter(array_unique([
             strtolower($tour->title),

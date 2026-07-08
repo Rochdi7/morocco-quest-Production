@@ -260,6 +260,29 @@ class TourResource extends Resource
                             ->placeholder('e.g. 10'),
                     ]),
 
+                Section::make('SEO')
+                    ->description('Optional. Override the auto-generated meta title and description for search engines.')
+                    ->collapsible()
+                    ->collapsed()
+                    ->schema([
+                        TextInput::make('seo_title')
+                            ->label('SEO Title')
+                            ->nullable()
+                            ->maxLength(70)
+                            ->helperText('Max 70 characters. Leave blank to auto-generate from tour title.')
+                            ->placeholder('e.g. 5-Day Sahara Desert Tour from Marrakech | Morocco Quest')
+                            ->columnSpanFull(),
+
+                        Textarea::make('meta_description')
+                            ->label('Meta Description')
+                            ->nullable()
+                            ->maxLength(160)
+                            ->rows(3)
+                            ->helperText('Max 160 characters. Leave blank to auto-generate from tour overview.')
+                            ->placeholder('e.g. Book this private 5-day Sahara desert tour from Marrakech. Includes camel trek, luxury desert camp, and Atlas Mountains drive.')
+                            ->columnSpanFull(),
+                    ]),
+
                 Section::make('Status & Visibility')
                     ->schema([
                         Toggle::make('is_popular')

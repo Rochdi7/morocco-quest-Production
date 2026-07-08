@@ -151,11 +151,13 @@ class ActivityController extends Controller
             ->take(3)
             ->get();
 
-        $description = Str::limit(strip_tags($activity->overview ?? ''), 155);
+        $description = $activity->meta_description
+            ?: Str::limit(strip_tags($activity->overview ?? ''), 155);
         $image       = SeoHelper::ogImage($activity->first_image_url);
         $url         = url()->current();
 
-        $title = $activity->title . ' | Morocco Day Tours & Activities | Morocco Quest';
+        $title = $activity->seo_title
+            ?: $activity->title . ' | Morocco Day Tours & Activities | Morocco Quest';
 
         $keywordArray = array_filter([
             strtolower($activity->title),

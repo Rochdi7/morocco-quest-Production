@@ -24,6 +24,8 @@ class Activity extends Model
         'activity_category_id',
         'title',
         'slug',
+        'seo_title',
+        'meta_description',
         'subtitle',
         'overview',
         'itinerary',

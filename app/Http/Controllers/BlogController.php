@@ -143,12 +143,14 @@ class BlogController extends Controller
 
         $sidebarData = $this->getSidebarData();
 
-        $description = Str::limit(strip_tags($post->summary ?? $post->content), 155);
+        $description = $post->meta_description
+            ?: Str::limit(strip_tags($post->summary ?? $post->content), 155);
         $image       = SeoHelper::ogImage($post->featured_image_url);
         $url         = url()->current();
         $tagKeywords = $post->tags->pluck('name')->toArray();
 
-        $title = $post->title . ' | Morocco Travel Blog | Morocco Quest';
+        $title = $post->seo_title
+            ?: $post->title . ' | Morocco Travel Blog | Morocco Quest';
 
         $allKeywords = array_unique(array_filter(array_merge(
             [strtolower($post->title)],

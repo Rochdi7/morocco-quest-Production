@@ -20,6 +20,8 @@ class Tour extends Model
     protected $fillable = [
         'title',
         'slug',
+        'seo_title',
+        'meta_description',
         'overview',
         'includes',
         'excludes',
