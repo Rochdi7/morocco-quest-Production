@@ -8,8 +8,8 @@ Morocco Quest (also known as Morocco Quest DMC) is based in Marrakech, Morocco. 
 
 - [Home](https://morocco-quest.com/): Overview of all Morocco tours, packages, and the agency
 - [All Tours](https://morocco-quest.com/tours): Browse all private and group Morocco tour packages
-- [Multi-Day Trips](https://morocco-quest.com/trips): 3, 5, and 7-day Morocco tour itineraries including Sahara desert
 - [Destinations](https://morocco-quest.com/destinations): Morocco tour destinations — Marrakech, Fes, Sahara, Atlas Mountains
+- [Multi-Day Tours](https://morocco-quest.com/tours/type/multi-day): All multi-day Morocco tours including Sahara desert and imperial cities
 - [Activities](https://morocco-quest.com/activities): Morocco day trips and activities by category
 - [Activity Categories](https://morocco-quest.com/activity-categories): Browse activities by type
 - [Blog](https://morocco-quest.com/blog): Morocco travel guide, tips, and itinerary advice
@@ -17,8 +17,22 @@ Morocco Quest (also known as Morocco Quest DMC) is based in Marrakech, Morocco. 
 - [About](https://morocco-quest.com/about): About Morocco Quest travel agency and our local team
 - [Contact](https://morocco-quest.com/contact): Contact Morocco Quest to book or inquire about tours
 - [DMC Marrakech](https://morocco-quest.com/dmc-marrakech): Destination Management Company services in Marrakech
-- [Multi-Day Tours](https://morocco-quest.com/tours/type/multi-day): All multi-day Morocco tours
-- [One-Day Tours](https://morocco-quest.com/tours/type/one-day): All one-day Morocco tours and day trips
+
+## Top Tours
+
+- [5-Day Marrakech Luxury City Break](https://morocco-quest.com/tours/5-day-marrakech-luxury-city-break-gardens-culture-relaxation): Gardens, culture and relaxation — 5 days from Marrakech
+- [5-Day Marrakech & Sahara Desert Tour](https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour): Luxury desert discovery — camel trekking, dunes, desert camp
+- [8-Day Morocco Luxury Cultural Discovery](https://morocco-quest.com/tours/8-day-morocco-luxury-cultural-discovery-art-heritage-culinary-delights): Art, heritage & culinary highlights across Morocco
+- [Royal Cities of Morocco 6-Day Tour](https://morocco-quest.com/tours/royal-cities-of-morocco-6-day-luxury-imperial-cultural-tour): Imperial cultural tour — Fes, Meknes, Rabat, Casablanca
+- [9-Day Andalusian Morocco Rail Tour](https://morocco-quest.com/tours/9-day-andalusian-morocco-train-tour): From Tangier to Marrakech by train — heritage and coast
+
+## Top Activities
+
+- [Hot Air Balloon Ride over Marrakech](https://morocco-quest.com/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast): Sunrise flight with Berber breakfast
+- [Moroccan Cooking Class in Marrakech](https://morocco-quest.com/activities/authentic-3-hour-moroccan-cooking-class-in-marrakech-morning-afternoon-sessions): 3-hour hands-on tagine and couscous class
+- [Marrakech Medina Hidden Gems Tour](https://morocco-quest.com/activities/marrakech-medina-hidden-gems-tour-discover-authentic-local-life-with-a-private-guide): Private guided tour of souks and local life
+- [Essaouira Day Trip from Marrakech](https://morocco-quest.com/activities/essaouira-day-trip-from-marrakech-private-atlantic-coast-experience): Atlantic coast, ramparts, and argan oil workshops
+- [High Atlas Day Hike & Berber Hospitality](https://morocco-quest.com/activities/a-day-in-the-high-atlas-hike-tea-ritual-berber-hospitality): Trek to Berber villages with traditional tea ritual
 
 ## About the Agency
 

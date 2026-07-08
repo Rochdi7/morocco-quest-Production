@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tour;
 use App\Models\Activity;
-use App\Models\Post;
 use App\Models\Blog;
-use App\Models\Trip;
 use App\Models\Place;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
@@ -22,12 +20,10 @@ class SitemapController extends Controller
         $urls = [
             ['loc' => route('home'),                        'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '1.0'],
             ['loc' => route('tours.index'),                 'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
-            ['loc' => route('trips.index'),                 'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
             ['loc' => route('activity-categories.index'),   'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
             ['loc' => route('destinations.index'),          'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('dmc.marrakech'),               'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
             ['loc' => route('tours.multi_day'),             'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.8'],
-            ['loc' => route('tours.one_day'),               'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.8'],
             ['loc' => route('about'),                       'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('faq'),                         'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('blog.index'),                  'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.7'],
@@ -37,9 +33,7 @@ class SitemapController extends Controller
         ];
 
         $this->addModel($urls, Tour::class,     'tours.show',      'weekly',  '0.8');
-        $this->addModel($urls, Trip::class,     'trips.show',      'weekly',  '0.8');
         $this->addModel($urls, Activity::class, 'activities.show', 'weekly',  '0.7');
-        $this->addModel($urls, Post::class,     'blog.show',       'weekly',  '0.6');
         $this->addModel($urls, Blog::class,     'blog.show',       'weekly',  '0.6');
         $this->addPlacePages($urls, $now);
 

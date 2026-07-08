@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Tour;
 use App\Models\Activity;
 use App\Models\Blog;
+use App\Support\SeoHelper;
 use Illuminate\Support\Str;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
@@ -44,9 +45,11 @@ class SearchBarController extends Controller
         $keywords = implode(', ', array_unique($keywordArray));
 
 
+        SeoHelper::noindex();
+
         SEOMeta::setTitle($title)
             ->setDescription(Str::limit($description, 160))
-            ->setCanonical($url)
+            ->setCanonical(route('home'))
             ->addKeyword($keywordArray);
 
         OpenGraph::setTitle($title)

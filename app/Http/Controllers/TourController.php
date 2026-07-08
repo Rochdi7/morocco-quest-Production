@@ -357,7 +357,15 @@ class TourController extends Controller
 
     public function showMultiDay()
     {
-        $tours      = Tour::with(['firstImage', 'places'])->paginate(12);
+        $multiDayTypes = ['Classical Tours', 'Cultural Tour', 'Garden Tour', 'Art Tour', 'Adventure Tours'];
+        $tours = Tour::where(function ($q) use ($multiDayTypes) {
+                foreach ($multiDayTypes as $type) {
+                    $q->orWhere('tour_type', 'LIKE', "%{$type}%");
+                }
+            })
+            ->orWhereRaw('CAST(duration_days AS UNSIGNED) > 1')
+            ->with(['firstImage', 'places'])
+            ->paginate(12);
         $activities = new LengthAwarePaginator([], 0, 12);
 
         $title       = 'Morocco Multi Day Tours | 3, 5 & 7 Day Morocco Tour Packages | Morocco Quest';
@@ -405,6 +413,10 @@ class TourController extends Controller
         ];
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywords);
+
+        if ($tours->isEmpty() && $activities->isEmpty()) {
+            SeoHelper::noindex();
+        }
 
         return view('type-filter', [
             'tours'       => $tours,

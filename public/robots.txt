@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+Disallow: /adminPanel/
+Disallow: /login
+Disallow: /register
+Disallow: /password/
+Disallow: /search
+Disallow: /search-bar
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://morocco-quest.com/sitemap.xml

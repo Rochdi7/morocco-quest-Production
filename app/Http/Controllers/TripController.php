@@ -10,8 +10,12 @@ use App\Support\SeoHelper;
 
 class TripController extends Controller
 {
-    public function index(): View
+    public function index(): \Illuminate\Http\RedirectResponse|View
     {
+        if (Trip::count() === 0) {
+            return redirect()->route('tours.index', [], 301);
+        }
+
         $query = Trip::query();
         $query->with('images');
         $query->latest();

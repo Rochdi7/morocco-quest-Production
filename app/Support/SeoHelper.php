@@ -9,8 +9,8 @@ use Illuminate\Support\Str;
 
 class SeoHelper
 {
-    const FALLBACK_OG_IMAGE = 'assets/img/placeholder-image.webp';
-    const BRAND = 'Morocco Quest';
+    const FALLBACK_OG_IMAGE = 'assets/img/morocco-quest-og.webp';
+    const BRAND = 'Morocco Quest DMC';
 
     /**
      * Resolve a safe OG image URL — never passes null downstream.
@@ -43,6 +43,11 @@ class SeoHelper
             ->setUrl($canonicalUrl)
             ->addImage($safeImage);
 
+        OpenGraph::addProperty('twitter:card', 'summary_large_image');
+        OpenGraph::addProperty('twitter:title', $title);
+        OpenGraph::addProperty('twitter:description', $description);
+        OpenGraph::addProperty('twitter:image', $safeImage);
+
         JsonLd::setTitle($title)
             ->setDescription($description)
             ->setType('CollectionPage');
@@ -71,6 +76,11 @@ class SeoHelper
             ->setDescription($description)
             ->setUrl($canonicalUrl)
             ->addImage($safeImage);
+
+        OpenGraph::addProperty('twitter:card', 'summary_large_image');
+        OpenGraph::addProperty('twitter:title', $title);
+        OpenGraph::addProperty('twitter:description', $description);
+        OpenGraph::addProperty('twitter:image', $safeImage);
 
         JsonLd::setTitle($title)
             ->setDescription($description)
