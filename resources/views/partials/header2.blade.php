@@ -39,6 +39,7 @@
                 <li>
                     <a href="{{ url('/blog') }}">Blog</a>
                 </li>
+                {{-- DMC dropdown hidden per request — restore by removing this comment wrapper
                 <li class="menu-item-has-children">
                     <a href="{{ route('dmc.marrakech') }}">DMC</a>
                     <ul class="sub-menu">
@@ -52,6 +53,7 @@
                         <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
                     </ul>
                 </li>
+                --}}
                 <li class="menu-item-has-children">
                     <a href="#">Info Hub</a>
                     <ul class="sub-menu">
@@ -125,6 +127,7 @@
                         </li>
 
                         <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                        {{-- DMC dropdown hidden per request — restore by removing this comment wrapper
                         <li class="menu-item-has-children">
                             <a href="{{ route('dmc.marrakech') }}">DMC</a>
                             <ul class="sub-menu">
@@ -138,6 +141,7 @@
                                 <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
                             </ul>
                         </li>
+                        --}}
 
                         <li class="menu-item-has-children">
                             <a href="#">Info Hub</a>

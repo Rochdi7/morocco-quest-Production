@@ -11,7 +11,7 @@
     "@type": "Service",
     "serviceType": "Event Production and Communication",
     "name": "Events Production & Communication — Morocco Quest DMC",
-    "description": "Morocco Quest produces corporate events in Marrakech and across Morocco, covering staging, lighting, sound, LED, scenography and on-site technical management for product launches, brand activations and galas.",
+    "description": "Morocco Quest produces corporate events in Marrakech and across Morocco, covering scenography, lighting, sound, LED, video and entertainment booking for brand launches, activations and galas.",
     "provider": {
         "@type": "TravelAgency",
         "name": "Morocco Quest",
@@ -54,43 +54,28 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What does an event production company do for a corporate event in Morocco?",
-            "acceptedAnswer": { "@type": "Answer", "text": "An event production partner turns a creative brief into a delivered show: designing the stage and scenography, sourcing lighting and sound equipment, booking LED screens and technical crews, managing rigging and power on-site, and running the live show from load-in to strike." }
+            "name": "Can you source specialist production equipment that isn't available locally?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Where a specific LED pitch, line array or rigging component isn't held by our local suppliers, we arrange import from Europe. That gets built into the production timeline early, since customs and freight need lead time — it's one of the first questions we ask on a technical call." }
         },
         {
             "@type": "Question",
-            "name": "How far in advance should we book event production services in Marrakech?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For a full production with custom scenography and imported equipment, 3 to 4 months gives enough time for design, quotes and freight where needed. Simpler formats — a branded dinner or a small activation — can often be produced within 4 to 6 weeks." }
+            "name": "Can you build a stage in a riad courtyard or a desert camp?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it's a large part of what we do. Riads and desert venues aren't built for rigging, so every load-in starts with a site survey — floor loads, power access, generator placement, sightlines — before a single truss goes up. What works in a convention hall doesn't automatically work in a 400-year-old courtyard." }
         },
         {
             "@type": "Question",
-            "name": "Can you produce events in unconventional venues like riads or the desert?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, this is one of our core strengths. Riads, palmeraie estates and desert camps all require site-specific power planning, rigging solutions that respect the architecture, and weather contingency for outdoor stages — we handle all of it as part of the technical production plan." }
+            "name": "How much lead time does a full production build need?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A production with custom scenography and imported equipment needs 3 to 4 months for design, sourcing and freight. A branded dinner or a smaller activation using locally available kit can often be turned around in 4 to 6 weeks, though we'd rather have more time on anything with a custom set build." }
         },
         {
             "@type": "Question",
-            "name": "Do you handle live broadcast or hybrid streaming for corporate events?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with broadcast crews who provide multi-camera coverage, live switching and streaming for product launches or award ceremonies that need to reach an audience beyond the room." }
+            "name": "What happens to an outdoor production if the weather turns?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Every outdoor build gets a weather contingency written into the production plan before the event, not improvised on the day — covered rigging options, an indoor or tented fallback venue held on standby, and a call-time deadline for switching plans. Marrakech evenings are usually dry, but we don't stage a launch on 'usually.'" }
         },
         {
             "@type": "Question",
-            "name": "What is included in an event production proposal?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A typical proposal covers scenography and set design concepts, a technical plan for lighting, sound and LED, entertainment booking, crew and rigging costs, and a day-by-day production schedule from build to strike. Pricing is quoted net." }
-        },
-        {
-            "@type": "Question",
-            "name": "Can Morocco Quest source specialist equipment not available locally?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Where a specific rig, LED pitch or line array isn't available from local suppliers, we can arrange import of specialist equipment from Europe, coordinated with customs and freight timelines built into the production schedule." }
-        },
-        {
-            "@type": "Question",
-            "name": "How large a production can you manage in Marrakech?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We produce everything from 80-guest brand activations in a riad courtyard to 500-guest gala dinners and award ceremonies in convention centres or desert venues, with full staging, lighting and sound." }
-        },
-        {
-            "@type": "Question",
-            "name": "Why produce a brand event in Marrakech instead of Western Europe?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Marrakech offers backdrops — medina, desert, Atlas Mountains — that elevate brand storytelling in a way a hotel ballroom in Western Europe cannot, alongside production costs that generally run well below Western European equivalents and experienced local technical crews." }
+            "name": "Does your technical crew work in English?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our lighting, sound and stage crews are used to briefs and rehearsals in English and French, and have worked alongside international agencies and directors on past productions — you won't need a translator on the technical walkthrough." }
         }
     ]
 }
@@ -107,10 +92,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Events Production & Communication</h1>
+                    <h1 class="breadcrumb-title">Your Launch Doesn't Need Another Hotel Ballroom Behind It</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Staging, lighting, sound and scenography —<br>
-                        full-service event production for corporate audiences in Morocco.
+                        Staging, lighting, sound and scenography for brand events in Marrakech — produced by a crew that's on-site for load-in, rehearsal and strike, not just the pitch.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -125,139 +109,103 @@
     </div>
 </section>
 
-{{-- TRUST BAR --}}
-<section style="background:var(--theme-color);padding:22px 0;">
-    <div class="container">
-        <div class="row text-center gy-3">
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">500</div><div style="font-size:.85rem;opacity:.9;">Max guests produced on-site</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">3</div><div style="font-size:.85rem;opacity:.9;">Core disciplines: staging, AV, scenography</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">24/7</div><div style="font-size:.85rem;opacity:.9;">On-site technical management</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">100%</div><div style="font-size:.85rem;opacity:.9;">Net-rate transparency</div></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- INTRODUCTION --}}
-<section class="space">
-    <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
-            <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Event Production & Communication</span>
-                    <h2 class="sec-title">Corporate Events, Produced From Concept to Strike</h2>
-                </div>
-                <p>Producing a brand event in a destination you don't know means coordinating riggers, sound engineers, LED suppliers and venue managers you've never worked with, on a timeline that rarely gives you room to fix mistakes on-site.</p>
-                <p>Morocco Quest produces <strong>corporate events in Morocco</strong> for brands, agencies and companies — product launches, brand activations, press events, gala dinners and award ceremonies. We handle staging and scenography, lighting and sound design, LED and video, entertainment booking, and full on-site technical management, so your team can focus on the guest experience, not the cabling.</p>
-                <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Staging, rigging and scenography built for the venue</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Lighting design, DMX control and line array sound systems</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> LED walls, video content and live broadcast support</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Entertainment booking and on-site technical direction</li>
-                </ul>
-                <a href="#events-enquiry" class="vs-btn mt-4">Request a Proposal</a>
-            </div>
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp') }}"
-                     alt="Staged corporate event production setup in Marrakech with lighting and dining design"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- WHO IT'S FOR / WHEN NEEDED --}}
-<section class="space bg-theme-07">
+{{-- INTRO --}}
+<section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Who This Is For</span>
-                    <h2 class="sec-title">Built for Teams Who Need a Production Partner on the Ground</h2>
-                </div>
+            <div class="col-lg-9 text-center">
+                <p style="font-size:1.1rem;color:#444;">Most brand events don't fall apart on the big idea — they fall apart on the technical rider the venue can't actually deliver, the LED wall that clears customs two days late, or a stage rigged for a hall that turns out to have half the ceiling height on the drawing.</p>
+                <p style="font-size:1.05rem;color:#555;">Morocco Quest produces corporate events in Marrakech and across Morocco end to end: scenography, lighting, sound, LED and entertainment, run by a technical team physically present from load-in to strike. You brief one production partner, not six separate suppliers who've never met.</p>
+                <a href="#events-enquiry" class="vs-btn mt-3">Talk With Our Production Team</a>
             </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $audiences = [
-                ['icon'=>'fa-bullhorn',        'title'=>'Marketing & Communication Teams', 'body'=>'Launching a product or campaign and need a fully staged, on-brand moment for press and clients.'],
-                ['icon'=>'fa-people-group',    'title'=>'Brand & Activation Agencies',      'body'=>'Producing an activation for a client and need a reliable local technical partner in Morocco.'],
-                ['icon'=>'fa-trophy',          'title'=>'Companies Hosting Award Ceremonies','body'=>'Annual awards or recognition events that need a stage, lighting and a run of show that holds together.'],
-                ['icon'=>'fa-champagne-glasses','title'=>'Anniversary & Gala Organizers',    'body'=>'Milestone celebrations that call for scenography and entertainment beyond a standard banquet.'],
-            ];
-            @endphp
-            @foreach($audiences as $a)
-            <div class="col-sm-6 col-lg-3">
-                <div class="text-center p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="width:52px;height:52px;background:var(--theme-color);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-                        <i class="fa-solid {{ $a['icon'] }}" style="color:#fff;font-size:1.3rem;"></i>
-                    </div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $a['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $a['body'] }}</div>
-                </div>
-            </div>
-            @endforeach
         </div>
     </div>
 </section>
 
-{{-- WHY MOROCCO / OUR APPROACH --}}
+{{-- ALTERNATING SERVICE STACK --}}
 <section class="space">
     <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
+
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
+                     alt="Themed stage set and scenography built inside a Moroccan palace venue for a corporate event"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Scenography & Staging</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">A Set Built for the Venue You Actually Booked</h2>
+                <p>A stage design that works in a purpose-built convention hall rarely transfers to a riad courtyard or a desert camp without changes to rigging points, floor loads and sightlines. We design scenography around the venue's real constraints first — then build the theming, backdrops and set pieces that carry your brand into the space, whether that's a minimalist product plinth or a full theatrical set for a gala.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/moroccan-belly-dance-night-cultural-activity.webp') }}"
+                     alt="DMX-controlled lighting and live sound production at an outdoor corporate event in Morocco"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Lighting & Sound Production</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Lighting That's Cued, Not Just Switched On</h2>
+                <p>DMX-controlled rigs programmed to specific cues for keynotes, reveals and performances, paired with line array sound systems sized to the room rather than borrowed from whatever the venue has in storage. Our technical crew tests the full lighting and sound plot at rehearsal, so the first time your speaker hits their mark isn't the first time the follow spot finds them.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/moroccan-traditional-dinner-event.webp') }}"
+                     alt="LED video wall and live camera production set up for a hybrid corporate event in Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">LED & Video Production</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">A Screen That Holds Up in Daylight and on Camera</h2>
+                <p>LED walls specced for the venue's ambient light and viewing distance, not a generic panel count, plus multi-camera live production for reveals, keynotes or panels that need to reach a remote audience. If your launch is streaming to head office or a press list that couldn't travel, we bring in the switching and broadcast crew alongside the on-site build.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/Traditional-Moroccan-Dining-Event-Outdoor-Lanterns.webp') }}"
-                     alt="Outdoor branded event production with lighting and lantern scenography in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                     alt="Cultural performers and entertainment booked for a corporate gala dinner in Morocco"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Why Morocco</span>
-                    <h2 class="sec-title">Backdrops a Ballroom Cannot Match</h2>
-                </div>
-                <p>A product launch staged against the Marrakech medina, an award ceremony under Atlas Mountain silhouettes, or a gala built into a desert camp — these are settings that do part of the storytelling for you, before a single light is even rigged.</p>
-                <p>Production costs in Morocco generally run below Western European equivalents for comparable staging, lighting and crew day rates, which lets the same budget stretch further into scenography or entertainment. Local technical crews here are experienced with international productions and used to working alongside foreign agencies and directors.</p>
-                <p>Our approach starts with your creative brief — objectives, brand guidelines, guest count and budget ceiling — and returns a concept and technical plan matched to a venue that fits the story you're telling, not a generic function room.</p>
+                <span class="sec-subtitle style-2">Entertainment & Talent Booking</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Performers Briefed to Your Run of Show, Not Just Booked</h2>
+                <p>Local musicians, dancers and cultural performers alongside international acts and MCs when the brief calls for it — booked, briefed and rehearsed against your actual run of show, with timing that respects speeches and award moments rather than colliding with them. We handle contracts, technical riders and stage transitions so entertainment supports the programme instead of derailing it.</p>
             </div>
         </div>
+
     </div>
 </section>
 
-{{-- PROCESS --}}
+{{-- SIGNATURE MODULE: EVENT TYPE SHOWCASE --}}
 <section class="space bg-theme-07">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Planning Process</span>
-                    <h2 class="sec-title">How We Produce Your Event, Step by Step</h2>
-                </div>
+                <span class="sec-subtitle">Match Your Format</span>
+                <h2 class="sec-title">What Kind of Event Are You Producing?</h2>
+                <p>A starting point — every production plan is still scoped around your actual brief and budget.</p>
             </div>
         </div>
         <div class="row g-4 mt-2">
             @php
-            $steps = [
-                ['n'=>'01','title'=>'Creative Brief','body'=>'We confirm objectives, brand guidelines, guest count, dates and budget ceiling.'],
-                ['n'=>'02','title'=>'Concept & Scenography','body'=>'We propose a design direction — stage, set and space — matched to your brief and venue options.'],
-                ['n'=>'03','title'=>'Technical Production Plan','body'=>'Lighting, sound, LED, power and rigging are specced and costed against the venue.'],
-                ['n'=>'04','title'=>'On-Site Build & Rehearsal','body'=>'Load-in, rigging, technical checks and a full rehearsal before doors open.'],
-                ['n'=>'05','title'=>'Live Delivery','body'=>'Our production team runs the show — cues, technical direction and real-time problem solving.'],
-                ['n'=>'06','title'=>'Strike & Breakdown','body'=>'Equipment is struck, the venue is restored, and freight/return logistics are closed out.'],
+            $eventTypes = [
+                ['label'=>'Product Launch', 'title'=>'Reveal-Led, Camera-Ready', 'body'=>'Built around a single reveal moment — a lift, a reverse-drape or a synchronized LED sequence — with lighting and video production designed for press photography and live-stream broadcast as much as the room.'],
+                ['label'=>'Brand Activation', 'title'=>'Immersive, Multi-Zone', 'body'=>'Several themed zones rather than one stage: sampling areas, photo moments and interactive installs, each with its own lighting and sound treatment, briefed to agency creative direction rather than a single fixed set.'],
+                ['label'=>'Award Ceremony', 'title'=>'Structured Run of Show', 'body'=>'A tightly cued programme — stage, lectern, video wall for nominee reels, orchestrated entrances and exits — where lighting and sound cues are locked to a rehearsed script rather than improvised on the night.'],
+                ['label'=>'Anniversary Gala', 'title'=>'Scenography-Led Celebration', 'body'=>'The heaviest scenography of the four formats: full theming, a live band or headline performer, and a dinner service choreographed around speeches — designed to feel like a milestone, not a standard banquet.'],
             ];
             @endphp
-            @foreach($steps as $s)
-            <div class="col-sm-6 col-lg-4">
+            @foreach($eventTypes as $e)
+            <div class="col-sm-6 col-lg-3">
                 <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:1.6rem;font-weight:800;color:var(--theme-color);opacity:.35;margin-bottom:8px;">{{ $s['n'] }}</div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $s['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $s['body'] }}</div>
+                    <div style="font-size:.8rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $e['label'] }}</div>
+                    <div style="font-weight:700;margin-bottom:8px;">{{ $e['title'] }}</div>
+                    <div style="font-size:.88rem;color:#666;">{{ $e['body'] }}</div>
                 </div>
             </div>
             @endforeach
@@ -265,73 +213,34 @@
     </div>
 </section>
 
-{{-- SERVICE HIGHLIGHTS --}}
+{{-- WHY MARRAKECH + TESTIMONIAL --}}
 <section class="space">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Service Highlights</span>
-                    <h2 class="sec-title">What's Included in Our Event Production Service</h2>
-                </div>
+        <div class="row align-items-center gy-5 gx-xl-5">
+            <div class="col-lg-6 order-lg-2">
+                <span class="sec-subtitle style-2">Why Marrakech</span>
+                <h2 class="sec-title">A Backdrop That Does Some of the Storytelling for You</h2>
+                <p>A product reveal staged against the medina walls, a gala set into a desert camp under the Atlas foothills — these are settings a hotel ballroom simply can't offer, and they do work for your brand before a single light is even rigged.</p>
+                <p>Production costs here generally sit below Western European equivalents for comparable staging, lighting and crew day rates, and the technical crews we work with have built for international agencies before — they know what a European production rider actually expects on-site.</p>
             </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $services = [
-                ['icon'=>'fa-drafting-compass', 'title'=>'Staging & Scenography',   'body'=>'Stage design, set builds and branded environments adapted to the venue and brief.'],
-                ['icon'=>'fa-lightbulb',        'title'=>'Lighting Design',         'body'=>'DMX-controlled lighting rigs, architectural uplighting and mood design for the room.'],
-                ['icon'=>'fa-volume-high',       'title'=>'Sound Production',        'body'=>'Line array sound systems, mixing and technical crew for speeches, music and live performance.'],
-                ['icon'=>'fa-tv',                'title'=>'LED & Video',             'body'=>'LED walls, screen content and live broadcast or streaming for hybrid audiences.'],
-                ['icon'=>'fa-music',             'title'=>'Entertainment Booking',   'body'=>'Musicians, performers and MCs sourced and briefed to fit the tone of your event.'],
-                ['icon'=>'fa-clipboard-check',   'title'=>'On-Site Technical Management','body'=>'A dedicated crew present for build, rehearsal, live delivery and strike.'],
-            ];
-            @endphp
-            @foreach($services as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;">
-                    <div style="width:44px;height:44px;background:var(--theme-color);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <i class="fa-solid {{ $s['icon'] }}" style="color:#fff;font-size:1.1rem;"></i>
+            <div class="col-lg-6 order-lg-1">
+                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
+                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
+                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
+                        "We had a 260-guest product launch and a set design that needed a full LED backdrop nobody local carried. Morocco Quest sourced and imported the panels, ran a full technical rehearsal the night before, and the reveal went off without anyone from our side touching a cable."
+                    </p>
+                    <div style="display:flex;align-items:center;gap:14px;">
+                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                        </div>
+                        <div>
+                            <div style="font-weight:700;font-size:.95rem;">Brand & Communications Director</div>
+                            <div style="font-size:.82rem;color:#777;">European Consumer Goods Company</div>
+                        </div>
+                        <div class="ms-auto">
+                            <span style="color:var(--theme-color);">★★★★★</span>
+                        </div>
                     </div>
-                    <div>
-                        <div style="font-weight:700;font-size:.95rem;margin-bottom:4px;">{{ $s['title'] }}</div>
-                        <div style="font-size:.88rem;color:#555;">{{ $s['body'] }}</div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- EXAMPLE SCENARIOS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Example Scenarios</span>
-                    <h2 class="sec-title">How Companies Use This Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Product Launch for 300 Guests</div>
-                    <p style="font-size:.9rem;color:#666;">A global brand launches a new product line in a Marrakech venue, with a custom stage, LED backdrop and live-streamed keynote for international press and distributors.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">20th Anniversary Gala Dinner</div>
-                    <p style="font-size:.9rem;color:#666;">A company marks its 20th anniversary with a themed gala in a private riad, featuring architectural lighting, a live band and a scripted run of show for speeches and awards.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Regional Sales Awards Ceremony</div>
-                    <p style="font-size:.9rem;color:#666;">A multinational's regional office hosts its annual sales awards for 150 staff, with staging, sound, a video wall for recognition reels and desert-camp dinner staging.</p>
                 </div>
             </div>
         </div>
@@ -339,7 +248,7 @@
 </section>
 
 {{-- LEAD FORM --}}
-<section class="space" id="events-enquiry">
+<section class="space bg-theme-07" id="events-enquiry">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9">
@@ -430,8 +339,8 @@
                             <select name="children" class="form-control" style="height:56px;">
                                 <option value="0" {{ old('children') == '0' ? 'selected' : '' }}>Product Launch</option>
                                 <option value="1" {{ old('children') == '1' ? 'selected' : '' }}>Brand Activation</option>
-                                <option value="2" {{ old('children') == '2' ? 'selected' : '' }}>Gala Dinner</option>
-                                <option value="3" {{ old('children') == '3' ? 'selected' : '' }}>Award Ceremony</option>
+                                <option value="2" {{ old('children') == '2' ? 'selected' : '' }}>Award Ceremony</option>
+                                <option value="3" {{ old('children') == '3' ? 'selected' : '' }}>Anniversary Gala</option>
                                 <option value="4" {{ old('children') == '4' ? 'selected' : '' }}>Other</option>
                             </select>
                         </div>
@@ -463,14 +372,14 @@
     </div>
 </section>
 
-{{-- FAQ --}}
-<section class="space bg-theme-07">
+{{-- FAQ (trimmed) --}}
+<section class="space">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center mb-5">
                     <span class="sec-subtitle">FAQ</span>
-                    <h2 class="sec-title">Frequently Asked Questions — Events Production</h2>
+                    <h2 class="sec-title">Events Production — Common Questions</h2>
                 </div>
                 <div class="accordion accordion-style1" id="epFaq">
                 <style>
@@ -480,14 +389,11 @@
                 </style>
                     @php
                     $faqs = [
-                        ['q'=>'What does an event production company do for a corporate event in Morocco?','a'=>'An event production partner turns a creative brief into a delivered show: designing the stage and scenography, sourcing lighting and sound equipment, booking LED screens and technical crews, managing rigging and power on-site, and running the live show from load-in to strike.'],
-                        ['q'=>'How far in advance should we book event production services in Marrakech?','a'=>'For a full production with custom scenography and imported equipment, 3 to 4 months gives enough time for design, quotes and freight where needed. Simpler formats — a branded dinner or a small activation — can often be produced within 4 to 6 weeks.'],
-                        ['q'=>'Can you produce events in unconventional venues like riads or the desert?','a'=>'Yes, this is one of our core strengths. Riads, palmeraie estates and desert camps all require site-specific power planning, rigging solutions that respect the architecture, and weather contingency for outdoor stages — we handle all of it as part of the technical production plan.'],
-                        ['q'=>'Do you handle live broadcast or hybrid streaming for corporate events?','a'=>'Yes. We work with broadcast crews who provide multi-camera coverage, live switching and streaming for product launches or award ceremonies that need to reach an audience beyond the room.'],
-                        ['q'=>'What is included in an event production proposal?','a'=>'A typical proposal covers scenography and set design concepts, a technical plan for lighting, sound and LED, entertainment booking, crew and rigging costs, and a day-by-day production schedule from build to strike. Pricing is quoted net.'],
-                        ['q'=>'Can Morocco Quest source specialist equipment not available locally?','a'=>'Where a specific rig, LED pitch or line array isn\'t available from local suppliers, we can arrange import of specialist equipment from Europe, coordinated with customs and freight timelines built into the production schedule.'],
-                        ['q'=>'How large a production can you manage in Marrakech?','a'=>'We produce everything from 80-guest brand activations in a riad courtyard to 500-guest gala dinners and award ceremonies in convention centres or desert venues, with full staging, lighting and sound.'],
-                        ['q'=>'Why produce a brand event in Marrakech instead of Western Europe?','a'=>'Marrakech offers backdrops — medina, desert, Atlas Mountains — that elevate brand storytelling in a way a hotel ballroom in Western Europe cannot, alongside production costs that generally run well below Western European equivalents and experienced local technical crews.'],
+                        ['q'=>"Can you source specialist production equipment that isn't available locally?",'a'=>"Where a specific LED pitch, line array or rigging component isn't held by our local suppliers, we arrange import from Europe. That gets built into the production timeline early, since customs and freight need lead time — it's one of the first questions we ask on a technical call."],
+                        ['q'=>'Can you build a stage in a riad courtyard or a desert camp?','a'=>"Yes, and it's a large part of what we do. Riads and desert venues aren't built for rigging, so every load-in starts with a site survey — floor loads, power access, generator placement, sightlines — before a single truss goes up. What works in a convention hall doesn't automatically work in a 400-year-old courtyard."],
+                        ['q'=>'How much lead time does a full production build need?','a'=>'A production with custom scenography and imported equipment needs 3 to 4 months for design, sourcing and freight. A branded dinner or a smaller activation using locally available kit can often be turned around in 4 to 6 weeks, though we\'d rather have more time on anything with a custom set build.'],
+                        ['q'=>'What happens to an outdoor production if the weather turns?','a'=>"Every outdoor build gets a weather contingency written into the production plan before the event, not improvised on the day — covered rigging options, an indoor or tented fallback venue held on standby, and a call-time deadline for switching plans. Marrakech evenings are usually dry, but we don't stage a launch on \"usually.\""],
+                        ['q'=>'Does your technical crew work in English?','a'=>"Yes. Our lighting, sound and stage crews are used to briefs and rehearsals in English and French, and have worked alongside international agencies and directors on past productions — you won't need a translator on the technical walkthrough."],
                     ];
                     @endphp
                     @foreach($faqs as $i => $faq)
@@ -509,7 +415,7 @@
 </section>
 
 {{-- CROSS-LINKS --}}
-<section class="space">
+<section class="space pt-0">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">
@@ -525,7 +431,7 @@
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Produce Your Next Event With a Local Team</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">
-            Staging, lighting, sound and on-site delivery — talk with our events production team today.
+            Scenography, lighting, sound and on-site delivery — talk with our events production team today.
         </p>
         <div class="row g-3 justify-content-center">
             <div class="col-12 col-sm-auto">

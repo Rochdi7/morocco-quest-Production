@@ -54,53 +54,28 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What does a Professional Congress Organizer (PCO) do that a meeting planner doesn't?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A PCO manages the parts of a congress that are specific to associations and scientific bodies: abstract submission and peer-review platforms, liaison with the scientific committee on programme content, CME/CPD accreditation paperwork, sponsor and exhibitor prospectus sales, and registration systems built around delegate categories and membership rates. A standard meeting planner sources a venue and books rooms; a PCO also runs the academic and commercial machinery around the event." }
+            "name": "What does a Professional Congress Organizer (PCO) do that a regular meeting planner doesn't?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A PCO runs the parts of an event that are specific to associations: abstract submission and peer review, liaison with a rotating scientific committee, CME/CPD accreditation support, and sponsor or exhibitor contracts tied to a revenue target. A meeting planner books a room and a caterer. A PCO also carries the academic and commercial workload sitting behind the programme." }
         },
         {
             "@type": "Question",
-            "name": "Which organisations typically need a PCO in Morocco?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Medical and scientific societies, academic bodies and professional federations that run an annual or biennial congress. Most are volunteer-led committees who need continuity of operational knowledge from one edition to the next, since board members and local organising committees rotate." }
+            "name": "Do you provide the abstract submission platform, or do we need our own?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We provide and configure the platform — submission categories, reviewer accounts, scoring rubric and the notification workflow — and connect it to your scientific committee's process. If your society already licenses a platform, we can work inside it instead." }
         },
         {
             "@type": "Question",
-            "name": "Can Morocco Quest support a congress bid before the destination is confirmed?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We prepare bid documents, venue capacity letters, indicative budgets and destination presentations for associations pitching Marrakech to their international board or general assembly ahead of a future congress edition." }
+            "name": "Can you support CME or CPD accreditation for the scientific programme?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We compile the documentation an accrediting body asks for — final programme, faculty disclosures, learning objectives, session timings — and manage the submission calendar so it aligns with your accreditor's deadlines. The accreditation decision itself sits with the awarding body, not with us." }
         },
         {
             "@type": "Question",
-            "name": "How does abstract management work for a congress in Marrakech?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We set up an online abstract submission platform, manage the peer-review workflow with your scientific committee, track acceptance and rejection notifications, and compile the final programme and abstract book ready for CME/CPD accreditation submission." }
+            "name": "Our organising committee changes every congress. How do you keep continuity?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We hold the operational memory the committee doesn't: registration data, sponsor contacts, room-block history, vendor pricing and what went wrong last time. When a new committee takes over, they inherit a working file instead of starting from a blank page." }
         },
         {
             "@type": "Question",
-            "name": "Do you manage sponsor and exhibitor sales for the congress?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build the sponsorship and exhibitor prospectus, track sales against your revenue target, manage exhibitor logistics such as booth allocation and shell-scheme build, and follow up on sponsor fulfilment obligations such as branding and session credits." }
-        },
-        {
-            "@type": "Question",
-            "name": "What size of congress can you organise in Marrakech?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We handle congresses from around 150 delegates with a single plenary track up to 1,000-plus delegate international meetings with parallel sessions, a poster hall and a full exhibition floor." }
-        },
-        {
-            "@type": "Question",
-            "name": "How far in advance should an association start planning a congress in Morocco?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For an international congress above 400 delegates, 12 to 18 months is a realistic window, since venue contracting, abstract timelines and sponsor sales all run on fixed academic calendars. Regional congresses under 300 delegates can be planned in 6 to 9 months." }
-        },
-        {
-            "@type": "Question",
-            "name": "Can you provide continuity across multiple congress editions?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, this is one of the core reasons associations retain a PCO. As local organising committees and board members change between editions, we retain the registration data, sponsor relationships, financial records and process documentation so each new edition doesn't start from zero." }
-        },
-        {
-            "@type": "Question",
-            "name": "Why hold a medical or scientific congress in Marrakech rather than a Western European city?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Marrakech has direct flight access from Europe, the Middle East and increasingly Africa, venue and accommodation costs that are meaningfully lower than Western congress cities, and a growing track record of hosting international medical and scientific meetings." }
-        },
-        {
-            "@type": "Question",
-            "name": "Do you handle registration and badge production on-site?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We run the online registration system, generate delegate badges with category-based access control, and staff the on-site registration desk for check-in, on-the-day registration and speaker or press accreditation." }
+            "name": "Can you help us bid for a future congress before the destination is confirmed?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We prepare venue capacity letters, indicative budgets and a destination presentation your board or general assembly can use to vote on Marrakech as a future congress host, typically two to three years ahead of the proposed edition." }
         }
     ]
 }
@@ -110,17 +85,16 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}">
+<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/rabat-royal-palace-tourists-guided-walking-tour.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Professional Congress Organization</h1>
+                    <h1 class="breadcrumb-title">Your Scientific Committee Shouldn't Have to Learn Event Logistics Every Two Years</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Abstract management, scientific programme support and sponsor logistics —<br>
-                        PCO services for medical and scientific associations in Morocco.
+                        Abstract platforms, sponsor contracts, badge systems, on-site delivery — run by a PCO that remembers what happened at the last edition, so your committee doesn't have to.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -135,82 +109,106 @@
     </div>
 </section>
 
-{{-- TRUST BAR --}}
-<section style="background:var(--theme-color);padding:22px 0;">
+{{-- INTRO --}}
+<section class="space pb-0">
     <div class="container">
-        <div class="row text-center gy-3">
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">1,000+</div><div style="font-size:.85rem;opacity:.9;">Max delegate capacity sourced</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">4</div><div style="font-size:.85rem;opacity:.9;">Working languages on-site</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">12-18</div><div style="font-size:.85rem;opacity:.9;">Months typical planning lead time</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">100%</div><div style="font-size:.85rem;opacity:.9;">Net-rate transparency</div></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+                <p style="font-size:1.1rem;color:#444;">A congress doesn't reset between editions the way a one-off meeting does. Abstract deadlines, sponsor renewals, accreditation paperwork and a scientific committee that turns over its chair every term — all of it has to carry forward, usually held together by whoever happened to be secretary-general last time.</p>
+                <p style="font-size:1.05rem;color:#555;">Morocco Quest works as Professional Congress Organizer for medical societies, scientific associations and academic federations running their congress in Marrakech. We hold the operational thread across editions — registration data, sponsor history, vendor pricing — so each new committee inherits a working file, not a blank page.</p>
+                <a href="#congress-enquiry" class="vs-btn mt-3">Talk With Our PCO Team</a>
             </div>
         </div>
     </div>
 </section>
 
-{{-- INTRODUCTION --}}
+{{-- ALTERNATING SERVICE STACK --}}
 <section class="space">
     <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
+
+        <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Professional Congress Organization</span>
-                    <h2 class="sec-title">A PCO Partner for Your Association's Congress in Morocco</h2>
-                </div>
-                <p>A congress is not a meeting with a bigger guest list. It has its own machinery — abstract submission and peer review, a scientific committee that needs coordinating across time zones, sponsors who expect fulfilment on their contracts, and delegates who need to see the programme, not the logistics behind it.</p>
-                <p>Morocco Quest works as <strong>Professional Congress Organizer (PCO) in Morocco</strong> for medical societies, scientific associations and professional federations. We run the operational and commercial layers of your congress — registration and abstract platforms, sponsor and exhibitor management, venue and AV coordination — while your scientific committee stays focused on the programme.</p>
-                <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Abstract submission and peer-review platform setup</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Sponsor and exhibitor prospectus management</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Registration systems and badge/access control</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Continuity of institutional knowledge across editions</li>
-                </ul>
-                <a href="#congress-enquiry" class="vs-btn mt-4">Request a Proposal</a>
+                <img src="{{ asset('assets/img/grand-theatre-de-rabat-404-hero.webp') }}"
+                     alt="Auditorium venue used for scientific congress plenary sessions in Morocco"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Abstract & Scientific Programme</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">The Review Workflow Runs Without Chasing Reviewers by Email</h2>
+                <p>We configure the submission platform around your categories and scoring rubric, set reviewer accounts for your scientific committee, and track the review workflow through to acceptance notifications. When the programme is locked, we compile the abstract book and the documentation your accreditor needs for CME or CPD credit — timed against their submission calendar, not built the week before.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/hassan-ii-mosque-arches-casablanca-morocco.webp') }}"
+                     alt="Registration desk and delegate check-in area for an international congress in Morocco"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Registration & Badge Systems</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Delegate Categories That Actually Match Your Membership Structure</h2>
+                <p>Member, non-member, student, industry, press — the registration platform is built around the categories your association already uses, not a generic form. Badges carry access control by session and exhibition zone, printed and issued at a check-in desk that can handle a queue of 300 delegates on a Monday morning without becoming the story of day one.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
-                     alt="Congress venue setup in Marrakech for professional congress organization"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                     alt="Exhibition and sponsor showcase area set up for a medical congress in Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Sponsor & Exhibitor Management</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">A Prospectus That Sells, and Fulfilment That Doesn't Get Forgotten</h2>
+                <p>We build the sponsorship and exhibitor prospectus around tiers your industry partners recognise, track sales against the revenue target the congress budget depends on, and allocate booth space before floor plans get contentious. After the contract is signed, we track fulfilment — branding placements, session credits, badge allocations — so nothing owed to a sponsor gets discovered missing on-site.</p>
             </div>
         </div>
+
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp') }}"
+                     alt="Congress delegate networking evening venue in Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">On-Site Congress Delivery</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Someone Who Knows Which Session Room Has the Broken Mic</h2>
+                <p>Across a three- or four-day congress with parallel tracks, a poster hall and a shifting speaker schedule, something moves every day — a session overruns, a speaker's flight is delayed, a shipment of poster boards arrives short. Our team is on-site for the full run, solving it in the corridor rather than in an email thread your scientific committee chair has to manage between sessions.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
-{{-- WHO IT'S FOR / WHEN NEEDED --}}
+{{-- SIGNATURE MODULE: CONGRESS LIFECYCLE TIMELINE --}}
 <section class="space bg-theme-07">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Who This Is For</span>
-                    <h2 class="sec-title">Built for Associations Running Their Own Congress</h2>
-                </div>
+                <span class="sec-subtitle">The Multi-Year Arc</span>
+                <h2 class="sec-title">A Congress Runs on a Longer Clock Than a Meeting</h2>
+                <p>Unlike a single corporate meeting, a congress is planned in stages against fixed academic and commercial deadlines. Here's the arc we plan around.</p>
             </div>
         </div>
         <div class="row g-4 mt-2">
             @php
-            $audiences = [
-                ['icon'=>'fa-user-doctor',     'title'=>'Medical Societies',        'body'=>'National and regional medical associations running an annual congress with CME-accredited sessions.'],
-                ['icon'=>'fa-flask',           'title'=>'Scientific Associations',  'body'=>'Research societies coordinating abstract review, poster sessions and a multi-track scientific programme.'],
-                ['icon'=>'fa-graduation-cap',  'title'=>'Academic Bodies',          'body'=>'University departments and academic federations hosting a biennial international conference.'],
-                ['icon'=>'fa-people-group',    'title'=>'Professional Federations', 'body'=>'Umbrella bodies whose annual general assembly runs alongside a professional development congress.'],
+            $timeline = [
+                ['stage'=>'Bid & Venue Selection', 'marker'=>'18-24 Months Out', 'body'=>'Destination bid documents, venue capacity letters and budget modelling for the board or general assembly vote.'],
+                ['stage'=>'Registration Platform Launch', 'marker'=>'12 Months Out', 'body'=>'Online registration opens with early-bird pricing tiers and delegate category structure locked in.'],
+                ['stage'=>'Abstract Submission Window', 'marker'=>'9 Months Out', 'body'=>'Submission platform opens, peer review runs against your scientific committee\'s timeline and rubric.'],
+                ['stage'=>'Sponsor & Exhibitor Sales', 'marker'=>'6 Months Out', 'body'=>'Prospectus in market, booth allocation begins, fulfilment obligations tracked against signed contracts.'],
+                ['stage'=>'Final Programme & Badging', 'marker'=>'2 Months Out', 'body'=>'Abstract book compiled, accreditation documentation submitted, badges and access control finalised.'],
+                ['stage'=>'On-Site Delivery', 'marker'=>'Congress Week', 'body'=>'Registration desk, session-room management and real-time problem-solving across every congress day.'],
+                ['stage'=>'Post-Congress Reporting', 'marker'=>'4-6 Weeks After', 'body'=>'Financial reconciliation, sponsor fulfilment report and a knowledge handover file for the next edition.'],
             ];
             @endphp
-            @foreach($audiences as $a)
+            @foreach($timeline as $i => $t)
             <div class="col-sm-6 col-lg-3">
-                <div class="text-center p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="width:52px;height:52px;background:var(--theme-color);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-                        <i class="fa-solid {{ $a['icon'] }}" style="color:#fff;font-size:1.3rem;"></i>
-                    </div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $a['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $a['body'] }}</div>
+                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
+                    <div style="font-size:.78rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $t['marker'] }}</div>
+                    <div style="font-weight:700;margin-bottom:8px;">{{ $t['stage'] }}</div>
+                    <div style="font-size:.88rem;color:#666;">{{ $t['body'] }}</div>
                 </div>
             </div>
             @endforeach
@@ -218,130 +216,34 @@
     </div>
 </section>
 
-{{-- WHY MOROCCO / OUR APPROACH --}}
+{{-- WHY MARRAKECH + TESTIMONIAL --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp') }}"
-                     alt="Riad venue used for congress delegate dinners and networking evenings in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+            <div class="col-lg-6 order-lg-2">
+                <span class="sec-subtitle style-2">Why Marrakech</span>
+                <h2 class="sec-title">A Congress Destination Your Board Can Justify With Numbers</h2>
+                <p>Marrakech and Casablanca now connect directly to most major European hubs, several Middle Eastern gateways, and a growing number of African capitals — which widens the pool of delegates who can reach the congress without a connecting flight. Morocco's convention centres are increasingly hosting international medical and scientific meetings that a decade ago would have defaulted to Southern Europe.</p>
+                <p>Venue, accommodation and catering costs sit meaningfully below Western congress cities, a difference that shows up directly in a finance committee's comparison of bid options — and stretches sponsor budgets further on exhibition space and delegate hospitality.</p>
             </div>
-            <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Why Morocco</span>
-                    <h2 class="sec-title">A Congress Destination Associations Can Justify to Their Board</h2>
-                </div>
-                <p>Marrakech and Casablanca connect directly to most major European hubs, several Middle Eastern gateways and a growing number of African capitals, which widens the pool of delegates who can reach the congress without a connecting flight. Morocco's profile as an international congress destination has been building steadily, with purpose-built convention centres now hosting medical and scientific meetings that once went to Southern Europe by default.</p>
-                <p>Venue, accommodation and catering costs sit well below Western European congress cities, which matters when a finance committee is comparing bid options for the next edition. It also means sponsor budgets stretch further on exhibition space and delegate hospitality.</p>
-                <p>Our approach starts with your congress history — delegate numbers, abstract volume, exhibitor count and past budgets — and returns a realistic proposal built around what your association has actually run before, not a generic convention brochure.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- PROCESS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Planning Process</span>
-                    <h2 class="sec-title">How We Organise Your Congress, Step by Step</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $steps = [
-                ['n'=>'01','title'=>'Bid & Venue Selection','body'=>'We support the destination bid where needed, then shortlist venues matched to delegate count, tracks and exhibition space.'],
-                ['n'=>'02','title'=>'Registration & Abstract Setup','body'=>'Online registration and abstract submission platforms are configured around your delegate categories and review workflow.'],
-                ['n'=>'03','title'=>'Sponsor & Exhibitor Sales','body'=>'We build the prospectus, support sales against your revenue target, and manage exhibitor logistics.'],
-                ['n'=>'04','title'=>'Scientific Programme Coordination','body'=>'We liaise with your scientific committee on session scheduling, speaker confirmations and abstract-to-programme mapping.'],
-                ['n'=>'05','title'=>'On-Site Delegate & Speaker Management','body'=>'Registration desk, badge issuance, speaker AV checks and session-room flow are managed throughout the congress.'],
-                ['n'=>'06','title'=>'Post-Congress Reporting','body'=>'Financial reconciliation, sponsor fulfilment reports and a knowledge handover for the next edition\'s committee.'],
-            ];
-            @endphp
-            @foreach($steps as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:1.6rem;font-weight:800;color:var(--theme-color);opacity:.35;margin-bottom:8px;">{{ $s['n'] }}</div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $s['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $s['body'] }}</div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- SERVICE HIGHLIGHTS --}}
-<section class="space">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Service Highlights</span>
-                    <h2 class="sec-title">What's Included in Our PCO Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $services = [
-                ['icon'=>'fa-file-lines',        'title'=>'Abstract & Scientific Programme','body'=>'Abstract submission platform, peer-review workflow and programme compilation for CME/CPD accreditation.'],
-                ['icon'=>'fa-id-badge',          'title'=>'Registration & Badge Systems',    'body'=>'Category-based online registration, delegate badges and access control for sessions and exhibition areas.'],
-                ['icon'=>'fa-handshake',         'title'=>'Sponsor & Exhibitor Management',  'body'=>'Prospectus development, sales support, booth allocation and sponsor fulfilment tracking.'],
-                ['icon'=>'fa-map-location-dot',  'title'=>'Venue & AV Coordination',         'body'=>'Convention centre sourcing, multi-track room planning and AV/staging for plenary and breakout sessions.'],
-                ['icon'=>'fa-microphone-lines',  'title'=>'Speaker Logistics',                'body'=>'Speaker travel, accommodation, AV requirements and on-site briefing ahead of each session.'],
-                ['icon'=>'fa-clipboard-check',   'title'=>'On-Site Congress Management',     'body'=>'A dedicated team present for registration, badge issuance, room flow and real-time issue resolution.'],
-            ];
-            @endphp
-            @foreach($services as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;">
-                    <div style="width:44px;height:44px;background:var(--theme-color);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <i class="fa-solid {{ $s['icon'] }}" style="color:#fff;font-size:1.1rem;"></i>
+            <div class="col-lg-6 order-lg-1">
+                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
+                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
+                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
+                        "This was our 14th congress edition but our first outside Europe. Morocco Quest managed our abstract platform for 640 submissions and kept our sponsor contracts on track while our scientific committee — spread across six countries — focused entirely on the programme. The handover file they gave us afterward means our 15th edition committee won't start from zero."
+                    </p>
+                    <div style="display:flex;align-items:center;gap:14px;">
+                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                        </div>
+                        <div>
+                            <div style="font-weight:700;font-size:.95rem;">Secretary-General</div>
+                            <div style="font-size:.82rem;color:#777;">International Scientific Society</div>
+                        </div>
+                        <div class="ms-auto">
+                            <span style="color:var(--theme-color);">★★★★★</span>
+                        </div>
                     </div>
-                    <div>
-                        <div style="font-weight:700;font-size:.95rem;margin-bottom:4px;">{{ $s['title'] }}</div>
-                        <div style="font-size:.88rem;color:#555;">{{ $s['body'] }}</div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- EXAMPLE SCENARIOS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Example Scenarios</span>
-                    <h2 class="sec-title">How Associations Use This Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Regional Medical Congress, 400 Delegates</div>
-                    <p style="font-size:.9rem;color:#666;">A regional medical society runs its annual CME-accredited congress with two parallel tracks, a poster hall and an exhibitor floor of 20 pharmaceutical and device sponsors.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">International Scientific Society Annual Meeting</div>
-                    <p style="font-size:.9rem;color:#666;">An international research society holds its annual meeting with 700+ delegates, abstract-driven programming across four tracks, and simultaneous interpretation for a multilingual membership.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Multi-Year Congress Bid Support</div>
-                    <p style="font-size:.9rem;color:#666;">A professional federation prepares a formal bid to bring its congress to Marrakech in two years, including venue capacity letters, indicative budgets and a board presentation.</p>
                 </div>
             </div>
         </div>
@@ -349,7 +251,7 @@
 </section>
 
 {{-- LEAD FORM --}}
-<section class="space" id="congress-enquiry">
+<section class="space bg-theme-07" id="congress-enquiry">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9">
@@ -438,11 +340,10 @@
                         <div class="col-md-6 form-group">
                             <label style="font-weight:600;margin-bottom:4px;display:block;">Congress Stage</label>
                             <select name="children" class="form-control" style="height:56px;">
-                                <option value="0" {{ old('children') == '0' ? 'selected' : '' }}>Bid / Destination Selection</option>
-                                <option value="1" {{ old('children') == '1' ? 'selected' : '' }}>Early Planning (12+ Months Out)</option>
-                                <option value="2" {{ old('children') == '2' ? 'selected' : '' }}>Active Planning (6-12 Months Out)</option>
-                                <option value="3" {{ old('children') == '3' ? 'selected' : '' }}>Final Preparations (Under 6 Months)</option>
-                                <option value="4" {{ old('children') == '4' ? 'selected' : '' }}>Other</option>
+                                <option value="0" {{ old('children') == '0' ? 'selected' : '' }}>Bid Stage</option>
+                                <option value="1" {{ old('children') == '1' ? 'selected' : '' }}>Planning Stage</option>
+                                <option value="2" {{ old('children') == '2' ? 'selected' : '' }}>Ready to Contract</option>
+                                <option value="3" {{ old('children') == '3' ? 'selected' : '' }}>Other</option>
                             </select>
                         </div>
                         <div class="col-12 form-group">
@@ -473,14 +374,14 @@
     </div>
 </section>
 
-{{-- FAQ --}}
-<section class="space bg-theme-07">
+{{-- FAQ (trimmed) --}}
+<section class="space">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center mb-5">
                     <span class="sec-subtitle">FAQ</span>
-                    <h2 class="sec-title">Frequently Asked Questions — Professional Congress Organization</h2>
+                    <h2 class="sec-title">Professional Congress Organization — Common Questions</h2>
                 </div>
                 <div class="accordion accordion-style1" id="pcoFaq">
                 <style>
@@ -490,16 +391,11 @@
                 </style>
                     @php
                     $faqs = [
-                        ['q'=>'What does a Professional Congress Organizer (PCO) do that a meeting planner doesn\'t?','a'=>'A PCO manages the parts of a congress that are specific to associations and scientific bodies: abstract submission and peer-review platforms, liaison with the scientific committee on programme content, CME/CPD accreditation paperwork, sponsor and exhibitor prospectus sales, and registration systems built around delegate categories and membership rates. A standard meeting planner sources a venue and books rooms; a PCO also runs the academic and commercial machinery around the event.'],
-                        ['q'=>'Which organisations typically need a PCO in Morocco?','a'=>'Medical and scientific societies, academic bodies and professional federations that run an annual or biennial congress. Most are volunteer-led committees who need continuity of operational knowledge from one edition to the next, since board members and local organising committees rotate.'],
-                        ['q'=>'Can Morocco Quest support a congress bid before the destination is confirmed?','a'=>'Yes. We prepare bid documents, venue capacity letters, indicative budgets and destination presentations for associations pitching Marrakech to their international board or general assembly ahead of a future congress edition.'],
-                        ['q'=>'How does abstract management work for a congress in Marrakech?','a'=>'We set up an online abstract submission platform, manage the peer-review workflow with your scientific committee, track acceptance and rejection notifications, and compile the final programme and abstract book ready for CME/CPD accreditation submission.'],
-                        ['q'=>'Do you manage sponsor and exhibitor sales for the congress?','a'=>'Yes. We build the sponsorship and exhibitor prospectus, track sales against your revenue target, manage exhibitor logistics such as booth allocation and shell-scheme build, and follow up on sponsor fulfilment obligations such as branding and session credits.'],
-                        ['q'=>'What size of congress can you organise in Marrakech?','a'=>'We handle congresses from around 150 delegates with a single plenary track up to 1,000-plus delegate international meetings with parallel sessions, a poster hall and a full exhibition floor.'],
-                        ['q'=>'How far in advance should an association start planning a congress in Morocco?','a'=>'For an international congress above 400 delegates, 12 to 18 months is a realistic window, since venue contracting, abstract timelines and sponsor sales all run on fixed academic calendars. Regional congresses under 300 delegates can be planned in 6 to 9 months.'],
-                        ['q'=>'Can you provide continuity across multiple congress editions?','a'=>'Yes, this is one of the core reasons associations retain a PCO. As local organising committees and board members change between editions, we retain the registration data, sponsor relationships, financial records and process documentation so each new edition doesn\'t start from zero.'],
-                        ['q'=>'Why hold a medical or scientific congress in Marrakech rather than a Western European city?','a'=>'Marrakech has direct flight access from Europe, the Middle East and increasingly Africa, venue and accommodation costs that are meaningfully lower than Western congress cities, and a growing track record of hosting international medical and scientific meetings.'],
-                        ['q'=>'Do you handle registration and badge production on-site?','a'=>'Yes. We run the online registration system, generate delegate badges with category-based access control, and staff the on-site registration desk for check-in, on-the-day registration and speaker or press accreditation.'],
+                        ['q'=>'What does a Professional Congress Organizer (PCO) do that a regular meeting planner doesn\'t?','a'=>'A PCO runs the parts of an event that are specific to associations: abstract submission and peer review, liaison with a rotating scientific committee, CME/CPD accreditation support, and sponsor or exhibitor contracts tied to a revenue target. A meeting planner books a room and a caterer. A PCO also carries the academic and commercial workload sitting behind the programme.'],
+                        ['q'=>'Do you provide the abstract submission platform, or do we need our own?','a'=>'We provide and configure the platform — submission categories, reviewer accounts, scoring rubric and the notification workflow — and connect it to your scientific committee\'s process. If your society already licenses a platform, we can work inside it instead.'],
+                        ['q'=>'Can you support CME or CPD accreditation for the scientific programme?','a'=>'We compile the documentation an accrediting body asks for — final programme, faculty disclosures, learning objectives, session timings — and manage the submission calendar so it aligns with your accreditor\'s deadlines. The accreditation decision itself sits with the awarding body, not with us.'],
+                        ['q'=>'Our organising committee changes every congress. How do you keep continuity?','a'=>'We hold the operational memory the committee doesn\'t: registration data, sponsor contacts, room-block history, vendor pricing and what went wrong last time. When a new committee takes over, they inherit a working file instead of starting from a blank page.'],
+                        ['q'=>'Can you help us bid for a future congress before the destination is confirmed?','a'=>'Yes. We prepare venue capacity letters, indicative budgets and a destination presentation your board or general assembly can use to vote on Marrakech as a future congress host, typically two to three years ahead of the proposed edition.'],
                     ];
                     @endphp
                     @foreach($faqs as $i => $faq)
@@ -521,7 +417,7 @@
 </section>
 
 {{-- CROSS-LINKS --}}
-<section class="space">
+<section class="space pt-0">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">

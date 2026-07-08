@@ -11,7 +11,7 @@
     "@type": "Service",
     "serviceType": "Team Building and Incentive Travel",
     "name": "Team Building & Incentive Travel — Morocco Quest DMC",
-    "description": "Morocco Quest designs and delivers team building activities and incentive travel programmes in Marrakech and across Morocco, from Atlas Mountain challenges to desert incentive camps.",
+    "description": "Morocco Quest designs and delivers team building activities and incentive travel programmes in Marrakech and across Morocco, from desert 4x4 rallies to CSR days with local cooperatives.",
     "provider": {
         "@type": "TravelAgency",
         "name": "Morocco Quest",
@@ -54,43 +54,28 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What team building activities can you organise in Marrakech?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We run Atlas Mountain challenges, 4x4 rally games in the Agafay Desert, quad biking, camel trekking, medina treasure hunts, cooking workshops in a riad, and CSR activities such as tree planting or school equipment drives. Programmes are usually combined — for example a morning rally followed by a desert camp dinner." }
+            "name": "What happens to the programme if the weather turns on a desert or mountain day?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Every itinerary with an Agafay Desert or Atlas Mountain component has a covered or indoor backup built in before you arrive — usually a riad-based workshop or a covered camp activity — so a sandstorm or a cold snap in the mountains doesn't sink the day." }
         },
         {
             "@type": "Question",
-            "name": "How many people can you handle for an incentive trip?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We regularly organise programmes from small executive groups of 10 to incentive trips of 200 or more, splitting large groups into activity waves so logistics and safety briefings stay manageable." }
+            "name": "Is insurance included for activities like quad biking or 4x4 rallies?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Activity-specific insurance and licensed operators are arranged for every physical activity we book, and safety briefings are given in your delegates' working language before anyone gets on a quad or into a rally vehicle." }
         },
         {
             "@type": "Question",
-            "name": "Is Marrakech safe for outdoor team building activities?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. All outdoor activities run with licensed operators, briefed guides and insurance cover appropriate to the activity. We build weather contingency options into every itinerary involving mountain or desert terrain." }
+            "name": "What's the largest group you can run a programme for?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We've handled incentive trips above 250 people by splitting the group into activity waves — half doing the desert rally while the other half does the medina rally, then swapping — so no one is standing around waiting for a vehicle or a guide." }
         },
         {
             "@type": "Question",
-            "name": "Can you accommodate dietary and cultural requirements for large groups?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We collect dietary and cultural requirements at the planning stage and brief caterers accordingly, including halal, vegetarian, vegan and allergen-specific menus for gala dinners and desert camps." }
+            "name": "Can you handle dietary and cultural requirements across a large group?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We collect dietary and cultural requirements during planning and brief every caterer accordingly, whether that's a desert camp dinner or a riad cooking workshop, covering halal, vegetarian, vegan and allergen needs." }
         },
         {
             "@type": "Question",
-            "name": "How far in advance should we book an incentive trip to Morocco?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For groups above 50 people, 3 to 5 months gives comfortable room to secure accommodation blocks and activity providers, particularly in peak season (March to May and September to November). Smaller groups can often be arranged within 4 to 6 weeks." }
-        },
-        {
-            "@type": "Question",
-            "name": "Do you offer CSR and sustainability-focused activities?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Common options include tree-planting sessions with local cooperatives, school equipment or supply drives, and workshops run with women's cooperatives, which can be built into a half-day or full-day CSR module alongside other activities." }
-        },
-        {
-            "@type": "Question",
-            "name": "What is included in a team building or incentive proposal?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A typical proposal covers activity design and timings, transport, guides and equipment, accommodation and meals, and a costed budget quoted net, so your team retains full control of client-facing pricing where relevant." }
-        },
-        {
-            "@type": "Question",
-            "name": "Why choose Marrakech over a European destination for an incentive trip?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Marrakech is under four hours from most major European hubs, offers a favourable exchange rate against the euro and pound, and provides dramatic Atlas Mountain and desert backdrops that are difficult to match at a comparable cost in Western Europe." }
+            "name": "How far ahead should we book a team building or incentive programme?",
+            "acceptedAnswer": { "@type": "Answer", "text": "For groups above 50 people, plan on 3 to 5 months to lock accommodation blocks and activity providers, particularly across March to May and September to November. Smaller groups can often be confirmed within 4 to 6 weeks." }
         }
     ]
 }
@@ -107,10 +92,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Team Building & Incentive Travel</h1>
+                    <h1 class="breadcrumb-title">Nobody Remembers the Trust Fall. They Remember the Desert.</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Atlas Mountain challenges, desert incentive camps and medina rallies —<br>
-                        corporate team building programmes designed and delivered in Marrakech.
+                        Team building and incentive travel in Marrakech — built around what your group actually needs to get out of it, not a fixed activity catalogue.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -125,82 +109,103 @@
     </div>
 </section>
 
-{{-- TRUST BAR --}}
-<section style="background:var(--theme-color);padding:22px 0;">
+{{-- INTRO --}}
+<section class="space pb-0">
     <div class="container">
-        <div class="row text-center gy-3">
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">300</div><div style="font-size:.85rem;opacity:.9;">Max group size handled</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">15+</div><div style="font-size:.85rem;opacity:.9;">Activity formats available</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">4</div><div style="font-size:.85rem;opacity:.9;">Working languages on-site</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">24h</div><div style="font-size:.85rem;opacity:.9;">Typical response time</div></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+                <p style="font-size:1.1rem;color:#444;">Most corporate offsites fail for the same reason: the activity doesn't match the objective. A trust-fall exercise in a hotel conference room doesn't reward a sales team, and a generic city tour doesn't rebuild trust between two departments that just merged.</p>
+                <p style="font-size:1.05rem;color:#555;">Morocco Quest designs team building and incentive programmes in Marrakech that start from what you need the day to accomplish, then draw on Atlas Mountain terrain, the Agafay Desert and the medina to build it — with our own guides and logistics team running the day itself.</p>
+                <a href="#teambuilding-enquiry" class="vs-btn mt-3">Talk With Our Team Building Team</a>
             </div>
         </div>
     </div>
 </section>
 
-{{-- INTRODUCTION --}}
+{{-- ALTERNATING SERVICE STACK --}}
 <section class="space">
     <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
-            <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Team Building & Incentive Travel</span>
-                    <h2 class="sec-title">Programmes Built Around Your Group, Not a Brochure Package</h2>
-                </div>
-                <p>A generic "desert excursion" is not team building. Activities need a purpose — sharpening collaboration, rewarding a sales team, or giving a newly merged group a shared experience — and a format that actually delivers it.</p>
-                <p>Morocco Quest designs <strong>team building and incentive travel programmes in Marrakech</strong> for companies, incentive houses and event agencies. We combine Atlas Mountain challenges, Agafay Desert rally games, medina treasure hunts and CSR modules into programmes matched to your group's size, objectives and budget, then deliver them on the ground with our own guides and logistics team.</p>
-                <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Activity design matched to your objectives, not a fixed catalogue</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Licensed operators and briefed local guides for every activity</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Weather and safety contingency built into desert and mountain days</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> One point of contact from first brief to final gala dinner</li>
-                </ul>
-                <a href="#teambuilding-enquiry" class="vs-btn mt-4">Request a Proposal</a>
-            </div>
+
+        <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }}"
-                     alt="Corporate group at a desert incentive camp near Marrakech during a team building programme"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                     alt="Corporate group on a 4x4 rally challenge in the Agafay Desert near Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Desert & Mountain Challenges</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Terrain That Forces People to Actually Work Together</h2>
+                <p>Agafay Desert 4x4 rally games with checkpoint challenges, quad biking convoys, camel trekking to a sunset viewpoint, and half-day Atlas Mountain hikes out of Imlil with a Berber guide — these put teams in situations a conference room can't manufacture, where someone has to read a map, someone has to make a call, and the group either coordinates or falls behind schedule.</p>
             </div>
         </div>
+
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}"
+                     alt="Corporate team on a souk treasure hunt rally in the Marrakech medina"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Culinary & Cultural Team Activities</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">The Souk Rally Beats the Icebreaker Every Time</h2>
+                <p>A riad cooking workshop splits your group into small teams cooking a tagine or pastilla against the clock, judged and eaten together afterward. A medina souk rally — clue-based, GPS-tracked, small mixed teams racing between spice stalls and dye souks — does the same job as an escape room but with better photos and a spice merchant who remembers your group by name.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp') }}"
+                     alt="Gala dinner at an exclusive desert camp for a corporate incentive trip near Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Incentive Trip Design</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">A Reward Trip That Feels Earned, Not Generic</h2>
+                <p>For top-performer trips we build around a centrepiece — an exclusive desert camp with a private dining setup under the stars, a gala dinner in a riad courtyard, or a hot-air balloon sunrise over the Atlas foothills — then fill the rest of the itinerary so the people who hit their number this year get something their colleagues will hear about next year.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/souk_experience_morocco_cultural_discoveries.webp') }}"
+                     alt="Corporate CSR team building visit to a local cooperative near Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">CSR & Community Engagement</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">A Give-Back Day That Isn't Just for Show</h2>
+                <p>Half-day visits to a women's argan or weaving cooperative near Marrakech, tree-planting sessions on the outskirts of the Palmeraie, or a supply drop at a rural school your group helps stock — arranged directly with the cooperative or association involved, so the time your team spends there has a real recipient at the other end, not a branded backdrop.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
-{{-- WHO IT'S FOR / WHEN NEEDED --}}
+{{-- SIGNATURE MODULE: ACTIVITY TYPE FINDER --}}
 <section class="space bg-theme-07">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Who This Is For</span>
-                    <h2 class="sec-title">Built for Teams That Need More Than a Team-Building Checklist</h2>
-                </div>
+                <span class="sec-subtitle">Match Your Objective</span>
+                <h2 class="sec-title">Which Activity Format Fits What You're Trying to Do?</h2>
+                <p>A starting point — every programme is still built around your actual brief and group profile.</p>
             </div>
         </div>
         <div class="row g-4 mt-2">
             @php
-            $audiences = [
-                ['icon'=>'fa-users-gear',      'title'=>'HR & People Teams',       'body'=>'Organizing offsites and culture-building days, often after a merger, restructuring or period of remote work.'],
-                ['icon'=>'fa-award',           'title'=>'Incentive Houses',        'body'=>'Rewarding top-performing sales teams and partners with a trip that feels earned, not generic.'],
-                ['icon'=>'fa-chart-line',      'title'=>'Sales & Commercial Teams','body'=>'Running annual kick-offs that combine strategy sessions with activities that build momentum.'],
-                ['icon'=>'fa-handshake',       'title'=>'Event & Incentive Agencies','body'=>'International agencies needing a reliable ground partner to deliver a Morocco leg of a client programme.'],
+            $objectives = [
+                ['label'=>'New Team, First Few Months', 'title'=>'Break the Ice Without the Cringe', 'body'=>'Medina souk rally or a riad cooking workshop in small mixed teams — low physical barrier to entry, forces conversation, done within half a day.'],
+                ['label'=>'Sales or Performance Reward', 'title'=>'Give Top Performers a Story to Tell', 'body'=>'Desert camp gala dinner, hot-air balloon sunrise, or a full incentive itinerary built around one standout evening.'],
+                ['label'=>'Merged or Cross-Department Group', 'title'=>'Build Trust Between People Who Don\'t Know Each Other', 'body'=>'Agafay 4x4 rally or Atlas Mountain hike in mixed-department teams — shared physical challenge outranks a seating chart at dinner.'],
+                ['label'=>'CSR / Give-Back Component', 'title'=>'Add a Half-Day That Means Something', 'body'=>'Cooperative visit or tree-planting session with a local partner, usually paired with a lighter activity in the same day.'],
             ];
             @endphp
-            @foreach($audiences as $a)
+            @foreach($objectives as $o)
             <div class="col-sm-6 col-lg-3">
-                <div class="text-center p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="width:52px;height:52px;background:var(--theme-color);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-                        <i class="fa-solid {{ $a['icon'] }}" style="color:#fff;font-size:1.3rem;"></i>
-                    </div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $a['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $a['body'] }}</div>
+                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
+                    <div style="font-size:.8rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $o['label'] }}</div>
+                    <div style="font-weight:700;margin-bottom:8px;">{{ $o['title'] }}</div>
+                    <div style="font-size:.88rem;color:#666;">{{ $o['body'] }}</div>
                 </div>
             </div>
             @endforeach
@@ -208,130 +213,34 @@
     </div>
 </section>
 
-{{-- WHY MARRAKECH / OUR APPROACH --}}
+{{-- WHY MARRAKECH + TESTIMONIAL --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}"
-                     alt="Atlas Mountains near Imlil used as a backdrop for corporate team building challenges"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+            <div class="col-lg-6 order-lg-2">
+                <span class="sec-subtitle style-2">Why Marrakech</span>
+                <h2 class="sec-title">A Backdrop the Budget Doesn't Have to Fight</h2>
+                <p>Marrakech's climate stays workable for outdoor activity most of the year, and it sits under four hours from most major European hubs — short enough that a three-day programme doesn't lose a full day to travel on either end.</p>
+                <p>Set against the exchange rate against the euro and pound, a desert camp evening or a full incentive itinerary here typically costs meaningfully less than an equivalent programme in Western Europe, without asking your group to compromise on the setting.</p>
             </div>
-            <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Why Marrakech</span>
-                    <h2 class="sec-title">A Backdrop That Does Half the Work for You</h2>
-                </div>
-                <p>Marrakech sits under four hours from most major European hubs, which keeps travel days short and budgets predictable. The exchange rate against the euro and pound has made Morocco a noticeably more cost-efficient incentive destination than Western Europe for equivalent activity quality and accommodation standard.</p>
-                <p>The setting matters as much as the logistics. The Agafay Desert and the Atlas Mountains give activities a dramatic, photogenic backdrop that a hotel car park or business-park field simply cannot offer, and Marrakech's mild climate keeps outdoor programmes viable through most of the year.</p>
-                <p>Our approach starts with your objective — reward, culture-building, kick-off, CSR — and we design activities around it, rather than fitting your group into a fixed activity list.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- PROCESS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Planning Process</span>
-                    <h2 class="sec-title">How We Build Your Programme, Step by Step</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $steps = [
-                ['n'=>'01','title'=>'Brief & Objectives','body'=>'We confirm group size, dates, budget ceiling and what the programme needs to achieve.'],
-                ['n'=>'02','title'=>'Activity Design','body'=>'We propose a mix of activities matched to your objective, group profile and physical ability range.'],
-                ['n'=>'03','title'=>'Costed Proposal','body'=>'A single net-rate proposal covering activities, transport, meals and accommodation.'],
-                ['n'=>'04','title'=>'Site Visit Option','body'=>'We can arrange a familiarisation visit before you confirm, especially for larger programmes.'],
-                ['n'=>'05','title'=>'Pre-Trip Logistics','body'=>'Group lists, safety briefings, dietary requirements and run sheets are finalised.'],
-                ['n'=>'06','title'=>'On-Ground Delivery','body'=>'Our team is present throughout — guides, safety supervision and real-time problem solving.'],
-            ];
-            @endphp
-            @foreach($steps as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:1.6rem;font-weight:800;color:var(--theme-color);opacity:.35;margin-bottom:8px;">{{ $s['n'] }}</div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $s['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $s['body'] }}</div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- SERVICE HIGHLIGHTS --}}
-<section class="space">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Service Highlights</span>
-                    <h2 class="sec-title">What's Included in Our Team Building Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $services = [
-                ['icon'=>'fa-mountain',          'title'=>'Atlas Mountain Challenges','body'=>'Hiking routes, orienteering and physical challenges in the Atlas foothills near Imlil.'],
-                ['icon'=>'fa-truck-monster',      'title'=>'Desert Incentive Camps',    'body'=>'Agafay Desert 4x4 rallies, quad biking, camel trekking and overnight luxury camps.'],
-                ['icon'=>'fa-map',                'title'=>'Medina Rally Games',        'body'=>'Escape-game style treasure hunts and team challenges through the Marrakech medina.'],
-                ['icon'=>'fa-utensils',           'title'=>'Cooking Workshops',         'body'=>'Team-based Moroccan cooking classes in a riad, often paired with a shared dinner.'],
-                ['icon'=>'fa-seedling',           'title'=>'CSR & Sustainability',      'body'=>'Tree-planting, school equipment drives and cooperative workshops for purpose-driven days.'],
-                ['icon'=>'fa-glass-cheers',       'title'=>'Gala Dinners & Evenings',   'body'=>'Themed dinners in riads, desert camps or private venues to close the programme.'],
-            ];
-            @endphp
-            @foreach($services as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;">
-                    <div style="width:44px;height:44px;background:var(--theme-color);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <i class="fa-solid {{ $s['icon'] }}" style="color:#fff;font-size:1.1rem;"></i>
+            <div class="col-lg-6 order-lg-1">
+                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
+                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
+                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
+                        "We took 45 people who'd just gone through a difficult reorganisation and needed something other than another all-hands meeting. Morocco Quest put half the group on quads and half on a souk rally in the morning, then swapped them after lunch. By the desert dinner that evening people who hadn't spoken in months were sitting together."
+                    </p>
+                    <div style="display:flex;align-items:center;gap:14px;">
+                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                        </div>
+                        <div>
+                            <div style="font-weight:700;font-size:.95rem;">HR Director</div>
+                            <div style="font-size:.82rem;color:#777;">European Financial Services Firm</div>
+                        </div>
+                        <div class="ms-auto">
+                            <span style="color:var(--theme-color);">★★★★★</span>
+                        </div>
                     </div>
-                    <div>
-                        <div style="font-weight:700;font-size:.95rem;margin-bottom:4px;">{{ $s['title'] }}</div>
-                        <div style="font-size:.88rem;color:#555;">{{ $s['body'] }}</div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- EXAMPLE SCENARIOS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Example Scenarios</span>
-                    <h2 class="sec-title">How Companies Use This Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">80-Person Sales Incentive Trip</div>
-                    <p style="font-size:.9rem;color:#666;">A European sales division rewards its top-performing team with a four-day trip combining an Agafay Desert 4x4 rally, a gala dinner under the stars and free time in Marrakech.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">25-Person Leadership Offsite</div>
-                    <p style="font-size:.9rem;color:#666;">A leadership team combines a strategy workshop with an Atlas Mountain hiking challenge and a riad cooking class to reset before the next planning cycle.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">CSR Team Building Day</div>
-                    <p style="font-size:.9rem;color:#666;">A regional office runs a half-day tree-planting session with a local cooperative, followed by a medina rally game that splits staff into mixed-department teams.</p>
                 </div>
             </div>
         </div>
@@ -339,7 +248,7 @@
 </section>
 
 {{-- LEAD FORM --}}
-<section class="space" id="teambuilding-enquiry">
+<section class="space bg-theme-07" id="teambuilding-enquiry">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9">
@@ -428,12 +337,11 @@
                         <div class="col-md-6 form-group">
                             <label style="font-weight:600;margin-bottom:4px;display:block;">Activity Type</label>
                             <select name="children" class="form-control" style="height:56px;">
-                                <option value="0" {{ old('children') == '0' ? 'selected' : '' }}>Desert Incentive Camp</option>
-                                <option value="1" {{ old('children') == '1' ? 'selected' : '' }}>Atlas Mountain Challenge</option>
-                                <option value="2" {{ old('children') == '2' ? 'selected' : '' }}>Medina Rally Game</option>
-                                <option value="3" {{ old('children') == '3' ? 'selected' : '' }}>Cooking Workshop</option>
-                                <option value="4" {{ old('children') == '4' ? 'selected' : '' }}>CSR / Sustainability Activity</option>
-                                <option value="5" {{ old('children') == '5' ? 'selected' : '' }}>Mixed Programme / Other</option>
+                                <option value="0" {{ old('children') == '0' ? 'selected' : '' }}>Desert & Mountain Challenge</option>
+                                <option value="1" {{ old('children') == '1' ? 'selected' : '' }}>Culinary / Cultural Activity</option>
+                                <option value="2" {{ old('children') == '2' ? 'selected' : '' }}>Incentive Trip / Reward Programme</option>
+                                <option value="3" {{ old('children') == '3' ? 'selected' : '' }}>CSR / Community Engagement</option>
+                                <option value="4" {{ old('children') == '4' ? 'selected' : '' }}>Mixed Programme / Not Sure Yet</option>
                             </select>
                         </div>
                         <div class="col-12 form-group">
@@ -464,14 +372,14 @@
     </div>
 </section>
 
-{{-- FAQ --}}
-<section class="space bg-theme-07">
+{{-- FAQ (trimmed) --}}
+<section class="space">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center mb-5">
                     <span class="sec-subtitle">FAQ</span>
-                    <h2 class="sec-title">Frequently Asked Questions — Team Building & Incentive Travel</h2>
+                    <h2 class="sec-title">Team Building & Incentive Travel — Common Questions</h2>
                 </div>
                 <div class="accordion accordion-style1" id="tbFaq">
                 <style>
@@ -481,14 +389,11 @@
                 </style>
                     @php
                     $faqs = [
-                        ['q'=>'What team building activities can you organise in Marrakech?','a'=>'We run Atlas Mountain challenges, 4x4 rally games in the Agafay Desert, quad biking, camel trekking, medina treasure hunts, cooking workshops in a riad, and CSR activities such as tree planting or school equipment drives. Programmes are usually combined — for example a morning rally followed by a desert camp dinner.'],
-                        ['q'=>'How many people can you handle for an incentive trip?','a'=>'We regularly organise programmes from small executive groups of 10 to incentive trips of 200 or more, splitting large groups into activity waves so logistics and safety briefings stay manageable.'],
-                        ['q'=>'Is Marrakech safe for outdoor team building activities?','a'=>'Yes. All outdoor activities run with licensed operators, briefed guides and insurance cover appropriate to the activity. We build weather contingency options into every itinerary involving mountain or desert terrain.'],
-                        ['q'=>'Can you accommodate dietary and cultural requirements for large groups?','a'=>'Yes. We collect dietary and cultural requirements at the planning stage and brief caterers accordingly, including halal, vegetarian, vegan and allergen-specific menus for gala dinners and desert camps.'],
-                        ['q'=>'How far in advance should we book an incentive trip to Morocco?','a'=>'For groups above 50 people, 3 to 5 months gives comfortable room to secure accommodation blocks and activity providers, particularly in peak season (March to May and September to November). Smaller groups can often be arranged within 4 to 6 weeks.'],
-                        ['q'=>'Do you offer CSR and sustainability-focused activities?','a'=>'Yes. Common options include tree-planting sessions with local cooperatives, school equipment or supply drives, and workshops run with women\'s cooperatives, which can be built into a half-day or full-day CSR module alongside other activities.'],
-                        ['q'=>'What is included in a team building or incentive proposal?','a'=>'A typical proposal covers activity design and timings, transport, guides and equipment, accommodation and meals, and a costed budget quoted net, so your team retains full control of client-facing pricing where relevant.'],
-                        ['q'=>'Why choose Marrakech over a European destination for an incentive trip?','a'=>'Marrakech is under four hours from most major European hubs, offers a favourable exchange rate against the euro and pound, and provides dramatic Atlas Mountain and desert backdrops that are difficult to match at a comparable cost in Western Europe.'],
+                        ['q'=>'What happens to the programme if the weather turns on a desert or mountain day?','a'=>'Every itinerary with an Agafay Desert or Atlas Mountain component has a covered or indoor backup built in before you arrive — usually a riad-based workshop or a covered camp activity — so a sandstorm or a cold snap in the mountains doesn\'t sink the day.'],
+                        ['q'=>'Is insurance included for activities like quad biking or 4x4 rallies?','a'=>'Activity-specific insurance and licensed operators are arranged for every physical activity we book, and safety briefings are given in your delegates\' working language before anyone gets on a quad or into a rally vehicle.'],
+                        ['q'=>'What\'s the largest group you can run a programme for?','a'=>'We\'ve handled incentive trips above 250 people by splitting the group into activity waves — half doing the desert rally while the other half does the medina rally, then swapping — so no one is standing around waiting for a vehicle or a guide.'],
+                        ['q'=>'Can you handle dietary and cultural requirements across a large group?','a'=>'Yes. We collect dietary and cultural requirements during planning and brief every caterer accordingly, whether that\'s a desert camp dinner or a riad cooking workshop, covering halal, vegetarian, vegan and allergen needs.'],
+                        ['q'=>'How far ahead should we book a team building or incentive programme?','a'=>'For groups above 50 people, plan on 3 to 5 months to lock accommodation blocks and activity providers, particularly across March to May and September to November. Smaller groups can often be confirmed within 4 to 6 weeks.'],
                     ];
                     @endphp
                     @foreach($faqs as $i => $faq)
@@ -510,7 +415,7 @@
 </section>
 
 {{-- CROSS-LINKS --}}
-<section class="space">
+<section class="space pt-0">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">
@@ -526,7 +431,7 @@
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Plan Your Marrakech Team Building Programme</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">
-            Atlas Mountain challenges, desert incentive camps and on-ground delivery — talk with our team building and incentive team today.
+            Desert rallies, souk challenges and incentive camps — talk with our team building and incentive team today.
         </p>
         <div class="row g-3 justify-content-center">
             <div class="col-12 col-sm-auto">

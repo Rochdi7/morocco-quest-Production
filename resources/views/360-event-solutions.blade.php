@@ -54,53 +54,28 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What is a 360° event and travel solution?",
-            "acceptedAnswer": { "@type": "Answer", "text": "It means one DMC takes responsibility for every component of a multi-day corporate programme — meetings, team building, events production, accommodation and transport — instead of a client coordinating separate vendors for each piece. You get a single point of contact, a single proposal and a single team on the ground." }
+            "name": "What makes this different from booking each of your services separately?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Booking each service on its own means each vendor plans against their piece of the calendar, not the whole one. A 360° programme is designed as one interdependent itinerary from day one, so a change in one component — a moved session, a delayed flight — is handled against the full run sheet, not renegotiated separately." }
         },
         {
             "@type": "Question",
-            "name": "How is this different from booking your other DMC services separately?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Booking services separately means each element is planned and delivered somewhat in isolation. A 360° programme is planned as one interdependent whole from the outset, so a delay in one component — a late flight, a venue change — is managed against the full itinerary, not just that day's booking." }
+            "name": "How do you manage contingencies across days that depend on each other?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Because one project manager owns the full run sheet, a disruption on one day is assessed against every day that follows it before we act. A late arrival, for instance, can mean shifting an activity slot and rebriefing a venue in the same afternoon, rather than each supplier discovering the change independently." }
         },
         {
             "@type": "Question",
-            "name": "What size of programme is this suited to?",
-            "acceptedAnswer": { "@type": "Answer", "text": "It works for any multi-day programme combining more than one service type — typically 30 to 300 participants over 3 to 6 days. Smaller single-component bookings, such as a one-day meeting alone, are usually better served by booking that specific service directly." }
+            "name": "What's the minimum size or length for a 360° programme?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It's built for programmes combining more than one service type, typically 3 to 6 days and 30 to 300 participants. A single one-day meeting or a standalone activity day doesn't need this layer — book that service directly and it will run just as well." }
         },
         {
             "@type": "Question",
-            "name": "Do you still handle each component to the same standard as your specialist services?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The same specialist teams who run our meetings, team building and events production services deliver each component of a 360° programme — the difference is that one project manager coordinates all of them against a shared timeline and budget." }
+            "name": "Can we start from a template programme and add or remove pieces?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We often start from a sample structure like a 4-day conference-plus-incentive format and adjust it to your brief — dropping a component, extending a day, swapping a gala for a lighter closing dinner. The template is a starting point, not a fixed package." }
         },
         {
             "@type": "Question",
-            "name": "Can you manage a programme that spans several cities or regions in Morocco?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Morocco's geography allows city, mountain and desert experiences within a short driving radius of Marrakech, and we also coordinate programmes that move between Marrakech, Casablanca and Rabat when a brief requires it." }
-        },
-        {
-            "@type": "Question",
-            "name": "How far in advance should we start planning an integrated programme?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For programmes above 100 participants with multiple components, 4 to 6 months gives us enough runway to secure venues, activity slots and accommodation blocks that align across every day. Smaller or simpler combined programmes can sometimes be confirmed within 6 to 8 weeks." }
-        },
-        {
-            "@type": "Question",
-            "name": "What happens if something goes wrong mid-programme, like a delayed flight?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Because one team manages the full run sheet, we can adjust downstream elements in real time — shifting an activity slot, rebriefing a venue, or amending transport — without the client having to renegotiate with separate suppliers under pressure." }
-        },
-        {
-            "@type": "Question",
-            "name": "Is a 360° programme more expensive than booking services separately?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Not typically. A single integrated proposal often reduces overall cost, since transport, staffing and venue negotiations are planned across the whole programme rather than re-quoted for each separate booking. You also save the internal time cost of managing multiple vendors." }
-        },
-        {
-            "@type": "Question",
-            "name": "Do you provide a single point of contact throughout the programme?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. A dedicated project manager is assigned from the initial brief through to post-event reporting, and is present on-site for the duration of the programme alongside the operational team for each component." }
-        },
-        {
-            "@type": "Question",
-            "name": "Can a 360° programme include a sustainable or CSR element?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sustainable event elements — from local sourcing to community-based activities — can be integrated into any day of the programme alongside meetings, team building or gala components." }
+            "name": "Do we get one contact, or a different account manager per component?",
+            "acceptedAnswer": { "@type": "Answer", "text": "One project manager is assigned from the first brief through to the post-programme debrief, and is present on-site for the duration. They draw on our specialist meetings, team building and production teams for delivery, but you are never redirected between departments." }
         }
     ]
 }
@@ -117,10 +92,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">360° Event & Travel Solutions</h1>
+                    <h1 class="breadcrumb-title">Stop Juggling Five Vendors for One Trip</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        One DMC, one team, one point of accountability —<br>
-                        integrated end-to-end programmes across Morocco.
+                        One DMC team runs your whole multi-day programme — meetings, activities and evening events — against a single run sheet, not five separate contracts.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -135,292 +109,139 @@
     </div>
 </section>
 
-{{-- TRUST BAR --}}
-<section style="background:var(--theme-color);padding:22px 0;">
-    <div class="container">
-        <div class="row text-center gy-3">
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">1</div><div style="font-size:.85rem;opacity:.9;">Point of contact, full programme</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">5</div><div style="font-size:.85rem;opacity:.9;">Service lines integrated on request</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">6</div><div style="font-size:.85rem;opacity:.9;">Days, typical programme length</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">24/7</div><div style="font-size:.85rem;opacity:.9;">On-site programme management</div></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- INTRODUCTION --}}
-<section class="space">
-    <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
-            <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">360° Event & Travel Solutions</span>
-                    <h2 class="sec-title">One Team Managing the Full Programme, Not One Piece of It</h2>
-                </div>
-                <p>A conference, an incentive trip and a gala dinner are, on paper, three separate bookings. In practice, they are one programme — the same delegates, the same dates, the same budget — and when three different vendors manage them independently, the gaps between bookings are where things go wrong.</p>
-                <p><strong>360° Event & Travel Solutions</strong> is how Morocco Quest handles that: one DMC, one project manager and one costed proposal covering every component of a multi-day corporate programme, from arrival transfer to departure. It draws on the same specialist teams behind our meetings, team building, events production and congress services, coordinated against a single run sheet rather than booked as isolated pieces.</p>
-                <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> A single point of accountability across every day and every component</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> One integrated itinerary, not a stack of separate bookings</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Contingency planning across interdependent programme elements</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> One on-site project management team for the full duration</li>
-                </ul>
-                <a href="#360-enquiry" class="vs-btn mt-4">Request a Proposal</a>
-            </div>
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp') }}"
-                     alt="Integrated corporate programme in Morocco combining conference, activities and gala dinner"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- HOW AN INTEGRATED PROGRAMME COMES TOGETHER --}}
-<section class="space bg-theme-07">
+{{-- INTRO --}}
+<section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">How It Comes Together</span>
-                    <h2 class="sec-title">A Multi-Day Programme, Coordinated as One Timeline</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center mt-2">
-            <div class="col-lg-10">
-                <p class="text-center" style="color:#666;">A typical integrated programme runs across four or more days, with each day's component planned against the ones before and after it — not in isolation. A illustrative run might look like this:</p>
-                <div class="row g-3 mt-3">
-                    @php
-                    $days = [
-                        ['d'=>'Day 1','t'=>'Arrival & Welcome Dinner','b'=>'Airport meet-and-greet, hotel check-in, and an informal welcome dinner to open the programme.'],
-                        ['d'=>'Day 2','t'=>'Conference Sessions','b'=>'Full-day meeting or conference programme with AV, breakout rooms and working lunch.'],
-                        ['d'=>'Day 3','t'=>'Team Building Excursion','b'=>'An Atlas Mountain or desert-based activity day, run by the same on-site team managing the conference.'],
-                        ['d'=>'Day 4','t'=>'Gala Dinner & Departure','b'=>'A closing gala event followed by coordinated departure transfers across multiple flight times.'],
-                    ];
-                    @endphp
-                    @foreach($days as $d)
-                    <div class="col-md-3 col-sm-6">
-                        <div class="p-4 text-center" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                            <div style="font-size:.8rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">{{ $d['d'] }}</div>
-                            <div style="font-weight:700;margin-bottom:6px;">{{ $d['t'] }}</div>
-                            <div style="font-size:.86rem;color:#666;">{{ $d['b'] }}</div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-                <p class="text-center mt-4" style="color:#666;font-size:.92rem;">Every day is planned by one team, against one master run sheet — so a change on Day 2 is automatically reflected in the logistics for Day 3.</p>
+            <div class="col-lg-9 text-center">
+                <p style="font-size:1.1rem;color:#444;">A conference, an incentive excursion and a closing gala dinner are, on paper, three separate bookings. In practice they're one programme, running on the same dates for the same delegates — and when three different suppliers plan them in isolation, the gaps between bookings are exactly where things go wrong.</p>
+                <p style="font-size:1.05rem;color:#555;">Morocco Quest's 360° Event & Travel Solutions puts one project management team in charge of the entire multi-day programme, drawing on the same specialists behind our meetings, team building and events production services — coordinated against a single itinerary instead of booked as separate pieces.</p>
+                <a href="#360-enquiry" class="vs-btn mt-3">Talk With Our Programme Team</a>
             </div>
         </div>
     </div>
 </section>
 
-{{-- WHO IT'S FOR / WHEN NEEDED --}}
+{{-- ALTERNATING SERVICE STACK --}}
 <section class="space">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Who This Is For</span>
-                    <h2 class="sec-title">Built for Programmes With More Than One Moving Part</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $audiences = [
-                ['icon'=>'fa-building',        'title'=>'Hybrid Programme Companies',  'body'=>'Organisations combining a conference or meeting with an incentive trip, team building day or social component.'],
-                ['icon'=>'fa-handshake',       'title'=>'Agencies Wanting One Vendor', 'body'=>'Event and travel agencies who want a single ground partner managing an entire multi-day itinerary, not several.'],
-                ['icon'=>'fa-people-group',    'title'=>'Large Corporate Groups',      'body'=>'Groups with complex logistics — multiple hotels, staggered arrivals, or parallel activity tracks.'],
-                ['icon'=>'fa-sitemap',         'title'=>'Multi-Component Congresses',  'body'=>'Associations running a congress alongside a social programme, exhibitor days and delegate excursions.'],
-            ];
-            @endphp
-            @foreach($audiences as $a)
-            <div class="col-sm-6 col-lg-3">
-                <div class="text-center p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="width:52px;height:52px;background:var(--theme-color);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-                        <i class="fa-solid {{ $a['icon'] }}" style="color:#fff;font-size:1.3rem;"></i>
-                    </div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $a['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $a['body'] }}</div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
 
-{{-- WHY MOROCCO / OUR APPROACH --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
+                     alt="Conference sessions in Marrakech as part of an integrated corporate programme"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Meetings & Conference Days</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">The Working Sessions, Slotted Into the Bigger Programme</h2>
+                <p>Every integrated programme still needs its core meeting days handled properly — venue, AV, delegate flow, breakout rooms. We run that portion with the same rigour as a standalone conference booking, but scheduled deliberately around the activity days and evening events either side of it, so delegates aren't rushed from a plenary session straight into a coach transfer.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }}"
-                     alt="Desert camp near Marrakech used for multi-component corporate programmes"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                     alt="Incentive team building activity in the Agafay desert near Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Why Morocco</span>
-                    <h2 class="sec-title">A Compact Geography That Makes Multi-Component Programmes Work</h2>
-                </div>
-                <p>Marrakech sits within a short drive of city venues, Atlas Mountain foothills and Agafay or Sahara-fringe desert terrain. That means a single programme can move from a conference room to a mountain excursion to a desert gala dinner without long transfer days eating into the schedule — something few destinations can offer within a 45-minute radius.</p>
-                <p>Direct flights from most major European hubs keep arrival logistics simple even for large, staggered delegate groups, and the overall cost base for venues, activities and catering remains competitive against Western European or Gulf alternatives — which matters when a programme is being costed as a whole rather than component by component.</p>
-                <p>Our approach reflects that geography: we design the programme as one itinerary first, then assign the specialist team for each component, so the logistics between days are planned in from the start rather than reconciled afterwards.</p>
+                <span class="sec-subtitle style-2">Incentive & Team Activities</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">The Reward Woven Into the Trip, Not Bolted On</h2>
+                <p>A mountain excursion or a desert team challenge works best when it's placed at the right point in the programme — after two dense conference days, not squeezed in as an afterthought on arrival morning. We build the incentive or team building day into the same run sheet as the meetings, with transport and timing planned against the rest of the schedule.</p>
             </div>
         </div>
+
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/moroccan-traditional-dinner-event.webp') }}"
+                     alt="Gala dinner and evening event production for a multi-day corporate programme"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Production & Evening Events</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Gala Dinners and Themed Evenings, Staged to Close the Day</h2>
+                <p>The evening events carry a lot of a programme's reputation — a flat closing dinner undoes two good conference days in delegates' memories. We layer staging, lighting and entertainment production into whichever evenings the programme calls for, timed to follow directly on from that day's sessions or activities without a dead gap in between.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/guide-dar-el-bacha-marrakech-tour-moroccan-culture.webp') }}"
+                     alt="On-site project management team coordinating a multi-day corporate programme in Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Single Project Management Team</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">One Team Watching the Whole Run Sheet</h2>
+                <p>This is the part that actually makes "360°" mean something: one on-site team holds the master schedule for every component, so when a flight lands late or a venue needs an extra hour, they can adjust the next day's activity slot or rebrief the evening's suppliers immediately — instead of you finding out three bookings later that nobody told the desert camp the group would arrive an hour behind.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
-{{-- PROCESS --}}
-<section class="space">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Planning Process</span>
-                    <h2 class="sec-title">How We Build Your Integrated Programme, Step by Step</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $steps = [
-                ['n'=>'01','title'=>'Full Programme Brief','body'=>'We confirm every component you need — meetings, activities, accommodation, production — and your overall objectives.'],
-                ['n'=>'02','title'=>'Integrated Itinerary Design','body'=>'We design the full multi-day itinerary as one sequence, so each day is planned against the ones around it.'],
-                ['n'=>'03','title'=>'Single Costed Proposal','body'=>'One net-rate proposal covering every component of the programme, not separate quotes to reconcile.'],
-                ['n'=>'04','title'=>'Unified Logistics Plan','body'=>'Transport, accommodation and supplier schedules are mapped against a single master run sheet.'],
-                ['n'=>'05','title'=>'On-Site Programme Management','body'=>'One project management team is present for the full duration, coordinating every component in real time.'],
-                ['n'=>'06','title'=>'Post-Event Reporting','body'=>'A debrief covering what worked, supplier performance and recommendations for future programmes.'],
-            ];
-            @endphp
-            @foreach($steps as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:1.6rem;font-weight:800;color:var(--theme-color);opacity:.35;margin-bottom:8px;">{{ $s['n'] }}</div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $s['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $s['body'] }}</div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- CHALLENGES & SOLUTIONS --}}
+{{-- SIGNATURE MODULE: SAMPLE 4-DAY INTEGRATED PROGRAMME --}}
 <section class="space bg-theme-07">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Challenges & Solutions</span>
-                    <h2 class="sec-title">What Makes Multi-Component Programmes Hard — and How We Manage It</h2>
-                </div>
+                <span class="sec-subtitle">See It in Practice</span>
+                <h2 class="sec-title">A Sample 4-Day Integrated Programme</h2>
+                <p>One structure we build from often — every programme is still adjusted to your specific brief and headcount.</p>
             </div>
         </div>
         <div class="row g-4 mt-2">
             @php
-            $challenges = [
-                ['icon'=>'fa-plane-slash', 'title'=>'Interdependent Delays', 'body'=>'A delayed inbound flight can push back a scheduled activity or venue slot. One team managing the full run sheet can adjust downstream elements immediately, rather than each supplier reacting independently.'],
-                ['icon'=>'fa-people-arrows','title'=>'Multiple Supplier Types','body'=>'A single programme may involve a conference venue, an activity operator, a catering team and a transport fleet. We contract and brief all of them under one timeline, so responsibilities do not fall between the gaps.'],
-                ['icon'=>'fa-cloud-showers-heavy','title'=>'Weather & Logistics Contingency','body'=>'An outdoor team building day or desert dinner needs a backup plan. We build contingency options into the itinerary from the start, across every outdoor element of the programme.'],
+            $days = [
+                ['d'=>'Day 1', 't'=>'Arrival & Welcome Dinner', 'b'=>'Airport meet-and-greet, hotel check-in, and an informal welcome dinner to open the programme and let delegates settle in before the working sessions start.'],
+                ['d'=>'Day 2', 't'=>'Conference Sessions', 'b'=>'Full-day meeting programme with AV, breakout rooms and a working lunch — run with the same standard as a standalone conference booking.'],
+                ['d'=>'Day 3', 't'=>'Atlas Mountain Team Activity', 'b'=>'A half-day incentive excursion into the Atlas foothills, scheduled to follow the conference days rather than compete with them.'],
+                ['d'=>'Day 4', 't'=>'Gala Dinner & Departure', 'b'=>'A closing gala event in the evening, followed by coordinated departure transfers timed against each delegate\'s actual flight.'],
             ];
             @endphp
-            @foreach($challenges as $c)
-            <div class="col-md-4">
+            @foreach($days as $d)
+            <div class="col-sm-6 col-lg-3">
                 <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="width:44px;height:44px;background:var(--theme-color);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
-                        <i class="fa-solid {{ $c['icon'] }}" style="color:#fff;font-size:1.1rem;"></i>
-                    </div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $c['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $c['body'] }}</div>
+                    <div style="font-size:.8rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $d['d'] }}</div>
+                    <div style="font-weight:700;margin-bottom:8px;">{{ $d['t'] }}</div>
+                    <div style="font-size:.88rem;color:#666;">{{ $d['b'] }}</div>
                 </div>
             </div>
             @endforeach
         </div>
+        <p class="text-center mt-4" style="color:#666;font-size:.92rem;">Components can be added, removed or reordered — a fifth day, a second activity, a lighter closing dinner instead of a gala. The point of the template is a starting structure, not a fixed package.</p>
     </div>
 </section>
 
-{{-- SERVICE HIGHLIGHTS --}}
+{{-- WHY MARRAKECH + TESTIMONIAL --}}
 <section class="space">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Service Highlights</span>
-                    <h2 class="sec-title">Everything We Can Fold Into a Single Programme</h2>
-                </div>
+        <div class="row align-items-center gy-5 gx-xl-5">
+            <div class="col-lg-6 order-lg-2">
+                <span class="sec-subtitle style-2">Why Marrakech</span>
+                <h2 class="sec-title">A Compact Geography That Makes Multi-Component Programmes Work</h2>
+                <p>Marrakech sits within a short drive of a genuine city centre, the Atlas Mountain foothills and Agafay desert terrain — three different experience types inside roughly a 45-minute radius. That's what lets a programme move from a conference room to a mountain excursion to a desert dinner without losing half a day to transfers.</p>
+                <p>Direct flights from most major European hubs keep arrival logistics manageable even for large, staggered delegate groups, and venue, activity and catering costs stay competitive against Western European or Gulf alternatives — a difference that compounds when a programme is costed as one whole rather than component by component.</p>
             </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $services = [
-                ['icon'=>'fa-people-group',      'title'=>'Meetings & Conventions',      'body'=>'Venue sourcing, AV production and delegate logistics, integrated into your wider programme.', 'route'=>'meetings-conventions.management'],
-                ['icon'=>'fa-mountain-sun',       'title'=>'Team Building & Incentive',   'body'=>'Atlas Mountain, desert and city-based activities scheduled around your meeting days.', 'route'=>'team-building.marrakech'],
-                ['icon'=>'fa-clapperboard',       'title'=>'Events Production',           'body'=>'Staging, AV and gala production for opening nights, awards evenings and closing dinners.', 'route'=>'events-production.morocco'],
-                ['icon'=>'fa-user-tie',           'title'=>'Congress Organization',       'body'=>'Association congresses with exhibitor space, parallel sessions and delegate programmes.', 'route'=>'congress-organization.morocco'],
-                ['icon'=>'fa-leaf',               'title'=>'Sustainable Events Integration','body'=>'Local sourcing and community-based elements woven into any day of the programme.', 'route'=>'sustainable-events.morocco'],
-                ['icon'=>'fa-clipboard-check',    'title'=>'Unified On-Site Project Management', 'body'=>'One project management team present throughout, coordinating every component in real time.', 'route'=>null],
-            ];
-            @endphp
-            @foreach($services as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;">
-                    <div style="width:44px;height:44px;background:var(--theme-color);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <i class="fa-solid {{ $s['icon'] }}" style="color:#fff;font-size:1.1rem;"></i>
-                    </div>
-                    <div>
-                        <div style="font-weight:700;font-size:.95rem;margin-bottom:4px;">
-                            @if($s['route'])
-                                <a href="{{ route($s['route']) }}" style="color:inherit;">{{ $s['title'] }}</a>
-                            @else
-                                {{ $s['title'] }}
-                            @endif
+            <div class="col-lg-6 order-lg-1">
+                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
+                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
+                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
+                        "We were running a 5-day programme combining a sales conference, a desert incentive day and a closing gala for 180 people, and I did not want to manage three separate suppliers on the ground. Morocco Quest ran it as one schedule — when our keynote speaker's flight was delayed, they quietly rearranged the next morning's activity slot before I even had to ask."
+                    </p>
+                    <div style="display:flex;align-items:center;gap:14px;">
+                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
                         </div>
-                        <div style="font-size:.88rem;color:#555;">{{ $s['body'] }}</div>
+                        <div>
+                            <div style="font-weight:700;font-size:.95rem;">Programme Director</div>
+                            <div style="font-size:.82rem;color:#777;">International Events Agency</div>
+                        </div>
+                        <div class="ms-auto">
+                            <span style="color:var(--theme-color);">★★★★★</span>
+                        </div>
                     </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- EXAMPLE SCENARIOS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Example Scenarios</span>
-                    <h2 class="sec-title">How Companies Use This Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">4-Day Conference + Incentive Programme for 150 Delegates</div>
-                    <p style="font-size:.9rem;color:#666;">A conference in a Marrakech venue on Days 1 and 2, followed by an Atlas Mountain incentive excursion on Day 3 and a closing gala dinner on Day 4 — all planned and delivered by one team.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Product Launch Combined With Regional Sales Kick-Off</div>
-                    <p style="font-size:.9rem;color:#666;">A staged product reveal event on the first evening, followed by two days of sales training sessions and a desert dinner to close the programme for 90 regional staff.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Multi-Day Association Congress With Social Programme</div>
-                    <p style="font-size:.9rem;color:#666;">A three-day congress with exhibitor hall and parallel sessions, paired with delegate excursions and a closing evening event for 220 attendees across multiple hotels.</p>
                 </div>
             </div>
         </div>
@@ -428,7 +249,7 @@
 </section>
 
 {{-- LEAD FORM --}}
-<section class="space" id="360-enquiry">
+<section class="space bg-theme-07" id="360-enquiry">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9">
@@ -552,14 +373,14 @@
     </div>
 </section>
 
-{{-- FAQ --}}
-<section class="space bg-theme-07">
+{{-- FAQ (trimmed) --}}
+<section class="space">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center mb-5">
                     <span class="sec-subtitle">FAQ</span>
-                    <h2 class="sec-title">Frequently Asked Questions — 360° Event & Travel Solutions</h2>
+                    <h2 class="sec-title">360° Event & Travel Solutions — Common Questions</h2>
                 </div>
                 <div class="accordion accordion-style1" id="s360Faq">
                 <style>
@@ -569,16 +390,11 @@
                 </style>
                     @php
                     $faqs = [
-                        ['q'=>'What is a 360° event and travel solution?','a'=>'It means one DMC takes responsibility for every component of a multi-day corporate programme — meetings, team building, events production, accommodation and transport — instead of a client coordinating separate vendors for each piece. You get a single point of contact, a single proposal and a single team on the ground.'],
-                        ['q'=>'How is this different from booking your other DMC services separately?','a'=>'Booking services separately means each element is planned and delivered somewhat in isolation. A 360° programme is planned as one interdependent whole from the outset, so a delay in one component — a late flight, a venue change — is managed against the full itinerary, not just that day\'s booking.'],
-                        ['q'=>'What size of programme is this suited to?','a'=>'It works for any multi-day programme combining more than one service type — typically 30 to 300 participants over 3 to 6 days. Smaller single-component bookings, such as a one-day meeting alone, are usually better served by booking that specific service directly.'],
-                        ['q'=>'Do you still handle each component to the same standard as your specialist services?','a'=>'Yes. The same specialist teams who run our meetings, team building and events production services deliver each component of a 360° programme — the difference is that one project manager coordinates all of them against a shared timeline and budget.'],
-                        ['q'=>'Can you manage a programme that spans several cities or regions in Morocco?','a'=>'Yes. Morocco\'s geography allows city, mountain and desert experiences within a short driving radius of Marrakech, and we also coordinate programmes that move between Marrakech, Casablanca and Rabat when a brief requires it.'],
-                        ['q'=>'How far in advance should we start planning an integrated programme?','a'=>'For programmes above 100 participants with multiple components, 4 to 6 months gives us enough runway to secure venues, activity slots and accommodation blocks that align across every day. Smaller or simpler combined programmes can sometimes be confirmed within 6 to 8 weeks.'],
-                        ['q'=>'What happens if something goes wrong mid-programme, like a delayed flight?','a'=>'Because one team manages the full run sheet, we can adjust downstream elements in real time — shifting an activity slot, rebriefing a venue, or amending transport — without the client having to renegotiate with separate suppliers under pressure.'],
-                        ['q'=>'Is a 360° programme more expensive than booking services separately?','a'=>'Not typically. A single integrated proposal often reduces overall cost, since transport, staffing and venue negotiations are planned across the whole programme rather than re-quoted for each separate booking. You also save the internal time cost of managing multiple vendors.'],
-                        ['q'=>'Do you provide a single point of contact throughout the programme?','a'=>'Yes. A dedicated project manager is assigned from the initial brief through to post-event reporting, and is present on-site for the duration of the programme alongside the operational team for each component.'],
-                        ['q'=>'Can a 360° programme include a sustainable or CSR element?','a'=>'Yes. Sustainable event elements — from local sourcing to community-based activities — can be integrated into any day of the programme alongside meetings, team building or gala components.'],
+                        ['q'=>'What makes this different from booking each of your services separately?','a'=>'Booking each service on its own means each vendor plans against their piece of the calendar, not the whole one. A 360° programme is designed as one interdependent itinerary from day one, so a change in one component — a moved session, a delayed flight — is handled against the full run sheet, not renegotiated separately.'],
+                        ['q'=>'How do you manage contingencies across days that depend on each other?','a'=>'Because one project manager owns the full run sheet, a disruption on one day is assessed against every day that follows it before we act. A late arrival, for instance, can mean shifting an activity slot and rebriefing a venue in the same afternoon, rather than each supplier discovering the change independently.'],
+                        ['q'=>'What\'s the minimum size or length for a 360° programme?','a'=>'It\'s built for programmes combining more than one service type, typically 3 to 6 days and 30 to 300 participants. A single one-day meeting or a standalone activity day doesn\'t need this layer — book that service directly and it will run just as well.'],
+                        ['q'=>'Can we start from a template programme and add or remove pieces?','a'=>'Yes. We often start from a sample structure like a 4-day conference-plus-incentive format and adjust it to your brief — dropping a component, extending a day, swapping a gala for a lighter closing dinner. The template is a starting point, not a fixed package.'],
+                        ['q'=>'Do we get one contact, or a different account manager per component?','a'=>'One project manager is assigned from the first brief through to the post-programme debrief, and is present on-site for the duration. They draw on our specialist meetings, team building and production teams for delivery, but you are never redirected between departments.'],
                     ];
                     @endphp
                     @foreach($faqs as $i => $faq)
@@ -600,7 +416,7 @@
 </section>
 
 {{-- CROSS-LINKS --}}
-<section class="space">
+<section class="space pt-0">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">

@@ -54,43 +54,28 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What does a meetings and conventions management company do in Marrakech?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A meetings and conventions management partner handles every operational layer of a corporate meeting: shortlisting and negotiating venues, sourcing AV and simultaneous translation equipment, contracting hotels for delegate blocks, coordinating transfers, and managing on-site registration and room-flow on the meeting days themselves." }
-        },
-        {
-            "@type": "Question",
             "name": "How far in advance should we book a conference venue in Marrakech?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For groups above 150 delegates, 6 to 9 months is a safe planning window, particularly for peak season (October to May). Smaller board meetings and executive committees can often be confirmed within 6 to 8 weeks, subject to venue availability." }
+            "acceptedAnswer": { "@type": "Answer", "text": "For groups above 150 delegates, 6 to 9 months is a safe window, particularly for peak season (October to May). Board meetings and smaller committees can often be confirmed within 6 to 8 weeks, subject to venue availability." }
         },
         {
             "@type": "Question",
-            "name": "Can Morocco Quest manage multilingual conferences?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We regularly source simultaneous interpretation booths and interpreters in English, French, Spanish and Arabic, and our on-site coordination team operates in all four languages." }
+            "name": "Can you manage multilingual conferences with interpretation?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We source simultaneous interpretation booths and interpreters in English, French, Spanish and Arabic, and our on-site team works in all four languages." }
         },
         {
             "@type": "Question",
-            "name": "What size of meetings can you handle in Marrakech?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We manage everything from 15-person board meetings in private riads to 800-delegate conventions in purpose-built convention centres. Venue selection is matched to your delegate count, format and budget." }
+            "name": "What size of meetings can you handle?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Everything from 15-person board meetings in private riads to conventions above 500 delegates in purpose-built centres. Venue choice follows your delegate count and format, not the other way round." }
         },
         {
             "@type": "Question",
-            "name": "Do you handle hybrid and streamed meetings?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, we work with AV partners who provide live-streaming, hybrid stage setups and multi-camera production for organisations that need to broadcast sessions to remote attendees." }
+            "name": "Do you handle hybrid and streamed sessions?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — we work with AV partners who provide live-streaming, hybrid stage builds and multi-camera production for sessions that need to reach remote attendees." }
         },
         {
             "@type": "Question",
-            "name": "What is included in a meeting management proposal?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A typical proposal covers venue options with floor plans, AV and technical costings, accommodation rates for delegate blocks, ground transport, catering options, and a day-by-day run sheet. Pricing is quoted net, so you retain full control of your client-facing budget." }
-        },
-        {
-            "@type": "Question",
-            "name": "Can you organise site inspections before we confirm a venue?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We arrange familiarisation trips to Marrakech so meeting planners and PCOs can walk the venue, meet the hotel operations team, and confirm technical capabilities before signing a contract." }
-        },
-        {
-            "@type": "Question",
-            "name": "Why hold a corporate meeting in Marrakech instead of a European city?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Marrakech offers direct flight access from most major European hubs, a lower cost base for venues and catering than Western Europe, and a destination that functions as an incentive in itself — delegates arrive for a meeting and leave with a memorable trip." }
+            "name": "Why choose Marrakech over a European conference city?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Direct flights from most major European hubs under four hours, venue and catering costs below Western Europe, and a destination delegates actually want to extend their stay in — which helps attendance for voluntary conferences." }
         }
     ]
 }
@@ -107,10 +92,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Meetings & Conventions Management</h1>
+                    <h1 class="breadcrumb-title">Your Conference Room Doesn't Have to Look Like a Conference Room</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Venue sourcing, AV production and delegate logistics —<br>
-                        full-service conference management in Marrakech.
+                        Meetings, conventions and congresses in Marrakech — planned, contracted and run by a team that's on-site, not on a spreadsheet in another country.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -125,82 +109,103 @@
     </div>
 </section>
 
-{{-- TRUST BAR --}}
-<section style="background:var(--theme-color);padding:22px 0;">
+{{-- INTRO --}}
+<section class="space pb-0">
     <div class="container">
-        <div class="row text-center gy-3">
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">800</div><div style="font-size:.85rem;opacity:.9;">Max delegate capacity sourced</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">4</div><div style="font-size:.85rem;opacity:.9;">Working languages on-site</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">24/7</div><div style="font-size:.85rem;opacity:.9;">On-site coordination</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">100%</div><div style="font-size:.85rem;opacity:.9;">Net-rate transparency</div></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+                <p style="font-size:1.1rem;color:#444;">Most meeting planners don't fail on the agenda — they fail on the fifty small logistics decisions nobody sees: the AV rider the venue can't actually meet, the delegate rooming list that arrives a week late, the gala dinner that was quoted for indoors and rains out.</p>
+                <p style="font-size:1.05rem;color:#555;">Morocco Quest runs meetings and conventions in Marrakech end to end — venue contracting, staging, delegate accommodation, transport and a team physically present on your event days. You deal with one point of contact, not six vendors.</p>
+                <a href="#meetings-enquiry" class="vs-btn mt-3">Talk With Our Meetings Team</a>
             </div>
         </div>
     </div>
 </section>
 
-{{-- INTRODUCTION --}}
+{{-- ALTERNATING SERVICE STACK --}}
 <section class="space">
     <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
-            <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Conference & Convention Management</span>
-                    <h2 class="sec-title">Corporate Meetings, Managed From Brief to Breakdown</h2>
-                </div>
-                <p>Running a conference in a destination you don't know is a logistics risk. Contracts, technical riders, catering menus and transport schedules all need a local operator who can be on-site, not just on email.</p>
-                <p>Morocco Quest manages <strong>meetings and conventions in Marrakech</strong> for corporate clients, associations and professional congress organizers (PCOs). We handle venue negotiation, AV and staging, delegate accommodation blocks, transport, and full on-site coordination — so your team can focus on the agenda, not the logistics.</p>
-                <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Venue shortlisting matched to delegate count and format</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> AV, staging and simultaneous interpretation sourcing</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Delegate accommodation blocks and rooming lists</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> On-site registration desk and room-flow management</li>
-                </ul>
-                <a href="#meetings-enquiry" class="vs-btn mt-4">Request a Proposal</a>
-            </div>
+
+        <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
-                     alt="Conference venue setup in Marrakech for corporate meetings management"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                     alt="Conference venue in Marrakech set up for a corporate convention"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Venue Sourcing</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">A Shortlist You Can Actually Choose From</h2>
+                <p>We don't send brochures. We send two or three venues that match your delegate count, format and budget, with real floor plans and a technical spec sheet — convention centres, five-star ballrooms, private riads for smaller committees, even outdoor venues at the edge of the Agafay desert for a closing session with a view.</p>
             </div>
         </div>
+
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp') }}"
+                     alt="Riad venue used for executive board meetings and delegate dinners in Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">AV, Staging & Interpretation</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Technical Production That Matches the Rider</h2>
+                <p>Sound, lighting, LED screens, staging and simultaneous interpretation booths — sourced and tested before your delegates arrive, not discovered broken on the morning of. If your programme streams to remote offices, we bring in the crew for that too.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/guide-dar-el-bacha-marrakech-tour-moroccan-culture.webp') }}"
+                     alt="Delegate accommodation and transfers coordinated for a Marrakech conference"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Delegate Logistics</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Rooming Lists, Transfers, and the Boring Parts Done Right</h2>
+                <p>Room blocks negotiated across partner hotels, rooming lists managed against your registration data, airport-to-venue transfers scheduled around actual flight times — the unglamorous half of a conference that determines whether delegates arrive relaxed or irritated.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/moroccan-traditional-dinner-event.webp') }}"
+                     alt="Gala dinner event production for conference delegates in Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">On-Site Delivery</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">We're in the Room, Not on a Call</h2>
+                <p>Registration desk, room-flow between sessions, speaker readiness, real-time fixes when a session overruns or a shipment is late — our team is physically present for the full duration of your meeting, not a remote contact you email if something breaks.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
-{{-- WHO IT'S FOR / WHEN NEEDED --}}
+{{-- SIGNATURE MODULE: VENUE FORMAT MATRIX --}}
 <section class="space bg-theme-07">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Who This Is For</span>
-                    <h2 class="sec-title">Built for Planners Who Need a Local Operator on the Ground</h2>
-                </div>
+                <span class="sec-subtitle">Match Your Format</span>
+                <h2 class="sec-title">Which Venue Type Fits Your Meeting?</h2>
+                <p>A rough guide — every proposal is still built around your actual brief.</p>
             </div>
         </div>
         <div class="row g-4 mt-2">
             @php
-            $audiences = [
-                ['icon'=>'fa-building',        'title'=>'Corporate Head Offices',  'body'=>'Annual sales kick-offs, board meetings and leadership offsites that need a discreet, well-run venue.'],
-                ['icon'=>'fa-people-group',    'title'=>'Associations & PCOs',     'body'=>'Professional congress organizers running multi-day conventions with parallel sessions and exhibitor space.'],
-                ['icon'=>'fa-handshake',       'title'=>'Event & Meeting Agencies','body'=>'International agencies who need a trusted ground partner for a Morocco leg of a global programme.'],
-                ['icon'=>'fa-briefcase',       'title'=>'Government & NGOs',       'body'=>'Institutional meetings requiring formal protocol, security coordination and multilingual support.'],
+            $formats = [
+                ['range'=>'Up to 30 delegates', 'venue'=>'Private Riad or Villa', 'body'=>'Boardroom setup, catered lunches, discreet setting — used for leadership offsites and executive committees.'],
+                ['range'=>'30–150 delegates',   'venue'=>'Boutique Hotel Ballroom', 'body'=>'Theatre or classroom seating, breakout rooms available, walkable to medina restaurants for evening events.'],
+                ['range'=>'150–500 delegates',  'venue'=>'5-Star Conference Hotel', 'body'=>'Full AV infrastructure on-site, dedicated exhibition space, large-format catering capability.'],
+                ['range'=>'500+ delegates',     'venue'=>'Convention Centre', 'body'=>'Parallel session rooms, purpose-built exhibition halls, loading access for large stage builds.'],
             ];
             @endphp
-            @foreach($audiences as $a)
+            @foreach($formats as $f)
             <div class="col-sm-6 col-lg-3">
-                <div class="text-center p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="width:52px;height:52px;background:var(--theme-color);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-                        <i class="fa-solid {{ $a['icon'] }}" style="color:#fff;font-size:1.3rem;"></i>
-                    </div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $a['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $a['body'] }}</div>
+                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
+                    <div style="font-size:.8rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $f['range'] }}</div>
+                    <div style="font-weight:700;margin-bottom:8px;">{{ $f['venue'] }}</div>
+                    <div style="font-size:.88rem;color:#666;">{{ $f['body'] }}</div>
                 </div>
             </div>
             @endforeach
@@ -208,130 +213,34 @@
     </div>
 </section>
 
-{{-- WHY MARRAKECH / OUR APPROACH --}}
+{{-- WHY MARRAKECH + TESTIMONIAL --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp') }}"
-                     alt="Riad venue used for executive meetings and delegate dinners in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+            <div class="col-lg-6 order-lg-2">
+                <span class="sec-subtitle style-2">Why Marrakech</span>
+                <h2 class="sec-title">A Destination That Works Harder Than a Business Park Hotel</h2>
+                <p>Marrakech sits under four hours from most major European hubs, with venue and catering costs that stay well below Western European equivalents — a difference a board notices when comparing destination options line by line.</p>
+                <p>It also gives delegates a reason to show up. A riad dinner or an Atlas Mountain excursion does more for informal networking than another hotel bar ever will, and a well-run meeting here tends to be the one people remember attending.</p>
             </div>
-            <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Why Marrakech</span>
-                    <h2 class="sec-title">A Destination That Works Harder Than a Conference Room</h2>
-                </div>
-                <p>Marrakech connects directly to most major European hubs in under four hours, which keeps travel time — and travel budgets — manageable for international delegates. Venue and catering costs sit well below Western European equivalents, which matters when a board is comparing destination options line by line.</p>
-                <p>Unlike a generic business-park hotel, Marrakech gives delegates a reason to extend their stay: riad dinners, Atlas Mountain excursions and medina experiences that double as informal networking time. A well-run meeting here becomes something delegates remember, not just attend.</p>
-                <p>Our approach starts with your brief — delegate count, format, budget ceiling and dates — and returns a shortlist of two or three venues with real floor plans and costed AV packages, not a generic brochure.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- PROCESS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Planning Process</span>
-                    <h2 class="sec-title">How We Manage Your Meeting, Step by Step</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $steps = [
-                ['n'=>'01','title'=>'Brief & Objectives','body'=>'We confirm delegate count, format, dates, budget ceiling and any protocol requirements.'],
-                ['n'=>'02','title'=>'Venue Shortlist','body'=>'We propose two to three venues matched to your brief, with floor plans and technical specs.'],
-                ['n'=>'03','title'=>'Costed Proposal','body'=>'A single net-rate proposal covering venue, AV, accommodation, catering and transport.'],
-                ['n'=>'04','title'=>'Contracting & Site Visit','body'=>'We negotiate terms and can arrange a familiarisation trip before you sign.'],
-                ['n'=>'05','title'=>'Pre-Event Logistics','body'=>'Rooming lists, delegate communication, technical riders and run sheets are finalised.'],
-                ['n'=>'06','title'=>'On-Site Delivery','body'=>'Our team is present throughout — registration, room flow, AV checks and issue resolution.'],
-            ];
-            @endphp
-            @foreach($steps as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:1.6rem;font-weight:800;color:var(--theme-color);opacity:.35;margin-bottom:8px;">{{ $s['n'] }}</div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $s['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $s['body'] }}</div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- SERVICE HIGHLIGHTS --}}
-<section class="space">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Service Highlights</span>
-                    <h2 class="sec-title">What's Included in Our Meeting Management Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $services = [
-                ['icon'=>'fa-map-location-dot', 'title'=>'Venue Sourcing',        'body'=>'Hotels, convention centres, riads and outdoor venues — matched to capacity and budget.'],
-                ['icon'=>'fa-microphone-lines',  'title'=>'AV & Staging',          'body'=>'Sound, lighting, LED screens, staging and simultaneous interpretation booths.'],
-                ['icon'=>'fa-bed',               'title'=>'Delegate Accommodation','body'=>'Room blocks, rooming lists and rate negotiation across partner hotels.'],
-                ['icon'=>'fa-bus',               'title'=>'Ground Transport',      'body'=>'Airport transfers, venue shuttles and executive vehicles for VIP delegates.'],
-                ['icon'=>'fa-utensils',          'title'=>'Catering & Gala Dinners','body'=>'Coffee breaks, working lunches and themed gala evenings in riads or desert venues.'],
-                ['icon'=>'fa-clipboard-check',   'title'=>'On-Site Coordination',  'body'=>'A dedicated team present for registration, room flow and real-time problem solving.'],
-            ];
-            @endphp
-            @foreach($services as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;">
-                    <div style="width:44px;height:44px;background:var(--theme-color);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <i class="fa-solid {{ $s['icon'] }}" style="color:#fff;font-size:1.1rem;"></i>
+            <div class="col-lg-6 order-lg-1">
+                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
+                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
+                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
+                        "We had eight months to plan a 220-delegate convention and no one on our team had worked in Morocco before. Morocco Quest gave us a venue shortlist within a week and stayed on-site for all three days — including a stage rigging issue on day two that they fixed before most delegates noticed."
+                    </p>
+                    <div style="display:flex;align-items:center;gap:14px;">
+                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                        </div>
+                        <div>
+                            <div style="font-weight:700;font-size:.95rem;">Conference Manager</div>
+                            <div style="font-size:.82rem;color:#777;">European Professional Association</div>
+                        </div>
+                        <div class="ms-auto">
+                            <span style="color:var(--theme-color);">★★★★★</span>
+                        </div>
                     </div>
-                    <div>
-                        <div style="font-weight:700;font-size:.95rem;margin-bottom:4px;">{{ $s['title'] }}</div>
-                        <div style="font-size:.88rem;color:#555;">{{ $s['body'] }}</div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- EXAMPLE SCENARIOS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Example Scenarios</span>
-                    <h2 class="sec-title">How Companies Use This Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">200-Delegate Annual Convention</div>
-                    <p style="font-size:.9rem;color:#666;">A European association holds its annual congress in a Marrakech convention centre, with breakout rooms, an exhibitor hall and a closing gala dinner in a private riad.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">40-Person Board Meeting</div>
-                    <p style="font-size:.9rem;color:#666;">A multinational's leadership team meets in a private riad for a two-day strategy offsite, with full-day AV support and a desert dinner on the closing night.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Hybrid Regional Summit</div>
-                    <p style="font-size:.9rem;color:#666;">A regional sales summit streams keynote sessions to remote offices while 120 in-person delegates attend breakout workshops on-site.</p>
                 </div>
             </div>
         </div>
@@ -339,7 +248,7 @@
 </section>
 
 {{-- LEAD FORM --}}
-<section class="space" id="meetings-enquiry">
+<section class="space bg-theme-07" id="meetings-enquiry">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9">
@@ -463,14 +372,14 @@
     </div>
 </section>
 
-{{-- FAQ --}}
-<section class="space bg-theme-07">
+{{-- FAQ (trimmed) --}}
+<section class="space">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center mb-5">
                     <span class="sec-subtitle">FAQ</span>
-                    <h2 class="sec-title">Frequently Asked Questions — Meetings & Conventions</h2>
+                    <h2 class="sec-title">Meetings & Conventions — Common Questions</h2>
                 </div>
                 <div class="accordion accordion-style1" id="mcFaq">
                 <style>
@@ -480,14 +389,11 @@
                 </style>
                     @php
                     $faqs = [
-                        ['q'=>'What does a meetings and conventions management company do in Marrakech?','a'=>'A meetings and conventions management partner handles every operational layer of a corporate meeting: shortlisting and negotiating venues, sourcing AV and simultaneous translation equipment, contracting hotels for delegate blocks, coordinating transfers, and managing on-site registration and room-flow on the meeting days themselves.'],
-                        ['q'=>'How far in advance should we book a conference venue in Marrakech?','a'=>'For groups above 150 delegates, 6 to 9 months is a safe planning window, particularly for peak season (October to May). Smaller board meetings and executive committees can often be confirmed within 6 to 8 weeks, subject to venue availability.'],
-                        ['q'=>'Can Morocco Quest manage multilingual conferences?','a'=>'Yes. We regularly source simultaneous interpretation booths and interpreters in English, French, Spanish and Arabic, and our on-site coordination team operates in all four languages.'],
-                        ['q'=>'What size of meetings can you handle in Marrakech?','a'=>'We manage everything from 15-person board meetings in private riads to 800-delegate conventions in purpose-built convention centres. Venue selection is matched to your delegate count, format and budget.'],
-                        ['q'=>'Do you handle hybrid and streamed meetings?','a'=>'Yes, we work with AV partners who provide live-streaming, hybrid stage setups and multi-camera production for organisations that need to broadcast sessions to remote attendees.'],
-                        ['q'=>'What is included in a meeting management proposal?','a'=>'A typical proposal covers venue options with floor plans, AV and technical costings, accommodation rates for delegate blocks, ground transport, catering options, and a day-by-day run sheet. Pricing is quoted net, so you retain full control of your client-facing budget.'],
-                        ['q'=>'Can you organise site inspections before we confirm a venue?','a'=>'Yes. We arrange familiarisation trips to Marrakech so meeting planners and PCOs can walk the venue, meet the hotel operations team, and confirm technical capabilities before signing a contract.'],
-                        ['q'=>'Why hold a corporate meeting in Marrakech instead of a European city?','a'=>'Marrakech offers direct flight access from most major European hubs, a lower cost base for venues and catering than Western Europe, and a destination that functions as an incentive in itself — delegates arrive for a meeting and leave with a memorable trip.'],
+                        ['q'=>'How far in advance should we book a conference venue in Marrakech?','a'=>'For groups above 150 delegates, 6 to 9 months is a safe window, particularly for peak season (October to May). Board meetings and smaller committees can often be confirmed within 6 to 8 weeks, subject to venue availability.'],
+                        ['q'=>'Can you manage multilingual conferences with interpretation?','a'=>'Yes. We source simultaneous interpretation booths and interpreters in English, French, Spanish and Arabic, and our on-site team works in all four languages.'],
+                        ['q'=>'What size of meetings can you handle?','a'=>'Everything from 15-person board meetings in private riads to conventions above 500 delegates in purpose-built centres. Venue choice follows your delegate count and format, not the other way round.'],
+                        ['q'=>'Do you handle hybrid and streamed sessions?','a'=>'Yes — we work with AV partners who provide live-streaming, hybrid stage builds and multi-camera production for sessions that need to reach remote attendees.'],
+                        ['q'=>'Why choose Marrakech over a European conference city?','a'=>'Direct flights from most major European hubs under four hours, venue and catering costs below Western Europe, and a destination delegates actually want to extend their stay in — which helps attendance for voluntary conferences.'],
                     ];
                     @endphp
                     @foreach($faqs as $i => $faq)
@@ -509,7 +415,7 @@
 </section>
 
 {{-- CROSS-LINKS --}}
-<section class="space">
+<section class="space pt-0">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">

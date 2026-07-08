@@ -54,53 +54,28 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What does \"sustainable events\" actually mean for a corporate programme in Morocco?",
-            "acceptedAnswer": { "@type": "Answer", "text": "In practical terms it means choosing suppliers and venues that source food and materials locally where possible, working with artisan cooperatives and community-based operators rather than only large intermediaries, reducing waste at desert camps and event venues, and being deliberate about water use. It is a set of sourcing and planning decisions, not a certificate." }
+            "name": "Do you offer carbon-neutral certification for our event?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. We are not a certification body and we don't claim our events are carbon neutral — that would require independent measurement and audit we don't perform. What we do instead is choose suppliers with genuinely local sourcing where it's available, and give you an honest account of what was actually sourced locally versus what wasn't, so your team can decide how to represent that." }
         },
         {
             "@type": "Question",
-            "name": "Is this greenwashing?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We are careful not to make claims we cannot stand behind. Morocco Quest is not a certified carbon-neutral operator and we do not present our events as zero-impact. What we can offer is transparency about which suppliers we use, why we chose them, and what trade-offs exist between scale, budget and genuinely local sourcing. If a claim cannot be verified, we do not make it." }
+            "name": "What does \"local sourcing\" actually mean in practice?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It means the catering team is buying produce from Marrakech's markets and regional producers instead of a pre-packaged supply chain, and that transport, staffing and some materials are sourced from operators based in the region rather than flown or trucked in. It doesn't mean every single item on a menu or in a gift box is local — for larger events that's rarely realistic, and we'll tell you where the limits are." }
         },
         {
             "@type": "Question",
-            "name": "Can you provide reporting for our ESG or CSR documentation?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We can provide a supplier and sourcing summary — which cooperatives, guides and local operators were used, approximate spend retained locally, and a description of the community engagement component — that your team can incorporate into internal ESG reporting. We do not issue third-party audited sustainability certificates." }
+            "name": "How do the artisan cooperative partnerships actually work?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We work directly with specific cooperatives we know — a weaving collective, an argan oil cooperative, a pottery workshop — rather than routing through a generic \"cultural experience\" reseller. Groups visit, see the work, and buy directly if they choose to, with that spend going to the cooperative. It's a working visit, not a staged stop with a gift shop at the end." }
         },
         {
             "@type": "Question",
-            "name": "What does local sourcing look like at a desert camp event?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Where feasible we favour camps that buy produce from nearby communities, employ local staff, and manage waste by packing it out rather than burying or burning it on site. Water use is planned around what the site can realistically support, particularly for larger groups. Availability varies by location and season, and we're upfront about it when a preferred option isn't practical for a given group size." }
+            "name": "Can genuine local sourcing keep up with a large event?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not always, and we say so upfront. A cooperative that comfortably hosts 25 people for a workshop can't absorb a group of 300. Past a certain size we bring in additional suppliers to cover the gap, and we'd rather flag that trade-off during planning than let a client assume full local sourcing at any scale." }
         },
         {
             "@type": "Question",
-            "name": "Do you work with artisan cooperatives directly?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Morocco has an established network of women's argan oil cooperatives, weaving collectives and pottery workshops, particularly around Marrakech and the Atlas Mountains. We can build a visit, workshop or purchasing component around one of these cooperatives as part of a programme, with the group's spend going directly to the cooperative rather than a reseller." }
-        },
-        {
-            "@type": "Question",
-            "name": "How does group size affect what's realistically achievable?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A cooperative that can host 20 people comfortably for a workshop may not have the capacity for 150. For larger groups we're honest about where genuine local sourcing has limits and where we need to bring in additional suppliers to meet demand — we would rather tell you this at the planning stage than overpromise." }
-        },
-        {
-            "@type": "Question",
-            "name": "What accommodation options have genuine sustainability practices?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A number of riads and desert camps in the Marrakech region operate with solar water heating, greywater reuse, locally sourced breakfast produce or staff drawn from the surrounding community. We assess each property individually rather than relying on marketing claims, and we'll tell you honestly where a property's practices are limited." }
-        },
-        {
-            "@type": "Question",
-            "name": "Can sustainability be part of a CSR-linked incentive trip?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, this is one of the more common requests we receive. A typical format pairs a standard incentive itinerary with a half-day community engagement component — a cooperative visit, a tree-planting session, or a hands-on workshop — that gives the trip a stated CSR outcome alongside the reward element." }
-        },
-        {
-            "@type": "Question",
-            "name": "Does choosing sustainable suppliers cost more?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sometimes, yes. Cooperative-sourced catering or community-based excursions can carry a premium over mass-market alternatives, and we budget for that transparently rather than hiding it in a bundled rate. We'll flag where a sustainability-aligned choice affects cost so your team can make an informed decision." }
-        },
-        {
-            "@type": "Question",
-            "name": "How far in advance should we brief you on sustainability requirements?",
-            "acceptedAnswer": { "@type": "Answer", "text": "The earlier the better, ideally at initial brief stage. Supplier vetting for genuine local sourcing and cooperative partnerships takes longer than booking a standard venue, particularly for larger groups or peak season (October to May) dates." }
+            "name": "What does your reporting support actually cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "After the event we can provide a written summary of which suppliers and cooperatives were used, roughly how much spend stayed local, and what the community engagement component involved. It's meant to be a factual record your team can use in internal ESG or CSR reporting — not a marketing document, and not a substitute for third-party audited certification." }
         }
     ]
 }
@@ -117,10 +92,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Sustainable Events</h1>
+                    <h1 class="breadcrumb-title">We Won't Tell You Your Event Is Carbon Neutral</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Local sourcing, cooperative partnerships and honest reporting —<br>
-                        responsible corporate events in Morocco for organisations with CSR and ESG commitments.
+                        Because it isn't, and no DMC's is. What we can do is source locally where it genuinely works, partner with real cooperatives, and tell your team exactly what happened — not what sounds good in a report.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -135,139 +109,108 @@
     </div>
 </section>
 
-{{-- TRUST BAR --}}
-<section style="background:var(--theme-color);padding:22px 0;">
-    <div class="container">
-        <div class="row text-center gy-3">
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">12+</div><div style="font-size:.85rem;opacity:.9;">Local cooperatives partnered with</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">3</div><div style="font-size:.85rem;opacity:.9;">Regions covered — Marrakech, Atlas, Agafay</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">100%</div><div style="font-size:.85rem;opacity:.9;">Net-rate transparency on sourcing</div></div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;"><div style="font-size:2rem;font-weight:700;">1:1</div><div style="font-size:.85rem;opacity:.9;">Supplier vetting per programme brief</div></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- INTRODUCTION --}}
-<section class="space">
-    <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
-            <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Responsible Corporate Events</span>
-                    <h2 class="sec-title">Sustainable Event Planning, Handled Honestly</h2>
-                </div>
-                <p>More companies now carry a CSR mandate or an ESG reporting requirement into their event planning, and Morocco offers genuine ground to work with — a long-standing network of artisan cooperatives, community-based tourism operators and a landscape where local sourcing is a realistic option rather than a marketing add-on.</p>
-                <p>We are not a certified carbon-neutral operator, and we will not tell you we are. What we do is plan <strong>sustainable events in Morocco</strong> around suppliers we have vetted for genuine local sourcing, build in community engagement components that go beyond a token photo stop, and stay transparent with you about where trade-offs exist between scale, budget and how local we can realistically go.</p>
-                <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Supplier vetting for genuine local sourcing, not marketing claims</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Direct partnerships with artisan cooperatives and community operators</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Waste and water conscious venue selection where feasible</li>
-                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Honest reporting support for internal ESG documentation</li>
-                </ul>
-                <a href="#sustainable-enquiry" class="vs-btn mt-4">Discuss Your Sustainability Brief</a>
-            </div>
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}"
-                     alt="Atlas Mountains terrace near Imlil used for community-based sustainable event programmes"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- WHO IT'S FOR / WHEN NEEDED --}}
-<section class="space bg-theme-07">
+{{-- INTRO --}}
+<section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Who This Is For</span>
-                    <h2 class="sec-title">Built for Organisations That Take Sustainability Seriously</h2>
-                </div>
+            <div class="col-lg-9 text-center">
+                <p style="font-size:1.1rem;color:#444;">Most "sustainable event" pitches are a photo of a tree and a claim nobody checked. We'd rather show you the supplier list: which caterer buys from which market, which cooperative your group actually visits, which camp packs its waste out instead of burning it.</p>
+                <p style="font-size:1.05rem;color:#555;">If your CSR policy or ESG framework needs a defensible account of what was done, that's what we build toward — not a badge, a record.</p>
+                <a href="#sustainable-enquiry" class="vs-btn mt-3">Discuss Your Sustainability Brief</a>
             </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $audiences = [
-                ['icon'=>'fa-leaf',            'title'=>'CSR & ESG-Mandated Teams',   'body'=>'Companies whose events need to align with a stated CSR policy or contribute to ESG reporting requirements.'],
-                ['icon'=>'fa-people-group',    'title'=>'Associations with Charters', 'body'=>'Associations and NGOs operating under an environmental or sustainability charter for their congresses.'],
-                ['icon'=>'fa-hand-holding-heart','title'=>'Brand & Marketing Teams',   'body'=>'Brands wanting an authentic community engagement component, not a staged gesture, in their event programme.'],
-                ['icon'=>'fa-gift',            'title'=>'CSR-Linked Incentive Groups','body'=>'Incentive travel programmes that pair reward travel with a genuine, planned community engagement element.'],
-            ];
-            @endphp
-            @foreach($audiences as $a)
-            <div class="col-sm-6 col-lg-3">
-                <div class="text-center p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="width:52px;height:52px;background:var(--theme-color);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-                        <i class="fa-solid {{ $a['icon'] }}" style="color:#fff;font-size:1.3rem;"></i>
-                    </div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $a['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $a['body'] }}</div>
-                </div>
-            </div>
-            @endforeach
         </div>
     </div>
 </section>
 
-{{-- WHY MARRAKECH / OUR APPROACH --}}
+{{-- ALTERNATING SERVICE STACK --}}
 <section class="space">
     <div class="container">
-        <div class="row align-items-center gy-5 gx-xl-5">
+
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}"
+                     alt="Local market seller in Morocco supplying produce for sustainable event catering"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Local Sourcing & Catering</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Menus Built From the Market Down the Road</h2>
+                <p>We brief caterers to buy produce from Marrakech's markets and regional growers rather than a boxed, pre-imported catering chain. It doesn't mean every ingredient is local — a large gala menu still needs items the region doesn't produce — but the default is regional first, and we can tell you which dishes on the menu were sourced that way and which weren't.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/souk_experience_morocco_cultural_discoveries.webp') }}"
+                     alt="Artisan cooperative workshop visit as part of a sustainable corporate event in Morocco"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Artisan Cooperative Partnerships</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">A Working Visit, Not a Gift Shop Stop</h2>
+                <p>We work with specific cooperatives we know directly — a women's argan oil cooperative, a weaving collective, a pottery workshop — rather than a generic "cultural experience" booked through a reseller. Groups see the actual work, spend goes straight to the cooperative if they choose to buy, and the visit is sized to what the cooperative can host, not padded to fill an itinerary slot.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }}"
-                     alt="Agafay desert camp near Marrakech used for low-transit sustainable event programmes"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                     alt="Desert camp near Agafay selected for waste and water conscious event logistics"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
-                <div class="title-area">
-                    <span class="sec-subtitle style-2">Why Marrakech</span>
-                    <h2 class="sec-title">A Region Where Local Sourcing Is Genuinely Available</h2>
-                </div>
-                <p>Marrakech sits close to the Agafay plateau and the Atlas Mountains, which means desert camp and mountain-village components can be reached in under an hour rather than requiring a long-haul internal transfer. That proximity reduces transport emissions relative to itineraries that criss-cross the country, and it keeps logistics manageable for larger groups.</p>
-                <p>The region also has a genuinely long-standing tradition of artisan cooperatives — argan oil producers, weaving collectives, pottery workshops — and community-based tourism operators who are used to hosting groups. This isn't infrastructure we had to build for the purpose of sustainability marketing; it existed before the demand for it did.</p>
-                <p>Our approach starts with your sustainability brief — what your CSR policy requires, what your stakeholders expect to see reported — and we vet suppliers against that brief rather than assuming a generic package will satisfy it.</p>
+                <span class="sec-subtitle style-2">Waste & Water Conscious Venue Selection</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">Practical Choices, Not a Marketing Line</h2>
+                <p>At desert camps this means checking whether waste is packed out or burned on site, and whether water use for a group of your size is something the camp can actually support without trucking in extra supply. At riads it means asking about greywater reuse and solar water heating rather than taking a brochure claim at face value. Some properties do this well. Some don't. We tell you which is which.</p>
             </div>
         </div>
+
+        <div class="row align-items-center gy-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/moroccan_pastries_hospitality_serving.webp') }}"
+                     alt="Documentation and reporting support for CSR and ESG teams after a sustainable event in Morocco"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+                <span class="sec-subtitle style-2">Transparent Reporting Support</span>
+                <h2 class="sec-title" style="font-size:1.6rem;">A Record Your ESG Team Can Actually Use</h2>
+                <p>After the event, we can put together a written summary of which suppliers and cooperatives were used, roughly how much spend stayed local, and what the community engagement component involved. It's a factual account for your internal reporting, not a certificate — and we won't overstate what a two-day programme actually achieved.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
-{{-- PROCESS --}}
+{{-- SIGNATURE MODULE: WHAT WE CAN REALISTICALLY DELIVER --}}
 <section class="space bg-theme-07">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Planning Process</span>
-                    <h2 class="sec-title">How We Plan a Sustainable Event, Step by Step</h2>
-                </div>
+                <span class="sec-subtitle">Straight Talk</span>
+                <h2 class="sec-title">What We Can Realistically Deliver</h2>
+                <p>Sustainability claims in events are easy to make and hard to verify. Here's where we draw the line.</p>
             </div>
         </div>
         <div class="row g-4 mt-2">
             @php
-            $steps = [
-                ['n'=>'01','title'=>'Sustainability Brief Intake','body'=>'We ask what your CSR policy or ESG framework actually requires, and what your stakeholders expect to see.'],
-                ['n'=>'02','title'=>'Supplier Vetting','body'=>'We check venues, caterers and operators for genuine local sourcing — not just a sustainability page on their website.'],
-                ['n'=>'03','title'=>'Community Engagement Design','body'=>'We design a cooperative visit, workshop or community component that fits your group size and schedule realistically.'],
-                ['n'=>'04','title'=>'Costed Proposal','body'=>'A transparent proposal that flags where sustainability-aligned choices affect cost, so nothing is hidden in a bundled rate.'],
-                ['n'=>'05','title'=>'Measurement & Reporting Support','body'=>'We prepare a supplier and sourcing summary your team can use for internal ESG documentation.'],
-                ['n'=>'06','title'=>'On-Site Delivery','body'=>'Our team is present to manage waste handling, water use and the community engagement component on the day.'],
+            $matrix = [
+                ['yes'=>true,  'label'=>'Local sourcing, documented', 'body'=>'We can tell you which suppliers and menu items were sourced regionally, with rough numbers.'],
+                ['yes'=>false, 'label'=>'"Carbon neutral" certification', 'body'=>'Not something we measure, audit or certify. We won\'t put this on a proposal.'],
+                ['yes'=>true,  'label'=>'Direct cooperative partnerships', 'body'=>'Named cooperatives we work with repeatedly, sized to what they can actually host.'],
+                ['yes'=>false, 'label'=>'"Saves the planet" messaging', 'body'=>'A two-day event doesn\'t. We describe what was done, not its planetary impact.'],
+                ['yes'=>true,  'label'=>'Honest trade-off disclosure', 'body'=>'Where scale or budget limits local sourcing, we say so before you sign off, not after.'],
+                ['yes'=>false, 'label'=>'Third-party audited sustainability badges', 'body'=>'We don\'t issue or imply certification we haven\'t earned from an accredited body.'],
             ];
             @endphp
-            @foreach($steps as $s)
+            @foreach($matrix as $m)
             <div class="col-sm-6 col-lg-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:1.6rem;font-weight:800;color:var(--theme-color);opacity:.35;margin-bottom:8px;">{{ $s['n'] }}</div>
-                    <div style="font-weight:700;margin-bottom:6px;">{{ $s['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $s['body'] }}</div>
+                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);border-left:4px solid {{ $m['yes'] ? '#27ae60' : '#c0392b' }};">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                        <i class="fa-solid {{ $m['yes'] ? 'fa-circle-check' : 'fa-circle-xmark' }}" style="color:{{ $m['yes'] ? '#27ae60' : '#c0392b' }};font-size:1.1rem;"></i>
+                        <div style="font-weight:700;">{{ $m['label'] }}</div>
+                    </div>
+                    <div style="font-size:.88rem;color:#666;">{{ $m['body'] }}</div>
+                    <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:{{ $m['yes'] ? '#27ae60' : '#c0392b' }};margin-top:10px;">{{ $m['yes'] ? 'What this typically means' : "What we won't claim" }}</div>
                 </div>
             </div>
             @endforeach
@@ -275,73 +218,34 @@
     </div>
 </section>
 
-{{-- SERVICE HIGHLIGHTS --}}
+{{-- WHY MARRAKECH + TESTIMONIAL --}}
 <section class="space">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Service Highlights</span>
-                    <h2 class="sec-title">What's Included in Our Sustainable Events Service</h2>
-                </div>
+        <div class="row align-items-center gy-5 gx-xl-5">
+            <div class="col-lg-6 order-lg-2">
+                <span class="sec-subtitle style-2">Why Marrakech</span>
+                <h2 class="sec-title">The Cooperatives Were Here Before the Demand For Them Was</h2>
+                <p>Morocco has a long-standing tradition of artisan cooperatives — argan oil producers, weaving collectives, pottery workshops — many run by women and organised long before "sustainable events" became a line item on a corporate brief. That's infrastructure we can plug an event into honestly, rather than something built to order for a marketing photo.</p>
+                <p>Marrakech also sits close to the Agafay plateau and the Atlas foothills, so a desert camp or mountain-village component is usually under an hour away rather than a long internal transfer. That keeps logistics manageable and cuts down on the transport a multi-region itinerary would otherwise need.</p>
             </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $services = [
-                ['icon'=>'fa-carrot',            'title'=>'Local Sourcing & Catering',       'body'=>'Menus built around produce and suppliers from the region where availability and quality allow.'],
-                ['icon'=>'fa-hands-holding-circle','title'=>'Artisan Cooperative Partnerships','body'=>'Direct partnerships with weaving, pottery and argan oil cooperatives for visits, workshops and sourcing.'],
-                ['icon'=>'fa-droplet',           'title'=>'Waste & Water Conscious Venues',   'body'=>'Venue selection that weighs waste handling and water use, particularly for desert camp locations.'],
-                ['icon'=>'fa-people-roof',       'title'=>'Community Engagement Programming', 'body'=>'Engagement components designed with the community, not staged for a group photo.'],
-                ['icon'=>'fa-file-lines',        'title'=>'Transparent Reporting Support',    'body'=>'A supplier and sourcing summary your team can fold into internal CSR or ESG documentation.'],
-                ['icon'=>'fa-route',             'title'=>'Low-Impact Transport Planning',    'body'=>'Itineraries that favour proximity — Agafay and the Atlas foothills over long internal transfers.'],
-            ];
-            @endphp
-            @foreach($services as $s)
-            <div class="col-sm-6 col-lg-4">
-                <div style="display:flex;gap:14px;align-items:flex-start;padding:18px;">
-                    <div style="width:44px;height:44px;background:var(--theme-color);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                        <i class="fa-solid {{ $s['icon'] }}" style="color:#fff;font-size:1.1rem;"></i>
+            <div class="col-lg-6 order-lg-1">
+                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
+                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
+                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
+                        "We asked for something we could actually put in our sustainability report, not a nice photo. Morocco Quest arranged a morning at a weaving cooperative outside Marrakech where our team bought directly from the women who made the pieces, and afterwards sent us a plain summary of what we'd spent and where. It was more useful than any 'green' add-on we'd been offered before."
+                    </p>
+                    <div style="display:flex;align-items:center;gap:14px;">
+                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                        </div>
+                        <div>
+                            <div style="font-weight:700;font-size:.95rem;">Sustainability Lead</div>
+                            <div style="font-size:.82rem;color:#777;">European Financial Services Firm</div>
+                        </div>
+                        <div class="ms-auto">
+                            <span style="color:var(--theme-color);">★★★★★</span>
+                        </div>
                     </div>
-                    <div>
-                        <div style="font-weight:700;font-size:.95rem;margin-bottom:4px;">{{ $s['title'] }}</div>
-                        <div style="font-size:.88rem;color:#555;">{{ $s['body'] }}</div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- EXAMPLE SCENARIOS --}}
-<section class="space bg-theme-07">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <div class="title-area">
-                    <span class="sec-subtitle">Example Scenarios</span>
-                    <h2 class="sec-title">How Companies Use This Service</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row g-4 mt-2">
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">CSR-Linked Incentive Trip with Cooperative Visit</div>
-                    <p style="font-size:.9rem;color:#666;">A sales incentive group spends a morning at a women's argan oil cooperative near Marrakech, with direct purchasing, before continuing to a standard incentive itinerary.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Association Congress with Local Sourcing Requirement</div>
-                    <p style="font-size:.9rem;color:#666;">An association's environmental charter requires catering to prioritise local produce; we brief caterers accordingly and document sourcing for the congress report.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-weight:700;margin-bottom:8px;">Corporate Offsite with Community Engagement Day</div>
-                    <p style="font-size:.9rem;color:#666;">A leadership offsite adds a half-day at an Atlas Mountain village, working alongside a local cooperative on a planned, mutually agreed activity.</p>
                 </div>
             </div>
         </div>
@@ -349,7 +253,7 @@
 </section>
 
 {{-- LEAD FORM --}}
-<section class="space" id="sustainable-enquiry">
+<section class="space bg-theme-07" id="sustainable-enquiry">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9">
@@ -473,14 +377,14 @@
     </div>
 </section>
 
-{{-- FAQ --}}
-<section class="space bg-theme-07">
+{{-- FAQ (trimmed) --}}
+<section class="space">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center mb-5">
                     <span class="sec-subtitle">FAQ</span>
-                    <h2 class="sec-title">Frequently Asked Questions — Sustainable Events</h2>
+                    <h2 class="sec-title">Sustainable Events — Common Questions</h2>
                 </div>
                 <div class="accordion accordion-style1" id="susFaq">
                 <style>
@@ -490,16 +394,11 @@
                 </style>
                     @php
                     $faqs = [
-                        ['q'=>'What does "sustainable events" actually mean for a corporate programme in Morocco?','a'=>'In practical terms it means choosing suppliers and venues that source food and materials locally where possible, working with artisan cooperatives and community-based operators rather than only large intermediaries, reducing waste at desert camps and event venues, and being deliberate about water use. It is a set of sourcing and planning decisions, not a certificate.'],
-                        ['q'=>'Is this greenwashing?','a'=>'We are careful not to make claims we cannot stand behind. Morocco Quest is not a certified carbon-neutral operator and we do not present our events as zero-impact. What we can offer is transparency about which suppliers we use, why we chose them, and what trade-offs exist between scale, budget and genuinely local sourcing. If a claim cannot be verified, we do not make it.'],
-                        ['q'=>'Can you provide reporting for our ESG or CSR documentation?','a'=>'We can provide a supplier and sourcing summary — which cooperatives, guides and local operators were used, approximate spend retained locally, and a description of the community engagement component — that your team can incorporate into internal ESG reporting. We do not issue third-party audited sustainability certificates.'],
-                        ['q'=>'What does local sourcing look like at a desert camp event?','a'=>"Where feasible we favour camps that buy produce from nearby communities, employ local staff, and manage waste by packing it out rather than burying or burning it on site. Water use is planned around what the site can realistically support, particularly for larger groups. Availability varies by location and season, and we're upfront about it when a preferred option isn't practical for a given group size."],
-                        ['q'=>'Do you work with artisan cooperatives directly?','a'=>"Yes. Morocco has an established network of women's argan oil cooperatives, weaving collectives and pottery workshops, particularly around Marrakech and the Atlas Mountains. We can build a visit, workshop or purchasing component around one of these cooperatives as part of a programme, with the group's spend going directly to the cooperative rather than a reseller."],
-                        ['q'=>"How does group size affect what's realistically achievable?",'a'=>"A cooperative that can host 20 people comfortably for a workshop may not have the capacity for 150. For larger groups we're honest about where genuine local sourcing has limits and where we need to bring in additional suppliers to meet demand — we would rather tell you this at the planning stage than overpromise."],
-                        ['q'=>'What accommodation options have genuine sustainability practices?','a'=>"A number of riads and desert camps in the Marrakech region operate with solar water heating, greywater reuse, locally sourced breakfast produce or staff drawn from the surrounding community. We assess each property individually rather than relying on marketing claims, and we'll tell you honestly where a property's practices are limited."],
-                        ['q'=>'Can sustainability be part of a CSR-linked incentive trip?','a'=>'Yes, this is one of the more common requests we receive. A typical format pairs a standard incentive itinerary with a half-day community engagement component — a cooperative visit, a tree-planting session, or a hands-on workshop — that gives the trip a stated CSR outcome alongside the reward element.'],
-                        ['q'=>'Does choosing sustainable suppliers cost more?','a'=>"Sometimes, yes. Cooperative-sourced catering or community-based excursions can carry a premium over mass-market alternatives, and we budget for that transparently rather than hiding it in a bundled rate. We'll flag where a sustainability-aligned choice affects cost so your team can make an informed decision."],
-                        ['q'=>'How far in advance should we brief you on sustainability requirements?','a'=>'The earlier the better, ideally at initial brief stage. Supplier vetting for genuine local sourcing and cooperative partnerships takes longer than booking a standard venue, particularly for larger groups or peak season (October to May) dates.'],
+                        ['q'=>'Do you offer carbon-neutral certification for our event?','a'=>"No. We are not a certification body and we don't claim our events are carbon neutral — that would require independent measurement and audit we don't perform. What we do instead is choose suppliers with genuinely local sourcing where it's available, and give you an honest account of what was actually sourced locally versus what wasn't, so your team can decide how to represent that."],
+                        ['q'=>'What does "local sourcing" actually mean in practice?','a'=>"It means the catering team is buying produce from Marrakech's markets and regional producers instead of a pre-packaged supply chain, and that transport, staffing and some materials are sourced from operators based in the region rather than flown or trucked in. It doesn't mean every single item on a menu or in a gift box is local — for larger events that's rarely realistic, and we'll tell you where the limits are."],
+                        ['q'=>'How do the artisan cooperative partnerships actually work?','a'=>'We work directly with specific cooperatives we know — a weaving collective, an argan oil cooperative, a pottery workshop — rather than routing through a generic "cultural experience" reseller. Groups visit, see the work, and buy directly if they choose to, with that spend going to the cooperative. It\'s a working visit, not a staged stop with a gift shop at the end.'],
+                        ['q'=>'Can genuine local sourcing keep up with a large event?','a'=>"Not always, and we say so upfront. A cooperative that comfortably hosts 25 people for a workshop can't absorb a group of 300. Past a certain size we bring in additional suppliers to cover the gap, and we'd rather flag that trade-off during planning than let a client assume full local sourcing at any scale."],
+                        ['q'=>'What does your reporting support actually cover?','a'=>"After the event we can provide a written summary of which suppliers and cooperatives were used, roughly how much spend stayed local, and what the community engagement component involved. It's meant to be a factual record your team can use in internal ESG or CSR reporting — not a marketing document, and not a substitute for third-party audited certification."],
                     ];
                     @endphp
                     @foreach($faqs as $i => $faq)
@@ -521,7 +420,7 @@
 </section>
 
 {{-- CROSS-LINKS --}}
-<section class="space">
+<section class="space pt-0">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">
