@@ -85,7 +85,7 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-gala-ballroom-event-marrakech-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -128,8 +128,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
-                     alt="Conference venue in Marrakech set up for a corporate convention"
+                <img src="{{ asset('assets/img/morocco-quest-conference-plenary-stage-marrakech-congress.webp') }}"
+                     alt="Conference plenary stage and seating managed by Morocco Quest for a convention in Marrakech"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -139,13 +139,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp') }}"
-                     alt="Riad venue used for executive board meetings and delegate dinners in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">AV, Staging & Interpretation</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">Technical Production That Matches the Rider</h2>
                 <p>Sound, lighting, LED screens, staging and simultaneous interpretation booths — sourced and tested before your delegates arrive, not discovered broken on the morning of. If your programme streams to remote offices, we bring in the crew for that too.</p>
@@ -154,8 +149,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/guide-dar-el-bacha-marrakech-tour-moroccan-culture.webp') }}"
-                     alt="Delegate accommodation and transfers coordinated for a Marrakech conference"
+                <img src="{{ asset('assets/img/morocco-quest-gala-dinner-moroccan-cuisine-mice-marrakech.webp') }}"
+                     alt="Plated Moroccan cuisine at a MICE gala dinner produced by Morocco Quest in Marrakech"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -165,13 +160,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/moroccan-traditional-dinner-event.webp') }}"
-                     alt="Gala dinner event production for conference delegates in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">On-Site Delivery</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">We're in the Room, Not on a Call</h2>
                 <p>Registration desk, room-flow between sessions, speaker readiness, real-time fixes when a session overruns or a shipment is late — our team is physically present for the full duration of your meeting, not a remote contact you email if something breaks.</p>
@@ -181,7 +171,11 @@
     </div>
 </section>
 
-{{-- COMPLETE SOLUTIONS ICON GRID --}}
+@include('partials.dmc-testimonials')
+
+
+
+{{-- COMPLETE SOLUTIONS — NUMBERED LEDGER LIST --}}
 <section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
@@ -191,7 +185,7 @@
                 <p>Every component of a corporate meeting or convention, handled under one agreement.</p>
             </div>
         </div>
-        <div class="row g-4 mt-2">
+        <div class="mc-ledger mt-4">
             @php
             $solutions = [
                 ['icon'=>'fa-building',        'label'=>'Venue Sourcing'],
@@ -204,17 +198,61 @@
                 ['icon'=>'fa-headset',         'label'=>'On-Site Delivery Team'],
             ];
             @endphp
-            @foreach($solutions as $s)
-            <div class="col-6 col-md-3">
-                <div class="text-center p-4" style="background:#fff;border:1px solid #ececec;border-radius:12px;height:100%;">
-                    <i class="fa-solid {{ $s['icon'] }}" style="font-size:1.8rem;color:var(--theme-color);display:block;margin-bottom:14px;"></i>
-                    <div style="font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.02em;">{{ $s['label'] }}</div>
-                </div>
+            @foreach($solutions as $i => $s)
+            <div class="mc-ledger__row">
+                <span class="mc-ledger__num">{{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <i class="fa-solid {{ $s['icon'] }} mc-ledger__icon"></i>
+                <span class="mc-ledger__label">{{ $s['label'] }}</span>
+                <span class="mc-ledger__line"></span>
             </div>
             @endforeach
         </div>
     </div>
 </section>
+
+<style>
+    .mc-ledger{ max-width:900px; margin:0 auto; border-top:1px solid #e6e6e6; }
+    .mc-ledger__row{
+        display:flex;
+        align-items:center;
+        gap:18px;
+        padding:18px 4px;
+        border-bottom:1px solid #e6e6e6;
+        transition:background .2s ease;
+    }
+    .mc-ledger__row:hover{ background:#fafafa; }
+    .mc-ledger__num{
+        font-size:1.6rem;
+        font-weight:800;
+        color:#e2e2e2;
+        min-width:52px;
+        flex-shrink:0;
+        line-height:1;
+    }
+    .mc-ledger__row:hover .mc-ledger__num{ color:var(--theme-color); }
+    .mc-ledger__icon{
+        color:var(--theme-color);
+        font-size:1.1rem;
+        width:28px;
+        flex-shrink:0;
+        text-align:center;
+    }
+    .mc-ledger__label{
+        font-weight:700;
+        font-size:1.02rem;
+        color:var(--title-color);
+        flex-shrink:0;
+    }
+    .mc-ledger__line{
+        flex:1;
+        border-bottom:1px dashed #ddd;
+        margin:0 8px;
+    }
+    @media (max-width:575px){
+        .mc-ledger__line{ display:none; }
+        .mc-ledger__row{ flex-wrap:wrap; }
+    }
+</style>
 
 {{-- SIGNATURE MODULE: VENUE FORMAT MATRIX --}}
 <section class="space bg-theme-07">
@@ -418,9 +456,13 @@
                 </div>
                 <div class="accordion accordion-style1" id="mcFaq">
                 <style>
-                    #mcFaq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #mcFaq .accordion-button{padding-right:60px;font-size:.95rem;color:var(--title-color);text-transform:none;line-height:1.45;}
                     #mcFaq .accordion-button:not(.collapsed){color:var(--theme-color);}
-                    #mcFaq .accordion-body{font-size:.92rem;}
+                    #mcFaq .accordion-body{font-size:.88rem;text-transform:none;line-height:1.6;letter-spacing:normal;}
+                    @media (max-width:575px){
+                        #mcFaq .accordion-button{font-size:.9rem;line-height:1.4;padding-right:44px;}
+                        #mcFaq .accordion-body{font-size:.84rem;line-height:1.55;}
+                    }
                 </style>
                     @php
                     $faqs = [
@@ -449,20 +491,11 @@
     </div>
 </section>
 
-{{-- CROSS-LINKS --}}
-<section class="space pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Related DMC Services</h3>
-                <p>Planning a meeting that also needs delegate activities? See our <a href="{{ route('team-building.marrakech') }}">team building & incentive travel</a> and <a href="{{ route('events-production.morocco') }}">events production</a> services. For association congresses with an exhibitor hall, visit <a href="{{ route('congress-organization.morocco') }}">professional congress organization</a>. For the complete range of ground services, see our <a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a> overview, or browse <a href="{{ route('tours.multi_day') }}">multi-day tour packages</a> for pre- or post-meeting delegate excursions.</p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.dmc-related')
+
 
 {{-- FINAL CTA --}}
-<section style="background:#181613;padding:64px 0;">
+<section class="dmc-cta" style="background:#181613;padding:64px 0;">
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Plan Your Marrakech Meeting With a Local Team</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">

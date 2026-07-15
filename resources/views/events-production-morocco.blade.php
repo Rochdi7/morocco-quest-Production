@@ -85,7 +85,7 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-stage-performance-evening-event-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -128,8 +128,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
-                     alt="Themed stage set and scenography built inside a Moroccan palace venue for a corporate event"
+                <img src="{{ asset('assets/img/morocco-quest-bedouin-dinner-table-setting-desert-event.webp') }}"
+                     alt="Bedouin-style dinner table setting produced by Morocco Quest at a desert event in Morocco"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -139,13 +139,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/moroccan-belly-dance-night-cultural-activity.webp') }}"
-                     alt="DMX-controlled lighting and live sound production at an outdoor corporate event in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Lighting & Sound Production</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">Lighting That's Cued, Not Just Switched On</h2>
                 <p>DMX-controlled rigs programmed to specific cues for keynotes, reveals and performances, paired with line array sound systems sized to the room rather than borrowed from whatever the venue has in storage. Our technical crew tests the full lighting and sound plot at rehearsal, so the first time your speaker hits their mark isn't the first time the follow spot finds them.</p>
@@ -154,8 +149,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/moroccan-traditional-dinner-event.webp') }}"
-                     alt="LED video wall and live camera production set up for a hybrid corporate event in Marrakech"
+                <img src="{{ asset('assets/img/morocco-quest-stage-lighting-production-event-morocco.webp') }}"
+                     alt="Stage lighting and technical production rig set up by Morocco Quest at a corporate event in Morocco"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -165,13 +160,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Traditional-Moroccan-Dining-Event-Outdoor-Lanterns.webp') }}"
-                     alt="Cultural performers and entertainment booked for a corporate gala dinner in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Entertainment & Talent Booking</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">Performers Briefed to Your Run of Show, Not Just Booked</h2>
                 <p>Local musicians, dancers and cultural performers alongside international acts and MCs when the brief calls for it — booked, briefed and rehearsed against your actual run of show, with timing that respects speeches and award moments rather than colliding with them. We handle contracts, technical riders and stage transitions so entertainment supports the programme instead of derailing it.</p>
@@ -181,7 +171,11 @@
     </div>
 </section>
 
-{{-- COMPLETE SOLUTIONS ICON GRID --}}
+@include('partials.dmc-testimonials')
+
+
+
+{{-- COMPLETE SOLUTIONS — TECHNICAL SPEC SHEET --}}
 <section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
@@ -191,30 +185,78 @@
                 <p>Every technical and creative component of a brand event, handled under one agreement.</p>
             </div>
         </div>
-        <div class="row g-4 mt-2">
+        <div class="ep-spec mt-3">
             @php
             $solutions = [
-                ['icon'=>'fa-drafting-compass', 'label'=>'Scenography & Staging'],
-                ['icon'=>'fa-lightbulb',        'label'=>'Lighting Design'],
-                ['icon'=>'fa-volume-high',      'label'=>'Sound Production'],
-                ['icon'=>'fa-tv',               'label'=>'LED & Video Walls'],
-                ['icon'=>'fa-camera',           'label'=>'Live Camera & Streaming'],
-                ['icon'=>'fa-music',            'label'=>'Entertainment & Talent'],
-                ['icon'=>'fa-truck-fast',       'label'=>'Equipment Import & Freight'],
-                ['icon'=>'fa-headset',          'label'=>'On-Site Technical Crew'],
+                ['tag'=>'STG', 'icon'=>'fa-drafting-compass', 'label'=>'Scenography & Staging'],
+                ['tag'=>'LGT', 'icon'=>'fa-lightbulb',        'label'=>'Lighting Design'],
+                ['tag'=>'SND', 'icon'=>'fa-volume-high',      'label'=>'Sound Production'],
+                ['tag'=>'LED', 'icon'=>'fa-tv',               'label'=>'LED & Video Walls'],
+                ['tag'=>'CAM', 'icon'=>'fa-camera',           'label'=>'Live Camera & Streaming'],
+                ['tag'=>'ENT', 'icon'=>'fa-music',            'label'=>'Entertainment & Talent'],
+                ['tag'=>'FRT', 'icon'=>'fa-truck-fast',       'label'=>'Equipment Import & Freight'],
+                ['tag'=>'CRW', 'icon'=>'fa-headset',          'label'=>'On-Site Technical Crew'],
             ];
             @endphp
             @foreach($solutions as $s)
-            <div class="col-6 col-md-3">
-                <div class="text-center p-4" style="background:#fff;border:1px solid #ececec;border-radius:12px;height:100%;">
-                    <i class="fa-solid {{ $s['icon'] }}" style="font-size:1.8rem;color:var(--theme-color);display:block;margin-bottom:14px;"></i>
-                    <div style="font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.02em;">{{ $s['label'] }}</div>
-                </div>
+            <div class="ep-spec__item">
+                <span class="ep-spec__tag">{{ $s['tag'] }}</span>
+                <i class="fa-solid {{ $s['icon'] }} ep-spec__icon"></i>
+                <span class="ep-spec__label">{{ $s['label'] }}</span>
             </div>
             @endforeach
         </div>
     </div>
 </section>
+
+<style>
+    .ep-spec{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        border:1px solid #222;
+        border-radius:10px;
+        overflow:hidden;
+        background:#181613;
+    }
+    .ep-spec__item{
+        display:flex;
+        align-items:center;
+        gap:12px;
+        padding:22px 20px;
+        border-bottom:1px solid rgba(255,255,255,.1);
+        border-right:1px solid rgba(255,255,255,.1);
+    }
+    .ep-spec__tag{
+        font-family:monospace, monospace;
+        font-size:.72rem;
+        font-weight:700;
+        letter-spacing:.05em;
+        color:#000;
+        background:var(--theme-color);
+        border-radius:4px;
+        padding:3px 7px;
+        flex-shrink:0;
+    }
+    .ep-spec__icon{
+        color:var(--theme-color);
+        font-size:1.05rem;
+        flex-shrink:0;
+    }
+    .ep-spec__label{
+        color:#fff;
+        font-weight:700;
+        font-size:.92rem;
+        text-transform:uppercase;
+        letter-spacing:.02em;
+    }
+    @media (min-width:768px){
+        .ep-spec{ grid-template-columns:repeat(4,1fr); }
+    }
+    @media (max-width:575px){
+        .ep-spec{ grid-template-columns:1fr; }
+        .ep-spec__item{ border-right:none; }
+    }
+</style>
 
 {{-- SIGNATURE MODULE: EVENT TYPE SHOWCASE --}}
 <section class="space bg-theme-07">
@@ -418,9 +460,13 @@
                 </div>
                 <div class="accordion accordion-style1" id="epFaq">
                 <style>
-                    #epFaq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #epFaq .accordion-button{padding-right:60px;font-size:.95rem;color:var(--title-color);text-transform:none;line-height:1.45;}
                     #epFaq .accordion-button:not(.collapsed){color:var(--theme-color);}
-                    #epFaq .accordion-body{font-size:.92rem;}
+                    #epFaq .accordion-body{font-size:.88rem;text-transform:none;line-height:1.6;letter-spacing:normal;}
+                    @media (max-width:575px){
+                        #epFaq .accordion-button{font-size:.9rem;line-height:1.4;padding-right:44px;}
+                        #epFaq .accordion-body{font-size:.84rem;line-height:1.55;}
+                    }
                 </style>
                     @php
                     $faqs = [
@@ -449,20 +495,11 @@
     </div>
 </section>
 
-{{-- CROSS-LINKS --}}
-<section class="space pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Related DMC Services</h3>
-                <p>Producing an event alongside a wider corporate programme? See our <a href="{{ route('meetings-conventions.management') }}">meetings & conventions management</a> and <a href="{{ route('team-building.marrakech') }}">team building & incentive travel</a> services. For the complete range of ground services, see our <a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a> overview, or browse <a href="{{ route('tours.multi_day') }}">multi-day tour packages</a> for pre- or post-event guest excursions.</p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.dmc-related')
+
 
 {{-- FINAL CTA --}}
-<section style="background:#181613;padding:64px 0;">
+<section class="dmc-cta" style="background:#181613;padding:64px 0;">
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Produce Your Next Event With a Local Team</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">

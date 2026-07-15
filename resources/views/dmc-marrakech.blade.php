@@ -127,10 +127,7 @@
 
 @section('content')
 
-{{-- ═══════════════════════════════════════════════════════
-     HERO
-═══════════════════════════════════════════════════════ --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -221,8 +218,9 @@
                 <a href="#dmc-enquiry" class="vs-btn mt-4">Request a B2B Quote</a>
             </div>
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/dmc-in-morocco-moroccoquest.webp') }}"
-                     alt="Morocco Quest DMC Marrakech — ground services for travel agents and tour operators"
+                <img src="{{ asset('assets/img/dmc/morocco-quest-ben-youssef-madrasa-marrakech-dmc-ground-services.webp') }}"
+                     alt="Tour group at Ben Youssef Madrasa in Marrakech — Morocco Quest DMC ground services for travel agents and operators"
+                     width="800" height="591"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
             </div>
         </div>
@@ -241,6 +239,14 @@
                     <h2 class="sec-title">We Operate Across All of Morocco</h2>
                     <p>One DMC partner. The entire country covered — from imperial cities to the Sahara.</p>
                 </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-10">
+                <img src="{{ asset('assets/img/dmc/morocco-quest-atlas-mountains-winding-road-dmc-morocco-coverage.webp') }}"
+                     alt="Winding Tizi n'Tichka road through the Atlas Mountains — Morocco Quest DMC coverage across Morocco"
+                     width="1600" height="1064"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:360px;" loading="lazy" />
             </div>
         </div>
         <div class="row g-3 mt-2 justify-content-center">
@@ -531,9 +537,13 @@
                 </div>
                 <div class="accordion accordion-style1" id="dmcFaq" style="--dmc-faq-pr:60px;">
                 <style>
-                    #dmcFaq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #dmcFaq .accordion-button{padding-right:60px;font-size:.95rem;color:var(--title-color);text-transform:none;line-height:1.45;}
                     #dmcFaq .accordion-button:not(.collapsed){color:var(--theme-color);}
-                    #dmcFaq .accordion-body{font-size:.92rem;}
+                    #dmcFaq .accordion-body{font-size:.88rem;text-transform:none;line-height:1.6;letter-spacing:normal;}
+                    @media (max-width:575px){
+                        #dmcFaq .accordion-button{font-size:.9rem;line-height:1.4;padding-right:44px;}
+                        #dmcFaq .accordion-body{font-size:.84rem;line-height:1.55;}
+                    }
                 </style>
 
                     @php
@@ -588,15 +598,59 @@
     </div>
 </section>
 
+@include('partials.dmc-testimonials')
+
+@include('partials.dmc-related')
+
 {{-- Phase 5: Cross-links to tours + blog for topical authority --}}
+@php
+    $dmcProducts = [
+        ['route' => 'tours.index',               'img' => 'jemaa_el_fna_marrakech_sunset_market.webp',            'label' => 'For Agents & Operators', 'title' => 'Private Morocco Tours',   'meta' => 'B2B net-rate'],
+        ['route' => 'tours.multi_day',           'img' => 'agafay-desert-luxury-camp-camel-trek-morocco.webp',    'label' => 'Ready-Made Itineraries', 'title' => 'Multi-Day Tour Packages', 'meta' => '3–10+ days'],
+        ['route' => 'destinations.index',        'img' => 'chefchaouen-morocco-blue-city-panorama-hero.webp',     'label' => 'Region by Region',       'title' => 'Destination Guides',      'meta' => 'All of Morocco'],
+        ['route' => 'activity-categories.index', 'img' => 'hot-air-balloon-ride-morocco-desert-adventure.webp',   'label' => 'Experiences',            'title' => 'Morocco Activities',      'meta' => 'Day experiences'],
+        ['route' => 'blog.index',                'img' => 'ait-benhaddou-morocco-travel-hero-banner.webp',        'label' => 'Insights',               'title' => 'Morocco Travel Blog',     'meta' => 'Client-ready tips'],
+    ];
+@endphp
 <section class="space">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Explore Our Morocco Products</h3>
-                <p>Looking for ready-made itineraries to build your packages from? Browse our full range of <a href="{{ route('tours.index') }}">private morocco tours</a> and <a href="{{ route('tours.multi_day') }}">multi-day tour packages</a> — all are available as B2B net-rate products. For destination insights to share with your clients, our <a href="{{ route('blog.index') }}">Morocco travel blog</a> covers route planning, best travel seasons, packing guides, and city-by-city advice. For individual traveller bookings, see our <a href="{{ route('activity-categories.index') }}">Morocco activities</a> and <a href="{{ route('destinations.index') }}">destination guides</a>.
-                </p>
+            <div class="col-lg-8 text-center mb-5">
+                <span class="sec-subtitle">Build Your Packages</span>
+                <h2 class="sec-title">Explore Our Morocco Products</h2>
+                <p>Ready-made itineraries and destination content to build your client packages from — all available on a B2B net-rate basis.</p>
             </div>
+        </div>
+        <div class="row g-4">
+            @foreach($dmcProducts as $s)
+            <div class="col-md-6 col-xl-4">
+                <div class="tour-package-box style-3 bg-white-color h-100 position-relative">
+                    <div class="tour-package-thumb">
+                        <img src="{{ asset('assets/img/'.$s['img']) }}"
+                             alt="{{ $s['title'] }} — Morocco Quest DMC"
+                             class="w-100" loading="lazy" style="aspect-ratio: 4/3; object-fit: cover;" />
+                    </div>
+                    <div class="tour-package-content">
+                        <div class="location mb-2">
+                            <i class="fa-solid fa-tag me-1"></i>
+                            <span>{{ $s['label'] }}</span>
+                        </div>
+                        <h5 class="title line-clamp-2 mb-3">
+                            <a href="{{ route($s['route']) }}" class="stretched-link">{{ $s['title'] }}</a>
+                        </h5>
+                        <div class="tour-package-footer d-flex justify-content-between align-items-center">
+                            <div class="tour-duration me-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span class="ms-1">{{ $s['meta'] }}</span>
+                            </div>
+                            <div class="pricing-info text-end">
+                                <span class="fs-14 ff-rubik" style="font-weight:700;color:var(--theme-color);">Browse <i class="fa-solid fa-arrow-right-long ms-1"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -604,7 +658,7 @@
 {{-- ═══════════════════════════════════════════════════════
      FINAL CTA
 ═══════════════════════════════════════════════════════ --}}
-<section style="background:#181613;padding:64px 0;">
+<section class="dmc-cta" style="background:#181613;padding:64px 0;">
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Ready to Partner with Morocco Quest DMC?</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">

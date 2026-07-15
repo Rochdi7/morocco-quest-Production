@@ -85,7 +85,7 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-riad-restaurant-service-360-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -128,8 +128,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
-                     alt="Conference sessions in Marrakech as part of an integrated corporate programme"
+                <img src="{{ asset('assets/img/morocco-quest-luxury-berber-tent-gala-dinner-agafay-desert.webp') }}"
+                     alt="End-to-end luxury Berber tent gala dinner delivered by Morocco Quest in the Agafay desert"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -139,13 +139,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }}"
-                     alt="Incentive team building activity in the Agafay desert near Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Incentive & Team Activities</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">The Reward Woven Into the Trip, Not Bolted On</h2>
                 <p>A mountain excursion or a desert team challenge works best when it's placed at the right point in the programme — after two dense conference days, not squeezed in as an afterthought on arrival morning. We build the incentive or team building day into the same run sheet as the meetings, with transport and timing planned against the rest of the schedule.</p>
@@ -154,8 +149,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/moroccan-traditional-dinner-event.webp') }}"
-                     alt="Gala dinner and evening event production for a multi-day corporate programme"
+                <img src="{{ asset('assets/img/morocco-quest-gala-courtyard-riad-night-marrakech.webp') }}"
+                     alt="Gala dinner in a lantern-lit riad courtyard at night delivered end-to-end by Morocco Quest in Marrakech"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -165,13 +160,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/guide-dar-el-bacha-marrakech-tour-moroccan-culture.webp') }}"
-                     alt="On-site project management team coordinating a multi-day corporate programme in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Single Project Management Team</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">One Team Watching the Whole Run Sheet</h2>
                 <p>This is the part that actually makes "360°" mean something: one on-site team holds the master schedule for every component, so when a flight lands late or a venue needs an extra hour, they can adjust the next day's activity slot or rebrief the evening's suppliers immediately — instead of you finding out three bookings later that nobody told the desert camp the group would arrive an hour behind.</p>
@@ -180,6 +170,158 @@
 
     </div>
 </section>
+
+@include('partials.dmc-testimonials')
+
+
+
+{{-- COMPLETE SOLUTIONS — 360° ORBIT --}}
+<section class="space pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span class="sec-subtitle">What's Covered</span>
+                <h2 class="sec-title">Complete Integrated Programme Solutions</h2>
+                <p>Every component of a multi-day corporate programme, run against one master schedule.</p>
+            </div>
+        </div>
+
+        @php
+        $solutions = [
+            ['icon'=>'fa-building',        'label'=>'Meetings & Conference Days'],
+            ['icon'=>'fa-mountain-sun',    'label'=>'Incentive & Team Activities'],
+            ['icon'=>'fa-music',           'label'=>'Production & Evening Events'],
+            ['icon'=>'fa-bed',             'label'=>'Accommodation & Transport'],
+            ['icon'=>'fa-utensils',        'label'=>'Catering & Gala Dinners'],
+            ['icon'=>'fa-clipboard-list',  'label'=>'Master Run Sheet Management'],
+            ['icon'=>'fa-user-tie',        'label'=>'Single Project Manager'],
+            ['icon'=>'fa-headset',         'label'=>'24/7 On-Site Support'],
+        ];
+        $angleStep = 360 / count($solutions);
+        @endphp
+
+        {{-- Circular orbit (responsive: full-size on desktop, scaled down on mobile) --}}
+        <div class="s360-orbit">
+            <div class="s360-orbit__hub">
+                <span>360°</span>
+            </div>
+            @foreach($solutions as $i => $s)
+            @php $angle = $angleStep * $i - 90; @endphp
+            <div class="s360-orbit__node" style="--angle:{{ $angle }}deg;">
+                <div class="s360-orbit__node-inner">
+                    <i class="fa-solid {{ $s['icon'] }}"></i>
+                </div>
+                <div class="s360-orbit__node-label">{{ $s['label'] }}</div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<style>
+    .s360-orbit{
+        position:relative;
+        width:560px;
+        height:560px;
+        margin:50px auto 70px;
+    }
+    .s360-orbit::before{
+        content:'';
+        position:absolute;
+        inset:70px;
+        border:1px dashed #ddd;
+        border-radius:50%;
+    }
+    .s360-orbit__hub{
+        position:absolute;
+        top:50%; left:50%;
+        transform:translate(-50%,-50%);
+        width:140px; height:140px;
+        border-radius:50%;
+        background:#181613;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:2;
+        box-shadow:0 8px 30px rgba(0,0,0,.18);
+    }
+    .s360-orbit__hub span{
+        color:var(--theme-color);
+        font-weight:800;
+        font-size:1.5rem;
+    }
+    .s360-orbit__node{
+        position:absolute;
+        top:50%; left:50%;
+        width:150px;
+        transform:
+            rotate(var(--angle))
+            translate(230px)
+            rotate(calc(-1 * var(--angle)))
+            translate(-50%,-50%);
+        text-align:center;
+    }
+    .s360-orbit__node-inner{
+        width:64px; height:64px;
+        border-radius:50%;
+        background:#fff;
+        border:2px solid var(--theme-color);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin:0 auto 10px;
+        box-shadow:0 4px 14px rgba(0,0,0,.08);
+        transition:background .2s ease, transform .2s ease;
+    }
+    .s360-orbit__node:hover .s360-orbit__node-inner{
+        background:var(--theme-color);
+        transform:scale(1.08);
+    }
+    .s360-orbit__node-inner i{
+        color:var(--theme-color);
+        font-size:1.3rem;
+        transition:color .2s ease;
+    }
+    .s360-orbit__node:hover .s360-orbit__node-inner i{ color:#fff; }
+    .s360-orbit__node-label{
+        font-weight:700;
+        font-size:.82rem;
+        color:var(--title-color);
+        line-height:1.3;
+    }
+    @media (max-width:1199px){
+        .s360-orbit{ width:480px; height:480px; }
+        .s360-orbit__node{ transform:rotate(var(--angle)) translate(195px) rotate(calc(-1 * var(--angle))) translate(-50%,-50%); }
+    }
+    /* Tablet */
+    @media (max-width:767px){
+        .s360-orbit{ width:400px; height:400px; margin:30px auto 50px; }
+        .s360-orbit::before{ inset:52px; }
+        .s360-orbit__hub{ width:104px; height:104px; }
+        .s360-orbit__hub span{ font-size:1.15rem; }
+        .s360-orbit__node{
+            width:110px;
+            transform:rotate(var(--angle)) translate(162px) rotate(calc(-1 * var(--angle))) translate(-50%,-50%);
+        }
+        .s360-orbit__node-inner{ width:48px; height:48px; margin-bottom:6px; }
+        .s360-orbit__node-inner i{ font-size:1rem; }
+        .s360-orbit__node-label{ font-size:.68rem; }
+    }
+    /* Small phones — shrink so the whole circle fits the viewport */
+    @media (max-width:479px){
+        .s360-orbit{ width:320px; height:320px; margin:24px auto 40px; }
+        .s360-orbit::before{ inset:42px; }
+        .s360-orbit__hub{ width:84px; height:84px; }
+        .s360-orbit__hub span{ font-size:.95rem; }
+        .s360-orbit__node{
+            width:92px;
+            transform:rotate(var(--angle)) translate(130px) rotate(calc(-1 * var(--angle))) translate(-50%,-50%);
+        }
+        .s360-orbit__node-inner{ width:40px; height:40px; margin-bottom:5px; }
+        .s360-orbit__node-inner i{ font-size:.85rem; }
+        .s360-orbit__node-label{ font-size:.6rem; line-height:1.2; }
+    }
+</style>
 
 {{-- SIGNATURE MODULE: SAMPLE 4-DAY INTEGRATED PROGRAMME --}}
 <section class="space bg-theme-07">
@@ -384,9 +526,13 @@
                 </div>
                 <div class="accordion accordion-style1" id="s360Faq">
                 <style>
-                    #s360Faq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #s360Faq .accordion-button{padding-right:60px;font-size:.95rem;color:var(--title-color);text-transform:none;line-height:1.45;}
                     #s360Faq .accordion-button:not(.collapsed){color:var(--theme-color);}
-                    #s360Faq .accordion-body{font-size:.92rem;}
+                    #s360Faq .accordion-body{font-size:.88rem;text-transform:none;line-height:1.6;letter-spacing:normal;}
+                    @media (max-width:575px){
+                        #s360Faq .accordion-button{font-size:.9rem;line-height:1.4;padding-right:44px;}
+                        #s360Faq .accordion-body{font-size:.84rem;line-height:1.55;}
+                    }
                 </style>
                     @php
                     $faqs = [
@@ -415,20 +561,11 @@
     </div>
 </section>
 
-{{-- CROSS-LINKS --}}
-<section class="space pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Related DMC Services</h3>
-                <p>A 360° programme can draw on any of our specialist services: <a href="{{ route('meetings-conventions.management') }}">meetings & conventions management</a>, <a href="{{ route('team-building.marrakech') }}">team building & incentive travel</a>, <a href="{{ route('events-production.morocco') }}">events production</a>, <a href="{{ route('congress-organization.morocco') }}">professional congress organization</a> and <a href="{{ route('sustainable-events.morocco') }}">sustainable events integration</a>. For the complete range of ground services, see our <a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a> overview, or browse <a href="{{ route('tours.multi_day') }}">multi-day tour packages</a> for pre- or post-programme delegate excursions.</p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.dmc-related')
+
 
 {{-- FINAL CTA --}}
-<section style="background:#181613;padding:64px 0;">
+<section class="dmc-cta" style="background:#181613;padding:64px 0;">
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Plan Your Full Programme With One Team</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">

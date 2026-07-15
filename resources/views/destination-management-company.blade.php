@@ -85,7 +85,7 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-atlas-mountain-road-morocco-dmc-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -128,8 +128,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/morocco-train-station-al-boraq-travel.webp') }}"
-                     alt="Ground transport and transfer logistics for a DMC programme in Morocco"
+                <img src="{{ asset('assets/img/morocco-quest-hassan-ii-mosque-casablanca-destination-morocco.webp') }}"
+                     alt="Morocco Quest destination programme at the Hassan II Mosque in Casablanca, Morocco"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -139,13 +139,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/dmc-in-morocco-moroccoquest.webp') }}"
-                     alt="Hotel and venue sourcing for corporate groups managed by a Morocco DMC"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Venue & Accommodation Sourcing</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">Rate Access You Won't Get Calling a Hotel Directly</h2>
                 <p>We hold standing contracts with hotel groups and independent venues across Marrakech, Casablanca and Fes, which means a room block or a ballroom gets sourced at net rate rather than the number a hotel's reservations desk quotes a first-time caller. Negotiation on cancellation terms, room upgrades and rooming-list flexibility happens because the relationship already exists.</p>
@@ -154,8 +149,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/jemaa_el_fna_marrakech_sunset_market.webp') }}"
-                     alt="Curated group activity programming in Marrakech arranged by a DMC"
+                <img src="{{ asset('assets/img/morocco-quest-chefchaouen-blue-city-morocco-dmc.webp') }}"
+                     alt="Chefchaouen blue city street in Morocco covered by Morocco Quest DMC ground services"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -165,13 +160,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/morocco-desert-adventure-support.webp') }}"
-                     alt="On-site DMC team managing a Morocco programme with 24/7 crisis response"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">On-Site Management & Crisis Response</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">Someone Physically Present When the Plan Changes</h2>
                 <p>Flights get delayed, a venue loses power, a delegate needs a hospital at 11pm — none of that is hypothetical over a multi-day programme. Our team stays on-site for the duration, with a single phone number that reaches someone who can actually act, not a call centre reading a script back to you from another time zone.</p>
@@ -181,8 +171,12 @@
     </div>
 </section>
 
-{{-- COMPLETE SOLUTIONS ICON GRID --}}
-<section class="space pb-0">
+@include('partials.dmc-testimonials')
+
+
+
+{{-- COMPLETE SOLUTIONS — DIAGONAL STEP GRID --}}
+<section class="space pb-0" style="overflow:hidden;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
@@ -191,7 +185,7 @@
                 <p>Every component of a Morocco ground programme, handled under one agreement.</p>
             </div>
         </div>
-        <div class="row g-4 mt-2">
+        <div class="row g-4 mt-3 dmc-step-grid">
             @php
             $solutions = [
                 ['icon'=>'fa-car-side',        'label'=>'Transport & Transfers'],
@@ -204,17 +198,65 @@
                 ['icon'=>'fa-triangle-exclamation', 'label'=>'24/7 Crisis Response'],
             ];
             @endphp
-            @foreach($solutions as $s)
+            @foreach($solutions as $i => $s)
             <div class="col-6 col-md-3">
-                <div class="text-center p-4" style="background:#fff;border:1px solid #ececec;border-radius:12px;height:100%;">
-                    <i class="fa-solid {{ $s['icon'] }}" style="font-size:1.8rem;color:var(--theme-color);display:block;margin-bottom:14px;"></i>
-                    <div style="font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.02em;">{{ $s['label'] }}</div>
+                <div class="dmc-step-card">
+                    <div class="dmc-step-card__inner">
+                        <i class="fa-solid {{ $s['icon'] }}"></i>
+                        <div class="dmc-step-card__label">{{ $s['label'] }}</div>
+                    </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
 </section>
+
+<style>
+    .dmc-step-grid{ padding-top:8px; }
+    .dmc-step-card{ height:100%; }
+    .dmc-step-card__inner{
+        background:#181613;
+        border-radius:4px 20px 4px 20px;
+        padding:30px 20px;
+        text-align:center;
+        height:100%;
+        position:relative;
+        transition:transform .25s ease;
+    }
+    .dmc-step-card:nth-child(4n+1) .dmc-step-card__inner,
+    .dmc-step-card:nth-child(4n+3) .dmc-step-card__inner{
+        background:#181613;
+    }
+    .dmc-step-card:nth-child(4n+2) .dmc-step-card__inner,
+    .dmc-step-card:nth-child(4n+4) .dmc-step-card__inner{
+        background:var(--theme-color);
+    }
+    /* 2-column mobile checkerboard: theme-color on visual columns 2,3,6,7... */
+    @media (max-width:767px){
+        .dmc-step-card:nth-child(4n+1) .dmc-step-card__inner,
+        .dmc-step-card:nth-child(4n+3) .dmc-step-card__inner,
+        .dmc-step-card:nth-child(4n+2) .dmc-step-card__inner,
+        .dmc-step-card:nth-child(4n+4) .dmc-step-card__inner{ background:#181613; }
+        .dmc-step-card:nth-child(4n+2) .dmc-step-card__inner,
+        .dmc-step-card:nth-child(4n+3) .dmc-step-card__inner{ background:var(--theme-color); }
+    }
+    .dmc-step-card__inner:hover{ transform:translateY(-6px); }
+    .dmc-step-card__inner i{
+        font-size:1.7rem;
+        color:#fff;
+        display:block;
+        margin-bottom:14px;
+    }
+    .dmc-step-card__label{
+        color:#fff;
+        font-weight:700;
+        font-size:.9rem;
+        text-transform:uppercase;
+        letter-spacing:.02em;
+        line-height:1.35;
+    }
+</style>
 
 {{-- SIGNATURE MODULE: HOW TO EVALUATE A DMC PARTNER --}}
 <section class="space bg-theme-07">
@@ -419,9 +461,13 @@
                 </div>
                 <div class="accordion accordion-style1" id="dmcCoFaq">
                 <style>
-                    #dmcCoFaq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #dmcCoFaq .accordion-button{padding-right:60px;font-size:.95rem;color:var(--title-color);text-transform:none;line-height:1.45;}
                     #dmcCoFaq .accordion-button:not(.collapsed){color:var(--theme-color);}
-                    #dmcCoFaq .accordion-body{font-size:.92rem;}
+                    #dmcCoFaq .accordion-body{font-size:.88rem;text-transform:none;line-height:1.6;letter-spacing:normal;}
+                    @media (max-width:575px){
+                        #dmcCoFaq .accordion-button{font-size:.9rem;line-height:1.4;padding-right:44px;}
+                        #dmcCoFaq .accordion-body{font-size:.84rem;line-height:1.55;}
+                    }
                 </style>
                     @php
                     $faqs = [
@@ -450,20 +496,11 @@
     </div>
 </section>
 
-{{-- CROSS-LINKS --}}
-<section class="space pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Related DMC Services</h3>
-                <p>For our full range of ground services and B2B rates, see the <a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a> overview. If your programme centres on a corporate meeting or conference, visit <a href="{{ route('meetings-conventions.management') }}">meetings & conventions management</a>. Organising a congress or association event? See <a href="{{ route('congress-organization.morocco') }}">professional congress organization</a>. For pre- or post-programme excursions for delegates, browse our <a href="{{ route('tours.multi_day') }}">multi-day tour packages</a>.</p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.dmc-related')
+
 
 {{-- FINAL CTA --}}
-<section style="background:#181613;padding:64px 0;">
+<section class="dmc-cta" style="background:#181613;padding:64px 0;">
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Considering a DMC for Your Morocco Programme?</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">

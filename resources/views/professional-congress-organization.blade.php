@@ -85,7 +85,7 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/rabat-royal-palace-tourists-guided-walking-tour.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-grand-theatre-rabat-congress-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -128,8 +128,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/grand-theatre-de-rabat-404-hero.webp') }}"
-                     alt="Auditorium venue used for scientific congress plenary sessions in Morocco"
+                <img src="{{ asset('assets/img/morocco-quest-garden-catering-beverage-station-corporate-event.webp') }}"
+                     alt="Garden catering and beverage station staffed by Morocco Quest at a corporate congress in Morocco"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -139,13 +139,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/hassan-ii-mosque-arches-casablanca-morocco.webp') }}"
-                     alt="Registration desk and delegate check-in area for an international congress in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Registration & Badge Systems</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">Delegate Categories That Actually Match Your Membership Structure</h2>
                 <p>Member, non-member, student, industry, press — the registration platform is built around the categories your association already uses, not a generic form. Badges carry access control by session and exhibition zone, printed and issued at a check-in desk that can handle a queue of 300 delegates on a Monday morning without becoming the story of day one.</p>
@@ -154,8 +149,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
-                     alt="Exhibition and sponsor showcase area set up for a medical congress in Marrakech"
+                <img src="{{ asset('assets/img/morocco-quest-congress-registration-desk-delegates.webp') }}"
+                     alt="Congress registration desk and delegate check-in managed by Morocco Quest in Marrakech"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -165,13 +160,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp') }}"
-                     alt="Congress delegate networking evening venue in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">On-Site Congress Delivery</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">Someone Who Knows Which Session Room Has the Broken Mic</h2>
                 <p>Across a three- or four-day congress with parallel tracks, a poster hall and a shifting speaker schedule, something moves every day — a session overruns, a speaker's flight is delayed, a shipment of poster boards arrives short. Our team is on-site for the full run, solving it in the corridor rather than in an email thread your scientific committee chair has to manage between sessions.</p>
@@ -181,40 +171,94 @@
     </div>
 </section>
 
-{{-- COMPLETE SOLUTIONS ICON GRID --}}
+@include('partials.dmc-testimonials')
+
+
+
+{{-- COMPLETE SOLUTIONS — DARK RAIL SPLIT PANEL --}}
 <section class="space pb-0">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <span class="sec-subtitle">What's Covered</span>
-                <h2 class="sec-title">Complete Congress Organization Solutions</h2>
-                <p>Every component of a scientific or association congress, handled under one agreement.</p>
+        <div class="pco-panel">
+            <div class="pco-panel__rail">
+                <span class="sec-subtitle style-2" style="color:rgba(255,255,255,.7);">What's Covered</span>
+                <h2 style="color:#fff;font-size:1.8rem;font-weight:700;margin:8px 0 14px;">Complete Congress Organization Solutions</h2>
+                <p style="color:rgba(255,255,255,.65);font-size:.92rem;margin:0;">Every component of a scientific or association congress, handled under one agreement — from the first abstract to the post-congress report.</p>
             </div>
-        </div>
-        <div class="row g-4 mt-2">
-            @php
-            $solutions = [
-                ['icon'=>'fa-file-lines',     'label'=>'Abstract Management'],
-                ['icon'=>'fa-id-badge',       'label'=>'Registration & Badging'],
-                ['icon'=>'fa-handshake',      'label'=>'Sponsor & Exhibitor Sales'],
-                ['icon'=>'fa-building-columns','label'=>'Venue & Accreditation Support'],
-                ['icon'=>'fa-microphone-lines','label'=>'AV & Session Production'],
-                ['icon'=>'fa-bed',            'label'=>'Delegate Accommodation'],
-                ['icon'=>'fa-chart-line',     'label'=>'Post-Congress Reporting'],
-                ['icon'=>'fa-headset',        'label'=>'On-Site Delivery Team'],
-            ];
-            @endphp
-            @foreach($solutions as $s)
-            <div class="col-6 col-md-3">
-                <div class="text-center p-4" style="background:#fff;border:1px solid #ececec;border-radius:12px;height:100%;">
-                    <i class="fa-solid {{ $s['icon'] }}" style="font-size:1.8rem;color:var(--theme-color);display:block;margin-bottom:14px;"></i>
-                    <div style="font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.02em;">{{ $s['label'] }}</div>
+            <div class="pco-panel__list">
+                @php
+                $solutions = [
+                    ['icon'=>'fa-file-lines',     'label'=>'Abstract Management'],
+                    ['icon'=>'fa-id-badge',       'label'=>'Registration & Badging'],
+                    ['icon'=>'fa-handshake',      'label'=>'Sponsor & Exhibitor Sales'],
+                    ['icon'=>'fa-building-columns','label'=>'Venue & Accreditation Support'],
+                    ['icon'=>'fa-microphone-lines','label'=>'AV & Session Production'],
+                    ['icon'=>'fa-bed',            'label'=>'Delegate Accommodation'],
+                    ['icon'=>'fa-chart-line',     'label'=>'Post-Congress Reporting'],
+                    ['icon'=>'fa-headset',        'label'=>'On-Site Delivery Team'],
+                ];
+                @endphp
+                @foreach($solutions as $s)
+                <div class="pco-panel__item">
+                    <i class="fa-solid {{ $s['icon'] }}"></i>
+                    <span>{{ $s['label'] }}</span>
                 </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </div>
 </section>
+
+<style>
+    .pco-panel{
+        display:flex;
+        flex-wrap:wrap;
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 4px 24px rgba(0,0,0,.06);
+    }
+    .pco-panel__rail{
+        background:#181613;
+        flex:0 0 100%;
+        max-width:100%;
+        padding:40px 34px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+    .pco-panel__list{
+        flex:0 0 100%;
+        max-width:100%;
+        display:grid;
+        grid-template-columns:1fr;
+        background:#fff;
+    }
+    .pco-panel__item{
+        display:flex;
+        align-items:center;
+        gap:14px;
+        padding:18px 34px;
+        border-bottom:1px solid #eee;
+        font-weight:700;
+        font-size:.95rem;
+        color:var(--title-color);
+    }
+    .pco-panel__item i{
+        color:var(--theme-color);
+        font-size:1.1rem;
+        width:26px;
+        text-align:center;
+        flex-shrink:0;
+    }
+    @media (min-width:768px){
+        .pco-panel__rail{ flex:0 0 33.333%; max-width:33.333%; }
+        .pco-panel__list{
+            flex:0 0 66.666%;
+            max-width:66.666%;
+            grid-template-columns:1fr 1fr;
+        }
+        .pco-panel__item:nth-child(odd){ border-right:1px solid #eee; }
+    }
+</style>
 
 {{-- SIGNATURE MODULE: CONGRESS LIFECYCLE TIMELINE --}}
 <section class="space bg-theme-07">
@@ -420,9 +464,13 @@
                 </div>
                 <div class="accordion accordion-style1" id="pcoFaq">
                 <style>
-                    #pcoFaq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #pcoFaq .accordion-button{padding-right:60px;font-size:.95rem;color:var(--title-color);text-transform:none;line-height:1.45;}
                     #pcoFaq .accordion-button:not(.collapsed){color:var(--theme-color);}
-                    #pcoFaq .accordion-body{font-size:.92rem;}
+                    #pcoFaq .accordion-body{font-size:.88rem;text-transform:none;line-height:1.6;letter-spacing:normal;}
+                    @media (max-width:575px){
+                        #pcoFaq .accordion-button{font-size:.9rem;line-height:1.4;padding-right:44px;}
+                        #pcoFaq .accordion-body{font-size:.84rem;line-height:1.55;}
+                    }
                 </style>
                     @php
                     $faqs = [
@@ -451,20 +499,11 @@
     </div>
 </section>
 
-{{-- CROSS-LINKS --}}
-<section class="space pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Related DMC Services</h3>
-                <p>Planning a corporate meeting rather than an association congress? See our <a href="{{ route('meetings-conventions.management') }}">meetings & conventions management</a> service. For the complete range of ground services, see our <a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a> overview, or browse <a href="{{ route('tours.multi_day') }}">multi-day tour packages</a> for pre- or post-congress delegate excursions.</p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.dmc-related')
+
 
 {{-- FINAL CTA --}}
-<section style="background:#181613;padding:64px 0;">
+<section class="dmc-cta" style="background:#181613;padding:64px 0;">
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Plan Your Congress in Morocco With a Local PCO Team</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">

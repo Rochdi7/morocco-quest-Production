@@ -85,7 +85,7 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-atlas-mountains-village-sustainable-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -128,8 +128,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}"
-                     alt="Local market seller in Morocco supplying produce for sustainable event catering"
+                <img src="{{ asset('assets/img/morocco-quest-rustic-banquet-dining-sustainable-event-morocco.webp') }}"
+                     alt="Rustic banquet dining with natural materials at a sustainable Morocco Quest event in Morocco"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -139,13 +139,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/souk_experience_morocco_cultural_discoveries.webp') }}"
-                     alt="Artisan cooperative workshop visit as part of a sustainable corporate event in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Artisan Cooperative Partnerships</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">A Working Visit, Not a Gift Shop Stop</h2>
                 <p>We work with specific cooperatives we know directly — a women's argan oil cooperative, a weaving collective, a pottery workshop — rather than a generic "cultural experience" booked through a reseller. Groups see the actual work, spend goes straight to the cooperative if they choose to buy, and the visit is sized to what the cooperative can host, not padded to fill an itinerary slot.</p>
@@ -154,8 +149,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }}"
-                     alt="Desert camp near Agafay selected for waste and water conscious event logistics"
+                <img src="{{ asset('assets/img/morocco-quest-argan-cooperative-csr-sustainable-morocco.webp') }}"
+                     alt="Women's argan cooperative CSR visit arranged by Morocco Quest for a sustainable event in Morocco"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -165,13 +160,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/moroccan_pastries_hospitality_serving.webp') }}"
-                     alt="Documentation and reporting support for CSR and ESG teams after a sustainable event in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Transparent Reporting Support</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">A Record Your ESG Team Can Actually Use</h2>
                 <p>After the event, we can put together a written summary of which suppliers and cooperatives were used, roughly how much spend stayed local, and what the community engagement component involved. It's a factual account for your internal reporting, not a certificate — and we won't overstate what a two-day programme actually achieved.</p>
@@ -180,6 +170,87 @@
 
     </div>
 </section>
+
+@include('partials.dmc-testimonials')
+
+
+
+{{-- COMPLETE SOLUTIONS — VERTICAL CHECKLIST STRIPE --}}
+<section class="space pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span class="sec-subtitle">What's Covered</span>
+                <h2 class="sec-title">Complete Sustainable Event Solutions</h2>
+                <p>Every component of a responsible event programme, sourced and documented honestly.</p>
+            </div>
+        </div>
+        <div class="row g-3 g-lg-4 mt-2 se-solutions">
+            @php
+            $solutions = [
+                ['icon'=>'fa-carrot',              'label'=>'Local Sourcing & Catering',      'desc'=>'Regional suppliers and seasonal menus.'],
+                ['icon'=>'fa-hands-holding-circle','label'=>'Artisan Cooperative Visits',      'desc'=>'Named cooperatives we partner with directly.'],
+                ['icon'=>'fa-droplet',             'label'=>'Waste & Water Conscious Venues',  'desc'=>'Venues chosen for low resource footprint.'],
+                ['icon'=>'fa-file-lines',          'label'=>'Transparent Reporting',           'desc'=>'What was sourced locally, in real numbers.'],
+                ['icon'=>'fa-seedling',            'label'=>'Community Engagement',            'desc'=>'CSR activities with a real local recipient.'],
+                ['icon'=>'fa-people-group',        'label'=>'Group Coordination',             'desc'=>'One team managing the whole delegation.'],
+                ['icon'=>'fa-bus',                 'label'=>'Transport & Logistics',          'desc'=>'Efficient routing and shared transfers.'],
+                ['icon'=>'fa-headset',             'label'=>'On-Site Support Team',           'desc'=>'Present for the full run of the event.'],
+            ];
+            @endphp
+            @foreach($solutions as $s)
+            <div class="col-6 col-lg-3">
+                <div class="se-sol-card">
+                    <span class="se-sol-card__badge"><i class="fa-solid fa-check"></i></span>
+                    <span class="se-sol-card__icon"><i class="fa-solid {{ $s['icon'] }}"></i></span>
+                    <span class="se-sol-card__label">{{ $s['label'] }}</span>
+                    <span class="se-sol-card__desc">{{ $s['desc'] }}</span>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<style>
+    .se-sol-card{
+        position:relative; height:100%;
+        display:flex; flex-direction:column;
+        background:#fff; border:1px solid #eef0ec; border-radius:14px;
+        padding:26px 22px 22px;
+        transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .se-sol-card:hover{
+        transform:translateY(-5px);
+        box-shadow:0 14px 32px rgba(39,174,96,.12);
+        border-color:#cdebd6;
+    }
+    .se-sol-card__badge{
+        position:absolute; top:16px; right:16px;
+        width:24px; height:24px; border-radius:50%;
+        background:#27ae60; color:#fff;
+        display:flex; align-items:center; justify-content:center;
+        font-size:.6rem;
+    }
+    .se-sol-card__icon{
+        width:52px; height:52px; border-radius:14px; margin-bottom:16px;
+        background:linear-gradient(135deg, rgba(39,174,96,.14), rgba(39,174,96,.05));
+        color:#27ae60; font-size:1.35rem;
+        display:flex; align-items:center; justify-content:center;
+    }
+    .se-sol-card__label{
+        font-weight:700; font-size:1rem; color:var(--title-color);
+        line-height:1.3; margin-bottom:6px;
+    }
+    .se-sol-card__desc{
+        font-size:.83rem; color:#7d857a; line-height:1.5;
+    }
+    @media (max-width:575px){
+        .se-sol-card{ padding:20px 16px; }
+        .se-sol-card__icon{ width:44px; height:44px; font-size:1.15rem; border-radius:12px; }
+        .se-sol-card__desc{ display:none; }
+    }
+</style>
 
 {{-- SIGNATURE MODULE: WHAT WE CAN REALISTICALLY DELIVER --}}
 <section class="space bg-theme-07">
@@ -388,9 +459,13 @@
                 </div>
                 <div class="accordion accordion-style1" id="susFaq">
                 <style>
-                    #susFaq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #susFaq .accordion-button{padding-right:60px;font-size:.95rem;color:var(--title-color);text-transform:none;line-height:1.45;}
                     #susFaq .accordion-button:not(.collapsed){color:var(--theme-color);}
-                    #susFaq .accordion-body{font-size:.92rem;}
+                    #susFaq .accordion-body{font-size:.88rem;text-transform:none;line-height:1.6;letter-spacing:normal;}
+                    @media (max-width:575px){
+                        #susFaq .accordion-button{font-size:.9rem;line-height:1.4;padding-right:44px;}
+                        #susFaq .accordion-body{font-size:.84rem;line-height:1.55;}
+                    }
                 </style>
                     @php
                     $faqs = [
@@ -419,20 +494,11 @@
     </div>
 </section>
 
-{{-- CROSS-LINKS --}}
-<section class="space pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Related DMC Services</h3>
-                <p>Looking to add a community engagement day to a team programme? See our <a href="{{ route('team-building.marrakech') }}">team building & incentive travel</a> service. Planning a congress or conference with a sustainability charter? Visit <a href="{{ route('meetings-conventions.management') }}">meetings & conventions management</a>. For the complete range of ground services, see our <a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a> overview, or browse <a href="{{ route('tours.multi_day') }}">multi-day tour packages</a> for pre- or post-event excursions.</p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.dmc-related')
+
 
 {{-- FINAL CTA --}}
-<section style="background:#181613;padding:64px 0;">
+<section class="dmc-cta" style="background:#181613;padding:64px 0;">
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Plan a Sustainable Event With an Honest Local Team</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">

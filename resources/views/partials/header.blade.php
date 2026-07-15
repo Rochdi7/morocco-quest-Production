@@ -44,7 +44,7 @@
                 <li>
                     <a href="{{ url('/blog') }}">Blog</a>
                 </li>
-                {{-- <li class="menu-item-has-children">
+                <li class="menu-item-has-children">
                     <a href="{{ route('dmc.marrakech') }}">DMC</a>
                     <ul class="sub-menu">
                         <li><a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a></li>
@@ -56,7 +56,7 @@
                         <li><a href="{{ route('sustainable-events.morocco') }}">Sustainable Events</a></li>
                         <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
                     </ul>
-                </li> --}}
+                </li>
                 <li class="menu-item-has-children">
                     <a href="#">Info Hub</a>
                     <ul class="sub-menu">
@@ -149,7 +149,7 @@
                             </ul>
                         </li>
                         <li><a href="{{ route('blog.index') }}">Blog</a></li>
-                        {{-- <li class="menu-item-has-children">
+                        <li class="menu-item-has-children">
                             <a href="{{ route('dmc.marrakech') }}">DMC</a>
                             <ul class="sub-menu">
                                 <li><a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a></li>
@@ -161,7 +161,7 @@
                                 <li><a href="{{ route('sustainable-events.morocco') }}">Sustainable Events</a></li>
                                 <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
                             </ul>
-                        </li> --}}
+                        </li>
                         <li class="menu-item-has-children">
                             <a href="#">Info Hub</a>
                             <ul class="sub-menu">
@@ -377,7 +377,7 @@
                             <li>
                                 <a href="{{ url('/blog') }}">Blog</a>
                             </li>
-                            {{-- <li class="menu-item-has-children">
+                            <li class="menu-item-has-children">
                                 <a href="{{ route('dmc.marrakech') }}">DMC</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a></li>
@@ -389,7 +389,7 @@
                                     <li><a href="{{ route('sustainable-events.morocco') }}">Sustainable Events</a></li>
                                     <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
                                 </ul>
-                            </li> --}}
+                            </li>
                             <li class="menu-item-has-children">
                                 <a href="#">Info Hub</a>
                                 <ul class="sub-menu">

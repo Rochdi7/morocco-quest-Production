@@ -85,7 +85,7 @@
 @section('content')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-desert-4x4-convoy-team-building-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -128,8 +128,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }}"
-                     alt="Corporate group on a 4x4 rally challenge in the Agafay Desert near Marrakech"
+                <img src="{{ asset('assets/img/morocco-quest-camel-caravan-desert-team-building-marrakech.webp') }}"
+                     alt="Morocco Quest corporate group on a camel caravan desert team-building challenge near Marrakech"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -139,13 +139,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}"
-                     alt="Corporate team on a souk treasure hunt rally in the Marrakech medina"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">Culinary & Cultural Team Activities</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">The Souk Rally Beats the Icebreaker Every Time</h2>
                 <p>A riad cooking workshop splits your group into small teams cooking a tagine or pastilla against the clock, judged and eaten together afterward. A medina souk rally — clue-based, GPS-tracked, small mixed teams racing between spice stalls and dye souks — does the same job as an escape room but with better photos and a spice merchant who remembers your group by name.</p>
@@ -154,8 +149,8 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp') }}"
-                     alt="Gala dinner at an exclusive desert camp for a corporate incentive trip near Marrakech"
+                <img src="{{ asset('assets/img/morocco-quest-guests-red-carpet-arrival-event-venue-morocco.webp') }}"
+                     alt="Morocco Quest incentive group arriving on a red carpet at an exclusive event venue near Marrakech"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -165,13 +160,8 @@
             </div>
         </div>
 
-        <div class="row align-items-center gy-4 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/img/souk_experience_morocco_cultural_discoveries.webp') }}"
-                     alt="Corporate CSR team building visit to a local cooperative near Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-9 mx-auto text-center">
                 <span class="sec-subtitle style-2">CSR & Community Engagement</span>
                 <h2 class="sec-title" style="font-size:1.6rem;">A Give-Back Day That Isn't Just for Show</h2>
                 <p>Half-day visits to a women's argan or weaving cooperative near Marrakech, tree-planting sessions on the outskirts of the Palmeraie, or a supply drop at a rural school your group helps stock — arranged directly with the cooperative or association involved, so the time your team spends there has a real recipient at the other end, not a branded backdrop.</p>
@@ -180,6 +170,90 @@
 
     </div>
 </section>
+
+@include('partials.dmc-testimonials')
+
+
+
+{{-- COMPLETE SOLUTIONS — SCATTERED TAG CLOUD --}}
+<section class="space pb-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span class="sec-subtitle">What's Covered</span>
+                <h2 class="sec-title">Complete Team Building & Incentive Solutions</h2>
+                <p>Every component of a team building or incentive programme, handled under one agreement.</p>
+            </div>
+        </div>
+        <div class="tb-tags mt-4">
+            @php
+            $solutions = [
+                ['icon'=>'fa-person-hiking',   'label'=>'Desert & Mountain Challenges', 'rot'=>-3],
+                ['icon'=>'fa-utensils',        'label'=>'Culinary & Cultural Activities', 'rot'=>2],
+                ['icon'=>'fa-champagne-glasses','label'=>'Incentive Trip Design', 'rot'=>-2],
+                ['icon'=>'fa-hands-holding-circle','label'=>'CSR & Community Engagement', 'rot'=>3],
+                ['icon'=>'fa-tent',            'label'=>'Desert Camps & Venues', 'rot'=>-4],
+                ['icon'=>'fa-shield-halved',   'label'=>'Activity Insurance & Safety', 'rot'=>1],
+                ['icon'=>'fa-bus',             'label'=>'Transport & Logistics', 'rot'=>-1],
+                ['icon'=>'fa-headset',         'label'=>'On-Site Guides & Support', 'rot'=>4],
+            ];
+            @endphp
+            @foreach($solutions as $i => $s)
+            <div class="tb-tag {{ $i % 2 === 0 ? 'tb-tag--dark' : '' }}" style="--rot:{{ $s['rot'] }}deg;">
+                <i class="fa-solid {{ $s['icon'] }}"></i>
+                <span>{{ $s['label'] }}</span>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<style>
+    .tb-tags{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px 16px;
+        max-width:1000px;
+        margin:0 auto;
+        padding:10px 0;
+    }
+    .tb-tag{
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        padding:14px 22px;
+        border-radius:30px;
+        background:#fff;
+        border:2px solid var(--theme-color);
+        font-weight:700;
+        font-size:.9rem;
+        color:var(--title-color);
+        transform:rotate(var(--rot));
+        transition:transform .2s ease, background .2s ease, color .2s ease;
+        cursor:default;
+    }
+    .tb-tag i{ color:var(--theme-color); font-size:1.05rem; transition:color .2s ease; }
+    .tb-tag--dark{ background:#181613; border-color:#181613; color:#fff; }
+    .tb-tag--dark i{ color:var(--theme-color); }
+    .tb-tag:hover{
+        transform:rotate(0deg) scale(1.06);
+        background:var(--theme-color);
+        border-color:var(--theme-color);
+        color:#fff;
+    }
+    .tb-tag:hover i{ color:#fff; }
+    @media (max-width:767px){
+        .tb-tags{ gap:10px 8px; padding:6px 0; }
+        .tb-tag{ transform:none; padding:9px 14px; font-size:.74rem; gap:7px; border-width:1.5px; }
+        .tb-tag i{ font-size:.85rem; }
+    }
+    @media (max-width:479px){
+        .tb-tags{ gap:8px 6px; }
+        .tb-tag{ padding:8px 12px; font-size:.68rem; gap:6px; border-radius:22px; }
+        .tb-tag i{ font-size:.78rem; }
+    }
+</style>
 
 {{-- SIGNATURE MODULE: ACTIVITY TYPE FINDER --}}
 <section class="space bg-theme-07">
@@ -383,9 +457,13 @@
                 </div>
                 <div class="accordion accordion-style1" id="tbFaq">
                 <style>
-                    #tbFaq .accordion-button{padding-right:60px;font-size:1rem;color:var(--title-color);}
+                    #tbFaq .accordion-button{padding-right:60px;font-size:.95rem;color:var(--title-color);text-transform:none;line-height:1.45;}
                     #tbFaq .accordion-button:not(.collapsed){color:var(--theme-color);}
-                    #tbFaq .accordion-body{font-size:.92rem;}
+                    #tbFaq .accordion-body{font-size:.88rem;text-transform:none;line-height:1.6;letter-spacing:normal;}
+                    @media (max-width:575px){
+                        #tbFaq .accordion-button{font-size:.9rem;line-height:1.4;padding-right:44px;}
+                        #tbFaq .accordion-body{font-size:.84rem;line-height:1.55;}
+                    }
                 </style>
                     @php
                     $faqs = [
@@ -414,20 +492,10 @@
     </div>
 </section>
 
-{{-- CROSS-LINKS --}}
-<section class="space pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <h3 class="sec-title mb-3" style="font-size:1.4rem;">Related DMC Services</h3>
-                <p>Combining a conference with a reward programme? See our <a href="{{ route('meetings-conventions.management') }}">meetings & conventions management</a> and <a href="{{ route('events-production.morocco') }}">events production</a> services. For the complete range of ground services, see our <a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a> overview, or browse <a href="{{ route('tours.multi_day') }}">multi-day tour packages</a> for pre- or post-programme extensions.</p>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.dmc-related')
 
 {{-- FINAL CTA --}}
-<section style="background:#181613;padding:64px 0;">
+<section class="dmc-cta" style="background:#181613;padding:64px 0;">
     <div class="container text-center">
         <h2 style="color:#fff;font-size:2rem;margin-bottom:12px;">Plan Your Marrakech Team Building Programme</h2>
         <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 28px;">
