@@ -13,19 +13,7 @@
     "name": "Meetings & Conventions Management — Morocco Quest DMC",
     "description": "Morocco Quest plans and manages corporate meetings, conferences and conventions in Marrakech and across Morocco, from venue sourcing to on-site delegate coordination.",
     "provider": {
-        "@type": "TravelAgency",
-        "name": "Morocco Quest",
-        "url": "{{ url('/') }}",
-        "telephone": "+212-654-069-718",
-        "email": "sales@morocco-quest.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Khalid Ibn Al Walid Street",
-            "addressLocality": "Marrakech",
-            "addressRegion": "Marrakech-Safi",
-            "postalCode": "40000",
-            "addressCountry": "MA"
-        }
+        "@id": "{{ url('/') }}#organization"
     },
     "areaServed": [
         { "@type": "City", "name": "Marrakech" },
@@ -92,7 +80,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Your Conference Room Doesn't Have to Look Like a Conference Room</h1>
+                    <h1 class="breadcrumb-title">Meetings &amp; Conventions Management Marrakech: Not Your Average Conference Room</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         Meetings, conventions and congresses in Marrakech — planned, contracted and run by a team that's on-site, not on a spreadsheet in another country.
                     </p>

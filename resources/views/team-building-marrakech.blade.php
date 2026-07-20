@@ -13,19 +13,7 @@
     "name": "Team Building & Incentive Travel — Morocco Quest DMC",
     "description": "Morocco Quest designs and delivers team building activities and incentive travel programmes in Marrakech and across Morocco, from desert 4x4 rallies to CSR days with local cooperatives.",
     "provider": {
-        "@type": "TravelAgency",
-        "name": "Morocco Quest",
-        "url": "{{ url('/') }}",
-        "telephone": "+212-654-069-718",
-        "email": "sales@morocco-quest.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Khalid Ibn Al Walid Street",
-            "addressLocality": "Marrakech",
-            "addressRegion": "Marrakech-Safi",
-            "postalCode": "40000",
-            "addressCountry": "MA"
-        }
+        "@id": "{{ url('/') }}#organization"
     },
     "areaServed": [
         { "@type": "City", "name": "Marrakech" },
@@ -92,7 +80,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Nobody Remembers the Trust Fall. They Remember the Desert.</h1>
+                    <h1 class="breadcrumb-title">Team Building Marrakech: Nobody Remembers the Trust Fall. They Remember the Desert.</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         Team building and incentive travel in Marrakech — built around what your group actually needs to get out of it, not a fixed activity catalogue.
                     </p>

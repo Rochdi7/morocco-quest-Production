@@ -13,19 +13,7 @@
     "name": "Professional Congress Organization — Morocco Quest DMC",
     "description": "Morocco Quest acts as Professional Congress Organizer (PCO) for medical, scientific and academic associations running congresses in Marrakech and across Morocco, from bid support to post-congress reporting.",
     "provider": {
-        "@type": "TravelAgency",
-        "name": "Morocco Quest",
-        "url": "{{ url('/') }}",
-        "telephone": "+212-654-069-718",
-        "email": "sales@morocco-quest.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Khalid Ibn Al Walid Street",
-            "addressLocality": "Marrakech",
-            "addressRegion": "Marrakech-Safi",
-            "postalCode": "40000",
-            "addressCountry": "MA"
-        }
+        "@id": "{{ url('/') }}#organization"
     },
     "areaServed": [
         { "@type": "City", "name": "Marrakech" },
@@ -92,7 +80,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Your Scientific Committee Shouldn't Have to Learn Event Logistics Every Two Years</h1>
+                    <h1 class="breadcrumb-title">Professional Congress Organizer Morocco: Your Committee Shouldn't Relearn Logistics Every Two Years</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         Abstract platforms, sponsor contracts, badge systems, on-site delivery — run by a PCO that remembers what happened at the last edition, so your committee doesn't have to.
                     </p>

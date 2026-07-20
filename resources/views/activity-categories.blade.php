@@ -60,6 +60,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 text-center">
+                        <h2 class="hub-intro-title h4 mb-3">Morocco Day Activities &amp; Experiences</h2>
                         <p class="hub-intro-text">
                             Beyond multi-day tours, Morocco Quest offers hands-on day experiences across several categories: camel treks into the <strong>Agafay Desert</strong> and <strong>Erg Chebbi dunes</strong>, quad-biking circuits around the <strong>Palmeraie of Marrakech</strong>, guided food tours through the souks of the <strong>Medina</strong>, sunrise hikes on <strong>Jebel Toubkal</strong> in the High Atlas, and cultural evenings with traditional Gnawa music. Each category below links to bookable activities with confirmed local guides. For longer experiences, explore our full <a href="{{ route('tours.index') }}">morocco tour packages</a> or <a href="{{ route('tours.multi_day') }}">multi-day tour itineraries</a>. Have questions? See the <a href="{{ route('faq') }}">FAQ</a>.
                         </p>

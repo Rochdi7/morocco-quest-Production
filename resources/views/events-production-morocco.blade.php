@@ -13,19 +13,7 @@
     "name": "Events Production & Communication — Morocco Quest DMC",
     "description": "Morocco Quest produces corporate events in Marrakech and across Morocco, covering scenography, lighting, sound, LED, video and entertainment booking for brand launches, activations and galas.",
     "provider": {
-        "@type": "TravelAgency",
-        "name": "Morocco Quest",
-        "url": "{{ url('/') }}",
-        "telephone": "+212-654-069-718",
-        "email": "sales@morocco-quest.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Khalid Ibn Al Walid Street",
-            "addressLocality": "Marrakech",
-            "addressRegion": "Marrakech-Safi",
-            "postalCode": "40000",
-            "addressCountry": "MA"
-        }
+        "@id": "{{ url('/') }}#organization"
     },
     "areaServed": [
         { "@type": "City", "name": "Marrakech" },
@@ -92,7 +80,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Your Launch Doesn't Need Another Hotel Ballroom Behind It</h1>
+                    <h1 class="breadcrumb-title">Event Production Morocco: Your Launch Doesn't Need Another Hotel Ballroom Behind It</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         Staging, lighting, sound and scenography for brand events in Marrakech — produced by a crew that's on-site for load-in, rehearsal and strike, not just the pitch.
                     </p>

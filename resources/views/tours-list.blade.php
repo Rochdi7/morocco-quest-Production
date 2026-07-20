@@ -60,6 +60,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 text-center">
+                        <h2 class="hub-intro-title h4 mb-3">Private &amp; Small Group Morocco Tours from Marrakech</h2>
                         <p class="hub-intro-text">
                             Every tour in this collection departs from <strong>Marrakech</strong> — Morocco's most-visited imperial city and the gateway to the High Atlas Mountains, the Drâa Valley, and the Sahara desert at <strong>Erg Chebbi, Merzouga</strong>. Whether you're comparing a <a href="{{ route('tours.show', '3-day-sahara-desert-tour-from-marrakech') }}">3-day sahara desert tour</a>, a <a href="{{ route('tours.multi_day') }}">multi-day morocco tour package</a>, or a focused <a href="{{ route('activities.index') }}">Marrakech day activity</a>, each option is led by a licensed local guide. Prices are per person and include 4×4 transport on mountain and desert routes. Filter by duration, departure city or group size — or <a href="{{ route('contact.show') }}">contact us</a> for a tailor-made itinerary.
                         </p>

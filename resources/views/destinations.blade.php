@@ -60,6 +60,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 text-center">
+                        <h2 class="hub-intro-title h4 mb-3">Explore Morocco's Top Tour Destinations</h2>
                         <p class="hub-intro-text">
                             Morocco Quest operates private and small group tours across Morocco's most rewarding destinations: the medina and Djemaa el-Fna square of <strong>Marrakech</strong>, the ancient tanneries and Bou Inania Medersa of <strong>Fes</strong>, the UNESCO-listed Ksar of <strong>Aït Benhaddou</strong>, the rose-valley gorges of <strong>Dadès and Todra</strong>, and the camel dunes of <strong>Erg Chebbi, Merzouga</strong>. Each destination page links directly to available <a href="{{ route('tours.index') }}">tour packages</a> and <a href="{{ route('activities.index') }}">day activities</a> departing from that location. Not sure where to start? Read our <a href="{{ route('blog.index') }}">Morocco travel blog</a> for route planning advice from local guides.
                         </p>

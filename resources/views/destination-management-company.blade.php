@@ -13,19 +13,7 @@
     "name": "Destination Management Company Services — Morocco Quest DMC",
     "description": "Morocco Quest operates as a Destination Management Company in Morocco, providing ground logistics, venue and accommodation sourcing, activity programming and on-site management for event agencies, corporations and travel operators.",
     "provider": {
-        "@type": "TravelAgency",
-        "name": "Morocco Quest",
-        "url": "{{ url('/') }}",
-        "telephone": "+212-654-069-718",
-        "email": "sales@morocco-quest.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Khalid Ibn Al Walid Street",
-            "addressLocality": "Marrakech",
-            "addressRegion": "Marrakech-Safi",
-            "postalCode": "40000",
-            "addressCountry": "MA"
-        }
+        "@id": "{{ url('/') }}#organization"
     },
     "areaServed": [
         { "@type": "City", "name": "Marrakech" },
@@ -92,7 +80,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">One Accountable Partner on the Ground, Instead of Six Vendors You've Never Met</h1>
+                    <h1 class="breadcrumb-title">Destination Management Company Morocco: One Accountable Partner Instead of Six Vendors</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         What a Destination Management Company actually does in Morocco, and how to tell a serious one from a middleman with a nice website.
                     </p>

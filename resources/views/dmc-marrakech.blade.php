@@ -5,66 +5,7 @@
 @section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'dmc marrakech, destination management company morocco, dmc morocco, morocco ground services, morocco inbound tour operator'))
 
 @push('jsonld')
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "@id": "{{ url('/') }}#dmc-marrakech",
-    "name": "Morocco Quest DMC Marrakech",
-    "description": "Morocco Quest is a licensed Destination Management Company (DMC) based in Marrakech, Morocco. We provide tailor-made ground services for travel agents, tour operators, incentive houses and MICE planners worldwide.",
-    "url": "{{ url('/dmc-marrakech') }}",
-    "logo": "{{ asset('assets/img/logo-bg-wide.webp') }}",
-    "image": "{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}",
-    "telephone": "+212-654-069-718",
-    "email": "sales@morocco-quest.com",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Khalid Ibn Al Walid Street",
-        "addressLocality": "Marrakech",
-        "addressRegion": "Marrakech-Safi",
-        "postalCode": "40000",
-        "addressCountry": "MA"
-    },
-    "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "31.6295",
-        "longitude": "-7.9811"
-    },
-    "areaServed": [
-        { "@type": "Country", "name": "Morocco" },
-        { "@type": "City",    "name": "Marrakech" },
-        { "@type": "City",    "name": "Fes" },
-        { "@type": "City",    "name": "Casablanca" },
-        { "@type": "Place",   "name": "Sahara Desert" },
-        { "@type": "Place",   "name": "Merzouga" },
-        { "@type": "City",    "name": "Chefchaouen" },
-        { "@type": "City",    "name": "Agadir" }
-    ],
-    "knowsAbout": [
-        "Destination Management Company Marrakech",
-        "Morocco ground services",
-        "MICE Morocco",
-        "incentive travel Morocco",
-        "private tours Morocco",
-        "Morocco corporate events",
-        "Morocco inbound tour operator",
-        "Morocco group travel"
-    ],
-    "sameAs": [
-        "https://www.facebook.com/profile.php?id=61578772746041",
-        "https://www.instagram.com/moroccoquestdmc/",
-        "https://www.tripadvisor.com/Attraction_Review-g293734-d33367694-Reviews-Morocco_Quest_Dmc-Marrakech_Marrakech_Safi.html"
-    ],
-    "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+212-654-069-718",
-        "email": "sales@morocco-quest.com",
-        "contactType": "B2B Sales",
-        "areaServed": ["MA","US","EU","UK","AE"],
-        "availableLanguage": ["English", "French", "Spanish"]
-    }
-}
-</script>
+{{-- Organization/TravelAgency identity is emitted once, globally, by layouts/app2.blade.php (@id: {{ url('/') }}#organization) --}}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -134,7 +75,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">DMC Marrakech</h1>
+                    <h1 class="breadcrumb-title">DMC Marrakech: Your Destination Management Company Ground Partner</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         Your trusted Destination Management Company in Morocco —<br>
                         tailor-made ground services for travel agents, operators &amp; MICE groups.

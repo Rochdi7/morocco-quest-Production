@@ -208,8 +208,23 @@ class ActivityController extends Controller
             ->with(['images', 'category'])
             ->paginate(12);
 
+        $descriptionMap = [
+            'garden-tours'       => 'Book morocco garden tours: the Majorelle Garden, Menara Gardens and Marrakech\'s historic riad gardens with a local guide.',
+            'art-tours'          => 'Book morocco art tours: contemporary galleries, artisan workshops and the museums of Marrakech with a local guide.',
+            'cultural-tours'     => 'Book morocco cultural tours: medina walks, souks, historic palaces and local traditions with a knowledgeable guide.',
+            'classical-tours'    => 'Book classical morocco tours covering the imperial cities of Marrakech, Fes and Meknes with a local guide.',
+            'adventure-tours'    => 'Book morocco adventure tours: Atlas Mountain hikes, quad biking and Sahara desert 4x4 routes with a local guide.',
+            'day-trips'          => 'Book morocco day trips from Marrakech: the Atlas Mountains, Essaouira, Ouzoud Falls and the Agafay Desert.',
+            'local-experiences'  => 'Book local morocco experiences: cooking classes, artisan visits and authentic encounters with Marrakech families.',
+            'outdoor-activities' => 'Book morocco outdoor activities: hiking, camel trekking, quad biking and desert camping with a local guide.',
+            'city-tours'         => 'Book morocco city tours of Marrakech, Fes and Casablanca — medinas, landmarks and local neighborhoods with a guide.',
+            'multi-day-tours'    => 'Book morocco multi-day tours combining Marrakech, the Atlas Mountains and the Sahara desert with private transport.',
+            'one-day-tours'      => 'Book morocco one-day tours and day trips from Marrakech with private transport and an English-speaking guide.',
+        ];
+
         $title       = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
-        $description = "Book morocco {$normalizedType} with a top-rated local agency. Private morocco tours, small group tours morocco and luxury morocco tours.";
+        $description = $descriptionMap[$slugifiedType]
+            ?? "Book morocco {$normalizedType} with a top-rated local agency. Private tours, small group and luxury options available.";
         $keywords    = [
             'morocco ' . strtolower($normalizedType),
             strtolower($normalizedType),

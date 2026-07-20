@@ -31,101 +31,13 @@
         ['@type' => 'Question', 'name' => 'What is typically included in your tour price?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Tour prices generally include accommodation, transportation, some meals, guided sightseeing, and entrance fees. International flights are not included.']],
         ['@type' => 'Question', 'name' => 'Can you cater to dietary restrictions (vegetarian, gluten-free)?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Yes. Please inform us during booking and we will coordinate with our accommodation and meal partners.']],
         ['@type' => 'Question', 'name' => 'What should I pack for a trip to Morocco?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Bring layers for varying temperatures, modest clothing, walking shoes, sun protection, and personal medications.']],
+        ['@type' => 'Question', 'name' => 'How much does a Morocco tour cost?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Pricing depends on the itinerary, group size, season, and accommodation category — exact rates are listed on each tour page. A 25% deposit secures your booking, with the balance due 30 days before arrival (or immediately for bookings made within 30 days of arrival).']],
+        ['@type' => 'Question', 'name' => 'What is your cancellation and refund policy?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Cancellation fees are calculated from your request date: 10% of the total if cancelled 30+ days before arrival, 25% at 15-29 days, 50% at 7-14 days, and 100% inside 6 days. Unused services such as hotel rooms or transport are non-refundable. Full details are in our Terms and Conditions.']],
+        ['@type' => 'Question', 'name' => 'What group sizes do you offer?', 'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Most Morocco Quest departures are private or capped at a maximum of 8 travellers, so tours are not run as large coach groups. Private departures can be arranged for any group size on request.']],
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
 @endpush
-    {{-- Legacy structured_data section (meta/og/twitter) — handled by app2.blade.php SEOTools, keep commented:
-    @section('structured_data')
-<link rel="canonical" href="{{ url()->current() }}">
-<meta property="og:title" content="FAQ - Morocco Travel Frequently Asked Questions | Morocco Quest" />
-<meta property="og:description" content="Get answers to your Morocco travel questions: visas, safety, packing tips, booking process, and more." />
-<meta property="og:image" content="{{ asset('assets/img/faq/faq-cover.webp') }}" />
-<meta property="og:url" content="{{ url()->current() }}" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="FAQ - Morocco Travel Frequently Asked Questions | Morocco Quest" />
-<meta name="twitter:description" content="Get answers to your Morocco travel questions: visas, safety, packing tips, booking process, and more." />
-<meta name="twitter:image" content="{{ asset('assets/img/faq/faq-cover.webp') }}" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "name": "Frequently Asked Questions | Morocco Quest",
-  "description": "Find answers to common questions about our tours, activities, bookings, and travel policies.",
-  "url": "https://morocco-quest.com/faq",
-  "image": "https://morocco-quest.com/assets/img/morocco-quest-social-share.webp",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What travel documents do I need for Morocco?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most travelers need a passport valid for at least six months from their entry date. Visa requirements depend on your nationality. We recommend checking with the official Moroccan consulate or embassy website for your country well before your trip."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Morocco safe for tourists, especially solo female travelers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Morocco is generally considered safe for tourists, including solo female travelers. Standard precautions apply, like being aware of surroundings, especially in busy markets (souks)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the best time of year to visit Morocco?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Spring (March-May) and Autumn (September-November) offer the most pleasant weather across the country. Summers can be very hot, particularly in the desert and Marrakech."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What currency should I use and how accessible are ATMs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The currency is the Moroccan Dirham (MAD). Credit cards are accepted in cities, but cash is essential for small purchases. ATMs are widely available."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I book a tour with Morocco Quest?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can book directly on our website or contact us via email or the contact form for personalized help."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is typically included in your tour price?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tour prices generally include accommodation, transportation, some meals, guided sightseeing, and entrance fees. International flights are not included."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you cater to dietary restrictions (vegetarian, gluten-free)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Please inform us during booking and we’ll coordinate with our accommodation and meal partners."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should I pack for a trip to Morocco?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bring layers for varying temperatures, modest clothing, walking shoes, sun protection, and personal medications."
-      }
-    }
-  ]
-}
-</script>
-
-@endsection --}}
 
 
 @section('content')
@@ -357,6 +269,72 @@
                                 </div>
                             </div>
                         </div>
+                        {{-- === FAQ Item 9 === --}}
+                        <div class="accordion-item">
+                            <h6 class="accordion-header" id="headingFiveV2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFiveV2" aria-expanded="false"
+                                    aria-controls="collapseFiveV2">
+                                    How much does a Morocco tour cost?
+                                </button>
+                            </h6>
+                            <div id="collapseFiveV2" class="accordion-collapse collapse" aria-labelledby="headingFiveV2"
+                                data-bs-parent="#accordionRight">
+                                <div class="accordion-body">
+                                    <p>Pricing depends on the itinerary, group size, season, and accommodation category —
+                                        exact rates are listed on each tour page. A 25% deposit secures your booking, with
+                                        the balance due 30 days before arrival (or immediately for bookings made within 30
+                                        days of arrival).</p>
+                                    <p>If you have further questions, please <a href="/contact"
+                                            style="color: #bb5e2a;">contact us</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- === FAQ Item 10 === --}}
+                        <div class="accordion-item">
+                            <h6 class="accordion-header" id="headingSixV2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSixV2" aria-expanded="false"
+                                    aria-controls="collapseSixV2">
+                                    What is your cancellation and refund policy?
+                                </button>
+                            </h6>
+                            <div id="collapseSixV2" class="accordion-collapse collapse" aria-labelledby="headingSixV2"
+                                data-bs-parent="#accordionRight">
+                                <div class="accordion-body">
+                                    <p>Cancellation fees are calculated from your request date: 10% of the total if
+                                        cancelled 30+ days before arrival, 25% at 15-29 days, 50% at 7-14 days, and 100%
+                                        inside 6 days. Unused services such as hotel rooms or transport are non-refundable.
+                                        Full details are in our <a href="{{ route('terms.conditions') }}">Terms and
+                                            Conditions</a>.</p>
+                                    <p>If you have further questions, please <a href="/contact"
+                                            style="color: #bb5e2a;">contact us</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- === FAQ Item 11 === --}}
+                        <div class="accordion-item">
+                            <h6 class="accordion-header" id="headingSevenV2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSevenV2" aria-expanded="false"
+                                    aria-controls="collapseSevenV2">
+                                    What group sizes do you offer?
+                                </button>
+                            </h6>
+                            <div id="collapseSevenV2" class="accordion-collapse collapse" aria-labelledby="headingSevenV2"
+                                data-bs-parent="#accordionRight">
+                                <div class="accordion-body">
+                                    <p>Most Morocco Quest departures are private or capped at a maximum of 8 travellers, so
+                                        tours are not run as large coach groups. Private departures can be arranged for
+                                        any group size on request — see our <a
+                                            href="{{ route('trips.index') }}">multi-day trip packages</a> for examples.</p>
+                                    <p>If you have further questions, please <a href="/contact"
+                                            style="color: #bb5e2a;">contact us</a>.</p>
+                                </div>
+                            </div>
+                        </div>
                         {{-- Add more FAQ items here as needed, following the pattern --}}
                     </div>
                 </div>
@@ -437,7 +415,7 @@
                                         fill="currentColor " />
                                 </svg>
                                 <h2 class="counter-number">
-                                    <span class="d-block odometer" data-count="15">0</span> {{-- Example Count --}}
+                                    <span class="d-block odometer" data-count="4">0</span>
                                     <em>+</em>
                                 </h2>
                                 <span class="counter-info">Years Experience</span>

@@ -41,12 +41,6 @@
                             A vibrant blue house in Chefchaouen, Morocco, showcasing the town’s unique architecture and
                             colorful charm.
                         </figcaption>
-
-                        <p class="visually-hidden">
-                            Experience the serene beauty of Chefchaouen, Morocco’s Blue City. Famous for its painted streets
-                            and vibrant doors,
-                            this peaceful mountain town is a favorite among travelers and photographers.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -58,6 +52,20 @@
     {{-- Schema.org Blog/CollectionPage/SearchResultsPage added via JSON-LD in head --}}
     <section class="vs-blog-wrapper space">
         <div class="container">
+            @unless(isset($tag) || isset($category) || request('query'))
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center mb-4">
+                    <h2 class="hub-intro-title h4 mb-3">Morocco Travel Guides, Itineraries &amp; Tips</h2>
+                    <p class="hub-intro-text">
+                        Practical guides from Morocco Quest's local team: Sahara desert tour planning, day trips from
+                        <strong>Marrakech</strong>, multi-day itinerary ideas, and destination tips for
+                        <strong>Fes</strong>, <strong>Chefchaouen</strong> and the High Atlas. Ready to book? Browse our
+                        <a href="{{ route('tours.index') }}">Morocco tours</a> or
+                        <a href="{{ route('trips.index') }}">multi-day trip packages</a>.
+                    </p>
+                </div>
+            </div>
+            @endunless
             <div class="row gx-3 g-5">
                 {{-- Main Content Area (Posts) --}}
                 <div class="col-lg-8">

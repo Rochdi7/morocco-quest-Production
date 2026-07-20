@@ -99,7 +99,7 @@
             <div class="row text-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title">About Us</h1>
+                        <h1 class="breadcrumb-title">About Morocco Quest — Local Tour Operator in Marrakech</h1>
                         <p class="breadcrumb-subtitle" style="color: white;">
                             Discover authentic Moroccan experiences with us.
                         </p>

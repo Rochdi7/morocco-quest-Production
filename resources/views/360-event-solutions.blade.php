@@ -13,19 +13,7 @@
     "name": "360° Event & Travel Solutions — Morocco Quest DMC",
     "description": "Morocco Quest designs and manages complete, multi-component corporate programmes in Morocco — combining meetings, team building, events production and accommodation under one integrated plan and a single point of accountability.",
     "provider": {
-        "@type": "TravelAgency",
-        "name": "Morocco Quest",
-        "url": "{{ url('/') }}",
-        "telephone": "+212-654-069-718",
-        "email": "sales@morocco-quest.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Khalid Ibn Al Walid Street",
-            "addressLocality": "Marrakech",
-            "addressRegion": "Marrakech-Safi",
-            "postalCode": "40000",
-            "addressCountry": "MA"
-        }
+        "@id": "{{ url('/') }}#organization"
     },
     "areaServed": [
         { "@type": "City", "name": "Marrakech" },
@@ -92,7 +80,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Stop Juggling Five Vendors for One Trip</h1>
+                    <h1 class="breadcrumb-title">360° Event Solutions Morocco: Stop Juggling Five Vendors for One Trip</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         One DMC team runs your whole multi-day programme — meetings, activities and evening events — against a single run sheet, not five separate contracts.
                     </p>

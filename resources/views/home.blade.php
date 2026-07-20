@@ -10,59 +10,13 @@
 @section('keywords',
     'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours')
 
-    @push('head')
-        <script type="application/ld+json">
-@json($schemaJson, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES)
-</script>
-    @endpush
-
-@push('jsonld')
-{{-- WebSite schema is already emitted by structured-data-global.blade.php — no duplicate needed --}}
-<script type="application/ld+json">
-{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'FAQPage',
-    'mainEntity' => [
-        [
-            '@type' => 'Question',
-            'name' => 'What are the best morocco tours from Marrakech?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'The best morocco tours from Marrakech are our 3-day sahara desert tour to Merzouga, the 7-day morocco tour combining Marrakech, Fes and the Sahara desert, and our private morocco tours covering the Atlas Mountains and Aït Benhaddou.'],
-        ],
-        [
-            '@type' => 'Question',
-            'name' => 'How much does a private morocco tour cost?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Private morocco tour packages start from $280 per person for 3-day sahara desert tours from Marrakech and go up to $1,400 for 7-day luxury morocco tours with private desert camps and 4-star riads.'],
-        ],
-        [
-            '@type' => 'Question',
-            'name' => 'Are sahara desert tours from Marrakech worth it?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Yes. Our morocco desert tours from Marrakech are the most popular trip in Morocco. You cross the Atlas Mountains, visit Aït Benhaddou, ride camels at Erg Chebbi, and sleep in a Sahara desert camp.'],
-        ],
-        [
-            '@type' => 'Question',
-            'name' => 'Do you offer small group tours of Morocco?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Yes, we run small group tours morocco with a maximum of 8 travelers. Our morocco group tours include shared 4x4 transport, English-speaking guide, accommodation, and most meals.'],
-        ],
-        [
-            '@type' => 'Question',
-            'name' => 'What is the best 7 day morocco tour itinerary?',
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => 'Our best 7 day morocco tour covers Marrakech (2 nights), the Atlas Mountains, Aït Benhaddou, Dades Valley, Sahara desert at Merzouga (1 night camp), and Fes.'],
-        ],
-    ],
-], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
-</script>
-@endpush
+{{-- WebSite + TravelAgency schema are emitted globally by layouts/app.blade.php — no page-level duplicate needed here.
+     Homepage previously also emitted a hidden-only FAQPage schema with no matching visible content; removed per
+     "structured data must represent visible content" — the same 5 Q&As remain live and visible on /faq. --}}
 
 
 @section('content')
     <main class="main">
-        <p class="visually-hidden">
-            Morocco Quest specializes in morocco tours, private morocco tours, and sahara desert tours from Marrakech.
-            Discover our morocco tour packages, small group tours morocco, luxury morocco tours, and morocco guided tours
-            with expert local agents. Explore morocco desert tours from marrakech, morocco day trips, and tailor-made
-            morocco multi day tours covering Marrakech, Fes, the Atlas Mountains and the Sahara.
-        </p>
-
         <section class="z-index-common hero-layout1 overflow-clip"
             data-bg-src="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}">
             <figcaption class="visually-hidden" lang="en" aria-hidden="true">
@@ -96,14 +50,6 @@
                                     @media (max-width: 991px) { .hero-home-title { font-size: 36px; } }
                                     @media (max-width: 575px) { .hero-home-title { font-size: 28px; } }
                                 </style>
-                                <p class="visually-hidden">
-                                    Book private tours morocco with Morocco Quest for authentic small group tours morocco.
-                                    Our private morocco tour packages include exclusive morocco travel experiences, vip
-                                    morocco tours,
-                                    and expert guidance on what is the best time to travel to morocco and morocco travel
-                                    visa requirements.
-                                </p>
-
 
                             </div>
                         </div>
@@ -242,6 +188,11 @@
                                 <h2 class="sec-title fade-anim" data-direction="top">
                                     Small Group Tours Morocco
                                 </h2>
+                                <p class="fade-anim" data-direction="top">
+                                    Private and small group tours across Marrakech, the Atlas Mountains and the Sahara
+                                    Desert — tailor-made itineraries with a maximum of 8 travelers, led by
+                                    English-speaking local guides.
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xxl-5">
@@ -648,10 +599,6 @@
                         </a>
                     </div>
                 </div>
-                <h2 class="position-absolute text-white-color">
-                    Small Group Tours Morocco & Exclusive Experiences
-                </h2>
-
             </div>
         </div>
         <!--================= Services Area end =================-->

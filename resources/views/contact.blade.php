@@ -10,24 +10,20 @@
 @php
     $contactSchema = [
         '@context' => 'https://schema.org',
-        '@type' => 'TravelAgency',
-        'name' => 'Morocco Quest',
+        '@type' => 'ContactPage',
+        'name' => 'Contact Morocco Quest',
         'url' => url()->current(),
-        'image' => asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp'),
-        'address' => [
-            '@type' => 'PostalAddress',
-            'streetAddress' => 'Khalid Ibn Al Walid Street',
-            'addressLocality' => 'Marrakech',
-            'postalCode' => '40000',
-            'addressCountry' => 'MA',
-        ],
-        'telephone' => '+212654069718',
-        'email' => 'sales@morocco-quest.com',
-        'contactPoint' => [
-            '@type' => 'ContactPoint',
-            'telephone' => '+212654069718',
-            'contactType' => 'Customer Service',
-            'availableLanguage' => ['English', 'French', 'Spanish'],
+        'about' => ['@id' => url('/') . '#organization'],
+        'mainEntity' => [
+            '@type' => 'TravelAgency',
+            '@id' => url('/') . '#organization',
+            'contactPoint' => [
+                '@type' => 'ContactPoint',
+                'telephone' => '+212654069718',
+                'email' => 'sales@morocco-quest.com',
+                'contactType' => 'Customer Service',
+                'availableLanguage' => ['English', 'French', 'Spanish'],
+            ],
         ],
     ];
 @endphp
@@ -63,7 +59,7 @@
                 <div class="col-12">
                     <div class="breadcrumb-content">
                         {{-- H1: Main heading for the page --}}
-                        <h1 class="breadcrumb-title">Contact Us</h1>
+                        <h1 class="breadcrumb-title">Contact Morocco Quest — Book Your Morocco Tour</h1>
 
                         <figcaption class="image-caption" style="font-size: medium; color: white;">
                             We’re here to help you craft your perfect Moroccan journey — reach out anytime.
@@ -97,6 +93,12 @@
                         <p>
                             <span class="text-theme-color fw-bold">Address:</span>
                             Khalid Ibn Al Walid Street, Gueliz, Marrakech, 40000, Morocco
+                        </p>
+                        <p>
+                            Not sure where to start? Browse our <a href="{{ route('tours.index') }}">Morocco tours</a>
+                            and <a href="{{ route('trips.index') }}">multi-day trip packages</a>, read
+                            <a href="{{ route('about') }}">about our team in Marrakech</a>, or check the
+                            <a href="{{ route('faq') }}">FAQ</a> for booking and pricing questions before you get in touch.
                         </p>
                         <div class="vs-contact-list">
                             <div class="contact-item">
@@ -290,12 +292,14 @@
 
     {{-- Google Map Embed --}}
     <div class="map-layout1">
-        {{-- !! IMPORTANT: Replace src with your actual Google Maps embed URL !! --}}
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1698.483758054788!2d-8.006390022145526!3d31.634739777419167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafedfdb4388433%3A0x5a825fb19436e82d!2sColored%20Morocco%20Tours%20%26%20Travel!5e0!3m2!1sen!2sma!4v1746733040408!5m2!1sen!2sma"
+            src="https://www.google.com/maps?q=Morocco+Quest+DMC,31.6343547,-8.00426&output=embed"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            referrerpolicy="no-referrer-when-downgrade" title="Morocco Quest DMC location on Google Maps"></iframe>
     </div>
+    <p class="text-center mt-2">
+        <a href="https://maps.app.goo.gl/FtVJocKLhRVvvF377" target="_blank" rel="noopener noreferrer">View Morocco Quest DMC on Google Maps</a>
+    </p>
     <!-- Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">

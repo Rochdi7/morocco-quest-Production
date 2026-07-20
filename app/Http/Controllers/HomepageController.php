@@ -72,42 +72,6 @@ class HomepageController extends Controller
 
         /*
         |--------------------------------------------------------------------------
-        | JSON-LD – TravelAgency (SAFE)
-        |--------------------------------------------------------------------------
-        | ✅ On passe un ARRAY au Blade (pas une string JSON)
-        | ✅ Le Blade générera le JSON via @json()
-        */
-        $schemaJson = [
-            '@context' => 'https://schema.org',
-            '@type' => 'TravelAgency',
-            'name' => 'Morocco Quest',
-            'alternateName' => 'MoroccoQuest',
-            'url' => $url,
-            'description' => $description,
-            'image' => $image,
-            'logo' => asset('assets/img/logo-bg-wide.webp'), // si tu as un vrai logo séparé
-            'address' => [
-                '@type' => 'PostalAddress',
-                'addressLocality' => 'Marrakech',
-                'addressRegion' => 'Marrakech-Safi',
-                'addressCountry' => 'MA',
-            ],
-            'sameAs' => [
-                'https://www.facebook.com/profile.php?id=61578772746041',
-                'https://www.instagram.com/moroccoquestdmc/',
-                'https://www.tripadvisor.com/Attraction_Review-g293734-d33367694-Reviews-Morocco_Quest_Dmc-Marrakech_Marrakech_Safi.html',
-            ],
-            'contactPoint' => [
-                '@type' => 'ContactPoint',
-                'telephone' => '+212 654 069 718',
-                'contactType' => 'Customer Support',
-                'areaServed' => ['MA', 'US', 'EU'],
-                'availableLanguage' => ['English', 'French', 'Spanish'],
-            ],
-        ];
-
-        /*
-        |--------------------------------------------------------------------------
         | Latest Blog Posts (Cached)
         |--------------------------------------------------------------------------
         */
@@ -200,7 +164,6 @@ class HomepageController extends Controller
             'locations',
             'seasons',
             'groupSizes',
-            'schemaJson',
             'title',
             'description',
             'keywords'

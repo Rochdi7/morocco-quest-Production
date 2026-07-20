@@ -71,6 +71,23 @@
     <meta name="twitter:description" content="{{ $metaDescription }}" />
     <meta name="twitter:image" content="@yield('og_image', asset('assets/img/logo-bg.png'))" />
 
+    {{-- Global WebSite JSON-LD --}}
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'WebSite',
+        '@id' => url('/') . '#website',
+        'url' => url('/'),
+        'name' => 'Morocco Quest',
+        'inLanguage' => 'en',
+        'potentialAction' => [
+            '@type' => 'SearchAction',
+            'target' => url('/search') . '?q={search_term_string}',
+            'query-input' => 'required name=search_term_string',
+        ],
+    ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+    </script>
+
     {{-- Global TravelAgency JSON-LD --}}
     <script type="application/ld+json">
     {!! json_encode([
@@ -93,8 +110,8 @@
         ],
         'geo' => [
             '@type' => 'GeoCoordinates',
-            'latitude' => '31.6295',
-            'longitude' => '-7.9811',
+            'latitude' => '31.6343547',
+            'longitude' => '-8.00426',
         ],
         'areaServed' => [
             ['@type' => 'Country', 'name' => 'Morocco'],

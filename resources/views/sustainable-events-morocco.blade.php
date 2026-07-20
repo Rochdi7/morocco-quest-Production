@@ -13,19 +13,7 @@
     "name": "Sustainable Event Management — Morocco Quest DMC",
     "description": "Morocco Quest plans corporate events and travel programmes in Morocco with genuine local sourcing, artisan cooperative partnerships and honest sustainability practices for organisations with CSR and ESG requirements.",
     "provider": {
-        "@type": "TravelAgency",
-        "name": "Morocco Quest",
-        "url": "{{ url('/') }}",
-        "telephone": "+212-654-069-718",
-        "email": "sales@morocco-quest.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Khalid Ibn Al Walid Street",
-            "addressLocality": "Marrakech",
-            "addressRegion": "Marrakech-Safi",
-            "postalCode": "40000",
-            "addressCountry": "MA"
-        }
+        "@id": "{{ url('/') }}#organization"
     },
     "areaServed": [
         { "@type": "City", "name": "Marrakech" },
@@ -92,7 +80,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">We Won't Tell You Your Event Is Carbon Neutral</h1>
+                    <h1 class="breadcrumb-title">Sustainable Events Morocco: We Won't Tell You Your Event Is Carbon Neutral</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         Because it isn't, and no DMC's is. What we can do is source locally where it genuinely works, partner with real cooperatives, and tell your team exactly what happened — not what sounds good in a report.
                     </p>

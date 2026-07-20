@@ -37,6 +37,23 @@
         Ahrefs issue (https://...). Use SEOMeta facade in the controller instead.
     --}}
 
+    {{-- Global WebSite JSON-LD --}}
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'WebSite',
+        '@id' => url('/') . '#website',
+        'url' => url('/'),
+        'name' => 'Morocco Quest',
+        'inLanguage' => 'en',
+        'potentialAction' => [
+            '@type' => 'SearchAction',
+            'target' => url('/search') . '?q={search_term_string}',
+            'query-input' => 'required name=search_term_string',
+        ],
+    ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+    </script>
+
     {{-- Global TravelAgency JSON-LD --}}
     <script type="application/ld+json">
     {!! json_encode([
@@ -59,8 +76,8 @@
         ],
         'geo' => [
             '@type' => 'GeoCoordinates',
-            'latitude' => '31.6295',
-            'longitude' => '-7.9811',
+            'latitude' => '31.6343547',
+            'longitude' => '-8.00426',
         ],
         'areaServed' => [
             ['@type' => 'Country', 'name' => 'Morocco'],
@@ -69,6 +86,8 @@
             ['@type' => 'City', 'name' => 'Casablanca'],
             ['@type' => 'Place', 'name' => 'Sahara Desert'],
             ['@type' => 'Place', 'name' => 'Merzouga'],
+            ['@type' => 'City', 'name' => 'Chefchaouen'],
+            ['@type' => 'City', 'name' => 'Agadir'],
         ],
         'knowsAbout' => [
             'morocco tours',
@@ -79,6 +98,10 @@
             'small group tours morocco',
             'luxury morocco tours',
             'morocco guided tours',
+            'destination management company marrakech',
+            'MICE morocco',
+            'incentive travel morocco',
+            'morocco corporate events',
         ],
         'sameAs' => [
             'https://www.facebook.com/profile.php?id=61578772746041',

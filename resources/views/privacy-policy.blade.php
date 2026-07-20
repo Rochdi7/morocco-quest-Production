@@ -99,97 +99,141 @@
                     <div class="col-12">
 
 
-                        <h2>Comments</h2>
+                        <h2>Who Operates This Website</h2>
                         <p>
-                            When visitors leave comments on our site, we collect the data shown in the comments form, as
-                            well as the visitor's IP address and browser user agent string to help with spam detection. An
-                            anonymized string created from your email address (a hash) may be provided to the Gravatar
-                            service to see if you are using it. The Gravatar service privacy policy is available here:
-                            <a href="https://automattic.com/privacy/" target="_blank">https://automattic.com/privacy/</a>.
-                            After approval of your comment, your profile picture is visible to the public in the context of
-                            your comment.
+                            This website (morocco-quest.com) is operated by Morocco Quest, a Marrakech-based tour operator
+                            and Destination Management Company. For any privacy question, contact us using the details at
+                            the bottom of this page.
                         </p>
 
-                        <h2>Media</h2>
+                        <h2>Information You Provide to Us</h2>
                         <p>
-                            If you upload images to the website, you should avoid uploading images with embedded location
-                            data (EXIF GPS) included. Visitors to the website can download and extract any location data
-                            from images on the website.
+                            When you use our contact form, tour or activity inquiry forms, or newsletter signup, we collect
+                            the information you submit — typically your name, email address, phone number, nationality,
+                            travel dates, group size, and any details about your trip you choose to share. We use this
+                            information to respond to your inquiry, prepare a quote, and process any booking you confirm
+                            with us. We do not require you to create an account to browse the site, request a quote, or
+                            contact us.
                         </p>
 
-                        <h2>Cookies</h2>
+                        <h2>Technical and Server Data</h2>
                         <p>
-                            If you leave a comment on our site, you may opt-in to saving your name, email address, and
-                            website in cookies. These are for your convenience, so you do not have to fill in your details
-                            again when you leave another comment. These cookies will last for one year.
-                        </p>
-                        <p>
-                            If you visit our login page, we will set a temporary cookie to determine if your browser accepts
-                            cookies. This cookie contains no personal data and is discarded when you close your browser.
-                            When you log in, we will also set up several cookies to save your login information and screen
-                            display choices. Login cookies last for two days, and screen options cookies last for a year. If
-                            you select "Remember Me," your login will persist for two weeks. If you log out of your account,
-                            the login cookies will be removed.
+                            Like most websites, our server automatically logs standard technical information when you visit
+                            — such as your IP address, browser type, device type, and the pages you request. This
+                            information is used for security, troubleshooting, and to keep the site running reliably.
                         </p>
 
+                        <h2>Cookies and Similar Technologies</h2>
                         <p>
-                            If you edit or publish an article, an additional cookie will be saved in your browser. This
-                            cookie includes no personal data and simply indicates the post ID of the article you just
-                            edited. It expires after 1 day.
+                            This website uses a small number of cookies required for it to function correctly, including a
+                            session cookie that keeps you signed into your current browsing session and a CSRF-protection
+                            cookie that helps prevent forged form submissions. These are strictly necessary and cannot be
+                            disabled without breaking core functionality such as submitting a form.
+                        </p>
+                        <p>
+                            We also use Google Tag Manager and Google Analytics to understand how visitors use the site
+                            (pages viewed, general location, device type) so we can improve it. These tools may set their
+                            own cookies. You can control or block analytics cookies through your browser settings, or by
+                            using Google's opt-out tools. See our <a href="{{ route('cookie.policy') }}">Cookie Policy</a>
+                            for more detail on the specific cookies in use.
                         </p>
 
-                        <h2>Embedded Content from Other Websites</h2>
+                        <h2>Forms and reCAPTCHA</h2>
                         <p>
-                            Articles on this site may include embedded content (e.g., videos, images, articles, etc.).
-                            Embedded content from other websites behaves in the exact same way as if the visitor has visited
-                            the other website. These websites may collect data about you, use cookies, embed additional
-                            third-party tracking,
-                            and monitor your interaction with that embedded content, including tracking your interaction
-                            with the embedded content if you have an account and are logged in to that website.
+                            Our contact, inquiry, and newsletter forms are protected by Google reCAPTCHA to reduce spam and
+                            automated abuse. reCAPTCHA may collect hardware and software information, such as device and
+                            application data, and send this data to Google for analysis. Use of reCAPTCHA is subject to
+                            Google's own
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy
+                                Policy</a> and
+                            <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Terms of
+                                Service</a>.
                         </p>
 
+                        <h2>Google Maps</h2>
+                        <p>
+                            Our <a href="{{ route('contact.show') }}">Contact page</a> embeds a Google Maps location so you
+                            can find us. Loading this embed may allow Google to set its own cookies and collect data
+                            according to Google's privacy policy, independent of this website.
+                        </p>
+
+                        <h2>WhatsApp and External Messaging Links</h2>
+                        <p>
+                            Some pages link directly to WhatsApp so you can message our team. If you use these links, your
+                            conversation takes place on WhatsApp's platform and is subject to WhatsApp's own privacy policy
+                            and terms, not this one.
+                        </p>
 
                         <h2>Who We Share Your Data With</h2>
                         <p>
-                            If you request a password reset, your IP address will be included in the reset email.
+                            We do not sell your personal information. We share inquiry and booking details only with the
+                            service providers necessary to deliver your trip (for example, local guides, drivers,
+                            accommodation and desert camp partners) and with our email delivery and analytics providers, who
+                            process data on our behalf. We may also disclose information where required by law.
                         </p>
 
-                        <h2>How Long We Retain Your Data</h2>
+                        <h2>Data Retention</h2>
                         <p>
-                            If you leave a comment, the comment and its metadata are retained indefinitely. This is so we
-                            can recognize and approve any follow-up comments automatically instead of holding them in a
-                            moderation queue. For users that register on our website (if any), we also store the personal
-                            information they
-                            provide in their user profile. All users can see, edit, or delete their personal information at
-                            any time (except they cannot change their username). Website administrators can also see and
-                            edit that information.
+                            We keep inquiry and booking information for as long as reasonably necessary to respond to your
+                            request, deliver a confirmed trip, and meet our accounting and legal obligations. We do not
+                            operate a fixed automatic deletion schedule; if you would like us to delete your information
+                            sooner, contact us and we will do so unless we are required to keep it for a legitimate business
+                            or legal reason.
                         </p>
 
-                        <h2>What Rights You Have Over Your Data</h2>
+                        <h2>Data Security</h2>
                         <p>
-                            If you have an account on this site, or have left comments, you can request to receive an
-                            exported file of the personal data we hold about you, including any data you have provided to
-                            us. You can also request that we erase any personal data we hold about you. This does not
-                            include any data we are obliged to keep for administrative, legal, or security purposes.
+                            We take reasonable technical and organisational measures to protect the information you share
+                            with us. No method of transmission or storage over the internet is completely secure, and we
+                            cannot guarantee absolute security.
                         </p>
 
-                        <h2>Where We Send Your Data</h2>
+                        <h2>International Data Processing</h2>
                         <p>
-                            Visitor comments may be checked through an automated spam detection service.
+                            We are based in Morocco and work with international travellers and, where relevant, service
+                            providers and tools located outside Morocco (such as Google's analytics and reCAPTCHA
+                            infrastructure). Where your information is processed outside your home country, it remains
+                            subject to this policy.
                         </p>
 
-                        <h2>For More Information</h2>
+                        <h2>Your Rights</h2>
                         <p>
-                            For additional information or questions regarding our privacy policy, please contact us through:
+                            Depending on where you live, you may have the right to ask what personal information we hold
+                            about you, request a copy of it, ask us to correct inaccurate information, or ask us to delete
+                            it. To exercise any of these rights, contact us using the details below.
+                        </p>
+
+                        <h2>Children's Privacy</h2>
+                        <p>
+                            This website and our services are intended for adults arranging travel, including on behalf of
+                            children travelling with them. We do not knowingly collect personal information directly from
+                            children.
+                        </p>
+
+                        <h2>External Links</h2>
+                        <p>
+                            Our site may link to external websites, including social media profiles and travel review sites.
+                            We are not responsible for the privacy practices or content of external websites.
+                        </p>
+
+                        <h2>Changes to This Policy</h2>
+                        <p>
+                            We may update this policy from time to time to reflect changes to our website or legal
+                            requirements. The "Last updated" date below shows when this page was last revised.
+                        </p>
+
+                        <h2>Contact Us</h2>
+                        <p>
+                            For any question about this privacy policy or your personal data, contact us through:
                         </p>
                         <ul class="mb-4">
                             <li><strong>Email:</strong> <a href="mailto:sales@morocco-quest.com">sales@morocco-quest.com</a>
                             </li>
-                            <li><strong>Phone:</strong> +212 666-789-012</li>
+                            <li><strong>Phone:</strong> <a href="tel:+212654069718">+212 654 069 718</a></li>
                             <li><strong>Address:</strong> Khalid Ibn Al Walid Street, Gueliz, Marrakech, 40000, Morocco</li>
                         </ul>
                         <p class="mb-5">
-                            <em>Last updated: May 8, 2025</em>
+                            <em>Last updated: {{ now()->format('F j, Y') }}</em>
                         </p>
                     </div>
                 </div>
