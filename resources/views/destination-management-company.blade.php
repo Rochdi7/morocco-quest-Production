@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'Destination Management Company Morocco | What is a DMC | Morocco Quest')
-@section('description', $description ?? 'What a Destination Management Company does in Morocco: services, when to use one, and how to evaluate a DMC partner for events, incentives and group travel.')
-@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'destination management company morocco, DMC morocco, what is a DMC, DMC services morocco'))
+@section('title', $title ?? 'Destination Management Company Morocco | Morocco Quest DMC Partner')
+@section('description', $description ?? 'Morocco Quest is a licensed destination management company running ground logistics, venue sourcing and on-site delivery for event agencies, corporates and operators across Morocco. Net-rate pricing, one point of contact, 24-hour proposals.')
+@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'destination management company morocco, morocco dmc partner, DMC services morocco, MICE destination management morocco'))
 
 @push('jsonld')
 <script type="application/ld+json">
@@ -42,11 +42,6 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What exactly is a DMC, and how is it different from a local tour operator?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A tour operator typically sells finished itineraries to individual travellers. A DMC works business-to-business — it builds and executes ground programmes on behalf of an event agency, corporation or association that already has its own client or delegate group. The distinction is who the end customer belongs to, not the size of the company." }
-        },
-        {
-            "@type": "Question",
             "name": "How does DMC pricing and net rates actually work?",
             "acceptedAnswer": { "@type": "Answer", "text": "A DMC contracts hotels, venues and suppliers at net rates — pricing below what those suppliers would quote a walk-in client — then adds a management fee for sourcing, contracting and on-site delivery. A transparent DMC will show that fee separately rather than folding it invisibly into a single bundled number." }
         },
@@ -82,7 +77,7 @@
                 <div class="breadcrumb-content">
                     <h1 class="breadcrumb-title">Destination Management Company Morocco: One Accountable Partner Instead of Six Vendors</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        What a Destination Management Company actually does in Morocco, and how to tell a serious one from a middleman with a nice website.
+                        Licensed ground logistics, venue sourcing and on-site delivery across Morocco — how Morocco Quest runs the destination layer, and what to check before you sign.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -102,8 +97,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">
-                <p style="font-size:1.1rem;color:#444;">Run a programme in a country you don't operate in and you inherit a second job: chasing hotel contracts in a language you don't speak, vetting a transport company off a single email thread, hoping the venue you booked from a PDF actually has the loading dock your stage crew needs.</p>
-                <p style="font-size:1.05rem;color:#555;">A Destination Management Company exists to remove that second job. Morocco Quest contracts and manages the ground layer — transport, venues, accommodation, activities, on-site delivery — under one agreement, so your team keeps ownership of the client relationship and we keep ownership of everything that happens once the group lands.</p>
+                <p style="font-size:1.1rem;color:#444;">You already know what a DMC should deliver. The question is whether the one you pick in Morocco can actually back it up — licensed contracts, a local team that answers at 11pm, rates that hold up against a direct hotel quote.</p>
+                <p style="font-size:1.05rem;color:#555;">Morocco Quest contracts and manages the ground layer — transport, venues, accommodation, activities, on-site delivery — under one agreement, so your team keeps ownership of the client relationship and we keep ownership of everything that happens once the group lands. Below is how we actually run that, not a generic description of the model.</p>
                 <a href="#dmccompany-enquiry" class="vs-btn mt-3">Discuss Your Programme</a>
             </div>
         </div>
@@ -279,7 +274,7 @@
     </div>
 </section>
 
-{{-- WHY MOROCCO + TESTIMONIAL --}}
+{{-- WHY MOROCCO --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
@@ -290,21 +285,21 @@
                 <p>The country's MICE infrastructure has caught up with that positioning — purpose-built convention space in Marrakech and Casablanca, a hotel base that's expanded steadily through the four- and five-star tiers, and a supplier ecosystem in AV, transport and catering that no longer requires importing crews from Europe for anything short of the largest builds.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
-                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
-                        "We'd never sold Morocco before and weren't sure our clients would go for it over Portugal or Croatia. Morocco Quest sent us a proposal with net rates itemised by line, not a lump sum, and put us on a call with a reference client running a similar-sized group the week before. That transparency is what got our first booking approved internally."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                <img src="{{ asset('assets/img/morocco-quest-congress-registration-desk-delegates.webp') }}"
+                     alt="Delegate registration desk for a Morocco Quest congress programme in Morocco"
+                     width="800" height="591"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                <div class="row g-3 mt-1">
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
+                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
                         </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.95rem;">Event Agency Director</div>
-                            <div style="font-size:.82rem;color:#777;">UK-Based Corporate Events Agency</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                    </div>
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
+                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -459,7 +454,6 @@
                 </style>
                     @php
                     $faqs = [
-                        ['q'=>'What exactly is a DMC, and how is it different from a local tour operator?','a'=>'A tour operator typically sells finished itineraries to individual travellers. A DMC works business-to-business — it builds and executes ground programmes on behalf of an event agency, corporation or association that already has its own client or delegate group. The distinction is who the end customer belongs to, not the size of the company.'],
                         ['q'=>'How does DMC pricing and net rates actually work?','a'=>'A DMC contracts hotels, venues and suppliers at net rates — pricing below what those suppliers would quote a walk-in client — then adds a management fee for sourcing, contracting and on-site delivery. A transparent DMC will show that fee separately rather than folding it invisibly into a single bundled number.'],
                         ['q'=>'What licensing should I check before signing with a DMC in Morocco?','a'=>'Ask for the company\'s Moroccan tourism operator licence number and confirm it is current, and ask for proof of liability insurance that covers your specific group size and activities. A legitimate DMC will produce both without hesitation.'],
                         ['q'=>'Can a DMC work white-label for an event agency?','a'=>'Yes. Most of our agency partners keep the client relationship entirely in-house — we operate behind their brand, on their paper where needed, and our team on the ground is never presented to the delegate as anything other than the agency\'s local crew.'],

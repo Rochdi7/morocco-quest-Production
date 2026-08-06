@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? '360° Event Solutions Morocco | Integrated MICE Programmes | Morocco Quest DMC')
-@section('description', $description ?? 'One DMC managing your entire multi-day corporate programme in Morocco — meetings, team building, events and gala dinners under a single point of accountability.')
-@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? '360 event solutions morocco, integrated event management morocco, end to end MICE morocco'))
+@section('title', $title ?? '360° Event Solutions Morocco | One DMC for Multi-Day MICE Programmes | Morocco Quest')
+@section('description', $description ?? 'Morocco Quest runs your entire multi-day MICE programme — meetings, incentives, production and gala dinners — under one project manager and one run sheet. B2B net-rate, 24-hour proposals.')
+@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? '360 event solutions morocco, integrated MICE programme morocco, morocco DMC multi-day programme, b2b net rate morocco events'))
 
 @push('jsonld')
 <script type="application/ld+json">
@@ -80,9 +80,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">360° Event Solutions Morocco: Stop Juggling Five Vendors for One Trip</h1>
+                    <h1 class="breadcrumb-title">360° Event Solutions Morocco: One DMC, One Run Sheet, Every Component</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        One DMC team runs your whole multi-day programme — meetings, activities and evening events — against a single run sheet, not five separate contracts.
+                        Morocco Quest runs your whole multi-day MICE programme — meetings, incentives and evening events — against a single run sheet, on net-rate B2B terms.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -344,32 +344,31 @@
     </div>
 </section>
 
-{{-- WHY MARRAKECH + TESTIMONIAL --}}
+{{-- WHY MARRAKECH --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
             <div class="col-lg-6 order-lg-2">
                 <span class="sec-subtitle style-2">Why Marrakech</span>
-                <h2 class="sec-title">A Compact Geography That Makes Multi-Component Programmes Work</h2>
+                <h2 class="sec-title">A Compact Geography That Makes Multi-Component MICE Programmes Work</h2>
                 <p>Marrakech sits within a short drive of a genuine city centre, the Atlas Mountain foothills and Agafay desert terrain — three different experience types inside roughly a 45-minute radius. That's what lets a programme move from a conference room to a mountain excursion to a desert dinner without losing half a day to transfers.</p>
                 <p>Direct flights from most major European hubs keep arrival logistics manageable even for large, staggered delegate groups, and venue, activity and catering costs stay competitive against Western European or Gulf alternatives — a difference that compounds when a programme is costed as one whole rather than component by component.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
-                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
-                        "We were running a 5-day programme combining a sales conference, a desert incentive day and a closing gala for 180 people, and I did not want to manage three separate suppliers on the ground. Morocco Quest ran it as one schedule — when our keynote speaker's flight was delayed, they quietly rearranged the next morning's activity slot before I even had to ask."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                <img src="{{ asset('assets/img/morocco-quest-congress-registration-desk-delegates.webp') }}"
+                     alt="Delegate registration desk for a multi-day congress programme managed by Morocco Quest in Morocco"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:340px;" loading="lazy" />
+                <div class="row g-3 mt-1">
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
+                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
                         </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.95rem;">Programme Director</div>
-                            <div style="font-size:.82rem;color:#777;">International Events Agency</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                    </div>
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
+                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
                         </div>
                     </div>
                 </div>

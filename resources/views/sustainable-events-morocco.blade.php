@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'Sustainable Events Morocco | Responsible Corporate Events | Morocco Quest DMC')
-@section('description', $description ?? 'Responsible corporate event planning in Morocco: local sourcing, artisan cooperative partnerships and honest sustainability practices for CSR-focused programmes.')
-@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'sustainable events morocco, responsible corporate events morocco, CSR events morocco'))
+@section('title', $title ?? 'Sustainable Events Morocco | Responsible Event Management, Marrakech | Morocco Quest DMC')
+@section('description', $description ?? 'Plan a sustainable event in Morocco with a Marrakech DMC that sources locally, partners with named artisan cooperatives, and reports honestly on what was actually achieved for your CSR or ESG programme.')
+@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'sustainable events morocco, responsible event management marrakech, CSR events morocco, ESG corporate travel morocco, sustainable MICE morocco'))
 
 @push('jsonld')
 <script type="application/ld+json">
@@ -277,7 +277,7 @@
     </div>
 </section>
 
-{{-- WHY MARRAKECH + TESTIMONIAL --}}
+{{-- WHY MARRAKECH --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
@@ -288,21 +288,21 @@
                 <p>Marrakech also sits close to the Agafay plateau and the Atlas foothills, so a desert camp or mountain-village component is usually under an hour away rather than a long internal transfer. That keeps logistics manageable and cuts down on the transport a multi-region itinerary would otherwise need.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
-                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
-                        "We asked for something we could actually put in our sustainability report, not a nice photo. Morocco Quest arranged a morning at a weaving cooperative outside Marrakech where our team bought directly from the women who made the pieces, and afterwards sent us a plain summary of what we'd spent and where. It was more useful than any 'green' add-on we'd been offered before."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                <img src="{{ asset('assets/img/morocco-quest-guests-red-carpet-arrival-event-venue-morocco.webp') }}"
+                     alt="Corporate guests arriving at a Morocco Quest event venue during a sustainable programme in Marrakech"
+                     width="800" height="591"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                <div class="row g-3 mt-1">
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
+                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
                         </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.95rem;">Sustainability Lead</div>
-                            <div style="font-size:.82rem;color:#777;">European Financial Services Firm</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                    </div>
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
+                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
                         </div>
                     </div>
                 </div>

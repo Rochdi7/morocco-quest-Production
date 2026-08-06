@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'DMC Marrakech | Destination Management Company Morocco | Morocco Quest')
-@section('description', $description ?? 'Morocco Quest — trusted DMC in Marrakech for travel agents, tour operators & MICE groups. Tailor-made ground services: private tours, desert camps, transfers, guides & event logistics across Morocco.')
-@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'dmc marrakech, destination management company morocco, dmc morocco, morocco ground services, morocco inbound tour operator'))
+@section('title', $title ?? 'DMC Marrakech | Morocco Ground Handler for Travel Agents & MICE | Morocco Quest')
+@section('description', $description ?? 'Morocco Quest is a licensed Marrakech DMC running net-rate ground programmes for travel agents, tour operators and MICE planners — 24-hour quotes, white-label service, 24/7 on-site support.')
+@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'dmc marrakech, morocco ground handler, morocco dmc partner, b2b tour operator morocco, mice marrakech, net rate morocco tours'))
 
 @push('jsonld')
 {{-- Organization/TravelAgency identity is emitted once, globally, by layouts/app2.blade.php (@id: {{ url('/') }}#organization) --}}
@@ -21,14 +21,6 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What is a DMC in Marrakech?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A DMC (Destination Management Company) in Marrakech is a local ground operator that provides travel agents and tour operators with on-the-ground logistics: private transfers, licensed guides, accommodation, desert camps, event production and full itinerary management across Morocco."
-            }
-        },
         {
             "@type": "Question",
             "name": "Does Morocco Quest work with travel agents and tour operators?",
@@ -60,6 +52,14 @@
                 "@type": "Answer",
                 "text": "Use the B2B enquiry form on this page or email sales@morocco-quest.com directly. Include your group size, travel dates, destinations and service requirements. We respond within 24 hours with a detailed net-rate proposal."
             }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you handle MICE and incentive travel programmes in Morocco?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We run MICE Morocco programmes end-to-end: gala dinners in traditional riads, team-building in the Atlas Mountains, exclusive Sahara camps for incentive groups, themed entertainment and full event production."
+            }
         }
     ]
 }
@@ -75,10 +75,10 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">DMC Marrakech: Your Destination Management Company Ground Partner</h1>
+                    <h1 class="breadcrumb-title">DMC Marrakech: Net-Rate Ground Handling for Agents, Operators &amp; MICE</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Your trusted Destination Management Company in Morocco —<br>
-                        tailor-made ground services for travel agents, operators &amp; MICE groups.
+                        Licensed Marrakech ground handler running white-label programmes across Morocco —<br>
+                        24-hour quotes, one point of contact, no surprises on the ground.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -145,10 +145,10 @@
             <div class="col-lg-6">
                 <div class="title-area">
                     <span class="sec-subtitle style-2">Your Ground Partner in Morocco</span>
-                    <h2 class="sec-title">What is a DMC Marrakech Partner?</h2>
+                    <h2 class="sec-title">A Marrakech DMC Built for Repeat B2B Business</h2>
                 </div>
-                <p>A <strong>Destination Management Company (DMC)</strong> is a local expert that handles every on-the-ground detail so travel agents, tour operators and corporate planners can sell Morocco with confidence — without managing the logistics themselves.</p>
-                <p>Morocco Quest is a trusted <strong>DMC Morocco</strong> partner working with agencies across Europe, North America, the Middle East and Asia on a confidential net-rate basis. From private tours to full <strong>MICE Marrakech</strong> and <strong>events Marrakech</strong> programmes, we are your local eyes, ears and operational backbone.</p>
+                <p>Morocco Quest runs ground programmes for agencies across Europe, North America, the Middle East and Asia on a confidential, net-rate basis. No client-facing branding, no commission visible in your pricing — just a local team that delivers what's on the brief, on the ground, every time.</p>
+                <p>From single private tours to full <strong>MICE Marrakech</strong> and <strong>events Marrakech</strong> production, we operate as your local desk: sourcing, contracting, logistics and on-site troubleshooting handled so you can stay focused on the client relationship.</p>
                 <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
                     <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Licensed Moroccan tour operator (IATA compatible)</li>
                     <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Net-rate pricing — no commissions visible to your clients</li>
@@ -254,39 +254,21 @@
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
-                {{-- Testimonial / social proof block --}}
-                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
-                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
-                        "Morocco Quest handled our 120-person incentive group flawlessly — from the Marrakech airport pickup to the private Sahara camp dinner. Their local knowledge and responsiveness are unmatched. We've made them our exclusive Morocco DMC partner."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
-                        </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.95rem;">Sophie M.</div>
-                            <div style="font-size:.82rem;color:#777;">Incentive Travel Director — Paris, France</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                <img src="{{ asset('assets/img/morocco-quest-atlas-mountain-road-morocco-dmc-hero.webp') }}"
+                     alt="Atlas Mountain road used for Morocco Quest DMC ground transfers and incentive programmes"
+                     width="800" height="591"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                <div class="row g-3 mt-1">
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
+                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
                         </div>
                     </div>
-                </div>
-                <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 4px 24px rgba(0,0,0,.07);margin-top:16px;">
-                    <p style="font-size:.98rem;font-style:italic;color:#333;margin-bottom:14px;">
-                        "The net rates are very competitive and the turnaround time on quotes is impressive. Highly recommend Morocco Quest as a reliable DMC partner in Marrakech."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:40px;height:40px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
-                        </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.9rem;">James T.</div>
-                            <div style="font-size:.8rem;color:#777;">Tour Operator — London, UK</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
+                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -489,10 +471,6 @@
 
                     @php
                     $faqs = [
-                        [
-                            'q' => 'What is a DMC in Marrakech?',
-                            'a' => 'A DMC (Destination Management Company) in Marrakech is a local ground operator that provides travel agents and tour operators with on-the-ground logistics: private transfers, licensed guides, accommodation, desert camps, event production and full itinerary management across Morocco.',
-                        ],
                         [
                             'q' => 'Does Morocco Quest work with travel agents and tour operators?',
                             'a' => 'Yes. Morocco Quest operates a dedicated B2B desk. We work with travel agents, online tour operators, incentive houses and MICE planners on a net-rate basis. Contact us at sales@morocco-quest.com for a trade account and rate card.',

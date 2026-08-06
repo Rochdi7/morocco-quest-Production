@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'Team Building Marrakech | Incentive Travel Morocco | Morocco Quest DMC')
-@section('description', $description ?? 'Team building and incentive travel programmes in Marrakech: Atlas Mountain challenges, desert camps, medina rallies and CSR activities for corporate groups.')
-@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'team building marrakech, incentive travel morocco, corporate team building morocco'))
+@section('title', $title ?? 'Team Building Marrakech & Incentive Travel Morocco | Morocco Quest DMC')
+@section('description', $description ?? 'Morocco Quest runs team building and incentive travel programmes in Marrakech for corporate groups: Agafay Desert 4x4 rallies, Atlas Mountain hikes, medina souk challenges, desert camp incentives and CSR cooperative visits, delivered by our own on-site team.')
+@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'team building marrakech, incentive travel morocco, corporate team building morocco, agafay desert team building, mice marrakech'))
 
 @push('jsonld')
 <script type="application/ld+json">
@@ -82,7 +82,7 @@
                 <div class="breadcrumb-content">
                     <h1 class="breadcrumb-title">Team Building Marrakech: Nobody Remembers the Trust Fall. They Remember the Desert.</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Team building and incentive travel in Marrakech — built around what your group actually needs to get out of it, not a fixed activity catalogue.
+                        Corporate team building and incentive travel programmes in Marrakech, built around your group's objective and run end-to-end by our own on-site team — not a fixed activity catalogue.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -97,14 +97,30 @@
     </div>
 </section>
 
-{{-- INTRO --}}
-<section class="space pb-0">
+{{-- INTRO — RUN BY MOROCCO QUEST --}}
+<section class="space">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-                <p style="font-size:1.1rem;color:#444;">Most corporate offsites fail for the same reason: the activity doesn't match the objective. A trust-fall exercise in a hotel conference room doesn't reward a sales team, and a generic city tour doesn't rebuild trust between two departments that just merged.</p>
-                <p style="font-size:1.05rem;color:#555;">Morocco Quest designs team building and incentive programmes in Marrakech that start from what you need the day to accomplish, then draw on Atlas Mountain terrain, the Agafay Desert and the medina to build it — with our own guides and logistics team running the day itself.</p>
-                <a href="#teambuilding-enquiry" class="vs-btn mt-3">Talk With Our Team Building Team</a>
+        <div class="row align-items-center gy-5 gx-xl-5">
+            <div class="col-lg-6">
+                <div class="title-area">
+                    <span class="sec-subtitle style-2">Run by Morocco Quest, Not a Subcontractor</span>
+                    <h2 class="sec-title">Programmes Built Around Your Objective, Not a Fixed Activity Catalogue</h2>
+                </div>
+                <p>Most corporate offsites underdeliver for the same reason: the activity doesn't match the objective. A trust-fall exercise in a hotel conference room doesn't reward a sales team, and a generic city tour doesn't rebuild trust between two departments that just merged. We start from what the day needs to accomplish, then draw on Atlas Mountain terrain, the Agafay Desert and the medina to build it.</p>
+                <p>Every programme is run end-to-end by our own guides, drivers and logistics team on the ground in Marrakech — not handed off to a third-party operator once the contract is signed.</p>
+                <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
+                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Activity plan scoped to your group's objective before we quote</li>
+                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Licensed guides and insured activity providers throughout</li>
+                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> One local team running logistics, transport and on-site delivery</li>
+                    <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Multilingual on-site coordination (EN, FR, ES)</li>
+                </ul>
+                <a href="#teambuilding-enquiry" class="vs-btn mt-4">Talk With Our Team Building Team</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/img/morocco-quest-atlas-mountains-village-sustainable-hero.webp') }}"
+                     alt="Atlas Mountains village near Marrakech used for Morocco Quest team building and incentive programmes"
+                     width="800" height="591"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
             </div>
         </div>
     </div>
@@ -160,8 +176,6 @@
 </section>
 
 @include('partials.dmc-testimonials')
-
-
 
 {{-- COMPLETE SOLUTIONS — SCATTERED TAG CLOUD --}}
 <section class="space pb-0">
@@ -275,7 +289,7 @@
     </div>
 </section>
 
-{{-- WHY MARRAKECH + TESTIMONIAL --}}
+{{-- WHY MARRAKECH --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
@@ -286,21 +300,21 @@
                 <p>Set against the exchange rate against the euro and pound, a desert camp evening or a full incentive itinerary here typically costs meaningfully less than an equivalent programme in Western Europe, without asking your group to compromise on the setting.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
-                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
-                        "We took 45 people who'd just gone through a difficult reorganisation and needed something other than another all-hands meeting. Morocco Quest put half the group on quads and half on a souk rally in the morning, then swapped them after lunch. By the desert dinner that evening people who hadn't spoken in months were sitting together."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                <img src="{{ asset('assets/img/morocco-quest-luxury-berber-tent-gala-dinner-agafay-desert.webp') }}"
+                     alt="Luxury Berber tent gala dinner set up for a Morocco Quest incentive group in the Agafay Desert near Marrakech"
+                     width="800" height="591"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                <div class="row g-3 mt-1">
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
+                            <div style="font-size:.82rem;color:#666;">Proposal turnaround</div>
                         </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.95rem;">HR Director</div>
-                            <div style="font-size:.82rem;color:#777;">European Financial Services Firm</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                    </div>
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
+                            <div style="font-size:.82rem;color:#666;">On-site team delivery</div>
                         </div>
                     </div>
                 </div>

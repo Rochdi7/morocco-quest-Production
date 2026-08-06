@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'Corporate Events Morocco | Event Production Marrakech | Morocco Quest DMC')
-@section('description', $description ?? 'Full-service event production in Morocco: staging, lighting, sound, LED and scenography for product launches, brand activations and corporate galas in Marrakech.')
-@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'corporate events morocco, event production morocco, event production marrakech'))
+@section('title', $title ?? 'Event Production Morocco | Corporate Events Company Marrakech | Morocco Quest')
+@section('description', $description ?? 'Morocco Quest is an event production company in Marrakech handling staging, lighting, sound, LED and scenography for product launches, brand activations and corporate galas — on-site crew from load-in to strike.')
+@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'events production morocco, event production company marrakech, corporate events morocco, event production marrakech'))
 
 @push('jsonld')
 <script type="application/ld+json">
@@ -80,9 +80,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Event Production Morocco: Your Launch Doesn't Need Another Hotel Ballroom Behind It</h1>
+                    <h1 class="breadcrumb-title">Event Production Morocco: A Marrakech Crew for Staging, Lighting &amp; Scenography</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Staging, lighting, sound and scenography for brand events in Marrakech — produced by a crew that's on-site for load-in, rehearsal and strike, not just the pitch.
+                        Full-service event production in Marrakech — staging, lighting, sound and scenography, run by the same crew that's on-site for load-in, rehearsal and strike, not just the pitch.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -278,7 +278,7 @@
     </div>
 </section>
 
-{{-- WHY MARRAKECH + TESTIMONIAL --}}
+{{-- WHY MARRAKECH --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
@@ -289,21 +289,21 @@
                 <p>Production costs here generally sit below Western European equivalents for comparable staging, lighting and crew day rates, and the technical crews we work with have built for international agencies before — they know what a European production rider actually expects on-site.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
-                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
-                        "We had a 260-guest product launch and a set design that needed a full LED backdrop nobody local carried. Morocco Quest sourced and imported the panels, ran a full technical rehearsal the night before, and the reveal went off without anyone from our side touching a cable."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                <img src="{{ asset('assets/img/morocco-quest-gala-ballroom-event-marrakech-hero.webp') }}"
+                     alt="Gala event staged in Marrakech by Morocco Quest — corporate event production and scenography"
+                     width="800" height="591"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                <div class="row g-3 mt-1">
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
+                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
                         </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.95rem;">Brand & Communications Director</div>
-                            <div style="font-size:.82rem;color:#777;">European Consumer Goods Company</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                    </div>
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
+                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
                         </div>
                     </div>
                 </div>

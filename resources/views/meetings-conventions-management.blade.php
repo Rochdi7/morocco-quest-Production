@@ -1,8 +1,8 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'Meetings & Conventions Management Marrakech | Morocco Quest DMC')
-@section('description', $description ?? 'Professional conference and convention management in Marrakech. Venue sourcing, AV production, delegate logistics and on-site coordination for corporate meetings across Morocco.')
-@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'meetings and conventions marrakech, conference management morocco, convention management marrakech'))
+@section('title', $title ?? 'Meetings & Conventions Management Marrakech | Convention Organizer | Morocco Quest')
+@section('description', $description ?? 'Morocco Quest manages meetings, conferences and conventions in Marrakech end to end — venue contracting, AV production, delegate logistics and an on-site team for every session day.')
+@section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'meetings and conventions management morocco, convention organizer marrakech, conference management morocco, mice venue sourcing marrakech, convention management marrakech'))
 
 @push('jsonld')
 <script type="application/ld+json">
@@ -80,9 +80,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Meetings &amp; Conventions Management Marrakech: Not Your Average Conference Room</h1>
+                    <h1 class="breadcrumb-title">Meetings &amp; Conventions Management Marrakech: A Convention Organizer Who Stays On-Site</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Meetings, conventions and congresses in Marrakech — planned, contracted and run by a team that's on-site, not on a spreadsheet in another country.
+                        Venue contracting, AV production and delegate logistics for meetings and conventions in Marrakech — run by a team physically present on your event days, not coordinating from another country.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -103,7 +103,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">
                 <p style="font-size:1.1rem;color:#444;">Most meeting planners don't fail on the agenda — they fail on the fifty small logistics decisions nobody sees: the AV rider the venue can't actually meet, the delegate rooming list that arrives a week late, the gala dinner that was quoted for indoors and rains out.</p>
-                <p style="font-size:1.05rem;color:#555;">Morocco Quest runs meetings and conventions in Marrakech end to end — venue contracting, staging, delegate accommodation, transport and a team physically present on your event days. You deal with one point of contact, not six vendors.</p>
+                <p style="font-size:1.05rem;color:#555;">Morocco Quest acts as your convention organizer in Marrakech, running meetings and conventions management end to end — venue contracting, staging, delegate accommodation, transport and a team physically present on your event days. You deal with one point of contact, not six vendors.</p>
                 <a href="#meetings-enquiry" class="vs-btn mt-3">Talk With Our Meetings Team</a>
             </div>
         </div>
@@ -274,7 +274,7 @@
     </div>
 </section>
 
-{{-- WHY MARRAKECH + TESTIMONIAL --}}
+{{-- WHY MARRAKECH --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
@@ -285,21 +285,21 @@
                 <p>It also gives delegates a reason to show up. A riad dinner or an Atlas Mountain excursion does more for informal networking than another hotel bar ever will, and a well-run meeting here tends to be the one people remember attending.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
-                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
-                        "We had eight months to plan a 220-delegate convention and no one on our team had worked in Morocco before. Morocco Quest gave us a venue shortlist within a week and stayed on-site for all three days — including a stage rigging issue on day two that they fixed before most delegates noticed."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                <img src="{{ asset('assets/img/morocco-quest-grand-theatre-rabat-congress-hero.webp') }}"
+                     alt="Grand Theatre Rabat congress venue used for large-scale conventions managed by Morocco Quest"
+                     width="800" height="591"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
+                <div class="row g-3 mt-1">
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
+                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
                         </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.95rem;">Conference Manager</div>
-                            <div style="font-size:.82rem;color:#777;">European Professional Association</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                    </div>
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
+                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
                         </div>
                     </div>
                 </div>

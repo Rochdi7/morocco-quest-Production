@@ -1,7 +1,7 @@
 @extends('layouts.app2')
 
 @section('title', $title ?? 'Professional Congress Organizer Morocco | PCO Marrakech | Morocco Quest DMC')
-@section('description', $description ?? 'Professional Congress Organizer services in Morocco. Abstract management, scientific programme support, sponsor and exhibitor management for medical and scientific congresses.')
+@section('description', $description ?? 'Morocco Quest is a Marrakech-based PCO running abstract management, registration, sponsor and exhibitor programmes for medical and scientific congresses across Morocco — bid support through post-congress reporting.')
 @section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'professional congress organizer morocco, PCO morocco, congress organization marrakech'))
 
 @push('jsonld')
@@ -42,11 +42,6 @@
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "What does a Professional Congress Organizer (PCO) do that a regular meeting planner doesn't?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A PCO runs the parts of an event that are specific to associations: abstract submission and peer review, liaison with a rotating scientific committee, CME/CPD accreditation support, and sponsor or exhibitor contracts tied to a revenue target. A meeting planner books a room and a caterer. A PCO also carries the academic and commercial workload sitting behind the programme." }
-        },
-        {
-            "@type": "Question",
             "name": "Do you provide the abstract submission platform, or do we need our own?",
             "acceptedAnswer": { "@type": "Answer", "text": "We provide and configure the platform — submission categories, reviewer accounts, scoring rubric and the notification workflow — and connect it to your scientific committee's process. If your society already licenses a platform, we can work inside it instead." }
         },
@@ -80,9 +75,9 @@
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">Professional Congress Organizer Morocco: Your Committee Shouldn't Relearn Logistics Every Two Years</h1>
+                    <h1 class="breadcrumb-title">Professional Congress Organizer Morocco: A Marrakech PCO Your Committee Doesn't Have to Rebuild Every Edition</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
-                        Abstract platforms, sponsor contracts, badge systems, on-site delivery — run by a PCO that remembers what happened at the last edition, so your committee doesn't have to.
+                        Abstract platforms, sponsor contracts, badge systems, on-site delivery — run by a Marrakech-based PCO team that carries the operational history from one edition into the next.
                     </p>
                 </div>
                 <div class="breadcrumb-menu">
@@ -103,7 +98,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-9 text-center">
                 <p style="font-size:1.1rem;color:#444;">A congress doesn't reset between editions the way a one-off meeting does. Abstract deadlines, sponsor renewals, accreditation paperwork and a scientific committee that turns over its chair every term — all of it has to carry forward, usually held together by whoever happened to be secretary-general last time.</p>
-                <p style="font-size:1.05rem;color:#555;">Morocco Quest works as Professional Congress Organizer for medical societies, scientific associations and academic federations running their congress in Marrakech. We hold the operational thread across editions — registration data, sponsor history, vendor pricing — so each new committee inherits a working file, not a blank page.</p>
+                <p style="font-size:1.05rem;color:#555;">Morocco Quest is a Marrakech-based PCO for medical societies, scientific associations and academic federations bringing their congress to Morocco. We run the abstract platform, registration and badging, and sponsor/exhibitor contracts under one agreement, and we hold the operational thread across editions — registration data, sponsor history, vendor pricing — so each new committee inherits a working file, not a blank page.</p>
                 <a href="#congress-enquiry" class="vs-btn mt-3">Talk With Our PCO Team</a>
             </div>
         </div>
@@ -283,7 +278,7 @@
     </div>
 </section>
 
-{{-- WHY MARRAKECH + TESTIMONIAL --}}
+{{-- WHY MARRAKECH --}}
 <section class="space">
     <div class="container">
         <div class="row align-items-center gy-5 gx-xl-5">
@@ -294,21 +289,20 @@
                 <p>Venue, accommodation and catering costs sit meaningfully below Western congress cities, a difference that shows up directly in a finance committee's comparison of bid options — and stretches sponsor budgets further on exhibition space and delegate hospitality.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div style="background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.07);">
-                    <div style="font-size:2.5rem;color:var(--theme-color);line-height:1;margin-bottom:12px;">"</div>
-                    <p style="font-size:1.05rem;font-style:italic;color:#333;margin-bottom:20px;">
-                        "This was our 14th congress edition but our first outside Europe. Morocco Quest managed our abstract platform for 640 submissions and kept our sponsor contracts on track while our scientific committee — spread across six countries — focused entirely on the programme. The handover file they gave us afterward means our 15th edition committee won't start from zero."
-                    </p>
-                    <div style="display:flex;align-items:center;gap:14px;">
-                        <div style="width:48px;height:48px;background:#f0f0f0;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <i class="fa-solid fa-user" style="color:#aaa;"></i>
+                <img src="{{ asset('assets/img/morocco-quest-conference-plenary-stage-marrakech-congress.webp') }}"
+                     alt="Plenary session stage set up by Morocco Quest for a scientific congress in Marrakech"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                <div class="row g-3 mt-1">
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
+                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
                         </div>
-                        <div>
-                            <div style="font-weight:700;font-size:.95rem;">Secretary-General</div>
-                            <div style="font-size:.82rem;color:#777;">International Scientific Society</div>
-                        </div>
-                        <div class="ms-auto">
-                            <span style="color:var(--theme-color);">★★★★★</span>
+                    </div>
+                    <div class="col-6">
+                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
+                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -462,7 +456,6 @@
                 </style>
                     @php
                     $faqs = [
-                        ['q'=>'What does a Professional Congress Organizer (PCO) do that a regular meeting planner doesn\'t?','a'=>'A PCO runs the parts of an event that are specific to associations: abstract submission and peer review, liaison with a rotating scientific committee, CME/CPD accreditation support, and sponsor or exhibitor contracts tied to a revenue target. A meeting planner books a room and a caterer. A PCO also carries the academic and commercial workload sitting behind the programme.'],
                         ['q'=>'Do you provide the abstract submission platform, or do we need our own?','a'=>'We provide and configure the platform — submission categories, reviewer accounts, scoring rubric and the notification workflow — and connect it to your scientific committee\'s process. If your society already licenses a platform, we can work inside it instead.'],
                         ['q'=>'Can you support CME or CPD accreditation for the scientific programme?','a'=>'We compile the documentation an accrediting body asks for — final programme, faculty disclosures, learning objectives, session timings — and manage the submission calendar so it aligns with your accreditor\'s deadlines. The accreditation decision itself sits with the awarding body, not with us.'],
                         ['q'=>'Our organising committee changes every congress. How do you keep continuity?','a'=>'We hold the operational memory the committee doesn\'t: registration data, sponsor contacts, room-block history, vendor pricing and what went wrong last time. When a new committee takes over, they inherit a working file instead of starting from a blank page.'],
