@@ -219,8 +219,21 @@
     {{-- purged-home = scoped to this layout's 3 views (home, index,
          category-details) + header/footer — ~40% smaller than the sitewide
          purge. Regenerate with the purge-home runner when those views change. --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/purged-home/bootstrap.min.css') }}?v={{ filemtime(public_path('assets/css/purged-home/bootstrap.min.css')) }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/purged-home/style.min.css') }}?v={{ filemtime(public_path('assets/css/purged-home/style.min.css')) }}">
+    @php
+        // Cache-buster for the purged CSS (contents change under the same
+        // filename on rebuild, and .htaccess caches CSS for a year). On this
+        // deployment the files live at the PROJECT ROOT assets/ dir —
+        // public_path() points at public/ which only holds the Laravel
+        // skeleton, so filemtime(public_path(...)) stat-failed and 500'd the
+        // whole site (incident 2026-08-12 18:23). The is_file guard means a
+        // missing file can never take pages down over a version stamp.
+        $cssVer = function ($rel) {
+            $p = base_path($rel);
+            return is_file($p) ? '?v=' . filemtime($p) : '';
+        };
+    @endphp
+    <link rel="stylesheet" href="{{ asset('assets/css/purged-home/bootstrap.min.css') }}{{ $cssVer('assets/css/purged-home/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/purged-home/style.min.css') }}{{ $cssVer('assets/css/purged-home/style.min.css') }}">
 
     {{-- Inline above-the-fold rules: paints something usable before the
          deferred CSS finishes. Tiny (<1KB), zero visual regression because
