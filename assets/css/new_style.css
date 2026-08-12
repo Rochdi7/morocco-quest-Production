@@ -12,3 +12,6 @@
 .vs-breadcrumb.hero-overlay .breadcrumb-menu ul li a::before{right:-16px;}
 .vs-breadcrumb.hero-overlay .breadcrumb-menu ul li a::after{right:-20px;}
 @media (max-width:575px){.vs-breadcrumb.hero-overlay .breadcrumb-menu ul{gap:26px;}}
+/* A11y: credit link in .footer-bottom — #bb5e2a on #06202B is 3.8:1 (fails WCAG AA 4.5:1).
+   #cc6c35 is the same hue nudged to 4.61:1. Scoped so the theme color stays untouched elsewhere. */
+.footer-bottom .text-theme-color{color:#cc6c35}

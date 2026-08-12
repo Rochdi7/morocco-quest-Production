@@ -110,6 +110,12 @@
             },
         });
 
+        // SplitText + autoAlpha hides the split fragments (visibility:hidden),
+        // which empties the heading's accessible name during audits. Keep the
+        // original text exposed to AT via aria-label.
+        if (!splitTextLine.hasAttribute("aria-label")) {
+            splitTextLine.setAttribute("aria-label", splitTextLine.textContent.trim());
+        }
         const itemSplitted = new SplitText(splitTextLine, {
             type: "words, lines",
         });
@@ -144,6 +150,9 @@
                 },
             });
 
+            if (!splitTextLine.hasAttribute("aria-label")) {
+                splitTextLine.setAttribute("aria-label", splitTextLine.textContent.trim());
+            }
             const itemSplitted = new SplitText(splitTextLine, {
                 type: "chars, words",
             });
@@ -178,6 +187,9 @@
                 },
             });
 
+            if (!splitTextLine.hasAttribute("aria-label")) {
+                splitTextLine.setAttribute("aria-label", splitTextLine.textContent.trim());
+            }
             const itemSplitted = new SplitText(splitTextLine, {
                 type: "lines",
             });
@@ -623,17 +635,19 @@
     /**************************************
      ***** 14. Magnific Popup *****
      **************************************/
-    $(".popup-image").magnificPopup({
-        type: "image",
-        gallery: {
-            enabled: true,
-        },
-    });
+    if ($.fn.magnificPopup) {
+        $(".popup-image").magnificPopup({
+            type: "image",
+            gallery: {
+                enabled: true,
+            },
+        });
 
-    /* magnificPopup video view */
-    $(".popup-video").magnificPopup({
-        type: "iframe",
-    });
+        /* magnificPopup video view */
+        $(".popup-video").magnificPopup({
+            type: "iframe",
+        });
+    }
 
     /**************************************
      ***** 15. WoW Js Animation *****
@@ -1080,6 +1094,7 @@
 
     // End Script
     $(document).ready(function () {
+        if (!$.fn.magnificPopup) return;
         $(".destination-gallery, .sidebar-gallery").magnificPopup({
             delegate: "a",
             type: "image",

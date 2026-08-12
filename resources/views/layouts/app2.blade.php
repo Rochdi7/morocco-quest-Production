@@ -210,16 +210,21 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-    {{-- Bootstrap Icons: defer (icons used in nav/header) --}}
-    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    {{-- Bootstrap Icons: self-hosted, deferred (icons used in nav/header).
+         Self-hosting removes the CDN round-trip and lets us control font-display. --}}
+    <link rel="preload" as="style" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}">
     </noscript>
 
-    {{-- Preload latin woff2 (same files used by inline @font-face below). --}}
+    {{-- Preload latin woff2 (same files used by inline @font-face below).
+         rubik-700 included: bold headings use it above the fold, so late
+         discovery causes a visible font swap / layout settle. --}}
     <link rel="preload" as="font" type="font/woff2" crossorigin
           href="{{ asset('assets/fonts/rubik-v31-latin-400.woff2') }}">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="{{ asset('assets/fonts/rubik-v31-latin-700.woff2') }}">
     <link rel="preload" as="font" type="font/woff2" crossorigin
           href="{{ asset('assets/fonts/abril-fatface-v25-latin-400.woff2') }}">
 
@@ -306,21 +311,21 @@
 
     @include('partials.footer')
 
-    <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('assets/js/moment.min.js') }}"></script>
-    <script src="{{ asset('assets/js/daterangepicker.min.js') }}"></script>
-    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
-    <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}"></script>
-    <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/moment.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/daterangepicker.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/gsap.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/SplitText.min.js') }}" defer></script>
 
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}" defer></script>
 
     <script>
         // Disable right-click context menu

@@ -190,6 +190,8 @@
     <link rel="preload" as="font" type="font/woff2" crossorigin
           href="{{ asset('assets/fonts/rubik-v31-latin-400.woff2') }}">
     <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="{{ asset('assets/fonts/rubik-v31-latin-700.woff2') }}">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
           href="{{ asset('assets/fonts/abril-fatface-v25-latin-400.woff2') }}">
 
     {{-- Self-hosted Google Fonts (latin subset only).
@@ -201,11 +203,12 @@
         @font-face{font-family:'Rubik';font-style:normal;font-weight:700;font-display:swap;src:url('{{ asset('assets/fonts/rubik-v31-latin-700.woff2') }}') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
     </style>
 
-    {{-- Bootstrap Icons: defer (icons only appear in nav/footer, not above the fold) --}}
-    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    {{-- Bootstrap Icons: self-hosted, deferred (icons only appear in nav/footer, not above the fold).
+         Self-hosting removes the CDN round-trip and lets us control font-display. --}}
+    <link rel="preload" as="style" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}">
     </noscript>
 
     {{-- Critical CSS (render-blocking — needed for first paint) --}}
@@ -258,7 +261,7 @@
     @stack('head')
     @stack('styles')
     @yield('structured_data')
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="xwuEnsY343hnWPzgNhmhgw" async></script>
+    {{-- Ahrefs analytics loads once at end of body (was duplicated here). --}}
 </head>
 
 

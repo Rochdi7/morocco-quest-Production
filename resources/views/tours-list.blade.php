@@ -83,8 +83,17 @@
                                         @endphp
 
                                         <a href="{{ route('tours.show', $tour->slug) }}">
+                                            {{-- width/height reserve the 3:2 box before load (CLS);
+                                                 first row loads eagerly since it's the likely LCP element,
+                                                 the rest stay lazy. Layout CSS (img{height:auto}) keeps
+                                                 the rendered aspect ratio identical. --}}
                                             <img src="{{ $imageUrl }}" alt="{{ $tour->title }}" class="w-100"
-                                                loading="lazy" />
+                                                width="1600" height="1067"
+                                                @if ($loop->index < 3)
+                                                    loading="eager" @if ($loop->first) fetchpriority="high" @endif
+                                                @else
+                                                    loading="lazy"
+                                                @endif />
                                             <span class="visually-hidden">
                                                 {{ $tour->short_description ?? 'Tour: ' . $tour->title }}
                                             </span>

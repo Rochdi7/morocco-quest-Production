@@ -950,7 +950,7 @@
                     <div class="award-box-style1">
                         <div class="award-box-style1-wrapper">
                             <figure class="award-box-icon small-award-icon">
-                                <img src="https://static.cdnlogo.com/logos/t/10/tripadvisor-lockup-horizontal-secondary-registered.svg"
+                                <img src="{{ asset('assets/img/partner/tripadvisor-logo.svg') }}"
                                     alt="Tripadvisor Travellers' Choice Award Logo" class="award-logo"
                                     width="240" height="220">
                             </figure>
@@ -980,7 +980,7 @@
                     <div class="award-box-style1">
                         <div class="award-box-style1-wrapper">
                             <figure class="award-box-icon small-award-icon">
-                                <img src="https://static.cdnlogo.com/logos/t/9/tui-cruises.svg"
+                                <img src="{{ asset('assets/img/partner/tui-cruises-logo.svg') }}"
                                     alt="Tui Cruises Sustainability Award Logo" class="award-logo" width="240"
                                     height="220">
                             </figure>
@@ -1009,7 +1009,7 @@
                     <div class="award-box-style1">
                         <div class="award-box-style1-wrapper">
                             <figure class="award-box-icon text-center">
-                                <img src="https://static.cdnlogo.com/logos/i/63/iagto.svg"
+                                <img src="{{ asset('assets/img/partner/iagto-logo.svg') }}"
                                     alt="IAGTO Supplier's Award Logo" width="140" height="220">
                             </figure>
                             <div
@@ -1178,16 +1178,14 @@
     </section>
 
 
-    <!-- jQuery (deferred) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-
-    <!-- Magnific Popup (deferred) -->
-    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js" defer></script>
+    {{-- jQuery + Magnific Popup are loaded once by the layout (deferred).
+         The duplicate CDN copies here re-executed jQuery (wiping registered
+         plugins) and ran magnific-popup before jQuery existed — removed. --}}
 
     <!-- Initialization Script -->
-    <script defer>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (typeof jQuery !== 'undefined' && $('.popup-inline').length > 0) {
+            if (typeof jQuery !== 'undefined' && $.fn.magnificPopup && $('.popup-inline').length > 0) {
                 $('.popup-inline').magnificPopup({
                     type: 'inline',
                     midClick: true,

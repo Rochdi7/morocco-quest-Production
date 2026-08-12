@@ -157,6 +157,22 @@ FileETag None
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always unset Server
     Header always unset X-Powered-By
+
+    # Origin isolation. "same-origin-allow-popups" keeps window.open flows
+    # (social links, WhatsApp, GBP) working while isolating the browsing context.
+    Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+
+    # Lock browser features the site never uses.
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # Baseline CSP: blocks clickjacking, plugin embeds and base-tag hijacks
+    # without restricting scripts/styles (GTM/GA inline loaders need
+    # 'unsafe-inline', so a full script-src policy must be rolled out via
+    # Content-Security-Policy-Report-Only first — see template below).
+    Header always set Content-Security-Policy "frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+
+    # --- Strict CSP template (test in Report-Only mode before enforcing) ---
+    # Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.ahrefs.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; font-src 'self' data:; connect-src 'self' https://*.google-analytics.com https://analytics.ahrefs.com; frame-src https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'"
 </IfModule>
 
 # =====================================================
