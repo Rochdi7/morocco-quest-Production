@@ -25,7 +25,7 @@
                                                 <circle cx="12" cy="10" r="3" />
                                             </svg></span>
                                         <div class="info">
-                                            <h5 class="info-title text-white-color">Location</h5>
+                                            <h3 class="info-title text-white-color">Location</h3>
                                             <p>Khalid Ibn Al Walid Street, Gueliz, Marrakech, 40000, Morocco</p>
                                         </div>
                                     </div>
@@ -40,7 +40,7 @@
                                             </svg>
                                         </span>
                                         <div class="info">
-                                            <h5 class="info-title text-white-color">Contact Us</h5>
+                                            <h3 class="info-title text-white-color">Contact Us</h3>
                                             <p>
                                                 <a href="mailto:sales@morocco-quest.com"
                                                     aria-label="Email Morocco Quest at sales@morocco-quest.com">sales@morocco-quest.com</a>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="col-lg-5 col-xl-4 order-md-3 order-lg-2">
                     <div class="footer-widgets">
-                        <h5 class="widgets-title text-white-color text-capitalize">Useful Links</h5>
+                        <h3 class="widgets-title text-white-color text-capitalize">Useful Links</h3>
                         <div class="row gx-xl-2 g-2">
                             <div class="col-md-6">
                                 <div class="footer-links">
@@ -311,7 +311,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 col-xl-3 order-md-2 order-lg-3">
                     <div class="footer-widgets">
-                        <h5 class="widgets-title text-white-color text-capitalize">Instagram Feed</h5>
+                        <h3 class="widgets-title text-white-color text-capitalize">Instagram Feed</h3>
                         <div class="instagram">
                             <a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
                                 rel="nofollow noopener noreferrer" aria-label="View Morocco Desert Camp"
