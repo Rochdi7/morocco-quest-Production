@@ -266,8 +266,11 @@
 
                                                 @if ($tourImageUrl)
                                                     @php $tourSrcset = \App\Support\ResponsiveImage::srcset($tourImageUrl); @endphp
+                                                    {{-- Slides 3+ are offscreen in the swiper — lazy them so they
+                                                         stop competing with the hero for slow-4G bandwidth. --}}
                                                     <img src="{{ $tourImageUrl }}" alt="{{ $tour->title }}"
                                                         width="450" height="340"
+                                                        @if ($loop->index >= 2) loading="lazy" @endif
                                                         @if ($tourSrcset) srcset="{{ $tourSrcset }}"
                                                         sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" @endif>
                                                 @endif
