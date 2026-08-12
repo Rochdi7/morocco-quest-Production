@@ -273,7 +273,7 @@
                                         </svg>
                                         <ul class="custom-ul">
                                             <li><a href="https://x.com/mounirakajia" target="_blank"
-                                                    rel="noopener noreferrer" aria-label="Follow on X">
+                                                    rel="nofollow noopener noreferrer" aria-label="Follow on X">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="14"
                                                         height="14" viewBox="0 0 24 24" fill="none"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -284,7 +284,7 @@
                                                     </svg>
                                                 </a></li>
                                             <li><a href="https://www.facebook.com/profile.php?id=61578772746041" target="_blank"
-                                                    rel="noopener noreferrer" aria-label="Follow on Facebook">
+                                                    rel="nofollow noopener noreferrer" aria-label="Follow on Facebook">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="14"
                                                         height="14" viewBox="0 0 24 24" fill="none"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -295,7 +295,7 @@
                                                     </svg>
                                                 </a></li>
                                             <li><a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
-                                                    rel="noopener noreferrer" aria-label="Follow on Instagram">
+                                                    rel="nofollow noopener noreferrer" aria-label="Follow on Instagram">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="14"
                                                         height="14" viewBox="0 0 24 24" fill="none"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"

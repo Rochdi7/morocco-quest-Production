@@ -29,7 +29,7 @@ class EventsProductionController extends Controller
         $url   = url('/events-production-morocco');
         $image = asset('assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywords);

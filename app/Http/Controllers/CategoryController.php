@@ -36,7 +36,7 @@ class CategoryController extends Controller
 
         $title = $category->name . ' — Morocco Travel Guides & Articles | Morocco Quest Blog';
 
-        $description = 'Browse all ' . $category->name . ' articles on the Morocco Quest travel blog. In-depth guides, itineraries and practical tips for travelling in Morocco.';
+        $description = Str::limit('Browse all ' . $category->name . ' articles on the Morocco Quest travel blog — in-depth guides and practical travel tips.', 160, '');
 
         $url = url()->current();
 
@@ -51,7 +51,7 @@ class CategoryController extends Controller
         $keywords = implode(', ', array_unique($keywordArray));
 
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywordArray);

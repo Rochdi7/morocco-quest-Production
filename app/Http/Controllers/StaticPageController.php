@@ -13,7 +13,7 @@ class StaticPageController extends Controller
     public function about()
     {
         $title       = 'About Morocco Quest | Local Morocco Tour Operator in Marrakech';
-        $description = 'Morocco Quest is a Marrakech-based tour operator run by local guides. We offer private morocco tours, sahara desert trips, small group tours and luxury morocco packages — with 24h support.';
+        $description = 'Morocco Quest is a Marrakech-based tour operator run by local guides: private morocco tours, sahara desert trips, small group and luxury packages.';
         $keywords    = [
             'morocco tour company',
             'morocco tour agency',
@@ -32,7 +32,7 @@ class StaticPageController extends Controller
     public function faq()
     {
         $title       = 'Morocco Tours FAQ | Cost, Booking & Sahara Desert Questions Answered';
-        $description = 'Answers to the most common questions about booking morocco tours: how much does a morocco tour cost, are sahara desert trips worth it, best time to visit morocco, group size and cancellation policy.';
+        $description = 'Answers to common morocco tour questions: cost, are sahara desert trips worth it, best time to visit morocco, group size and our cancellation policy.';
         $keywords    = [
             'morocco tours faq',
             'how much does a morocco tour cost',
@@ -110,7 +110,7 @@ class StaticPageController extends Controller
         $url       = url()->current();
         $ogImage   = SeoHelper::ogImage(null);
 
-        SEOMeta::setTitle($title);
+        SEOMeta::setTitle($title, false);
         SEOMeta::setDescription($description);
         SEOMeta::setCanonical($url);
         SEOMeta::addKeyword($keywords);

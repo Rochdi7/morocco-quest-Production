@@ -21,6 +21,7 @@ class SitemapController extends Controller
             ['loc' => route('home'),                        'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '1.0'],
             ['loc' => route('tours.index'),                 'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
             ['loc' => route('activity-categories.index'),   'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('activities.index'),            'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.8'],
             ['loc' => route('destinations.index'),          'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('dmc.marrakech'),                     'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
             ['loc' => route('destination-management.company'),   'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
@@ -37,16 +38,40 @@ class SitemapController extends Controller
             ['loc' => route('contact.show'),                'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.5'],
             ['loc' => route('terms.conditions'),            'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.2'],
             ['loc' => route('privacy.policy'),              'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.2'],
+            ['loc' => route('cookie.policy'),                'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.2'],
         ];
 
         $this->addModel($urls, Tour::class,     'tours.show',      'weekly',  '0.8');
         $this->addModel($urls, Activity::class, 'activities.show', 'weekly',  '0.7');
         $this->addModel($urls, Blog::class,     'blog.show',       'weekly',  '0.6');
+        $this->addModel($urls, \App\Models\Category::class, 'category.show', 'weekly', '0.5');
+        $this->addModel($urls, \App\Models\Tag::class,      'tag.show',      'weekly', '0.4');
         $this->addPlacePages($urls, $now);
+        $this->addStaticTypePages($urls, $now);
 
         return response()
             ->view('sitemap.index', compact('urls'))
             ->header('Content-Type', 'application/xml');
+    }
+
+    /**
+     * Tour/activity type + category pages use hardcoded slugs in the nav
+     * (see header.blade.php / header2.blade.php), not DB-driven routes, so
+     * they can't go through addModel(). Kept in sync with those partials.
+     */
+    private function addStaticTypePages(array &$urls, string $now): void
+    {
+        if (Route::has('tours.type')) {
+            foreach (['Garden Tours', 'Art Tours', 'Classical Tours'] as $type) {
+                $urls[] = ['loc' => route('tours.type', $type), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
+            }
+        }
+
+        if (Route::has('activities.byCategory')) {
+            foreach (['city-tours', 'day-trips', 'food-culinary-tours', 'local-experiences', 'outdoor-activities', 'wellness-experiences'] as $slug) {
+                $urls[] = ['loc' => route('activities.byCategory', $slug), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
+            }
+        }
     }
 
     private function addPlacePages(array &$urls, string $now): void

@@ -47,7 +47,7 @@ class SearchBarController extends Controller
 
         SeoHelper::noindex();
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription(Str::limit($description, 160))
             ->setCanonical(route('home'))
             ->addKeyword($keywordArray);

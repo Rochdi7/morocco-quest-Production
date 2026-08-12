@@ -26,10 +26,27 @@ class TourController extends Controller
      */
     public function listPlaces()
     {
-        $placesData = DB::table('places')->join('place_tour', 'places.id', '=', 'place_tour.place_id')->select('places.name', 'places.slug', 'places.image_path', DB::raw('COUNT(DISTINCT place_tour.tour_id) as tours_count'))->whereNotNull('places.name')->where('places.name', '!=', '')->groupBy('places.name', 'places.slug', 'places.image_path')->orderBy('places.name', 'asc')->paginate(12);
+        // Places with tours OR activities are shown — a tours-only inner join
+        // silently orphaned places (e.g. Agadir) that only have activities.
+        $placesData = DB::table('places')
+            ->leftJoin('place_tour', 'places.id', '=', 'place_tour.place_id')
+            ->leftJoin('activity_place', 'places.id', '=', 'activity_place.place_id')
+            ->select(
+                'places.name',
+                'places.slug',
+                'places.image_path',
+                DB::raw('COUNT(DISTINCT place_tour.tour_id) as tours_count'),
+                DB::raw('COUNT(DISTINCT activity_place.activity_id) as activities_count')
+            )
+            ->whereNotNull('places.name')
+            ->where('places.name', '!=', '')
+            ->groupBy('places.name', 'places.slug', 'places.image_path')
+            ->havingRaw('COUNT(DISTINCT place_tour.tour_id) > 0 OR COUNT(DISTINCT activity_place.activity_id) > 0')
+            ->orderBy('places.name', 'asc')
+            ->paginate(12);
 
         $title       = 'Morocco Tour Destinations | Marrakech, Fes & Sahara Desert | Morocco Quest';
-        $description = 'Explore top morocco tour destinations: Marrakech, Fes, Casablanca and Sahara desert. Book private morocco tours, small group tours morocco and luxury morocco tours.';
+        $description = 'Explore top morocco tour destinations: Marrakech, Fes, Casablanca and the Sahara desert. Private, small group and luxury morocco tours.';
         $keywords    = [
             'morocco tour destinations',
             'morocco tours',
@@ -131,8 +148,8 @@ class TourController extends Controller
             : 'Morocco Tour Packages | Browse All Private & Group Tours | Morocco Quest';
 
         $desc = $placeName
-            ? "Explore all tours in {$placeName}, Morocco. Compare private day trips, multi-day packages and small group tours. Book direct with a local Marrakech-based agency."
-            : 'Browse all morocco tour packages: private day trips, multi-day sahara desert tours, small group tours morocco and luxury morocco tours. Book direct with a top-rated local agency.';
+            ? "Explore all tours in {$placeName}, Morocco. Compare private day trips, multi-day packages and small group tours with a local Marrakech agency."
+            : 'Browse all morocco tour packages: private day trips, multi-day sahara desert tours, small group and luxury morocco tours.';
 
         $keywords = $placeName
             ? ["tours in {$placeName} morocco", "{$placeName} day trips", 'morocco tour package', 'private morocco tours']
@@ -371,7 +388,7 @@ class TourController extends Controller
         $activities = new LengthAwarePaginator([], 0, 12);
 
         $title       = 'Morocco Multi Day Tours | 3, 5 & 7 Day Morocco Tour Packages | Morocco Quest';
-        $description = 'Book morocco multi day tours: 3-day sahara desert tour, 7 day morocco tour, multi-day tours in morocco. Private morocco tours and small group tours morocco from Marrakech.';
+        $description = 'Book morocco multi day tours: 7-day imperial cities, sahara desert trips and small group tours morocco from Marrakech.';
         $keywords    = [
             'morocco multi day tours',
             'morocco 7 day tour',

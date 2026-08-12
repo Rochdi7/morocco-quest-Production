@@ -29,4 +29,4 @@ User-agent: Amazonbot
 Allow: /
 
 Sitemap: https://morocco-quest.com/sitemap.xml
-LLM-Content: https://morocco-quest.com/llms.txt
+# LLM-Content: https://morocco-quest.com/llms.txt

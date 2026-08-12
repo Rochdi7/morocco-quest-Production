@@ -21,7 +21,7 @@ class ContactController extends Controller
 
         $url = url()->current();
 
-        SEOMeta::setTitle($title);
+        SEOMeta::setTitle($title, false);
         SEOMeta::setDescription($description);
         SEOMeta::addKeyword($keywords);
         SEOMeta::setCanonical($url);

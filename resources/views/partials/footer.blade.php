@@ -76,7 +76,7 @@
                         <div class="social-media">
                             <ul class="custom-ul">
                                 <li><a href="https://www.facebook.com/profile.php?id=61578772746041" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Follow Morocco Quest on Facebook">
+                                        rel="nofollow noopener noreferrer" aria-label="Follow Morocco Quest on Facebook">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -85,7 +85,7 @@
                                                 d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                                         </svg>
                                     </a></li>
-                                <li><a href="https://x.com/mounirakajia" target="_blank" rel="noopener noreferrer"
+                                <li><a href="https://x.com/mounirakajia" target="_blank" rel="nofollow noopener noreferrer"
                                         aria-label="Follow Morocco Quest on X (Twitter)">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -95,7 +95,7 @@
                                                 d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                                         </svg></a></li>
                                 <li><a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Follow Morocco Quest on Instagram">
+                                        rel="nofollow noopener noreferrer" aria-label="Follow Morocco Quest on Instagram">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -314,42 +314,42 @@
                         <h5 class="widgets-title text-white-color text-capitalize">Instagram Feed</h5>
                         <div class="instagram">
                             <a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
-                                rel="noopener noreferrer" aria-label="View Morocco Desert Camp"
+                                rel="nofollow noopener noreferrer" aria-label="View Morocco Desert Camp"
                                 class="instagram-post">
                                 <img src="{{ asset('assets/img/Desert-Camp-Morocco-Sunset-View-Lanterns-Palm-Trees.webp') }}"
                                     alt="Desert Camp Morocco Sunset View Lanterns Palm Trees"
                                     class="w-100 instagram-1" loading="lazy" width="150" height="150">
                             </a>
                             <a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
-                                rel="noopener noreferrer" aria-label="View Luxury Dinner Setup Morocco"
+                                rel="nofollow noopener noreferrer" aria-label="View Luxury Dinner Setup Morocco"
                                 class="instagram-post">
                                 <img src="{{ asset('assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp') }}"
                                     alt="Luxury Dinner Setup Wedding Morocco Outdoor Event" class="w-100 instagram-2"
                                     loading="lazy" width="150" height="150">
                             </a>
                             <a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
-                                rel="noopener noreferrer" aria-label="View Moroccan Gate Fes Tourists"
+                                rel="nofollow noopener noreferrer" aria-label="View Moroccan Gate Fes Tourists"
                                 class="instagram-post">
                                 <img src="{{ asset('assets/img/Moroccan-Gate-Fes-Tourists-Decorative-Architecture.webp') }}"
                                     alt="Moroccan Gate Fes Tourists Decorative Architecture" class="w-100 instagram-3"
                                     loading="lazy" width="150" height="150">
                             </a>
                             <a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
-                                rel="noopener noreferrer" aria-label="View Moroccan Palace Restaurant"
+                                rel="nofollow noopener noreferrer" aria-label="View Moroccan Palace Restaurant"
                                 class="instagram-post">
                                 <img src="{{ asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp') }}"
                                     alt="Moroccan Palace Restaurant Elegant Dining Setup" class="w-100 instagram-4"
                                     loading="lazy" width="150" height="150">
                             </a>
                             <a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
-                                rel="noopener noreferrer" aria-label="View Moroccan Riad Pool Night View"
+                                rel="nofollow noopener noreferrer" aria-label="View Moroccan Riad Pool Night View"
                                 class="instagram-post">
                                 <img src="{{ asset('assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp') }}"
                                     alt="Moroccan Riad Pool Night View Arch Design" class="w-100 instagram-5"
                                     loading="lazy" width="150" height="150">
                             </a>
                             <a href="https://www.instagram.com/moroccoquestdmc/" target="_blank"
-                                rel="noopener noreferrer" aria-label="View Traditional Moroccan Dining Event"
+                                rel="nofollow noopener noreferrer" aria-label="View Traditional Moroccan Dining Event"
                                 class="instagram-post">
                                 <img src="{{ asset('assets/img/Traditional-Moroccan-Dining-Event-Outdoor-Lanterns.webp') }}"
                                     alt="Traditional Moroccan Dining Event Outdoor Lanterns" class="w-100 instagram-6"
@@ -670,11 +670,50 @@
     });
 </script>
 
-{{-- Google reCAPTCHA v2 (Checkbox) — loaded once globally (footer is on every
-     page). Widgets auto-render on every ".g-recaptcha" div found on the page,
-     so no explicit init script is needed. `async defer` keeps it off the
-     critical render path. Only emitted when configured, so nothing changes
-     when keys are absent. --}}
+{{-- Google reCAPTCHA v2 (Checkbox) — lazy-loaded only when a ".g-recaptcha"
+     widget actually approaches the viewport or its form is focused, instead
+     of unconditionally on every page load. The widget only appears on pages
+     with a form (footer newsletter, contact), so most page views never need
+     the ~1MB api.js payload at all. Only emitted when configured, so nothing
+     changes when keys are absent. --}}
 @if (config('recaptcha.enabled') && config('recaptcha.site_key'))
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        (function () {
+            var loaded = false;
+            function loadRecaptcha() {
+                if (loaded) return;
+                loaded = true;
+                var s = document.createElement('script');
+                s.src = 'https://www.google.com/recaptcha/api.js';
+                s.async = true;
+                s.defer = true;
+                document.head.appendChild(s);
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                var widgets = document.querySelectorAll('.g-recaptcha');
+                if (!widgets.length) return;
+
+                if ('IntersectionObserver' in window) {
+                    var observer = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                loadRecaptcha();
+                                observer.disconnect();
+                            }
+                        });
+                    }, { rootMargin: '200px' });
+                    widgets.forEach(function (w) { observer.observe(w); });
+                } else {
+                    loadRecaptcha();
+                }
+
+                widgets.forEach(function (w) {
+                    var form = w.closest('form');
+                    if (form) {
+                        form.addEventListener('focusin', loadRecaptcha, { once: true });
+                    }
+                });
+            });
+        })();
+    </script>
 @endif

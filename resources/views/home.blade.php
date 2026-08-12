@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest')
+@section('title', 'Morocco Tours & Sahara Desert Trips | Morocco Quest')
 
 @section('description',
     'Morocco Quest offers private morocco tours & sahara desert tours from Marrakech. Book small group or luxury guided tour packages with a top-rated local agency.')
@@ -17,8 +17,7 @@
 
 @section('content')
     <main class="main">
-        <section class="z-index-common hero-layout1 overflow-clip"
-            data-bg-src="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}">
+        <section class="z-index-common hero-layout1 overflow-clip hero-home-bg">
             <figcaption class="visually-hidden" lang="en" aria-hidden="true">
                 A panoramic view of Aït Benhaddou, a UNESCO World Heritage site in Morocco, with its iconic kasbahs under
                 desert sunlight, showcasing private morocco tours and exclusive travel experiences.
@@ -49,6 +48,8 @@
                                     .hero-home-title { font-size: 48px; line-height: 1.25; }
                                     @media (max-width: 991px) { .hero-home-title { font-size: 36px; } }
                                     @media (max-width: 575px) { .hero-home-title { font-size: 28px; } }
+                                    .hero-home-bg { background-image: url('{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner-mobile.webp') }}'); background-size: cover; background-position: center; }
+                                    @media (min-width: 768px) { .hero-home-bg { background-image: url('{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner-desktop.webp') }}'); } }
                                 </style>
 
                             </div>
@@ -240,10 +241,10 @@
                                                     @endif
                                                 </div>
                                                 <div class="tour-package-content">
-                                                    <h5 class="title line-clamp-2">
+                                                    <p class="title line-clamp-2">
                                                         <a
                                                             href="{{ route('tours.show', ['slug' => $tour->slug]) }}">{{ $tour->title }}</a>
-                                                    </h5>
+                                                    </p>
 
 
                                                     <div class="pricing-container">
@@ -299,7 +300,7 @@
                                                     </div>
 
                                                     <a href="{{ route('tours.show', ['slug' => $tour->slug]) }}"
-                                                        class="vs-btn style7 w-100">Explore Tour Details</a>
+                                                        class="vs-btn style7 w-100">Explore Tour Details <span class="visually-hidden">for {{ $tour->title }}</span></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -360,10 +361,10 @@
                                             </div>
                                             <div class="destination-content">
                                                 <div class="info">
-                                                    <h5 class="text-white text-capitalize mb-1"
+                                                    <p class="text-white text-capitalize mb-1"
                                                         style="white-space: normal; word-break: break-word;">
                                                         {{ $activity->title ?? 'Private Morocco Tour' }}
-                                                    </h5>
+                                                    </p>
 
                                                     @php
                                                         $subtitle =
@@ -660,9 +661,9 @@
                                                 </svg>
                                             </div>
                                             <div class="services-content-inner">
-                                                <h5 class="services-title">
+                                                <h3 class="services-title">
                                                     <a href="#support-popup" class="popup-link">Support 24/7</a>
-                                                </h5>
+                                                </h3>
 
                                                 <p class="fs-16 fw-medium">
                                                     Round-the-clock assistance for a worry-free trip.
@@ -715,9 +716,9 @@
                                             </svg>
                                         </div>
                                         <div class="services-content-inner">
-                                            <h5 class="services-title">
+                                            <h3 class="services-title">
                                                 <a href="#fast-booking-popup" class="popup-link">Fast Booking</a>
-                                            </h5>
+                                            </h3>
                                             <p class="fs-16 fw-medium">
                                                 Easy booking for private tours morocco and vip experiences.
                                             </p>
@@ -770,9 +771,9 @@
                                             </svg>
                                         </div>
                                         <div class="services-content-inner">
-                                            <h5 class="services-title">
+                                            <h3 class="services-title">
                                                 <a href="#adventures-popup" class="popup-link">Adventures</a>
-                                            </h5>
+                                            </h3>
                                             <p class="fs-16 fw-medium">
                                                 Thrilling experiences for small group tours morocco adventurers.
                                             </p>
@@ -819,9 +820,9 @@
                                             </svg>
                                         </div>
                                         <div class="services-content-inner">
-                                            <h5 class="services-title">
+                                            <h3 class="services-title">
                                                 <a href="#travel-guide-popup" class="popup-link">Travel Guide</a>
-                                            </h5>
+                                            </h3>
                                             <p class="fs-16 fw-medium">
                                                 Expert guides for private morocco tours and exclusive experiences.
                                             </p>
@@ -920,9 +921,9 @@
                                     class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">
                                     <img src="{{ asset('assets/img/awards/award-box-left-wings.png') }}"
                                         alt="Decorative award wings" width="50" height="30">
-                                    <h6 class="text-capitalize ff-rubik fw-semibold">
+                                    <h3 class="text-capitalize ff-rubik fw-semibold">
                                         TripAdvisor Travellers' Choice
-                                    </h6>
+                                    </h3>
 
                                     <img src="{{ asset('assets/img/awards/award-box-right-wings.png') }}"
                                         alt="Decorative award wings" width="50" height="30">
@@ -950,9 +951,9 @@
                                     class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">
                                     <img src="{{ asset('assets/img/awards/award-box-left-wings.png') }}"
                                         alt="Decorative award wings" width="50" height="30">
-                                    <h6 class="text-capitalize ff-rubik fw-semibold">
+                                    <h3 class="text-capitalize ff-rubik fw-semibold">
                                         Tui Sustainability Award
-                                    </h6>
+                                    </h3>
                                     <img src="{{ asset('assets/img/awards/award-box-right-wings.png') }}"
                                         alt="Decorative award wings" width="50" height="30">
                                 </div>
@@ -978,9 +979,9 @@
                                     class="award-box-header d-flex align-items-end justify-content-between gap-xl-4 text-center">
                                     <img src="{{ asset('assets/img/awards/award-box-left-wings.png') }}"
                                         alt="Decorative award wings" width="50" height="30">
-                                    <h6 class="text-capitalize ff-rubik fw-semibold">
+                                    <h3 class="text-capitalize ff-rubik fw-semibold">
                                         IAGTO Supplier's Awards
-                                    </h6>
+                                    </h3>
                                     <img src="{{ asset('assets/img/awards/award-box-right-wings.png') }}"
                                         alt="Decorative award wings" width="50" height="30">
                                 </div>
@@ -1044,13 +1045,13 @@
                                         </ul>
                                     </div>
 
-                                    <h5 class="blog-title line-clamp-2">
+                                    <p class="blog-title line-clamp-2">
                                         <a href="{{ route('blog.show', $post->slug) }}">{{ $post->title }}</a>
-                                    </h5>
+                                    </p>
 
                                     <div class="blog-footer">
                                         <a href="{{ route('blog.show', $post->slug) }}" class="vs-btn style4">
-                                            <span>Read Full Post</span>
+                                            <span>Read Full Post <span class="visually-hidden">— {{ $post->title }}</span></span>
                                             <i class="fa fa-arrow-right"></i>
                                         </a>
                                         <ul class="custom-ul blog-share">
@@ -1059,35 +1060,35 @@
                                                 <ul class="custom-ul share-list">
                                                     <li>
                                                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('blog.show', $post->slug)) }}"
-                                                            class="facebook" target="_blank" rel="noopener noreferrer"
+                                                            class="facebook" target="_blank" rel="nofollow noopener noreferrer"
                                                             aria-label="Share on Facebook">
                                                             <i class="fa-brands fa-facebook-f"></i>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('blog.show', $post->slug)) }}&text={{ urlencode($post->title) }}"
-                                                            class="twitter" target="_blank" rel="noopener noreferrer"
+                                                            class="twitter" target="_blank" rel="nofollow noopener noreferrer"
                                                             aria-label="Share on Twitter">
                                                             <i class="fa-brands fa-twitter"></i>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="https://pinterest.com/pin/create/button/?url={{ urlencode(route('blog.show', $post->slug)) }}&media={{ urlencode($post->featured_image_url) }}&description={{ urlencode($post->title) }}"
-                                                            class="pinterest" target="_blank" rel="noopener noreferrer"
+                                                            class="pinterest" target="_blank" rel="nofollow noopener noreferrer"
                                                             aria-label="Share on Pinterest">
                                                             <i class="fa-brands fa-pinterest-p"></i>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="https://www.instagram.com/?url={{ urlencode(route('blog.show', $post->slug)) }}"
-                                                            class="instagram" target="_blank" rel="noopener noreferrer"
+                                                            class="instagram" target="_blank" rel="nofollow noopener noreferrer"
                                                             aria-label="Share on Instagram">
                                                             <i class="fa-brands fa-instagram"></i>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="https://www.tiktok.com/upload?url={{ urlencode(route('blog.show', $post->slug)) }}"
-                                                            class="tiktok" target="_blank" rel="noopener noreferrer"
+                                                            class="tiktok" target="_blank" rel="nofollow noopener noreferrer"
                                                             aria-label="Share on TikTok">
                                                             <i class="fa-brands fa-tiktok"></i>
                                                         </a>

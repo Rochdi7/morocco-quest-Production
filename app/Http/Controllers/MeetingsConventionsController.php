@@ -29,7 +29,7 @@ class MeetingsConventionsController extends Controller
         $url   = url('/meetings-conventions-management');
         $image = asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywords);

@@ -29,7 +29,7 @@ class DestinationManagementController extends Controller
         $url   = url('/destination-management-company');
         $image = asset('assets/img/dmc-in-morocco-moroccoquest.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywords);

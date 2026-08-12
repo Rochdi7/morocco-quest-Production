@@ -1,7 +1,9 @@
 @extends('layouts.app2')
 
-@section('title', $title ?? 'DMC Marrakech | Morocco Ground Handler for Travel Agents & MICE | Morocco Quest')
-@section('description', $description ?? 'Morocco Quest is a licensed Marrakech DMC running net-rate ground programmes for travel agents, tour operators and MICE planners — 24-hour quotes, white-label service, 24/7 on-site support.')
+{{-- Title/description are set live by DmcController::index() via SEOMeta — layouts.app2 renders
+     SEOMeta::generate(), not these @section values. Kept only as a fallback for $title/$description. --}}
+@section('title', $title ?? 'DMC Marrakech | Destination Management Company Morocco | Morocco Quest')
+@section('description', $description ?? 'Morocco Quest — trusted DMC in Marrakech for travel agents, tour operators & MICE groups: private tours, desert camps, transfers & event logistics.')
 @section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'dmc marrakech, morocco ground handler, morocco dmc partner, b2b tour operator morocco, mice marrakech, net rate morocco tours'))
 
 @push('jsonld')

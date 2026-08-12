@@ -12,7 +12,6 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomepageController;
-use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\SearchBarController;
 use App\Http\Controllers\SearchController;
@@ -20,7 +19,6 @@ use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourInquiryController;
-use App\Http\Controllers\TripController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\DmcController;
 use App\Http\Controllers\TeamBuildingController;
@@ -98,12 +96,6 @@ Route::prefix('activities')->name('activities.')->controller(ActivityController:
     Route::get('/{slug}', 'show')->name('show');
 });
 Route::post('/activities/{activity}/inquiry', [ActivityInquiryController::class, 'store'])->name('activity.inquiry.submit');
-
-Route::prefix('trips')->name('trips.')->controller(TripController::class)->group(function () {
-    Route::get('/', 'index')->name('index');
-    Route::get('/{slug}', 'show')->name('show');
-});
-Route::post('/trips/{trip}/inquire', [InquiryController::class, 'storeTripInquiry'])->name('trip.inquiry');
 
 Route::prefix('contact')->name('contact.')->controller(ContactController::class)->group(function () {
     Route::get('/', 'index')->name('show');

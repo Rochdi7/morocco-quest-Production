@@ -28,7 +28,7 @@ class EventSolutions360Controller extends Controller
         $url   = url('/360-event-solutions');
         $image = asset('assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywords);

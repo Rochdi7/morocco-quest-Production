@@ -329,7 +329,7 @@
                                     <p>Most Morocco Quest departures are private or capped at a maximum of 8 travellers, so
                                         tours are not run as large coach groups. Private departures can be arranged for
                                         any group size on request — see our <a
-                                            href="{{ route('trips.index') }}">multi-day trip packages</a> for examples.</p>
+                                            href="{{ route('tours.multi_day') }}">multi-day trip packages</a> for examples.</p>
                                     <p>If you have further questions, please <a href="/contact"
                                             style="color: #bb5e2a;">contact us</a>.</p>
                                 </div>

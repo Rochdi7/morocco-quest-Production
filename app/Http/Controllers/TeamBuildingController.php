@@ -29,7 +29,7 @@ class TeamBuildingController extends Controller
         $url   = url('/team-building-marrakech');
         $image = asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywords);

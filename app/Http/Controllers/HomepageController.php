@@ -28,7 +28,7 @@ class HomepageController extends Controller
         $url = url('/');
         $image = asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword([

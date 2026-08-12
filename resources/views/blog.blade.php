@@ -61,7 +61,7 @@
                         <strong>Marrakech</strong>, multi-day itinerary ideas, and destination tips for
                         <strong>Fes</strong>, <strong>Chefchaouen</strong> and the High Atlas. Ready to book? Browse our
                         <a href="{{ route('tours.index') }}">Morocco tours</a> or
-                        <a href="{{ route('trips.index') }}">multi-day trip packages</a>.
+                        <a href="{{ route('tours.multi_day') }}">multi-day trip packages</a>.
                     </p>
                 </div>
             </div>

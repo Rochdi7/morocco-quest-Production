@@ -174,10 +174,14 @@
     <!-- Preconnect to CDNs we still hit -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
-    {{-- LCP hero preload --}}
-    {{-- TODO (Phase 2.1): generate -768.webp / -1200.webp / -1920.webp variants and switch to imagesrcset --}}
+    {{-- LCP hero preload — responsive variants so mobile doesn't fetch the desktop asset --}}
     <link rel="preload" as="image"
-          href="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}"
+          href="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner-mobile.webp') }}"
+          media="(max-width: 767px)"
+          fetchpriority="high" />
+    <link rel="preload" as="image"
+          href="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner-desktop.webp') }}"
+          media="(min-width: 768px)"
           fetchpriority="high" />
 
     {{-- Preload the two latin woff2 files that the inline @font-face uses below.
@@ -319,16 +323,28 @@
         });
     </script>
 
-    <!-- Google tag (gtag.js) for G-YK31305QT6 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK31305QT6"></script>
+    <!-- Google tag (gtag.js) for G-YK31305QT6 — deferred to idle to protect LCP/TBT,
+         same pattern as GTM above. Fires after the browser is idle (or after 2.5s
+         on browsers without requestIdleCallback), well after first paint. -->
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-YK31305QT6');
+
+        (function () {
+            function loadGtag() {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YK31305QT6';
+                document.head.appendChild(s);
+            }
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGtag, { timeout: 3000 });
+            } else {
+                setTimeout(loadGtag, 2500);
+            }
+        })();
     </script>
     <script>
         var ahrefs_analytics_script = document.createElement('script');

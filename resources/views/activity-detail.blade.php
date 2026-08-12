@@ -821,6 +821,17 @@
         </div> {{-- End container --}}
     </section>
 
+    @if ($activity->places && $activity->places->isNotEmpty())
+        <div class="container">
+            <p class="text-center mb-0">
+                Explore more in
+                @foreach ($activity->places as $activityPlace)
+                    <a href="{{ route('tours.byPlace', $activityPlace->slug) }}">{{ $activityPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
+                @endforeach
+            </p>
+        </div>
+    @endif
+
     {{-- Related Activities Section --}}
     @if (isset($relatedActivities) && $relatedActivities->count() > 0)
         <section class="vs-tour-package style-3 space-bottom bg-theme-07"> {{-- Classes untouched --}}

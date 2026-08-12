@@ -2,22 +2,26 @@
 <html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager (deferred to idle to protect LCP) -->
     <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WVCGDJ98');
+        (function () {
+            function loadGTM() {
+                var w = window, d = document, s = 'script', l = 'dataLayer', i = 'GTM-WVCGDJ98';
+                w[l] = w[l] || [];
+                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            }
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGTM, { timeout: 3000 });
+            } else {
+                setTimeout(loadGTM, 2500);
+            }
+        })();
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
@@ -351,16 +355,27 @@
             e.preventDefault();
         });
     </script>
-    <!-- Google tag (gtag.js) for G-YK31305QT6 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK31305QT6"></script>
+    <!-- Google tag (gtag.js) for G-YK31305QT6 — deferred to idle to protect LCP/TBT,
+         same pattern as GTM above. -->
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-YK31305QT6');
+
+        (function () {
+            function loadGtag() {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YK31305QT6';
+                document.head.appendChild(s);
+            }
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGtag, { timeout: 3000 });
+            } else {
+                setTimeout(loadGtag, 2500);
+            }
+        })();
     </script>
 
     <script>

@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\Blog;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
 
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -41,7 +42,7 @@ class TagController extends Controller
 
         $title = $tag->name . ' — Morocco Travel Guides & Tips | Morocco Quest Blog';
 
-        $description = 'All articles tagged "' . $tag->name . '" on the Morocco Quest travel blog. Practical guides, itineraries and travel tips for your morocco trip.';
+        $description = Str::limit('Articles tagged "' . $tag->name . '" on the Morocco Quest travel blog — guides, itineraries and travel tips.', 160, '');
 
         $url = url()->current();
 
@@ -56,7 +57,7 @@ class TagController extends Controller
         $keywords = implode(', ', array_unique($keywordArray));
 
 
-        SEOMeta::setTitle($title);
+        SEOMeta::setTitle($title, false);
         SEOMeta::setDescription($description);
         SEOMeta::setCanonical($url);
         SEOMeta::addKeyword($keywordArray);

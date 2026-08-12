@@ -12,7 +12,7 @@ class DmcController extends Controller
     public function index(): View
     {
         $title       = 'DMC Marrakech | Destination Management Company Morocco | Morocco Quest';
-        $description = 'Morocco Quest — trusted DMC in Marrakech for travel agents, tour operators & MICE groups. Tailor-made ground services: private tours, desert camps, transfers, guides & event logistics across Morocco.';
+        $description = 'Morocco Quest — trusted DMC in Marrakech for travel agents, tour operators & MICE groups: private tours, desert camps, transfers & event logistics.';
         $keywords    = [
             'dmc marrakech',
             'destination management company morocco',
@@ -34,7 +34,7 @@ class DmcController extends Controller
         $url   = url('/dmc-marrakech');
         $image = asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywords);

@@ -114,10 +114,11 @@
                                         <h5 class="title">
                                             {{ e($place->name) }}
                                         </h5>
-                                        {{-- Tour Count Info --}}
+                                        {{-- Tour/Activity Count Info --}}
+                                        @php $experienceCount = ($place->tours_count ?? 0) + ($place->activities_count ?? 0); @endphp
                                         <span class="info">
-                                            {{ $place->tours_count ?? 0 }}
-                                            {{ Str::plural('Tour', $place->tours_count ?? 0) }}
+                                            {{ $experienceCount }}
+                                            {{ Str::plural('Experience', $experienceCount) }}
                                             Available
                                         </span>
                                     </div>

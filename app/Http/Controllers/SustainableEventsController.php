@@ -29,7 +29,7 @@ class SustainableEventsController extends Controller
         $url   = url('/sustainable-events-morocco');
         $image = asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywords);

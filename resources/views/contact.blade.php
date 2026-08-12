@@ -96,7 +96,7 @@
                         </p>
                         <p>
                             Not sure where to start? Browse our <a href="{{ route('tours.index') }}">Morocco tours</a>
-                            and <a href="{{ route('trips.index') }}">multi-day trip packages</a>, read
+                            and <a href="{{ route('tours.multi_day') }}">multi-day trip packages</a>, read
                             <a href="{{ route('about') }}">about our team in Marrakech</a>, or check the
                             <a href="{{ route('faq') }}">FAQ</a> for booking and pricing questions before you get in touch.
                         </p>

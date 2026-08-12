@@ -49,7 +49,7 @@ class ActivityController extends Controller
             ->paginate(9);
 
         $title       = 'Things to Do in Morocco | Activities, Day Tours & Experiences | Morocco Quest';
-        $description = 'Best things to do in Morocco: camel rides, quad biking in Marrakech, desert hikes, food tours and day trips. Private & small group activities with a top-rated local agency.';
+        $description = 'Best things to do in Morocco: camel rides, quad biking in Marrakech, desert hikes and food tours — private & small group activities.';
         $keywords    = [
             'things to do in morocco',
             'things to do in marrakech',
@@ -122,7 +122,7 @@ class ActivityController extends Controller
 
         $description = $category
             ? "Discover {$category->name} in Morocco with a top-rated local agency. Private tours, small group experiences and morocco day trips — book direct."
-            : 'Browse all morocco day tours and activities: camel rides, quad biking, desert hikes, food tours, day trips from Marrakech. Book private or small group with a local agency.';
+            : 'Browse all morocco day tours and activities: camel rides, quad biking, desert hikes and food tours from Marrakech — private or small group.';
 
         $keywords = $category
             ? [strtolower($category->name), strtolower($category->name) . ' morocco', 'morocco activities', 'morocco day tours']
@@ -138,7 +138,7 @@ class ActivityController extends Controller
 
     public function show($slug)
     {
-        $activity = Activity::with(['images', 'category', 'itineraryDays'])
+        $activity = Activity::with(['images', 'category', 'itineraryDays', 'places'])
             ->where('slug', $slug)
             ->firstOrFail();
 

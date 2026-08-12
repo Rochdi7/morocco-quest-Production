@@ -29,7 +29,7 @@ class CongressOrganizationController extends Controller
         $url   = url('/professional-congress-organization');
         $image = asset('assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp');
 
-        SEOMeta::setTitle($title)
+        SEOMeta::setTitle($title, false)
             ->setDescription($description)
             ->setCanonical($url)
             ->addKeyword($keywords);
