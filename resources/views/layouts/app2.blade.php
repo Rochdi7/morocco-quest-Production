@@ -236,9 +236,13 @@
         @font-face{font-family:'Rubik';font-style:normal;font-weight:700;font-display:swap;src:url('{{ asset('assets/fonts/rubik-v31-latin-700.woff2') }}') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
     </style>
 
-    {{-- Critical CSS (render-blocking — needed for first paint) --}}
-    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
+    {{-- Critical CSS (render-blocking — needed for first paint).
+         Purged copies (unused rules stripped, ~57% smaller combined).
+         Originals live at assets/plugins/ + assets/css/ — regenerate after
+         adding new views/classes:  npx purgecss --config purgecss.config.js
+         (or the scratch runner; see purgecss.config.js at project root). --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/purged/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/purged/style.min.css') }}">
 
     {{-- Font Awesome Pro (local) — required for fal/light icons used in header/nav --}}
     <link rel="preload" as="style" href="{{ asset('assets/plugins/fontawesome.min.css') }}"
@@ -325,7 +329,9 @@
     <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/SplitText.min.js') }}" defer></script>
 
-    <script src="{{ asset('assets/js/main.js') }}" defer></script>
+    {{-- Minified build of assets/js/main.js — regenerate after editing the source:
+         npx terser assets/js/main.js --compress --mangle --output assets/js/main.min.js --}}
+    <script src="{{ asset('assets/js/main.min.js') }}" defer></script>
 
     <script>
         // Disable right-click context menu
@@ -360,28 +366,10 @@
             e.preventDefault();
         });
     </script>
-    <!-- Google tag (gtag.js) for G-YK31305QT6 — deferred to idle to protect LCP/TBT,
-         same pattern as GTM above. -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-YK31305QT6');
-
-        (function () {
-            function loadGtag() {
-                var s = document.createElement('script');
-                s.async = true;
-                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YK31305QT6';
-                document.head.appendChild(s);
-            }
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadGtag, { timeout: 3000 });
-            } else {
-                setTimeout(loadGtag, 2500);
-            }
-        })();
-    </script>
+    {{-- GA4 (G-YK31305QT6) is loaded BY the GTM container (GTM-WVCGDJ98) — the
+         standalone gtag.js loader that used to live here downloaded the same
+         160KB script a second time and double-fired page views. If GA4 data
+         ever stops, re-check that the GA4 config tag still exists in GTM. --}}
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

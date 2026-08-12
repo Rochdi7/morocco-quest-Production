@@ -87,8 +87,11 @@
                                                  first row loads eagerly since it's the likely LCP element,
                                                  the rest stay lazy. Layout CSS (img{height:auto}) keeps
                                                  the rendered aspect ratio identical. --}}
+                                            @php $cardSrcset = \App\Support\ResponsiveImage::srcset($imageUrl); @endphp
                                             <img src="{{ $imageUrl }}" alt="{{ $tour->title }}" class="w-100"
                                                 width="1600" height="1067"
+                                                @if ($cardSrcset) srcset="{{ $cardSrcset }}"
+                                                sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" @endif
                                                 @if ($loop->index < 3)
                                                     loading="eager" @if ($loop->first) fetchpriority="high" @endif
                                                 @else

@@ -171,8 +171,8 @@
 
     <meta name="twitter:site" content="@MoroccoQuest" />
 
-    <!-- Preconnect to CDNs we still hit -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    {{-- jsdelivr preconnect removed: nothing on this layout loads from it anymore
+         (bootstrap-icons are self-hosted) — PSI flagged it as an unused preconnect. --}}
 
     {{-- LCP hero preload — responsive variants so mobile doesn't fetch the desktop asset --}}
     <link rel="preload" as="image"
@@ -211,9 +211,13 @@
         <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}">
     </noscript>
 
-    {{-- Critical CSS (render-blocking — needed for first paint) --}}
-    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
+    {{-- Critical CSS (render-blocking — needed for first paint).
+         Purged copies (unused rules stripped, ~57% smaller combined).
+         Originals live at assets/plugins/ + assets/css/ — regenerate after
+         adding new views/classes:  npx purgecss --config purgecss.config.js
+         (or the scratch runner; see purgecss.config.js at project root). --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/purged/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/purged/style.min.css') }}">
 
     {{-- Inline above-the-fold rules: paints something usable before the
          deferred CSS finishes. Tiny (<1KB), zero visual regression because
@@ -296,7 +300,9 @@
     <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/SplitText.min.js') }}" defer></script>
 
-    <script src="{{ asset('assets/js/main.js') }}" defer></script>
+    {{-- Minified build of assets/js/main.js — regenerate after editing the source:
+         npx terser assets/js/main.js --compress --mangle --output assets/js/main.min.js --}}
+    <script src="{{ asset('assets/js/main.min.js') }}" defer></script>
     <script>
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
@@ -326,29 +332,10 @@
         });
     </script>
 
-    <!-- Google tag (gtag.js) for G-YK31305QT6 — deferred to idle to protect LCP/TBT,
-         same pattern as GTM above. Fires after the browser is idle (or after 2.5s
-         on browsers without requestIdleCallback), well after first paint. -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-YK31305QT6');
-
-        (function () {
-            function loadGtag() {
-                var s = document.createElement('script');
-                s.async = true;
-                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YK31305QT6';
-                document.head.appendChild(s);
-            }
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadGtag, { timeout: 3000 });
-            } else {
-                setTimeout(loadGtag, 2500);
-            }
-        })();
-    </script>
+    {{-- GA4 (G-YK31305QT6) is loaded BY the GTM container (GTM-WVCGDJ98) — the
+         standalone gtag.js loader that used to live here downloaded the same
+         160KB script a second time and double-fired page views. If GA4 data
+         ever stops, re-check that the GA4 config tag still exists in GTM. --}}
     <script>
         var ahrefs_analytics_script = document.createElement('script');
         ahrefs_analytics_script.async = true;

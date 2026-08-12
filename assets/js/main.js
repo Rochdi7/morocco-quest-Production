@@ -291,17 +291,27 @@
     /**************************************
      ***** 03. Preloader *****
      **************************************/
-    $(window).on("load", function () {
-        $(".preloader").delay(800).fadeOut("slow");
+    // Fast connections keep the original 800ms-after-load reveal; the timeout
+    // cap stops the preloader holding the page hostage on slow networks
+    // (window.load waits for every image — that was tanking Speed Index).
+    var preloaderHidden = false;
+    function hidePreloader() {
+        if (preloaderHidden) return;
+        preloaderHidden = true;
+        $(".preloader").fadeOut("slow");
         $(".vs-hero").addClass("animate-elements");
-
-        // Check if preloader exists and handle close event
-        $(".preloader").length &&
-            $(".preloaderCls").on("click", function (e) {
-                e.preventDefault();
-                $(".preloader").hide();
-            });
+    }
+    $(window).on("load", function () {
+        setTimeout(hidePreloader, 800);
     });
+    setTimeout(hidePreloader, 2500);
+
+    // Check if preloader exists and handle close event
+    $(".preloader").length &&
+        $(".preloaderCls").on("click", function (e) {
+            e.preventDefault();
+            $(".preloader").hide();
+        });
 
     /**************************************
      ***** 04. Data Scroll Inview Animation *****

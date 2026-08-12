@@ -265,8 +265,11 @@
                                                 @endphp
 
                                                 @if ($tourImageUrl)
+                                                    @php $tourSrcset = \App\Support\ResponsiveImage::srcset($tourImageUrl); @endphp
                                                     <img src="{{ $tourImageUrl }}" alt="{{ $tour->title }}"
-                                                        width="450" height="340">
+                                                        width="450" height="340"
+                                                        @if ($tourSrcset) srcset="{{ $tourSrcset }}"
+                                                        sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" @endif>
                                                 @endif
                                             </div>
                                             <div class="tour-package-content">
@@ -378,9 +381,12 @@
                                             @if ($activity->is_popular)
                                                 <span class="badge-activity-popular">Popular</span>
                                             @endif
+                                            @php $activitySrcset = \App\Support\ResponsiveImage::srcset($activityImageUrl); @endphp
                                             <img src="{{ $activityImageUrl }}"
                                                 alt="{{ $activity->title ?? 'Featured Morocco Activity' }}"
-                                                class="w-100" loading="lazy" width="410" height="500">
+                                                class="w-100" loading="lazy" width="410" height="500"
+                                                @if ($activitySrcset) srcset="{{ $activitySrcset }}"
+                                                sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 25vw" @endif>
                                         </div>
                                         <div class="destination-content">
                                             <div class="info">
@@ -1055,8 +1061,11 @@
                         <div class="vs-blog-box style1">
                             <figure class="blog-thumb">
                                 <a href="{{ route('blog.show', $post->slug) }}">
+                                    @php $postSrcset = \App\Support\ResponsiveImage::srcset($post->featured_image_url); @endphp
                                     <img src="{{ $post->featured_image_url }}" loading="lazy"
-                                        alt="{{ $post->title }}" class="w-100" width="410" height="275">
+                                        alt="{{ $post->title }}" class="w-100" width="410" height="275"
+                                        @if ($postSrcset) srcset="{{ $postSrcset }}"
+                                        sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" @endif>
                                 </a>
                             </figure>
 
