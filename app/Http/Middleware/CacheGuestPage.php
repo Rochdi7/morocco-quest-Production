@@ -28,7 +28,10 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class CacheGuestPage
 {
-    private const TTL_SECONDS = 600;
+    // 6h: long enough that real visitors (and PSI tests) usually hit a warm
+    // cache on this low-traffic site. Deploys already run cache:clear, and
+    // Filament content edits show up after expiry at the latest.
+    private const TTL_SECONDS = 21600;
 
     public function handle(Request $request, Closure $next): Response
     {

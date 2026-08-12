@@ -324,7 +324,7 @@
                 }
                 var h = document.querySelector('.vs-hero');
                 if (h) h.classList.add('animate-elements');
-            }, 2600);
+            }, 2200);
         })();
     </script>
 
