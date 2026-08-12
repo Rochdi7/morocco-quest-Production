@@ -308,6 +308,25 @@
             <span class="loader"></span>
         </div>
     </div>
+    <script>
+        // Deterministic preloader reveal for slow networks. main.js keeps the
+        // original 800ms-after-load timing on fast connections; this timer
+        // starts at HTML parse and caps the wait at 2.6s. CLS-safe: fading an
+        // overlay (opacity) and the hero entrance keyframes (transform/opacity)
+        // are both excluded from layout-shift scoring. Idempotent with main.js.
+        (function () {
+            setTimeout(function () {
+                var p = document.querySelector('.preloader');
+                if (p && p.style.display !== 'none') {
+                    p.style.transition = 'opacity .5s';
+                    p.style.opacity = '0';
+                    setTimeout(function () { p.style.display = 'none'; }, 550);
+                }
+                var h = document.querySelector('.vs-hero');
+                if (h) h.classList.add('animate-elements');
+            }, 2600);
+        })();
+    </script>
 
     @include('partials.header2')
 
