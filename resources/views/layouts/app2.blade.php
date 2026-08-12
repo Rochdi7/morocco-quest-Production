@@ -335,7 +335,10 @@
     @include('partials.footer')
 
     <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}" defer></script>
-    <script src="{{ asset('assets/js/jquery-ui.min.js') }}" defer></script>
+    {{-- Slim jquery-ui: selectmenu + slider only (the two widgets main.js uses).
+         50KB vs the 89KB full build. Full build stays at assets/js/jquery-ui.min.js
+         as rollback; rebuild via the build-jqueryui runner (see project memory). --}}
+    <script src="{{ asset('assets/js/jquery-ui.custom.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/moment.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/daterangepicker.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}" defer></script>
