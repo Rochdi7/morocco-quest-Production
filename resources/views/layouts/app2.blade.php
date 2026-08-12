@@ -236,22 +236,13 @@
         @font-face{font-family:'Rubik';font-style:normal;font-weight:700;font-display:swap;src:url('{{ asset('assets/fonts/rubik-v31-latin-700.woff2') }}') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
     </style>
 
-    {{-- Main CSS (purged copies — regenerate with purgecss.config.js after adding
-         views/classes). Loaded async: the opaque preloader (styled by the inline
-         CSS below) masks the viewport until well after these arrive, so there is
-         no visible unstyled flash — but render is no longer blocked on them.
-         DOM order (bootstrap before style) preserves the cascade regardless of
-         which file finishes downloading first. --}}
-    <link rel="preload" as="style" href="{{ asset('assets/css/purged/bootstrap.min.css') }}"
-          onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" as="style" href="{{ asset('assets/css/purged/style.min.css') }}"
-          onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="{{ asset('assets/css/purged/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/purged/style.min.css') }}">
-        {{-- Without JS nothing ever hides the preloader — don't show it at all. --}}
-        <style>.preloader{display:none!important}</style>
-    </noscript>
+    {{-- Critical CSS (render-blocking — needed for first paint).
+         Purged copies (unused rules stripped, ~57% smaller combined).
+         Originals live at assets/plugins/ + assets/css/ — regenerate after
+         adding new views/classes:  npx purgecss --config purgecss.config.js
+         (or the scratch runner; see purgecss.config.js at project root). --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/purged/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/purged/style.min.css') }}">
 
     {{-- Font Awesome Pro (local) — required for fal/light icons used in header/nav --}}
     <link rel="preload" as="style" href="{{ asset('assets/plugins/fontawesome.min.css') }}"
@@ -317,26 +308,6 @@
             <span class="loader"></span>
         </div>
     </div>
-    <script>
-        // Deterministic reveal: main.js's window.load path keeps the original
-        // 800ms-after-load timing on fast connections, but on slow networks the
-        // load event (and even main.js itself) arrives seconds late. This timer
-        // starts at HTML parse and fades the preloader + starts the hero
-        // entrance animation at 2.6s worst-case — same fade, same animation.
-        // Both paths are idempotent with each other.
-        (function () {
-            setTimeout(function () {
-                var p = document.querySelector('.preloader');
-                if (p && p.style.display !== 'none') {
-                    p.style.transition = 'opacity .5s';
-                    p.style.opacity = '0';
-                    setTimeout(function () { p.style.display = 'none'; }, 550);
-                }
-                var h = document.querySelector('.vs-hero');
-                if (h) h.classList.add('animate-elements');
-            }, 2600);
-        })();
-    </script>
 
     @include('partials.header2')
 
