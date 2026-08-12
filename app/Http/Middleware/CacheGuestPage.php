@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Symfony\Component\HttpFoundation\Response;
+
+/**
+ * Full-page HTML cache for anonymous GET traffic on selected routes.
+ *
+ * Why: TTFB on shared hosting is ~1s and it is the largest single component
+ * of the homepage LCP (measured via Lighthouse LCP breakdown: ~988ms TTFB).
+ * Serving the rendered HTML from the file cache skips DB queries and Blade
+ * rendering for repeat requests.
+ *
+ * Safety:
+ * - Only caches the response BODY. Cookies/headers are attached fresh per
+ *   visitor by the surrounding session middleware, so nothing session-bound
+ *   leaks between visitors.
+ * - The cached body does contain a stale CSRF token (footer newsletter form);
+ *   partials/footer.blade.php refreshes _token inputs client-side via the
+ *   csrf.refresh endpoint after DOMContentLoaded.
+ * - Bypasses for authenticated users, non-GET, and any query string.
+ * - Cleared by `php artisan cache:clear` (already part of the deploy routine),
+ *   or expires on its own after TTL_SECONDS.
+ */
+class CacheGuestPage
+{
+    private const TTL_SECONDS = 600;
+
+    public function handle(Request $request, Closure $next): Response
+    {
+        if (!$request->isMethod('GET') || count($request->query()) > 0 || $request->user()) {
+            return $next($request);
+        }
+
+        $key = 'page-cache:' . sha1($request->path());
+
+        $html = Cache::get($key);
+        if (is_string($html)) {
+            return response($html, 200)
+                ->header('Content-Type', 'text/html; charset=UTF-8')
+                ->header('X-Page-Cache', 'hit');
+        }
+
+        $response = $next($request);
+
+        if ($response->getStatusCode() === 200
+            && str_contains((string) $response->headers->get('Content-Type'), 'text/html')
+            && is_string($response->getContent())) {
+            Cache::put($key, $response->getContent(), self::TTL_SECONDS);
+        }
+
+        $response->headers->set('X-Page-Cache', 'miss');
+
+        return $response;
+    }
+}

@@ -409,6 +409,23 @@
     </div>
 </footer>
 
+<script>
+    // Pages served from the guest page-cache (CacheGuestPage middleware) carry
+    // a stale CSRF token in the newsletter form. Swap in this visitor's own
+    // token after load so the POST never 419s. Harmless on uncached pages —
+    // it just rewrites the token to the same valid value.
+    document.addEventListener('DOMContentLoaded', function () {
+        var inputs = document.querySelectorAll('input[name="_token"]');
+        if (!inputs.length || !window.fetch) return;
+        fetch('{{ route('csrf.refresh') }}', { credentials: 'same-origin' })
+            .then(function (r) { return r.ok ? r.text() : null; })
+            .then(function (t) {
+                if (t) inputs.forEach(function (i) { i.value = t; });
+            })
+            .catch(function () {});
+    });
+</script>
+
 <style>
     logo-footer {
         max-width: 100%;

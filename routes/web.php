@@ -40,7 +40,15 @@ Route::get('/360-event-solutions', [EventSolutions360Controller::class, 'index']
 
 Route::get('/', function () {
     return app(HomepageController::class)->index();
-})->name('home');
+})->name('home')->middleware(\App\Http\Middleware\CacheGuestPage::class);
+
+// Fresh CSRF token for pages served from the guest page-cache (see
+// CacheGuestPage middleware). Footer JS patches _token inputs from this.
+Route::get('/csrf-refresh', function () {
+    return response(csrf_token(), 200)
+        ->header('Content-Type', 'text/plain')
+        ->header('Cache-Control', 'no-store, private');
+})->name('csrf.refresh');
 
 Route::get('/search-bar', [SearchBarController::class, 'index'])->name('search.bar');
 Route::get('/search', [SearchController::class, 'index'])->name('search');
