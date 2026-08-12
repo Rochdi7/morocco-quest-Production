@@ -241,8 +241,8 @@
          Originals live at assets/plugins/ + assets/css/ — regenerate after
          adding new views/classes:  npx purgecss --config purgecss.config.js
          (or the scratch runner; see purgecss.config.js at project root). --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/purged/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/purged/style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/purged/bootstrap.min.css') }}?v={{ filemtime(public_path('assets/css/purged/bootstrap.min.css')) }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/purged/style.min.css') }}?v={{ filemtime(public_path('assets/css/purged/style.min.css')) }}">
 
     {{-- Font Awesome Pro (local) — required for fal/light icons used in header/nav --}}
     <link rel="preload" as="style" href="{{ asset('assets/plugins/fontawesome.min.css') }}"
@@ -324,7 +324,10 @@
                 }
                 var h = document.querySelector('.vs-hero');
                 if (h) h.classList.add('animate-elements');
-            }, 2200);
+                // 1500ms from script exec — inline scripts wait for pending
+                // stylesheets, so this countdown starts at CSS-ready. The
+                // preloaded hero image lands well within this window.
+            }, 1500);
         })();
     </script>
 
