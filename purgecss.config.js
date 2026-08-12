@@ -30,7 +30,8 @@ module.exports = {
         greedy: [
             /^ui-/, /^mfp-/, /^swiper/, /^odometer/, /^daterangepicker/,
             /^drp-/, /^calendar/, /^wow$/, /^animated/, /^animate__/,
-            /^pin-spacer/, /^gsap/, /^tooltip/, /^bs-tooltip/, /^popover/,
+            /^pin-spacer/, /^gsap/, /animate-elements/, /^slick/, /^hero-/,
+            /^tooltip/, /^bs-tooltip/, /^popover/,
             /^bs-popover/, /^dropdown-menu/, /^carousel-item/, /^breadcrumb/,
             /^pagination/, /^page-(item|link)/, /^flatpickr/,
         ],

@@ -216,8 +216,11 @@
          Originals live at assets/plugins/ + assets/css/ — regenerate after
          adding new views/classes:  npx purgecss --config purgecss.config.js
          (or the scratch runner; see purgecss.config.js at project root). --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/purged/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/purged/style.min.css') }}">
+    {{-- purged-home = scoped to this layout's 3 views (home, index,
+         category-details) + header/footer — ~40% smaller than the sitewide
+         purge. Regenerate with the purge-home runner when those views change. --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/purged-home/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/purged-home/style.min.css') }}">
 
     {{-- Inline above-the-fold rules: paints something usable before the
          deferred CSS finishes. Tiny (<1KB), zero visual regression because
@@ -295,7 +298,7 @@
                 }
                 var h = document.querySelector('.vs-hero');
                 if (h) h.classList.add('animate-elements');
-            }, 2600);
+            }, 2200);
         })();
     </script>
 
