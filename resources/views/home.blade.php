@@ -423,9 +423,9 @@
             <div class="row destination-gallery g-0">
                 <div class="col-lg-6 p-0">
                     <figure class="destination-gallery-box h-100">
-                        <img src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }}"
+                        <img src="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco-960.webp') }}"
                             srcset="{{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco-480.webp') }} 480w,
-                            {{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp') }} 960w"
+                            {{ asset('assets/img/agafay-desert-luxury-camp-camel-trek-morocco-960.webp') }} 960w"
                             sizes="(max-width: 600px) 480px, 960px" alt="private morocco tour experience"
                             title="private tours morocco" class="w-100 h-100 object-fit-cover" loading="lazy"
                             width="960" height="1080" itemprop="image">
@@ -465,7 +465,10 @@
                     <div class="row g-0">
                         <div class="col-sm-6 p-0">
                             <div class="destination-gallery-box h-100">
-                                <img src="{{ asset('assets/img/moroccan_traditional_mechoui_evening_firepit.webp') }}"
+                                <img src="{{ asset('assets/img/moroccan_traditional_mechoui_evening_firepit-1200.webp') }}"
+                                    srcset="{{ asset('assets/img/moroccan_traditional_mechoui_evening_firepit-600.webp') }} 600w,
+                                    {{ asset('assets/img/moroccan_traditional_mechoui_evening_firepit-1200.webp') }} 1200w"
+                                    sizes="(max-width: 600px) 600px, 1200px"
                                     alt="small group tours morocco" title="exclusive morocco travel experiences"
                                     class="w-100 h-100 object-fit-cover" loading="lazy" width="600" height="540">
 
@@ -529,7 +532,10 @@
 
                         <div class="col-sm-6 p-0">
                             <div class="destination-gallery-box h-100">
-                                <img src="{{ asset('assets/img/gnawa_musician_morocco_local_encounter.webp') }}"
+                                <img src="{{ asset('assets/img/gnawa_musician_morocco_local_encounter-1200.webp') }}"
+                                    srcset="{{ asset('assets/img/gnawa_musician_morocco_local_encounter-600.webp') }} 600w,
+                                    {{ asset('assets/img/gnawa_musician_morocco_local_encounter-1200.webp') }} 1200w"
+                                    sizes="(max-width: 600px) 600px, 1200px"
                                     alt="private tour morocco" title="authentic moroccan music"
                                     class="w-100 h-100 object-fit-cover" loading="lazy" width="600" height="540">
 
@@ -560,7 +566,10 @@
 
                         <div class="col-sm-6 p-0">
                             <div class="destination-gallery-box h-100">
-                                <img src="{{ asset('assets/img/souk_experience_morocco_cultural_discoveries.webp') }}"
+                                <img src="{{ asset('assets/img/souk_experience_morocco_cultural_discoveries-1200.webp') }}"
+                                    srcset="{{ asset('assets/img/souk_experience_morocco_cultural_discoveries-600.webp') }} 600w,
+                                    {{ asset('assets/img/souk_experience_morocco_cultural_discoveries-1200.webp') }} 1200w"
+                                    sizes="(max-width: 600px) 600px, 1200px"
                                     alt="morocco travel agent guided souk" title="moroccan cultural markets"
                                     class="w-100 h-100 object-fit-cover" loading="lazy" width="600" height="540">
 
