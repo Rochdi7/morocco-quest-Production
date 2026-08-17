@@ -25,19 +25,38 @@ const baseSafelist = {
 
 process.chdir(root);
 
-const content = [
+const sitewideContent = [
     'resources/views/**/*.blade.php',
     'assets/js/*.js',
     'assets/js/vendor/*.js',
     'app/Http/Controllers/**/*.php',
 ];
 
+// layouts.app is used by exactly these 3 views (home, index, category-details) —
+// see resources/views/layouts/app.blade.php comment. Scoping the homepage purge
+// job to just what those views + the shared header/footer/layout actually render
+// (instead of reusing the full sitewide content array) is what makes purged-home/
+// genuinely smaller than the sitewide purged/ output.
+const homeContent = [
+    'resources/views/layouts/app.blade.php',
+    'resources/views/home.blade.php',
+    'resources/views/index.blade.php',
+    'resources/views/category-details.blade.php',
+    'resources/views/partials/header.blade.php',
+    'resources/views/partials/footer.blade.php',
+    'assets/js/*.js',
+    'assets/js/vendor/*.js',
+    'app/Http/Controllers/HomepageController.php',
+];
+
 const jobs = [
     {
+        content: sitewideContent,
         css: ['assets/plugins/bootstrap.min.css', 'assets/css/style.min.css'],
         output: 'assets/css/purged/',
     },
     {
+        content: homeContent,
         css: ['assets/plugins/bootstrap.min.css', 'assets/css/style.min.css'],
         output: 'assets/css/purged-home/',
     },
@@ -45,7 +64,7 @@ const jobs = [
 
 for (const job of jobs) {
     const results = await new PurgeCSS().purge({
-        content,
+        content: job.content,
         css: job.css,
         safelist: baseSafelist,
     });
