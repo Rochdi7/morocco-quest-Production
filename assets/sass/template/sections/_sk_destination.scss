@@ -139,8 +139,10 @@
       flex-shrink: 0;
       width: 100%;
       h4 {
-        line-height: 1;
+        line-height: 1.3;
         margin-bottom: 6px;
+        white-space: normal;
+        word-break: break-word;
         @include respond-above(lg) {
           font-size: 30px;
         }
@@ -196,7 +198,7 @@
     .destination-content {
       .info {
         text-align: left;
-        width: calc-size(max-content, size);
+        width: 100%;
       }
       .icon {
         margin-right: 0px;
