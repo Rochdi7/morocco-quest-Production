@@ -1573,12 +1573,14 @@ if (
 }
 
 /**************************************
- ***** GA4 CTA / WhatsApp click tracking *****
+ ***** GA4 CTA / WhatsApp / phone / email click tracking *****
  * Single delegated listener on document (no per-button listeners, no
  * DOM scan on load) — cheap regardless of how many CTAs a page has.
  * window.__pageContext (set per-page by tour-detail/activity-detail/
  * tours-list/etc.) supplies tour/destination context when available;
  * pages without it (home, contact, generic) just omit those keys.
+ * No PII is ever pushed: tel:/mailto: hrefs are detected by prefix only,
+ * the actual phone number/email address is never sent to the dataLayer.
  **************************************/
 document.addEventListener("click", function (e) {
     if (typeof window.dataLayer === "undefined") window.dataLayer = [];
@@ -1588,6 +1590,24 @@ document.addEventListener("click", function (e) {
     if (whatsapp) {
         window.dataLayer.push(Object.assign({
             event: "click_whatsapp",
+            page_location: window.location.href,
+        }, ctx));
+        return;
+    }
+
+    var telLink = e.target.closest('a[href^="tel:"]');
+    if (telLink) {
+        window.dataLayer.push(Object.assign({
+            event: "click_phone",
+            page_location: window.location.href,
+        }, ctx));
+        return;
+    }
+
+    var mailLink = e.target.closest('a[href^="mailto:"]');
+    if (mailLink) {
+        window.dataLayer.push(Object.assign({
+            event: "click_email",
             page_location: window.location.href,
         }, ctx));
         return;
