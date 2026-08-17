@@ -359,9 +359,7 @@
     <script src="{{ asset('assets/js/daterangepicker.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/swiper-bundle.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}" defer></script>
-    <script src="{{ asset('assets/js/wow.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}" defer></script>
-    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/gsap.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}" defer></script>
     <script src="{{ asset('assets/js/ScrollToPlugin.min.js') }}" defer></script>

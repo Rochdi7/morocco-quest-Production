@@ -660,20 +660,6 @@
     }
 
     /**************************************
-     ***** 15. WoW Js Animation *****
-     **************************************/
-    var wow = new WOW({
-        boxClass: "wow",
-        animateClass: "wow-animated",
-        offset: 0,
-        mobile: false,
-        live: true,
-        scrollContainer: null,
-        resetAnimation: false,
-    });
-    wow.init();
-
-    /**************************************
      ***** 16. Indicator Position *****
      **************************************/
     function setPos(element) {
