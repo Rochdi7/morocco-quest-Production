@@ -178,7 +178,7 @@ input[type="radio"] {
       font-weight: 700;
       background: $white-color;
       color: transparent;
-      transition: all 0.2s ease;
+      transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     }
   }
 

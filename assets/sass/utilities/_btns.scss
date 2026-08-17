@@ -31,7 +31,7 @@
     top: 0%;
     left: 0%;
     background: var(--bg-color-4);
-    transition: all ease 0.5s;
+    transition: transform ease 0.5s;
     z-index: -1;
     border-radius: inherit;
   }
@@ -242,7 +242,7 @@
     color: $white-color;
     border-radius: 50%;
     z-index: 1;
-    transition: all ease 0.4s;
+    transition: background-color ease 0.4s, color ease 0.4s;
     border: 3px solid var(--rating-color1);
   }
 
@@ -258,7 +258,7 @@
     @extend .ripple-animation;
     z-index: -1;
     border-radius: 50%;
-    transition: all ease 0.4s;
+    transition: background-color ease 0.4s;
   }
 
   &:after {
@@ -311,7 +311,7 @@
     width: 0;
     height: 1px;
     background-color: $theme-color;
-    transition: all ease 0.4s;
+    transition: width ease 0.4s;
   }
 
   &:hover {
@@ -354,7 +354,7 @@
     z-index: 2;
     border-radius: inherit;
     position: relative;
-    transition: all ease 0.8s;
+    transition: background-color ease 0.8s, color ease 0.8s;
   }
 
   &:before {

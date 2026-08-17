@@ -246,7 +246,7 @@
     right: 0;
     left: 0;
     background-color: var(--bg-color1);
-    transition: all ease 1s;
+    transition: top ease 1s;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.07);
     padding: 10px 0;
 
@@ -1098,7 +1098,7 @@
     .line1,
     .line2,
     .line3 {
-      transition: all 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
     }
     .line3 {
       width: 16px;
@@ -1107,7 +1107,7 @@
   &:hover {
     svg path {
       fill: var(--theme-color);
-      transition: all 0.3s ease;
+      transition: fill 0.3s ease;
     }
   }
 }

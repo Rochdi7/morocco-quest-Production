@@ -7,7 +7,7 @@
   z-index: 0;
 
   img {
-    transition: all 0.3s;
+    transition: transform 0.3s;
   }
   .icon-box {
     display: grid;
@@ -16,7 +16,7 @@
     inset: 0;
     background: rgba(var(--theme-color-rgb), 0.8);
     z-index: 1;
-    transition: all 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
     transform: scale(0.8);
     opacity: 0;
 
@@ -76,7 +76,7 @@
     font-weight: 800;
     line-height: 1;
     text-transform: uppercase;
-    transition: all 0.5s;
+    transition: bottom 0.5s, opacity 0.5s;
 
     @include respond-below(lg){
       padding: 15px;

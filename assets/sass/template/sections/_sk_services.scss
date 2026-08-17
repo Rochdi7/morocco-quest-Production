@@ -38,20 +38,20 @@
     height: 8px;
     border-radius: 3px 3px 0px 0px;
     background: $third-theme-color;
-    transition: all 0.3s;
+    transition: left 0.3s, width 0.3s, background-color 0.3s;
   }
 
   .services-thumb {
     overflow: clip;
     img {
-      transition: all 0.3s linear;
+      transition: transform 0.3s linear;
     }
   }
   .services-icon {
     margin-top: -40px;
     svg {
       color: var(--third-theme-color);
-      transition: all 0.3s;
+      transition: color 0.3s;
       position: relative;
       left: calc(100% - 130px);
     }

@@ -85,7 +85,7 @@
 }
 .award-box-style1 {
   padding-top: 75px;
-  transition: all 0.3s;
+  transition: transform 0.3s;
   .award-box-style1-wrapper {
     border-radius: 17px;
     background: var(--white-color);
@@ -104,7 +104,7 @@
 
     svg {
       color: $third-theme-color;
-      transition: all 0.3s;
+      transition: color 0.3s;
     }
   }
 
@@ -144,7 +144,7 @@
       text-transform: capitalize;
       position: relative;
       z-index: 1;
-      transition: all 0.3s;
+      transition: color 0.3s;
       &::before {
         position: absolute;
         content: "";
@@ -154,7 +154,7 @@
         height: 100%;
         background-color: $theme-color;
         z-index: -1;
-        transition: all 0.3s;
+        transition: width 0.3s;
       }
     }
   }
