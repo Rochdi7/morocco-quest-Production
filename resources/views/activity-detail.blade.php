@@ -32,6 +32,26 @@
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
 @endpush
 
+{{-- view_tour: activities are tracked under the same event name as tours
+     (both are bookable trip products from the business's point of view —
+     a single "view_tour" report in GA4 covers both without a parallel
+     event family to maintain). Real Laravel data only, no hardcoded values. --}}
+@push('scripts')
+<script>
+    window.dataLayer = window.dataLayer || [];
+    window.__pageContext = {
+        page_type: 'activity_detail',
+        tour_name: {!! json_encode($activity->title ?? null) !!},
+        tour_slug: {!! json_encode($activity->slug ?? null) !!},
+        tour_category: {!! json_encode(optional($activity->category)->name) !!},
+        destination: {!! json_encode(optional($activity->places->first())->name) !!},
+        price: {!! json_encode($activity->price_adult ?? null) !!},
+        currency: 'USD'
+    };
+    dataLayer.push(Object.assign({ event: 'view_tour' }, window.__pageContext));
+</script>
+@endpush
+
 @section('content')
 
     {{-- Breadcrumb Section --}}

@@ -45,6 +45,27 @@
 <script type="application/ld+json">{!! json_encode($tourBreadcrumb, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
 @endpush
 
+{{-- view_tour: fires once per pageview. Uses real Laravel data already
+     built above for JSON-LD ($tour, $durationDays) — no hardcoded values.
+     Also exposes window.__pageContext so the shared CTA click-delegation
+     handler in main.js can attach tour_slug/destination to click_cta
+     events without each button needing its own data attributes. --}}
+@push('scripts')
+<script>
+    window.dataLayer = window.dataLayer || [];
+    window.__pageContext = {
+        page_type: 'tour_detail',
+        tour_name: {!! json_encode($tour->title) !!},
+        tour_slug: {!! json_encode($tour->slug) !!},
+        destination: {!! json_encode(optional($tour->places->first())->name) !!},
+        duration: {!! json_encode($durationDays ? $durationDays . ' days' : null) !!},
+        price: {!! json_encode($tour->price_adult ?? null) !!},
+        currency: 'USD'
+    };
+    dataLayer.push(Object.assign({ event: 'view_tour' }, window.__pageContext));
+</script>
+@endpush
+
 @section('content')
 
     {{-- Breadcrumb Section (Existing structure preserved) --}}

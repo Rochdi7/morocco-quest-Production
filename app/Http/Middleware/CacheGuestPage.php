@@ -23,6 +23,13 @@ use Symfony\Component\HttpFoundation\Response;
  *   partials/footer.blade.php refreshes _token inputs client-side via the
  *   csrf.refresh endpoint after DOMContentLoaded.
  * - Bypasses for authenticated users, non-GET, and any query string.
+ * - Bypasses whenever session('success')/session('error') is present: every
+ *   form on the site (newsletter, tour/activity inquiry, contact, B2B leads)
+ *   redirects back() to wherever the visitor was, which can be the homepage.
+ *   Without this check, a visitor's one-time flash message (and the
+ *   generate_lead analytics event gated on it) could be cached and served
+ *   to the NEXT anonymous visitor instead of shown once to the submitter —
+ *   fixed 2026-08-17, found while wiring up GA4 event tracking.
  * - Cleared by `php artisan cache:clear` (already part of the deploy routine),
  *   or expires on its own after TTL_SECONDS.
  */
@@ -35,7 +42,11 @@ class CacheGuestPage
 
     public function handle(Request $request, Closure $next): Response
     {
-        if (!$request->isMethod('GET') || count($request->query()) > 0 || $request->user()) {
+        if (!$request->isMethod('GET')
+            || count($request->query()) > 0
+            || $request->user()
+            || $request->session()->has('success')
+            || $request->session()->has('error')) {
             return $next($request);
         }
 

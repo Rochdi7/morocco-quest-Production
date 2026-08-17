@@ -40,6 +40,9 @@ class NewsletterController extends Controller
         ));
         
 
-        return redirect()->back()->with('success', 'Thank you for subscribing to our newsletter!');
+        return redirect()->back()
+            ->with('success', 'Thank you for subscribing to our newsletter!')
+            ->with('form_type', 'newsletter_subscribe')
+            ->with('lead_source', 'footer');
     }
 }

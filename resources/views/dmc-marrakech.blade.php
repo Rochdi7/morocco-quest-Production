@@ -68,6 +68,10 @@
 </script>
 @endpush
 
+@push('scripts')
+<script>window.__pageContext = { page_type: 'dmc_marrakech' };</script>
+@endpush
+
 @section('content')
 
 <section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}">
@@ -339,6 +343,7 @@
                     @csrf
                     {{-- Hidden field so the contact controller knows this is a DMC enquiry --}}
                     <input type="hidden" name="enquiry_type" value="DMC B2B">
+                    <input type="hidden" name="page_source" value="dmc-marrakech">
                     <div class="row g-3">
 
                         <div class="col-md-6 form-group">

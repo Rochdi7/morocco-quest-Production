@@ -44,7 +44,10 @@ class ActivityInquiryController extends Controller
 
             Mail::to($adminEmail)->send(new ActivityInquiryMail($validatedData, $activity));
 
-            return back()->with('success', 'Your inquiry about "' . $activity->title . '" has been sent successfully! We will contact you soon.');
+            return back()
+                ->with('success', 'Your inquiry about "' . $activity->title . '" has been sent successfully! We will contact you soon.')
+                ->with('form_type', 'activity_inquiry')
+                ->with('lead_source', $activity->slug);
 
         } catch (\Exception $e) {
             Log::error('Activity Inquiry mail sending failed for activity ' . $activity->id . ': ' . $e->getMessage());

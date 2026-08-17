@@ -14,6 +14,9 @@
      Homepage previously also emitted a hidden-only FAQPage schema with no matching visible content; removed per
      "structured data must represent visible content" — the same 5 Q&As remain live and visible on /faq. --}}
 
+@push('scripts')
+<script>window.__pageContext = { page_type: 'home' };</script>
+@endpush
 
 @section('content')
     <main class="main">

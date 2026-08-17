@@ -44,6 +44,21 @@
 @if($blogBreadcrumb)<script type="application/ld+json">{!! json_encode($blogBreadcrumb, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>@endif
 @endpush
 
+@if ($_blogModel)
+@push('scripts')
+<script>
+    window.dataLayer = window.dataLayer || [];
+    window.__pageContext = { page_type: 'blog_article' };
+    dataLayer.push({
+        event: 'view_blog_article',
+        article_title: {!! json_encode($_blogModel->title) !!},
+        article_slug: {!! json_encode($_blogModel->slug ?? null) !!},
+        category: {!! json_encode(optional($_blogModel->category)->name) !!}
+    });
+</script>
+@endpush
+@endif
+
 @section('content')
 
     <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}">

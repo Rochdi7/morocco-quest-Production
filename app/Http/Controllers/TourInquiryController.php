@@ -49,7 +49,10 @@ class TourInquiryController extends Controller
             // Send email using Mailable
             Mail::to($adminEmail)->send(new TourInquiryMail($validatedData, $tour));
 
-            return back()->with('success', 'Your inquiry about "' . $tour->title . '" has been sent successfully. We will contact you shortly!');
+            return back()
+                ->with('success', 'Your inquiry about "' . $tour->title . '" has been sent successfully. We will contact you shortly!')
+                ->with('form_type', 'tour_inquiry')
+                ->with('lead_source', $tour->slug);
         } catch (\Exception $e) {
             Log::error('Tour Inquiry Mail Failed [Tour ID: ' . $tour->id . ']: ' . $e->getMessage());
             Log::debug($e);

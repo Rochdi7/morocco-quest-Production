@@ -1571,3 +1571,39 @@ if (
 ) {
     setupMouseMoveAnimation();
 }
+
+/**************************************
+ ***** GA4 CTA / WhatsApp click tracking *****
+ * Single delegated listener on document (no per-button listeners, no
+ * DOM scan on load) — cheap regardless of how many CTAs a page has.
+ * window.__pageContext (set per-page by tour-detail/activity-detail/
+ * tours-list/etc.) supplies tour/destination context when available;
+ * pages without it (home, contact, generic) just omit those keys.
+ **************************************/
+document.addEventListener("click", function (e) {
+    if (typeof window.dataLayer === "undefined") window.dataLayer = [];
+    var ctx = window.__pageContext || {};
+
+    var whatsapp = e.target.closest(".whatsapp-btn, .floating-whatsapp");
+    if (whatsapp) {
+        window.dataLayer.push(Object.assign({
+            event: "click_whatsapp",
+            page_location: window.location.href,
+        }, ctx));
+        return;
+    }
+
+    // Any real CTA link/button styled with .vs-btn, excluding decorative
+    // controls that happen to share the class (preloader cancel button,
+    // modal close buttons that aren't real navigation/action CTAs).
+    var cta = e.target.closest("a.vs-btn, button.vs-btn[type=submit]");
+    if (cta && !cta.classList.contains("preloaderCls")) {
+        window.dataLayer.push(Object.assign({
+            event: "click_cta",
+            cta_text: (cta.textContent || "").trim().slice(0, 100),
+            cta_type: cta.tagName === "BUTTON" ? "form_submit" : "link",
+            target_url: cta.getAttribute("href") || null,
+            page_location: window.location.href,
+        }, ctx));
+    }
+}, { passive: true });

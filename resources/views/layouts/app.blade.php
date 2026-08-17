@@ -2,6 +2,12 @@
 <html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    {{-- dataLayer initialized synchronously (not deferred) so custom events
+         pushed before GTM's idle-deferred load still queue correctly — GTM
+         drains the array once it loads, same as the standard snippet's
+         behavior. This array init is a no-op assignment, not a network
+         request, so it doesn't affect LCP/render-blocking. --}}
+    <script>window.dataLayer = window.dataLayer || [];</script>
     <!-- Google Tag Manager (deferred to idle to protect LCP) -->
     <script>
         (function () {
@@ -24,6 +30,25 @@
         })();
     </script>
     <!-- End Google Tag Manager -->
+
+    {{-- generate_lead: fires only after a real successful form submission
+         (session flash set by the controller ONLY on the success path —
+         never on validation failure, never on a mail-send exception, never
+         from a button click). form_type/lead_id are set alongside 'success'
+         by each controller (TourInquiry/ActivityInquiry/Contact/Newsletter).
+         No PII: only identifiers/slugs, never name/email/phone/message. --}}
+    @if (session('success') && session('form_type'))
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            event: 'generate_lead',
+            form_type: {!! json_encode(session('form_type')) !!},
+            lead_source: {!! json_encode(session('lead_source')) !!},
+            page_location: {!! json_encode(url()->current()) !!}
+        });
+    </script>
+    @endif
+
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 

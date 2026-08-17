@@ -17,6 +17,25 @@
 </script>
 @endpush
 
+{{-- view_destination fires only when this listing is actually filtered to
+     a place (real user intent signal); an unfiltered "browse all tours"
+     view just sets page context for CTA clicks without a dedicated event. --}}
+@push('scripts')
+<script>
+    window.dataLayer = window.dataLayer || [];
+    window.__pageContext = {
+        page_type: 'tour_listing',
+        destination: {!! json_encode($placeName ?? null) !!}
+    };
+    @if (!empty($placeName))
+    dataLayer.push({
+        event: 'view_destination',
+        destination: {!! json_encode($placeName) !!}
+    });
+    @endif
+</script>
+@endpush
+
 @section('content')
     <main>
         {{-- Banner Section --}}

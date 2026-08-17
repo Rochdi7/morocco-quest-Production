@@ -65,6 +65,10 @@
 </script>
 @endpush
 
+@push('scripts')
+<script>window.__pageContext = { page_type: 'professional_congress_organization' };</script>
+@endpush
+
 @section('content')
 
 {{-- HERO --}}
@@ -362,6 +366,7 @@
                 <form action="{{ route('contact.submit') }}" method="POST" class="form-style1" novalidate>
                     @csrf
                     <input type="hidden" name="enquiry_type" value="Congress Organization">
+                    <input type="hidden" name="page_source" value="professional-congress-organization">
                     <div class="row g-3">
                         <div class="col-md-6 form-group">
                             <label for="pco_name" style="font-weight:600;margin-bottom:4px;display:block;">Full Name *</label>

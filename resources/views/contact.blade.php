@@ -38,6 +38,9 @@
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
 @endpush
 
+@push('scripts')
+<script>window.__pageContext = { page_type: 'contact' };</script>
+@endpush
 
 @section('content')
 
@@ -195,6 +198,7 @@
                         {{--
                         Added novalidate --}}
                         @csrf
+                        <input type="hidden" name="page_source" value="contact">
                         <div class="row">
                             {{-- Form fields with validation error handling and accessibility attributes --}}
                             <div class="col-md-6 form-group">
