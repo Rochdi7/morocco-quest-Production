@@ -211,7 +211,8 @@
         <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}">
     </noscript>
 
-    {{-- Purged copies (unused rules stripped, ~57% smaller combined).
+    {{-- Critical CSS (render-blocking — needed for first paint).
+         Purged copies (unused rules stripped, ~57% smaller combined).
          Originals live at assets/plugins/ + assets/css/ — regenerate after
          adding new views/classes:  npx purgecss --config purgecss.config.js
          (or the scratch runner; see purgecss.config.js at project root). --}}
@@ -231,27 +232,8 @@
             return is_file($p) ? '?v=' . filemtime($p) : '';
         };
     @endphp
-
-    {{-- Deferred (previously render-blocking, ~260ms per PSI): loaded via the
-         same preload+onload swap as the rest of the non-critical CSS below.
-         Safe because the inline critical-CSS block right after covers the
-         hero/above-the-fold layout, and the preloader overlay (removed only
-         once .css-ready fires, see script in <body>) masks any residual FOUC
-         while these finish loading.
-
-         __cssReady is queued rather than called directly: a cached response
-         can fire onload before the <body> script (which defines the real
-         function) has run, so early calls push onto window.__cssQueue and
-         get replayed once the real handler exists. --}}
-    <script>window.__cssQueue = [];window.__cssReady = function (w) { window.__cssQueue.push(w); };</script>
-    <link rel="preload" as="style" href="{{ asset('assets/css/purged-home/bootstrap.min.css') }}{{ $cssVer('assets/css/purged-home/bootstrap.min.css') }}"
-        onload="this.onload=null;this.rel='stylesheet';window.__cssReady('bootstrap')">
-    <link rel="preload" as="style" href="{{ asset('assets/css/purged-home/style.min.css') }}{{ $cssVer('assets/css/purged-home/style.min.css') }}"
-        onload="this.onload=null;this.rel='stylesheet';window.__cssReady('style')">
-    <noscript>
-        <link rel="stylesheet" href="{{ asset('assets/css/purged-home/bootstrap.min.css') }}{{ $cssVer('assets/css/purged-home/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/purged-home/style.min.css') }}{{ $cssVer('assets/css/purged-home/style.min.css') }}">
-    </noscript>
+    <link rel="stylesheet" href="{{ asset('assets/css/purged-home/bootstrap.min.css') }}{{ $cssVer('assets/css/purged-home/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/purged-home/style.min.css') }}{{ $cssVer('assets/css/purged-home/style.min.css') }}">
 
     {{-- Inline above-the-fold rules: paints something usable before the
          deferred CSS finishes. Tiny (<1KB), zero visual regression because
@@ -314,22 +296,13 @@
         </div>
     </div>
     <script>
-        // Deterministic preloader reveal, now CSS-aware: purged-home/*.css is
-        // async (preload+onload swap, see <head>) instead of render-blocking,
-        // so this can no longer assume "script ran => CSS is ready" the way
-        // it could when the stylesheets were blocking. Both onload callbacks
-        // in <head> call __cssReady(); once both have fired (or were already
-        // cached/instant — see the queue-replay below), the original 1500ms
-        // countdown starts — same cap as before, just gated on the real
-        // signal instead of script order. CLS-safe: fading an overlay
-        // (opacity) and the hero entrance keyframes (transform/opacity) are
-        // both excluded from layout-shift scoring. Idempotent with main.js's
-        // own reveal safety nets.
+        // Deterministic preloader reveal for slow networks. main.js keeps the
+        // original 800ms-after-load timing on fast connections; this timer
+        // starts at HTML parse and caps the wait at 2.6s. CLS-safe: fading an
+        // overlay (opacity) and the hero entrance keyframes (transform/opacity)
+        // are both excluded from layout-shift scoring. Idempotent with main.js.
         (function () {
-            var pending = { bootstrap: true, style: true };
-            var started = false;
-
-            function reveal() {
+            setTimeout(function () {
                 var p = document.querySelector('.preloader');
                 if (p && p.style.display !== 'none') {
                     p.style.transition = 'opacity .5s';
@@ -338,27 +311,10 @@
                 }
                 var h = document.querySelector('.vs-hero');
                 if (h) h.classList.add('animate-elements');
-            }
-
-            function startCountdown() {
-                if (started) return;
-                started = true;
-                setTimeout(reveal, 1500);
-            }
-
-            window.__cssReady = function (which) {
-                pending[which] = false;
-                if (!pending.bootstrap && !pending.style) startCountdown();
-            };
-
-            // Replay any onload signals that fired before this ran (cached
-            // stylesheet, onload beat body parsing — see the <head> queue).
-            (window.__cssQueue || []).forEach(window.__cssReady);
-            window.__cssQueue = [];
-
-            // Hard cap: if a stylesheet request stalls/fails, don't hold the
-            // preloader forever — start the countdown anyway after 2.5s.
-            setTimeout(startCountdown, 2500);
+                // 1500ms from script exec — inline scripts wait for pending
+                // stylesheets, so this countdown starts at CSS-ready. The
+                // preloaded hero image lands well within this window.
+            }, 1500);
         })();
     </script>
 
