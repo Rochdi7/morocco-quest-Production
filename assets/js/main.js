@@ -1581,9 +1581,13 @@ if (
  * pages without it (home, contact, generic) just omit those keys.
  * No PII is ever pushed: tel:/mailto: hrefs are detected by prefix only,
  * the actual phone number/email address is never sent to the dataLayer.
+ * window.gaEvent (defined in layouts/app.blade.php + app2.blade.php)
+ * relays straight to GA4 via gtag AND pushes the flat-object dataLayer
+ * format — no GTM trigger/tag setup needed for these events to appear
+ * in GA4 reports.
  **************************************/
 document.addEventListener("click", function (e) {
-    if (typeof window.dataLayer === "undefined") window.dataLayer = [];
+    if (typeof window.gaEvent !== "function") return;
     var ctx = window.__pageContext || {};
 
     // Matched by class AND by href (wa.me / api.whatsapp.com), so a WhatsApp
@@ -1595,8 +1599,7 @@ document.addEventListener("click", function (e) {
         '.whatsapp-btn, .floating-whatsapp, a[href*="wa.me/"], a[href*="api.whatsapp.com"]'
     );
     if (whatsapp) {
-        window.dataLayer.push(Object.assign({
-            event: "click_whatsapp",
+        window.gaEvent("click_whatsapp", Object.assign({
             page_location: window.location.href,
         }, ctx));
         return;
@@ -1604,8 +1607,7 @@ document.addEventListener("click", function (e) {
 
     var telLink = e.target.closest('a[href^="tel:"]');
     if (telLink) {
-        window.dataLayer.push(Object.assign({
-            event: "click_phone",
+        window.gaEvent("click_phone", Object.assign({
             page_location: window.location.href,
         }, ctx));
         return;
@@ -1613,8 +1615,7 @@ document.addEventListener("click", function (e) {
 
     var mailLink = e.target.closest('a[href^="mailto:"]');
     if (mailLink) {
-        window.dataLayer.push(Object.assign({
-            event: "click_email",
+        window.gaEvent("click_email", Object.assign({
             page_location: window.location.href,
         }, ctx));
         return;
@@ -1625,8 +1626,7 @@ document.addEventListener("click", function (e) {
     // modal close buttons that aren't real navigation/action CTAs).
     var cta = e.target.closest("a.vs-btn, button.vs-btn[type=submit]");
     if (cta && !cta.classList.contains("preloaderCls")) {
-        window.dataLayer.push(Object.assign({
-            event: "click_cta",
+        window.gaEvent("click_cta", Object.assign({
             cta_text: (cta.textContent || "").trim().slice(0, 100),
             cta_type: cta.tagName === "BUTTON" ? "form_submit" : "link",
             target_url: cta.getAttribute("href") || null,

@@ -22,14 +22,12 @@
      view just sets page context for CTA clicks without a dedicated event. --}}
 @push('scripts')
 <script>
-    window.dataLayer = window.dataLayer || [];
     window.__pageContext = {
         page_type: 'tour_listing',
         destination: {!! json_encode($placeName ?? null) !!}
     };
     @if (!empty($placeName))
-    dataLayer.push({
-        event: 'view_destination',
+    window.gaEvent('view_destination', {
         destination: {!! json_encode($placeName) !!}
     });
     @endif

@@ -31,6 +31,43 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    {{-- Direct GA4 event relay (deferred to idle, same pattern as GTM above
+         — no LCP/FCP impact). send_page_view:false is critical: GTM stays
+         the ONLY source of pageview hits, this connection exists solely to
+         deliver our 8 custom events (view_tour, click_cta, generate_lead,
+         etc.) straight to GA4 without any GTM trigger/tag setup. Confirmed
+         2026-08-18: GTM does NOT auto-relay custom dataLayer events on its
+         own (verified by removing this block and re-testing cleanly — zero
+         GA4 hits even after GTM fully loaded) — this connection is the only
+         thing that actually delivers these events to GA4 property
+         G-QXBGN7DKMB. window.gtag is the standard Google-issued queue
+         function (safe to call before the real gtag/js script has finished
+         loading — it just queues into dataLayer, same as GTM's own
+         bootstrap). window.gaEvent() is the single call site every tracked
+         interaction in main.js/blade views uses. --}}
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+        window.gaEvent = function (name, params) {
+            window.gtag('event', name, params || {});
+        };
+        (function () {
+            function loadGtag() {
+                window.gtag('js', new Date());
+                window.gtag('config', 'G-QXBGN7DKMB', { send_page_view: false });
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB';
+                document.head.appendChild(s);
+            }
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGtag, { timeout: 3000 });
+            } else {
+                setTimeout(loadGtag, 2500);
+            }
+        })();
+    </script>
+
     {{-- generate_lead: fires only after a real successful form submission
          (session flash set by the controller ONLY on the success path —
          never on validation failure, never on a mail-send exception, never
@@ -39,9 +76,7 @@
          No PII: only identifiers/slugs, never name/email/phone/message. --}}
     @if (session('success') && session('form_type'))
     <script>
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            event: 'generate_lead',
+        window.gaEvent('generate_lead', {
             form_type: {!! json_encode(session('form_type')) !!},
             lead_source: {!! json_encode(session('lead_source')) !!},
             page_location: {!! json_encode(url()->current()) !!}
@@ -396,10 +431,16 @@
         });
     </script>
 
-    {{-- GA4 (G-YK31305QT6) is loaded BY the GTM container (GTM-WVCGDJ98) — the
-         standalone gtag.js loader that used to live here downloaded the same
-         160KB script a second time and double-fired page views. If GA4 data
-         ever stops, re-check that the GA4 config tag still exists in GTM. --}}
+    {{-- GA4 (G-QXBGN7DKMB — confirmed via GA4 Admin > Data Streams
+         2026-08-18; a prior comment here referenced a stale/wrong ID,
+         G-YK31305QT6, that doesn't correspond to any real property).
+         Standard pageviews are loaded BY the GTM container (GTM-WVCGDJ98)
+         — see the direct gtag.js connection near the top of <head>, which
+         is deliberately send_page_view:false so it never duplicates what
+         GTM sends; it exists only to relay our custom events (view_tour,
+         click_cta, generate_lead, etc.) straight to GA4. If GA4 pageview
+         data ever stops, re-check the GA4 config tag still exists in GTM —
+         that's the pageview source of truth, not this connection. --}}
     <script>
         var ahrefs_analytics_script = document.createElement('script');
         ahrefs_analytics_script.async = true;

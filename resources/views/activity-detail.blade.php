@@ -38,7 +38,6 @@
      event family to maintain). Real Laravel data only, no hardcoded values. --}}
 @push('scripts')
 <script>
-    window.dataLayer = window.dataLayer || [];
     window.__pageContext = {
         page_type: 'activity_detail',
         tour_name: {!! json_encode($activity->title ?? null) !!},
@@ -48,7 +47,7 @@
         price: {!! json_encode($activity->price_adult ?? null) !!},
         currency: 'USD'
     };
-    dataLayer.push(Object.assign({ event: 'view_tour' }, window.__pageContext));
+    window.gaEvent('view_tour', window.__pageContext);
 </script>
 @endpush
 

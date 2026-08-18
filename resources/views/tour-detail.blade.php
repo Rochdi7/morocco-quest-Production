@@ -52,7 +52,6 @@
      events without each button needing its own data attributes. --}}
 @push('scripts')
 <script>
-    window.dataLayer = window.dataLayer || [];
     window.__pageContext = {
         page_type: 'tour_detail',
         tour_name: {!! json_encode($tour->title) !!},
@@ -62,7 +61,7 @@
         price: {!! json_encode($tour->price_adult ?? null) !!},
         currency: 'USD'
     };
-    dataLayer.push(Object.assign({ event: 'view_tour' }, window.__pageContext));
+    window.gaEvent('view_tour', window.__pageContext);
 </script>
 @endpush
 

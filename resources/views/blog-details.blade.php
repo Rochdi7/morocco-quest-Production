@@ -47,10 +47,8 @@
 @if ($_blogModel)
 @push('scripts')
 <script>
-    window.dataLayer = window.dataLayer || [];
     window.__pageContext = { page_type: 'blog_article' };
-    dataLayer.push({
-        event: 'view_blog_article',
+    window.gaEvent('view_blog_article', {
         article_title: {!! json_encode($_blogModel->title) !!},
         article_slug: {!! json_encode($_blogModel->slug ?? null) !!},
         category: {!! json_encode(optional($_blogModel->category)->name) !!}
