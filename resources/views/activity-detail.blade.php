@@ -26,7 +26,7 @@
     '@type' => 'BreadcrumbList',
     'itemListElement' => [
         ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Activities', 'item' => route('activity-categories.index')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Activities', 'item' => route('experiences.index')],
         ['@type' => 'ListItem', 'position' => 3, 'name' => $activity->title ?? 'Activity', 'item' => url()->current()],
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
@@ -845,7 +845,7 @@
             <p class="text-center mb-0">
                 Explore more in
                 @foreach ($activity->places as $activityPlace)
-                    <a href="{{ route('tours.byPlace', $activityPlace->slug) }}">{{ $activityPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
+                    <a href="{{ route('destinations.show', $activityPlace->slug) }}">{{ $activityPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
                 @endforeach
             </p>
         </div>

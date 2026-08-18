@@ -4,11 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory; // Added standard factory trait
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\TracksSlugRedirects;
 use Illuminate\Support\Str; // Import the Str class
 
 class Tag extends Model
 {
     use HasFactory; // Use the factory trait
+    use TracksSlugRedirects;
+
+    protected static string $seoPathPrefix = 'tag';
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +21,7 @@ class Tag extends Model
      */
     protected $fillable = [
         'name',
-        // 'slug' is NOT fillable because it's generated automatically below
+        'slug',
         ];
 
     /**

@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 
 use Artesaos\SEOTools\Facades\OpenGraph;
 use App\Support\SeoHelper;
+use App\Support\SlugRedirector;
 
 class ActivityController extends Controller
 {
@@ -38,7 +39,7 @@ class ActivityController extends Controller
             }
         }
 
-        return redirect()->route('activity-categories')->with('success', 'Activity created successfully!');
+        return redirect()->route('experiences.index')->with('success', 'Activity created successfully!');
     }
 
     public function listCategories()
@@ -58,7 +59,7 @@ class ActivityController extends Controller
             'morocco experiences',
         ];
 
-        SeoHelper::setCollection($title, $description, url()->current(), $keywords);
+        SeoHelper::setCollection($title, $description, route('experiences.index'), $keywords);
 
         return view('activity-categories', compact('activityCategories', 'title', 'description') + ['keywords' => implode(', ', $keywords)]);
     }
@@ -140,7 +141,11 @@ class ActivityController extends Controller
     {
         $activity = Activity::with(['images', 'category', 'itineraryDays', 'places'])
             ->where('slug', $slug)
-            ->firstOrFail();
+            ->first();
+
+        if (! $activity) {
+            return SlugRedirector::redirectForPath('/activities/' . $slug) ?? abort(404);
+        }
 
         $relatedActivities = Activity::with('images')
             ->where('id', '!=', $activity->id)
@@ -153,8 +158,8 @@ class ActivityController extends Controller
 
         $description = $activity->meta_description
             ?: Str::limit(html_entity_decode(strip_tags($activity->overview ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8'), 155);
-        $image       = SeoHelper::ogImage($activity->first_image_url);
-        $url         = url()->current();
+        $image       = SeoHelper::ogImage($activity->og_image ?: $activity->first_image_url);
+        $url         = $activity->canonical_url ?: route('activities.show', $activity->slug);
 
         $title = $activity->seo_title
             ?: $activity->title . ' | Morocco Day Tours & Activities | Morocco Quest';
@@ -173,8 +178,8 @@ class ActivityController extends Controller
 
         OpenGraph::setType('product');
         OpenGraph::addProperty('twitter:card', 'summary_large_image')
-            ->addProperty('twitter:title', $title)
-            ->addProperty('twitter:description', $description)
+            ->addProperty('twitter:title', $activity->og_title ?: $title)
+            ->addProperty('twitter:description', $activity->og_description ?: $description)
             ->addProperty('twitter:image', $image);
 
         return view('activity-detail', compact('activity', 'relatedActivities', 'title', 'description', 'keywords'));

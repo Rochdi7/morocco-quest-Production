@@ -281,6 +281,15 @@ class TourResource extends Resource
                             ->helperText('Max 160 characters. Leave blank to auto-generate from tour overview.')
                             ->placeholder('e.g. Book this private 5-day Sahara desert tour from Marrakech. Includes camel trek, luxury desert camp, and Atlas Mountains drive.')
                             ->columnSpanFull(),
+
+                        TextInput::make('canonical_url')->label('Canonical URL')->url()->nullable()->maxLength(255)->columnSpanFull(),
+                        TextInput::make('og_title')->label('OpenGraph Title')->nullable()->maxLength(95),
+                        TextInput::make('og_description')->label('OpenGraph Description')->nullable()->maxLength(200),
+                        FileUpload::make('og_image')->label('OpenGraph Image')->image()->directory('seo/og')->disk('public')->nullable()->columnSpanFull(),
+                        TextInput::make('sitemap_priority')->numeric()->minValue(0.1)->maxValue(1.0)->step(0.1)->nullable(),
+                        Select::make('sitemap_changefreq')
+                            ->options(['daily' => 'Daily', 'weekly' => 'Weekly', 'monthly' => 'Monthly', 'yearly' => 'Yearly'])
+                            ->nullable(),
                     ]),
 
                 Section::make('Status & Visibility')

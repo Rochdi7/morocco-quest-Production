@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Str;
-use App\Models\Tour;
-
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\ActivityInquiryController;
 use App\Http\Controllers\BlogController;
@@ -64,38 +60,22 @@ Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->na
 Route::get('/tag/{tag:slug}', [TagController::class, 'show'])->name('tag.show');
 
 Route::get('/destinations', [TourController::class, 'listPlaces'])->name('destinations.index');
+Route::get('/destinations/{slug}', [TourController::class, 'byPlace'])->name('destinations.show');
 
-Route::get('/tours/{slug}', function ($slug) {
-    $tour = Tour::where('slug', $slug)->first();
-    if ($tour) {
-        return app(TourController::class)->show($slug);
-    }
-
-    $normalized = Str::slug($slug);
-
-    $possible = Tour::where(function ($q) use ($normalized) {
-        $q->where('slug', 'LIKE', "%{$normalized}%")
-          ->orWhereRaw('? LIKE CONCAT("%", slug, "%")', [$normalized]);
-    })->first();
-
-    if ($possible) {
-        return redirect()->route('tours.show', $possible->slug, 301);
-    }
-
-    abort(404);
-})->name('tours.show');
+Route::get('/tours/{slug}', [TourController::class, 'show'])->name('tours.show');
 
 Route::prefix('tours')->name('tours.')->controller(TourController::class)->group(function () {
     Route::get('/', 'index')->name('index');
     Route::get('/type/multi-day', 'showMultiDay')->name('multi_day');
     Route::get('/type/one-day', 'showOneDay')->name('one_day');
     Route::get('/type/{type}', 'showByType')->name('type');
-    Route::get('/place/{slug}', 'byPlace')->name('byPlace');
+    Route::get('/place/{slug}', fn (string $slug) => redirect()->route('destinations.show', $slug, 301))->name('byPlace');
 });
 
 Route::post('/tours/{tour}/inquiry', [TourInquiryController::class, 'store'])->name('tour.inquiry.submit');
 
-Route::get('/activity-categories', [ActivityController::class, 'listCategories'])->name('activity-categories.index');
+Route::get('/experiences', [ActivityController::class, 'listCategories'])->name('experiences.index');
+Route::get('/activity-categories', fn () => redirect()->route('experiences.index', [], 301))->name('activity-categories.index');
 
 Route::prefix('activities')->name('activities.')->controller(ActivityController::class)->group(function () {
     Route::get('/', 'index')->name('index');

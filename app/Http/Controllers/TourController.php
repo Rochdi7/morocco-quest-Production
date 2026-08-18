@@ -18,6 +18,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 use Artesaos\SEOTools\Facades\OpenGraph;
 use App\Support\SeoHelper;
+use App\Support\SlugRedirector;
 
 class TourController extends Controller
 {
@@ -137,7 +138,7 @@ class TourController extends Controller
             SeoHelper::noindex();
         } elseif ($hasPlace) {
             $place     = Place::where('name', $placeName)->whereNotNull('slug')->first();
-            $canonical = $place ? route('tours.byPlace', $place->slug) : route('tours.index');
+            $canonical = $place ? route('destinations.show', $place->slug) : route('tours.index');
             SeoHelper::noindex();
         } else {
             $canonical = url()->current();
@@ -172,33 +173,37 @@ class TourController extends Controller
 
         // 2️⃣ If NOT found → try to recover old slug (SEO FIX)
         if (!$tour) {
-            $normalizedSlug = Str::slug($slug);
-
-            $possibleTour = Tour::where(function ($query) use ($normalizedSlug) {
-                $query->where('slug', 'LIKE', "%{$normalizedSlug}%")->orWhereRaw('? LIKE CONCAT("%", slug, "%")', [$normalizedSlug]);
-            })->first();
-
-            if ($possibleTour) {
-                return redirect()->route('tours.show', $possibleTour->slug)->setStatusCode(301);
-            }
-
-            abort(404);
+            return SlugRedirector::redirectForPath('/tours/' . $slug) ?? abort(404);
         }
 
         // 3️⃣ Related tours
         $relatedTours = Tour::with(['firstImage'])
             ->withCount('places')
             ->where('id', '!=', $tour->id)
-            ->whereHas('places', function ($query) use ($tour) {
-                $query->whereIn('name', $tour->places->pluck('name'));
+            ->when($tour->places->isNotEmpty(), function ($query) use ($tour) {
+                $query->whereHas('places', function ($query) use ($tour) {
+                    $query->whereIn('name', $tour->places->pluck('name'));
+                });
             })
+            ->latest()
             ->take(4)
             ->get();
 
+        if ($relatedTours->count() < 4) {
+            $fallbackTours = Tour::with(['firstImage'])
+                ->where('id', '!=', $tour->id)
+                ->whereNotIn('id', $relatedTours->pluck('id'))
+                ->latest()
+                ->take(4 - $relatedTours->count())
+                ->get();
+
+            $relatedTours = $relatedTours->concat($fallbackTours);
+        }
+
         $description = $tour->meta_description
             ?: Str::limit(html_entity_decode(strip_tags($tour->overview), ENT_QUOTES | ENT_HTML5, 'UTF-8'), 155);
-        $image       = SeoHelper::ogImage($tour->first_image_url);
-        $url         = url()->current();
+        $image       = SeoHelper::ogImage($tour->og_image ?: $tour->first_image_url);
+        $url         = $tour->canonical_url ?: route('tours.show', $tour->slug);
 
         $title = $tour->seo_title
             ?: $tour->title . ' | Morocco Tours from Marrakech | Morocco Quest';
@@ -215,6 +220,8 @@ class TourController extends Controller
         SeoHelper::setDetail($title, $description, $url, $keywordArray, $image, 'TouristTrip');
 
         OpenGraph::setType('product')
+            ->setTitle($tour->og_title ?: $title)
+            ->setDescription($tour->og_description ?: $description)
             ->addImage($image, ['height' => 630, 'width' => 1200]);
 
         return view('tour-detail', compact('tour', 'relatedTours', 'title', 'description', 'keywords'));
@@ -340,7 +347,11 @@ class TourController extends Controller
 
     public function byPlace($slug)
     {
-        $place = Place::where('slug', $slug)->firstOrFail();
+        $place = Place::where('slug', $slug)->first();
+
+        if (! $place) {
+            return SlugRedirector::redirectForPath('/destinations/' . $slug) ?? abort(404);
+        }
 
         $tours = $place
             ->tours()
@@ -359,7 +370,7 @@ class TourController extends Controller
 
         $placeImage = $place->image_path ? asset('storage/' . $place->image_path) : null;
 
-        SeoHelper::setCollection($title, $description, url()->current(), $keywords, $placeImage);
+        SeoHelper::setCollection($title, $description, route('destinations.show', $place->slug), $keywords, $placeImage);
 
         return view('tours-list', [
             'tours'          => $tours,

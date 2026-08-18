@@ -290,6 +290,15 @@ class ActivityResource extends Resource
                             ->columnSpanFull(),
                     ]),
 
+                        TextInput::make('canonical_url')->label('Canonical URL')->url()->nullable()->maxLength(255)->columnSpanFull(),
+                        TextInput::make('og_title')->label('OpenGraph Title')->nullable()->maxLength(95),
+                        TextInput::make('og_description')->label('OpenGraph Description')->nullable()->maxLength(200),
+                        FileUpload::make('og_image')->label('OpenGraph Image')->image()->directory('seo/og')->disk('public')->nullable()->columnSpanFull(),
+                        TextInput::make('sitemap_priority')->numeric()->minValue(0.1)->maxValue(1.0)->step(0.1)->nullable(),
+                        Select::make('sitemap_changefreq')
+                            ->options(['daily' => 'Daily', 'weekly' => 'Weekly', 'monthly' => 'Monthly', 'yearly' => 'Yearly'])
+                            ->nullable(),
+
                 Section::make('Activity Status')
                     ->schema([
                         Toggle::make('is_popular')

@@ -186,7 +186,7 @@
                                     <strong>Plan your Morocco trip:</strong>
                                     Browse <a href="{{ route('tours.index') }}">private morocco tours</a> departing from Marrakech,
                                     explore <a href="{{ route('tours.multi_day') }}">multi-day morocco tour packages</a>,
-                                    or discover <a href="{{ route('activity-categories.index') }}">things to do in Morocco</a> —
+                                    or discover <a href="{{ route('experiences.index') }}">things to do in Morocco</a> —
                                     from Sahara camel treks to Atlas Mountain hikes.
                                     Questions? <a href="{{ route('faq') }}">Read our FAQ</a> or <a href="{{ route('contact.show') }}">contact our team</a>.
                                 </p>

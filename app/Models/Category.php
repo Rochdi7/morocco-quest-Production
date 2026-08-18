@@ -3,10 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\TracksSlugRedirects;
 use Illuminate\Support\Str;
 
 class Category extends Model
 {
+    use TracksSlugRedirects;
+
+    protected static string $seoPathPrefix = 'category';
+
     protected $fillable = ['name', 'slug'];
 
     protected static function booted()

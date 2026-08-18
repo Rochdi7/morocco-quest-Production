@@ -405,7 +405,7 @@
 
                                 @if (Route::has('activities.index'))
                                     <div class="text-center mt-50 btn-trigger btn-bounce">
-                                        <a href="{{ route('activity-categories.index') }}" class="vs-btn style4">
+                                        <a href="{{ route('experiences.index') }}" class="vs-btn style4">
                                             <span>View More Luxury Morocco Tours</span>
                                         </a>
                                     </div>

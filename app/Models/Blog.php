@@ -4,15 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Comment;
+use App\Models\Concerns\TracksSlugRedirects;
 use App\Support\MediaUrl;
 
 class Blog extends Model
 {
+    use TracksSlugRedirects;
+
+    protected static string $seoPathPrefix = 'blog';
+
     protected $fillable = [
         'title',
         'slug',
         'seo_title',
         'meta_description',
+        'canonical_url',
+        'og_title',
+        'og_description',
+        'og_image',
+        'sitemap_priority',
+        'sitemap_changefreq',
         'subtitle',
         'summary',
         'content',

@@ -20,7 +20,7 @@ class SitemapController extends Controller
         $urls = [
             ['loc' => route('home'),                        'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '1.0'],
             ['loc' => route('tours.index'),                 'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
-            ['loc' => route('activity-categories.index'),   'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('experiences.index'),           'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.8'],
             ['loc' => route('activities.index'),            'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.8'],
             ['loc' => route('destinations.index'),          'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('dmc.marrakech'),                     'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
@@ -44,10 +44,17 @@ class SitemapController extends Controller
         $this->addModel($urls, Tour::class,     'tours.show',      'weekly',  '0.8');
         $this->addModel($urls, Activity::class, 'activities.show', 'weekly',  '0.7');
         $this->addModel($urls, Blog::class,     'blog.show',       'weekly',  '0.6');
-        $this->addModel($urls, \App\Models\Category::class, 'category.show', 'weekly', '0.5');
-        $this->addModel($urls, \App\Models\Tag::class,      'tag.show',      'weekly', '0.4');
         $this->addPlacePages($urls, $now);
         $this->addStaticTypePages($urls, $now);
+
+        $urls = collect($urls)
+            ->map(function (array $url) {
+                $url['loc'] = $this->canonicalUrl($url['loc']);
+                return $url;
+            })
+            ->unique('loc')
+            ->values()
+            ->all();
 
         return response()
             ->view('sitemap.index', compact('urls'))
@@ -63,20 +70,20 @@ class SitemapController extends Controller
     {
         if (Route::has('tours.type')) {
             foreach (['Garden Tours', 'Art Tours', 'Classical Tours'] as $type) {
-                $urls[] = ['loc' => route('tours.type', $type), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
+                    $urls[] = ['loc' => $this->canonicalUrl(route('tours.type', $type)), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
             }
         }
 
         if (Route::has('activities.byCategory')) {
             foreach (['city-tours', 'day-trips', 'food-culinary-tours', 'local-experiences', 'outdoor-activities', 'wellness-experiences'] as $slug) {
-                $urls[] = ['loc' => route('activities.byCategory', $slug), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
+                    $urls[] = ['loc' => $this->canonicalUrl(route('activities.byCategory', $slug)), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
             }
         }
     }
 
     private function addPlacePages(array &$urls, string $now): void
     {
-        if (!Route::has('tours.byPlace')) return;
+        if (!Route::has('destinations.show')) return;
         if (!class_exists(Place::class)) return;
 
         try {
@@ -84,7 +91,7 @@ class SitemapController extends Controller
                 foreach ($places as $place) {
                     if (empty($place->slug)) continue;
                     $urls[] = [
-                        'loc'        => route('tours.byPlace', $place->slug),
+                        'loc'        => $this->canonicalUrl(route('destinations.show', $place->slug)),
                         'lastmod'    => $now,
                         'changefreq' => 'weekly',
                         'priority'   => '0.7',
@@ -109,6 +116,10 @@ class SitemapController extends Controller
             if (!Schema::hasColumn($table, 'slug')) return;
 
             $hasStatus = Schema::hasColumn($table, 'status');
+            $hasIsActive = Schema::hasColumn($table, 'is_active');
+            $hasCanonicalUrl = Schema::hasColumn($table, 'canonical_url');
+            $hasSitemapPriority = Schema::hasColumn($table, 'sitemap_priority');
+            $hasSitemapChangefreq = Schema::hasColumn($table, 'sitemap_changefreq');
 
             $query = $modelClass::query()->whereNotNull('slug');
 
@@ -118,19 +129,43 @@ class SitemapController extends Controller
                 });
             }
 
-            $query->chunk(200, function ($items) use (&$urls, $routeName, $changefreq, $priority) {
+            if ($hasIsActive) {
+                $query->where(function ($q) {
+                    $q->whereNull('is_active')->orWhere('is_active', true);
+                });
+            }
+
+            $query->chunk(200, function ($items) use (&$urls, $routeName, $changefreq, $priority, $hasCanonicalUrl, $hasSitemapPriority, $hasSitemapChangefreq) {
                 foreach ($items as $item) {
                     if (empty($item->slug)) continue;
+                    $loc = ($hasCanonicalUrl && $item->canonical_url)
+                        ? $item->canonical_url
+                        : route($routeName, $item->slug);
+
                     $urls[] = [
-                        'loc'        => route($routeName, $item->slug),
+                        'loc'        => $this->canonicalUrl($loc),
                         'lastmod'    => optional($item->updated_at)->toAtomString(),
-                        'changefreq' => $changefreq,
-                        'priority'   => $priority,
+                        'changefreq' => ($hasSitemapChangefreq && $item->sitemap_changefreq) ? $item->sitemap_changefreq : $changefreq,
+                        'priority'   => ($hasSitemapPriority && $item->sitemap_priority) ? number_format((float) $item->sitemap_priority, 1) : $priority,
                     ];
                 }
             });
         } catch (\Throwable $e) {
             Log::warning("Sitemap skip {$modelClass}: " . $e->getMessage());
         }
+    }
+
+    private function canonicalUrl(string $url): string
+    {
+        $canonicalBase = rtrim(config('app.url', 'https://morocco-quest.com'), '/');
+        $host = parse_url($canonicalBase, PHP_URL_HOST) ?: 'morocco-quest.com';
+        $path = parse_url($url, PHP_URL_PATH) ?: '/';
+        $query = parse_url($url, PHP_URL_QUERY);
+
+        if ($path !== '/') {
+            $path = rtrim($path, '/');
+        }
+
+        return 'https://' . $host . $path . ($query ? '?' . $query : '');
     }
 }

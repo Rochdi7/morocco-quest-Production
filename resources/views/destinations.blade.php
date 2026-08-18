@@ -85,7 +85,7 @@
                             {{-- $place->tours_count: Number of tours available in this destination --}}
                             <div class="col-md-6 col-lg-3">
                                 {{-- Link to the page showing tours filtered by this destination --}}
-                                <a href="{{ route('tours.byPlace', ['slug' => $place->slug]) }}"
+                                <a href="{{ route('destinations.show', ['slug' => $place->slug]) }}"
                                     class="destination-box-2 d-block text-decoration-none"
                                     aria-label="View tours in {{ e($place->name) }}"> {{-- Added e() for safety --}}
                                     <figure class="destination-thumb">

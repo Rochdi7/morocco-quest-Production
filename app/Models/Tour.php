@@ -7,11 +7,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\TourImage;
 use App\Models\ItineraryDay;
 use App\Models\Place;
+use App\Models\Concerns\TracksSlugRedirects;
 use App\Support\MediaUrl;
 use Illuminate\Support\Str;
 
 class Tour extends Model
 {
+    use TracksSlugRedirects;
+
+    protected static string $seoPathPrefix = 'tours';
+
     // use HasFactory; // Uncomment if you use factories
 
     /**
@@ -22,6 +27,12 @@ class Tour extends Model
         'slug',
         'seo_title',
         'meta_description',
+        'canonical_url',
+        'og_title',
+        'og_description',
+        'og_image',
+        'sitemap_priority',
+        'sitemap_changefreq',
         'overview',
         'includes',
         'excludes',

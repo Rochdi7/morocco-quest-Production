@@ -6,6 +6,8 @@ use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Tag;
 use App\Models\Comment;
+use App\Models\Place;
+use App\Models\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
@@ -13,6 +15,7 @@ use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\JsonLd;
 use App\Support\SeoHelper;
+use App\Support\SlugRedirector;
 
 class BlogController extends Controller
 {
@@ -105,8 +108,8 @@ class BlogController extends Controller
             ->setCanonical(route('blog.index'));
         SeoHelper::noindex();
 
-        OpenGraph::setTitle($title)
-            ->setDescription($description)
+        OpenGraph::setTitle($post->og_title ?: $title)
+            ->setDescription($post->og_description ?: $description)
             ->setUrl(url()->current());
 
         JsonLd::setTitle($title)
@@ -128,7 +131,11 @@ class BlogController extends Controller
             'comments.replies'
         ])
             ->where('slug', $slug)
-            ->firstOrFail();
+            ->first();
+
+        if (! $post) {
+            return SlugRedirector::redirectForPath('/blog/' . $slug) ?? abort(404);
+        }
 
         $previousPost = Blog::where('id', '<', $post->id)->orderBy('id', 'desc')->first();
         $nextPost     = Blog::where('id', '>', $post->id)->orderBy('id', 'asc')->first();
@@ -141,12 +148,27 @@ class BlogController extends Controller
             ->take(3)
             ->get();
 
+        $popularTours = Tour::with('firstImage')
+            ->where('is_popular', true)
+            ->latest()
+            ->take(3)
+            ->get();
+
+        $popularDestinations = Place::query()
+            ->where(function ($query) {
+                $query->whereHas('tours')->orWhereHas('activities');
+            })
+            ->whereNotNull('slug')
+            ->orderBy('name')
+            ->take(6)
+            ->get();
+
         $sidebarData = $this->getSidebarData();
 
         $description = $post->meta_description
             ?: Str::limit(strip_tags($post->summary ?? $post->content), 155);
-        $image       = SeoHelper::ogImage($post->featured_image_url);
-        $url         = url()->current();
+        $image       = SeoHelper::ogImage($post->og_image ?: $post->featured_image_url);
+        $url         = $post->canonical_url ?: route('blog.show', $post->slug);
         $tagKeywords = $post->tags->pluck('name')->toArray();
 
         $title = $post->seo_title
@@ -200,6 +222,8 @@ class BlogController extends Controller
             'previousPost' => $previousPost,
             'nextPost'     => $nextPost,
             'relatedPosts' => $relatedPosts,
+            'popularTours' => $popularTours,
+            'popularDestinations' => $popularDestinations,
             'title'        => $title,
             'description'  => $description,
             'keywords'     => $keywords,

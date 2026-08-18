@@ -1049,7 +1049,7 @@
             <p class="text-center mb-0">
                 Explore more in
                 @foreach ($tour->places as $tourPlace)
-                    <a href="{{ route('tours.byPlace', $tourPlace->slug) }}">{{ $tourPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
+                    <a href="{{ route('destinations.show', $tourPlace->slug) }}">{{ $tourPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
                 @endforeach
             </p>
         </div>

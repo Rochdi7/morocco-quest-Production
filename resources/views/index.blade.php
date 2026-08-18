@@ -425,7 +425,7 @@
 
                             @if (Route::has('activities.index'))
                                 <div class="text-center mt-50 btn-trigger btn-bounce">
-                                    <a href="{{ route('activity-categories.index') }}" class="vs-btn style4">
+                                    <a href="{{ route('experiences.index') }}" class="vs-btn style4">
                                         <span>View More Activities</span>
                                     </a>
                                 </div>

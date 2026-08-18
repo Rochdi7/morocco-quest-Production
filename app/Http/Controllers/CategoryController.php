@@ -9,11 +9,18 @@ use Illuminate\Support\Facades\Cache;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\JsonLd;
+use App\Support\SlugRedirector;
 
 class CategoryController extends Controller
 {
-    public function show(Category $category)
+    public function show(string $category)
     {
+        $category = Category::where('slug', $category)->first();
+
+        if (! $category) {
+            return SlugRedirector::redirectForPath('/category/' . request()->route('category')) ?? abort(404);
+        }
+
         // Per-page posts: paginated, so cannot be cached across pages.
         $posts = $category->blogs()
             ->with(['user', 'category'])
@@ -38,7 +45,7 @@ class CategoryController extends Controller
 
         $description = Str::limit('Browse all ' . $category->name . ' articles on the Morocco Quest travel blog — in-depth guides and practical travel tips.', 160, '');
 
-        $url = url()->current();
+        $url = route('category.show', $category->slug);
 
         $keywordArray = array_filter([
             strtolower($category->name),

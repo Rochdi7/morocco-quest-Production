@@ -24,6 +24,11 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+            URL::forceRootUrl(rtrim(config('app.url', 'https://morocco-quest.com'), '/'));
+        }
+
         // Defensive default canonical + og:url for every web request so that
         // SEOMeta::generate() / OpenGraph::generate() always emit exactly one
         // <link rel="canonical"> and one <meta property="og:url">. Controllers

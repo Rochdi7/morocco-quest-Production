@@ -5,11 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany; // Import this
+use App\Models\Concerns\TracksSlugRedirects;
 use Illuminate\Support\Str;
 
 class Place extends Model
 {
     use HasFactory;
+    use TracksSlugRedirects;
+
+    protected static string $seoPathPrefix = 'destinations';
 
     protected $fillable = [
         'name',

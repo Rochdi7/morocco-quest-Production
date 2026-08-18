@@ -11,7 +11,7 @@
     '@type' => 'BreadcrumbList',
     'itemListElement' => [
         ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Activities', 'item' => url('/activity-categories')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Activities', 'item' => route('experiences.index')],
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>

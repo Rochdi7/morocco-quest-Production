@@ -11,7 +11,7 @@
     '@type' => 'BreadcrumbList',
     'itemListElement' => [
         ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Activities', 'item' => url('/activity-categories')],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Activities', 'item' => route('experiences.index')],
         ['@type' => 'ListItem', 'position' => 3, 'name' => $category->name ?? 'Category', 'item' => url()->current()],
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
@@ -130,7 +130,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <p>There are currently no activities listed under the category "{{ $category->name }}".</p>
-                            <a href="{{ route('activity-categories.index') }}" class="vs-btn mt-3">View Other
+                            <a href="{{ route('experiences.index') }}" class="vs-btn mt-3">View Other
                                 Categories</a>
                         </div>
                     </div>

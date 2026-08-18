@@ -9,12 +9,17 @@ use Illuminate\Support\Str;
 use App\Models\ActivityImage; // For the images relationship
 use App\Models\ActivityCategory; // For the category relationship
 use App\Models\ItineraryDay; // <-- IMPORT THE ITINERARY DAY MODEL
+use App\Models\Concerns\TracksSlugRedirects;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use App\Support\MediaUrl;
 
 class Activity extends Model
 {
     use HasFactory;
+    use TracksSlugRedirects;
+
+    protected static string $seoPathPrefix = 'activities';
+
     public function places()
     {
         return $this->belongsToMany(Place::class, 'activity_place');
@@ -26,6 +31,12 @@ class Activity extends Model
         'slug',
         'seo_title',
         'meta_description',
+        'canonical_url',
+        'og_title',
+        'og_description',
+        'og_image',
+        'sitemap_priority',
+        'sitemap_changefreq',
         'subtitle',
         'overview',
         'itinerary',

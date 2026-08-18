@@ -28,7 +28,7 @@
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="{{ route('activity-categories.index') }}">One-Day Tours</a>
+                    <a href="{{ route('experiences.index') }}">One-Day Tours</a>
                     <ul class="sub-menu">
                         <li><a href="{{ route('activities.byCategory', 'city-tours') }}">City Tours</a></li>
                         <li><a href="{{ route('activities.byCategory', 'day-trips') }}">Day Trips</a></li>
@@ -133,7 +133,7 @@
                             </ul>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="{{ route('activity-categories.index') }}">One-Day Tours</a>
+                            <a href="{{ route('experiences.index') }}">One-Day Tours</a>
                             <ul class="sub-menu">
                                 <li><a href="{{ route('activities.byCategory', 'city-tours') }}">City Tours</a></li>
                                 <li><a href="{{ route('activities.byCategory', 'day-trips') }}">Day Trips</a></li>
@@ -358,7 +358,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="{{ route('activity-categories.index') }}">One-Day Tours</a>
+                                <a href="{{ route('experiences.index') }}">One-Day Tours</a>
                                 <ul class="sub-menu">
                                     <li><a href="{{ route('activities.byCategory', 'city-tours') }}">City Tours</a>
                                     </li>

@@ -534,7 +534,7 @@
         ['route' => 'tours.index',               'img' => 'jemaa_el_fna_marrakech_sunset_market.webp',            'label' => 'For Agents & Operators', 'title' => 'Private Morocco Tours',   'meta' => 'B2B net-rate'],
         ['route' => 'tours.multi_day',           'img' => 'agafay-desert-luxury-camp-camel-trek-morocco.webp',    'label' => 'Ready-Made Itineraries', 'title' => 'Multi-Day Tour Packages', 'meta' => '3–10+ days'],
         ['route' => 'destinations.index',        'img' => 'chefchaouen-morocco-blue-city-panorama-hero.webp',     'label' => 'Region by Region',       'title' => 'Destination Guides',      'meta' => 'All of Morocco'],
-        ['route' => 'activity-categories.index', 'img' => 'hot-air-balloon-ride-morocco-desert-adventure.webp',   'label' => 'Experiences',            'title' => 'Morocco Activities',      'meta' => 'Day experiences'],
+        ['route' => 'experiences.index', 'img' => 'hot-air-balloon-ride-morocco-desert-adventure.webp',   'label' => 'Experiences',            'title' => 'Morocco Activities',      'meta' => 'Day experiences'],
         ['route' => 'blog.index',                'img' => 'ait-benhaddou-morocco-travel-hero-banner.webp',        'label' => 'Insights',               'title' => 'Morocco Travel Blog',     'meta' => 'Client-ready tips'],
     ];
 @endphp

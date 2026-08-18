@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Cache;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\JsonLd;
+use App\Support\SlugRedirector;
 
 class TagController extends Controller
 {
@@ -20,7 +21,11 @@ class TagController extends Controller
      */
     public function show($slug)
     {
-        $tag = Tag::where('slug', $slug)->firstOrFail();
+        $tag = Tag::where('slug', $slug)->first();
+
+        if (! $tag) {
+            return SlugRedirector::redirectForPath('/tag/' . $slug) ?? abort(404);
+        }
 
         $posts = $tag->blogs()
             ->with(['user', 'category'])
