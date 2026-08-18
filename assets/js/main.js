@@ -1586,7 +1586,14 @@ document.addEventListener("click", function (e) {
     if (typeof window.dataLayer === "undefined") window.dataLayer = [];
     var ctx = window.__pageContext || {};
 
-    var whatsapp = e.target.closest(".whatsapp-btn, .floating-whatsapp");
+    // Matched by class AND by href (wa.me / api.whatsapp.com), so a WhatsApp
+    // link is still tracked even if it's added later without one of the two
+    // known classes — same class-agnostic approach as the tel:/mailto: match
+    // below, kept in sync with every wa.me link found in the codebase
+    // (footer floating button, tour-detail, activity-detail).
+    var whatsapp = e.target.closest(
+        '.whatsapp-btn, .floating-whatsapp, a[href*="wa.me/"], a[href*="api.whatsapp.com"]'
+    );
     if (whatsapp) {
         window.dataLayer.push(Object.assign({
             event: "click_whatsapp",
