@@ -209,7 +209,7 @@
                          alt="Winding Atlas Mountains road used by Morocco Quest DMC for transfers across Morocco"
                          title="Atlas Mountains road — Morocco Quest DMC nationwide coverage"
                          width="1200" height="800"
-                         class="w-100" style="border-radius:12px;object-fit:cover;max-height:360px;" loading="lazy" />
+                         class="w-100" style="border-radius:12px;object-fit:cover;max-height:560px;" loading="lazy" />
                 </figure>
             </div>
         </div>
