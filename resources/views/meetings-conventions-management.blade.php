@@ -74,7 +74,11 @@
 <script>window.__pageContext = { page_type: 'meetings_conventions_management' };</script>
 @endpush
 
+@section('body_class', 'dmc-page')
+
 @section('content')
+
+@include('partials.dmc-spacing')
 
 {{-- HERO --}}
 <section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-gala-ballroom-event-marrakech-hero.webp') }}">
@@ -141,9 +145,13 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/morocco-quest-gala-dinner-moroccan-cuisine-mice-marrakech.webp') }}"
-                     alt="Plated Moroccan cuisine at a MICE gala dinner produced by Morocco Quest in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                <figure class="mb-0">
+                    <img src="{{ asset('assets/img/morocco-quest-conference-interpreting-booth-delegate-logistics.webp') }}"
+                         alt="Simultaneous interpreting booth and headset console at a Morocco Quest conference in Marrakech"
+                         title="Conference interpreting booth — Morocco Quest delegate logistics in Marrakech"
+                         class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Interpretation and delegate-facing tech tested before doors open, alongside rooming lists and transfer scheduling.</figcaption>
+                </figure>
             </div>
             <div class="col-lg-6">
                 <span class="sec-subtitle style-2">Delegate Logistics</span>
@@ -167,7 +175,7 @@
 
 
 
-{{-- COMPLETE SOLUTIONS — NUMBERED LEDGER LIST --}}
+{{-- COMPLETE SOLUTIONS — SCATTERED TAG CLOUD --}}
 <section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
@@ -177,25 +185,23 @@
                 <p>Every component of a corporate meeting or convention, handled under one agreement.</p>
             </div>
         </div>
-        <div class="mc-ledger mt-4">
+        <div class="tb-tags mt-4">
             @php
             $solutions = [
-                ['icon'=>'fa-building',        'label'=>'Venue Sourcing'],
-                ['icon'=>'fa-bed',             'label'=>'Delegate Accommodation'],
-                ['icon'=>'fa-microphone-lines','label'=>'AV & Staging'],
-                ['icon'=>'fa-language',        'label'=>'Interpretation Services'],
-                ['icon'=>'fa-bus',             'label'=>'Transfers & Logistics'],
-                ['icon'=>'fa-id-badge',        'label'=>'Registration & Badging'],
-                ['icon'=>'fa-utensils',        'label'=>'Catering & Gala Dinners'],
-                ['icon'=>'fa-headset',         'label'=>'On-Site Delivery Team'],
+                ['icon'=>'fa-building', 'label'=>'Venue Sourcing', 'rot'=>-3],
+                ['icon'=>'fa-bed', 'label'=>'Delegate Accommodation', 'rot'=>2],
+                ['icon'=>'fa-microphone-lines', 'label'=>'AV & Staging', 'rot'=>-2],
+                ['icon'=>'fa-language', 'label'=>'Interpretation Services', 'rot'=>3],
+                ['icon'=>'fa-bus', 'label'=>'Transfers & Logistics', 'rot'=>-4],
+                ['icon'=>'fa-id-badge', 'label'=>'Registration & Badging', 'rot'=>1],
+                ['icon'=>'fa-utensils', 'label'=>'Catering & Gala Dinners', 'rot'=>-1],
+                ['icon'=>'fa-headset', 'label'=>'On-Site Delivery Team', 'rot'=>4],
             ];
             @endphp
             @foreach($solutions as $i => $s)
-            <div class="mc-ledger__row">
-                <span class="mc-ledger__num">{{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
-                <i class="fa-solid {{ $s['icon'] }} mc-ledger__icon"></i>
-                <span class="mc-ledger__label">{{ $s['label'] }}</span>
-                <span class="mc-ledger__line"></span>
+            <div class="tb-tag {{ $i % 2 === 0 ? 'tb-tag--dark' : '' }}" style="--rot:{{ $s['rot'] }}deg;">
+                <i class="fa-solid {{ $s['icon'] }}"></i>
+                <span>{{ $s['label'] }}</span>
             </div>
             @endforeach
         </div>
@@ -203,46 +209,79 @@
 </section>
 
 <style>
-    .mc-ledger{ max-width:900px; margin:0 auto; border-top:1px solid #e6e6e6; }
-    .mc-ledger__row{
+    /* ── What's Covered ──
+       Desktop + tablet: the original free-wrapping scattered pill cloud.
+       Mobile (≤767px): switches to a uniform 2-col grid, because at phone
+       widths the rotated pills wrapped raggedly and were hard to read. */
+    .tb-tags{
         display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px 16px;
+        max-width:1000px;
+        margin:0 auto;
+        padding:10px 0;
+    }
+    .tb-tag{
+        display:inline-flex;
         align-items:center;
-        gap:18px;
-        padding:18px 4px;
-        border-bottom:1px solid #e6e6e6;
-        transition:background .2s ease;
-    }
-    .mc-ledger__row:hover{ background:#fafafa; }
-    .mc-ledger__num{
-        font-size:1.6rem;
-        font-weight:800;
-        color:#e2e2e2;
-        min-width:52px;
-        flex-shrink:0;
-        line-height:1;
-    }
-    .mc-ledger__row:hover .mc-ledger__num{ color:var(--theme-color); }
-    .mc-ledger__icon{
-        color:var(--theme-color);
-        font-size:1.1rem;
-        width:28px;
-        flex-shrink:0;
-        text-align:center;
-    }
-    .mc-ledger__label{
+        gap:10px;
+        padding:14px 22px;
+        border-radius:30px;
+        background:#fff;
+        border:2px solid var(--theme-color);
         font-weight:700;
-        font-size:1.02rem;
+        font-size:.9rem;
         color:var(--title-color);
-        flex-shrink:0;
+        transform:rotate(var(--rot));
+        transition:transform .2s ease, background .2s ease, color .2s ease;
+        cursor:default;
     }
-    .mc-ledger__line{
-        flex:1;
-        border-bottom:1px dashed #ddd;
-        margin:0 8px;
+    .tb-tag i{ color:var(--theme-color); font-size:1.05rem; transition:color .2s ease; }
+    .tb-tag--dark{ background:#181613; border-color:#181613; color:#fff; }
+    .tb-tag--dark i{ color:var(--theme-color); }
+    .tb-tag:hover{
+        transform:rotate(0deg) scale(1.06);
+        background:var(--theme-color);
+        border-color:var(--theme-color);
+        color:#fff;
     }
-    @media (max-width:575px){
-        .mc-ledger__line{ display:none; }
-        .mc-ledger__row{ flex-wrap:wrap; }
+    .tb-tag:hover i{ color:#fff; }
+
+    /* Tablet — same scattered look, slightly tighter. */
+    @media (max-width:991px){
+        .tb-tags{ gap:14px 12px; max-width:760px; }
+        .tb-tag{ padding:12px 18px; font-size:.84rem; gap:9px; }
+        .tb-tag i{ font-size:.98rem; }
+    }
+
+    /* Mobile — uniform grid: no rotation, even rows, full-width cells. */
+    @media (max-width:767px){
+        .tb-tags{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:10px;
+            max-width:100%;
+            padding:4px 0;
+        }
+        .tb-tag{
+            justify-content:flex-start;
+            padding:13px 14px;
+            border-radius:12px;
+            font-size:.76rem;
+            line-height:1.3;
+            gap:8px;
+            border-width:1.5px;
+            transform:none;
+            height:100%;
+        }
+        .tb-tag i{ font-size:.92rem; flex-shrink:0; }
+        .tb-tag:hover{ transform:none; }
+    }
+    @media (max-width:479px){
+        .tb-tags{ gap:8px; }
+        .tb-tag{ padding:11px 12px; font-size:.72rem; gap:7px; }
+        .tb-tag i{ font-size:.86rem; }
     }
 </style>
 
@@ -289,21 +328,22 @@
                 <p>It also gives delegates a reason to show up. A riad dinner or an Atlas Mountain excursion does more for informal networking than another hotel bar ever will, and a well-run meeting here tends to be the one people remember attending.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{ asset('assets/img/morocco-quest-grand-theatre-rabat-congress-hero.webp') }}"
-                     alt="Grand Theatre Rabat congress venue used for large-scale conventions managed by Morocco Quest"
-                     width="800" height="591"
+                <img src="{{ asset('assets/img/morocco-quest-jemaa-el-fna-marrakech-rooftop-view.webp') }}"
+                     alt="Rooftop view over Jemaa el-Fna in Marrakech, host city for Morocco Quest conventions"
+                     title="Jemaa el-Fna, Marrakech — convention destination"
+                     width="1100" height="733"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
                 <div class="row g-3 mt-1">
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
-                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">24h</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">Quote turnaround</div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
-                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">100%</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -360,6 +400,7 @@
                     </div>
                 @endif
 
+                <div style="background:#f7f6f4;border-radius:14px;padding:32px 28px;">
                 <form action="{{ route('contact.submit') }}" method="POST" class="form-style1" novalidate>
                     @csrf
                     <input type="hidden" name="enquiry_type" value="Meetings & Conventions">
@@ -433,6 +474,7 @@
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
@@ -485,6 +527,8 @@
 </section>
 
 @include('partials.dmc-related')
+
+@include('partials.dmc-products')
 
 
 {{-- FINAL CTA --}}

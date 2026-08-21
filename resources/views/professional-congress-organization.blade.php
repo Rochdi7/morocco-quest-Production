@@ -69,10 +69,14 @@
 <script>window.__pageContext = { page_type: 'professional_congress_organization' };</script>
 @endpush
 
+@section('body_class', 'dmc-page')
+
 @section('content')
 
+@include('partials.dmc-spacing')
+
 {{-- HERO --}}
-<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-grand-theatre-rabat-congress-hero.webp') }}">
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-palais-des-congres-marrakech-pco-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -136,9 +140,13 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/morocco-quest-congress-registration-desk-delegates.webp') }}"
-                     alt="Congress registration desk and delegate check-in managed by Morocco Quest in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                <figure class="mb-0">
+                    <img src="{{ asset('assets/img/morocco-quest-sponsor-exhibitor-booth-congress-morocco.webp') }}"
+                         alt="Sponsor and exhibitor booths on the congress floor managed by Morocco Quest in Morocco"
+                         title="Sponsor and exhibitor booths — Morocco Quest PCO congress management"
+                         class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Exhibition floor with booth space allocated against signed sponsor tiers, with fulfilment tracked through to on-site delivery.</figcaption>
+                </figure>
             </div>
             <div class="col-lg-6">
                 <span class="sec-subtitle style-2">Sponsor & Exhibitor Management</span>
@@ -162,90 +170,116 @@
 
 
 
-{{-- COMPLETE SOLUTIONS — DARK RAIL SPLIT PANEL --}}
+{{-- COMPLETE SOLUTIONS — SCATTERED TAG CLOUD --}}
 <section class="space pb-0">
     <div class="container">
-        <div class="pco-panel">
-            <div class="pco-panel__rail">
-                <span class="sec-subtitle style-2" style="color:rgba(255,255,255,.7);">What's Covered</span>
-                <h2 style="color:#fff;font-size:1.8rem;font-weight:700;margin:8px 0 14px;">Complete Congress Organization Solutions</h2>
-                <p style="color:rgba(255,255,255,.65);font-size:.92rem;margin:0;">Every component of a scientific or association congress, handled under one agreement — from the first abstract to the post-congress report.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span class="sec-subtitle">What's Covered</span>
+                <h2 class="sec-title">Complete Congress Organization Solutions</h2>
+                <p>Every component of a scientific or association congress, handled under one agreement — from the first abstract to the post-congress report.</p>
             </div>
-            <div class="pco-panel__list">
-                @php
-                $solutions = [
-                    ['icon'=>'fa-file-lines',     'label'=>'Abstract Management'],
-                    ['icon'=>'fa-id-badge',       'label'=>'Registration & Badging'],
-                    ['icon'=>'fa-handshake',      'label'=>'Sponsor & Exhibitor Sales'],
-                    ['icon'=>'fa-building-columns','label'=>'Venue & Accreditation Support'],
-                    ['icon'=>'fa-microphone-lines','label'=>'AV & Session Production'],
-                    ['icon'=>'fa-bed',            'label'=>'Delegate Accommodation'],
-                    ['icon'=>'fa-chart-line',     'label'=>'Post-Congress Reporting'],
-                    ['icon'=>'fa-headset',        'label'=>'On-Site Delivery Team'],
-                ];
-                @endphp
-                @foreach($solutions as $s)
-                <div class="pco-panel__item">
-                    <i class="fa-solid {{ $s['icon'] }}"></i>
-                    <span>{{ $s['label'] }}</span>
-                </div>
-                @endforeach
+        </div>
+        <div class="tb-tags mt-4">
+            @php
+            $solutions = [
+                ['icon'=>'fa-file-lines', 'label'=>'Abstract Management', 'rot'=>-3],
+                ['icon'=>'fa-id-badge', 'label'=>'Registration & Badging', 'rot'=>2],
+                ['icon'=>'fa-handshake', 'label'=>'Sponsor & Exhibitor Sales', 'rot'=>-2],
+                ['icon'=>'fa-building-columns', 'label'=>'Venue & Accreditation Support', 'rot'=>3],
+                ['icon'=>'fa-microphone-lines', 'label'=>'AV & Session Production', 'rot'=>-4],
+                ['icon'=>'fa-bed', 'label'=>'Delegate Accommodation', 'rot'=>1],
+                ['icon'=>'fa-chart-line', 'label'=>'Post-Congress Reporting', 'rot'=>-1],
+                ['icon'=>'fa-headset', 'label'=>'On-Site Delivery Team', 'rot'=>4],
+            ];
+            @endphp
+            @foreach($solutions as $i => $s)
+            <div class="tb-tag {{ $i % 2 === 0 ? 'tb-tag--dark' : '' }}" style="--rot:{{ $s['rot'] }}deg;">
+                <i class="fa-solid {{ $s['icon'] }}"></i>
+                <span>{{ $s['label'] }}</span>
             </div>
+            @endforeach
         </div>
     </div>
 </section>
 
 <style>
-    .pco-panel{
+    /* ── What's Covered ──
+       Desktop + tablet: the original free-wrapping scattered pill cloud.
+       Mobile (≤767px): switches to a uniform 2-col grid, because at phone
+       widths the rotated pills wrapped raggedly and were hard to read. */
+    .tb-tags{
         display:flex;
         flex-wrap:wrap;
-        border-radius:16px;
-        overflow:hidden;
-        box-shadow:0 4px 24px rgba(0,0,0,.06);
-    }
-    .pco-panel__rail{
-        background:#181613;
-        flex:0 0 100%;
-        max-width:100%;
-        padding:40px 34px;
-        display:flex;
-        flex-direction:column;
         justify-content:center;
+        gap:18px 16px;
+        max-width:1000px;
+        margin:0 auto;
+        padding:10px 0;
     }
-    .pco-panel__list{
-        flex:0 0 100%;
-        max-width:100%;
-        display:grid;
-        grid-template-columns:1fr;
-        background:#fff;
-    }
-    .pco-panel__item{
-        display:flex;
+    .tb-tag{
+        display:inline-flex;
         align-items:center;
-        gap:14px;
-        padding:18px 34px;
-        border-bottom:1px solid #eee;
+        gap:10px;
+        padding:14px 22px;
+        border-radius:30px;
+        background:#fff;
+        border:2px solid var(--theme-color);
         font-weight:700;
-        font-size:.95rem;
+        font-size:.9rem;
         color:var(--title-color);
+        transform:rotate(var(--rot));
+        transition:transform .2s ease, background .2s ease, color .2s ease;
+        cursor:default;
     }
-    .pco-panel__item i{
-        color:var(--theme-color);
-        font-size:1.1rem;
-        width:26px;
-        text-align:center;
-        flex-shrink:0;
+    .tb-tag i{ color:var(--theme-color); font-size:1.05rem; transition:color .2s ease; }
+    .tb-tag--dark{ background:#181613; border-color:#181613; color:#fff; }
+    .tb-tag--dark i{ color:var(--theme-color); }
+    .tb-tag:hover{
+        transform:rotate(0deg) scale(1.06);
+        background:var(--theme-color);
+        border-color:var(--theme-color);
+        color:#fff;
     }
-    @media (min-width:768px){
-        .pco-panel__rail{ flex:0 0 33.333%; max-width:33.333%; }
-        .pco-panel__list{
-            flex:0 0 66.666%;
-            max-width:66.666%;
-            grid-template-columns:1fr 1fr;
+    .tb-tag:hover i{ color:#fff; }
+
+    /* Tablet — same scattered look, slightly tighter. */
+    @media (max-width:991px){
+        .tb-tags{ gap:14px 12px; max-width:760px; }
+        .tb-tag{ padding:12px 18px; font-size:.84rem; gap:9px; }
+        .tb-tag i{ font-size:.98rem; }
+    }
+
+    /* Mobile — uniform grid: no rotation, even rows, full-width cells. */
+    @media (max-width:767px){
+        .tb-tags{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:10px;
+            max-width:100%;
+            padding:4px 0;
         }
-        .pco-panel__item:nth-child(odd){ border-right:1px solid #eee; }
+        .tb-tag{
+            justify-content:flex-start;
+            padding:13px 14px;
+            border-radius:12px;
+            font-size:.76rem;
+            line-height:1.3;
+            gap:8px;
+            border-width:1.5px;
+            transform:none;
+            height:100%;
+        }
+        .tb-tag i{ font-size:.92rem; flex-shrink:0; }
+        .tb-tag:hover{ transform:none; }
+    }
+    @media (max-width:479px){
+        .tb-tags{ gap:8px; }
+        .tb-tag{ padding:11px 12px; font-size:.72rem; gap:7px; }
+        .tb-tag i{ font-size:.86rem; }
     }
 </style>
+
 
 {{-- SIGNATURE MODULE: CONGRESS LIFECYCLE TIMELINE --}}
 <section class="space bg-theme-07">
@@ -271,10 +305,10 @@
             @endphp
             @foreach($timeline as $i => $t)
             <div class="col-sm-6 col-lg-3">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:.78rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $t['marker'] }}</div>
-                    <div style="font-weight:700;margin-bottom:8px;">{{ $t['stage'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $t['body'] }}</div>
+                <div class="p-4" style="background:var(--theme-color);border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
+                    <div style="font-size:.78rem;font-weight:700;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $t['marker'] }}</div>
+                    <div style="font-weight:700;margin-bottom:8px;color:#fff;">{{ $t['stage'] }}</div>
+                    <div style="font-size:.88rem;color:rgba(255,255,255,.9);">{{ $t['body'] }}</div>
                 </div>
             </div>
             @endforeach
@@ -293,20 +327,22 @@
                 <p>Venue, accommodation and catering costs sit meaningfully below Western congress cities, a difference that shows up directly in a finance committee's comparison of bid options — and stretches sponsor budgets further on exhibition space and delegate hospitality.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{ asset('assets/img/morocco-quest-conference-plenary-stage-marrakech-congress.webp') }}"
-                     alt="Plenary session stage set up by Morocco Quest for a scientific congress in Marrakech"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                <img src="{{ asset('assets/img/morocco-quest-marrakech-street-performers-medina.webp') }}"
+                     alt="Street performers in the Marrakech medina, part of the congress destination experience"
+                     title="Marrakech medina performers — congress destination"
+                     width="1100" height="733"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
                 <div class="row g-3 mt-1">
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
-                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">24h</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">Quote turnaround</div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
-                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">100%</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -363,6 +399,7 @@
                     </div>
                 @endif
 
+                <div style="background:#f7f6f4;border-radius:14px;padding:32px 28px;">
                 <form action="{{ route('contact.submit') }}" method="POST" class="form-style1" novalidate>
                     @csrf
                     <input type="hidden" name="enquiry_type" value="Congress Organization">
@@ -435,6 +472,7 @@
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
@@ -486,6 +524,8 @@
 </section>
 
 @include('partials.dmc-related')
+
+@include('partials.dmc-products')
 
 
 {{-- FINAL CTA --}}

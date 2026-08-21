@@ -74,7 +74,11 @@
 <script>window.__pageContext = { page_type: '360_event_solutions' };</script>
 @endpush
 
+@section('body_class', 'dmc-page')
+
 @section('content')
+
+@include('partials.dmc-spacing')
 
 {{-- HERO --}}
 <section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-riad-restaurant-service-360-hero.webp') }}">
@@ -167,7 +171,7 @@
 
 
 
-{{-- COMPLETE SOLUTIONS — 360° ORBIT --}}
+{{-- COMPLETE SOLUTIONS — SCATTERED TAG CLOUD --}}
 <section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
@@ -177,33 +181,23 @@
                 <p>Every component of a multi-day corporate programme, run against one master schedule.</p>
             </div>
         </div>
-
-        @php
-        $solutions = [
-            ['icon'=>'fa-building',        'label'=>'Meetings & Conference Days'],
-            ['icon'=>'fa-mountain-sun',    'label'=>'Incentive & Team Activities'],
-            ['icon'=>'fa-music',           'label'=>'Production & Evening Events'],
-            ['icon'=>'fa-bed',             'label'=>'Accommodation & Transport'],
-            ['icon'=>'fa-utensils',        'label'=>'Catering & Gala Dinners'],
-            ['icon'=>'fa-clipboard-list',  'label'=>'Master Run Sheet Management'],
-            ['icon'=>'fa-user-tie',        'label'=>'Single Project Manager'],
-            ['icon'=>'fa-headset',         'label'=>'24/7 On-Site Support'],
-        ];
-        $angleStep = 360 / count($solutions);
-        @endphp
-
-        {{-- Circular orbit (responsive: full-size on desktop, scaled down on mobile) --}}
-        <div class="s360-orbit">
-            <div class="s360-orbit__hub">
-                <span>360°</span>
-            </div>
+        <div class="tb-tags mt-4">
+            @php
+            $solutions = [
+                ['icon'=>'fa-building', 'label'=>'Meetings & Conference Days', 'rot'=>-3],
+                ['icon'=>'fa-mountain-sun', 'label'=>'Incentive & Team Activities', 'rot'=>2],
+                ['icon'=>'fa-music', 'label'=>'Production & Evening Events', 'rot'=>-2],
+                ['icon'=>'fa-bed', 'label'=>'Accommodation & Transport', 'rot'=>3],
+                ['icon'=>'fa-utensils', 'label'=>'Catering & Gala Dinners', 'rot'=>-4],
+                ['icon'=>'fa-clipboard-list', 'label'=>'Master Run Sheet Management', 'rot'=>1],
+                ['icon'=>'fa-user-tie', 'label'=>'Single Project Manager', 'rot'=>-1],
+                ['icon'=>'fa-headset', 'label'=>'24/7 On-Site Support', 'rot'=>4],
+            ];
+            @endphp
             @foreach($solutions as $i => $s)
-            @php $angle = $angleStep * $i - 90; @endphp
-            <div class="s360-orbit__node" style="--angle:{{ $angle }}deg;">
-                <div class="s360-orbit__node-inner">
-                    <i class="fa-solid {{ $s['icon'] }}"></i>
-                </div>
-                <div class="s360-orbit__node-label">{{ $s['label'] }}</div>
+            <div class="tb-tag {{ $i % 2 === 0 ? 'tb-tag--dark' : '' }}" style="--rot:{{ $s['rot'] }}deg;">
+                <i class="fa-solid {{ $s['icon'] }}"></i>
+                <span>{{ $s['label'] }}</span>
             </div>
             @endforeach
         </div>
@@ -211,107 +205,79 @@
 </section>
 
 <style>
-    .s360-orbit{
-        position:relative;
-        width:560px;
-        height:560px;
-        margin:50px auto 70px;
-    }
-    .s360-orbit::before{
-        content:'';
-        position:absolute;
-        inset:70px;
-        border:1px dashed #ddd;
-        border-radius:50%;
-    }
-    .s360-orbit__hub{
-        position:absolute;
-        top:50%; left:50%;
-        transform:translate(-50%,-50%);
-        width:140px; height:140px;
-        border-radius:50%;
-        background:#181613;
+    /* ── What's Covered ──
+       Desktop + tablet: the original free-wrapping scattered pill cloud.
+       Mobile (≤767px): switches to a uniform 2-col grid, because at phone
+       widths the rotated pills wrapped raggedly and were hard to read. */
+    .tb-tags{
         display:flex;
-        align-items:center;
+        flex-wrap:wrap;
         justify-content:center;
-        z-index:2;
-        box-shadow:0 8px 30px rgba(0,0,0,.18);
+        gap:18px 16px;
+        max-width:1000px;
+        margin:0 auto;
+        padding:10px 0;
     }
-    .s360-orbit__hub span{
-        color:var(--theme-color);
-        font-weight:800;
-        font-size:1.5rem;
-    }
-    .s360-orbit__node{
-        position:absolute;
-        top:50%; left:50%;
-        width:150px;
-        transform:
-            rotate(var(--angle))
-            translate(230px)
-            rotate(calc(-1 * var(--angle)))
-            translate(-50%,-50%);
-        text-align:center;
-    }
-    .s360-orbit__node-inner{
-        width:64px; height:64px;
-        border-radius:50%;
+    .tb-tag{
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        padding:14px 22px;
+        border-radius:30px;
         background:#fff;
         border:2px solid var(--theme-color);
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        margin:0 auto 10px;
-        box-shadow:0 4px 14px rgba(0,0,0,.08);
-        transition:background .2s ease, transform .2s ease;
-    }
-    .s360-orbit__node:hover .s360-orbit__node-inner{
-        background:var(--theme-color);
-        transform:scale(1.08);
-    }
-    .s360-orbit__node-inner i{
-        color:var(--theme-color);
-        font-size:1.3rem;
-        transition:color .2s ease;
-    }
-    .s360-orbit__node:hover .s360-orbit__node-inner i{ color:#fff; }
-    .s360-orbit__node-label{
         font-weight:700;
-        font-size:.82rem;
+        font-size:.9rem;
         color:var(--title-color);
-        line-height:1.3;
+        transform:rotate(var(--rot));
+        transition:transform .2s ease, background .2s ease, color .2s ease;
+        cursor:default;
     }
-    @media (max-width:1199px){
-        .s360-orbit{ width:480px; height:480px; }
-        .s360-orbit__node{ transform:rotate(var(--angle)) translate(195px) rotate(calc(-1 * var(--angle))) translate(-50%,-50%); }
+    .tb-tag i{ color:var(--theme-color); font-size:1.05rem; transition:color .2s ease; }
+    .tb-tag--dark{ background:#181613; border-color:#181613; color:#fff; }
+    .tb-tag--dark i{ color:var(--theme-color); }
+    .tb-tag:hover{
+        transform:rotate(0deg) scale(1.06);
+        background:var(--theme-color);
+        border-color:var(--theme-color);
+        color:#fff;
     }
-    /* Tablet */
+    .tb-tag:hover i{ color:#fff; }
+
+    /* Tablet — same scattered look, slightly tighter. */
+    @media (max-width:991px){
+        .tb-tags{ gap:14px 12px; max-width:760px; }
+        .tb-tag{ padding:12px 18px; font-size:.84rem; gap:9px; }
+        .tb-tag i{ font-size:.98rem; }
+    }
+
+    /* Mobile — uniform grid: no rotation, even rows, full-width cells. */
     @media (max-width:767px){
-        .s360-orbit{ width:400px; height:400px; margin:30px auto 50px; }
-        .s360-orbit::before{ inset:52px; }
-        .s360-orbit__hub{ width:104px; height:104px; }
-        .s360-orbit__hub span{ font-size:1.15rem; }
-        .s360-orbit__node{
-            width:110px;
-            transform:rotate(var(--angle)) translate(162px) rotate(calc(-1 * var(--angle))) translate(-50%,-50%);
+        .tb-tags{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:10px;
+            max-width:100%;
+            padding:4px 0;
         }
-        .s360-orbit__node-inner{ width:48px; height:48px; margin-bottom:6px; }
-        .s360-orbit__node-inner i{ font-size:1rem; }
-        .s360-orbit__node-label{ font-size:.68rem; }
+        .tb-tag{
+            justify-content:flex-start;
+            padding:13px 14px;
+            border-radius:12px;
+            font-size:.76rem;
+            line-height:1.3;
+            gap:8px;
+            border-width:1.5px;
+            transform:none;
+            height:100%;
+        }
+        .tb-tag i{ font-size:.92rem; flex-shrink:0; }
+        .tb-tag:hover{ transform:none; }
     }
-    /* Small phones — shrink so the whole circle fits the viewport */
     @media (max-width:479px){
-        .s360-orbit{ width:320px; height:320px; margin:24px auto 40px; }
-        .s360-orbit::before{ inset:42px; }
-        .s360-orbit__hub{ width:84px; height:84px; }
-        .s360-orbit__hub span{ font-size:.95rem; }
-        .s360-orbit__node{
-            width:92px;
-            transform:rotate(var(--angle)) translate(130px) rotate(calc(-1 * var(--angle))) translate(-50%,-50%);
-        }
-        .s360-orbit__node-inner{ width:40px; height:40px; margin-bottom:5px; }
-        .s360-orbit__node-inner i{ font-size:.85rem; }
-        .s360-orbit__node-label{ font-size:.6rem; line-height:1.2; }
+        .tb-tags{ gap:8px; }
+        .tb-tag{ padding:11px 12px; font-size:.72rem; gap:7px; }
+        .tb-tag i{ font-size:.86rem; }
     }
 </style>
 
@@ -359,20 +325,22 @@
                 <p>Direct flights from most major European hubs keep arrival logistics manageable even for large, staggered delegate groups, and venue, activity and catering costs stay competitive against Western European or Gulf alternatives — a difference that compounds when a programme is costed as one whole rather than component by component.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{ asset('assets/img/morocco-quest-congress-registration-desk-delegates.webp') }}"
-                     alt="Delegate registration desk for a multi-day congress programme managed by Morocco Quest in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:340px;" loading="lazy" />
+                <img src="{{ asset('assets/img/morocco-quest-marrakech-skyline-atlas-conventions.webp') }}"
+                     alt="Marrakech skyline with the Atlas Mountains behind, base for Morocco Quest 360 event programmes"
+                     title="Marrakech and the Atlas foothills — compact geography for multi-component MICE"
+                     width="1400" height="935"
+                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
                 <div class="row g-3 mt-1">
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
-                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">24h</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">Quote turnaround</div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
-                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">100%</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -429,6 +397,7 @@
                     </div>
                 @endif
 
+                <div style="background:#f7f6f4;border-radius:14px;padding:32px 28px;">
                 <form action="{{ route('contact.submit') }}" method="POST" class="form-style1" novalidate>
                     @csrf
                     <input type="hidden" name="enquiry_type" value="360 Event Solutions">
@@ -502,6 +471,7 @@
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
@@ -554,6 +524,8 @@
 </section>
 
 @include('partials.dmc-related')
+
+@include('partials.dmc-products')
 
 
 {{-- FINAL CTA --}}

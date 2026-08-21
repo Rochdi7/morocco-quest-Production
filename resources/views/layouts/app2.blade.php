@@ -373,7 +373,7 @@
 
 </head>
 
-<body class="vs-body">
+<body class="vs-body @yield('body_class')">
     <div class="preloader">
         <button class="vs-btn preloaderCls">Cancel Preloader</button>
         <div class="preloader-inner">

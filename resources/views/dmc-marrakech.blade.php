@@ -72,9 +72,13 @@
 <script>window.__pageContext = { page_type: 'dmc_marrakech' };</script>
 @endpush
 
+@section('body_class', 'dmc-page')
+
 @section('content')
 
-<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp') }}">
+@include('partials.dmc-spacing')
+
+<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -101,43 +105,53 @@
 {{-- ═══════════════════════════════════════════════════════
      TRUST BAR — quick stats
 ═══════════════════════════════════════════════════════ --}}
-<section style="background:var(--theme-color);padding:22px 0;">
+<section style="background:var(--theme-color);padding:20px 0;">
     <div class="container">
-        <div class="row text-center gy-3">
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;">
-                    <div style="font-size:2rem;font-weight:700;">18+</div>
-                    <div style="font-size:.85rem;opacity:.9;">Groups handled / year</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;">
-                    <div style="font-size:2rem;font-weight:700;">11</div>
-                    <div style="font-size:.85rem;opacity:.9;">Countries served</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;">
-                    <div style="font-size:2rem;font-weight:700;">24/7</div>
-                    <div style="font-size:.85rem;opacity:.9;">On-ground support</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="color:#fff;">
-                    <div style="font-size:2rem;font-weight:700;">100%</div>
-                    <div style="font-size:.85rem;opacity:.9;">Licensed & insured</div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center mt-4">
-            <div class="col-12 text-center">
-                <div style="font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600;margin-bottom:12px;">Countries We Serve</div>
-                <ul class="custom-ul d-flex flex-wrap justify-content-center" style="gap:10px 12px;list-style:none;padding:0;margin:0;">
-                    @foreach(['England','Scotland','Norway','France','Italy','Spain','Germany','Sweden','Canada','USA','Russia'] as $country)
-                    <li style="background:#fff;color:var(--theme-color);font-size:.82rem;font-weight:700;padding:6px 16px;border-radius:20px;box-shadow:0 2px 6px rgba(0,0,0,.12);">{{ $country }}</li>
+        <div class="row align-items-center gy-3 gx-lg-4">
+
+            {{-- LEFT 50%: the four counts, 2x2 --}}
+            <div class="col-12 col-lg-6">
+                <div class="row text-center gy-3">
+                    @php
+                    $dmcStats = [
+                        ['value' => '20+',  'label' => 'Groups handled / year'],
+                        ['value' => '11',   'label' => 'Countries served'],
+                        ['value' => '24/7', 'label' => 'On-ground support'],
+                        ['value' => '100%', 'label' => 'Licensed & insured'],
+                    ];
+                    @endphp
+                    @foreach($dmcStats as $stat)
+                    <div class="col-6">
+                        <div style="color:#fff;">
+                            <div style="font-size:1.9rem;font-weight:700;line-height:1.1;">{{ $stat['value'] }}</div>
+                            <div style="font-size:.82rem;opacity:.9;">{{ $stat['label'] }}</div>
+                        </div>
+                    </div>
                     @endforeach
-                </ul>
+                </div>
             </div>
+
+            {{-- RIGHT 50%: world map — source markets in white, Morocco dark --}}
+            <div class="col-12 col-lg-6 text-center">
+                <style>
+                    /* Height-capped so the trust bar stays compact; width follows the aspect ratio. */
+                    .dmc-worldmap{ fill:rgba(255,255,255,.28); stroke:rgba(255,255,255,.38); stroke-width:.4;
+                                   max-height:150px; width:auto; max-width:100%; margin-inline:auto; }
+                    @media (max-width:991.98px){ .dmc-worldmap{ max-height:120px; } }
+                    .dmc-worldmap__src{ fill:#fff; stroke:#fff; stroke-width:.5; }
+                    .dmc-worldmap__ma{ fill:#181613; stroke:#181613; stroke-width:1.2; }
+                </style>
+                <figure class="mb-0">
+                    <figcaption style="font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600;margin-bottom:8px;">
+                        Countries We Serve
+                    </figcaption>
+                    @include('partials.dmc-world-map')
+                </figure>
+                <div class="visually-hidden">
+                    Countries we serve: England, Scotland, Norway, France, Italy, Spain, Germany, Sweden, Canada, USA, Russia.
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -165,7 +179,7 @@
                 <a href="#dmc-enquiry" class="vs-btn mt-4">Request a B2B Quote</a>
             </div>
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/dmc/morocco-quest-ben-youssef-madrasa-marrakech-dmc-ground-services.webp') }}"
+                <img src="{{ asset('assets/img/destination management company (1).webp') }}"
                      alt="Tour group at Ben Youssef Madrasa in Marrakech — Morocco Quest DMC ground services for travel agents and operators"
                      width="800" height="591"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
@@ -175,7 +189,7 @@
 </section>
 
 {{-- ═══════════════════════════════════════════════════════
-     DESTINATIONS COVERAGE MAP (text-based)
+     DESTINATIONS COVERAGE — 4x2 city grid
 ═══════════════════════════════════════════════════════ --}}
 <section class="space">
     <div class="container">
@@ -190,33 +204,35 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-10">
-                <img src="{{ asset('assets/img/dmc/morocco-quest-atlas-mountains-winding-road-dmc-morocco-coverage.webp') }}"
-                     alt="Winding Tizi n'Tichka road through the Atlas Mountains — Morocco Quest DMC coverage across Morocco"
-                     width="1600" height="1064"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:360px;" loading="lazy" />
+                <figure class="mb-0">
+                    <img src="{{ asset('assets/img/morocco-quest-atlas-mountains-road-nationwide-coverage.webp') }}"
+                         alt="Winding Atlas Mountains road used by Morocco Quest DMC for transfers across Morocco"
+                         title="Atlas Mountains road — Morocco Quest DMC nationwide coverage"
+                         width="1200" height="800"
+                         class="w-100" style="border-radius:12px;object-fit:cover;max-height:360px;" loading="lazy" />
+                </figure>
             </div>
         </div>
-        <div class="row g-3 mt-2 justify-content-center">
+        <div class="row g-3 mt-4 justify-content-center">
             @php
+            // 4 x 2 grid: eight core destinations we base programmes on.
             $destinations = [
                 ['city' => 'Marrakech',   'label' => 'Gateway & base for most tours'],
                 ['city' => 'Fes',         'label' => 'Imperial city & medina'],
                 ['city' => 'Casablanca',  'label' => 'Business hub & arrivals'],
-                ['city' => 'Chefchaouen','label' => 'Blue city in the Rif'],
+                ['city' => 'Chefchaouen', 'label' => 'Blue city in the Rif'],
                 ['city' => 'Merzouga',    'label' => 'Sahara desert & camel treks'],
                 ['city' => 'Ouarzazate',  'label' => 'Kasbah route & film studios'],
                 ['city' => 'Essaouira',   'label' => 'Atlantic coast & wind sports'],
                 ['city' => 'Agadir',      'label' => 'Beach & resort groups'],
-                ['city' => 'Rabat',       'label' => 'Capital city tours'],
-                ['city' => 'Tangier',     'label' => 'Northern gateway & day trips'],
             ];
             @endphp
             @foreach($destinations as $d)
-            <div class="col-6 col-md-4 col-lg-2">
-                <div class="text-center p-3" style="border-radius:8px;background:#f8f8f8;height:100%;">
-                    <i class="fa-solid fa-location-dot" style="color:var(--theme-color);font-size:1.2rem;display:block;margin-bottom:6px;"></i>
-                    <div style="font-weight:700;font-size:.95rem;">{{ $d['city'] }}</div>
-                    <div style="font-size:.78rem;color:#777;">{{ $d['label'] }}</div>
+            <div class="col-6 col-lg-3">
+                <div class="text-center p-3" style="border-radius:8px;background:var(--theme-color);height:100%;">
+                    <i class="fa-solid fa-location-dot" style="color:#fff;font-size:1.2rem;display:block;margin-bottom:6px;"></i>
+                    <div style="font-weight:700;font-size:.95rem;color:#fff;">{{ $d['city'] }}</div>
+                    <div style="font-size:.78rem;color:rgba(255,255,255,.85);">{{ $d['label'] }}</div>
                 </div>
             </div>
             @endforeach
@@ -260,21 +276,22 @@
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{ asset('assets/img/morocco-quest-atlas-mountain-road-morocco-dmc-hero.webp') }}"
-                     alt="Atlas Mountain road used for Morocco Quest DMC ground transfers and incentive programmes"
-                     width="800" height="591"
+                <img src="{{ asset('assets/img/morocco-quest-koutoubia-mosque-marrakech-why-us.webp') }}"
+                     alt="Koutoubia Mosque minaret in Marrakech — landmark of the city Morocco Quest DMC operates from"
+                     title="Koutoubia Mosque, Marrakech — Morocco Quest DMC base city"
+                     width="1400" height="1051"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
                 <div class="row g-3 mt-1">
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
-                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">24h</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">Quote turnaround</div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
-                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">100%</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -339,6 +356,7 @@
                     </div>
                 @endif
 
+                <div style="background:#f7f6f4;border-radius:14px;padding:32px 28px;">
                 <form action="{{ route('contact.submit') }}" method="POST" class="form-style1" novalidate>
                     @csrf
                     {{-- Hidden field so the contact controller knows this is a DMC enquiry --}}
@@ -347,7 +365,7 @@
                     <div class="row g-3">
 
                         <div class="col-md-6 form-group">
-                            <label for="dmc_name" style="font-weight:600;margin-bottom:4px;display:block;">Full Name *</label>
+                            <label for="dmc_name" style="font-weight:400;margin-bottom:4px;display:block;">Full Name *</label>
                             <input id="dmc_name" name="name" type="text"
                                    class="form-control @error('name') is-invalid @enderror"
                                    placeholder="Your full name"
@@ -356,7 +374,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="dmc_company" style="font-weight:600;margin-bottom:4px;display:block;">Company / Agency *</label>
+                            <label for="dmc_company" style="font-weight:400;margin-bottom:4px;display:block;">Company / Agency *</label>
                             <input id="dmc_company" name="nationality" type="text"
                                    class="form-control @error('nationality') is-invalid @enderror"
                                    placeholder="Your company or agency name"
@@ -365,7 +383,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="dmc_email" style="font-weight:600;margin-bottom:4px;display:block;">Business Email *</label>
+                            <label for="dmc_email" style="font-weight:400;margin-bottom:4px;display:block;">Business Email *</label>
                             <input id="dmc_email" name="email" type="email"
                                    class="form-control @error('email') is-invalid @enderror"
                                    placeholder="your@company.com"
@@ -374,7 +392,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="dmc_phone" style="font-weight:600;margin-bottom:4px;display:block;">Phone / WhatsApp *</label>
+                            <label for="dmc_phone" style="font-weight:400;margin-bottom:4px;display:block;">Phone / WhatsApp *</label>
                             <input id="dmc_phone" name="phone" type="tel"
                                    class="form-control @error('phone') is-invalid @enderror"
                                    placeholder="+1 / +44 / +33..."
@@ -383,7 +401,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="dmc_date" style="font-weight:600;margin-bottom:4px;display:block;">Travel Dates *</label>
+                            <label for="dmc_date" style="font-weight:400;margin-bottom:4px;display:block;">Travel Dates *</label>
                             <input id="dmc_date" name="arrival_date" type="text"
                                    class="form-control @error('arrival_date') is-invalid @enderror"
                                    placeholder="Select departure date"
@@ -392,7 +410,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="dmc_pax" style="font-weight:600;margin-bottom:4px;display:block;">Group Size (Pax) *</label>
+                            <label for="dmc_pax" style="font-weight:400;margin-bottom:4px;display:block;">Group Size (Pax) *</label>
                             <input id="dmc_pax" name="adults" type="number" min="1"
                                    class="form-control @error('adults') is-invalid @enderror"
                                    placeholder="Number of travellers"
@@ -401,7 +419,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="dmc_duration" style="font-weight:600;margin-bottom:4px;display:block;">Programme Duration (Days) *</label>
+                            <label for="dmc_duration" style="font-weight:400;margin-bottom:4px;display:block;">Programme Duration (Days) *</label>
                             <input id="dmc_duration" name="duration_days" type="number" min="1"
                                    class="form-control @error('duration_days') is-invalid @enderror"
                                    placeholder="Number of days"
@@ -410,7 +428,7 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label style="font-weight:600;margin-bottom:4px;display:block;">Service Type</label>
+                            <label style="font-weight:400;margin-bottom:4px;display:block;">Service Type</label>
                             <select name="children" class="form-control" style="height:56px;">
                                 <option value="0" {{ old('children') == '0' ? 'selected' : '' }}>Private Tours</option>
                                 <option value="1" {{ old('children') == '1' ? 'selected' : '' }}>Incentive / MICE</option>
@@ -421,7 +439,7 @@
                         </div>
 
                         <div class="col-12 form-group">
-                            <label for="dmc_brief" style="font-weight:600;margin-bottom:4px;display:block;">Programme Brief *</label>
+                            <label for="dmc_brief" style="font-weight:400;margin-bottom:4px;display:block;">Programme Brief *</label>
                             <textarea id="dmc_brief" name="travel_ideas"
                                       class="form-control @error('travel_ideas') is-invalid @enderror"
                                       placeholder="Describe your programme: destinations, accommodation category, special requests, activities, client profile..."
@@ -449,6 +467,7 @@
 
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
@@ -528,58 +547,7 @@
 
 @include('partials.dmc-related')
 
-{{-- Phase 5: Cross-links to tours + blog for topical authority --}}
-@php
-    $dmcProducts = [
-        ['route' => 'tours.index',               'img' => 'jemaa_el_fna_marrakech_sunset_market.webp',            'label' => 'For Agents & Operators', 'title' => 'Private Morocco Tours',   'meta' => 'B2B net-rate'],
-        ['route' => 'tours.multi_day',           'img' => 'agafay-desert-luxury-camp-camel-trek-morocco.webp',    'label' => 'Ready-Made Itineraries', 'title' => 'Multi-Day Tour Packages', 'meta' => '3–10+ days'],
-        ['route' => 'destinations.index',        'img' => 'chefchaouen-morocco-blue-city-panorama-hero.webp',     'label' => 'Region by Region',       'title' => 'Destination Guides',      'meta' => 'All of Morocco'],
-        ['route' => 'experiences.index', 'img' => 'hot-air-balloon-ride-morocco-desert-adventure.webp',   'label' => 'Experiences',            'title' => 'Morocco Activities',      'meta' => 'Day experiences'],
-        ['route' => 'blog.index',                'img' => 'ait-benhaddou-morocco-travel-hero-banner.webp',        'label' => 'Insights',               'title' => 'Morocco Travel Blog',     'meta' => 'Client-ready tips'],
-    ];
-@endphp
-<section class="space">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center mb-5">
-                <span class="sec-subtitle">Build Your Packages</span>
-                <h2 class="sec-title">Explore Our Morocco Products</h2>
-                <p>Ready-made itineraries and destination content to build your client packages from — all available on a B2B net-rate basis.</p>
-            </div>
-        </div>
-        <div class="row g-4">
-            @foreach($dmcProducts as $s)
-            <div class="col-md-6 col-xl-4">
-                <div class="tour-package-box style-3 bg-white-color h-100 position-relative">
-                    <div class="tour-package-thumb">
-                        <img src="{{ asset('assets/img/'.$s['img']) }}"
-                             alt="{{ $s['title'] }} — Morocco Quest DMC"
-                             class="w-100" loading="lazy" style="aspect-ratio: 4/3; object-fit: cover;" />
-                    </div>
-                    <div class="tour-package-content">
-                        <div class="location mb-2">
-                            <i class="fa-solid fa-tag me-1"></i>
-                            <span>{{ $s['label'] }}</span>
-                        </div>
-                        <h5 class="title line-clamp-2 mb-3">
-                            <a href="{{ route($s['route']) }}" class="stretched-link">{{ $s['title'] }}</a>
-                        </h5>
-                        <div class="tour-package-footer d-flex justify-content-between align-items-center">
-                            <div class="tour-duration me-2">
-                                <i class="fa-solid fa-circle-check"></i>
-                                <span class="ms-1">{{ $s['meta'] }}</span>
-                            </div>
-                            <div class="pricing-info text-end">
-                                <span class="fs-14 ff-rubik" style="font-weight:700;color:var(--theme-color);">Browse <i class="fa-solid fa-arrow-right-long ms-1"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
+@include('partials.dmc-products')
 
 {{-- ═══════════════════════════════════════════════════════
      FINAL CTA

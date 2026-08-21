@@ -74,7 +74,11 @@
 <script>window.__pageContext = { page_type: 'events_production_morocco' };</script>
 @endpush
 
+@section('body_class', 'dmc-page')
+
 @section('content')
+
+@include('partials.dmc-spacing')
 
 {{-- HERO --}}
 <section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-stage-performance-evening-event-hero.webp') }}">
@@ -120,9 +124,13 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/morocco-quest-bedouin-dinner-table-setting-desert-event.webp') }}"
-                     alt="Bedouin-style dinner table setting produced by Morocco Quest at a desert event in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                <figure class="mb-0">
+                    <img src="{{ asset('assets/img/morocco-quest-event-scenography-stage-design-morocco.webp') }}"
+                         alt="Custom scenography and stage set built by Morocco Quest for a corporate event in Morocco"
+                         title="Event scenography and stage design — Morocco Quest event production"
+                         class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Set design built to the venue's real rigging points, floor loads and sightlines — not adapted from a template.</figcaption>
+                </figure>
             </div>
             <div class="col-lg-6">
                 <span class="sec-subtitle style-2">Scenography & Staging</span>
@@ -167,7 +175,7 @@
 
 
 
-{{-- COMPLETE SOLUTIONS — TECHNICAL SPEC SHEET --}}
+{{-- COMPLETE SOLUTIONS — SCATTERED TAG CLOUD --}}
 <section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
@@ -177,24 +185,23 @@
                 <p>Every technical and creative component of a brand event, handled under one agreement.</p>
             </div>
         </div>
-        <div class="ep-spec mt-3">
+        <div class="tb-tags mt-4">
             @php
             $solutions = [
-                ['tag'=>'STG', 'icon'=>'fa-drafting-compass', 'label'=>'Scenography & Staging'],
-                ['tag'=>'LGT', 'icon'=>'fa-lightbulb',        'label'=>'Lighting Design'],
-                ['tag'=>'SND', 'icon'=>'fa-volume-high',      'label'=>'Sound Production'],
-                ['tag'=>'LED', 'icon'=>'fa-tv',               'label'=>'LED & Video Walls'],
-                ['tag'=>'CAM', 'icon'=>'fa-camera',           'label'=>'Live Camera & Streaming'],
-                ['tag'=>'ENT', 'icon'=>'fa-music',            'label'=>'Entertainment & Talent'],
-                ['tag'=>'FRT', 'icon'=>'fa-truck-fast',       'label'=>'Equipment Import & Freight'],
-                ['tag'=>'CRW', 'icon'=>'fa-headset',          'label'=>'On-Site Technical Crew'],
+                ['icon'=>'fa-drafting-compass', 'label'=>'Scenography & Staging', 'rot'=>-3],
+                ['icon'=>'fa-lightbulb', 'label'=>'Lighting Design', 'rot'=>2],
+                ['icon'=>'fa-volume-high', 'label'=>'Sound Production', 'rot'=>-2],
+                ['icon'=>'fa-tv', 'label'=>'LED & Video Walls', 'rot'=>3],
+                ['icon'=>'fa-camera', 'label'=>'Live Camera & Streaming', 'rot'=>-4],
+                ['icon'=>'fa-music', 'label'=>'Entertainment & Talent', 'rot'=>1],
+                ['icon'=>'fa-truck-fast', 'label'=>'Equipment Import & Freight', 'rot'=>-1],
+                ['icon'=>'fa-headset', 'label'=>'On-Site Technical Crew', 'rot'=>4],
             ];
             @endphp
-            @foreach($solutions as $s)
-            <div class="ep-spec__item">
-                <span class="ep-spec__tag">{{ $s['tag'] }}</span>
-                <i class="fa-solid {{ $s['icon'] }} ep-spec__icon"></i>
-                <span class="ep-spec__label">{{ $s['label'] }}</span>
+            @foreach($solutions as $i => $s)
+            <div class="tb-tag {{ $i % 2 === 0 ? 'tb-tag--dark' : '' }}" style="--rot:{{ $s['rot'] }}deg;">
+                <i class="fa-solid {{ $s['icon'] }}"></i>
+                <span>{{ $s['label'] }}</span>
             </div>
             @endforeach
         </div>
@@ -202,53 +209,82 @@
 </section>
 
 <style>
-    .ep-spec{
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        border:1px solid #222;
-        border-radius:10px;
-        overflow:hidden;
-        background:#181613;
-    }
-    .ep-spec__item{
+    /* ── What's Covered ──
+       Desktop + tablet: the original free-wrapping scattered pill cloud.
+       Mobile (≤767px): switches to a uniform 2-col grid, because at phone
+       widths the rotated pills wrapped raggedly and were hard to read. */
+    .tb-tags{
         display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px 16px;
+        max-width:1000px;
+        margin:0 auto;
+        padding:10px 0;
+    }
+    .tb-tag{
+        display:inline-flex;
         align-items:center;
-        gap:12px;
-        padding:22px 20px;
-        border-bottom:1px solid rgba(255,255,255,.1);
-        border-right:1px solid rgba(255,255,255,.1);
-    }
-    .ep-spec__tag{
-        font-family:monospace, monospace;
-        font-size:.72rem;
+        gap:10px;
+        padding:14px 22px;
+        border-radius:30px;
+        background:#fff;
+        border:2px solid var(--theme-color);
         font-weight:700;
-        letter-spacing:.05em;
-        color:#000;
+        font-size:.9rem;
+        color:var(--title-color);
+        transform:rotate(var(--rot));
+        transition:transform .2s ease, background .2s ease, color .2s ease;
+        cursor:default;
+    }
+    .tb-tag i{ color:var(--theme-color); font-size:1.05rem; transition:color .2s ease; }
+    .tb-tag--dark{ background:#181613; border-color:#181613; color:#fff; }
+    .tb-tag--dark i{ color:var(--theme-color); }
+    .tb-tag:hover{
+        transform:rotate(0deg) scale(1.06);
         background:var(--theme-color);
-        border-radius:4px;
-        padding:3px 7px;
-        flex-shrink:0;
-    }
-    .ep-spec__icon{
-        color:var(--theme-color);
-        font-size:1.05rem;
-        flex-shrink:0;
-    }
-    .ep-spec__label{
+        border-color:var(--theme-color);
         color:#fff;
-        font-weight:700;
-        font-size:.92rem;
-        text-transform:uppercase;
-        letter-spacing:.02em;
     }
-    @media (min-width:768px){
-        .ep-spec{ grid-template-columns:repeat(4,1fr); }
+    .tb-tag:hover i{ color:#fff; }
+
+    /* Tablet — same scattered look, slightly tighter. */
+    @media (max-width:991px){
+        .tb-tags{ gap:14px 12px; max-width:760px; }
+        .tb-tag{ padding:12px 18px; font-size:.84rem; gap:9px; }
+        .tb-tag i{ font-size:.98rem; }
     }
-    @media (max-width:575px){
-        .ep-spec{ grid-template-columns:1fr; }
-        .ep-spec__item{ border-right:none; }
+
+    /* Mobile — uniform grid: no rotation, even rows, full-width cells. */
+    @media (max-width:767px){
+        .tb-tags{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:10px;
+            max-width:100%;
+            padding:4px 0;
+        }
+        .tb-tag{
+            justify-content:flex-start;
+            padding:13px 14px;
+            border-radius:12px;
+            font-size:.76rem;
+            line-height:1.3;
+            gap:8px;
+            border-width:1.5px;
+            transform:none;
+            height:100%;
+        }
+        .tb-tag i{ font-size:.92rem; flex-shrink:0; }
+        .tb-tag:hover{ transform:none; }
+    }
+    @media (max-width:479px){
+        .tb-tags{ gap:8px; }
+        .tb-tag{ padding:11px 12px; font-size:.72rem; gap:7px; }
+        .tb-tag i{ font-size:.86rem; }
     }
 </style>
+
 
 {{-- SIGNATURE MODULE: EVENT TYPE SHOWCASE --}}
 <section class="space bg-theme-07">
@@ -271,10 +307,10 @@
             @endphp
             @foreach($eventTypes as $e)
             <div class="col-sm-6 col-lg-3">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:.8rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $e['label'] }}</div>
-                    <div style="font-weight:700;margin-bottom:8px;">{{ $e['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $e['body'] }}</div>
+                <div class="p-4" style="background:var(--theme-color);border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
+                    <div style="font-size:.8rem;font-weight:700;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $e['label'] }}</div>
+                    <div style="font-weight:700;margin-bottom:8px;color:#fff;">{{ $e['title'] }}</div>
+                    <div style="font-size:.88rem;color:rgba(255,255,255,.9);">{{ $e['body'] }}</div>
                 </div>
             </div>
             @endforeach
@@ -293,21 +329,22 @@
                 <p>Production costs here generally sit below Western European equivalents for comparable staging, lighting and crew day rates, and the technical crews we work with have built for international agencies before — they know what a European production rider actually expects on-site.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{ asset('assets/img/morocco-quest-gala-ballroom-event-marrakech-hero.webp') }}"
-                     alt="Gala event staged in Marrakech by Morocco Quest — corporate event production and scenography"
-                     width="800" height="591"
+                <img src="{{ asset('assets/img/morocco-quest-jemaa-el-fna-night-market-marrakech.webp') }}"
+                     alt="Jemaa el-Fna night market in Marrakech, backdrop for Morocco Quest event productions"
+                     title="Jemaa el-Fna at night — Marrakech event backdrop"
+                     width="1100" height="733"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
                 <div class="row g-3 mt-1">
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
-                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">24h</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">Quote turnaround</div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
-                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">100%</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -364,6 +401,7 @@
                     </div>
                 @endif
 
+                <div style="background:#f7f6f4;border-radius:14px;padding:32px 28px;">
                 <form action="{{ route('contact.submit') }}" method="POST" class="form-style1" novalidate>
                     @csrf
                     <input type="hidden" name="enquiry_type" value="Events Production">
@@ -437,6 +475,7 @@
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
@@ -489,6 +528,8 @@
 </section>
 
 @include('partials.dmc-related')
+
+@include('partials.dmc-products')
 
 
 {{-- FINAL CTA --}}

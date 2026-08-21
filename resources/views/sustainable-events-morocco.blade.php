@@ -74,7 +74,11 @@
 <script>window.__pageContext = { page_type: 'sustainable_events_morocco' };</script>
 @endpush
 
+@section('body_class', 'dmc-page')
+
 @section('content')
+
+@include('partials.dmc-spacing')
 
 {{-- HERO --}}
 <section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-atlas-mountains-village-sustainable-hero.webp') }}">
@@ -120,9 +124,13 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/morocco-quest-rustic-banquet-dining-sustainable-event-morocco.webp') }}"
-                     alt="Rustic banquet dining with natural materials at a sustainable Morocco Quest event in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                <figure class="mb-0">
+                    <img src="{{ asset('assets/img/morocco-quest-local-sourcing-catering-sustainable-events.webp') }}"
+                         alt="Event catering spread built from regionally sourced Moroccan produce by Morocco Quest"
+                         title="Locally sourced event catering — Morocco Quest sustainable events"
+                         class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Catering briefed to buy from Marrakech markets and regional growers first, with an honest account of what was and wasn't sourced locally.</figcaption>
+                </figure>
             </div>
             <div class="col-lg-6">
                 <span class="sec-subtitle style-2">Local Sourcing & Catering</span>
@@ -141,9 +149,13 @@
 
         <div class="row align-items-center gy-4 mb-5">
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/morocco-quest-argan-cooperative-csr-sustainable-morocco.webp') }}"
-                     alt="Women's argan cooperative CSR visit arranged by Morocco Quest for a sustainable event in Morocco"
-                     class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                <figure class="mb-0">
+                    <img src="{{ asset('assets/img/morocco-quest-atlas-mountains-water-waste-stewardship.webp') }}"
+                         alt="Atlas Mountains landscape near Marrakech where Morocco Quest vets camps on waste and water use"
+                         title="Atlas Mountains — waste and water conscious venue selection by Morocco Quest"
+                         class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
+                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Camps and riads in the Atlas foothills vetted on whether waste is packed out and whether water use for your group size is genuinely supportable.</figcaption>
+                </figure>
             </div>
             <div class="col-lg-6">
                 <span class="sec-subtitle style-2">Waste & Water Conscious Venue Selection</span>
@@ -167,7 +179,7 @@
 
 
 
-{{-- COMPLETE SOLUTIONS — VERTICAL CHECKLIST STRIPE --}}
+{{-- COMPLETE SOLUTIONS — SCATTERED TAG CLOUD --}}
 <section class="space pb-0">
     <div class="container">
         <div class="row justify-content-center">
@@ -177,27 +189,23 @@
                 <p>Every component of a responsible event programme, sourced and documented honestly.</p>
             </div>
         </div>
-        <div class="row g-3 g-lg-4 mt-2 se-solutions">
+        <div class="tb-tags mt-4">
             @php
             $solutions = [
-                ['icon'=>'fa-carrot',              'label'=>'Local Sourcing & Catering',      'desc'=>'Regional suppliers and seasonal menus.'],
-                ['icon'=>'fa-hands-holding-circle','label'=>'Artisan Cooperative Visits',      'desc'=>'Named cooperatives we partner with directly.'],
-                ['icon'=>'fa-droplet',             'label'=>'Waste & Water Conscious Venues',  'desc'=>'Venues chosen for low resource footprint.'],
-                ['icon'=>'fa-file-lines',          'label'=>'Transparent Reporting',           'desc'=>'What was sourced locally, in real numbers.'],
-                ['icon'=>'fa-seedling',            'label'=>'Community Engagement',            'desc'=>'CSR activities with a real local recipient.'],
-                ['icon'=>'fa-people-group',        'label'=>'Group Coordination',             'desc'=>'One team managing the whole delegation.'],
-                ['icon'=>'fa-bus',                 'label'=>'Transport & Logistics',          'desc'=>'Efficient routing and shared transfers.'],
-                ['icon'=>'fa-headset',             'label'=>'On-Site Support Team',           'desc'=>'Present for the full run of the event.'],
+                ['icon'=>'fa-carrot', 'label'=>'Local Sourcing & Catering', 'rot'=>-3],
+                ['icon'=>'fa-hands-holding-circle', 'label'=>'Artisan Cooperative Visits', 'rot'=>2],
+                ['icon'=>'fa-droplet', 'label'=>'Waste & Water Conscious Venues', 'rot'=>-2],
+                ['icon'=>'fa-file-lines', 'label'=>'Transparent Reporting', 'rot'=>3],
+                ['icon'=>'fa-seedling', 'label'=>'Community Engagement', 'rot'=>-4],
+                ['icon'=>'fa-people-group', 'label'=>'Group Coordination', 'rot'=>1],
+                ['icon'=>'fa-bus', 'label'=>'Transport & Logistics', 'rot'=>-1],
+                ['icon'=>'fa-headset', 'label'=>'On-Site Support Team', 'rot'=>4],
             ];
             @endphp
-            @foreach($solutions as $s)
-            <div class="col-6 col-lg-3">
-                <div class="se-sol-card">
-                    <span class="se-sol-card__badge"><i class="fa-solid fa-check"></i></span>
-                    <span class="se-sol-card__icon"><i class="fa-solid {{ $s['icon'] }}"></i></span>
-                    <span class="se-sol-card__label">{{ $s['label'] }}</span>
-                    <span class="se-sol-card__desc">{{ $s['desc'] }}</span>
-                </div>
+            @foreach($solutions as $i => $s)
+            <div class="tb-tag {{ $i % 2 === 0 ? 'tb-tag--dark' : '' }}" style="--rot:{{ $s['rot'] }}deg;">
+                <i class="fa-solid {{ $s['icon'] }}"></i>
+                <span>{{ $s['label'] }}</span>
             </div>
             @endforeach
         </div>
@@ -205,42 +213,79 @@
 </section>
 
 <style>
-    .se-sol-card{
-        position:relative; height:100%;
-        display:flex; flex-direction:column;
-        background:#fff; border:1px solid #eef0ec; border-radius:14px;
-        padding:26px 22px 22px;
-        transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    /* ── What's Covered ──
+       Desktop + tablet: the original free-wrapping scattered pill cloud.
+       Mobile (≤767px): switches to a uniform 2-col grid, because at phone
+       widths the rotated pills wrapped raggedly and were hard to read. */
+    .tb-tags{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px 16px;
+        max-width:1000px;
+        margin:0 auto;
+        padding:10px 0;
     }
-    .se-sol-card:hover{
-        transform:translateY(-5px);
-        box-shadow:0 14px 32px rgba(39,174,96,.12);
-        border-color:#cdebd6;
+    .tb-tag{
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        padding:14px 22px;
+        border-radius:30px;
+        background:#fff;
+        border:2px solid var(--theme-color);
+        font-weight:700;
+        font-size:.9rem;
+        color:var(--title-color);
+        transform:rotate(var(--rot));
+        transition:transform .2s ease, background .2s ease, color .2s ease;
+        cursor:default;
     }
-    .se-sol-card__badge{
-        position:absolute; top:16px; right:16px;
-        width:24px; height:24px; border-radius:50%;
-        background:#27ae60; color:#fff;
-        display:flex; align-items:center; justify-content:center;
-        font-size:.6rem;
+    .tb-tag i{ color:var(--theme-color); font-size:1.05rem; transition:color .2s ease; }
+    .tb-tag--dark{ background:#181613; border-color:#181613; color:#fff; }
+    .tb-tag--dark i{ color:var(--theme-color); }
+    .tb-tag:hover{
+        transform:rotate(0deg) scale(1.06);
+        background:var(--theme-color);
+        border-color:var(--theme-color);
+        color:#fff;
     }
-    .se-sol-card__icon{
-        width:52px; height:52px; border-radius:14px; margin-bottom:16px;
-        background:linear-gradient(135deg, rgba(39,174,96,.14), rgba(39,174,96,.05));
-        color:#27ae60; font-size:1.35rem;
-        display:flex; align-items:center; justify-content:center;
+    .tb-tag:hover i{ color:#fff; }
+
+    /* Tablet — same scattered look, slightly tighter. */
+    @media (max-width:991px){
+        .tb-tags{ gap:14px 12px; max-width:760px; }
+        .tb-tag{ padding:12px 18px; font-size:.84rem; gap:9px; }
+        .tb-tag i{ font-size:.98rem; }
     }
-    .se-sol-card__label{
-        font-weight:700; font-size:1rem; color:var(--title-color);
-        line-height:1.3; margin-bottom:6px;
+
+    /* Mobile — uniform grid: no rotation, even rows, full-width cells. */
+    @media (max-width:767px){
+        .tb-tags{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:10px;
+            max-width:100%;
+            padding:4px 0;
+        }
+        .tb-tag{
+            justify-content:flex-start;
+            padding:13px 14px;
+            border-radius:12px;
+            font-size:.76rem;
+            line-height:1.3;
+            gap:8px;
+            border-width:1.5px;
+            transform:none;
+            height:100%;
+        }
+        .tb-tag i{ font-size:.92rem; flex-shrink:0; }
+        .tb-tag:hover{ transform:none; }
     }
-    .se-sol-card__desc{
-        font-size:.83rem; color:#7d857a; line-height:1.5;
-    }
-    @media (max-width:575px){
-        .se-sol-card{ padding:20px 16px; }
-        .se-sol-card__icon{ width:44px; height:44px; font-size:1.15rem; border-radius:12px; }
-        .se-sol-card__desc{ display:none; }
+    @media (max-width:479px){
+        .tb-tags{ gap:8px; }
+        .tb-tag{ padding:11px 12px; font-size:.72rem; gap:7px; }
+        .tb-tag i{ font-size:.86rem; }
     }
 </style>
 
@@ -292,21 +337,22 @@
                 <p>Marrakech also sits close to the Agafay plateau and the Atlas foothills, so a desert camp or mountain-village component is usually under an hour away rather than a long internal transfer. That keeps logistics manageable and cuts down on the transport a multi-region itinerary would otherwise need.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{ asset('assets/img/morocco-quest-guests-red-carpet-arrival-event-venue-morocco.webp') }}"
-                     alt="Corporate guests arriving at a Morocco Quest event venue during a sustainable programme in Marrakech"
-                     width="800" height="591"
+                <img src="{{ asset('assets/img/morocco-quest-marrakech-medina-rooftops-atlas-view.webp') }}"
+                     alt="Marrakech medina rooftops with the Atlas Mountains beyond, close to Morocco Quest's sustainable venues"
+                     title="Marrakech rooftops and the Atlas Mountains"
+                     width="1100" height="733"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
                 <div class="row g-3 mt-1">
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
-                            <div style="font-size:.82rem;color:#666;">Quote turnaround</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">24h</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">Quote turnaround</div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
-                            <div style="font-size:.82rem;color:#666;">White-label delivery</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">100%</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">White-label delivery</div>
                         </div>
                     </div>
                 </div>
@@ -363,6 +409,7 @@
                     </div>
                 @endif
 
+                <div style="background:#f7f6f4;border-radius:14px;padding:32px 28px;">
                 <form action="{{ route('contact.submit') }}" method="POST" class="form-style1" novalidate>
                     @csrf
                     <input type="hidden" name="enquiry_type" value="Sustainable Events">
@@ -436,6 +483,7 @@
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
@@ -488,6 +536,8 @@
 </section>
 
 @include('partials.dmc-related')
+
+@include('partials.dmc-products')
 
 
 {{-- FINAL CTA --}}

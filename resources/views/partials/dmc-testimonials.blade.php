@@ -87,15 +87,18 @@
 <style>
     .dmc-tst__stage{ position:relative; display:flex; align-items:center; gap:14px; }
     .dmc-tst__viewport{ position:relative; overflow:hidden; flex:1 1 auto; padding:14px 4px; }
-    .dmc-tst__track{ position:relative; min-height:300px; }
+    /* Track height comes from the active slide only. Inactive slides are taken
+       out of flow so they never stack extra height under the card. */
+    .dmc-tst__track{ position:relative; }
     .dmc-tst__slide{
-        position:absolute; inset:0; margin:0;
-        opacity:0; visibility:hidden;
+        position:absolute; top:0; left:0; right:0; margin:0;
+        opacity:0; visibility:hidden; pointer-events:none;
         transform:translateY(22px) scale(.97);
         transition:opacity .55s ease, transform .55s ease, visibility .55s;
     }
     .dmc-tst__slide.is-active{
-        opacity:1; visibility:visible; transform:none; position:relative;
+        position:relative;
+        opacity:1; visibility:visible; pointer-events:auto; transform:none;
     }
 
     /* Card */

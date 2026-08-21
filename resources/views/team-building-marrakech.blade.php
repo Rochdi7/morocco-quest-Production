@@ -74,7 +74,11 @@
 <script>window.__pageContext = { page_type: 'team_building_marrakech' };</script>
 @endpush
 
+@section('body_class', 'dmc-page')
+
 @section('content')
+
+@include('partials.dmc-spacing')
 
 {{-- HERO --}}
 <section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-desert-4x4-convoy-team-building-hero.webp') }}">
@@ -121,9 +125,10 @@
                 <a href="#teambuilding-enquiry" class="vs-btn mt-4">Talk With Our Team Building Team</a>
             </div>
             <div class="col-lg-6">
-                <img src="{{ asset('assets/img/morocco-quest-atlas-mountains-village-sustainable-hero.webp') }}"
-                     alt="Atlas Mountains village near Marrakech used for Morocco Quest team building and incentive programmes"
-                     width="800" height="591"
+                <img src="{{ asset('assets/img/morocco-quest-team-building-activities-marrakech.webp') }}"
+                     alt="Corporate group taking part in a Morocco Quest team building activity in Marrakech"
+                     title="Team building activities in Marrakech run by Morocco Quest"
+                     width="900" height="607"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
             </div>
         </div>
@@ -215,6 +220,10 @@
 </section>
 
 <style>
+    /* ── What's Covered ──
+       Desktop + tablet: the original free-wrapping scattered pill cloud.
+       Mobile (≤767px): switches to a uniform 2-col grid, because at phone
+       widths the rotated pills wrapped raggedly and were hard to read. */
     .tb-tags{
         display:flex;
         flex-wrap:wrap;
@@ -249,15 +258,41 @@
         color:#fff;
     }
     .tb-tag:hover i{ color:#fff; }
+
+    /* Tablet — same scattered look, slightly tighter. */
+    @media (max-width:991px){
+        .tb-tags{ gap:14px 12px; max-width:760px; }
+        .tb-tag{ padding:12px 18px; font-size:.84rem; gap:9px; }
+        .tb-tag i{ font-size:.98rem; }
+    }
+
+    /* Mobile — uniform grid: no rotation, even rows, full-width cells. */
     @media (max-width:767px){
-        .tb-tags{ gap:10px 8px; padding:6px 0; }
-        .tb-tag{ transform:none; padding:9px 14px; font-size:.74rem; gap:7px; border-width:1.5px; }
-        .tb-tag i{ font-size:.85rem; }
+        .tb-tags{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:10px;
+            max-width:100%;
+            padding:4px 0;
+        }
+        .tb-tag{
+            justify-content:flex-start;
+            padding:13px 14px;
+            border-radius:12px;
+            font-size:.76rem;
+            line-height:1.3;
+            gap:8px;
+            border-width:1.5px;
+            transform:none;
+            height:100%;
+        }
+        .tb-tag i{ font-size:.92rem; flex-shrink:0; }
+        .tb-tag:hover{ transform:none; }
     }
     @media (max-width:479px){
-        .tb-tags{ gap:8px 6px; }
-        .tb-tag{ padding:8px 12px; font-size:.68rem; gap:6px; border-radius:22px; }
-        .tb-tag i{ font-size:.78rem; }
+        .tb-tags{ gap:8px; }
+        .tb-tag{ padding:11px 12px; font-size:.72rem; gap:7px; }
+        .tb-tag i{ font-size:.86rem; }
     }
 </style>
 
@@ -282,10 +317,10 @@
             @endphp
             @foreach($objectives as $o)
             <div class="col-sm-6 col-lg-3">
-                <div class="p-4" style="background:#fff;border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
-                    <div style="font-size:.8rem;font-weight:700;color:var(--theme-color);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $o['label'] }}</div>
-                    <div style="font-weight:700;margin-bottom:8px;">{{ $o['title'] }}</div>
-                    <div style="font-size:.88rem;color:#666;">{{ $o['body'] }}</div>
+                <div class="p-4" style="background:var(--theme-color);border-radius:12px;height:100%;box-shadow:0 2px 12px rgba(0,0,0,.05);">
+                    <div style="font-size:.8rem;font-weight:700;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;">{{ $o['label'] }}</div>
+                    <div style="font-weight:700;margin-bottom:8px;color:#fff;">{{ $o['title'] }}</div>
+                    <div style="font-size:.88rem;color:rgba(255,255,255,.9);">{{ $o['body'] }}</div>
                 </div>
             </div>
             @endforeach
@@ -304,21 +339,22 @@
                 <p>Set against the exchange rate against the euro and pound, a desert camp evening or a full incentive itinerary here typically costs meaningfully less than an equivalent programme in Western Europe, without asking your group to compromise on the setting.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{ asset('assets/img/morocco-quest-luxury-berber-tent-gala-dinner-agafay-desert.webp') }}"
-                     alt="Luxury Berber tent gala dinner set up for a Morocco Quest incentive group in the Agafay Desert near Marrakech"
-                     width="800" height="591"
+                <img src="{{ asset('assets/img/morocco-quest-marrakech-covered-souk-alley.webp') }}"
+                     alt="Covered souk alley in the Marrakech medina used for Morocco Quest team-building souk rallies"
+                     title="Marrakech covered souk — team-building souk rally route"
+                     width="1100" height="733"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
                 <div class="row g-3 mt-1">
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">24h</div>
-                            <div style="font-size:.82rem;color:#666;">Proposal turnaround</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">24h</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">Proposal turnaround</div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div style="background:#fff;border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
-                            <div style="font-size:1.7rem;font-weight:700;color:var(--theme-color);">100%</div>
-                            <div style="font-size:.82rem;color:#666;">On-site team delivery</div>
+                        <div style="background:var(--theme-color);border-radius:10px;padding:18px;text-align:center;box-shadow:0 4px 18px rgba(0,0,0,.06);">
+                            <div style="font-size:1.7rem;font-weight:700;color:#fff;">100%</div>
+                            <div style="font-size:.82rem;color:rgba(255,255,255,.85);">On-site team delivery</div>
                         </div>
                     </div>
                 </div>
@@ -375,6 +411,7 @@
                     </div>
                 @endif
 
+                <div style="background:#f7f6f4;border-radius:14px;padding:32px 28px;">
                 <form action="{{ route('contact.submit') }}" method="POST" class="form-style1" novalidate>
                     @csrf
                     <input type="hidden" name="enquiry_type" value="Team Building & Incentive">
@@ -448,6 +485,7 @@
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
@@ -500,6 +538,8 @@
 </section>
 
 @include('partials.dmc-related')
+
+@include('partials.dmc-products')
 
 {{-- FINAL CTA --}}
 <section class="dmc-cta" style="background:#181613;padding:64px 0;">
