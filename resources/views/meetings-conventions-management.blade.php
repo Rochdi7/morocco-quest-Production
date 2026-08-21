@@ -126,6 +126,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/morocco-quest-conference-plenary-stage-marrakech-congress.webp') }}"
                      alt="Conference plenary stage and seating managed by Morocco Quest for a convention in Marrakech"
+                     title="Conference plenary stage, Marrakech — Morocco Quest convention setup"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -150,7 +151,7 @@
                          alt="Simultaneous interpreting booth and headset console at a Morocco Quest conference in Marrakech"
                          title="Conference interpreting booth — Morocco Quest delegate logistics in Marrakech"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Interpretation and delegate-facing tech tested before doors open, alongside rooming lists and transfer scheduling.</figcaption>
+                    <figcaption class="visually-hidden">Interpretation and delegate-facing tech tested before doors open, alongside rooming lists and transfer scheduling.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6">

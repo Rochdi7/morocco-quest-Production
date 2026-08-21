@@ -121,6 +121,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/morocco-quest-garden-catering-beverage-station-corporate-event.webp') }}"
                      alt="Garden catering and beverage station staffed by Morocco Quest at a corporate congress in Morocco"
+                     title="Garden catering station at a Morocco Quest corporate event"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -145,7 +146,7 @@
                          alt="Sponsor and exhibitor booths on the congress floor managed by Morocco Quest in Morocco"
                          title="Sponsor and exhibitor booths — Morocco Quest PCO congress management"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Exhibition floor with booth space allocated against signed sponsor tiers, with fulfilment tracked through to on-site delivery.</figcaption>
+                    <figcaption class="visually-hidden">Exhibition floor with booth space allocated against signed sponsor tiers, with fulfilment tracked through to on-site delivery.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6">

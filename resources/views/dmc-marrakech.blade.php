@@ -181,6 +181,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/destination management company (1).webp') }}"
                      alt="Tour group at Ben Youssef Madrasa in Marrakech — Morocco Quest DMC ground services for travel agents and operators"
+                     title="Tour group at Ben Youssef Madrasa, Marrakech — Morocco Quest DMC"
                      width="800" height="591"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
             </div>

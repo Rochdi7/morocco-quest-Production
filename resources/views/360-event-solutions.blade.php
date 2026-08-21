@@ -126,6 +126,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/morocco-quest-luxury-berber-tent-gala-dinner-agafay-desert.webp') }}"
                      alt="End-to-end luxury Berber tent gala dinner delivered by Morocco Quest in the Agafay desert"
+                     title="Luxury Berber tent gala dinner, Agafay Desert — Morocco Quest"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -147,6 +148,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/morocco-quest-gala-courtyard-riad-night-marrakech.webp') }}"
                      alt="Gala dinner in a lantern-lit riad courtyard at night delivered end-to-end by Morocco Quest in Marrakech"
+                     title="Riad courtyard gala at night, Marrakech — Morocco Quest"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">

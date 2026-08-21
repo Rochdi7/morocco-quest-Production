@@ -124,7 +124,7 @@
                          alt="Camel caravan crossing the desert on a Morocco Quest team-building transfer near Marrakech"
                          title="Camel caravan transfer — Morocco Quest ground logistics near Marrakech"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Desert transfer leg of a Marrakech incentive programme, run on Morocco Quest's own vetted fleet and camel-handler network.</figcaption>
+                    <figcaption class="visually-hidden">Desert transfer leg of a Marrakech incentive programme, run on Morocco Quest's own vetted fleet and camel-handler network.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6">
@@ -141,7 +141,7 @@
                          alt="Marrakech medina street used for Morocco Quest venue and accommodation sourcing"
                          title="Marrakech medina — Morocco Quest venue and riad sourcing"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Riads and boutique venues inside the Marrakech medina, contracted at net rate through standing Morocco Quest agreements.</figcaption>
+                    <figcaption class="visually-hidden">Riads and boutique venues inside the Marrakech medina, contracted at net rate through standing Morocco Quest agreements.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6 order-lg-1">
@@ -158,7 +158,7 @@
                          alt="Corporate group joining hands during a Morocco Quest incentive activity programme"
                          title="Team activity programming — Morocco Quest corporate incentives in Morocco"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Activity programming built around the group profile — from 20-person executive incentives to 300-delegate congress breakouts.</figcaption>
+                    <figcaption class="visually-hidden">Activity programming built around the group profile — from 20-person executive incentives to 300-delegate congress breakouts.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6">
@@ -178,7 +178,7 @@
                          alt="Morocco Quest staff managing the congress registration desk on-site for arriving delegates"
                          title="On-site registration desk — Morocco Quest congress management in Morocco"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:400px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Morocco Quest staff on the registration desk — the same on-site team that handles schedule changes and incidents for the duration of the programme.</figcaption>
+                    <figcaption class="visually-hidden">Morocco Quest staff on the registration desk — the same on-site team that handles schedule changes and incidents for the duration of the programme.</figcaption>
                 </figure>
             </div>
         </div>

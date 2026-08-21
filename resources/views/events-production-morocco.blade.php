@@ -129,7 +129,7 @@
                          alt="Custom scenography and stage set built by Morocco Quest for a corporate event in Morocco"
                          title="Event scenography and stage design — Morocco Quest event production"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Set design built to the venue's real rigging points, floor loads and sightlines — not adapted from a template.</figcaption>
+                    <figcaption class="visually-hidden">Set design built to the venue's real rigging points, floor loads and sightlines — not adapted from a template.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6">
@@ -151,6 +151,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/morocco-quest-stage-lighting-production-event-morocco.webp') }}"
                      alt="Stage lighting and technical production rig set up by Morocco Quest at a corporate event in Morocco"
+                     title="Stage lighting rig — Morocco Quest event production in Morocco"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">

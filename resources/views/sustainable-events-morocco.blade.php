@@ -129,7 +129,7 @@
                          alt="Event catering spread built from regionally sourced Moroccan produce by Morocco Quest"
                          title="Locally sourced event catering — Morocco Quest sustainable events"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Catering briefed to buy from Marrakech markets and regional growers first, with an honest account of what was and wasn't sourced locally.</figcaption>
+                    <figcaption class="visually-hidden">Catering briefed to buy from Marrakech markets and regional growers first, with an honest account of what was and wasn't sourced locally.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6">
@@ -154,7 +154,7 @@
                          alt="Atlas Mountains landscape near Marrakech where Morocco Quest vets camps on waste and water use"
                          title="Atlas Mountains — waste and water conscious venue selection by Morocco Quest"
                          class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
-                    <figcaption style="font-size:.85rem;color:#777;margin-top:10px;">Camps and riads in the Atlas foothills vetted on whether waste is packed out and whether water use for your group size is genuinely supportable.</figcaption>
+                    <figcaption class="visually-hidden">Camps and riads in the Atlas foothills vetted on whether waste is packed out and whether water use for your group size is genuinely supportable.</figcaption>
                 </figure>
             </div>
             <div class="col-lg-6">

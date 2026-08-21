@@ -143,6 +143,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/morocco-quest-camel-caravan-desert-team-building-marrakech.webp') }}"
                      alt="Morocco Quest corporate group on a camel caravan desert team-building challenge near Marrakech"
+                     title="Camel caravan team-building near Marrakech — Morocco Quest"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
@@ -164,6 +165,7 @@
             <div class="col-lg-6">
                 <img src="{{ asset('assets/img/morocco-quest-guests-red-carpet-arrival-event-venue-morocco.webp') }}"
                      alt="Morocco Quest incentive group arriving on a red carpet at an exclusive event venue near Marrakech"
+                     title="Red carpet arrival at a Morocco Quest incentive event venue"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:380px;" loading="lazy" />
             </div>
             <div class="col-lg-6">
