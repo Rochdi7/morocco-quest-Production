@@ -11,8 +11,8 @@ class DmcController extends Controller
 {
     public function index(): View
     {
-        $title       = 'DMC Marrakech – Net-Rate Ground Handling | Morocco Quest';
-        $description = 'Morocco Quest — trusted DMC in Marrakech for travel agents, tour operators & MICE groups: private tours, desert camps, transfers & event logistics.';
+        $title       = 'DMC Marrakech – Luxury MICE & Incentive Travel | Morocco Quest';
+        $description = 'Expert DMC services in Marrakech for travel agents, tour operators & MICE planners. Luxury group tours, team building, desert camps & authentic experiences. Request your custom proposal today.';
         $keywords    = [
             'dmc marrakech',
             'destination management company morocco',
