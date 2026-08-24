@@ -2,7 +2,7 @@
 
 {{-- Title/description are set live by DmcController::index() via SEOMeta — layouts.app2 renders
      SEOMeta::generate(), not these @section values. Kept only as a fallback for $title/$description. --}}
-@section('title', $title ?? 'DMC Marrakech | Destination Management Company Morocco | Morocco Quest')
+@section('title', $title ?? 'DMC Marrakech – Net-Rate Ground Handling | Morocco Quest')
 @section('description', $description ?? 'Morocco Quest — trusted DMC in Marrakech for travel agents, tour operators & MICE groups: private tours, desert camps, transfers & event logistics.')
 @section('keywords', is_array($keywords ?? null) ? implode(', ', $keywords) : ($keywords ?? 'dmc marrakech, morocco ground handler, morocco dmc partner, b2b tour operator morocco, mice marrakech, net rate morocco tours'))
 
@@ -79,8 +79,8 @@
 @include('partials.dmc-spacing')
 
 <section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp') }}">
-    <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
-    <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
+    <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Cloud illustration" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
+    <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="Hot air balloon illustration" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
         <div class="row text-center">
             <div class="col-12">
@@ -167,7 +167,7 @@
                     <span class="sec-subtitle style-2">Your Ground Partner in Morocco</span>
                     <h2 class="sec-title">A Marrakech DMC Built for Repeat B2B Business</h2>
                 </div>
-                <p>Morocco Quest runs ground programmes for agencies across Europe, North America, the Middle East and Asia on a confidential, net-rate basis. No client-facing branding, no commission visible in your pricing — just a local team that delivers what's on the brief, on the ground, every time.</p>
+                <p>Morocco Quest is a <strong>DMC Marrakech</strong> partner providing <strong>net-rate ground handling</strong> for travel agents, tour operators and MICE planners. We run ground programmes for agencies across Europe, North America, the Middle East and Asia on a confidential, net-rate basis. No client-facing branding, no commission visible in your pricing — just a local team that delivers what's on the brief, on the ground, every time.</p>
                 <p>From single private tours to full <strong>MICE Marrakech</strong> and <strong>events Marrakech</strong> production, we operate as your local desk: sourcing, contracting, logistics and on-site troubleshooting handled so you can stay focused on the client relationship.</p>
                 <ul class="custom-ul mt-3" style="list-style:none;padding:0;">
                     <li style="padding:6px 0;"><i class="fa-solid fa-circle-check text-theme-color me-2"></i> Licensed Moroccan tour operator (IATA compatible)</li>

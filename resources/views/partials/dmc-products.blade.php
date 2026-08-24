@@ -47,9 +47,9 @@
                             <i class="fa-solid fa-location-dot me-1"></i>
                             <span>{{ $tour->location ?? ($tour->departure ?? 'Morocco') }}</span>
                         </div>
-                        <h5 class="title line-clamp-2 mb-3">
+                        <h3 class="title line-clamp-2 mb-3" style="font-size:1.25rem;">
                             <a href="{{ route('tours.show', ['slug' => $tour->slug]) }}" class="stretched-link">{{ $tour->title }}</a>
-                        </h5>
+                        </h3>
                         <div class="tour-package-footer d-flex justify-content-between align-items-center">
                             <div class="tour-duration me-2">
                                 <i class="fa-solid fa-clock"></i>
@@ -96,9 +96,9 @@
                             <i class="fa-solid fa-tag me-1"></i>
                             <span>{{ $activity->category->name ?? 'Experience' }}</span>
                         </div>
-                        <h5 class="title line-clamp-2 mb-3">
+                        <h3 class="title line-clamp-2 mb-3" style="font-size:1.25rem;">
                             <a href="{{ route('activities.show', $activity->slug) }}" class="stretched-link">{{ $activity->title }}</a>
-                        </h5>
+                        </h3>
                         <div class="tour-package-footer d-flex justify-content-between align-items-center">
                             <div class="tour-duration me-2">
                                 <i class="fa-solid fa-circle-check"></i>

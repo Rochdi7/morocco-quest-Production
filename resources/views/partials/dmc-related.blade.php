@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center mb-4">
-                <h3 class="sec-title" style="font-size:1.5rem;">Related DMC Services</h3>
+                <h2 class="sec-title" style="font-size:1.5rem;">Related DMC Services</h2>
                 <p>Explore the full range of Morocco Quest ground services — every part of your programme, handled by one local partner.</p>
             </div>
         </div>
