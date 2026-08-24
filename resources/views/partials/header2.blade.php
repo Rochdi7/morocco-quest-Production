@@ -11,60 +11,7 @@
             <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
         </div>
         <div class="vs-mobile-menu">
-            <ul>
-                <li class="menu-item-has-children">
-                    <a href="{{ route('tours.multi_day') }}">Multi-Day Tours</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{ route('tours.type', 'Garden Tours') }}">Garden Tours</a></li>
-                        <li><a href="{{ route('tours.type', 'Art Tours') }}">Art Tours</a></li>
-                        <li><a href="{{ route('tours.type', 'Classical Tours') }}">Classical Tours</a></li>
-                    </ul>
-                </li>
-
-                <li class="menu-item-has-children">
-                    <a href="{{ route('experiences.index') }}">One-Day Tours</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{ route('activities.byCategory', 'city-tours') }}">City Tours</a></li>
-                        <li><a href="{{ route('activities.byCategory', 'day-trips') }}">Day Trips</a></li>
-                        <li><a href="{{ route('activities.byCategory', 'local-experiences') }}">Local Experiences</a>
-                        </li>
-                        <li><a href="{{ route('activities.byCategory', 'outdoor-activities') }}">Outdoor Activities</a>
-                        </li>
-                        <li><a href="{{ route('activities.byCategory', 'wellness-experiences') }}">Wellness</a></li>
-                        <li><a href="{{ route('activities.byCategory', 'food-culinary-tours') }}">Food & Culinary
-                                Tours</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="{{ url('/blog') }}">Blog</a>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="{{ route('dmc.marrakech') }}">DMC</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a></li>
-                        <li><a href="{{ route('meetings-conventions.management') }}">Meetings & Conventions Management</a></li>
-                        <li><a href="{{ route('team-building.marrakech') }}">Team Building & Incentive Travel</a></li>
-                        <li><a href="{{ route('events-production.morocco') }}">Events Production & Communication</a></li>
-                        <li><a href="{{ route('congress-organization.morocco') }}">Professional Congress Organization</a></li>
-                        <li><a href="{{ route('destination-management.company') }}">Destination Management Company</a></li>
-                        <li><a href="{{ route('sustainable-events.morocco') }}">Sustainable Events</a></li>
-                        <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Info Hub</a>
-                    <ul class="sub-menu">
-                        <li><a href="{{ url('/about') }}">About Us</a></li>
-                        <li><a href="{{ url('/faq') }}">FAQ</a></li>
-                        <li><a href="{{ url('/terms-and-conditions') }}">Terms & Conditions</a></li>
-                        <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="{{ url('/contact') }}">Contact</a>
-                </li>
-            </ul>
+            <ul id="mobileMenuList"></ul>
         </div>
     </div>
 </div>
@@ -98,59 +45,7 @@
 
             <div class="col-xl-auto col-lg-auto col-sm-3 d-none d-sm-block">
                 <nav class="main-menu d-none d-lg-block">
-                    <ul>
-                        <li class="menu-item-has-children">
-                            <a href="{{ route('tours.multi_day') }}">Multi-Day Tours</a>
-                            <ul class="sub-menu">
-                                <li><a href="{{ route('tours.type', 'Garden Tours') }}">Garden Tours</a></li>
-                                <li><a href="{{ route('tours.type', 'Art Tours') }}">Art Tours</a></li>
-                                <li><a href="{{ route('tours.type', 'Classical Tours') }}">Classical Tours</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="menu-item-has-children">
-                            <a href="{{ route('experiences.index') }}">One-Day Tours</a>
-                            <ul class="sub-menu">
-                                <li><a href="{{ route('activities.byCategory', 'city-tours') }}">City Tours</a></li>
-                                <li><a href="{{ route('activities.byCategory', 'day-trips') }}">Day Trips</a></li>
-                                <li><a href="{{ route('activities.byCategory', 'local-experiences') }}">Local
-                                        Experiences</a></li>
-                                <li><a href="{{ route('activities.byCategory', 'outdoor-activities') }}">Outdoor
-                                        Activities</a></li>
-                                <li><a href="{{ route('activities.byCategory', 'wellness-experiences') }}">Wellness</a>
-                                </li>
-                                <li><a href="{{ route('activities.byCategory', 'food-culinary-tours') }}">Food &
-                                        Culinary Tours</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="{{ route('blog.index') }}">Blog</a></li>
-                        <li class="menu-item-has-children">
-                            <a href="{{ route('dmc.marrakech') }}">DMC</a>
-                            <ul class="sub-menu">
-                                <li><a href="{{ route('dmc.marrakech') }}">DMC Marrakech</a></li>
-                                <li><a href="{{ route('meetings-conventions.management') }}">Meetings & Conventions Management</a></li>
-                                <li><a href="{{ route('team-building.marrakech') }}">Team Building & Incentive Travel</a></li>
-                                <li><a href="{{ route('events-production.morocco') }}">Events Production & Communication</a></li>
-                                <li><a href="{{ route('congress-organization.morocco') }}">Professional Congress Organization</a></li>
-                                <li><a href="{{ route('destination-management.company') }}">Destination Management Company</a></li>
-                                <li><a href="{{ route('sustainable-events.morocco') }}">Sustainable Events</a></li>
-                                <li><a href="{{ route('360-solutions.morocco') }}">360° Event & Travel Solutions</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="menu-item-has-children">
-                            <a href="#">Info Hub</a>
-                            <ul class="sub-menu">
-                                <li><a href="{{ route('about') }}">About Us</a></li>
-                                <li><a href="{{ route('faq') }}">FAQ</a></li>
-                                <li><a href="{{ route('terms.conditions') }}">Terms & Conditions</a></li>
-                                <li><a href="{{ route('privacy.policy') }}">Privacy Policy</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="{{ route('contact.show') }}">Contact</a></li>
-                    </ul>
+                    <ul id="stickyMenuList"></ul>
                 </nav>
 
                 <div class="logo d-lg-none">
@@ -285,7 +180,7 @@
                     </div>
                     <div class="col-xl-9 col-lg-auto d-none d-lg-flex justify-content-end gap-md-4 gap-xl-5">
                         <nav class="main-menu menu-style1 v2 d-none d-lg-block">
-                            <ul class="d-flex justify-content-center align-items-center">
+                            <ul id="primaryMenuList" class="d-flex justify-content-center align-items-center">
                                 <li class="menu-item-has-children">
                                     <a href="{{ route('tours.multi_day') }}">Multi-Day Tours</a>
                                     <ul class="sub-menu">
@@ -367,6 +262,18 @@
         </div>
     </div>
 </header>
+
+{{-- Sticky-header + mobile menus are cloned from the primary nav so each link
+     is rendered ONCE in the HTML (SEO: no duplicated anchor texts). Runs
+     synchronously before main.js (defer) initialises vsmobilemenu(). --}}
+<script>
+(function(){
+  var src=document.getElementById('primaryMenuList'); if(!src) return;
+  var html=src.innerHTML;
+  var st=document.getElementById('stickyMenuList'); if(st) st.innerHTML=html;
+  var mb=document.getElementById('mobileMenuList'); if(mb) mb.innerHTML=html;
+})();
+</script>
 
 <style>
     .vs-blog-box .blog-share .share-list li {

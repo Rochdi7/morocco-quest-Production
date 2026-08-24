@@ -398,7 +398,7 @@
                 <div class="col-md-6 order-1 order-md-2">
                     <div class="footer-menu">
                         <ul class="custom-ul justify-content-center justify-content-md-end">
-                            <li><a href="{{ route('privacy.policy') }}">Privacy Policy</a></li>
+                            <li><a href="{{ route('privacy.policy') }}">Privacy</a></li>
                             <li><a href="{{ route('terms.conditions') }}">Terms</a></li>
                             <li><a href="{{ route('cookie.policy') }}">Cookie Policy</a></li>
                         </ul>
