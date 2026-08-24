@@ -221,9 +221,9 @@
                 ['city' => 'Marrakech',   'label' => 'Gateway & base for most tours'],
                 ['city' => 'Fes',         'label' => 'Imperial city & medina'],
                 ['city' => 'Casablanca',  'label' => 'Business hub & arrivals'],
-                ['city' => 'Chefchaouen', 'label' => 'Blue city in the Rif'],
-                ['city' => 'Merzouga',    'label' => 'Sahara desert & camel treks'],
-                ['city' => 'Ouarzazate',  'label' => 'Kasbah route & film studios'],
+                ['city' => 'Tangier',     'label' => 'Gateway to Europe & the north'],
+                ['city' => 'Agafay',      'label' => 'Desert camps & dinners near Marrakech'],
+                ['city' => 'Rabat',       'label' => 'Capital city & government events'],
                 ['city' => 'Essaouira',   'label' => 'Atlantic coast & wind sports'],
                 ['city' => 'Agadir',      'label' => 'Beach & resort groups'],
             ];

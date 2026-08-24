@@ -302,6 +302,7 @@
                 ['stage'=>'Final Programme & Badging', 'marker'=>'2 Months Out', 'body'=>'Abstract book compiled, accreditation documentation submitted, badges and access control finalised.'],
                 ['stage'=>'On-Site Delivery', 'marker'=>'Congress Week', 'body'=>'Registration desk, session-room management and real-time problem-solving across every congress day.'],
                 ['stage'=>'Post-Congress Reporting', 'marker'=>'4-6 Weeks After', 'body'=>'Financial reconciliation, sponsor fulfilment report and a knowledge handover file for the next edition.'],
+                ['stage'=>'Next Edition Planning', 'marker'=>'3 Months After', 'body'=>'Lessons-learned review, delegate survey analysis and an early destination shortlist for the following congress.'],
             ];
             @endphp
             @foreach($timeline as $i => $t)
@@ -328,10 +329,10 @@
                 <p>Venue, accommodation and catering costs sit meaningfully below Western congress cities, a difference that shows up directly in a finance committee's comparison of bid options — and stretches sponsor budgets further on exhibition space and delegate hospitality.</p>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{ asset('assets/img/morocco-quest-marrakech-street-performers-medina.webp') }}"
-                     alt="Street performers in the Marrakech medina, part of the congress destination experience"
-                     title="Marrakech medina performers — congress destination"
-                     width="1100" height="733"
+                <img src="{{ asset('assets/img/morocco-quest-marrakech-congress-destination.webp') }}"
+                     alt="Marrakech, a congress destination in Morocco for international delegates"
+                     title="Marrakech congress destination"
+                     width="1100" height="825"
                      class="w-100" style="border-radius:12px;object-fit:cover;max-height:420px;" loading="lazy" />
                 <div class="row g-3 mt-1">
                     <div class="col-6">
