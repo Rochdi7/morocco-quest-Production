@@ -6,6 +6,8 @@ use App\Models\Activity;
 use Illuminate\Http\Request;
 use App\Mail\ActivityInquiryMail;
 use App\Rules\Recaptcha;
+use App\Models\Lead;
+use App\Support\LeadRecorder;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -30,6 +32,24 @@ class ActivityInquiryController extends Controller
         $validatedData['activity_title']   = $activity->title;
         $validatedData['activity_url']     = route('activities.show', $activity);
         $validatedData['overview_excerpt'] = Str::limit(strip_tags($activity->overview), 350);
+
+        // Persist the lead first: even if the mail transport is down, the
+        // inquiry is never lost — it is still visible in the admin panel.
+        LeadRecorder::record($request, [
+            'type'          => Lead::TYPE_ACTIVITY_INQUIRY,
+            'source'        => $activity->slug,
+            'name'          => $validatedData['name'],
+            'email'         => $validatedData['email'],
+            'phone'         => $validatedData['phone'],
+            'nationality'   => $validatedData['nationality'],
+            'arrival_date'  => $validatedData['arrival_date'] ?? null,
+            'duration_days' => $validatedData['duration_days'] ?? null,
+            'adults'        => $validatedData['adults'],
+            'children'      => $validatedData['children'] ?? null,
+            'message'       => $validatedData['inquiry_message'],
+            'activity_id'   => $activity->id,
+            'item_title'    => $activity->title,
+        ]);
 
         // Make sure related data is available in email
         $activity->load(['images', 'itineraryDays']);

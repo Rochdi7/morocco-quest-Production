@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\LeadClickController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\SearchBarController;
 use App\Http\Controllers\SearchController;
@@ -92,6 +93,13 @@ Route::prefix('contact')->name('contact.')->controller(ContactController::class)
     Route::get('/', 'index')->name('show');
     Route::post('/', 'store')->name('submit');
 });
+
+// WhatsApp / phone click beacon (navigator.sendBeacon, no page reload).
+// CSRF-exempt because the calling pages come from the guest page-cache; see
+// LeadClickController for the rationale.
+Route::post('/track/click', [LeadClickController::class, 'store'])
+    ->middleware('throttle:30,1')
+    ->name('track.click');
 
 Route::post('/newsletter/subscribe', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 

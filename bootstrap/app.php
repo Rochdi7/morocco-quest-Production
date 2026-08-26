@@ -14,6 +14,13 @@ return Application::configure(basePath: dirname(__DIR__))
         // Force HTTPS (only active when APP_ENV=production)
         $middleware->append(\App\Http\Middleware\ForceHttps::class);
 
+        // The click beacon is fired from pages served out of the guest
+        // page-cache, whose embedded CSRF token is stale. See
+        // LeadClickController for why exempting it is safe.
+        $middleware->validateCsrfTokens(except: [
+            'track/click',
+        ]);
+
         // Existing HTML minifier
         // $middleware->append(\App\Http\Middleware\HtmlMinifier::class);
     })

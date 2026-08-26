@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\ContactFormMail;
 use App\Rules\Recaptcha;
+use App\Models\Lead;
+use App\Support\LeadRecorder;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -54,6 +56,22 @@ class ContactController extends Controller
             'children'      => 'nullable|integer|min:0',
             'travel_ideas'  => 'nullable|string|max:5000',
             'g-recaptcha-response' => ['required', new Recaptcha],
+        ]);
+
+        // Persist the lead first: even if the mail transport is down, the
+        // message is never lost — it is still visible in the admin panel.
+        LeadRecorder::record($request, [
+            'type'          => Lead::TYPE_CONTACT_INQUIRY,
+            'source'        => $request->input('page_source', 'contact'),
+            'name'          => $validatedData['name'],
+            'email'         => $validatedData['email'],
+            'phone'         => $validatedData['phone'],
+            'nationality'   => $validatedData['nationality'],
+            'arrival_date'  => $validatedData['arrival_date'],
+            'duration_days' => $validatedData['duration_days'],
+            'adults'        => $validatedData['adults'],
+            'children'      => $validatedData['children'] ?? null,
+            'message'       => $validatedData['travel_ideas'] ?? null,
         ]);
 
         try {

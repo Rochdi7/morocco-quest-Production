@@ -6,6 +6,8 @@ use App\Models\Tour;
 use Illuminate\Http\Request;
 use App\Mail\TourInquiryMail;
 use App\Rules\Recaptcha;
+use App\Models\Lead;
+use App\Support\LeadRecorder;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Log;
 
@@ -37,6 +39,24 @@ class TourInquiryController extends Controller
         // Add useful context to the data array (optional)
         $validatedData['tour_title'] = $tour->title;
         $validatedData['tour_url'] = route('tours.show', $tour);
+
+        // Persist the lead first: even if the mail transport is down, the
+        // inquiry is never lost — it is still visible in the admin panel.
+        LeadRecorder::record($request, [
+            'type'          => Lead::TYPE_TOUR_INQUIRY,
+            'source'        => $tour->slug,
+            'name'          => $validatedData['name'],
+            'email'         => $validatedData['email'],
+            'phone'         => $validatedData['phone'],
+            'nationality'   => $validatedData['nationality'],
+            'arrival_date'  => $validatedData['arrival_date'],
+            'duration_days' => $validatedData['duration_days'],
+            'adults'        => $validatedData['adults'],
+            'children'      => $validatedData['children'] ?? null,
+            'message'       => $validatedData['inquiry_message'],
+            'tour_id'       => $tour->id,
+            'item_title'    => $tour->title,
+        ]);
 
         try {
             $adminEmail = config('mail.from.address');

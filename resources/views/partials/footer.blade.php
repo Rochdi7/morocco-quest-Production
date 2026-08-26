@@ -687,6 +687,57 @@
     });
 </script>
 
+<script>
+    // Contact-click tracking -> `leads` table (type whatsapp_click / phone_click).
+    //
+    // Fires on the floating WhatsApp button and on every header/footer tel:
+    // and wa.me link. Uses navigator.sendBeacon so the request is handed to
+    // the browser and survives the navigation to WhatsApp / the dialer: the
+    // page never reloads and the click is not delayed. fetch(keepalive) is
+    // the fallback for browsers without sendBeacon.
+    (function () {
+        var ENDPOINT = "{{ route('track.click') }}";
+        // Page identifier stored in `source`, so the admin can see which page
+        // the click came from (e.g. "tours/sahara-3-days").
+        var SOURCE = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+
+        function send(type) {
+            var payload = { type: type, source: SOURCE };
+
+            try {
+                if (navigator.sendBeacon) {
+                    var blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+                    if (navigator.sendBeacon(ENDPOINT, blob)) return;
+                }
+
+                if (window.fetch) {
+                    fetch(ENDPOINT, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify(payload),
+                        credentials: 'same-origin',
+                        keepalive: true
+                    }).catch(function () {});
+                }
+            } catch (e) { /* tracking must never block the click */ }
+        }
+
+        // Delegated so it also covers links rendered after load.
+        document.addEventListener('click', function (e) {
+            var link = e.target.closest && e.target.closest('a[href]');
+            if (!link) return;
+
+            var href = link.getAttribute('href') || '';
+
+            if (link.classList.contains('floating-whatsapp') || href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
+                send('whatsapp_click');
+            } else if (href.indexOf('tel:') === 0) {
+                send('phone_click');
+            }
+        }, true);
+    })();
+</script>
+
 {{-- Google reCAPTCHA v2 (Checkbox) — lazy-loaded only when a ".g-recaptcha"
      widget actually approaches the viewport or its form is focused, instead
      of unconditionally on every page load. The widget only appears on pages
