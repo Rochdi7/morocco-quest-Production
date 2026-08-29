@@ -11,7 +11,7 @@ class MeetingsConventionsController extends Controller
 {
     public function index(): View
     {
-        $title       = 'Meetings & Conventions Management Marrakech | Morocco Quest DMC';
+        $title       = 'MICE Marrakech | Meetings & Conventions | Morocco Quest';
         $description = 'Conference and convention management in Marrakech: venue sourcing, AV production, delegate logistics and on-site coordination across Morocco.';
         $keywords    = [
             'meetings and conventions marrakech',

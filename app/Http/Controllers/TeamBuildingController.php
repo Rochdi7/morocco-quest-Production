@@ -11,7 +11,7 @@ class TeamBuildingController extends Controller
 {
     public function index(): View
     {
-        $title       = 'Team Building Marrakech | Incentive Travel Morocco | Morocco Quest DMC';
+        $title       = 'Team Building Marrakech | Incentive Travel Morocco';
         $description = 'Team building and incentive travel programmes in Marrakech: Atlas Mountain challenges, desert camps, medina rallies and CSR activities for corporate groups.';
         $keywords    = [
             'team building marrakech',

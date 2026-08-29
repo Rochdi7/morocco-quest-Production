@@ -11,7 +11,7 @@ class EventsProductionController extends Controller
 {
     public function index(): View
     {
-        $title       = 'Corporate Events Morocco | Event Production Marrakech | Morocco Quest DMC';
+        $title       = 'Corporate Events Morocco | Event Production Marrakech';
         $description = 'Event production in Morocco: staging, lighting, sound, LED and scenography for product launches, brand activations and galas in Marrakech.';
         $keywords    = [
             'corporate events morocco',
