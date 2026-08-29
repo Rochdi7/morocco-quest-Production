@@ -128,6 +128,14 @@
                     </div>
 
                     <style>
+                        /* Font Awesome is not loaded on this page, so these
+                           pseudo-elements rendered as .notdef tofu boxes behind
+                           the inline Lucide arrows. The SVGs are the icon now. */
+                        .search-box form .form-group:not(:last-child)::after,
+                        .search-box form .form-group .form-select::before {
+                            content: none;
+                        }
+
                         .lucide-arrow-down-icon {
                             width: 18px;
                             height: 18px;

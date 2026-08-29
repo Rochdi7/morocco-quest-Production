@@ -11,13 +11,17 @@ class DmcController extends Controller
 {
     public function index(): View
     {
-        $title       = 'DMC Marrakech – Luxury MICE & Incentive Travel | Morocco Quest';
-        $description = 'Expert DMC services in Marrakech for travel agents, tour operators & MICE planners. Luxury group tours, team building, desert camps & authentic experiences. Request your custom proposal today.';
+        // "morocco dmc" (170/mo, KD 10) carries ~8x the volume of "dmc marrakech"
+        // (20/mo, KD 7) at similar difficulty, so it leads; the Marrakech variant
+        // is retained in the tail since the page already ranks for it.
+        $title       = 'Morocco DMC | MICE & Incentive Travel | DMC Marrakech';
+        $description = 'Morocco DMC for travel agents, tour operators and MICE planners. Group tours, team building and incentives across Marrakech and Morocco.';
+        // Ordered by Semrush volume: morocco dmc 170, dmc morocco 90, dmc marrakech 20.
         $keywords    = [
+            'morocco dmc',
+            'dmc morocco',
             'dmc marrakech',
             'destination management company morocco',
-            'dmc morocco',
-            'morocco dmc',
             'marrakech dmc',
             'ground operator morocco',
             'morocco ground services',

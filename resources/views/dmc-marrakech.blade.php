@@ -69,7 +69,7 @@ $dmcFaqs = [
         <div class="row text-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h1 class="breadcrumb-title">DMC Marrakech – Luxury Destination Management &amp; MICE Services</h1>
+                    <h1 class="breadcrumb-title">Morocco DMC &amp; DMC Marrakech – Destination Management &amp; MICE</h1>
                     <p style="color:#fff;font-size:1.15rem;max-width:640px;margin:12px auto 0;">
                         Expert Local Guides. Seamless Logistics. Unforgettable Experiences.<br>
                         Licensed, white-label ground partner for agents, operators &amp; MICE planners — net-rate quotes within 24 hours.

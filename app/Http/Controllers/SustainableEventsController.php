@@ -11,8 +11,8 @@ class SustainableEventsController extends Controller
 {
     public function index(): View
     {
-        $title       = 'Sustainable Events Morocco | Responsible Corporate Events | Morocco Quest DMC';
-        $description = 'Responsible corporate event planning in Morocco: local sourcing, artisan cooperative partnerships and honest sustainability practices for CSR-focused programmes.';
+        $title       = 'Sustainable Events Morocco | Responsible MICE | Morocco Quest';
+        $description = 'Sustainable events in Morocco: local sourcing, artisan cooperative partnerships and honest reporting for CSR and ESG corporate programmes.';
         $keywords    = [
             'sustainable events morocco',
             'responsible corporate events morocco',

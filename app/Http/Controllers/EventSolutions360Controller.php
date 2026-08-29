@@ -11,7 +11,7 @@ class EventSolutions360Controller extends Controller
 {
     public function index(): View
     {
-        $title       = '360° Event Solutions Morocco | Integrated MICE Programmes | Morocco Quest DMC';
+        $title       = '360° Event Solutions Morocco | MICE Programmes | Morocco Quest';
         $description = 'One DMC managing your entire multi-day corporate programme in Morocco — meetings, team building, events and gala dinners under a single point of accountability.';
         $keywords    = [
             '360 event solutions morocco',

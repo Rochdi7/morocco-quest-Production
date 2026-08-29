@@ -91,7 +91,7 @@
                 <div class="breadcrumb-menu">
                     <ul class="custom-ul">
                         <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="{{ route('dmc.marrakech') }}">DMC</a></li>
+                        <li><a href="{{ route('dmc.marrakech') }}">Morocco DMC</a></li>
                         <li>Destination Management Company</li>
                     </ul>
                 </div>

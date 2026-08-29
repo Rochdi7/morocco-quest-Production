@@ -11,8 +11,8 @@ class CongressOrganizationController extends Controller
 {
     public function index(): View
     {
-        $title       = 'Professional Congress Organizer Morocco | PCO Marrakech | Morocco Quest DMC';
-        $description = 'Professional Congress Organizer services in Morocco. Abstract management, scientific programme support, sponsor and exhibitor management for medical and scientific congresses.';
+        $title       = 'Congress Organizer Morocco | PCO Marrakech | Morocco Quest';
+        $description = 'PCO services in Morocco: abstract management, registration, sponsor and exhibitor programmes for medical and scientific congresses in Marrakech.';
         $keywords    = [
             'professional congress organizer morocco',
             'PCO morocco',
