@@ -33,6 +33,14 @@ class CreateLeadViewer extends Command
 
         $password = $this->option('password') ?: $this->secret('Password (min 8 characters)');
 
+        if (! in_array(strtolower($email), User::LEAD_VIEWERS, true)) {
+            $this->error("{$email} is not in User::LEAD_VIEWERS.");
+            $this->line('Add it to that allow-list first, or the account will');
+            $this->line('be created without access to the leads dashboard.');
+
+            return self::FAILURE;
+        }
+
         $user = User::where('email', $email)->first();
 
         if ($user) {

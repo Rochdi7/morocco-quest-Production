@@ -64,13 +64,20 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, HasName
     }
 
     /**
-     * Who may see the leads funnel: the WhatsApp/phone click counters, the
-     * inquiry-email totals and the Leads resource in the sidebar.
+     * Accounts allowed to see the leads funnel: the WhatsApp/phone click
+     * counters, the inquiry-email totals and the Leads resource in the
+     * sidebar.
      *
-     * Admins always qualify; `lead_viewer` is the dedicated read-only role.
+     * Deliberately an explicit allow-list rather than a role check: the leads
+     * data is commercially sensitive and every other panel user — including
+     * the `admin` role — must not see it. Add an address here to grant access.
      */
+    public const LEAD_VIEWERS = [
+        'rochdi.karouali1234@gmail.com',
+    ];
+
     public function canViewLeadStats(): bool
     {
-        return in_array($this->role, ['admin', 'lead_viewer'], true) || $this->is_admin;
+        return in_array(strtolower(trim((string) $this->email)), self::LEAD_VIEWERS, true);
     }
 }
