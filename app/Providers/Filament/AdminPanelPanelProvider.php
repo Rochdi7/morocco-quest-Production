@@ -12,6 +12,7 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\Widgets\AccountWidget;
+use App\Filament\Widgets\LeadStats;
 use App\Filament\Widgets\TourStats;
 use App\Filament\Widgets\TripStats;
 use App\Filament\Widgets\ActivityStats;
@@ -62,6 +63,7 @@ class AdminPanelPanelProvider extends PanelProvider
 
             ->widgets([
                 AccountWidget::class,
+                LeadStats::class,
             ])
 
             ->middleware([

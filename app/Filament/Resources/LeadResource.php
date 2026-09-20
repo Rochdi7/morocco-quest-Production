@@ -29,6 +29,17 @@ class LeadResource extends Resource
     protected static ?string $modelLabel = 'Lead';
     protected static ?int $navigationSort = 1;
 
+    /** Only lead viewers and admins get the Leads section. */
+    public static function canViewAny(): bool
+    {
+        return auth()->user()?->canViewLeadStats() ?? false;
+    }
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        return auth()->user()?->canViewLeadStats() ?? false;
+    }
+
     /** Badge shows how many form leads still need a reply. */
     public static function getNavigationBadge(): ?string
     {

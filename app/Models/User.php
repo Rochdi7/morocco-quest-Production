@@ -17,6 +17,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, HasName
         'email',
         'password',
         'profile_image',
+        'role',
     ];
 
     protected $hidden = [
@@ -60,5 +61,16 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, HasName
     public function getIsAdminAttribute(): bool
     {
         return $this->role === 'admin' || $this->email === 'mounir.akajia@gmail.com';
+    }
+
+    /**
+     * Who may see the leads funnel: the WhatsApp/phone click counters, the
+     * inquiry-email totals and the Leads resource in the sidebar.
+     *
+     * Admins always qualify; `lead_viewer` is the dedicated read-only role.
+     */
+    public function canViewLeadStats(): bool
+    {
+        return in_array($this->role, ['admin', 'lead_viewer'], true) || $this->is_admin;
     }
 }
