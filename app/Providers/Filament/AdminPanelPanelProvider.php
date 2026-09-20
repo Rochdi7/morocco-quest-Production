@@ -61,8 +61,10 @@ class AdminPanelPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
 
+            // AccountWidget is registered as a header widget on the Dashboard
+            // page instead: left here it shares the footer grid row with
+            // LeadStats and squeezes the stat cards into a narrow strip.
             ->widgets([
-                AccountWidget::class,
                 LeadStats::class,
             ])
 
