@@ -19,71 +19,72 @@ class LeadStats extends BaseWidget
 
     protected int | string | array $columnSpan = 'full';
 
-    public static function canView(): bool
-    {
-        return auth()->user()?->canViewLeadStats() ?? false;
-    }
-
+    /**
+     * Stats are short enough to sit 3-up on desktop; drop to 2 on tablet and
+     * 1 on phones so the labels never wrap mid-word.
+     */
     protected function getColumns(): int
     {
         return 3;
     }
 
+    public static function canView(): bool
+    {
+        return auth()->user()?->canViewLeadStats() ?? false;
+    }
+
     protected function getStats(): array
     {
-        $formLeads = Lead::whereNotIn('type', Lead::CLICK_TYPES);
+        $formLeads = fn () => Lead::whereNotIn('type', Lead::CLICK_TYPES);
 
         return [
-            Stat::make('Form Leads', (clone $formLeads)->count())
-                ->description($this->since((clone $formLeads), 30) . ' in the last 30 days')
+            Stat::make('Form Leads', $formLeads()->count())
+                ->description($this->since($formLeads(), 30) . ' new this month')
                 ->descriptionIcon('heroicon-m-envelope')
-                ->chart($this->trend(Lead::whereNotIn('type', Lead::CLICK_TYPES)))
-                ->color('success')
-                ->icon('heroicon-o-inbox-arrow-down'),
+                ->chart($this->trend($formLeads()))
+                ->color('success'),
 
             Stat::make('WhatsApp Clicks', Lead::where('type', Lead::TYPE_WHATSAPP_CLICK)->count())
-                ->description($this->since(Lead::where('type', Lead::TYPE_WHATSAPP_CLICK), 30) . ' in the last 30 days')
+                ->description($this->since(Lead::where('type', Lead::TYPE_WHATSAPP_CLICK), 30) . ' this month')
                 ->descriptionIcon('heroicon-m-chat-bubble-left-right')
                 ->chart($this->trend(Lead::where('type', Lead::TYPE_WHATSAPP_CLICK)))
-                ->color('success')
-                ->icon('heroicon-o-chat-bubble-oval-left-ellipsis'),
+                ->color('success'),
 
             Stat::make('Phone Clicks', Lead::where('type', Lead::TYPE_PHONE_CLICK)->count())
-                ->description($this->since(Lead::where('type', Lead::TYPE_PHONE_CLICK), 30) . ' in the last 30 days')
+                ->description($this->since(Lead::where('type', Lead::TYPE_PHONE_CLICK), 30) . ' this month')
                 ->descriptionIcon('heroicon-m-phone')
                 ->chart($this->trend(Lead::where('type', Lead::TYPE_PHONE_CLICK)))
-                ->color('warning')
-                ->icon('heroicon-o-phone-arrow-up-right'),
+                ->color('warning'),
 
             Stat::make('Tour Inquiries', Lead::where('type', Lead::TYPE_TOUR_INQUIRY)->count())
-                ->description('Emails sent from tour pages')
-                ->color('success')
-                ->icon('heroicon-o-map'),
+                ->description('From tour pages')
+                ->descriptionIcon('heroicon-m-map')
+                ->color('success'),
 
             Stat::make('Activity Inquiries', Lead::where('type', Lead::TYPE_ACTIVITY_INQUIRY)->count())
-                ->description('Emails sent from activity pages')
-                ->color('info')
-                ->icon('heroicon-o-sparkles'),
+                ->description('From activity pages')
+                ->descriptionIcon('heroicon-m-sparkles')
+                ->color('info'),
 
-            Stat::make('Contact / B2B Forms', Lead::where('type', Lead::TYPE_CONTACT_INQUIRY)->count())
-                ->description('Emails sent from contact forms')
-                ->color('primary')
-                ->icon('heroicon-o-building-office-2'),
+            Stat::make('Contact Forms', Lead::where('type', Lead::TYPE_CONTACT_INQUIRY)->count())
+                ->description('Contact and B2B')
+                ->descriptionIcon('heroicon-m-building-office-2')
+                ->color('primary'),
 
-            Stat::make('New / Unhandled', (clone $formLeads)->where('status', 'new')->count())
-                ->description('Form leads still to contact')
-                ->color('danger')
-                ->icon('heroicon-o-exclamation-circle'),
+            Stat::make('To Contact', $formLeads()->where('status', 'new')->count())
+                ->description('Awaiting a reply')
+                ->descriptionIcon('heroicon-m-exclamation-circle')
+                ->color('danger'),
 
-            Stat::make('Converted', (clone $formLeads)->where('status', 'converted')->count())
-                ->description($this->conversionRate() . ' of all form leads')
-                ->color('success')
-                ->icon('heroicon-o-check-badge'),
+            Stat::make('Converted', $formLeads()->where('status', 'converted')->count())
+                ->description($this->conversionRate() . ' conversion rate')
+                ->descriptionIcon('heroicon-m-check-badge')
+                ->color('success'),
 
             Stat::make('Total Signals', Lead::count())
-                ->description('Forms + clicks, all time')
-                ->color('gray')
-                ->icon('heroicon-o-signal'),
+                ->description('Forms and clicks, all time')
+                ->descriptionIcon('heroicon-m-signal')
+                ->color('gray'),
         ];
     }
 
