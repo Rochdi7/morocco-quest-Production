@@ -2,6 +2,7 @@
 
 namespace App\Filament\Widgets;
 
+use App\Filament\Resources\LeadResource;
 use App\Models\Lead;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -33,6 +34,16 @@ class LeadStats extends BaseWidget
         return auth()->user()?->canViewLeadStats() ?? false;
     }
 
+    /**
+     * Deep link into the Leads table, pre-filtered. Clicking a card opens the
+     * matching list rather than a modal, so the records arrive with search,
+     * sorting and the full detail view already available.
+     */
+    private function tab(string $tab, array $params = []): string
+    {
+        return LeadResource::getUrl('index', ['activeTab' => $tab] + $params);
+    }
+
     protected function getStats(): array
     {
         $formLeads = fn () => Lead::whereNotIn('type', Lead::CLICK_TYPES);
@@ -42,48 +53,66 @@ class LeadStats extends BaseWidget
                 ->description($this->since($formLeads(), 30) . ' new this month')
                 ->descriptionIcon('heroicon-m-envelope')
                 ->chart($this->trend($formLeads()))
+                ->url($this->tab('inquiries'))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('success'),
 
             Stat::make('WhatsApp Clicks', Lead::where('type', Lead::TYPE_WHATSAPP_CLICK)->count())
                 ->description($this->since(Lead::where('type', Lead::TYPE_WHATSAPP_CLICK), 30) . ' this month')
                 ->descriptionIcon('heroicon-m-chat-bubble-left-right')
                 ->chart($this->trend(Lead::where('type', Lead::TYPE_WHATSAPP_CLICK)))
+                ->url($this->tab('whatsapp'))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('success'),
 
             Stat::make('Phone Clicks', Lead::where('type', Lead::TYPE_PHONE_CLICK)->count())
                 ->description($this->since(Lead::where('type', Lead::TYPE_PHONE_CLICK), 30) . ' this month')
                 ->descriptionIcon('heroicon-m-phone')
                 ->chart($this->trend(Lead::where('type', Lead::TYPE_PHONE_CLICK)))
+                ->url($this->tab('phone'))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('warning'),
 
             Stat::make('Tour Inquiries', Lead::where('type', Lead::TYPE_TOUR_INQUIRY)->count())
                 ->description('From tour pages')
                 ->descriptionIcon('heroicon-m-map')
+                ->url($this->tab('inquiries', ['tableFilters[type][values][0]' => Lead::TYPE_TOUR_INQUIRY]))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('success'),
 
             Stat::make('Activity Inquiries', Lead::where('type', Lead::TYPE_ACTIVITY_INQUIRY)->count())
                 ->description('From activity pages')
                 ->descriptionIcon('heroicon-m-sparkles')
+                ->url($this->tab('inquiries', ['tableFilters[type][values][0]' => Lead::TYPE_ACTIVITY_INQUIRY]))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('info'),
 
             Stat::make('Contact Forms', Lead::where('type', Lead::TYPE_CONTACT_INQUIRY)->count())
                 ->description('Contact and B2B')
                 ->descriptionIcon('heroicon-m-building-office-2')
+                ->url($this->tab('inquiries', ['tableFilters[type][values][0]' => Lead::TYPE_CONTACT_INQUIRY]))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('primary'),
 
             Stat::make('To Contact', $formLeads()->where('status', 'new')->count())
                 ->description('Awaiting a reply')
                 ->descriptionIcon('heroicon-m-exclamation-circle')
+                ->url($this->tab('inquiries', ['tableFilters[status][value]' => 'new']))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('danger'),
 
             Stat::make('Converted', $formLeads()->where('status', 'converted')->count())
                 ->description($this->conversionRate() . ' conversion rate')
                 ->descriptionIcon('heroicon-m-check-badge')
+                ->url($this->tab('inquiries', ['tableFilters[status][value]' => 'converted']))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('success'),
 
             Stat::make('Total Signals', Lead::count())
                 ->description('Forms and clicks, all time')
                 ->descriptionIcon('heroicon-m-signal')
+                ->url($this->tab('all'))
+                ->extraAttributes(['class' => 'cursor-pointer'])
                 ->color('gray'),
         ];
     }
