@@ -1,6 +1,6 @@
 # Leads Audit Report — Morocco Quest
 
-**Date:** 2026-08-31
+**Date:** 2026-08-31 (updated 2026-09-20 after backfill)
 **Scope:** Verify how many leads are stored in the database and whether the form/click tracking funnel works.
 **Server:** `coloredmorocco.com` → `~/public_html/website_ad320cd7` (site: morocco-quest.com)
 
@@ -8,7 +8,24 @@
 
 ## Verdict
 
-**Nothing is broken.** The `leads` table is empty of real leads only because it went live on **2026-08-26**, and no form has been submitted in the days since. All historic leads exist as email only.
+**Nothing is broken.** The `leads` table was empty of real leads only because it went live on **2026-08-26**; every earlier form submission existed as email only.
+
+**Resolved 2026-09-20:** the 7 historic inquiries were recreated from the maildir with
+`php artisan leads:import-maildir ~/mail/morocco-quest.com/sales`. The table now holds
+**13 rows** and the admin counters show the real history.
+
+| Type | Count |
+|---|---|
+| tour_inquiry | 2 |
+| activity_inquiry | 2 |
+| contact_inquiry | 3 |
+| whatsapp_click | 5 |
+| phone_click | 1 |
+| **TOTAL** | **13** |
+
+Imported rows carry `source = 'imported-email'` so backfilled history stays distinguishable
+from live captures. They all land with `status = 'new'` and should be triaged to
+`contacted` / `converted` / `closed`.
 
 ---
 
@@ -117,12 +134,22 @@ done | sort
 
 ## Follow-ups
 
-1. **Backfill the 7 historic leads** into the admin panel — they exist only as email.
-   The mail bodies contain all the field data needed.
-2. **Clean up the duplicated reCAPTCHA block** in `.env` (harmless — Laravel takes the
+1. ~~Backfill the 7 historic leads~~ — **done 2026-09-20** via `leads:import-maildir`.
+2. **Triage the 7 imported leads** in the admin panel: they are all `new`, but most are
+   months old and already handled by email.
+3. **Clean up the duplicated reCAPTCHA block** in `.env` (harmless — Laravel takes the
    last value — but confusing).
-3. **Watch for the next real submission** to confirm end-to-end DB capture in production.
-   Alternatively, submit one test inquiry to verify immediately.
+4. **Watch for the next real submission** to confirm end-to-end DB capture in production.
+
+## Admin panel
+
+- **Dashboard** (`/adminPanel`): 9 stat cards — form leads, WhatsApp and phone clicks with
+  30-day sparklines, per-form inquiry-email counts, pipeline status. Each card deep-links
+  into the Leads table pre-filtered to what it counts.
+- **Leads list** (`/adminPanel/leads`): tabs for All / Form inquiries / WhatsApp / Phone,
+  with inquiry-email totals above the table.
+- **Access**: restricted to the addresses in `User::LEAD_VIEWERS` — an explicit allow-list,
+  not a role check, so no admin account sees leads data by default.
 
 ### Unrelated issue spotted
 
