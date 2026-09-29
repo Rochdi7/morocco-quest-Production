@@ -6,11 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany; // <-- Import HasMany relation
 use Illuminate\Database\Eloquent\Factories\HasFactory; // <-- Import HasFactory if you use factories
 use Illuminate\Support\Str; // <-- Import Str for slug generation
+use App\Models\Concerns\TracksSlugRedirects;
 
 class ActivityCategory extends Model
 {
     // Add HasFactory if you use model factories
     use HasFactory;
+    use TracksSlugRedirects;
+
+    // Public URL is /activities/category/{slug}; used for 301s on slug change.
+    protected static string $seoPathPrefix = 'activities/category';
 
     /**
      * The attributes that are mass assignable.
@@ -41,7 +46,10 @@ class ActivityCategory extends Model
     protected static function booted() // <-- ADD SLUG GENERATION BACK
     {
         static::saving(function ($category) {
-            if (empty($category->slug) || $category->isDirty('name')) {
+            // Only generate a slug when none exists: renaming a category must
+            // not change its URL (it used to, on every name edit, with no
+            // redirect). Explicit slug changes are 301'd via TracksSlugRedirects.
+            if (empty($category->slug)) {
                 $category->slug = Str::slug($category->name);
                 // Optional: Handle potential slug collisions if needed
                 $originalSlug = $category->slug;

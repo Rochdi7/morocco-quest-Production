@@ -67,7 +67,12 @@ class ActivityController extends Controller
 
     public function showByCategory($category_slug)
     {
-        $category = ActivityCategory::where('slug', $category_slug)->firstOrFail();
+        $category = ActivityCategory::where('slug', $category_slug)->first();
+
+        if (! $category) {
+            // Old slug from before a rename → 301 to the current URL.
+            return SlugRedirector::redirectForPath('/activities/category/' . $category_slug) ?? abort(404);
+        }
 
         $activities = $category->activities()
             ->with('images')

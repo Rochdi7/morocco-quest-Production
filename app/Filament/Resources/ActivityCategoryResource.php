@@ -41,8 +41,9 @@ class ActivityCategoryResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->live(onBlur: true) // Update slug when name changes (on blur)
-                            ->afterStateUpdated(function (Forms\Set $set, ?string $state) {
-                                if ($state) {
+                            ->afterStateUpdated(function (Forms\Set $set, ?string $state, string $operation) {
+                                // Only on create: renaming must not change the URL.
+                                if ($state && $operation === 'create') {
                                     $set('slug', Str::slug($state));
                                 }
                             }),
@@ -52,7 +53,7 @@ class ActivityCategoryResource extends Resource
                             ->maxLength(255)
                             ->unique(ActivityCategory::class, 'slug', ignoreRecord: true) // Check uniqueness, ignore current record on edit
                             ->readOnly() // Make slug read-only as it's generated
-                            ->helperText('Slug is automatically generated from the name.'),
+                            ->helperText('Generated from the name when the category is created, then kept stable so its URL never changes.'),
 
                         Forms\Components\FileUpload::make('image_path')
                             ->label('Category Image')

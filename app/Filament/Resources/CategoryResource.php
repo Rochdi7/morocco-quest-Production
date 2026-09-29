@@ -26,8 +26,12 @@ class CategoryResource extends Resource
                 ->maxLength(255)
                 ->label('Category Name')
                 ->reactive()
-                ->afterStateUpdated(function ($state, callable $set) {
-                    $set('slug', Str::slug($state));
+                // Suggest a slug only while creating; on edit, renaming must
+                // not change the category URL.
+                ->afterStateUpdated(function ($state, callable $set, string $operation) {
+                    if ($operation === 'create') {
+                        $set('slug', Str::slug($state));
+                    }
                 }),
 
             Forms\Components\TextInput::make('slug')
