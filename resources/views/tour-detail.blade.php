@@ -494,7 +494,11 @@
                                     <h3 class="title">Tour Map</h3>
                                     @if ($tour->map_embed_code)
                                         <div style="width: 100%; height: 350px; border-radius: 10px; overflow: hidden;">
-                                            {!! $tour->map_embed_code !!}
+                                            {{-- Lazy-load the admin-entered Google Maps iframe (~480 KB, loaded
+                                                 eagerly before) — it sits below the fold in a tab. --}}
+                                            {!! str_contains($tour->map_embed_code, 'loading=')
+                                                ? $tour->map_embed_code
+                                                : preg_replace('/<iframe\b/i', '<iframe loading="lazy"', $tour->map_embed_code, 1) !!}
                                         </div>
                                     @else
                                         <p class="mt-3">A map illustrating the route for the {{ $tour->title }} is

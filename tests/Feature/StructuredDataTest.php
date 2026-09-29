@@ -106,4 +106,15 @@ class StructuredDataTest extends TestCase
         $this->assertStringContainsString('<h2>Section A</h2>', $html);
         $this->assertStringContainsString('<h2 class="big">Section B</h2>', $html);
     }
+
+    public function test_tour_map_iframe_is_lazy_loaded(): void
+    {
+        $tour = new Tour();
+        $tour->forceFill([
+            'title' => 'Map Tour', 'slug' => 'map-tour', 'overview' => 'o', 'duration_days' => 2,
+            'map_embed_code' => '<iframe src="https://www.google.com/maps/embed?pb=x" width="600"></iframe>',
+        ])->save();
+
+        $this->get('/tours/map-tour')->assertOk()->assertSee('<iframe loading="lazy" src="https://www.google.com/maps/embed?pb=x"', false);
+    }
 }
