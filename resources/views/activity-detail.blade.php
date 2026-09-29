@@ -843,13 +843,24 @@
         </div> {{-- End container --}}
     </section>
 
-    @if ($activity->places && $activity->places->isNotEmpty())
+    {{-- Contextual links up the hierarchy: destination(s) and category. --}}
+    @php
+        $hasPlaces = $activity->places && $activity->places->isNotEmpty();
+        $hasCategory = $activity->category && filled($activity->category->slug);
+    @endphp
+    @if ($hasPlaces || $hasCategory)
         <div class="container">
             <p class="text-center mb-0">
-                Explore more in
-                @foreach ($activity->places as $activityPlace)
-                    <a href="{{ route('destinations.show', $activityPlace->slug) }}">{{ $activityPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
-                @endforeach
+                @if ($hasPlaces)
+                    Explore more in
+                    @foreach ($activity->places as $activityPlace)
+                        <a href="{{ route('destinations.show', $activityPlace->slug) }}">{{ $activityPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
+                    @endforeach
+                @endif
+                @if ($hasCategory)
+                    {{ $hasPlaces ? 'or browse more' : 'Browse more' }}
+                    <a href="{{ route('activities.byCategory', $activity->category->slug) }}">{{ trim($activity->category->name) }} in Morocco</a>
+                @endif
             </p>
         </div>
     @endif

@@ -49,7 +49,9 @@
                 <div class="row text-center">
                     <div class="col-12">
                         <div class="breadcrumb-content">
-                            <h1 class="breadcrumb-title">Private Morocco Tours</h1>
+                            {{-- Destination pages share this view; each gets its own H1
+                                 (all 8 used to repeat "Private Morocco Tours"). --}}
+                            <h1 class="breadcrumb-title">{{ !empty($placeName) ? 'Tours in ' . $placeName . ', Morocco' : 'Private Morocco Tours' }}</h1>
                             <p class="breadcrumb-subtitle" style="color: white;">
                                 Explore small group tours morocco and exclusive travel experiences.
                             </p>
@@ -77,10 +79,23 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 text-center">
-                        <h2 class="hub-intro-title h4 mb-3">Private &amp; Small Group Morocco Tours from Marrakech</h2>
+                        {{-- Copy corrected 2026-09-29: it claimed every tour departs from
+                             Marrakech with per-person prices and 4×4 transport, none of which
+                             holds for every tour (departures vary; prices are on request). --}}
+                        <h2 class="hub-intro-title h4 mb-3">
+                            {{ !empty($placeName) ? 'Tours & Things to Do in ' . $placeName : 'Private & Small Group Morocco Tours' }}
+                        </h2>
                         <p class="hub-intro-text">
-                            Every tour in this collection departs from <strong>Marrakech</strong> — Morocco's most-visited imperial city and the gateway to the High Atlas Mountains, the Drâa Valley, and the Sahara desert at <strong>Erg Chebbi, Merzouga</strong>. Whether you're comparing a <a href="{{ route('tours.multi_day') }}">multi-day sahara desert tour</a>, a <a href="{{ route('destinations.index') }}">tour by destination</a>, or a focused <a href="{{ route('activities.index') }}">Marrakech day activity</a>, each option is led by a licensed local guide. Prices are per person and include 4×4 transport on mountain and desert routes. Filter by duration, departure city or group size — or <a href="{{ route('contact.show') }}">contact us</a> for a tailor-made itinerary.
+                            Our private and small-group Morocco tours cover Marrakech, the imperial cities, the High Atlas Mountains and the Sahara desert at <strong>Erg Chebbi, Merzouga</strong>. Compare a <a href="{{ route('tours.multi_day') }}">multi-day Morocco tour</a>, browse <a href="{{ route('destinations.index') }}">tours by destination</a>, or choose a <a href="{{ route('experiences.index') }}">day experience</a> — each is led by a licensed local guide. Every tour page lists its departure point, duration and day-by-day itinerary; prices are quoted on request for your dates and group size, so <a href="{{ route('contact.show') }}">contact us</a> for a tailor-made itinerary.
                         </p>
+                        @if (!empty($placeName) && isset($placeActivities) && $placeActivities->isNotEmpty())
+                            <p class="hub-intro-text mb-0">
+                                Things to do in {{ $placeName }}:
+                                @foreach ($placeActivities as $placeActivity)
+                                    <a href="{{ route('activities.show', $placeActivity->slug) }}">{{ trim($placeActivity->title) }}</a>{{ !$loop->last ? ' · ' : '' }}
+                                @endforeach
+                            </p>
+                        @endif
                     </div>
                 </div>
             </div>

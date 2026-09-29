@@ -379,8 +379,18 @@ class TourController extends Controller
 
         SeoHelper::setCollection($title, $description, route('destinations.show', $place->slug), $keywords, $placeImage);
 
+        // Local activities, so each destination page links to its things to
+        // do (destinations never linked to their activities before).
+        $placeActivities = $place->activities()
+            ->select('activities.id', 'activities.slug', 'activities.title')
+            ->whereNotNull('activities.slug')
+            ->latest('activities.id')
+            ->take(8)
+            ->get();
+
         return view('tours-list', [
             'tours'          => $tours,
+            'placeActivities'=> $placeActivities,
             'placeName'      => $place->name,
             'query'          => null,
             'locations'      => Place::pluck('name')->unique(),
