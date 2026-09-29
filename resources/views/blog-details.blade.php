@@ -170,7 +170,9 @@
                                 <h4 class="blog-title">{{ $post->title }}</h4>
                             --}}
                             <div class="dynamic-content-area blog-text">
-                                {!! $post->content !!} {{-- Ensure $post->content is sanitized if it comes from user input to prevent XSS --}}
+                                {{-- Admin-authored HTML (Filament). The page already has its H1, so any
+                                     <h1> inside the body is rendered as <h2> (one post had 14 H1s). --}}
+                                {!! preg_replace(['/<h1(\s|>)/i', '/<\/h1>/i'], ['<h2$1', '</h2>'], $post->content) !!}
                             </div>
                             @if ($post->quote)
                                 <blockquote class="vs-quote">

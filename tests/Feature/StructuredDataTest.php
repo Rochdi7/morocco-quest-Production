@@ -92,4 +92,18 @@ class StructuredDataTest extends TestCase
         $this->assertSame('40000', $org['address']['postalCode']);
         $this->assertSame('sales@morocco-quest.com', $org['email']);
     }
+
+    public function test_blog_post_body_h1s_are_demoted_to_keep_one_h1(): void
+    {
+        $blog = Blog::create([
+            'title' => 'Incentive Trips', 'slug' => 'incentive-trips', 'written_by' => 'Mounir',
+            'summary' => 's', 'content' => '<h1>Section A</h1><p>x</p><h1 class="big">Section B</h1>',
+        ]);
+
+        $html = $this->get('/blog/' . $blog->slug)->assertOk()->getContent();
+
+        $this->assertSame(1, preg_match_all('/<h1[\s>]/i', $html));
+        $this->assertStringContainsString('<h2>Section A</h2>', $html);
+        $this->assertStringContainsString('<h2 class="big">Section B</h2>', $html);
+    }
 }
