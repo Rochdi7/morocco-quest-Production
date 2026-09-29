@@ -57,7 +57,7 @@
 @section('content')
 
     {{-- Breadcrumb Section --}}
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}');" data-bg-src="{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}">
         {{-- Class untouched
         --}}
         {{-- ✅ 3. Lazy Loading for Images --}}
@@ -157,7 +157,7 @@
                                         <div style="display: none;" aria-hidden="true">{{ $image->description }}</div>
                                     @endif
                                 @else
-                                    <img src="{{ asset('assets/img/activity/activity-placeholder.png') }}"
+                                    <img src="{{ asset('assets/img/placeholder-image.webp') }}"
                                         alt="{{ $activity->title ?? 'Activity Image' }}" class="w-100" loading="lazy"
                                         width="810" height="540" style="object-fit: cover;" />
                                 @endif

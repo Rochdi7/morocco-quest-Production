@@ -36,10 +36,10 @@
     @endpush
 
 @section('content')
-    <section class="vs-breadcrumb" data-bg-src="https://morocco-quest.com/assets/img/sunset-luxury-desert-camp-morocco.webp">
-        <img src="https://morocco-quest.com/assets/img/icons/cloud.png" alt="Decorative cloud icon"
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/sunset-luxury-desert-camp-morocco.webp') }}');" data-bg-src="{{ asset('assets/img/sunset-luxury-desert-camp-morocco.webp') }}">
+        <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
             class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
-        <img src="https://morocco-quest.com/assets/img/icons/ballon-sclation.png" alt="Decorative hot air balloon icon"
+        <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="Decorative hot air balloon icon"
             class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
 
         <div class="container">

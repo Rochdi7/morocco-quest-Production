@@ -48,6 +48,7 @@ class SeoHelper
         ?string $image = null
     ): void {
         $safeImage = self::ogImage($image);
+        [$title, $canonicalUrl] = self::paginated($title, $canonicalUrl);
 
         SEOMeta::setTitle($title, false)
             ->setDescription($description)
@@ -67,6 +68,30 @@ class SeoHelper
         JsonLd::setTitle($title)
             ->setDescription($description)
             ->setType('CollectionPage');
+    }
+
+    /**
+     * Page 2+ of a listing whose canonical is its own URL: self-canonical
+     * (?page=N) and a distinct title. Before, every page of a series
+     * canonicalised to page 1 and shared its title, which asks Google to
+     * drop pages 2+ and the items only linked from them. Listings that
+     * canonicalise elsewhere (filters → clean URL) are left untouched.
+     *
+     * @return array{0: string, 1: string} [title, canonical]
+     */
+    public static function paginated(string $title, string $canonicalUrl): array
+    {
+        $page = (int) request()->query('page', 1);
+
+        if ($page > 1 && rtrim($canonicalUrl, '/') === rtrim(url()->current(), '/')) {
+            $canonicalUrl = rtrim($canonicalUrl, '/') . '?page=' . $page;
+            $title = preg_replace('/ \| /', ' – Page ' . $page . ' | ', $title, 1) ?? $title;
+            if (! str_contains($title, 'Page ' . $page)) {
+                $title .= ' – Page ' . $page;
+            }
+        }
+
+        return [$title, $canonicalUrl];
     }
 
     /**

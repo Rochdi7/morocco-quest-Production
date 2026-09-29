@@ -54,7 +54,7 @@
 @section('content')
     <main>
         <!-- Hero Section -->
-        <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/luxury-desert-bubble-suite-morocco.webp') }}">
+        <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/luxury-desert-bubble-suite-morocco.webp') }}');" data-bg-src="{{ asset('assets/img/luxury-desert-bubble-suite-morocco.webp') }}">
             <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
                 class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
             <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="Decorative hot air balloon icon"

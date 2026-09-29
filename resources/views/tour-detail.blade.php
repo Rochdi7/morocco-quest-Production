@@ -79,7 +79,7 @@
 @section('content')
 
     {{-- Breadcrumb Section (Existing structure preserved) --}}
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/sahara-merzouga-camel-tour-sunset-morocco.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/sahara-merzouga-camel-tour-sunset-morocco.webp') }}');" data-bg-src="{{ asset('assets/img/sahara-merzouga-camel-tour-sunset-morocco.webp') }}">
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon for desert tour section"
             class="vs-breadcrumb-icon-1 animate-parachute" />
         <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="Hot air balloon symbolizing Moroccan adventures"
@@ -191,7 +191,7 @@
                                         </div>
                                     @endif
                                 @else
-                                    <img src="{{ asset('assets/img/tour-placeholder.png') }}"
+                                    <img src="{{ asset('assets/img/placeholder-image.webp') }}"
                                         alt="{{ $tour->title ?? 'Tour Image' }}" class="w-100" loading="lazy"
                                         width="810" height="540" style="object-fit: cover;" />
                                 @endif

@@ -65,7 +65,7 @@
 
 @section('content')
 
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}');" data-bg-src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}">
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon for blog post section"
             class="vs-breadcrumb-icon-1 animate-parachute" />
         <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}"

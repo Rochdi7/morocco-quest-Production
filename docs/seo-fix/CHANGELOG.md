@@ -40,3 +40,18 @@ The branch is `fix/seo-audit-2026` (base `8137253`). It has 26 local commits, au
   - booking, contact and lead forms
   - Filament features
 - **Production data:** no stored content was edited.
+
+## Final pass (2026-09-29): uncommitted working-tree changes
+
+Commits were not authorized for this pass, so the following changes are **not committed**:
+
+| Area | Change | Files |
+|---|---|---|
+| JS errors | FAQ counters used a missing jQuery plugin (stuck at 0); now native IntersectionObserver. `main.min.js` rebuilt. | `assets/js/main.js`, `assets/js/main.min.js` |
+| JS errors | Invalid `#360-enquiry` selector; invalid SVG `height="auto"`; missing placeholder images; hard-coded asset domain | `360-event-solutions`, `partials/dmc-world-map`, `activity-categories`, `activity-detail`, `search/results`, `tour-detail`, `emails/tours/inquiry`, `type-filter` |
+| Schema | ItemList (tours, destinations, experiences, activity categories), TouristDestination, Service on `/dmc-marrakech`, destination breadcrumb level | `partials/schema-itemlist` (new), `tours-list`, `destinations`, `activity-categories`, `activities-by-category`, `dmc-marrakech` |
+| Pagination | Page 2+ self-canonical with "– Page N" title | `app/Support/SeoHelper.php`, Tag/Category controllers |
+| Sitemap | Activity categories from the DB (with at least one activity) | `SitemapController` |
+| Performance | Bootstrap Icons subset (130 KB → 0.7 KB); inline hero backgrounds on 25 views; preloader logo `fetchpriority=high` | `assets/plugins/bootstrap-icons/*subset*` (new), layouts, 25 views |
+| Tests | `ExampleTest` gets `RefreshDatabase`; new `FinalPassTest` (8 tests) | `tests/Feature/*` |
+| Docs | `FINAL_REAUDIT.md`, `OWNER_DECISIONS.md`, `FINAL_DEPLOYMENT_READINESS.md` | `docs/seo-fix/` |

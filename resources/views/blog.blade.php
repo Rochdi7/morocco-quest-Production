@@ -21,7 +21,7 @@
 @section('content')
 
     {{-- Breadcrumb Section --}}
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/chefchaouen-blue-house-door-morocco-blog-hero.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/chefchaouen-blue-house-door-morocco-blog-hero.webp') }}');" data-bg-src="{{ asset('assets/img/chefchaouen-blue-house-door-morocco-blog-hero.webp') }}">
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
             class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
 

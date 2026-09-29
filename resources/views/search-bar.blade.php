@@ -11,7 +11,7 @@
 @section('content')
 
     <!--================= Breadcrumb Area start =================-->
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp') }}');" data-bg-src="{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp') }}">
         <img src="{{ asset('assets/img/icons/fanous.png') }}" alt="Decorative cloud icon" style="height: 200px;"
             class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
 

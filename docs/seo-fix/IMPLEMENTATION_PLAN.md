@@ -2,7 +2,7 @@
 
 **Audit:** `docs/reports/SEO_AUDIT_2026-09-28.md` (repo `main` at `8137253`).
 **Branch:** `fix/seo-audit-2026`. Local commits only: not pushed, not deployed.
-**Last updated:** 2026-09-29.
+**Last updated:** 2026-09-29 (final pass: see `FINAL_REAUDIT.md` and `FINAL_DEPLOYMENT_READINESS.md`; P1-14, P3-4, pagination canonicals, icon subset and hero/LCP discovery are now done as uncommitted changes).
 
 > **Status legend**
 > - ✅ **Fixed + tested locally.** Not live until deployed.

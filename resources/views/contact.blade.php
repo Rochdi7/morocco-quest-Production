@@ -46,7 +46,7 @@
 
     {{-- Breadcrumb Section --}}
     <section class="vs-breadcrumb"
-        data-bg-src="{{ asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp') }}" {{-- Ensure background
+        style="background-image: url('{{ asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp') }}');" data-bg-src="{{ asset('assets/img/moroccan-travel-expert-contact-page-riad-setting.webp') }}" {{-- Ensure background
         image is optimized --}}>
         {{-- Decorative Images: Added loading="lazy" --}}
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"

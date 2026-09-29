@@ -60,3 +60,18 @@
 - **Consent-granted/denied analytics:** the site has no consent mechanism (no CMP, no Consent Mode) to test.
 - **Real form submissions:** forbidden. Forms were exercised only through tests with the array mailer.
 - **Static analysis:** none is configured in the project (no PHPStan/Psalm).
+
+## Final pass (2026-09-29)
+
+| Check | Result |
+|---|---|
+| `php artisan test` | **56 passed, 0 failed** (272 assertions). `ExampleTest` fixed (missing `RefreshDatabase`); new `FinalPassTest` 8/8 |
+| JS console sweep (Selenium, 22 page types × desktop + mobile, synthetic scratch DB) | Before: 10 distinct errors. After: **0**, except the intentional Gravatar `d=404` avatar fallback |
+| Local crawl (68 URLs from sitemap + llms.txt + links) | 0 × 5xx; 0 missing/duplicate robots, canonical or og:image; 0 `og:twitter`; all start with `<!DOCTYPE>`. The 4 × 404 were hard-coded sitemap categories (now DB-driven) |
+| JSON-LD on 13 pages | 0 parse errors, 0 duplicate entities, every ItemList URL is a visible link |
+| Exposure script on local Apache | PASS |
+| Blade compile, `php -l` | Clean |
+| Bootstrap Icons subset | 4/4 glyph outlines identical; `/tours` mobile menu pixel-identical; WhatsApp icon renders |
+| Forms (render only, no submission) | Contact, tour, activity, DMC and 360 forms: 3 forms each with CSRF + reCAPTCHA; blog comment forms have the honeypot |
+| Local Lighthouse | Discovery for `/dmc-marrakech` hero and preloader logo: fail → pass. **Totals not comparable** (6–15 s variance on the dev server); measure on production |
+| Static analysis | None configured in the project |

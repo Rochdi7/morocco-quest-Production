@@ -81,7 +81,7 @@
 @include('partials.dmc-spacing')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-riad-restaurant-service-360-hero.webp') }}">
+<section class="vs-breadcrumb hero-overlay" style="background-image: url('{{ asset('assets/img/morocco-quest-riad-restaurant-service-360-hero.webp') }}');" data-bg-src="{{ asset('assets/img/morocco-quest-riad-restaurant-service-360-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">
@@ -561,7 +561,10 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         flatpickr('#es_date', { mode: 'single', dateFormat: 'Y-m-d', minDate: 'today' });
-        const alert = document.querySelector('#360-enquiry .alert');
+        // An id starting with a digit is not a valid CSS selector, so
+        // querySelector('#360-enquiry …') threw; look the section up by id.
+        const enquiry = document.getElementById('360-enquiry');
+        const alert = enquiry ? enquiry.querySelector('.alert') : null;
         if (alert) { alert.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
     });
 </script>

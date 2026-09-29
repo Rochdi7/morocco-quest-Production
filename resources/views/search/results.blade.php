@@ -10,7 +10,9 @@
 @section('content')
     <!--================= Breadcrumb Area start =================-->
     <section class="vs-breadcrumb"
-        data-bg-src="{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp
+        style="background-image: url('{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp
+                                        
+                                        ') }}');" data-bg-src="{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp
                                         
                                         ') }}">
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
@@ -128,7 +130,7 @@
                                 <img src="{{ $activity->first_image_url }}"
                                     alt="{{ $activity->title }}" class="w-100" loading="lazy" width="400"
                                     height="300"
-                                    onerror="this.onerror=null;this.src='{{ asset('assets/img/activities/activity-placeholder.png') }}';" />
+                                    onerror="this.onerror=null;this.src='{{ asset('assets/img/placeholder-image.webp') }}';" />
 
                             </div>
 

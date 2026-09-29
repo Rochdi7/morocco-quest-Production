@@ -285,10 +285,10 @@
 
     {{-- Bootstrap Icons: self-hosted, deferred (icons only appear in nav/footer, not above the fold).
          Self-hosting removes the CDN round-trip and lets us control font-display. --}}
-    <link rel="preload" as="style" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}"
+    <link rel="preload" as="style" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css') }}"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css') }}">
     </noscript>
 
     {{-- Critical CSS (render-blocking — needed for first paint).
@@ -370,7 +370,9 @@
     <div class="preloader">
         <button class="vs-btn preloaderCls">Cancel Preloader</button>
         <div class="preloader-inner">
-            <img src="{{ asset('assets/img/logo-white.bg.webp') }}" alt="Morocco Quest Logo Preloader"
+            {{-- The preloader logo is the LCP element on overlay pages (PSI 2026-09-28);
+                 fetchpriority=high lets it load ahead of fonts/icons. --}}
+            <img src="{{ asset('assets/img/logo-white.bg.webp') }}" fetchpriority="high" alt="Morocco Quest Logo Preloader"
                 style="max-height: 350px; max-width: 550px;" />
             <span class="loader"></span>
         </div>

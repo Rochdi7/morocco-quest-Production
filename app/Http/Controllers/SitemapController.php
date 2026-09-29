@@ -80,9 +80,21 @@ class SitemapController extends Controller
             }
         }
 
+        // Activity categories come from the database (only those with at least
+        // one activity) instead of a hard-coded slug list that could point at
+        // renamed or deleted categories.
         if (Route::has('activities.byCategory')) {
-            foreach (['city-tours', 'day-trips', 'food-culinary-tours', 'local-experiences', 'outdoor-activities', 'wellness-experiences'] as $slug) {
-                    $urls[] = ['loc' => $this->canonicalUrl(route('activities.byCategory', $slug)), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
+            try {
+                \App\Models\ActivityCategory::query()
+                    ->whereNotNull('slug')
+                    ->whereHas('activities')
+                    ->orderBy('name')
+                    ->get(['id', 'slug'])
+                    ->each(function ($category) use (&$urls, $now) {
+                        $urls[] = ['loc' => $this->canonicalUrl(route('activities.byCategory', $category->slug)), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
+                    });
+            } catch (\Throwable $e) {
+                Log::warning('Sitemap skip activity categories: ' . $e->getMessage());
             }
         }
     }

@@ -1,5 +1,7 @@
 # Deployment readiness
 
+> **Superseded by `FINAL_DEPLOYMENT_READINESS.md` (2026-09-29).** Kept for history.
+
 The branch is `fix/seo-audit-2026`. It has 26 commits, is tested locally, and is **not deployed**.
 
 > A locally fixed issue is not a production-resolved issue. Production is unchanged until the steps below are run.

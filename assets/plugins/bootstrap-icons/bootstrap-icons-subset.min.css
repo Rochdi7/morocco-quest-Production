@@ -1,0 +1,10 @@
+/* Bootstrap Icons v1.x, MIT. Subset (2026-09-29): only the 4 glyphs the site
+   uses (bi-whatsapp, bi-chevron-right, and the \f4fe / \f63b plus/minus used
+   by the header mobile-menu CSS). Font 130 KB -> <1 KB; glyph outlines are
+   byte-identical to the full font. If you add a new bi-* icon, regenerate:
+   pyftsubset fonts/bootstrap-icons.woff2 --unicodes=U+F285,U+F4FE,U+F618,U+F63B,<new> --flavor=woff2 --output-file=fonts/bootstrap-icons-subset.woff2
+   (and the .woff), then add its class rule below. Full set: bootstrap-icons.min.css */
+@font-face{font-display:swap;font-family:bootstrap-icons;src:url("fonts/bootstrap-icons-subset.woff2?v=20260929") format("woff2"),url("fonts/bootstrap-icons-subset.woff?v=20260929") format("woff")}
+.bi::before,[class*=" bi-"]::before,[class^=bi-]::before{display:inline-block;font-family:bootstrap-icons!important;font-style:normal;font-weight:400!important;font-variant:normal;text-transform:none;line-height:1;vertical-align:-.125em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.bi-chevron-right::before{content:"\f285"}
+.bi-whatsapp::before{content:"\f618"}

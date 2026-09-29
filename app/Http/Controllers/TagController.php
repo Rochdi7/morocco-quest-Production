@@ -57,6 +57,8 @@ class TagController extends Controller
         $description = Str::limit('Articles tagged "' . $tag->name . '" on the Morocco Quest travel blog — guides, itineraries and travel tips.', 160, '');
 
         $url = url()->current();
+        // Page 2+: self-canonical and distinct title (see SeoHelper::paginated).
+        [$title, $url] = SeoHelper::paginated($title, $url);
 
         $keywordArray = array_filter([
             strtolower($tag->name),

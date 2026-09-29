@@ -76,7 +76,7 @@
 @include('partials.dmc-spacing')
 
 {{-- HERO --}}
-<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-bedouin-dinner-table-setting-desert-event.webp') }}">
+<section class="vs-breadcrumb hero-overlay" style="background-image: url('{{ asset('assets/img/morocco-quest-bedouin-dinner-table-setting-desert-event.webp') }}');" data-bg-src="{{ asset('assets/img/morocco-quest-bedouin-dinner-table-setting-desert-event.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">

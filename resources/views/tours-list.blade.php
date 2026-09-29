@@ -9,12 +9,33 @@
 {!! json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'BreadcrumbList',
-    'itemListElement' => [
-        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => !empty($placeName) ? 'Tours in '.$placeName : 'Morocco Tour Packages', 'item' => url()->current()],
-    ],
+    'itemListElement' => !empty($placeName)
+        ? [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Destinations', 'item' => route('destinations.index')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => 'Tours in '.$placeName, 'item' => url()->current()],
+        ]
+        : [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Tour Packages', 'item' => url()->current()],
+        ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
+@include('partials.schema-itemlist', [
+    'listName' => !empty($placeName) ? 'Tours in ' . $placeName . ', Morocco' : 'Morocco Tour Packages',
+    'listItems' => collect($tours->items())->map(fn ($t) => ['name' => $t->title, 'url' => $t->slug ? route('tours.show', $t->slug) : null]),
+    'listOffset' => ($tours->currentPage() - 1) * $tours->perPage(),
+])
+@if (!empty($placeName))
+{{-- The destination itself; only facts shown on the page (name, URL, country). --}}
+<script type="application/ld+json">{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'TouristDestination',
+    'name' => $placeName,
+    'url' => url()->current(),
+    'containedInPlace' => ['@type' => 'Country', 'name' => 'Morocco'],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+@endif
 @endpush
 
 {{-- view_destination fires only when this listing is actually filtered to
@@ -38,7 +59,7 @@
     <main>
         {{-- Banner Section --}}
         <section class="vs-breadcrumb"
-            data-bg-src="{{ asset('assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp') }}">
+            style="background-image: url('{{ asset('assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp') }}');" data-bg-src="{{ asset('assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp') }}">
             <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
                 class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
 

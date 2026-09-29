@@ -15,6 +15,10 @@
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
+@include('partials.schema-itemlist', [
+    'listName' => 'Things to Do in Morocco',
+    'listItems' => collect(isset($activityCategories) ? (method_exists($activityCategories, 'items') ? $activityCategories->items() : $activityCategories) : [])->map(fn ($c) => ['name' => $c->name, 'url' => !empty($c->slug) ? route('activities.byCategory', $c->slug) : null]),
+])
 @endpush
 
 @section('content')
@@ -22,7 +26,7 @@
 
         {{-- Breadcrumb section --}}
         <section class="vs-breadcrumb"
-            data-bg-src="{{ asset('assets/img/moroccan-belly-dance-night-cultural-activity.webp') }}">
+            style="background-image: url('{{ asset('assets/img/moroccan-belly-dance-night-cultural-activity.webp') }}');" data-bg-src="{{ asset('assets/img/moroccan-belly-dance-night-cultural-activity.webp') }}">
             <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
                 class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
 
@@ -92,10 +96,10 @@
                                             {{-- Added
                                                 e() for safety --}}
                                             {{-- Category Image: Has loading="lazy", dynamic alt, onerror fallback --}}
-                                            <img src="{{ $category->image_path ? asset(Str::startsWith($category->image_path, 'public/storage/') ? $category->image_path : 'public/storage/' . ltrim($category->image_path, '/')) : asset('assets/img/activities/activity-placeholder.png') }}"
+                                            <img src="{{ $category->image_path ? asset(Str::startsWith($category->image_path, 'public/storage/') ? $category->image_path : 'public/storage/' . ltrim($category->image_path, '/')) : asset('assets/img/placeholder-image.webp') }}"
                                                 alt="Activities in category: {{ e($category->name) }}" class="w-100"
                                                 loading="lazy"
-                                                onerror="this.onerror=null;this.src='{{ asset('assets/img/activities/activity-placeholder.png') }}';" />
+                                                onerror="this.onerror=null;this.src='{{ asset('assets/img/placeholder-image.webp') }}';" />
 
                                         </a>
                                     </figure>
