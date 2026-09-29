@@ -108,8 +108,8 @@ class BlogController extends Controller
             ->setCanonical(route('blog.index'));
         SeoHelper::noindex();
 
-        OpenGraph::setTitle($post->og_title ?: $title)
-            ->setDescription($post->og_description ?: $description)
+        OpenGraph::setTitle($title)
+            ->setDescription($description)
             ->setUrl(url()->current());
 
         JsonLd::setTitle($title)
@@ -124,11 +124,13 @@ class BlogController extends Controller
      */
     public function show(string $slug)
     {
+        // Only approved comments/replies are public (moderation, 2026-09-28).
         $post = Blog::with([
             'categories',
             'tags',
             'user',
-            'comments.replies'
+            'comments' => fn ($q) => $q->where('is_approved', true)
+                ->with(['replies' => fn ($r) => $r->where('is_approved', true)]),
         ])
             ->where('slug', $slug)
             ->first();
