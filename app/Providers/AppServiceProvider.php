@@ -12,6 +12,8 @@ use App\Models\Category;
 use App\Models\Tag;
 use App\Models\Tour;
 use App\Providers\Filament\AdminPanelPanelProvider;
+use App\Support\EscapedSEOMeta;
+use Illuminate\Config\Repository as SEOToolsConfig;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 
@@ -20,6 +22,15 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->register(AdminPanelPanelProvider::class);
+
+        // Escape <title> and meta keywords at render time (see EscapedSEOMeta).
+        // extend() rather than singleton(): SEOToolsServiceProvider is
+        // deferred and would re-bind 'seotools.metatags' on first resolve,
+        // silently replacing a plain binding. Same construction, only the
+        // class differs.
+        $this->app->extend('seotools.metatags', function ($meta, $app) {
+            return new EscapedSEOMeta(new SEOToolsConfig($app['config']->get('seotools.meta', [])));
+        });
     }
 
     public function boot(): void
