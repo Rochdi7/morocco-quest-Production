@@ -44,7 +44,7 @@ return [
             'type'        => 'website',
             'site_name'   => 'Morocco Quest',
             'images'      => [
-                'https://morocco-quest.com/assets/img/morocco-quest-social-share.webp',
+                'https://morocco-quest.com/assets/img/morocco-quest-og.webp',
             ],
         ],
     ],
@@ -60,7 +60,7 @@ return [
             'site'        => '@MoroccoQuest',
             'title'       => 'Morocco Tours & Private Sahara Desert Trips from Marrakech | Morocco Quest',
             'description' => 'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.',
-            'image'       => 'https://morocco-quest.com/assets/img/morocco-quest-social-share.webp',
+            'image'       => 'https://morocco-quest.com/assets/img/morocco-quest-og.webp',
         ],
     ],
 
@@ -76,7 +76,7 @@ return [
             'url'         => null,
             'type'        => 'WebPage',
             'images'      => [
-                'https://morocco-quest.com/assets/img/morocco-quest-social-share.webp',
+                'https://morocco-quest.com/assets/img/morocco-quest-og.webp',
             ],
         ],
     ],

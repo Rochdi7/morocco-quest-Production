@@ -17,7 +17,23 @@ class SeoHelper
      */
     public static function ogImage(?string $imageUrl): string
     {
-        return $imageUrl ?: asset(self::FALLBACK_OG_IMAGE);
+        if (! $imageUrl) {
+            return asset(self::FALLBACK_OG_IMAGE);
+        }
+
+        // Absolute or protocol-relative URL: use as-is.
+        if (preg_match('#^(https?:)?//#i', $imageUrl)) {
+            return $imageUrl;
+        }
+
+        // Filament's og_image upload stores a public-disk path such as
+        // "seo/og/abc.webp"; og:image must be an absolute URL.
+        $path = ltrim($imageUrl, '/');
+        if (str_starts_with($path, 'assets/') || str_starts_with($path, 'storage/')) {
+            return asset($path);
+        }
+
+        return asset('storage/' . $path);
     }
 
     /**

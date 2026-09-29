@@ -108,12 +108,20 @@
         $metaKeywords = $sectionKw
             ?: (isset($metaKeywords) && $metaKeywords ? $metaKeywords :
                 'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours');
+
+        // Inline @section values arrive already HTML-escaped ("&amp;");
+        // decode once so every tag below escapes exactly once via {{ }}.
+        // (Raw {!! !!} here, and {{ }} on already-escaped values, produced
+        // unescaped output and "&amp;amp;" respectively.)
+        $metaTitle       = html_entity_decode($metaTitle, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $metaDescription = html_entity_decode($metaDescription, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $metaKeywords    = html_entity_decode($metaKeywords, ENT_QUOTES | ENT_HTML5, 'UTF-8');
     @endphp
 
 
-    <title>{!! $metaTitle !!}</title>
-    <meta name="description" content="{!! $metaDescription !!}" />
-    <meta name="keywords" content="{!! $metaKeywords !!}" />
+    <title>{{ $metaTitle }}</title>
+    <meta name="description" content="{{ $metaDescription }}" />
+    <meta name="keywords" content="{{ $metaKeywords }}" />
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="google-site-verification" content="FT8pL55esPmKkEfXDLPA6ZAZtsS8M8xQS_euP4lcXVk" />
@@ -128,12 +136,12 @@
     <meta property="og:title" content="{{ $metaTitle }}" />
     <meta property="og:description" content="{{ $metaDescription }}" />
     <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:image" content="@yield('og_image', asset('assets/img/logo-bg.png'))" />
+    <meta property="og:image" content="@yield('og_image', asset('assets/img/morocco-quest-og.webp'))" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ $metaTitle }}" />
     <meta name="twitter:description" content="{{ $metaDescription }}" />
-    <meta name="twitter:image" content="@yield('og_image', asset('assets/img/logo-bg.png'))" />
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/img/morocco-quest-og.webp'))" />
 
     {{-- Global WebSite JSON-LD --}}
     <script type="application/ld+json">

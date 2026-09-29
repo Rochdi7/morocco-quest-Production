@@ -225,10 +225,11 @@ class TourController extends Controller
 
         SeoHelper::setDetail($title, $description, $url, $keywordArray, $image, 'TouristTrip');
 
+        // setDetail() already added $image; adding it again emitted a second
+        // og:image with dimensions the image doesn't necessarily have.
         OpenGraph::setType('product')
             ->setTitle($tour->og_title ?: $title)
-            ->setDescription($tour->og_description ?: $description)
-            ->addImage($image, ['height' => 630, 'width' => 1200]);
+            ->setDescription($tour->og_description ?: $description);
 
         return view('tour-detail', compact('tour', 'relatedTours', 'title', 'description', 'keywords'));
     }

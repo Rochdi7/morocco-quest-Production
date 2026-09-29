@@ -13,6 +13,7 @@ use App\Models\Tag;
 use App\Models\Tour;
 use App\Providers\Filament\AdminPanelPanelProvider;
 use App\Support\EscapedSEOMeta;
+use App\Support\SyncedOpenGraph;
 use Illuminate\Config\Repository as SEOToolsConfig;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
@@ -30,6 +31,12 @@ class AppServiceProvider extends ServiceProvider
         // class differs.
         $this->app->extend('seotools.metatags', function ($meta, $app) {
             return new EscapedSEOMeta(new SEOToolsConfig($app['config']->get('seotools.meta', [])));
+        });
+
+        // Route twitter:* values to real Twitter card tags and mirror OG
+        // title/description/image into them (see SyncedOpenGraph).
+        $this->app->extend('seotools.opengraph', function ($og, $app) {
+            return new SyncedOpenGraph($app['config']->get('seotools.opengraph', []));
         });
     }
 
