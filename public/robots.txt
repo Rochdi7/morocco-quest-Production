@@ -1,26 +1,38 @@
-User-agent: *
-Allow: /
+# A crawler that matches a named group below ignores the "*" group entirely
+# (RFC 9309), so every group repeats the same Disallow rules. The AI crawlers
+# are listed explicitly to document that they are welcome.
+# Keep public/robots.txt identical to this file.
 
+User-agent: *
 Disallow: /adminPanel/
+Disallow: /admin/
 Disallow: /login
 Disallow: /register
 Disallow: /password/
-Disallow: /search
-Disallow: /search-bar
+Disallow: /csrf-refresh
+Disallow: /track/
+Disallow: /storage/framework/
+Disallow: /vendor/
 
 User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
 User-agent: OAI-SearchBot
-Allow: /
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: CCBot
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+Disallow: /adminPanel/
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /password/
+Disallow: /csrf-refresh
+Disallow: /track/
+Disallow: /storage/framework/
+Disallow: /vendor/
 
 Sitemap: https://morocco-quest.com/sitemap.xml
+# LLM-Content: https://morocco-quest.com/llms.txt
