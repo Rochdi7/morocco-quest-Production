@@ -70,6 +70,23 @@ class P0SecurityFixesTest extends TestCase
         $this->assertStringNotContainsString('<b>mqmarker', $response->getContent());
     }
 
+    public function test_legitimate_search_input_is_escaped_exactly_once(): void
+    {
+        foreach (["l'Atlas", 'Aït Benhaddou', 'مراكش', 'Fès & Meknès', 'Tours "Sahara"'] as $term) {
+            $response = $this->get('/search?query=' . urlencode($term));
+            $response->assertOk();
+            $html = $response->getContent();
+
+            // Rendered once-escaped in the H1 (the browser shows the original text)…
+            $this->assertStringContainsString(e($term), $html, "H1 for {$term}");
+            // …and never double-escaped (&amp;#039; / &amp;quot; / &amp;amp;).
+            $this->assertDoesNotMatchRegularExpression('/&amp;(#039|quot|amp);/', $html, "double escape for {$term}");
+        }
+
+        $this->makeBlog(['title' => "Guide to l'Atlas", 'slug' => 'guide-atlas', 'content' => "<p>l'Atlas</p>"]);
+        $this->get('/blog/search?query=' . urlencode("l'Atlas"))->assertOk()->assertSee("Guide to l'Atlas");
+    }
+
     public function test_array_query_parameters_do_not_500(): void
     {
         $this->get('/search?query[]=a')->assertOk();
@@ -247,6 +264,34 @@ class P0SecurityFixesTest extends TestCase
             $this->assertFalse($response->headers->has('X-Page-Cache'), "{$label}: must bypass cache");
             $this->assertFalse(Cache::has($key), "{$label}: must not write the cache");
         }
+    }
+
+    public function test_one_visitors_form_data_never_reaches_another_visitor(): void
+    {
+        Cache::flush();
+
+        // Visitor A comes back from a failed DMC enquiry: the page renders their old() input.
+        $a = $this->runCacheMiddleware(
+            function (Store $s) {
+                $s->put('_old_input', ['name' => 'Alice Private', 'email' => 'alice@private.test', 'phone' => '+212600000000']);
+                $s->put('errors', (new ViewErrorBag())->put('default', new MessageBag(['phone' => 'invalid'])));
+                $s->put('_flash.old', ['_old_input', 'errors']);
+            },
+            '<html><input value="Alice Private"><input value="alice@private.test"><input value="+212600000000"></html>'
+        );
+        $this->assertStringContainsString('Alice Private', $a->getContent());
+
+        // Visitor B, clean session, same URL: must get a fresh render, never A's page.
+        $b = $this->runCacheMiddleware(fn () => null, '<html><input value=""></html>');
+        $this->assertSame('miss', $b->headers->get('X-Page-Cache'));
+        foreach (['Alice Private', 'alice@private.test', '+212600000000'] as $pii) {
+            $this->assertStringNotContainsString($pii, $b->getContent());
+        }
+
+        // And B's clean render is what later visitors get from the cache.
+        $c = $this->runCacheMiddleware(fn () => null, '<html>unused</html>');
+        $this->assertSame('hit', $c->headers->get('X-Page-Cache'));
+        $this->assertStringNotContainsString('Alice', $c->getContent());
     }
 
     public function test_page_cache_still_works_for_clean_sessions(): void
