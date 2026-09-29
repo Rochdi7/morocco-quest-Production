@@ -4,18 +4,9 @@
 @section('description', $description ?? 'Cookie Policy for the Morocco Quest website and our morocco tours booking platform.')
 @section('keywords', $keywords ?? 'morocco quest, morocco tours, cookie policy')
 
-<link rel="canonical" href="{{ url()->current() }}">
-<meta property="og:title" content="Cookie Policy | Morocco Quest" />
-<meta property="og:description"
-    content="Learn how Morocco Quest uses cookies to improve your browsing experience and analyze website traffic." />
-<meta property="og:image" content="{{ asset('assets/img/cookie-policy.webp') }}" />
-<meta property="og:url" content="{{ url()->current() }}" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Cookie Policy | Morocco Quest" />
-<meta name="twitter:description"
-    content="Learn how Morocco Quest uses cookies to improve your browsing experience and analyze website traffic." />
-<meta name="twitter:image" content="{{ asset('assets/img/cookie-policy.webp') }}" />
+{{-- Canonical/OG/Twitter come from StaticPageController::setSeo(). Tags
+     placed here (outside any @section) were printed before <!DOCTYPE>,
+     duplicating the canonical and pointing og:image at a missing file. --}}
 
 {{-- <script type="application/ld+json">
     {
