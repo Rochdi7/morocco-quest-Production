@@ -184,6 +184,8 @@
                                 <li class="menu-item-has-children">
                                     <a href="{{ route('tours.multi_day') }}">Multi-Day Tours</a>
                                     <ul class="sub-menu">
+                                        <li><a href="{{ route('tours.index') }}">All Morocco Tours</a></li>
+                                        <li><a href="{{ route('destinations.index') }}">Destinations</a></li>
                                         <li><a href="{{ route('tours.type', 'Garden Tours') }}">Garden Tours</a></li>
                                         <li><a href="{{ route('tours.type', 'Art Tours') }}">Art Tours</a></li>
                                         <li><a href="{{ route('tours.type', 'Classical Tours') }}">Classical Tours</a>
@@ -225,7 +227,7 @@
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Info Hub</a>
+                                    <a href="{{ route('about') }}">Info Hub</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ url('/about') }}">About Us</a></li>
                                         <li><a href="{{ url('/faq') }}">FAQ</a></li>
