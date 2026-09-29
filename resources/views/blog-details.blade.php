@@ -395,7 +395,8 @@
                                                 </div>
 
                                                 <div class="reply_and_edit">
-                                                    <a href="javascript:void(0);" class="replay-btn"
+                                                    <a href="#reply-form-{{ $comment->id }}" class="replay-btn" role="button"
+                                                        aria-controls="reply-form-{{ $comment->id }}"
                                                         data-id="{{ $comment->id }}">
                                                         Reply <i class="fa-solid fa-reply"></i>
                                                     </a>
@@ -540,7 +541,8 @@
                                                                     </div>
 
                                                                     <div class="reply_and_edit">
-                                                                        <a href="javascript:void(0);" class="replay-btn"
+                                                                        <a href="#reply-form-{{ $reply->id }}" class="replay-btn" role="button"
+                                                                            aria-controls="reply-form-{{ $reply->id }}"
                                                                             data-id="{{ $reply->id }}">
                                                                             Reply <i class="fa-solid fa-reply"></i>
                                                                         </a>
@@ -988,6 +990,8 @@
             // Event listener for reply buttons
             document.addEventListener('click', function(e) {
                 if (e.target.closest('.replay-btn')) {
+                    // Real #reply-form-N href (was javascript:void(0)); keep the toggle in place.
+                    e.preventDefault();
                     const commentId = e.target.closest('.replay-btn').getAttribute('data-id');
                     const form = document.getElementById(`reply-form-${commentId}`);
 
