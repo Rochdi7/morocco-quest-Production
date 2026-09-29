@@ -23,7 +23,8 @@ use Symfony\Component\HttpFoundation\Response;
  *   partials/footer.blade.php refreshes _token inputs client-side via the
  *   csrf.refresh endpoint after DOMContentLoaded.
  * - Bypasses for authenticated users, non-GET, and any query string.
- * - Bypasses whenever session('success')/session('error') is present: every
+ * - Bypasses whenever the session carries flashed state (success/error
+ *   messages, validation errors, old() input — see hasFlashedState()): every
  *   form on the site (newsletter, tour/activity inquiry, contact, B2B leads)
  *   redirects back() to wherever the visitor was, which can be the homepage.
  *   Without this check, a visitor's one-time flash message (and the
@@ -45,8 +46,7 @@ class CacheGuestPage
         if (!$request->isMethod('GET')
             || count($request->query()) > 0
             || $request->user()
-            || $request->session()->has('success')
-            || $request->session()->has('error')) {
+            || $this->hasFlashedState($request)) {
             return $next($request);
         }
 
@@ -70,5 +70,26 @@ class CacheGuestPage
         $response->headers->set('X-Page-Cache', 'miss');
 
         return $response;
+    }
+
+    /**
+     * True when this visitor's session carries one-time form state that the
+     * page may render: flash messages, validation errors, or old() input.
+     *
+     * A failed form redirects back() with withErrors()->withInput(); the
+     * next GET renders old('name'/'email'/'phone') into the form. That
+     * render must never be read from, or written to, the shared cache, or
+     * one visitor's personal data is served to everyone (found 2026-09-28).
+     * Any key flashed by the previous request is treated as visitor-specific.
+     */
+    private function hasFlashedState(Request $request): bool
+    {
+        $session = $request->session();
+
+        return $session->has('success')
+            || $session->has('error')
+            || $session->has('errors')
+            || $session->has('_old_input')
+            || ! empty($session->get('_flash.old', []));
     }
 }
