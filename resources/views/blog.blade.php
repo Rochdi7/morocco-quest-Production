@@ -176,7 +176,7 @@
                             <div class="col-12 text-center">
                                 <p class="lead mt-5">
                                     @if (isset($query) && $query)
-                                        No posts found matching your search query "{{ e($query) }}".
+                                        No posts found matching your search query "{{ $query }}".
                                     @elseif(isset($category))
                                         No posts found in the category "{{ $category->name }}".
                                     @elseif(isset($tag))

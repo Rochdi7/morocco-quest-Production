@@ -48,7 +48,7 @@
     <!--================= Breadcrumb Area end =================-->
     <div class="container my-5">
         {{-- Use H1 for the primary topic of this page --}}
-        <h1 class="mb-4 h2">Search Results for "{{ e($query) }}"</h1> {{-- Using h2 class for styling if needed, but
+        <h1 class="mb-4 h2">Search Results for "{{ $query }}"</h1> {{-- Using h2 class for styling if needed, but
         semantically H1 --}}
 
         {{-- Tours Section --}}
@@ -289,7 +289,7 @@
         @if (!$tours->count() && !$activities->count() && !$blogs->count())
             <div class="text-center my-5 py-5"> {{-- Added more spacing --}}
                 <i class="fas fa-search fa-3x text-muted mb-3"></i> {{-- Optional: Add an icon --}}
-                <p class="text-muted fs-4">No results found for "{{ e($query) }}".</p>
+                <p class="text-muted fs-4">No results found for "{{ $query }}".</p>
                 <p class="text-muted">Try searching for a different term or browse our categories.</p>
                 {{-- Suggest next steps
                 --}}
