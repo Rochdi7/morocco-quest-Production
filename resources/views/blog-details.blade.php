@@ -401,6 +401,7 @@
                                                     <form action="{{ route('blog.comments.reply', $comment->id) }}"
                                                         method="POST">
                                                         @csrf
+                                                        @include('partials.comment-honeypot')
                                                         <div class="row gx-20">
                                                             <div class="col-12 form-group">
                                                                 <label for="reply_content_{{ $comment->id }}"
@@ -547,6 +548,7 @@
                                                                             action="{{ route('blog.comments.reply', ['id' => $comment->id]) }}"
                                                                             method="POST">
                                                                             @csrf
+                                                                            @include('partials.comment-honeypot')
                                                                             <div class="row gx-20">
                                                                                 <div class="col-12 form-group">
                                                                                     <label
@@ -661,6 +663,7 @@
 
                                     <form action="{{ route('comments.store', $post) }}" method="POST">
                                         @csrf
+                                        @include('partials.comment-honeypot')
                                         <div class="row gx-20">
                                             <div class="col-12 form-group">
                                                 <label for="comment_content" class="visually-hidden">Your Comment

@@ -220,7 +220,7 @@
                                         <li>
                                             <a href="{{ route('blog.show', $blog->slug) }}#comments">
                                                 <i class="fa-sharp fa-solid fa-comments"></i>
-                                                {{ $blog->comments_count ?? ($blog->comments ? $blog->comments->count() : 0) }}
+                                                {{ $blog->comments_count ?? $blog->approvedComments()->count() }}
                                                 comments
                                             </a>
                                         </li>

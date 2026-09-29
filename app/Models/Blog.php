@@ -45,9 +45,14 @@ class Blog extends Model
     {
         return $this->belongsToMany(Tag::class, 'blog_tag');
     }
-    public function comments() // Comments for this blog post
+    public function comments() // All comments, incl. pending (admin/Filament use)
     {
         return $this->hasMany(Comment::class); // Assuming Comment model is App\Models\Comment
+    }
+
+    public function approvedComments() // Only moderated comments — use for anything public
+    {
+        return $this->hasMany(Comment::class)->where('is_approved', true);
     }
     public function user()
     {

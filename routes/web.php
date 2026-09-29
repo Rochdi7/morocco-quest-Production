@@ -58,8 +58,13 @@ Route::prefix('blog')->name('blog.')->controller(BlogController::class)->group(f
     Route::get('/search', 'search')->name('search');
     Route::get('/{slug}', 'show')->name('show');
 });
-Route::post('/comments/{id}', [CommentController::class, 'store'])->name('comments.store');
-Route::post('/blog/comments/reply/{id}', [BlogController::class, 'replyToComment'])->name('blog.comments.reply');
+// Comments are moderated (stored unapproved) and rate-limited per IP.
+Route::post('/comments/{id}', [CommentController::class, 'store'])
+    ->middleware('throttle:5,10')
+    ->name('comments.store');
+Route::post('/blog/comments/reply/{id}', [BlogController::class, 'replyToComment'])
+    ->middleware('throttle:5,10')
+    ->name('blog.comments.reply');
 Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
 Route::get('/tag/{tag:slug}', [TagController::class, 'show'])->name('tag.show');
 

@@ -87,9 +87,7 @@ class HomepageController extends Controller
                         'featured_image_url' => $post->featured_image_url,
                         'created_day' => Carbon::parse($post->created_at)->format('d'),
                         'created_month' => Carbon::parse($post->created_at)->format('M'),
-                        'comments_count' => method_exists($post, 'comments')
-                            ? $post->comments->count()
-                            : 0,
+                        'comments_count' => $post->approvedComments()->count(),
                     ];
                 });
         });
