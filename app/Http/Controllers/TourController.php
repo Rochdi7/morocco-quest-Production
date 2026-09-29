@@ -66,9 +66,9 @@ class TourController extends Controller
      */
     public function index(Request $request)
     {
-        $placeName      = $request->input('place');
-        $searchDate     = $request->input('searchDate');
-        $selectedGuests = $request->input('guests');
+        $placeName      = $this->stringInput($request, 'place');
+        $searchDate     = $this->stringInput($request, 'searchDate');
+        $selectedGuests = $this->stringInput($request, 'guests');
 
         $locations = Place::query()
             ->where(function ($query) {
@@ -116,6 +116,12 @@ class TourController extends Controller
         }
 
         $tours = $toursQuery->latest()->paginate(8);
+
+        // Out-of-range page (?page=2 when everything fits on page 1): 404
+        // instead of rendering an empty listing that would be indexable.
+        if ($tours->isEmpty() && $tours->currentPage() > 1) {
+            abort(404);
+        }
 
         $popularTours = Tour::where('is_popular', true)
             ->with(['firstImage', 'places'])
@@ -219,10 +225,11 @@ class TourController extends Controller
 
         SeoHelper::setDetail($title, $description, $url, $keywordArray, $image, 'TouristTrip');
 
+        // setDetail() already added $image; adding it again emitted a second
+        // og:image with dimensions the image doesn't necessarily have.
         OpenGraph::setType('product')
             ->setTitle($tour->og_title ?: $title)
-            ->setDescription($tour->og_description ?: $description)
-            ->addImage($image, ['height' => 630, 'width' => 1200]);
+            ->setDescription($tour->og_description ?: $description);
 
         return view('tour-detail', compact('tour', 'relatedTours', 'title', 'description', 'keywords'));
     }
@@ -372,8 +379,18 @@ class TourController extends Controller
 
         SeoHelper::setCollection($title, $description, route('destinations.show', $place->slug), $keywords, $placeImage);
 
+        // Local activities, so each destination page links to its things to
+        // do (destinations never linked to their activities before).
+        $placeActivities = $place->activities()
+            ->select('activities.id', 'activities.slug', 'activities.title')
+            ->whereNotNull('activities.slug')
+            ->latest('activities.id')
+            ->take(8)
+            ->get();
+
         return view('tours-list', [
             'tours'          => $tours,
+            'placeActivities'=> $placeActivities,
             'placeName'      => $place->name,
             'query'          => null,
             'locations'      => Place::pluck('name')->unique(),
@@ -478,10 +495,10 @@ class TourController extends Controller
         $normalizedType = $map[$slugifiedType] ?? $type;
 
         if ($slugifiedType === 'multi-day-tours') {
-            return redirect()->route('tours.multi_day');
+            return redirect()->route('tours.multi_day', [], 301);
         }
         if ($slugifiedType === 'one-day-tours') {
-            return redirect()->route('tours.one_day');
+            return redirect()->route('tours.one_day', [], 301);
         }
 
         $tours = Tour::where('tour_type', 'LIKE', "%{$normalizedType}%")
@@ -491,6 +508,14 @@ class TourController extends Controller
         $activities = Activity::where('tour_type', 'LIKE', "%{$normalizedType}%")
             ->with(['images', 'category'])
             ->paginate(12);
+
+        // Soft-404 guard: an unknown type (or a page past the end) with no
+        // results is a real 404, not an indexable empty page. Known types
+        // that are temporarily empty stay reachable (nav links) but noindex.
+        $isEmpty = $tours->isEmpty() && $activities->isEmpty();
+        if ($isEmpty && (! isset($map[$slugifiedType]) || $tours->currentPage() > 1)) {
+            abort(404);
+        }
 
         $title       = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
         $description = "Book morocco {$normalizedType} with a top-rated local agency. Private morocco tours, small group tours morocco, luxury morocco tours and morocco tour packages.";
@@ -502,6 +527,9 @@ class TourController extends Controller
         ];
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywords);
+        if ($isEmpty) {
+            SeoHelper::noindex();
+        }
 
         return view('type-filter', [
             'tours'       => $tours,

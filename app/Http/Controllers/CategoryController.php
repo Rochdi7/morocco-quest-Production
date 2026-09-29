@@ -10,6 +10,7 @@ use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\JsonLd;
 use App\Support\SlugRedirector;
+use App\Support\SeoHelper;
 
 class CategoryController extends Controller
 {
@@ -26,6 +27,11 @@ class CategoryController extends Controller
             ->with(['user', 'category'])
             ->latest()
             ->paginate(10);
+
+        // An empty category (or a page past the end) is a soft 404.
+        if ($posts->isEmpty()) {
+            abort(404);
+        }
 
         // Sidebar data is the same across all category/tag/blog pages and
         // changes maybe once a week. Cache for 1 hour to drop ~3 DB queries
@@ -46,6 +52,8 @@ class CategoryController extends Controller
         $description = Str::limit('Browse all ' . $category->name . ' articles on the Morocco Quest travel blog — in-depth guides and practical travel tips.', 160, '');
 
         $url = route('category.show', $category->slug);
+        // Page 2+: self-canonical and distinct title (see SeoHelper::paginated).
+        [$title, $url] = SeoHelper::paginated($title, $url);
 
         $keywordArray = array_filter([
             strtolower($category->name),

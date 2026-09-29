@@ -9,12 +9,33 @@
 {!! json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'BreadcrumbList',
-    'itemListElement' => [
-        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => !empty($placeName) ? 'Tours in '.$placeName : 'Morocco Tour Packages', 'item' => url()->current()],
-    ],
+    'itemListElement' => !empty($placeName)
+        ? [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Destinations', 'item' => route('destinations.index')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => 'Tours in '.$placeName, 'item' => url()->current()],
+        ]
+        : [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Tour Packages', 'item' => url()->current()],
+        ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
+@include('partials.schema-itemlist', [
+    'listName' => !empty($placeName) ? 'Tours in ' . $placeName . ', Morocco' : 'Morocco Tour Packages',
+    'listItems' => collect($tours->items())->map(fn ($t) => ['name' => $t->title, 'url' => $t->slug ? route('tours.show', $t->slug) : null]),
+    'listOffset' => ($tours->currentPage() - 1) * $tours->perPage(),
+])
+@if (!empty($placeName))
+{{-- The destination itself; only facts shown on the page (name, URL, country). --}}
+<script type="application/ld+json">{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'TouristDestination',
+    'name' => $placeName,
+    'url' => url()->current(),
+    'containedInPlace' => ['@type' => 'Country', 'name' => 'Morocco'],
+], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+@endif
 @endpush
 
 {{-- view_destination fires only when this listing is actually filtered to
@@ -38,7 +59,7 @@
     <main>
         {{-- Banner Section --}}
         <section class="vs-breadcrumb"
-            data-bg-src="{{ asset('assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp') }}">
+            style="background-image: url('{{ asset('assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp') }}');" data-bg-src="{{ asset('assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp') }}">
             <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
                 class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
 
@@ -49,7 +70,9 @@
                 <div class="row text-center">
                     <div class="col-12">
                         <div class="breadcrumb-content">
-                            <h1 class="breadcrumb-title">Private Morocco Tours</h1>
+                            {{-- Destination pages share this view; each gets its own H1
+                                 (all 8 used to repeat "Private Morocco Tours"). --}}
+                            <h1 class="breadcrumb-title">{{ !empty($placeName) ? 'Tours in ' . $placeName . ', Morocco' : 'Private Morocco Tours' }}</h1>
                             <p class="breadcrumb-subtitle" style="color: white;">
                                 Explore small group tours morocco and exclusive travel experiences.
                             </p>
@@ -77,10 +100,23 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-9 text-center">
-                        <h2 class="hub-intro-title h4 mb-3">Private &amp; Small Group Morocco Tours from Marrakech</h2>
+                        {{-- Copy corrected 2026-09-29: it claimed every tour departs from
+                             Marrakech with per-person prices and 4×4 transport, none of which
+                             holds for every tour (departures vary; prices are on request). --}}
+                        <h2 class="hub-intro-title h4 mb-3">
+                            {{ !empty($placeName) ? 'Tours & Things to Do in ' . $placeName : 'Private & Small Group Morocco Tours' }}
+                        </h2>
                         <p class="hub-intro-text">
-                            Every tour in this collection departs from <strong>Marrakech</strong> — Morocco's most-visited imperial city and the gateway to the High Atlas Mountains, the Drâa Valley, and the Sahara desert at <strong>Erg Chebbi, Merzouga</strong>. Whether you're comparing a <a href="{{ route('tours.multi_day') }}">multi-day sahara desert tour</a>, a <a href="{{ route('destinations.index') }}">tour by destination</a>, or a focused <a href="{{ route('activities.index') }}">Marrakech day activity</a>, each option is led by a licensed local guide. Prices are per person and include 4×4 transport on mountain and desert routes. Filter by duration, departure city or group size — or <a href="{{ route('contact.show') }}">contact us</a> for a tailor-made itinerary.
+                            Our private and small-group Morocco tours cover Marrakech, the imperial cities, the High Atlas Mountains and the Sahara desert at <strong>Erg Chebbi, Merzouga</strong>. Compare a <a href="{{ route('tours.multi_day') }}">multi-day Morocco tour</a>, browse <a href="{{ route('destinations.index') }}">tours by destination</a>, or choose a <a href="{{ route('experiences.index') }}">day experience</a> — each is led by a licensed local guide. Every tour page lists its departure point, duration and day-by-day itinerary; prices are quoted on request for your dates and group size, so <a href="{{ route('contact.show') }}">contact us</a> for a tailor-made itinerary.
                         </p>
+                        @if (!empty($placeName) && isset($placeActivities) && $placeActivities->isNotEmpty())
+                            <p class="hub-intro-text mb-0">
+                                Things to do in {{ $placeName }}:
+                                @foreach ($placeActivities as $placeActivity)
+                                    <a href="{{ route('activities.show', $placeActivity->slug) }}">{{ trim($placeActivity->title) }}</a>{{ !$loop->last ? ' · ' : '' }}
+                                @endforeach
+                            </p>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -174,7 +210,7 @@
                             @if ($placeName)
                                 <p>There are currently no tours listed for the destination "{{ $placeName }}".</p>
                                 <a href="{{ route('destinations.index') }}" class="vs-btn mt-3">View Other Destinations</a>
-                            @elseif($query)
+                            @elseif(!empty($query))
                                 <p>No tours found matching your search criteria "{{ $query }}".</p>
                                 <a href="{{ route('tours.index') }}" class="vs-btn mt-3">View All Tours</a>
                             @else

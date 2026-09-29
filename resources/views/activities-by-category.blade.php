@@ -16,11 +16,16 @@
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
+@include('partials.schema-itemlist', [
+    'listName' => trim($category->name ?? 'Activities') . ' in Morocco',
+    'listItems' => collect($activities->items())->map(fn ($a) => ['name' => $a->title, 'url' => $a->slug ? route('activities.show', $a->slug) : null]),
+    'listOffset' => ($activities->currentPage() - 1) * $activities->perPage(),
+])
 @endpush
 
 @section('content')
     <main>
-        <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/sunset-luxury-desert-camp-morocco.webp') }}">
+        <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/sunset-luxury-desert-camp-morocco.webp') }}');" data-bg-src="{{ asset('assets/img/sunset-luxury-desert-camp-morocco.webp') }}">
             <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
                 class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
 

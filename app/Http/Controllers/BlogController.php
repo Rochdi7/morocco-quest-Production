@@ -80,9 +80,9 @@ class BlogController extends Controller
      */
     public function search(Request $request)
     {
-        $query = $request->input('query');
+        $query = $this->stringInput($request, 'query');
 
-        if (empty($query)) {
+        if ($query === null) {
             return redirect()->route('blog.index');
         }
 
@@ -108,8 +108,8 @@ class BlogController extends Controller
             ->setCanonical(route('blog.index'));
         SeoHelper::noindex();
 
-        OpenGraph::setTitle($post->og_title ?: $title)
-            ->setDescription($post->og_description ?: $description)
+        OpenGraph::setTitle($title)
+            ->setDescription($description)
             ->setUrl(url()->current());
 
         JsonLd::setTitle($title)
@@ -124,11 +124,13 @@ class BlogController extends Controller
      */
     public function show(string $slug)
     {
+        // Only approved comments/replies are public (moderation, 2026-09-28).
         $post = Blog::with([
             'categories',
             'tags',
             'user',
-            'comments.replies'
+            'comments' => fn ($q) => $q->where('is_approved', true)
+                ->with(['replies' => fn ($r) => $r->where('is_approved', true)]),
         ])
             ->where('slug', $slug)
             ->first();
@@ -257,14 +259,16 @@ class BlogController extends Controller
      */
     public function replyToComment(Request $request, int $commentId)
     {
-        $request->validate([
-            'content' => 'required|string',
-            'name'    => 'required|string|max:255',
-            'email'   => 'required|email|max:255',
-        ]);
+        // Replies are only possible on published comments.
+        $parentComment = Comment::approved()->findOrFail($commentId);
 
-        $parentComment = Comment::findOrFail($commentId);
+        if (CommentController::isHoneypotHit($request)) {
+            return redirect()->back()->with('success', CommentController::PENDING_MESSAGE);
+        }
 
+        $request->validate(CommentController::rules());
+
+        // Stored unapproved (default) — shown only after moderation.
         Comment::create([
             'blog_id'   => $parentComment->blog_id,
             'parent_id' => $parentComment->id,
@@ -273,6 +277,6 @@ class BlogController extends Controller
             'content'   => $request->content,
         ]);
 
-        return redirect()->back()->with('success', 'Reply added successfully.');
+        return redirect()->back()->with('success', CommentController::PENDING_MESSAGE);
     }
 }

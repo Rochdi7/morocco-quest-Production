@@ -15,6 +15,11 @@
     ],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
+@include('partials.schema-itemlist', [
+    'listName' => 'Morocco Tour Destinations',
+    'listItems' => collect(method_exists($placesData, 'items') ? $placesData->items() : $placesData)->map(fn ($p) => ['name' => $p->name, 'url' => !empty($p->slug) ? route('destinations.show', $p->slug) : null]),
+    'listOffset' => method_exists($placesData, 'currentPage') ? ($placesData->currentPage() - 1) * $placesData->perPage() : 0,
+])
 @endpush
 
 @section('content')
@@ -22,7 +27,7 @@
 
         {{-- Breadcrumb Section --}}
         <section class="vs-breadcrumb"
-            data-bg-src="{{ asset('assets/img/rabat-royal-palace-tourists-guided-walking-tour.webp') }}">
+            style="background-image: url('{{ asset('assets/img/rabat-royal-palace-tourists-guided-walking-tour.webp') }}');" data-bg-src="{{ asset('assets/img/rabat-royal-palace-tourists-guided-walking-tour.webp') }}">
             <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
                 class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
 

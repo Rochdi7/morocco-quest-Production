@@ -34,6 +34,8 @@ class CommentsRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('parent_id')
                     ->label('Reply to #')
                     ->placeholder('—'),
+                Tables\Columns\ToggleColumn::make('is_approved')
+                    ->label('Approved'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime('Y-m-d H:i')
                     ->sortable(),

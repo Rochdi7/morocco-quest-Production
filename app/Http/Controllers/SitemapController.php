@@ -15,13 +15,19 @@ class SitemapController extends Controller
 {
     public function index()
     {
-        $now = Carbon::now()->toAtomString();
+        // lastmod must reflect real content changes (Google ignores/distrusts
+        // a lastmod that is always "now"). Static pages get none; listings use
+        // the newest updated_at of what they list.
+        $now          = null;
+        $toursMod     = $this->latestUpdate(Tour::class);
+        $activityMod  = $this->latestUpdate(Activity::class);
+        $blogMod      = $this->latestUpdate(Blog::class);
 
         $urls = [
-            ['loc' => route('home'),                        'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '1.0'],
-            ['loc' => route('tours.index'),                 'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.9'],
-            ['loc' => route('experiences.index'),           'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.8'],
-            ['loc' => route('activities.index'),            'lastmod' => $now, 'changefreq' => 'daily',   'priority' => '0.8'],
+            ['loc' => route('home'),                        'lastmod' => max($toursMod, $activityMod, $blogMod), 'changefreq' => 'daily',   'priority' => '1.0'],
+            ['loc' => route('tours.index'),                 'lastmod' => $toursMod, 'changefreq' => 'daily',   'priority' => '0.9'],
+            ['loc' => route('experiences.index'),           'lastmod' => $activityMod, 'changefreq' => 'weekly',  'priority' => '0.8'],
+            ['loc' => route('activities.index'),            'lastmod' => $activityMod, 'changefreq' => 'daily',   'priority' => '0.8'],
             ['loc' => route('destinations.index'),          'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('dmc.marrakech'),                     'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
             ['loc' => route('destination-management.company'),   'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
@@ -31,10 +37,10 @@ class SitemapController extends Controller
             ['loc' => route('events-production.morocco'),        'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.85'],
             ['loc' => route('sustainable-events.morocco'),       'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('360-solutions.morocco'),             'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.85'],
-            ['loc' => route('tours.multi_day'),             'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.8'],
+            ['loc' => route('tours.multi_day'),             'lastmod' => $toursMod, 'changefreq' => 'weekly',  'priority' => '0.8'],
             ['loc' => route('about'),                       'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('faq'),                         'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
-            ['loc' => route('blog.index'),                  'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '0.7'],
+            ['loc' => route('blog.index'),                  'lastmod' => $blogMod, 'changefreq' => 'weekly',  'priority' => '0.7'],
             ['loc' => route('contact.show'),                'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.5'],
             ['loc' => route('terms.conditions'),            'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.2'],
             ['loc' => route('privacy.policy'),              'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.2'],
@@ -66,7 +72,7 @@ class SitemapController extends Controller
      * (see header.blade.php / header2.blade.php), not DB-driven routes, so
      * they can't go through addModel(). Kept in sync with those partials.
      */
-    private function addStaticTypePages(array &$urls, string $now): void
+    private function addStaticTypePages(array &$urls, ?string $now): void
     {
         if (Route::has('tours.type')) {
             foreach (['Garden Tours', 'Art Tours', 'Classical Tours'] as $type) {
@@ -74,20 +80,38 @@ class SitemapController extends Controller
             }
         }
 
+        // Activity categories come from the database (only those with at least
+        // one activity) instead of a hard-coded slug list that could point at
+        // renamed or deleted categories.
         if (Route::has('activities.byCategory')) {
-            foreach (['city-tours', 'day-trips', 'food-culinary-tours', 'local-experiences', 'outdoor-activities', 'wellness-experiences'] as $slug) {
-                    $urls[] = ['loc' => $this->canonicalUrl(route('activities.byCategory', $slug)), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
+            try {
+                \App\Models\ActivityCategory::query()
+                    ->whereNotNull('slug')
+                    ->whereHas('activities')
+                    ->orderBy('name')
+                    ->get(['id', 'slug'])
+                    ->each(function ($category) use (&$urls, $now) {
+                        $urls[] = ['loc' => $this->canonicalUrl(route('activities.byCategory', $category->slug)), 'lastmod' => $now, 'changefreq' => 'weekly', 'priority' => '0.6'];
+                    });
+            } catch (\Throwable $e) {
+                Log::warning('Sitemap skip activity categories: ' . $e->getMessage());
             }
         }
     }
 
-    private function addPlacePages(array &$urls, string $now): void
+    private function addPlacePages(array &$urls, ?string $now): void
     {
         if (!Route::has('destinations.show')) return;
         if (!class_exists(Place::class)) return;
 
         try {
-            Place::whereNotNull('slug')->chunk(100, function ($places) use (&$urls, $now) {
+            // Only destinations that actually list something: an empty
+            // destination page is thin and shouldn't be submitted.
+            Place::whereNotNull('slug')
+                ->where(function ($q) {
+                    $q->whereHas('tours')->orWhereHas('activities');
+                })
+                ->chunk(100, function ($places) use (&$urls, $now) {
                 foreach ($places as $place) {
                     if (empty($place->slug)) continue;
                     $urls[] = [
@@ -153,6 +177,18 @@ class SitemapController extends Controller
         } catch (\Throwable $e) {
             Log::warning("Sitemap skip {$modelClass}: " . $e->getMessage());
         }
+    }
+
+    /** Newest updated_at of a model as an Atom date, or null. */
+    private function latestUpdate(string $modelClass): ?string
+    {
+        try {
+            $latest = $modelClass::query()->max('updated_at');
+        } catch (\Throwable $e) {
+            return null;
+        }
+
+        return $latest ? Carbon::parse($latest)->toAtomString() : null;
     }
 
     private function canonicalUrl(string $url): string

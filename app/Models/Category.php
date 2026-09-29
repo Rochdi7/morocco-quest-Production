@@ -20,8 +20,14 @@ class Category extends Model
             $category->slug = $category->slug ?: Str::slug($category->name);
         });
 
+        // Keep the slug (and so the URL) stable when a category is renamed.
+        // It used to be re-derived from the name on every update, silently
+        // changing /category/{slug}. An explicit slug edit is still tracked
+        // by TracksSlugRedirects (301 from the old URL).
         static::updating(function ($category) {
-            $category->slug = Str::slug($category->name);
+            if (blank($category->slug)) {
+                $category->slug = Str::slug($category->name);
+            }
         });
     }
 

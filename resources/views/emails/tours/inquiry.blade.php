@@ -454,7 +454,7 @@
                                             </div>
                                         @endif
                                     @else
-                                        <img src="{{ asset('assets/img/tour-placeholder.png') }}"
+                                        <img src="{{ asset('assets/img/placeholder-image.webp') }}"
                                             alt="{{ $tour->title ?? 'Tour Image' }}" class="tour-img" loading="lazy"
                                             width="810" height="540" style="object-fit: cover;" />
                                     @endif

@@ -16,8 +16,8 @@ class SearchBarController extends Controller
 {
     public function index(Request $request)
     {
-        $place = $request->input('place');
-        $guests = (int) $request->input('guests');
+        $place = $this->stringInput($request, 'place');
+        $guests = (int) $this->stringInput($request, 'guests');
 
         $tours = collect();
         $activities = collect();
@@ -33,15 +33,15 @@ class SearchBarController extends Controller
             ? 'Tours in ' . $place . ' Morocco | Search Results | Morocco Quest'
             : 'Search Morocco Tours, Day Trips & Activities | Morocco Quest';
 
-        $keywordArray = array_filter([
+        // Never put request input into meta keywords (reflected XSS, 2026-09-28).
+        $keywordArray = [
             'morocco tours',
             'morocco tour package',
             'private morocco tours',
             'sahara desert tours morocco',
             'morocco day tours',
             'morocco day trips',
-            $place ? strtolower($place) . ' tours' : null,
-        ]);
+        ];
         $keywords = implode(', ', array_unique($keywordArray));
 
 

@@ -90,7 +90,7 @@
 
     {{-- Define the content section that will be yielded in the layout --}}
 @section('content')
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/chefchaouen-morocco-blue-city-panorama-hero.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/chefchaouen-morocco-blue-city-panorama-hero.webp') }}');" data-bg-src="{{ asset('assets/img/chefchaouen-morocco-blue-city-panorama-hero.webp') }}">
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
             class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" width="97" height="47">
         <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="Decorative hot air balloon icon"

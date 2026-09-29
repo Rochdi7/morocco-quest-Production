@@ -29,6 +29,21 @@ $dmcFaqs = [
 
 @push('jsonld')
 {{-- Organization/TravelAgency identity is emitted once, globally, by layouts/app2.blade.php (@id: {{ url('/') }}#organization) --}}
+{{-- Service node, matching the seven DMC service pages; the description is
+     this page's own meta description (visible summary of the offer). --}}
+<script type="application/ld+json">{!! json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'serviceType' => 'Destination Management Company (DMC) Services',
+    'name' => 'DMC Marrakech — Morocco Quest DMC',
+    'description' => html_entity_decode($description ?? '', ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+    'provider' => ['@id' => url('/') . '#organization'],
+    'areaServed' => [
+        ['@type' => 'City', 'name' => 'Marrakech'],
+        ['@type' => 'Country', 'name' => 'Morocco'],
+    ],
+    'url' => route('dmc.marrakech'),
+], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -58,11 +73,20 @@ $dmcFaqs = [
 
 @section('body_class', 'dmc-page')
 
+{{-- LCP: the hero is a CSS background that main.js only applied after the
+     deferred scripts ran, so it was discovered ~1.6s late (PSI mobile LCP
+     ~12s, audit 2026-09-28). Preload it at high priority and also set it
+     inline so CSS paints it without waiting for JS. [data-bg-src] already
+     carries cover/center sizing in the stylesheet, so the look is unchanged. --}}
+@push('preload')
+<link rel="preload" as="image" fetchpriority="high" href="{{ asset('assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp') }}">
+@endpush
+
 @section('content')
 
 @include('partials.dmc-spacing')
 
-<section class="vs-breadcrumb hero-overlay" data-bg-src="{{ asset('assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp') }}">
+<section class="vs-breadcrumb hero-overlay" style="background-image: url('{{ asset('assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp') }}');" data-bg-src="{{ asset('assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp') }}">
     <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Cloud illustration" class="vs-breadcrumb-icon-1 animate-parachute" loading="lazy" />
     <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="Hot air balloon illustration" class="vs-breadcrumb-icon-2 animate-parachute" loading="lazy" />
     <div class="container">

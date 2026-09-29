@@ -1321,20 +1321,34 @@
 })(jQuery);
 
 // Odometer Counter
+// Sets each [data-count] element to its target when it scrolls into view
+// (odometer.js, where loaded, animates the change). This used the
+// jQuery isInViewport plugin, which no layout loads, so it threw
+// "isInViewport is not a function" and the counters stayed at 0.
+// IntersectionObserver is native; without it, set the values directly.
 function initOdometer() {
-    $("[data-count]").each(function () {
-        var $counterItem = $(this);
+    var counters = document.querySelectorAll("[data-count]");
+    if (!counters.length) return;
 
-        // Check if the element is in the viewport
-        $counterItem.isInViewport(function (status) {
-            if (status === "entered") {
-                // Find the .odometer inside this element and animate
-                $counterItem.each(function () {
-                    var el = this;
-                    el.innerHTML = el.getAttribute("data-count");
-                });
+    var reveal = function (el) {
+        el.innerHTML = el.getAttribute("data-count");
+    };
+
+    if (!("IntersectionObserver" in window)) {
+        counters.forEach(reveal);
+        return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                reveal(entry.target);
+                observer.unobserve(entry.target);
             }
         });
+    });
+    counters.forEach(function (el) {
+        observer.observe(el);
     });
 }
 initOdometer();

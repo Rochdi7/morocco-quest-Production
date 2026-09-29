@@ -16,9 +16,9 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        $query = $request->input('query');
-        $place = $request->input('place');
-        $guests = $request->input('guests');
+        $query = $this->stringInput($request, 'query');
+        $place = $this->stringInput($request, 'place');
+        $guests = $this->stringInput($request, 'guests');
 
         $tours = collect();
         $activities = collect();
@@ -78,15 +78,15 @@ class SearchController extends Controller
             ? 'Search results for "' . $query . '" across morocco tours, sahara desert tours, morocco day trips and travel articles.'
             : 'Search morocco tours, private morocco tours, sahara desert tours from Marrakech, morocco day trips and morocco tour packages. Book direct with a local agency.';
 
-        $keywordArray = array_filter([
+        // Never put request input into meta keywords (reflected XSS, 2026-09-28).
+        $keywordArray = [
             'morocco tours',
             'morocco tour package',
             'private morocco tours',
             'sahara desert tours morocco',
             'morocco day tours',
             'morocco day trips',
-            $query ? strtolower($query) : null,
-        ]);
+        ];
         $keywords = implode(', ', array_unique($keywordArray));
 
 

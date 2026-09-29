@@ -10,7 +10,9 @@
 @section('content')
     <!--================= Breadcrumb Area start =================-->
     <section class="vs-breadcrumb"
-        data-bg-src="{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp
+        style="background-image: url('{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp
+                                        
+                                        ') }}');" data-bg-src="{{ asset('assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp
                                         
                                         ') }}">
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon"
@@ -48,7 +50,7 @@
     <!--================= Breadcrumb Area end =================-->
     <div class="container my-5">
         {{-- Use H1 for the primary topic of this page --}}
-        <h1 class="mb-4 h2">Search Results for "{{ e($query) }}"</h1> {{-- Using h2 class for styling if needed, but
+        <h1 class="mb-4 h2">Search Results for "{{ $query }}"</h1> {{-- Using h2 class for styling if needed, but
         semantically H1 --}}
 
         {{-- Tours Section --}}
@@ -128,7 +130,7 @@
                                 <img src="{{ $activity->first_image_url }}"
                                     alt="{{ $activity->title }}" class="w-100" loading="lazy" width="400"
                                     height="300"
-                                    onerror="this.onerror=null;this.src='{{ asset('assets/img/activities/activity-placeholder.png') }}';" />
+                                    onerror="this.onerror=null;this.src='{{ asset('assets/img/placeholder-image.webp') }}';" />
 
                             </div>
 
@@ -220,7 +222,7 @@
                                         <li>
                                             <a href="{{ route('blog.show', $blog->slug) }}#comments">
                                                 <i class="fa-sharp fa-solid fa-comments"></i>
-                                                {{ $blog->comments_count ?? ($blog->comments ? $blog->comments->count() : 0) }}
+                                                {{ $blog->comments_count ?? $blog->approvedComments()->count() }}
                                                 comments
                                             </a>
                                         </li>
@@ -289,7 +291,7 @@
         @if (!$tours->count() && !$activities->count() && !$blogs->count())
             <div class="text-center my-5 py-5"> {{-- Added more spacing --}}
                 <i class="fas fa-search fa-3x text-muted mb-3"></i> {{-- Optional: Add an icon --}}
-                <p class="text-muted fs-4">No results found for "{{ e($query) }}".</p>
+                <p class="text-muted fs-4">No results found for "{{ $query }}".</p>
                 <p class="text-muted">Try searching for a different term or browse our categories.</p>
                 {{-- Suggest next steps
                 --}}

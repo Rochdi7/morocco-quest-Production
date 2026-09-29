@@ -1,4 +1,4 @@
-<svg viewBox="0 0 2000 857" role="img" width="100%" height="auto"
+<svg viewBox="0 0 2000 857" role="img" width="100%"
                          aria-labelledby="dmcMapTitle dmcMapDesc" preserveAspectRatio="xMidYMid meet"
                          class="dmc-worldmap" style="display:block;max-width:100%;height:auto;">
                         <title id="dmcMapTitle">World map with Morocco highlighted</title>

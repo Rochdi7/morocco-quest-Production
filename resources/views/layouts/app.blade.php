@@ -31,11 +31,15 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    {{-- Direct GA4 event relay (deferred to idle, same pattern as GTM above
-         — no LCP/FCP impact). send_page_view:false is critical: GTM stays
-         the ONLY source of pageview hits, this connection exists solely to
-         deliver our 8 custom events (view_tour, click_cta, generate_lead,
-         etc.) straight to GA4 without any GTM trigger/tag setup. Confirmed
+    {{-- Direct GA4 connection (deferred to idle, same pattern as GTM above
+         — no LCP/FCP impact). This is the ONLY GA4 page-view source:
+         send_page_view:true. Audit 2026-09-28 found the published GTM
+         container has zero tags and this config had send_page_view:false,
+         so GA4 received no page views at all. Do NOT also add a GA4
+         config/page-view tag in GTM, or every page view is counted twice.
+         It also delivers our 8 custom events (view_tour, click_cta,
+         generate_lead, etc.) straight to GA4 without any GTM trigger/tag
+         setup. Confirmed
          2026-08-18: GTM does NOT auto-relay custom dataLayer events on its
          own (verified by removing this block and re-testing cleanly — zero
          GA4 hits even after GTM fully loaded) — this connection is the only
@@ -54,7 +58,7 @@
         (function () {
             function loadGtag() {
                 window.gtag('js', new Date());
-                window.gtag('config', 'G-QXBGN7DKMB', { send_page_view: false });
+                window.gtag('config', 'G-QXBGN7DKMB', { send_page_view: true });
                 var s = document.createElement('script');
                 s.async = true;
                 s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB';
@@ -104,12 +108,20 @@
         $metaKeywords = $sectionKw
             ?: (isset($metaKeywords) && $metaKeywords ? $metaKeywords :
                 'morocco tours, private morocco tours, morocco tour package, sahara desert tours morocco, morocco desert tours from marrakech, small group tours morocco, luxury morocco tours, morocco guided tours');
+
+        // Inline @section values arrive already HTML-escaped ("&amp;");
+        // decode once so every tag below escapes exactly once via {{ }}.
+        // (Raw {!! !!} here, and {{ }} on already-escaped values, produced
+        // unescaped output and "&amp;amp;" respectively.)
+        $metaTitle       = html_entity_decode($metaTitle, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $metaDescription = html_entity_decode($metaDescription, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $metaKeywords    = html_entity_decode($metaKeywords, ENT_QUOTES | ENT_HTML5, 'UTF-8');
     @endphp
 
 
-    <title>{!! $metaTitle !!}</title>
-    <meta name="description" content="{!! $metaDescription !!}" />
-    <meta name="keywords" content="{!! $metaKeywords !!}" />
+    <title>{{ $metaTitle }}</title>
+    <meta name="description" content="{{ $metaDescription }}" />
+    <meta name="keywords" content="{{ $metaKeywords }}" />
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="google-site-verification" content="FT8pL55esPmKkEfXDLPA6ZAZtsS8M8xQS_euP4lcXVk" />
@@ -124,12 +136,12 @@
     <meta property="og:title" content="{{ $metaTitle }}" />
     <meta property="og:description" content="{{ $metaDescription }}" />
     <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:image" content="@yield('og_image', asset('assets/img/logo-bg.png'))" />
+    <meta property="og:image" content="@yield('og_image', asset('assets/img/morocco-quest-og.webp'))" />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ $metaTitle }}" />
     <meta name="twitter:description" content="{{ $metaDescription }}" />
-    <meta name="twitter:image" content="@yield('og_image', asset('assets/img/logo-bg.png'))" />
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/img/morocco-quest-og.webp'))" />
 
     {{-- Global WebSite JSON-LD --}}
     <script type="application/ld+json">
@@ -142,7 +154,8 @@
         'inLanguage' => 'en',
         'potentialAction' => [
             '@type' => 'SearchAction',
-            'target' => url('/search') . '?q={search_term_string}',
+            // The search controller reads ?query= (?q= returned no results).
+            'target' => url('/search') . '?query={search_term_string}',
             'query-input' => 'required name=search_term_string',
         ],
     ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
@@ -162,8 +175,15 @@
         'image' => asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'priceRange' => '$$-$$$',
         'telephone' => '+212-654-069-718',
+        // Street, postcode, email and founding year as shown in the footer,
+        // on /contact and on /about.
+        'email' => 'sales@morocco-quest.com',
+        'foundingDate' => '2022',
+        'hasMap' => 'https://maps.app.goo.gl/FtVJocKLhRVvvF377',
         'address' => [
             '@type' => 'PostalAddress',
+            'streetAddress' => 'Khalid Ibn Al Walid Street, Gueliz',
+            'postalCode' => '40000',
             'addressLocality' => 'Marrakech',
             'addressRegion' => 'Marrakech-Safi',
             'addressCountry' => 'MA',
@@ -265,10 +285,10 @@
 
     {{-- Bootstrap Icons: self-hosted, deferred (icons only appear in nav/footer, not above the fold).
          Self-hosting removes the CDN round-trip and lets us control font-display. --}}
-    <link rel="preload" as="style" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}"
+    <link rel="preload" as="style" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css') }}"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css') }}">
     </noscript>
 
     {{-- Critical CSS (render-blocking — needed for first paint).
@@ -350,7 +370,9 @@
     <div class="preloader">
         <button class="vs-btn preloaderCls">Cancel Preloader</button>
         <div class="preloader-inner">
-            <img src="{{ asset('assets/img/logo-white.bg.webp') }}" alt="Morocco Quest Logo Preloader"
+            {{-- The preloader logo is the LCP element on overlay pages (PSI 2026-09-28);
+                 fetchpriority=high lets it load ahead of fonts/icons. --}}
+            <img src="{{ asset('assets/img/logo-white.bg.webp') }}" fetchpriority="high" alt="Morocco Quest Logo Preloader"
                 style="max-height: 350px; max-width: 550px;" />
             <span class="loader"></span>
         </div>
@@ -434,13 +456,10 @@
     {{-- GA4 (G-QXBGN7DKMB — confirmed via GA4 Admin > Data Streams
          2026-08-18; a prior comment here referenced a stale/wrong ID,
          G-YK31305QT6, that doesn't correspond to any real property).
-         Standard pageviews are loaded BY the GTM container (GTM-WVCGDJ98)
-         — see the direct gtag.js connection near the top of <head>, which
-         is deliberately send_page_view:false so it never duplicates what
-         GTM sends; it exists only to relay our custom events (view_tour,
-         click_cta, generate_lead, etc.) straight to GA4. If GA4 pageview
-         data ever stops, re-check the GA4 config tag still exists in GTM —
-         that's the pageview source of truth, not this connection. --}}
+         Page views are sent by the direct gtag.js connection near the top
+         of <head> (send_page_view:true), which also relays our custom
+         events. The GTM container (GTM-WVCGDJ98) must NOT carry a GA4
+         page-view tag as well, or page views double. --}}
     <script>
         var ahrefs_analytics_script = document.createElement('script');
         ahrefs_analytics_script.async = true;

@@ -5,18 +5,21 @@
 @section('page_description', Str::limit(strip_tags($activity->overview), 160))
 
 @php
+    // A bookable guided activity is a TouristTrip; TouristAttraction (a
+    // place) doesn't support `offers`, which made all 23 pages invalid
+    // (audit 2026-09-28). No `offers` either way: the page shows "Price On
+    // Request", so a price in the markup would contradict visible content.
+    $plainText = fn ($html) => trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags((string) $html), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
     $activitySchema = [
         '@context' => 'https://schema.org',
-        '@type' => 'TouristAttraction',
-        'name' => $activity->title ?? 'Morocco Activity',
-        'description' => Str::limit(html_entity_decode(strip_tags($activity->overview ?? $activity->subtitle ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8'), 300),
+        '@type' => 'TouristTrip',
+        'name' => trim($activity->title ?? 'Morocco Activity'),
+        'description' => Str::limit($plainText($activity->overview ?? $activity->subtitle ?? ''), 300),
         'url' => url()->current(),
+        'image' => $activity->first_image_url ?: asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'touristType' => ['Cultural', 'Adventure', 'Day Trip'],
-        'isAccessibleForFree' => false,
+        'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/'), '@id' => url('/') . '#organization'],
     ];
-    if (!empty($activity->price_adult)) {
-        $activitySchema['offers'] = ['@type' => 'Offer', 'price' => (string) $activity->price_adult, 'priceCurrency' => 'USD', 'availability' => 'https://schema.org/InStock', 'url' => url()->current()];
-    }
 @endphp
 
 @push('jsonld')
@@ -54,7 +57,7 @@
 @section('content')
 
     {{-- Breadcrumb Section --}}
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}');" data-bg-src="{{ asset('assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp') }}">
         {{-- Class untouched
         --}}
         {{-- ✅ 3. Lazy Loading for Images --}}
@@ -154,7 +157,7 @@
                                         <div style="display: none;" aria-hidden="true">{{ $image->description }}</div>
                                     @endif
                                 @else
-                                    <img src="{{ asset('assets/img/activity/activity-placeholder.png') }}"
+                                    <img src="{{ asset('assets/img/placeholder-image.webp') }}"
                                         alt="{{ $activity->title ?? 'Activity Image' }}" class="w-100" loading="lazy"
                                         width="810" height="540" style="object-fit: cover;" />
                                 @endif
@@ -207,15 +210,10 @@
                                             font-size: 1rem;
                                         }
                                     </style>
-                                    {{-- UNCOMMENTED and populated for structural similarity with tour page --}}
-                                    <ul class="custom-ul mt-3">
-                                        <li><i class="fa-solid fa-circle-arrow-right"></i> Key highlight or feature of
-                                            the activity.</li>
-                                        <li><i class="fa-solid fa-circle-arrow-right"></i> Another important detail or
-                                            benefit.</li>
-                                        <li><i class="fa-solid fa-circle-arrow-right"></i> Experience unique aspects of
-                                            this activity.</li>
-                                    </ul>
+                                    {{-- A hard-coded placeholder list ("Key highlight or feature of the
+                                         activity." ×3) was shown on every activity page; removed 2026-09-29.
+                                         Activities have no highlights field yet — add one in Filament and
+                                         render it here if per-activity highlights are wanted. --}}
                                 </div>
                                 {{-- REMOVED:
                                 <hr class="my-5"> --}}
@@ -840,13 +838,24 @@
         </div> {{-- End container --}}
     </section>
 
-    @if ($activity->places && $activity->places->isNotEmpty())
+    {{-- Contextual links up the hierarchy: destination(s) and category. --}}
+    @php
+        $hasPlaces = $activity->places && $activity->places->isNotEmpty();
+        $hasCategory = $activity->category && filled($activity->category->slug);
+    @endphp
+    @if ($hasPlaces || $hasCategory)
         <div class="container">
             <p class="text-center mb-0">
-                Explore more in
-                @foreach ($activity->places as $activityPlace)
-                    <a href="{{ route('destinations.show', $activityPlace->slug) }}">{{ $activityPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
-                @endforeach
+                @if ($hasPlaces)
+                    Explore more in
+                    @foreach ($activity->places as $activityPlace)
+                        <a href="{{ route('destinations.show', $activityPlace->slug) }}">{{ $activityPlace->name }}</a>{{ !$loop->last ? ',' : '' }}
+                    @endforeach
+                @endif
+                @if ($hasCategory)
+                    {{ $hasPlaces ? 'or browse more' : 'Browse more' }}
+                    <a href="{{ route('activities.byCategory', $activity->category->slug) }}">{{ trim($activity->category->name) }} in Morocco</a>
+                @endif
             </p>
         </div>
     @endif

@@ -11,30 +11,41 @@
         preg_match('/(\d+)-days?/', $tour->slug ?? '', $dm);
         $durationDays = $dm[1] ?? null;
     }
+    // Schema must describe what the page shows (audit 2026-09-28):
+    // - no `duration` (not a TouristTrip property) — the day-by-day
+    //   itinerary shown on the page is exposed as `itinerary` instead;
+    // - no `offers`: the page shows "Price On Request", so a price in the
+    //   markup would contradict the visible content. Re-add it only if
+    //   prices are displayed on the page.
+    // - same image as og:image (first_image_url), entity-decoded text.
+    $plainText = fn ($html) => trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags((string) $html), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
     $tourSchema = [
         '@context' => 'https://schema.org',
         '@type' => 'TouristTrip',
-        'name' => $tour->title,
-        'description' => Str::limit(strip_tags($tour->overview ?? $tour->subtitle ?? 'Morocco private tour.'), 300),
+        'name' => trim($tour->title),
+        'description' => Str::limit($plainText($tour->overview ?? $tour->subtitle ?? 'Morocco private tour.'), 300),
         'url' => url()->current(),
-        'image' => $tour->images && $tour->images->isNotEmpty()
-            ? asset('storage/' . $tour->images->first()->image_path)
-            : asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
+        'image' => $tour->first_image_url ?: asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'touristType' => ['Adventure', 'Cultural', 'Desert', 'Luxury'],
         'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/'), '@id' => url('/') . '#organization'],
     ];
-    if ($durationDays) {
-        $tourSchema['duration'] = 'P' . $durationDays . 'D';
-    }
-    if (!empty($tour->price_adult)) {
-        $tourSchema['offers'] = ['@type' => 'Offer', 'price' => (string) $tour->price_adult, 'priceCurrency' => 'USD', 'availability' => 'https://schema.org/InStock', 'url' => url()->current()];
+    if ($tour->itineraryDays && $tour->itineraryDays->isNotEmpty()) {
+        $tourSchema['itinerary'] = [
+            '@type' => 'ItemList',
+            'numberOfItems' => $tour->itineraryDays->count(),
+            'itemListElement' => $tour->itineraryDays->values()->map(fn ($day, $i) => [
+                '@type' => 'ListItem',
+                'position' => $i + 1,
+                'name' => trim('Day ' . ($day->day_number ?? $i + 1) . ': ' . $plainText($day->title)),
+            ])->all(),
+        ];
     }
     $tourBreadcrumb = [
         '@context' => 'https://schema.org',
         '@type' => 'BreadcrumbList',
         'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Marrakech Desert Tours', 'item' => url('/tours')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Tours', 'item' => url('/tours')],
             ['@type' => 'ListItem', 'position' => 3, 'name' => $tour->title, 'item' => url()->current()],
         ],
     ];
@@ -68,7 +79,7 @@
 @section('content')
 
     {{-- Breadcrumb Section (Existing structure preserved) --}}
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/sahara-merzouga-camel-tour-sunset-morocco.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/sahara-merzouga-camel-tour-sunset-morocco.webp') }}');" data-bg-src="{{ asset('assets/img/sahara-merzouga-camel-tour-sunset-morocco.webp') }}">
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon for desert tour section"
             class="vs-breadcrumb-icon-1 animate-parachute" />
         <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}" alt="Hot air balloon symbolizing Moroccan adventures"
@@ -180,7 +191,7 @@
                                         </div>
                                     @endif
                                 @else
-                                    <img src="{{ asset('assets/img/tour-placeholder.png') }}"
+                                    <img src="{{ asset('assets/img/placeholder-image.webp') }}"
                                         alt="{{ $tour->title ?? 'Tour Image' }}" class="w-100" loading="lazy"
                                         width="810" height="540" style="object-fit: cover;" />
                                 @endif
@@ -483,7 +494,11 @@
                                     <h3 class="title">Tour Map</h3>
                                     @if ($tour->map_embed_code)
                                         <div style="width: 100%; height: 350px; border-radius: 10px; overflow: hidden;">
-                                            {!! $tour->map_embed_code !!}
+                                            {{-- Lazy-load the admin-entered Google Maps iframe (~480 KB, loaded
+                                                 eagerly before) — it sits below the fold in a tab. --}}
+                                            {!! str_contains($tour->map_embed_code, 'loading=')
+                                                ? $tour->map_embed_code
+                                                : preg_replace('/<iframe\b/i', '<iframe loading="lazy"', $tour->map_embed_code, 1) !!}
                                         </div>
                                     @else
                                         <p class="mt-3">A map illustrating the route for the {{ $tour->title }} is

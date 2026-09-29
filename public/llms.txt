@@ -8,31 +8,25 @@ Morocco Quest (also known as Morocco Quest DMC) is based in Marrakech, Morocco. 
 
 - [Home](https://morocco-quest.com/): Overview of all Morocco tours, packages, and the agency
 - [All Tours](https://morocco-quest.com/tours): Browse all private and group Morocco tour packages
-- [Destinations](https://morocco-quest.com/destinations): Morocco tour destinations — Marrakech, Fes, Sahara, Atlas Mountains
-- [Multi-Day Tours](https://morocco-quest.com/tours/type/multi-day): All multi-day Morocco tours including Sahara desert and imperial cities
-- [Activities](https://morocco-quest.com/activities): Morocco day trips and activities by category
-- [Activity Categories](https://morocco-quest.com/activity-categories): Browse activities by type
+- [Multi-Day Tours](https://morocco-quest.com/tours/type/multi-day): All multi-day Morocco tours, including Sahara desert itineraries
+- [One-Day Tours](https://morocco-quest.com/tours/type/one-day): One-day Morocco tours and day trips
+- [Destinations](https://morocco-quest.com/destinations): Morocco tour destinations — Marrakech, Fes, Tangier, Rabat, Chefchaouen, Essaouira and more
+- [Experiences](https://morocco-quest.com/experiences): Morocco activities and day experiences by category
 - [Blog](https://morocco-quest.com/blog): Morocco travel guide, tips, and itinerary advice
 - [FAQ](https://morocco-quest.com/faq): Frequently asked questions about Morocco tours, booking, visas, and safety
 - [About](https://morocco-quest.com/about): About Morocco Quest travel agency and our local team
 - [Contact](https://morocco-quest.com/contact): Contact Morocco Quest to book or inquire about tours
-- [DMC Marrakech](https://morocco-quest.com/dmc-marrakech): Destination Management Company services in Marrakech
 
-## Top Tours
+## DMC, MICE and Corporate Events
 
-- [5-Day Marrakech Luxury City Break](https://morocco-quest.com/tours/5-day-marrakech-luxury-city-break-gardens-culture-relaxation): Gardens, culture and relaxation — 5 days from Marrakech
-- [5-Day Marrakech & Sahara Desert Tour](https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour): Luxury desert discovery — camel trekking, dunes, desert camp
-- [8-Day Morocco Luxury Cultural Discovery](https://morocco-quest.com/tours/8-day-morocco-luxury-cultural-discovery-art-heritage-culinary-delights): Art, heritage & culinary highlights across Morocco
-- [Royal Cities of Morocco 6-Day Tour](https://morocco-quest.com/tours/royal-cities-of-morocco-6-day-luxury-imperial-cultural-tour): Imperial cultural tour — Fes, Meknes, Rabat, Casablanca
-- [9-Day Andalusian Morocco Rail Tour](https://morocco-quest.com/tours/9-day-andalusian-morocco-train-tour): From Tangier to Marrakech by train — heritage and coast
-
-## Top Activities
-
-- [Hot Air Balloon Ride over Marrakech](https://morocco-quest.com/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast): Sunrise flight with Berber breakfast
-- [Moroccan Cooking Class in Marrakech](https://morocco-quest.com/activities/authentic-3-hour-moroccan-cooking-class-in-marrakech-morning-afternoon-sessions): 3-hour hands-on tagine and couscous class
-- [Marrakech Medina Hidden Gems Tour](https://morocco-quest.com/activities/marrakech-medina-hidden-gems-tour-discover-authentic-local-life-with-a-private-guide): Private guided tour of souks and local life
-- [Essaouira Day Trip from Marrakech](https://morocco-quest.com/activities/essaouira-day-trip-from-marrakech-private-atlantic-coast-experience): Atlantic coast, ramparts, and argan oil workshops
-- [High Atlas Day Hike & Berber Hospitality](https://morocco-quest.com/activities/a-day-in-the-high-atlas-hike-tea-ritual-berber-hospitality): Trek to Berber villages with traditional tea ritual
+- [DMC Marrakech](https://morocco-quest.com/dmc-marrakech): Destination management, MICE and incentive travel services in Morocco
+- [Destination Management Company](https://morocco-quest.com/destination-management-company): What a DMC in Morocco does and how to work with one
+- [Meetings & Conventions](https://morocco-quest.com/meetings-conventions-management): Meetings and conventions management in Marrakech
+- [Congress Organization (PCO)](https://morocco-quest.com/professional-congress-organization): Professional congress organizer services in Morocco
+- [Team Building](https://morocco-quest.com/team-building-marrakech): Team building and incentive programmes in Marrakech
+- [Events Production](https://morocco-quest.com/events-production-morocco): Corporate event production in Morocco
+- [Sustainable Events](https://morocco-quest.com/sustainable-events-morocco): Responsible and sustainable MICE events in Morocco
+- [360° Event Solutions](https://morocco-quest.com/360-event-solutions): Integrated multi-day MICE programmes
 
 ## About the Agency
 
@@ -42,4 +36,4 @@ Morocco Quest (also known as Morocco Quest DMC) is based in Marrakech, Morocco. 
 
 - [Blog](https://morocco-quest.com/blog): Morocco travel advice written by local guides covering itineraries, safety, visas, packing, and culture
 
-All tour pages include departure city, duration, itinerary highlights, pricing in USD/EUR, and full inclusions. The site targets English-speaking travelers from the US, UK, France, Spain, and the EU.
+Tour pages include departure city, duration, day-by-day itinerary and inclusions; prices are quoted on request. The site targets English-speaking travelers from the US, UK, France, Spain, and the EU.

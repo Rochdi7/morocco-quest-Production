@@ -67,7 +67,12 @@ class ActivityController extends Controller
 
     public function showByCategory($category_slug)
     {
-        $category = ActivityCategory::where('slug', $category_slug)->firstOrFail();
+        $category = ActivityCategory::where('slug', $category_slug)->first();
+
+        if (! $category) {
+            // Old slug from before a rename → 301 to the current URL.
+            return SlugRedirector::redirectForPath('/activities/category/' . $category_slug) ?? abort(404);
+        }
 
         $activities = $category->activities()
             ->with('images')
@@ -213,6 +218,13 @@ class ActivityController extends Controller
             ->with(['images', 'category'])
             ->paginate(12);
 
+        // Soft-404 guard (see TourController::showByType): unknown type or a
+        // page past the end with no results → 404; empty known type → noindex.
+        $isEmpty = $activities->isEmpty();
+        if ($isEmpty && (! isset($map[$slugifiedType]) || $activities->currentPage() > 1)) {
+            abort(404);
+        }
+
         $descriptionMap = [
             'garden-tours'       => 'Book morocco garden tours: the Majorelle Garden, Menara Gardens and Marrakech\'s historic riad gardens with a local guide.',
             'art-tours'          => 'Book morocco art tours: contemporary galleries, artisan workshops and the museums of Marrakech with a local guide.',
@@ -238,6 +250,9 @@ class ActivityController extends Controller
         ];
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywords);
+        if ($isEmpty) {
+            SeoHelper::noindex();
+        }
 
         return view('type-filter', [
             'tours'       => $tours,

@@ -30,7 +30,9 @@ protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left';
                 Forms\Components\Select::make('blog_id')
                     ->relationship('blog', 'title')
                     ->required(),
-                
+                Forms\Components\Toggle::make('is_approved')
+                    ->label('Approved (visible on the blog)'),
+
             ]);
     }
 
@@ -44,9 +46,14 @@ protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left';
                 Tables\Columns\TextColumn::make('content')->limit(60)->wrap(),
                 Tables\Columns\TextColumn::make('blog.title')->label('Blog')->searchable()->sortable(),
                 Tables\Columns\TextColumn::make('parent_id')->label('Reply to #')->placeholder('—'),
+                Tables\Columns\ToggleColumn::make('is_approved')->label('Approved')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime('Y-m-d H:i')->sortable(),
             ])
             ->filters([
+                Tables\Filters\TernaryFilter::make('is_approved')
+                    ->label('Moderation')
+                    ->trueLabel('Approved')
+                    ->falseLabel('Pending'),
                 SelectFilter::make('blog_id')
                     ->label('Blog Post')
                     ->options(Blog::pluck('title', 'id'))
@@ -60,6 +67,16 @@ protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left';
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\BulkAction::make('approve')
+                        ->label('Approve')
+                        ->icon('heroicon-o-check-circle')
+                        ->action(fn (\Illuminate\Database\Eloquent\Collection $records) => $records->each->update(['is_approved' => true]))
+                        ->deselectRecordsAfterCompletion(),
+                    Tables\Actions\BulkAction::make('unapprove')
+                        ->label('Unapprove (hide)')
+                        ->icon('heroicon-o-eye-slash')
+                        ->action(fn (\Illuminate\Database\Eloquent\Collection $records) => $records->each->update(['is_approved' => false]))
+                        ->deselectRecordsAfterCompletion(),
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);

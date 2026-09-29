@@ -12,14 +12,20 @@
     $blogSchema = $_blogModel ? [
         '@context' => 'https://schema.org',
         '@type' => 'BlogPosting',
-        'headline' => $_blogModel->title,
-        'description' => Str::limit(strip_tags($_blogModel->summary ?? $_blogModel->content ?? ''), 300),
-        'image' => $_blogModel->cover_image
-            ? asset('storage/' . $_blogModel->cover_image)
+        // headline ≤110 chars (Google's limit); text entity-decoded.
+        'headline' => Str::limit(trim(html_entity_decode($_blogModel->title, ENT_QUOTES | ENT_HTML5, 'UTF-8')), 110, ''),
+        'description' => Str::limit(trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags($_blogModel->summary ?? $_blogModel->content ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8'))), 300),
+        // The post's real featured image (the old code read a non-existent
+        // `cover_image` column, so every post fell back to the site hero).
+        'image' => $_blogModel->featured_image
+            ? $_blogModel->featured_image_url
             : asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'author' => ['@type' => 'Person', 'name' => $_blogModel->written_by ?? 'Morocco Quest'],
+        // Reference the sitewide TravelAgency entity instead of a second,
+        // unlinked Organization.
         'publisher' => [
             '@type' => 'Organization',
+            '@id' => url('/') . '#organization',
             'name' => 'Morocco Quest',
             'logo' => ['@type' => 'ImageObject', 'url' => asset('assets/img/logo-bg-wide.webp')],
         ],
@@ -59,7 +65,7 @@
 
 @section('content')
 
-    <section class="vs-breadcrumb" data-bg-src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}">
+    <section class="vs-breadcrumb" style="background-image: url('{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}');" data-bg-src="{{ asset('assets/img/moroccan-souk-woman-seller-market-life-fes.webp') }}">
         <img src="{{ asset('assets/img/icons/cloud.png') }}" alt="Decorative cloud icon for blog post section"
             class="vs-breadcrumb-icon-1 animate-parachute" />
         <img src="{{ asset('assets/img/icons/ballon-sclation.png') }}"
@@ -164,7 +170,9 @@
                                 <h4 class="blog-title">{{ $post->title }}</h4>
                             --}}
                             <div class="dynamic-content-area blog-text">
-                                {!! $post->content !!} {{-- Ensure $post->content is sanitized if it comes from user input to prevent XSS --}}
+                                {{-- Admin-authored HTML (Filament). The page already has its H1, so any
+                                     <h1> inside the body is rendered as <h2> (one post had 14 H1s). --}}
+                                {!! preg_replace(['/<h1(\s|>)/i', '/<\/h1>/i'], ['<h2$1', '</h2>'], $post->content) !!}
                             </div>
                             @if ($post->quote)
                                 <blockquote class="vs-quote">
@@ -389,7 +397,8 @@
                                                 </div>
 
                                                 <div class="reply_and_edit">
-                                                    <a href="javascript:void(0);" class="replay-btn"
+                                                    <a href="#reply-form-{{ $comment->id }}" class="replay-btn" role="button"
+                                                        aria-controls="reply-form-{{ $comment->id }}"
                                                         data-id="{{ $comment->id }}">
                                                         Reply <i class="fa-solid fa-reply"></i>
                                                     </a>
@@ -401,6 +410,7 @@
                                                     <form action="{{ route('blog.comments.reply', $comment->id) }}"
                                                         method="POST">
                                                         @csrf
+                                                        @include('partials.comment-honeypot')
                                                         <div class="row gx-20">
                                                             <div class="col-12 form-group">
                                                                 <label for="reply_content_{{ $comment->id }}"
@@ -533,7 +543,8 @@
                                                                     </div>
 
                                                                     <div class="reply_and_edit">
-                                                                        <a href="javascript:void(0);" class="replay-btn"
+                                                                        <a href="#reply-form-{{ $reply->id }}" class="replay-btn" role="button"
+                                                                            aria-controls="reply-form-{{ $reply->id }}"
                                                                             data-id="{{ $reply->id }}">
                                                                             Reply <i class="fa-solid fa-reply"></i>
                                                                         </a>
@@ -547,6 +558,7 @@
                                                                             action="{{ route('blog.comments.reply', ['id' => $comment->id]) }}"
                                                                             method="POST">
                                                                             @csrf
+                                                                            @include('partials.comment-honeypot')
                                                                             <div class="row gx-20">
                                                                                 <div class="col-12 form-group">
                                                                                     <label
@@ -661,6 +673,7 @@
 
                                     <form action="{{ route('comments.store', $post) }}" method="POST">
                                         @csrf
+                                        @include('partials.comment-honeypot')
                                         <div class="row gx-20">
                                             <div class="col-12 form-group">
                                                 <label for="comment_content" class="visually-hidden">Your Comment
@@ -979,6 +992,8 @@
             // Event listener for reply buttons
             document.addEventListener('click', function(e) {
                 if (e.target.closest('.replay-btn')) {
+                    // Real #reply-form-N href (was javascript:void(0)); keep the toggle in place.
+                    e.preventDefault();
                     const commentId = e.target.closest('.replay-btn').getAttribute('data-id');
                     const form = document.getElementById(`reply-form-${commentId}`);
 
