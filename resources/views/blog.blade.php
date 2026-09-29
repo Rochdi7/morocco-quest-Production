@@ -32,7 +32,19 @@
             <div class="row text-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title">Our Travel Blog</h1>
+                        {{-- Category/tag/search archives share this view; each needs its own H1
+                             (all 100 archives used to share "Our Travel Blog"). --}}
+                        <h1 class="breadcrumb-title">
+                            @if (isset($category) && $category instanceof \App\Models\Category)
+                                {{ $category->name }}: Morocco Travel Articles
+                            @elseif (isset($tag) && $tag instanceof \App\Models\Tag)
+                                Articles Tagged “{{ $tag->name }}”
+                            @elseif (!empty($query))
+                                Blog Search: “{{ $query }}”
+                            @else
+                                Our Travel Blog
+                            @endif
+                        </h1>
                         <p class="breadcrumb-subtitle" style="color: white;">
                             Discover inspiring stories, travel tips, and hidden gems of Morocco.
                         </p>

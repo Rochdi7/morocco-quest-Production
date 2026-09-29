@@ -13,6 +13,7 @@ use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\JsonLd;
 use App\Support\SlugRedirector;
+use App\Support\SeoHelper;
 
 class TagController extends Controller
 {
@@ -31,6 +32,12 @@ class TagController extends Controller
             ->with(['user', 'category'])
             ->latest()
             ->paginate(10);
+
+        // An empty tag (or a page past the end) is a soft 404: it used to
+        // return 200 "No posts found".
+        if ($posts->isEmpty()) {
+            abort(404);
+        }
 
         // Same sidebar cache key as CategoryController + BlogController.
         // Shared across all blog/category/tag pages; auto-expires after 1h.
@@ -66,6 +73,11 @@ class TagController extends Controller
         SEOMeta::setDescription($description);
         SEOMeta::setCanonical($url);
         SEOMeta::addKeyword($keywordArray);
+
+        // Tag archives are thin (67 tags for 16 posts, most holding one
+        // post; audit 2026-09-28): keep them out of the index but let
+        // crawlers follow through to the posts.
+        SeoHelper::noindex();
 
         OpenGraph::setTitle($title)
             ->setDescription($description)

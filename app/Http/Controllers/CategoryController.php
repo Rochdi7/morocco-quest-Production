@@ -27,6 +27,11 @@ class CategoryController extends Controller
             ->latest()
             ->paginate(10);
 
+        // An empty category (or a page past the end) is a soft 404.
+        if ($posts->isEmpty()) {
+            abort(404);
+        }
+
         // Sidebar data is the same across all category/tag/blog pages and
         // changes maybe once a week. Cache for 1 hour to drop ~3 DB queries
         // per request. Auto-expires; no manual invalidation required.
