@@ -283,6 +283,11 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
+    {{-- Page-specific high-priority preloads (e.g. a hero image that is only
+         set as a CSS background, which the browser can't discover early).
+         Placed before the font/icon preloads so it isn't queued behind them. --}}
+    @stack('preload')
+
     {{-- Bootstrap Icons: self-hosted, deferred (icons used in nav/header).
          Self-hosting removes the CDN round-trip and lets us control font-display. --}}
     <link rel="preload" as="style" href="{{ asset('assets/plugins/bootstrap-icons/bootstrap-icons.min.css') }}"
