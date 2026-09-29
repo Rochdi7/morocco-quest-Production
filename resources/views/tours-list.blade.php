@@ -174,7 +174,7 @@
                             @if ($placeName)
                                 <p>There are currently no tours listed for the destination "{{ $placeName }}".</p>
                                 <a href="{{ route('destinations.index') }}" class="vs-btn mt-3">View Other Destinations</a>
-                            @elseif($query)
+                            @elseif(!empty($query))
                                 <p>No tours found matching your search criteria "{{ $query }}".</p>
                                 <a href="{{ route('tours.index') }}" class="vs-btn mt-3">View All Tours</a>
                             @else

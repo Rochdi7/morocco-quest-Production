@@ -66,9 +66,9 @@ class TourController extends Controller
      */
     public function index(Request $request)
     {
-        $placeName      = $request->input('place');
-        $searchDate     = $request->input('searchDate');
-        $selectedGuests = $request->input('guests');
+        $placeName      = $this->stringInput($request, 'place');
+        $searchDate     = $this->stringInput($request, 'searchDate');
+        $selectedGuests = $this->stringInput($request, 'guests');
 
         $locations = Place::query()
             ->where(function ($query) {
@@ -116,6 +116,12 @@ class TourController extends Controller
         }
 
         $tours = $toursQuery->latest()->paginate(8);
+
+        // Out-of-range page (?page=2 when everything fits on page 1): 404
+        // instead of rendering an empty listing that would be indexable.
+        if ($tours->isEmpty() && $tours->currentPage() > 1) {
+            abort(404);
+        }
 
         $popularTours = Tour::where('is_popular', true)
             ->with(['firstImage', 'places'])
