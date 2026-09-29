@@ -210,15 +210,10 @@
                                             font-size: 1rem;
                                         }
                                     </style>
-                                    {{-- UNCOMMENTED and populated for structural similarity with tour page --}}
-                                    <ul class="custom-ul mt-3">
-                                        <li><i class="fa-solid fa-circle-arrow-right"></i> Key highlight or feature of
-                                            the activity.</li>
-                                        <li><i class="fa-solid fa-circle-arrow-right"></i> Another important detail or
-                                            benefit.</li>
-                                        <li><i class="fa-solid fa-circle-arrow-right"></i> Experience unique aspects of
-                                            this activity.</li>
-                                    </ul>
+                                    {{-- A hard-coded placeholder list ("Key highlight or feature of the
+                                         activity." ×3) was shown on every activity page; removed 2026-09-29.
+                                         Activities have no highlights field yet — add one in Filament and
+                                         render it here if per-activity highlights are wanted. --}}
                                 </div>
                                 {{-- REMOVED:
                                 <hr class="my-5"> --}}
