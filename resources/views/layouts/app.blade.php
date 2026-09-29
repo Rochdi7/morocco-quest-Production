@@ -31,11 +31,15 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    {{-- Direct GA4 event relay (deferred to idle, same pattern as GTM above
-         — no LCP/FCP impact). send_page_view:false is critical: GTM stays
-         the ONLY source of pageview hits, this connection exists solely to
-         deliver our 8 custom events (view_tour, click_cta, generate_lead,
-         etc.) straight to GA4 without any GTM trigger/tag setup. Confirmed
+    {{-- Direct GA4 connection (deferred to idle, same pattern as GTM above
+         — no LCP/FCP impact). This is the ONLY GA4 page-view source:
+         send_page_view:true. Audit 2026-09-28 found the published GTM
+         container has zero tags and this config had send_page_view:false,
+         so GA4 received no page views at all. Do NOT also add a GA4
+         config/page-view tag in GTM, or every page view is counted twice.
+         It also delivers our 8 custom events (view_tour, click_cta,
+         generate_lead, etc.) straight to GA4 without any GTM trigger/tag
+         setup. Confirmed
          2026-08-18: GTM does NOT auto-relay custom dataLayer events on its
          own (verified by removing this block and re-testing cleanly — zero
          GA4 hits even after GTM fully loaded) — this connection is the only
@@ -54,7 +58,7 @@
         (function () {
             function loadGtag() {
                 window.gtag('js', new Date());
-                window.gtag('config', 'G-QXBGN7DKMB', { send_page_view: false });
+                window.gtag('config', 'G-QXBGN7DKMB', { send_page_view: true });
                 var s = document.createElement('script');
                 s.async = true;
                 s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB';
@@ -434,13 +438,10 @@
     {{-- GA4 (G-QXBGN7DKMB — confirmed via GA4 Admin > Data Streams
          2026-08-18; a prior comment here referenced a stale/wrong ID,
          G-YK31305QT6, that doesn't correspond to any real property).
-         Standard pageviews are loaded BY the GTM container (GTM-WVCGDJ98)
-         — see the direct gtag.js connection near the top of <head>, which
-         is deliberately send_page_view:false so it never duplicates what
-         GTM sends; it exists only to relay our custom events (view_tour,
-         click_cta, generate_lead, etc.) straight to GA4. If GA4 pageview
-         data ever stops, re-check the GA4 config tag still exists in GTM —
-         that's the pageview source of truth, not this connection. --}}
+         Page views are sent by the direct gtag.js connection near the top
+         of <head> (send_page_view:true), which also relays our custom
+         events. The GTM container (GTM-WVCGDJ98) must NOT carry a GA4
+         page-view tag as well, or page views double. --}}
     <script>
         var ahrefs_analytics_script = document.createElement('script');
         ahrefs_analytics_script.async = true;
