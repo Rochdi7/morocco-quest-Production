@@ -5,18 +5,21 @@
 @section('page_description', Str::limit(strip_tags($activity->overview), 160))
 
 @php
+    // A bookable guided activity is a TouristTrip; TouristAttraction (a
+    // place) doesn't support `offers`, which made all 23 pages invalid
+    // (audit 2026-09-28). No `offers` either way: the page shows "Price On
+    // Request", so a price in the markup would contradict visible content.
+    $plainText = fn ($html) => trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags((string) $html), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
     $activitySchema = [
         '@context' => 'https://schema.org',
-        '@type' => 'TouristAttraction',
-        'name' => $activity->title ?? 'Morocco Activity',
-        'description' => Str::limit(html_entity_decode(strip_tags($activity->overview ?? $activity->subtitle ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8'), 300),
+        '@type' => 'TouristTrip',
+        'name' => trim($activity->title ?? 'Morocco Activity'),
+        'description' => Str::limit($plainText($activity->overview ?? $activity->subtitle ?? ''), 300),
         'url' => url()->current(),
+        'image' => $activity->first_image_url ?: asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'touristType' => ['Cultural', 'Adventure', 'Day Trip'],
-        'isAccessibleForFree' => false,
+        'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/'), '@id' => url('/') . '#organization'],
     ];
-    if (!empty($activity->price_adult)) {
-        $activitySchema['offers'] = ['@type' => 'Offer', 'price' => (string) $activity->price_adult, 'priceCurrency' => 'USD', 'availability' => 'https://schema.org/InStock', 'url' => url()->current()];
-    }
 @endphp
 
 @push('jsonld')

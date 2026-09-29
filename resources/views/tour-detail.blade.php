@@ -11,30 +11,41 @@
         preg_match('/(\d+)-days?/', $tour->slug ?? '', $dm);
         $durationDays = $dm[1] ?? null;
     }
+    // Schema must describe what the page shows (audit 2026-09-28):
+    // - no `duration` (not a TouristTrip property) — the day-by-day
+    //   itinerary shown on the page is exposed as `itinerary` instead;
+    // - no `offers`: the page shows "Price On Request", so a price in the
+    //   markup would contradict the visible content. Re-add it only if
+    //   prices are displayed on the page.
+    // - same image as og:image (first_image_url), entity-decoded text.
+    $plainText = fn ($html) => trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags((string) $html), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
     $tourSchema = [
         '@context' => 'https://schema.org',
         '@type' => 'TouristTrip',
-        'name' => $tour->title,
-        'description' => Str::limit(strip_tags($tour->overview ?? $tour->subtitle ?? 'Morocco private tour.'), 300),
+        'name' => trim($tour->title),
+        'description' => Str::limit($plainText($tour->overview ?? $tour->subtitle ?? 'Morocco private tour.'), 300),
         'url' => url()->current(),
-        'image' => $tour->images && $tour->images->isNotEmpty()
-            ? asset('storage/' . $tour->images->first()->image_path)
-            : asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
+        'image' => $tour->first_image_url ?: asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'touristType' => ['Adventure', 'Cultural', 'Desert', 'Luxury'],
         'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/'), '@id' => url('/') . '#organization'],
     ];
-    if ($durationDays) {
-        $tourSchema['duration'] = 'P' . $durationDays . 'D';
-    }
-    if (!empty($tour->price_adult)) {
-        $tourSchema['offers'] = ['@type' => 'Offer', 'price' => (string) $tour->price_adult, 'priceCurrency' => 'USD', 'availability' => 'https://schema.org/InStock', 'url' => url()->current()];
+    if ($tour->itineraryDays && $tour->itineraryDays->isNotEmpty()) {
+        $tourSchema['itinerary'] = [
+            '@type' => 'ItemList',
+            'numberOfItems' => $tour->itineraryDays->count(),
+            'itemListElement' => $tour->itineraryDays->values()->map(fn ($day, $i) => [
+                '@type' => 'ListItem',
+                'position' => $i + 1,
+                'name' => trim('Day ' . ($day->day_number ?? $i + 1) . ': ' . $plainText($day->title)),
+            ])->all(),
+        ];
     }
     $tourBreadcrumb = [
         '@context' => 'https://schema.org',
         '@type' => 'BreadcrumbList',
         'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => url('/')],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Marrakech Desert Tours', 'item' => url('/tours')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Morocco Tours', 'item' => url('/tours')],
             ['@type' => 'ListItem', 'position' => 3, 'name' => $tour->title, 'item' => url()->current()],
         ],
     ];

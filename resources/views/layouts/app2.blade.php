@@ -117,7 +117,8 @@
         'inLanguage' => 'en',
         'potentialAction' => [
             '@type' => 'SearchAction',
-            'target' => url('/search') . '?q={search_term_string}',
+            // The search controller reads ?query= (?q= returned no results).
+            'target' => url('/search') . '?query={search_term_string}',
             'query-input' => 'required name=search_term_string',
         ],
     ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
@@ -137,8 +138,15 @@
         'image' => asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'priceRange' => '$$-$$$',
         'telephone' => '+212-654-069-718',
+        // Street, postcode, email and founding year as shown in the footer,
+        // on /contact and on /about.
+        'email' => 'sales@morocco-quest.com',
+        'foundingDate' => '2022',
+        'hasMap' => 'https://maps.app.goo.gl/FtVJocKLhRVvvF377',
         'address' => [
             '@type' => 'PostalAddress',
+            'streetAddress' => 'Khalid Ibn Al Walid Street, Gueliz',
+            'postalCode' => '40000',
             'addressLocality' => 'Marrakech',
             'addressRegion' => 'Marrakech-Safi',
             'addressCountry' => 'MA',

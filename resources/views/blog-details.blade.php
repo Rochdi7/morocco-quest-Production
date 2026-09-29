@@ -12,14 +12,20 @@
     $blogSchema = $_blogModel ? [
         '@context' => 'https://schema.org',
         '@type' => 'BlogPosting',
-        'headline' => $_blogModel->title,
-        'description' => Str::limit(strip_tags($_blogModel->summary ?? $_blogModel->content ?? ''), 300),
-        'image' => $_blogModel->cover_image
-            ? asset('storage/' . $_blogModel->cover_image)
+        // headline ≤110 chars (Google's limit); text entity-decoded.
+        'headline' => Str::limit(trim(html_entity_decode($_blogModel->title, ENT_QUOTES | ENT_HTML5, 'UTF-8')), 110, ''),
+        'description' => Str::limit(trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags($_blogModel->summary ?? $_blogModel->content ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8'))), 300),
+        // The post's real featured image (the old code read a non-existent
+        // `cover_image` column, so every post fell back to the site hero).
+        'image' => $_blogModel->featured_image
+            ? $_blogModel->featured_image_url
             : asset('assets/img/ait-benhaddou-morocco-travel-hero-banner.webp'),
         'author' => ['@type' => 'Person', 'name' => $_blogModel->written_by ?? 'Morocco Quest'],
+        // Reference the sitewide TravelAgency entity instead of a second,
+        // unlinked Organization.
         'publisher' => [
             '@type' => 'Organization',
+            '@id' => url('/') . '#organization',
             'name' => 'Morocco Quest',
             'logo' => ['@type' => 'ImageObject', 'url' => asset('assets/img/logo-bg-wide.webp')],
         ],
