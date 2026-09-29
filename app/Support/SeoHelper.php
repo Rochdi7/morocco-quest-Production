@@ -94,6 +94,8 @@ class SeoHelper
      */
     public static function noindex(): void
     {
-        SEOMeta::addMeta('robots', 'noindex,follow');
+        // setRobots() replaces the config default (index,follow); addMeta()
+        // used to emit a second, conflicting robots tag alongside it.
+        SEOMeta::setRobots('noindex,follow');
     }
 }

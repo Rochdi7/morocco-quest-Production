@@ -1,5 +1,15 @@
 @php
     $siteName = config('app.name', 'Morocco Quest');
+
+    // layouts.app2 renders meta from SEOMeta/OpenGraph only (it ignores
+    // @section('title')), so without this the 404 inherited the homepage
+    // title/description and index,follow. The child view runs before the
+    // layout, so these values are in place when the <head> is generated.
+    $notFoundTitle = 'Page Not Found (404) | ' . $siteName;
+    $notFoundDescription = 'Sorry, the page you were looking for could not be found on ' . $siteName . '. Please check the URL or return to the homepage.';
+    \Artesaos\SEOTools\Facades\SEOMeta::setTitle($notFoundTitle, false)->setDescription($notFoundDescription);
+    \App\Support\SeoHelper::noindex();
+    \Artesaos\SEOTools\Facades\OpenGraph::setTitle($notFoundTitle)->setDescription($notFoundDescription);
 @endphp
 
 @extends('layouts.app2')

@@ -484,10 +484,10 @@ class TourController extends Controller
         $normalizedType = $map[$slugifiedType] ?? $type;
 
         if ($slugifiedType === 'multi-day-tours') {
-            return redirect()->route('tours.multi_day');
+            return redirect()->route('tours.multi_day', [], 301);
         }
         if ($slugifiedType === 'one-day-tours') {
-            return redirect()->route('tours.one_day');
+            return redirect()->route('tours.one_day', [], 301);
         }
 
         $tours = Tour::where('tour_type', 'LIKE', "%{$normalizedType}%")
@@ -497,6 +497,14 @@ class TourController extends Controller
         $activities = Activity::where('tour_type', 'LIKE', "%{$normalizedType}%")
             ->with(['images', 'category'])
             ->paginate(12);
+
+        // Soft-404 guard: an unknown type (or a page past the end) with no
+        // results is a real 404, not an indexable empty page. Known types
+        // that are temporarily empty stay reachable (nav links) but noindex.
+        $isEmpty = $tours->isEmpty() && $activities->isEmpty();
+        if ($isEmpty && (! isset($map[$slugifiedType]) || $tours->currentPage() > 1)) {
+            abort(404);
+        }
 
         $title       = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
         $description = "Book morocco {$normalizedType} with a top-rated local agency. Private morocco tours, small group tours morocco, luxury morocco tours and morocco tour packages.";
@@ -508,6 +516,9 @@ class TourController extends Controller
         ];
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywords);
+        if ($isEmpty) {
+            SeoHelper::noindex();
+        }
 
         return view('type-filter', [
             'tours'       => $tours,
