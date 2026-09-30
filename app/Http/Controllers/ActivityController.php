@@ -49,8 +49,8 @@ class ActivityController extends Controller
             ->orderBy('name', 'asc')
             ->paginate(9);
 
-        $title       = 'Things to Do in Morocco | Activities, Day Tours & Experiences | Morocco Quest';
-        $description = 'Best things to do in Morocco: camel rides, quad biking in Marrakech, desert hikes and food tours — private & small group activities.';
+        $title       = 'Things to Do in Morocco & Marrakech | Morocco Quest';
+        $description = 'Things to do in Morocco and Marrakech: hot air balloon rides, Atlas Mountains hikes, cooking classes, hammams, city tours and private day trips.';
         $keywords    = [
             'things to do in morocco',
             'things to do in marrakech',
@@ -79,8 +79,38 @@ class ActivityController extends Controller
             ->latest()
             ->paginate(9);
 
-        $title       = "{$category->name} in Morocco | Private Tours & Day Trips | Morocco Quest";
-        $description = "Book {$category->name} in Morocco with a top-rated local agency. Private tours, small group experiences and morocco day trips — book direct.";
+        // Keyword-mapped per category (Semrush US, 2026-09-30); generic fallback
+        // for any category added later in Filament.
+        $categorySeo = [
+            'city-tours' => [
+                'Morocco City Tours: Marrakech, Fes & Casablanca | Morocco Quest',
+                'Private city tours in Morocco with local guides: the Marrakech medina, Fes, Casablanca, Rabat, Tangier and Chefchaouen, full or half day.',
+            ],
+            'day-trips' => [
+                'Day Trips from Marrakech, Fes & Rabat | Morocco Quest',
+                'Private day trips from Marrakech, Fes and Rabat: Essaouira, the Atlas Mountains, Chefchaouen, Volubilis and more, with a local driver-guide.',
+            ],
+            'food-culinary-tours' => [
+                'Food Tours & Cooking Classes in Morocco | Morocco Quest',
+                'Moroccan cooking classes and food tours in Marrakech, Fes and Rabat: cook a tagine, taste street food and explore the medina with a local guide.',
+            ],
+            'local-experiences' => [
+                'Local & Berber Experiences in Morocco | Morocco Quest',
+                'Authentic local experiences in Morocco: Berber villages, rural life, artisans and family hospitality, arranged privately by our local team.',
+            ],
+            'outdoor-activities' => [
+                'Outdoor Activities in Morocco: Hikes & Balloons | Morocco Quest',
+                'Outdoor activities in Morocco: Atlas Mountains day hikes, sunrise hot air balloon rides over Marrakech and nature day trips with a local guide.',
+            ],
+            'wellness-experiences' => [
+                'Hammam & Spa Experiences in Marrakech | Morocco Quest',
+                'Traditional hammam and spa experiences in Marrakech: private hammam rituals and massage, booked with a trusted local agency.',
+            ],
+        ];
+        [$title, $description] = $categorySeo[$category->slug] ?? [
+            "{$category->name} in Morocco | Private Tours & Day Trips | Morocco Quest",
+            "Book {$category->name} in Morocco with a top-rated local agency. Private tours, small group experiences and morocco day trips — book direct.",
+        ];
         $keywords    = [
             strtolower($category->name),
             strtolower($category->name) . ' morocco',

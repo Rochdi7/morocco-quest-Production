@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('title', 'Morocco Tours & Sahara Desert Trips | Morocco Quest')
+@section('title', 'Private Morocco Tours & Sahara Desert Trips | Morocco Quest')
 
 @section('description',
-    'Morocco Quest offers private morocco tours & sahara desert tours from Marrakech. Book small group or luxury guided tour packages with a top-rated local agency.')
+    'Private Morocco tours, Sahara desert trips and luxury guided tours from Marrakech, planned by a licensed local agency. Tailor-made itineraries, free quote.')
 
 @section('page_description',
     'Morocco Quest offers private morocco tours, sahara desert tours from Marrakech, luxury & small group trips. Book your guided morocco tour package with a top-rated local agency.')

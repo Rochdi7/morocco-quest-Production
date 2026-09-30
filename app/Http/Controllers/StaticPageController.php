@@ -12,7 +12,7 @@ class StaticPageController extends Controller
 {
     public function about()
     {
-        $title       = 'About Morocco Quest | Local Morocco Tour Operator in Marrakech';
+        $title       = 'About Morocco Quest | Morocco Travel Agency in Marrakech';
         $description = 'Morocco Quest is a Marrakech-based tour operator run by local guides: private morocco tours, sahara desert trips, small group and luxury packages.';
         $keywords    = [
             'morocco tour company',
@@ -31,8 +31,8 @@ class StaticPageController extends Controller
 
     public function faq()
     {
-        $title       = 'Morocco Tours FAQ | Cost, Booking & Sahara Desert Questions Answered';
-        $description = 'Answers to common morocco tour questions: cost, are sahara desert trips worth it, best time to visit morocco, group size and our cancellation policy.';
+        $title       = 'Morocco Travel FAQ: Safety, Best Time & Visas | Morocco Quest';
+        $description = 'Is Morocco safe, when is the best time to visit, do you need a visa and how much does a Morocco tour cost? Clear answers from our local team.';
         $keywords    = [
             'morocco tours faq',
             'how much does a morocco tour cost',
