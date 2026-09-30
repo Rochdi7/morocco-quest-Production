@@ -31,7 +31,7 @@ class StaticPageController extends Controller
 
     public function faq()
     {
-        $title       = 'Morocco Travel FAQ: Safety, Best Time & Visas | Morocco Quest';
+        $title       = 'Morocco FAQ: Safety, Best Time & Visas | Morocco Quest';
         $description = 'Is Morocco safe, when is the best time to visit, do you need a visa and how much does a Morocco tour cost? Clear answers from our local team.';
         $keywords    = [
             'morocco tours faq',

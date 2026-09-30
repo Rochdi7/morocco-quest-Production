@@ -14,7 +14,7 @@ class DmcController extends Controller
         // "morocco dmc" (170/mo, KD 10) carries ~8x the volume of "dmc marrakech"
         // (20/mo, KD 7) at similar difficulty, so it leads; the Marrakech variant
         // is retained in the tail since the page already ranks for it.
-        $title       = 'Morocco DMC | MICE & Incentive Travel | DMC Marrakech';
+        $title       = 'Morocco DMC Marrakech | MICE & Incentive Travel';
         $description = 'Morocco DMC for travel agents, tour operators and MICE planners. Group tours, team building and incentives across Marrakech and Morocco.';
         // Ordered by Semrush volume: morocco dmc 170, dmc morocco 90, dmc marrakech 20.
         $keywords    = [

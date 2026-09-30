@@ -46,7 +46,7 @@
             <div class="row text-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title">Discover Our Exclusive Tours</h1>
+                        <h1 class="breadcrumb-title">{{ $h1 ?? 'Discover Our Exclusive Tours' }}</h1>
                         <p class="mt-3 text-white">Explore Morocco's Breathtaking Landscapes With Our Multi-Day Tours And
                             One-Day Excursions. Whether You Dream Of Wandering The Sahara Desert, Exploring Ancient Medinas,
                             Or Enjoying A Sunset Over The Atlas Mountains, We Bring Your Travel Experience To Life.</p>

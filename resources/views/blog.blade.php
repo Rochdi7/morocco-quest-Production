@@ -42,7 +42,7 @@
                             @elseif (!empty($query))
                                 Blog Search: “{{ $query }}”
                             @else
-                                Our Travel Blog
+                                Morocco Travel Guide & Blog
                             @endif
                         </h1>
                         <p class="breadcrumb-subtitle" style="color: white;">

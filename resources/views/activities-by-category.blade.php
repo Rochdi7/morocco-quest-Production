@@ -36,7 +36,7 @@
                 <div class="row text-center">
                     <div class="col-12">
                         <div class="breadcrumb-content">
-                            <h1 class="breadcrumb-title">Private Morocco Tour Activities</h1>
+                            <h1 class="breadcrumb-title">{{ $h1 ?? 'Private Morocco Tour Activities' }}</h1>
                             <p class="breadcrumb-subtitle" style="color: white;">
                                 Discover private tours morocco and exclusive experiences.
                             </p>

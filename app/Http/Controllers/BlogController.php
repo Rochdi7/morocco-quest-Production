@@ -67,7 +67,7 @@ class BlogController extends Controller
             ->all();
         $keywords = implode(', ', $keywordsArray);
 
-        $title       = 'Morocco Travel Guide & Blog | Itineraries & Tips | Morocco Quest';
+        $title       = 'Morocco Travel Guide & Blog | Trip Tips | Morocco Quest';
         $description = 'Morocco travel guide and blog: itineraries, the best time to visit, what to wear, Sahara desert trips and Marrakech tips from local guides.';
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywordsArray);

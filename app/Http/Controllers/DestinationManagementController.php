@@ -12,7 +12,7 @@ class DestinationManagementController extends Controller
     public function index(): View
     {
         $title       = 'What Is a DMC? Destination Management Company Morocco';
-        $description = 'What a Destination Management Company does in Morocco: services, when to use one, and how to evaluate a DMC partner for events, incentives and group travel.';
+        $description = 'What a destination management company (DMC) does in Morocco: services, when to use one and how to choose a DMC partner for events and incentives.';
         $keywords    = [
             'destination management company morocco',
             'DMC morocco',

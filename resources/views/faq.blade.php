@@ -53,7 +53,7 @@
             <div class="row text-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h1 class="breadcrumb-title">Frequently Asked Questions (FAQ)</h1>
+                        <h1 class="breadcrumb-title">Morocco Travel FAQ: Safety, Best Time & Visas</h1>
                         <p class="breadcrumb-subtitle" style="color: white;">
                             Quick answers to common queries about your Moroccan adventure.
                         </p>

@@ -46,8 +46,8 @@ class TourController extends Controller
             ->orderBy('places.name', 'asc')
             ->paginate(12);
 
-        $title       = 'Morocco Tour Destinations | Marrakech, Fes & Sahara Desert | Morocco Quest';
-        $description = 'Explore top morocco tour destinations: Marrakech, Fes, Casablanca and the Sahara desert. Private, small group and luxury morocco tours.';
+        $title       = 'Morocco Destinations: Marrakech, Fes, Sahara | Morocco Quest';
+        $description = 'Explore Morocco destinations with a local agency: Marrakech, Fes, Tangier, Rabat, Chefchaouen, Essaouira and the Sahara, with private tours in each.';
         $keywords    = [
             'morocco tour destinations',
             'morocco tours',
@@ -366,8 +366,8 @@ class TourController extends Controller
             ->latest()
             ->paginate(8);
 
-        $title       = "Tours in {$place->name} Morocco | Day Trips & Private Tours | Morocco Quest";
-        $description = "Best morocco tours in {$place->name}. Private morocco tours, day trips from {$place->name}, small group tours morocco and luxury morocco tour packages.";
+        $title       = "Tours in {$place->name} | Private Day Trips | Morocco Quest";
+        $description = "Private tours and day trips in {$place->name}, Morocco: guided visits, local experiences and nearby excursions, tailored by a licensed Marrakech agency.";
         $keywords    = [
             "tours in {$place->name} morocco",
             "{$place->name} tours",
@@ -415,7 +415,7 @@ class TourController extends Controller
             ->paginate(12);
         $activities = new LengthAwarePaginator([], 0, 12);
 
-        $title       = 'Morocco Multi-Day Tours | 5 to 9 Day Itineraries | Morocco Quest';
+        $title       = 'Morocco Multi-Day Tours | 5 to 9-Day Trips | Morocco Quest';
         $description = 'Private multi-day Morocco tours of 5, 6, 8 and 9 days: Sahara desert, imperial cities, luxury city breaks and a Tangier-Fez rail journey.';
         $keywords    = [
             'morocco multi day tours',
@@ -431,6 +431,7 @@ class TourController extends Controller
             'tours'       => $tours,
             'activities'  => $activities,
             'type'        => 'Multi-Day Tours',
+            'h1'          => 'Morocco Multi-Day Tours',
             'title'       => $title,
             'description' => $description,
             'keywords'    => implode(', ', $keywords),
@@ -449,8 +450,8 @@ class TourController extends Controller
             ->with(['images', 'category'])
             ->paginate(12);
 
-        $title       = 'Morocco Day Tours & Day Trips from Marrakech | Morocco Quest';
-        $description = 'Best morocco day tours and day trips from Marrakech: Atlas Mountains, Ourika Valley, Essaouira, Agafay desert. Private morocco tours and small group day trips.';
+        $title       = 'Morocco Day Tours & Trips from Marrakech | Morocco Quest';
+        $description = 'Private Morocco day tours and day trips from Marrakech, Fes and Rabat: Essaouira, the Atlas Mountains, Chefchaouen and Volubilis with a local guide.';
         $keywords    = [
             'morocco day tours',
             'morocco day trips',
@@ -469,6 +470,7 @@ class TourController extends Controller
             'tours'       => $tours,
             'activities'  => $activities,
             'type'        => 'One-Day Tours',
+            'h1'          => 'Morocco Day Tours & Day Trips',
             'title'       => $title,
             'description' => $description,
             'keywords'    => implode(', ', $keywords),
@@ -517,8 +519,9 @@ class TourController extends Controller
             abort(404);
         }
 
-        $title       = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
-        $description = "Book morocco {$normalizedType} with a top-rated local agency. Private morocco tours, small group tours morocco, luxury morocco tours and morocco tour packages.";
+        $typePlural  = Str::plural($normalizedType);
+        $title       = "{$typePlural} in Morocco | Private & Guided | Morocco Quest";
+        $description = "Private {$typePlural} in Morocco with expert local guides: compare itineraries and request a tailor-made quote from a licensed Marrakech agency.";
         $keywords    = [
             'morocco ' . strtolower($normalizedType),
             strtolower($normalizedType),
@@ -535,6 +538,7 @@ class TourController extends Controller
             'tours'       => $tours,
             'activities'  => $activities,
             'type'        => $normalizedType,
+            'h1'          => "{$typePlural} in Morocco",
             'title'       => $title,
             'description' => $description,
             'keywords'    => implode(', ', $keywords),

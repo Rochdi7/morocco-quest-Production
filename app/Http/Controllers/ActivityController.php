@@ -83,7 +83,7 @@ class ActivityController extends Controller
         // for any category added later in Filament.
         $categorySeo = [
             'city-tours' => [
-                'Morocco City Tours: Marrakech, Fes & Casablanca | Morocco Quest',
+                'City Tours in Morocco: Marrakech, Fes & More | Morocco Quest',
                 'Private city tours in Morocco with local guides: the Marrakech medina, Fes, Casablanca, Rabat, Tangier and Chefchaouen, full or half day.',
             ],
             'day-trips' => [
@@ -107,6 +107,15 @@ class ActivityController extends Controller
                 'Traditional hammam and spa experiences in Marrakech: private hammam rituals and massage, booked with a trusted local agency.',
             ],
         ];
+        $categoryH1 = [
+            'city-tours'           => 'City Tours in Morocco',
+            'day-trips'            => 'Day Trips from Marrakech, Fes & Rabat',
+            'food-culinary-tours'  => 'Food Tours & Cooking Classes in Morocco',
+            'local-experiences'    => 'Local & Berber Experiences in Morocco',
+            'outdoor-activities'   => 'Outdoor Activities in Morocco',
+            'wellness-experiences' => 'Hammam & Spa Experiences in Marrakech',
+        ];
+        $h1 = $categoryH1[$category->slug] ?? trim($category->name) . ' in Morocco';
         [$title, $description] = $categorySeo[$category->slug] ?? [
             "{$category->name} in Morocco | Private Tours & Day Trips | Morocco Quest",
             "Book {$category->name} in Morocco with a top-rated local agency. Private tours, small group experiences and morocco day trips — book direct.",
@@ -122,7 +131,7 @@ class ActivityController extends Controller
 
         SeoHelper::setCollection($title, $description, url()->current(), $keywords, $categoryImage);
 
-        return view('activities-by-category', compact('category', 'activities', 'title', 'description') + ['keywords' => implode(', ', $keywords)]);
+        return view('activities-by-category', compact('category', 'activities', 'title', 'description', 'h1') + ['keywords' => implode(', ', $keywords)]);
     }
 
 
@@ -154,11 +163,11 @@ class ActivityController extends Controller
 
         $title = $category
             ? "{$category->name} in Morocco | Tours & Day Trips | Morocco Quest"
-            : 'Morocco Day Tours & Activities | Browse All Experiences | Morocco Quest';
+            : 'Morocco Day Tours & Activities | Morocco Quest';
 
         $description = $category
             ? "Discover {$category->name} in Morocco with a top-rated local agency. Private tours, small group experiences and morocco day trips — book direct."
-            : 'Browse all morocco day tours and activities: camel rides, quad biking, desert hikes and food tours from Marrakech — private or small group.';
+            : 'Browse Morocco day tours and activities: hot air balloon rides, Atlas hikes, cooking classes, hammams and city tours, private or small group.';
 
         $keywords = $category
             ? [strtolower($category->name), strtolower($category->name) . ' morocco', 'morocco activities', 'morocco day tours']
@@ -269,7 +278,8 @@ class ActivityController extends Controller
             'one-day-tours'      => 'Book morocco one-day tours and day trips from Marrakech with private transport and an English-speaking guide.',
         ];
 
-        $title       = "Morocco {$normalizedType} | Private & Guided Tour Packages | Morocco Quest";
+        $typePlural  = Str::plural($normalizedType);
+        $title       = "{$typePlural} in Morocco | Private & Guided | Morocco Quest";
         $description = $descriptionMap[$slugifiedType]
             ?? "Book morocco {$normalizedType} with a top-rated local agency. Private tours, small group and luxury options available.";
         $keywords    = [
@@ -288,6 +298,7 @@ class ActivityController extends Controller
             'tours'       => $tours,
             'activities'  => $activities,
             'type'        => $normalizedType,
+            'h1'          => "{$typePlural} in Morocco",
             'title'       => $title,
             'description' => $description,
             'keywords'    => implode(', ', $keywords),

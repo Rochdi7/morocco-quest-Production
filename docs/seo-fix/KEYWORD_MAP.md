@@ -100,3 +100,44 @@ Every description was fact-checked against the live page text. Terms not found o
 - **Destinations:** morocco destinations, best places to visit in morocco, marrakech tours, fes tours, fez tours, tangier tours, rabat tours, casablanca tours, chefchaouen tours, essaouira tours, agadir tours
 - **DMC:** sustainable events morocco, green events morocco, csr events morocco, 360 event solutions, mice packages morocco
 - **About:** morocco tour company, moroccan travel agency
+
+## Pass 2: on-page rules applied to every static page (2026-09-30)
+
+**Rules** (Seobility on-page checks):
+- title ≤ 580 px
+- description ≤ 1000 px
+- no repeated words in the title (the "Morocco Quest" brand is exempt; the homepage scores 100% with it)
+- title keywords present in the H1
+- every title unique
+
+**Verified** with Arial pixel widths calibrated against Seobility's own homepage measurement (557 px title / 951 px description).
+
+**Result:**
+- all 36 static pages pass
+- titles are 432–580 px
+- descriptions are 805–977 px
+- 0 duplicate titles
+
+**What changed:**
+
+| Area | Change |
+|---|---|
+| 8 destination pages | "Tours in {City} \| Private Day Trips \| Morocco Quest". Keyword-stuffed descriptions ("Best morocco tours in X. Private morocco tours…") replaced with one clean sentence. |
+| Tour/activity type pages | "{Type}s in Morocco \| Private & Guided \| Morocco Quest", with a matching H1 (was "Discover Our Exclusive Tours") |
+| Multi-day | Title 538 px, H1 "Morocco Multi-Day Tours" |
+| One-day | Title 546 px, H1 "Morocco Day Tours & Day Trips" |
+| `/destinations` | Title 574 px |
+| `/activities` | Title 432 px. False "camel rides, quad biking" copy removed. |
+| 6 activity categories | Each gets its own H1 matching its title (was "Private Morocco Tour Activities") |
+| `/experiences` | H1 "Things to Do in Morocco & Marrakech" |
+| FAQ | Title 522 px (keeps "best time", 3,600 searches). H1 "Morocco Travel FAQ: Safety, Best Time & Visas". |
+| Blog | Title 509 px, H1 "Morocco Travel Guide & Blog" |
+| `/dmc-marrakech` | "Morocco DMC Marrakech \| MICE & Incentive Travel": covers both "morocco dmc" and "dmc marrakech" with DMC written once |
+| Sustainable, 360 | Titles under 580 px, primary keyword kept first |
+| DMC explainer | Description 1005 → 952 px |
+
+**Still flagged by Seobility on the homepage** (not meta issues; next pass):
+- 39 external links
+- repeated or over-long anchor texts
+- 0.62 s response time (target 0.4 s)
+- only 10 referring domains
