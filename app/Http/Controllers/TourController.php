@@ -152,15 +152,15 @@ class TourController extends Controller
 
         $title = $placeName
             ? "Tours in {$placeName} Morocco | Private Day Trips & Multi-Day Tours | Morocco Quest"
-            : 'Morocco Tour Packages | Browse All Private & Group Tours | Morocco Quest';
+            : 'Morocco Tour & Travel Packages | Private Trips | Morocco Quest';
 
         $desc = $placeName
             ? "Explore all tours in {$placeName}, Morocco. Compare private day trips, multi-day packages and small group tours with a local Marrakech agency."
-            : 'Browse all morocco tour packages: private day trips, multi-day sahara desert tours, small group and luxury morocco tours.';
+            : 'Compare Morocco tour and travel packages: private multi-day tours, Sahara desert trips and luxury city breaks, tailored by a local Marrakech agency.';
 
         $keywords = $placeName
             ? ["tours in {$placeName} morocco", "{$placeName} day trips", 'morocco tour package', 'private morocco tours']
-            : ['morocco tour packages', 'morocco tours', 'private morocco tours', 'sahara desert tours morocco'];
+            : ['morocco tour packages', 'morocco travel packages', 'morocco vacation packages', 'morocco group tours'];
 
         SeoHelper::setCollection($title, $desc, $canonical, $keywords);
 
@@ -415,8 +415,8 @@ class TourController extends Controller
             ->paginate(12);
         $activities = new LengthAwarePaginator([], 0, 12);
 
-        $title       = 'Morocco Multi Day Tours | 3, 5 & 7 Day Morocco Tour Packages | Morocco Quest';
-        $description = 'Book morocco multi day tours: 7-day imperial cities, sahara desert trips and small group tours morocco from Marrakech.';
+        $title       = 'Morocco Multi-Day Tours | 5 to 9 Day Itineraries | Morocco Quest';
+        $description = 'Private multi-day Morocco tours of 5, 6, 8 and 9 days: Sahara desert, imperial cities, luxury city breaks and a Tangier-Fez rail journey.';
         $keywords    = [
             'morocco multi day tours',
             'morocco 7 day tour',

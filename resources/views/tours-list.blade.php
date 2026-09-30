@@ -72,7 +72,7 @@
                         <div class="breadcrumb-content">
                             {{-- Destination pages share this view; each gets its own H1
                                  (all 8 used to repeat "Private Morocco Tours"). --}}
-                            <h1 class="breadcrumb-title">{{ !empty($placeName) ? 'Tours in ' . $placeName . ', Morocco' : 'Private Morocco Tours' }}</h1>
+                            <h1 class="breadcrumb-title">{{ !empty($placeName) ? 'Tours in ' . $placeName . ', Morocco' : 'Morocco Tour Packages' }}</h1>
                             <p class="breadcrumb-subtitle" style="color: white;">
                                 Explore small group tours morocco and exclusive travel experiences.
                             </p>
