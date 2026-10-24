@@ -27,7 +27,6 @@ class SitemapController extends Controller
             ['loc' => route('home'),                        'lastmod' => max($toursMod, $activityMod, $blogMod), 'changefreq' => 'daily',   'priority' => '1.0'],
             ['loc' => route('tours.index'),                 'lastmod' => $toursMod, 'changefreq' => 'daily',   'priority' => '0.9'],
             ['loc' => route('experiences.index'),           'lastmod' => $activityMod, 'changefreq' => 'weekly',  'priority' => '0.8'],
-            ['loc' => route('activities.index'),            'lastmod' => $activityMod, 'changefreq' => 'daily',   'priority' => '0.8'],
             ['loc' => route('destinations.index'),          'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
             ['loc' => route('dmc.marrakech'),                     'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
             ['loc' => route('destination-management.company'),   'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],

@@ -16,6 +16,7 @@ use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\JsonLd;
 use App\Support\SeoHelper;
 use App\Support\SlugRedirector;
+use App\Support\BlogSidebar;
 
 class BlogController extends Controller
 {
@@ -24,13 +25,9 @@ class BlogController extends Controller
      */
     private function getSidebarData()
     {
-        return Cache::remember('blog_sidebar_v1', 3600, function () {
-            return [
-                'recentBlogs' => Blog::latest()->take(5)->get(),
-                'categories'  => Category::withCount('blogs')->orderBy('name')->get(),
-                'tags'        => Tag::orderBy('name')->get(),
-            ];
-        });
+        // Shared with CategoryController and TagController; only non-empty
+        // archives are listed (see App\Support\BlogSidebar).
+        return BlogSidebar::data();
     }
 
     /**

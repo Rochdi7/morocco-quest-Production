@@ -188,17 +188,20 @@
                                     </div>
                                 </blockquote>
                             @endif
-                            {{-- Phase 5: Blog → hub cross-links --}}
-                            <div class="blog-related-tours" style="background:#f9f6f2;border-radius:10px;padding:20px 24px;margin-bottom:24px;">
-                                <p style="margin:0;font-size:.95rem;color:#444;">
-                                    <strong>Plan your Morocco trip:</strong>
-                                    Browse <a href="{{ route('tours.index') }}">private morocco tours</a> departing from Marrakech,
-                                    explore <a href="{{ route('tours.multi_day') }}">multi-day morocco tour packages</a>,
-                                    or discover <a href="{{ route('experiences.index') }}">things to do in Morocco</a> —
-                                    from Sahara camel treks to Atlas Mountain hikes.
-                                    Questions? <a href="{{ route('faq') }}">Read our FAQ</a> or <a href="{{ route('contact.show') }}">contact our team</a>.
-                                </p>
-                            </div>
+                            {{-- Blog → hub cross-links, chosen by the post's topic
+                                 (MICE posts link the DMC pages, desert posts the Sahara
+                                 tour, others the B2C hubs). See App\Support\BlogRelatedLinks. --}}
+                            @php $related = \App\Support\BlogRelatedLinks::for($post); @endphp
+                            @if (!empty($related['links']))
+                                <div class="blog-related-tours" style="background:#f9f6f2;border-radius:10px;padding:20px 24px;margin-bottom:24px;">
+                                    <p style="margin:0;font-size:.95rem;color:#444;">
+                                        <strong>{{ $related['intro'] }}</strong>
+                                        @foreach ($related['links'] as $link)
+                                            <a href="{{ $link['url'] }}">{{ $link['text'] }}</a>{{ $loop->last ? '.' : ($loop->remaining === 1 ? ' or ' : ', ') }}
+                                        @endforeach
+                                    </p>
+                                </div>
+                            @endif
 
                             <div class="blog-footer flex-wrap">
                                 @if ($post->tags && $post->tags->count() > 0)

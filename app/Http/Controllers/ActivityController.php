@@ -139,6 +139,15 @@ class ActivityController extends Controller
     {
         $categorySlug = $request->query('category');
 
+        // /activities rendered "No activity categories found" because this
+        // method passed $activities to a view that reads $activityCategories
+        // (live 2026-10-14). Without a ?category filter it is the same hub as
+        // /experiences, so serve that page and canonicalise to it; the URL
+        // itself is unchanged (owner decision O-3 covers a future 301).
+        if (! $request->filled('category')) {
+            return $this->listCategories();
+        }
+
         $activitiesQuery = Activity::query()
             ->with(['images', 'category'])
             ->latest();

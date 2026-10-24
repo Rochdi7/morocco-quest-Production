@@ -388,6 +388,29 @@ class TourController extends Controller
             ->take(8)
             ->get();
 
+        // The activity_place pivot is empty on production (crawl 2026-10-14:
+        // no destination page linked a single activity, 9 activities had one
+        // inlink). Until the pivot is filled in Filament, fall back to the
+        // activities whose title names this place (Fez/Fes spelling both).
+        if ($placeActivities->isEmpty()) {
+            $names = array_unique(array_filter([
+                $place->name,
+                str_ireplace('Fez', 'Fes', $place->name),
+                str_ireplace('Fes', 'Fez', $place->name),
+            ]));
+            $placeActivities = Activity::query()
+                ->select('id', 'slug', 'title')
+                ->whereNotNull('slug')
+                ->where(function ($q) use ($names) {
+                    foreach ($names as $name) {
+                        $q->orWhere('title', 'LIKE', '%' . $name . '%');
+                    }
+                })
+                ->orderBy('title')
+                ->take(8)
+                ->get();
+        }
+
         return view('tours-list', [
             'tours'          => $tours,
             'placeActivities'=> $placeActivities,

@@ -62,7 +62,7 @@ class AppServiceProvider extends ServiceProvider
         // also auto-expires after 1h, so this is a UX nicety, not a
         // correctness requirement.
         $bust = function () {
-            Cache::forget('blog_sidebar_v1');
+            \App\Support\BlogSidebar::forget();
         };
         Blog::saved($bust);
         Blog::deleted($bust);
