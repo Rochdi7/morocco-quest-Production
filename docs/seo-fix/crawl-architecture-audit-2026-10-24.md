@@ -2,9 +2,9 @@
 
 **Site:** https://morocco-quest.com
 **Trigger:** Screaming Frog force-directed crawl diagrams (184 nodes) showing two clusters and `/tag/sahara` with 110 inlinks.
-**Scope:** internal linking, crawl depth, indexability, archives, sitemap. Code changes are local and uncommitted. Nothing was deployed.
+**Scope:** internal linking, crawl depth, indexability, archives, sitemap. Deployed to production as commit `199240c` on 24 October 2026 and verified by a second crawl the same day.
 
-Companion files: `crawl-architecture-2026-10-24.csv` (149 rows) and `evidence/crawl-2026-10-24-before.json` (today's baseline crawl).
+Companion files: `crawl-architecture-2026-10-24.csv` (149 rows), `evidence/crawl-2026-10-24-before.json` (baseline) and `evidence/crawl-2026-10-24-after.json` (post-deploy crawl, same crawler and settings).
 
 ---
 
@@ -20,7 +20,7 @@ Three real defects sat inside that structure, and all three are now fixed in cod
 
 Also fixed: `/activities` rendered "No activity categories found" and sat in the sitemap as a duplicate of `/experiences`.
 
-Verified by the test suite (62 tests, 6 new). Production verification needs a deploy and a re-crawl, described in section 11.
+Verified by the test suite (62 tests, 6 new) and by a production re-crawl after deploy: 0 dead links, 7 fewer URLs (the 404 tags), 20 tag links per blog page instead of 67, and activity links on every destination page.
 
 ## 2. SEO skills discovered and used
 
@@ -73,17 +73,22 @@ Crawler: `docs/reports/seo-audit-2026-10-14/evidence/technical/crawl.py`, 1 requ
 - `TourController::byPlace()` activity list.
 - `ActivityController::index()` and the `/activities` sitemap entry.
 
-## 7. Before and after
+## 7. Before and after (production crawls, 24 October 2026)
 
-| Measure | Before (crawl) | After (code, verified by tests) |
+Same crawler, same settings, before and about one hour after deploy.
+
+| Measure | Before | After |
 |---|---|---|
-| Links to 404 tags per blog page | 7 | 0 |
-| Tag links in sidebar per blog page | up to 60 | 20 most-used, plus the post's own tags in its footer |
-| Categories in sidebar | all 33, incl. any empty | only categories with posts |
-| MICE posts linking service pages below the body | 0 | team building, DMC hub, meetings and conventions |
-| Desert posts linking the Sahara tour | 1 of 3 | all (first tour whose slug contains sahara or desert) |
-| Destination pages listing activities | 0 of 8 | all whose activities' titles name the place (Fez/Fes handled) |
+| URLs discovered | 185 | 178 |
+| HTTP 404 URLs / link instances | 7 / 770 | 0 / 0 |
+| Tag links per blog-family page (max / median) | 67 / 67 | 29 / 20 |
+| Destination pages linking at least one activity | 0 of 8 | 8 of 8 |
+| Activities with 2 or fewer linking pages | 11 (9 with one) | 8 (2 with one: High Atlas hike, Had El Brachoua; their titles name no place) |
+| Pages linking the 5-day Sahara tour | 12 | 17 |
+| MICE posts: block under the body | consumer tours | team building, DMC hub, meetings and conventions |
 | `/activities` | empty listing, self-canonical, in sitemap | category hub, canonical `/experiences`, out of sitemap |
+| Sitemap URLs | 84 | 83 |
+| Indexable URLs | 117 | 116 |
 
 Every tag page stays reachable: each post still links its own tags in its footer, and tag archives stay `noindex,follow`.
 
@@ -126,11 +131,9 @@ No CSS, copy, URLs, analytics, forms or database rows were changed.
 
 - `php artisan test`: 62 passed, 339 assertions (6 new tests cover each fix).
 - `pint` applied to the two new support classes and the new test only; the touched controllers already failed pint before this change and were left as they were.
-- The local database has 0 blog posts, so a local crawl cannot reproduce the production graph. Production verification after deploy:
-  1. `php artisan cache:clear && php artisan view:clear` (the sidebar cache key changed, but the page cache must be cleared too).
-  2. Re-run `evidence/technical/crawl.py`; expect 0 non-200 URLs, at most 20 `/tag/` links per blog page, and activity links on every `/destinations/*` page.
-  3. Check `/activities` canonical points to `/experiences` and that the sitemap no longer lists it.
-  4. In Screaming Frog, re-crawl and compare the `tag/` ring: 60 pink nodes, 0 red.
+- Deployed: `git pull` on the server to `199240c`, then `cache:clear`, `view:clear`, `optimize`.
+- Live spot checks after deploy: incentive post shows the corporate block; Sahara post links the 5-day Sahara tour; craft post keeps the general block; `/destinations/fez`, `/marrakech`, `/rabat` list 5, 8 and 4 activities; `/activities` renders categories with canonical `/experiences`; sitemap has no `/activities` entry.
+- Full re-crawl: figures in section 7. Non-200 list is empty.
 
 ## 12. Remaining risks and limitations
 
@@ -145,4 +148,4 @@ No CSS, copy, URLs, analytics, forms or database rows were changed.
 2. **O-2:** 301 the `%20` tour-type URLs to slugs.
 3. Fill `activity_place` in Filament so destination pages list the right activities without the fallback.
 4. Edit the incentive post title to drop "| Morocco DMC"; merge duplicate categories (O-12).
-5. Deploy, clear caches, and run the verification in section 11.
+5. Attach the High Atlas hike and Had El Brachoua activities to their places in Filament (their titles name no place, so the fallback cannot find them).
