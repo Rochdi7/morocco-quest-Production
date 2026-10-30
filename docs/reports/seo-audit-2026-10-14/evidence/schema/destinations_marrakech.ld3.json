@@ -1,0 +1,38 @@
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Tours in Marrakech, Morocco",
+ "numberOfItems": 5,
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "5-Day Marrakech & Essaouira Luxury Duo – Private Morocco Tour",
+   "url": "https://morocco-quest.com/tours/5-day-marrakech-essaouira-luxury-duo-private-morocco-tour"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Royal Cities of Morocco – 6-Day Luxury Imperial & Cultural Tour",
+   "url": "https://morocco-quest.com/tours/royal-cities-of-morocco-6-day-luxury-imperial-cultural-tour"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "5-Day Marrakech & Sahara Luxury Desert Discovery – Adventure Tour",
+   "url": "https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "name": "8-Day Morocco Luxury Cultural Discovery – Art, Heritage & Culinary Delights",
+   "url": "https://morocco-quest.com/tours/8-day-morocco-luxury-cultural-discovery-art-heritage-culinary-delights"
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "name": "5-Day Marrakech Luxury City Break – Gardens, Culture & Relaxation",
+   "url": "https://morocco-quest.com/tours/5-day-marrakech-luxury-city-break-gardens-culture-relaxation"
+  }
+ ]
+}

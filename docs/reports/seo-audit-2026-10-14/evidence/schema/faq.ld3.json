@@ -1,0 +1,97 @@
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "name": "Frequently Asked Questions | Morocco Quest",
+ "description": "Find answers to common questions about our tours, activities, bookings, and travel policies.",
+ "url": "https://morocco-quest.com/faq",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What travel documents do I need for Morocco?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Most travelers need a passport valid for at least six months from their entry date. Visa requirements depend on your nationality. We recommend checking with the official Moroccan consulate or embassy website for your country well before your trip."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is Morocco safe for tourists, especially solo female travelers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Morocco is generally considered safe for tourists, including solo female travelers. Standard precautions apply, like being aware of surroundings, especially in busy markets (souks). Traveling with a reputable guide or group like Morocco Quest can enhance safety and local insights."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What's the best time of year to visit Morocco?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Spring (March-May) and Autumn (September-November) offer the most pleasant weather across the country. Summers can be very hot, particularly in the desert and Marrakech."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What currency should I use and how accessible are ATMs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The currency is the Moroccan Dirham (MAD). Credit cards are accepted in cities, but cash is essential for small purchases. ATMs are widely available."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I book a tour with Morocco Quest?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "You can book directly on our website or contact us via email or the contact form for personalized help."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is typically included in your tour price?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tour prices generally include accommodation, transportation, some meals, guided sightseeing, and entrance fees. International flights are not included."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you cater to dietary restrictions (vegetarian, gluten-free)?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Please inform us during booking and we will coordinate with our accommodation and meal partners."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What should I pack for a trip to Morocco?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Bring layers for varying temperatures, modest clothing, walking shoes, sun protection, and personal medications."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does a Morocco tour cost?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pricing depends on the itinerary, group size, season, and accommodation category — exact rates are listed on each tour page. A 25% deposit secures your booking, with the balance due 30 days before arrival (or immediately for bookings made within 30 days of arrival)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is your cancellation and refund policy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Cancellation fees are calculated from your request date: 10% of the total if cancelled 30+ days before arrival, 25% at 15-29 days, 50% at 7-14 days, and 100% inside 6 days. Unused services such as hotel rooms or transport are non-refundable. Full details are in our Terms and Conditions."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What group sizes do you offer?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Most Morocco Quest departures are private or capped at a maximum of 8 travellers, so tours are not run as large coach groups. Private departures can be arranged for any group size on request."
+   }
+  }
+ ]
+}

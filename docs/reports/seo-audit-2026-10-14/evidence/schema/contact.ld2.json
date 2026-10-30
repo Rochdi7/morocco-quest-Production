@@ -1,0 +1,24 @@
+{
+ "@context": "https://schema.org",
+ "@type": "ContactPage",
+ "name": "Contact Morocco Quest",
+ "url": "https://morocco-quest.com/contact",
+ "about": {
+  "@id": "https://morocco-quest.com#organization"
+ },
+ "mainEntity": {
+  "@type": "TravelAgency",
+  "@id": "https://morocco-quest.com#organization",
+  "contactPoint": {
+   "@type": "ContactPoint",
+   "telephone": "+212654069718",
+   "email": "sales@morocco-quest.com",
+   "contactType": "Customer Service",
+   "availableLanguage": [
+    "English",
+    "French",
+    "Spanish"
+   ]
+  }
+ }
+}

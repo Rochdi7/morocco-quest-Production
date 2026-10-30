@@ -1,0 +1,51 @@
+{
+ "@context": "https://schema.org",
+ "@type": "TouristTrip",
+ "name": "5-Day Marrakech Luxury City Break – Gardens, Culture & Relaxation",
+ "description": "Unwind with this 5-day Marrakech city break, part of our curated morocco luxury tours, combining culture, gardens, and wellness in Morocco’s most iconic city. This private guided experience offers a refined introduction to Marrakech, blending historical discovery with relaxation and exclusive local...",
+ "url": "https://morocco-quest.com/tours/5-day-marrakech-luxury-city-break-gardens-culture-relaxation",
+ "image": "https://morocco-quest.com/storage/images/tours/01JVQHMSSM15ZNZYRHQJ8QNXHM.webp",
+ "touristType": [
+  "Adventure",
+  "Cultural",
+  "Desert",
+  "Luxury"
+ ],
+ "provider": {
+  "@type": "TravelAgency",
+  "name": "Morocco Quest",
+  "url": "https://morocco-quest.com",
+  "@id": "https://morocco-quest.com#organization"
+ },
+ "itinerary": {
+  "@type": "ItemList",
+  "numberOfItems": 5,
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Day 1: Arrival to Marrakech Airport"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Day 2: Marrakech Hidden Gems Tour"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Day 3: Gardens of Marrakech & The Atlas; Lunch with locals & Tea Ceremony"
+   },
+   {
+    "@type": "ListItem",
+    "position": 4,
+    "name": "Day 4: Traditional Hammam Experience & Souking"
+   },
+   {
+    "@type": "ListItem",
+    "position": 5,
+    "name": "Day 5: Departure from Marrakech Airport"
+   }
+  ]
+ }
+}

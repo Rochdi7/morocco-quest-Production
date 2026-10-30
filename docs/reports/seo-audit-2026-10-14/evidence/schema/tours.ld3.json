@@ -1,0 +1,56 @@
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Morocco Tour Packages",
+ "numberOfItems": 8,
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "5-Day Marrakech & Essaouira Luxury Duo – Private Morocco Tour",
+   "url": "https://morocco-quest.com/tours/5-day-marrakech-essaouira-luxury-duo-private-morocco-tour"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "9-Day Andalusian Morocco Rail Tour – From Tangier to Fez & Chefchaouen",
+   "url": "https://morocco-quest.com/tours/9-day-andalusian-morocco-train-tour"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Royal Cities of Morocco – 6-Day Luxury Imperial & Cultural Tour",
+   "url": "https://morocco-quest.com/tours/royal-cities-of-morocco-6-day-luxury-imperial-cultural-tour"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "name": "5-Day Marrakech & Sahara Luxury Desert Discovery – Adventure Tour",
+   "url": "https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour"
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "name": "8-Day Morocco Luxury Cultural Discovery – Art, Heritage & Culinary Delights",
+   "url": "https://morocco-quest.com/tours/8-day-morocco-luxury-cultural-discovery-art-heritage-culinary-delights"
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "name": "5-Day Rabat Luxury City Break – Rich History & Local Flavors",
+   "url": "https://morocco-quest.com/tours/5-day-rabat-luxury-city-break-rich-history-local-flavors"
+  },
+  {
+   "@type": "ListItem",
+   "position": 7,
+   "name": "5-Day Tangier Luxury City Break – Art, Culture & Coastal Charms",
+   "url": "https://morocco-quest.com/tours/5-day-tangier-luxury-city-break-art-culture-coastal-charms"
+  },
+  {
+   "@type": "ListItem",
+   "position": 8,
+   "name": "5-Day Marrakech Luxury City Break – Gardens, Culture & Relaxation",
+   "url": "https://morocco-quest.com/tours/5-day-marrakech-luxury-city-break-gardens-culture-relaxation"
+  }
+ ]
+}

@@ -1,0 +1,6269 @@
+[
+ {
+  "url": "/",
+  "nav": {
+   "ttfb": 507.89999997615814,
+   "dcl": 11483.799999952316,
+   "load": 17718.899999976158,
+   "fcp": 3424,
+   "lcp": {
+    "t": 4368,
+    "tag": "SECTION",
+    "id": "",
+    "cls": "z-index-common hero-layout1 overflow-clip hero-home-bg",
+    "url": "https://morocco-quest.com/assets/img/ait-benhaddou-morocco-travel-hero-banner-mobile.webp",
+    "size": 226876,
+    "src": ""
+   },
+   "cls": 0.0002910996083399833,
+   "lt": [
+    [
+     604.8999999761581,
+     189
+    ],
+    [
+     3272.399999976158,
+     136
+    ],
+    [
+     3441.6999999284744,
+     320
+    ],
+    [
+     3905,
+     85
+    ],
+    [
+     4049.1999999284744,
+     297
+    ],
+    [
+     4461.199999928474,
+     506
+    ],
+    [
+     4977.899999976158,
+     68
+    ],
+    [
+     5054.699999928474,
+     356
+    ],
+    [
+     5514.399999976158,
+     224
+    ],
+    [
+     5757.699999928474,
+     734
+    ],
+    [
+     6571.599999904633,
+     96
+    ],
+    [
+     6667.899999976158,
+     110
+    ],
+    [
+     6902,
+     225
+    ],
+    [
+     7369.599999904633,
+     83
+    ],
+    [
+     7521,
+     3963
+    ],
+    [
+     11499.199999928474,
+     163
+    ],
+    [
+     11707.5,
+     74
+    ],
+    [
+     11794.699999928474,
+     198
+    ],
+    [
+     11994.5,
+     59
+    ],
+    [
+     12092.699999928474,
+     53
+    ],
+    [
+     12307.299999952316,
+     67
+    ],
+    [
+     12376.599999904633,
+     51
+    ],
+    [
+     12428,
+     53
+    ],
+    [
+     12575.299999952316,
+     52
+    ],
+    [
+     12757.699999928474,
+     51
+    ],
+    [
+     12810.599999904633,
+     54
+    ],
+    [
+     13269.399999976158,
+     61
+    ],
+    [
+     13336.699999928474,
+     53
+    ],
+    [
+     13389.699999928474,
+     50
+    ],
+    [
+     13527.299999952316,
+     53
+    ],
+    [
+     13583.599999904633,
+     51
+    ],
+    [
+     13636.599999904633,
+     63
+    ],
+    [
+     13700.5,
+     63
+    ],
+    [
+     13766.099999904633,
+     52
+    ],
+    [
+     13950.799999952316,
+     56
+    ],
+    [
+     14037.799999952316,
+     68
+    ],
+    [
+     14108.299999952316,
+     56
+    ],
+    [
+     14176,
+     78
+    ],
+    [
+     14260,
+     63
+    ],
+    [
+     14326.699999928474,
+     51
+    ],
+    [
+     14393.399999976158,
+     76
+    ],
+    [
+     14476.199999928474,
+     89
+    ],
+    [
+     14575.699999928474,
+     58
+    ],
+    [
+     14799.399999976158,
+     51
+    ],
+    [
+     14851.699999928474,
+     54
+    ],
+    [
+     15702.5,
+     51
+    ],
+    [
+     16988.599999904633,
+     61
+    ],
+    [
+     17647.899999976158,
+     80
+    ],
+    [
+     17733.199999928474,
+     71
+    ],
+    [
+     17818,
+     57
+    ],
+    [
+     17877.099999904633,
+     55
+    ],
+    [
+     17934.599999904633,
+     54
+    ],
+    [
+     17990.299999952316,
+     56
+    ],
+    [
+     18047.599999904633,
+     52
+    ],
+    [
+     18542.299999952316,
+     55
+    ],
+    [
+     18599.5,
+     50
+    ],
+    [
+     18650.5,
+     62
+    ],
+    [
+     18713.199999928474,
+     54
+    ],
+    [
+     18892.899999976158,
+     56
+    ],
+    [
+     20954,
+     51
+    ],
+    [
+     21006.099999904633,
+     55
+    ],
+    [
+     21063.299999952316,
+     59
+    ],
+    [
+     21420.399999976158,
+     56
+    ],
+    [
+     22035,
+     50
+    ],
+    [
+     22216.799999952316,
+     52
+    ],
+    [
+     22281.5,
+     57
+    ],
+    [
+     22340.199999928474,
+     55
+    ],
+    [
+     22396,
+     55
+    ],
+    [
+     22453.5,
+     51
+    ],
+    [
+     22552.199999928474,
+     51
+    ],
+    [
+     22604.199999928474,
+     57
+    ],
+    [
+     22662.699999928474,
+     56
+    ]
+   ],
+   "dom": 1351,
+   "rb": [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css",
+    "https://morocco-quest.com/assets/css/purged-home/bootstrap.min.css?v=1786557559",
+    "https://morocco-quest.com/assets/css/purged-home/style.min.css?v=1786979970",
+    "https://morocco-quest.com/assets/plugins/animate.min.css",
+    "https://morocco-quest.com/assets/plugins/jquery-ui.min.css",
+    "https://morocco-quest.com/assets/plugins/magnific-popup.min.css",
+    "https://morocco-quest.com/assets/plugins/odometer.css",
+    "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css",
+    "https://morocco-quest.com/assets/plugins/daterangepicker.css",
+    "https://morocco-quest.com/assets/css/home.css",
+    "https://morocco-quest.com/assets/css/new_style.css"
+   ]
+  },
+  "tbt": 7107,
+  "total_bytes": 1158645,
+  "cat": {
+   "document": [
+    1,
+    65094
+   ],
+   "image": [
+    30,
+    568718
+   ],
+   "stylesheet": [
+    11,
+    70793
+   ],
+   "script": [
+    14,
+    384326
+   ],
+   "font": [
+    4,
+    68777
+   ],
+   "fetch": [
+    1,
+    937
+   ]
+  },
+  "third": {
+   "www.googletagmanager.com": [
+    1,
+    118866
+   ],
+   "analytics.ahrefs.com": [
+    1,
+    3017
+   ]
+  },
+  "fonts": [
+   [
+    "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2",
+    13232,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2",
+    19206,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2",
+    35545,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929",
+    794,
+    "public, max-age=31536000, immutable"
+   ]
+  ],
+  "imgs": [
+   [
+    "https://morocco-quest.com/assets/img/ait-benhaddou-morocco-travel-hero-banner-mobile.webp",
+    57290,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp",
+    8351,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    12965,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/hero-sun.png",
+    5200,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+    9979,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/cloud.png",
+    2663,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/ballon.png",
+    4251,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/morocco-desert-adventure-support.webp",
+    11542,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/morocco-train-station-al-boraq-travel.webp",
+    7005,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01K0FCG3WFXZGMMTR3ABR4ZKAV-800w.webp",
+    32740,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01KTV5W76HK8NW4KAGFFCSTHYW-800w.webp",
+    56844,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/morocco-sahara-desert-view-camels.webp",
+    1731,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/morocco-ocean-view-travel-guide.webp",
+    8437,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/award-icon-1.png",
+    9269,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/award-icon-2.png",
+    3513,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/awards-google.png",
+    1651,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/partner/tripadvisor-logo.svg",
+    1939,
+    "image/svg+xml"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/awards/award-box-left-wings.png",
+    3769,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/awards/award-box-right-wings.png",
+    3708,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/partner/tui-cruises-logo.svg",
+    1800,
+    "image/svg+xml"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/partner/iagto-logo.svg",
+    2846,
+    "image/svg+xml"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01KE4T7XDSEQZVH1GVDATYCSWC-480w.webp",
+    40578,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01K0FCDWF1CCBJCZ7BM182093W-800w.webp",
+    24869,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/activities/01K0FCTZWXWP5MBXEA7V7A6F1X-800w.webp",
+    29830,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/activities/01K0FCV24K2ZR82SEWFXTPZ9SV-800w.webp",
+    25964,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/activities/01K0FCV4PKGY3B8A9DRTDEAR5S-480w.webp",
+    18037,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/bg/destination.png",
+    51026,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png",
+    31791,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/awards/awards-style1-bg.png",
+    49903,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png",
+    49227,
+    "image/png"
+   ]
+  ],
+  "bad": [],
+  "errs": [
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    ""
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    ""
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Failed parsing 'srcset' attribute value since it has an unknown descriptor.",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ],
+   [
+    "warning",
+    "Dropped srcset candidate \"https://morocco-quest.com/storage/images/blogs/Tangier\"",
+    "https://morocco-quest.com/assets/js/SplitText.min.js"
+   ]
+  ],
+  "fails": [
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB",
+    "net::ERR_BLOCKED_BY_ORB"
+   ],
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB&cx=c&gtm=4e6ad1",
+    "net::ERR_BLOCKED_BY_ORB"
+   ]
+  ],
+  "reqs": {
+   "https://morocco-quest.com/": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, private\nmax-age=7200",
+    "ct": "text/html; charset=UTF-8",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/ait-benhaddou-morocco-travel-hero-banner-mobile.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "57100"
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "617"
+   },
+   "https://morocco-quest.com/assets/css/purged-home/bootstrap.min.css?v=1786557559": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "17016"
+   },
+   "https://morocco-quest.com/assets/css/purged-home/style.min.css?v=1786979970": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/animate.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9466"
+   },
+   "https://morocco-quest.com/assets/css/new_style.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "746"
+   },
+   "https://morocco-quest.com/assets/plugins/magnific-popup.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "2022"
+   },
+   "https://morocco-quest.com/assets/plugins/daterangepicker.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "1999"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8308"
+   },
+   "https://morocco-quest.com/assets/img/logo-white.bg.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "12898"
+   },
+   "https://morocco-quest.com/assets/css/home.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "823"
+   },
+   "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "6205"
+   },
+   "https://morocco-quest.com/assets/plugins/jquery-ui.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9383"
+   },
+   "https://morocco-quest.com/assets/plugins/odometer.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "542"
+   },
+   "https://morocco-quest.com/assets/img/icons/hero-sun.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "5126"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "9936"
+   },
+   "https://morocco-quest.com/assets/img/icons/cloud.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "2620"
+   },
+   "https://morocco-quest.com/assets/img/icons/ballon.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "4208"
+   },
+   "https://morocco-quest.com/assets/img/morocco-desert-adventure-support.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "11498"
+   },
+   "https://morocco-quest.com/assets/img/morocco-train-station-al-boraq-travel.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "6962"
+   },
+   "https://morocco-quest.com/storage/images/tours/01K0FCG3WFXZGMMTR3ABR4ZKAV-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "32664"
+   },
+   "https://morocco-quest.com/storage/images/tours/01KTV5W76HK8NW4KAGFFCSTHYW-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "56750"
+   },
+   "https://morocco-quest.com/assets/img/morocco-sahara-desert-view-camels.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "1688"
+   },
+   "https://morocco-quest.com/assets/img/morocco-ocean-view-travel-guide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8394"
+   },
+   "https://morocco-quest.com/assets/img/icons/award-icon-1.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "9226"
+   },
+   "https://morocco-quest.com/assets/img/icons/award-icon-2.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "3470"
+   },
+   "https://morocco-quest.com/assets/img/icons/awards-google.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "1608"
+   },
+   "https://morocco-quest.com/assets/img/partner/tripadvisor-logo.svg": {
+    "status": 200,
+    "type": "image",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/svg+xml",
+    "cl": "1883"
+   },
+   "https://morocco-quest.com/assets/img/awards/award-box-left-wings.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "3726"
+   },
+   "https://morocco-quest.com/assets/img/awards/award-box-right-wings.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "3665"
+   },
+   "https://morocco-quest.com/assets/img/partner/tui-cruises-logo.svg": {
+    "status": 200,
+    "type": "image",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/svg+xml",
+    "cl": "1756"
+   },
+   "https://morocco-quest.com/assets/img/partner/iagto-logo.svg": {
+    "status": 200,
+    "type": "image",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/svg+xml",
+    "cl": "2802"
+   },
+   "https://morocco-quest.com/assets/js/ScrollToPlugin.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "1987"
+   },
+   "https://morocco-quest.com/assets/js/SplitText.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7356"
+   },
+   "https://morocco-quest.com/assets/js/main.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7157"
+   },
+   "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "13186"
+   },
+   "https://morocco-quest.com/assets/js/daterangepicker.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9883"
+   },
+   "https://morocco-quest.com/assets/js/jquery.magnific-popup.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9204"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/jquery-ui.custom.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/moment.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollTrigger.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/gsap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/bootstrap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/vendor/jquery-3.6.0.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/swiper-bundle.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "703"
+   },
+   "https://www.googletagmanager.com/gtm.js?id=GTM-WVCGDJ98": {
+    "status": 200,
+    "type": "script",
+    "ce": "zstd",
+    "cc": "private, max-age=900",
+    "ct": "application/javascript; charset=UTF-8",
+    "cl": "118559"
+   },
+   "https://morocco-quest.com/storage/images/tours/01KE4T7XDSEQZVH1GVDATYCSWC-480w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "40470"
+   },
+   "https://morocco-quest.com/storage/images/tours/01K0FCDWF1CCBJCZ7BM182093W-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "24816"
+   },
+   "https://morocco-quest.com/storage/images/activities/01K0FCTZWXWP5MBXEA7V7A6F1X-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "29754"
+   },
+   "https://morocco-quest.com/storage/images/activities/01K0FCV24K2ZR82SEWFXTPZ9SV-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "25888"
+   },
+   "https://morocco-quest.com/storage/images/activities/01K0FCV4PKGY3B8A9DRTDEAR5S-480w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "17984"
+   },
+   "https://morocco-quest.com/assets/img/bg/destination.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "50481"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "31738"
+   },
+   "https://analytics.ahrefs.com/analytics.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "max-age=14400",
+    "ct": "text/javascript",
+    "cl": "2692"
+   },
+   "https://morocco-quest.com/assets/img/awards/awards-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49832"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49156"
+   },
+   "https://morocco-quest.com/csrf-refresh": {
+    "status": 200,
+    "type": "fetch",
+    "ce": "gzip",
+    "cc": "no-store, private, max-age=604800",
+    "ct": "text/plain; charset=UTF-8",
+    "cl": "60"
+   }
+  },
+  "n": 61
+ },
+ {
+  "url": "/tours",
+  "nav": {
+   "ttfb": 576.7999999523163,
+   "dcl": 29153.699999928474,
+   "load": 30768,
+   "fcp": 1976,
+   "lcp": {
+    "t": 1976,
+    "tag": "IMG",
+    "id": "",
+    "cls": "",
+    "url": "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    "size": 122500,
+    "src": "https://morocco-quest.com/assets/img/logo-white.bg.webp"
+   },
+   "cls": 0.003404162596612234,
+   "lt": [
+    [
+     710.5999999046326,
+     205
+    ],
+    [
+     1820.3999999761581,
+     131
+    ],
+    [
+     1985.5,
+     97
+    ],
+    [
+     2229.0999999046326,
+     222
+    ],
+    [
+     2467.899999976158,
+     240
+    ],
+    [
+     2754.5999999046326,
+     66
+    ],
+    [
+     2834.7999999523163,
+     86
+    ],
+    [
+     2969.0999999046326,
+     90
+    ],
+    [
+     3069.0999999046326,
+     655
+    ],
+    [
+     3797.7999999523163,
+     261
+    ],
+    [
+     4152.5,
+     63
+    ],
+    [
+     4264.199999928474,
+     59
+    ],
+    [
+     4844.199999928474,
+     57
+    ],
+    [
+     6304.299999952316,
+     349
+    ],
+    [
+     13920.099999904633,
+     94
+    ],
+    [
+     21881.599999904633,
+     978
+    ],
+    [
+     22868.899999976158,
+     135
+    ],
+    [
+     23343.899999976158,
+     98
+    ],
+    [
+     25286.699999928474,
+     78
+    ],
+    [
+     26096.599999904633,
+     151
+    ],
+    [
+     26264,
+     63
+    ],
+    [
+     26606.599999904633,
+     59
+    ],
+    [
+     27143.399999976158,
+     56
+    ],
+    [
+     27273,
+     51
+    ],
+    [
+     27769.699999928474,
+     1385
+    ],
+    [
+     30724.199999928474,
+     52
+    ]
+   ],
+   "dom": 765,
+   "rb": [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css",
+    "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834",
+    "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970",
+    "https://morocco-quest.com/assets/plugins/fontawesome.min.css",
+    "https://morocco-quest.com/assets/plugins/animate.min.css",
+    "https://morocco-quest.com/assets/plugins/jquery-ui.min.css",
+    "https://morocco-quest.com/assets/plugins/magnific-popup.min.css",
+    "https://morocco-quest.com/assets/plugins/odometer.css",
+    "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css",
+    "https://morocco-quest.com/assets/plugins/daterangepicker.css",
+    "https://morocco-quest.com/assets/css/home.css",
+    "https://morocco-quest.com/assets/css/about.css",
+    "https://morocco-quest.com/assets/css/new_style.css"
+   ]
+  },
+  "tbt": 4245,
+  "total_bytes": 2030111,
+  "cat": {
+   "document": [
+    1,
+    32869
+   ],
+   "stylesheet": [
+    13,
+    159856
+   ],
+   "image": [
+    12,
+    444557
+   ],
+   "font": [
+    7,
+    1010277
+   ],
+   "script": [
+    13,
+    381638
+   ],
+   "fetch": [
+    1,
+    914
+   ]
+  },
+  "third": {
+   "www.googletagmanager.com": [
+    1,
+    119011
+   ]
+  },
+  "fonts": [
+   [
+    "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2",
+    13232,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2",
+    19206,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2",
+    35545,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929",
+    794,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2",
+    119915,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2",
+    355275,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2",
+    466310,
+    "public, max-age=31536000, immutable"
+   ]
+  ],
+  "imgs": [
+   [
+    "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    12983,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01KTV5W76HK8NW4KAGFFCSTHYW-800w.webp",
+    56844,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp",
+    8420,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+    9979,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01KE4T7XDSEQZVH1GVDATYCSWC-480w.webp",
+    40532,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01K0FCG3WFXZGMMTR3ABR4ZKAV-800w.webp",
+    32740,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp",
+    109523,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01JVQN7GE983EM9CBZDHWQPKCZ-800w.webp",
+    29779,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01K0FCDWF1CCBJCZ7BM182093W-800w.webp",
+    24869,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01JVQRHTBMCX1NX96Z5W800D6D-800w.webp",
+    37839,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png",
+    49258,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png",
+    31791,
+    "image/png"
+   ]
+  ],
+  "bad": [],
+  "errs": [],
+  "fails": [
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB",
+    "net::ERR_BLOCKED_BY_ORB"
+   ],
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB&cx=c&gtm=4e6ad0",
+    "net::ERR_BLOCKED_BY_ORB"
+   ]
+  ],
+  "reqs": {
+   "https://morocco-quest.com/tours": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, private\nmax-age=7200",
+    "ct": "text/html; charset=UTF-8",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "617"
+   },
+   "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/logo-white.bg.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "12898"
+   },
+   "https://morocco-quest.com/assets/css/about.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "856"
+   },
+   "https://morocco-quest.com/assets/plugins/odometer.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "542"
+   },
+   "https://morocco-quest.com/assets/css/home.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "823"
+   },
+   "https://morocco-quest.com/assets/css/new_style.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "746"
+   },
+   "https://morocco-quest.com/assets/plugins/magnific-popup.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "2022"
+   },
+   "https://morocco-quest.com/assets/plugins/daterangepicker.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "1999"
+   },
+   "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "13186"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "6205"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/jquery-ui.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9383"
+   },
+   "https://morocco-quest.com/storage/images/tours/01KTV5W76HK8NW4KAGFFCSTHYW-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "56750"
+   },
+   "https://morocco-quest.com/assets/plugins/animate.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9466"
+   },
+   "https://morocco-quest.com/assets/plugins/fontawesome.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8308"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "9936"
+   },
+   "https://morocco-quest.com/storage/images/tours/01KE4T7XDSEQZVH1GVDATYCSWC-480w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "40470"
+   },
+   "https://morocco-quest.com/storage/images/tours/01K0FCG3WFXZGMMTR3ABR4ZKAV-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "32664"
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "703"
+   },
+   "https://morocco-quest.com/assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "109424"
+   },
+   "https://morocco-quest.com/assets/js/vendor/jquery-3.6.0.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/moment.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/daterangepicker.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9883"
+   },
+   "https://morocco-quest.com/assets/js/jquery-ui.custom.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/swiper-bundle.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/bootstrap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/jquery.magnific-popup.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9204"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://www.googletagmanager.com/gtm.js?id=GTM-WVCGDJ98": {
+    "status": 200,
+    "type": "script",
+    "ce": "zstd",
+    "cc": "private, max-age=900",
+    "ct": "application/javascript; charset=UTF-8",
+    "cl": "118574"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollTrigger.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/gsap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollToPlugin.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "1987"
+   },
+   "https://morocco-quest.com/storage/images/tours/01JVQN7GE983EM9CBZDHWQPKCZ-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "29680"
+   },
+   "https://morocco-quest.com/assets/js/main.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7157"
+   },
+   "https://morocco-quest.com/storage/images/tours/01K0FCDWF1CCBJCZ7BM182093W-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "24816"
+   },
+   "https://morocco-quest.com/storage/images/tours/01JVQRHTBMCX1NX96Z5W800D6D-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "37754"
+   },
+   "https://morocco-quest.com/assets/js/SplitText.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7356"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49156"
+   },
+   "https://morocco-quest.com/csrf-refresh": {
+    "status": 200,
+    "type": "fetch",
+    "ce": "gzip",
+    "cc": "no-store, private, max-age=604800",
+    "ct": "text/plain; charset=UTF-8",
+    "cl": "60"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "31738"
+   }
+  },
+  "n": 47
+ },
+ {
+  "url": "/dmc-marrakech",
+  "nav": {
+   "ttfb": 540,
+   "dcl": 11622.299999952316,
+   "load": 15899.600000023842,
+   "fcp": 3244,
+   "lcp": {
+    "t": 4620,
+    "tag": "SECTION",
+    "id": "",
+    "cls": "vs-breadcrumb hero-overlay",
+    "url": "https://morocco-quest.com/assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp",
+    "size": 127530,
+    "src": ""
+   },
+   "cls": 0.0002642309526534149,
+   "lt": [
+    [
+     668.1999999284744,
+     161
+    ],
+    [
+     2636.1999999284744,
+     53
+    ],
+    [
+     3092.899999976158,
+     127
+    ],
+    [
+     3248.5,
+     84
+    ],
+    [
+     3372.600000023842,
+     159
+    ],
+    [
+     3543.2999999523163,
+     345
+    ],
+    [
+     3935,
+     235
+    ],
+    [
+     4241.600000023842,
+     304
+    ],
+    [
+     4574.399999976158,
+     80
+    ],
+    [
+     4701.100000023842,
+     225
+    ],
+    [
+     4927.899999976158,
+     1396
+    ],
+    [
+     6424.899999976158,
+     166
+    ],
+    [
+     6618.299999952316,
+     115
+    ],
+    [
+     6878.5,
+     226
+    ],
+    [
+     7105.5,
+     305
+    ],
+    [
+     7634.699999928474,
+     105
+    ],
+    [
+     8559.600000023842,
+     190
+    ],
+    [
+     9996,
+     1627
+    ],
+    [
+     11709.600000023842,
+     193
+    ],
+    [
+     11982.5,
+     734
+    ],
+    [
+     12736.399999976158,
+     129
+    ],
+    [
+     16845.600000023842,
+     63
+    ]
+   ],
+   "dom": 1965,
+   "rb": [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css",
+    "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834",
+    "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970",
+    "https://morocco-quest.com/assets/plugins/fontawesome.min.css",
+    "https://morocco-quest.com/assets/plugins/animate.min.css",
+    "https://morocco-quest.com/assets/plugins/jquery-ui.min.css",
+    "https://morocco-quest.com/assets/plugins/magnific-popup.min.css",
+    "https://morocco-quest.com/assets/plugins/odometer.css",
+    "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css",
+    "https://morocco-quest.com/assets/plugins/daterangepicker.css",
+    "https://morocco-quest.com/assets/css/home.css",
+    "https://morocco-quest.com/assets/css/about.css",
+    "https://morocco-quest.com/assets/css/new_style.css"
+   ]
+  },
+  "tbt": 5731,
+  "total_bytes": 2201674,
+  "cat": {
+   "document": [
+    1,
+    115568
+   ],
+   "image": [
+    9,
+    514103
+   ],
+   "stylesheet": [
+    14,
+    163329
+   ],
+   "font": [
+    7,
+    1010313
+   ],
+   "script": [
+    14,
+    397443
+   ],
+   "fetch": [
+    1,
+    918
+   ]
+  },
+  "third": {
+   "cdn.jsdelivr.net": [
+    2,
+    19339
+   ],
+   "www.googletagmanager.com": [
+    1,
+    118996
+   ]
+  },
+  "fonts": [
+   [
+    "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2",
+    13232,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2",
+    19206,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2",
+    35545,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2",
+    119938,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929",
+    748,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2",
+    466310,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2",
+    355334,
+    "public, max-age=31536000, immutable"
+   ]
+  ],
+  "imgs": [
+   [
+    "https://morocco-quest.com/assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp",
+    100816,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    12965,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp",
+    8420,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+    9979,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/destination%20management%20company%20(1).webp",
+    136915,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/morocco-quest-atlas-mountains-road-nationwide-coverage.webp",
+    95449,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/morocco-quest-koutoubia-mosque-marrakech-why-us.webp",
+    68510,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png",
+    49258,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png",
+    31791,
+    "image/png"
+   ]
+  ],
+  "bad": [],
+  "errs": [],
+  "fails": [
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB",
+    "net::ERR_BLOCKED_BY_ORB"
+   ],
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB&cx=c&gtm=4e6ad1",
+    "net::ERR_BLOCKED_BY_ORB"
+   ]
+  ],
+  "reqs": {
+   "https://morocco-quest.com/dmc-marrakech": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, private\nmax-age=7200",
+    "ct": "text/html; charset=UTF-8",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/morocco-quest-marrakech-koutoubia-dmc-hero.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "100622"
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "617"
+   },
+   "https://morocco-quest.com/assets/plugins/odometer.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "542"
+   },
+   "https://morocco-quest.com/assets/css/about.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "856"
+   },
+   "https://morocco-quest.com/assets/css/new_style.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "746"
+   },
+   "https://morocco-quest.com/assets/plugins/magnific-popup.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "2022"
+   },
+   "https://morocco-quest.com/assets/img/logo-white.bg.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "12898"
+   },
+   "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "6205"
+   },
+   "https://morocco-quest.com/assets/css/home.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "823"
+   },
+   "https://morocco-quest.com/assets/plugins/daterangepicker.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "1999"
+   },
+   "https://morocco-quest.com/assets/plugins/jquery-ui.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9383"
+   },
+   "https://morocco-quest.com/assets/plugins/fontawesome.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/animate.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9466"
+   },
+   "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "13186"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8308"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "9936"
+   },
+   "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "br",
+    "cc": "public, max-age=604800, s-maxage=43200",
+    "ct": "text/css; charset=utf-8",
+    "cl": "3115"
+   },
+   "https://morocco-quest.com/assets/js/daterangepicker.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9883"
+   },
+   "https://cdn.jsdelivr.net/npm/flatpickr": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=604800, s-maxage=43200",
+    "ct": "application/javascript; charset=utf-8",
+    "cl": "15053"
+   },
+   "https://morocco-quest.com/assets/js/jquery-ui.custom.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/moment.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/vendor/jquery-3.6.0.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/jquery.magnific-popup.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9204"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/bootstrap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/gsap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/swiper-bundle.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "703"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollToPlugin.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "1987"
+   },
+   "https://morocco-quest.com/assets/js/main.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7157"
+   },
+   "https://morocco-quest.com/assets/js/ScrollTrigger.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/SplitText.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7356"
+   },
+   "https://morocco-quest.com/assets/img/destination%20management%20company%20(1).webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "136752"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/morocco-quest-atlas-mountains-road-nationwide-coverage.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "95360"
+   },
+   "https://www.googletagmanager.com/gtm.js?id=GTM-WVCGDJ98": {
+    "status": 200,
+    "type": "script",
+    "ce": "zstd",
+    "cc": "private, max-age=900",
+    "ct": "application/javascript; charset=UTF-8",
+    "cl": "118559"
+   },
+   "https://morocco-quest.com/assets/img/morocco-quest-koutoubia-mosque-marrakech-why-us.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "68430"
+   },
+   "https://morocco-quest.com/csrf-refresh": {
+    "status": 200,
+    "type": "fetch",
+    "ce": "gzip",
+    "cc": "no-store, private, max-age=604800",
+    "ct": "text/plain; charset=UTF-8",
+    "cl": "60"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49156"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "31738"
+   }
+  },
+  "n": 46
+ },
+ {
+  "url": "/experiences",
+  "nav": {
+   "ttfb": 1035.5,
+   "dcl": 14063.300000071526,
+   "load": 32981.800000071526,
+   "fcp": 7604,
+   "lcp": {
+    "t": 8592,
+    "tag": "P",
+    "id": "",
+    "cls": "hub-intro-text",
+    "url": "",
+    "size": 102808,
+    "src": ""
+   },
+   "cls": 0.004794599129196189,
+   "lt": [
+    [
+     1152.1000000238419,
+     114
+    ],
+    [
+     5270.200000047684,
+     965
+    ],
+    [
+     6248,
+     111
+    ],
+    [
+     7467.899999976158,
+     130
+    ],
+    [
+     7616.700000047684,
+     116
+    ],
+    [
+     7853.899999976158,
+     53
+    ],
+    [
+     7930.800000071526,
+     268
+    ],
+    [
+     8220.200000047684,
+     374
+    ],
+    [
+     8620.700000047684,
+     184
+    ],
+    [
+     8836.800000071526,
+     129
+    ],
+    [
+     9006.600000023842,
+     183
+    ],
+    [
+     9483.700000047684,
+     213
+    ],
+    [
+     9703.700000047684,
+     694
+    ],
+    [
+     10483.700000047684,
+     386
+    ],
+    [
+     10890.700000047684,
+     247
+    ],
+    [
+     11152.899999976158,
+     340
+    ],
+    [
+     11586.800000071526,
+     54
+    ],
+    [
+     12672.100000023842,
+     135
+    ],
+    [
+     12975.899999976158,
+     63
+    ],
+    [
+     13087.200000047684,
+     977
+    ],
+    [
+     14184.300000071526,
+     120
+    ],
+    [
+     18027,
+     79
+    ],
+    [
+     30046,
+     55
+    ],
+    [
+     32821.700000047684,
+     209
+    ]
+   ],
+   "dom": 669,
+   "rb": [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css",
+    "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834",
+    "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970",
+    "https://morocco-quest.com/assets/plugins/fontawesome.min.css",
+    "https://morocco-quest.com/assets/plugins/animate.min.css",
+    "https://morocco-quest.com/assets/plugins/jquery-ui.min.css",
+    "https://morocco-quest.com/assets/plugins/magnific-popup.min.css",
+    "https://morocco-quest.com/assets/plugins/odometer.css",
+    "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css",
+    "https://morocco-quest.com/assets/plugins/daterangepicker.css",
+    "https://morocco-quest.com/assets/css/home.css",
+    "https://morocco-quest.com/assets/css/about.css",
+    "https://morocco-quest.com/assets/css/new_style.css"
+   ]
+  },
+  "tbt": 3879,
+  "total_bytes": 2050264,
+  "cat": {
+   "document": [
+    1,
+    27746
+   ],
+   "stylesheet": [
+    13,
+    159902
+   ],
+   "font": [
+    6,
+    654974
+   ],
+   "script": [
+    13,
+    381364
+   ],
+   "image": [
+    12,
+    825388
+   ],
+   "fetch": [
+    1,
+    890
+   ]
+  },
+  "third": {
+   "www.googletagmanager.com": [
+    1,
+    118898
+   ]
+  },
+  "fonts": [
+   [
+    "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2",
+    13267,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2",
+    35510,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2",
+    19206,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929",
+    748,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2",
+    119915,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2",
+    466328,
+    "public, max-age=31536000, immutable"
+   ]
+  ],
+  "imgs": [
+   [
+    "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    13029,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+    9979,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp",
+    8374,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/moroccan-belly-dance-night-cultural-activity.webp",
+    82903,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/public/storage/categories/01JXYT6JCM7T8BNYK1GZ00J2FT.webp",
+    266680,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/public/storage/categories/01JXYT5DGS6KCQAN6AP36EPSPT.webp",
+    25527,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/public/storage/categories/01JW6KW47V8RZ14K8M17319GQD.webp",
+    62709,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/public/storage/categories/01JVSR6YFTDK79BX8M11GPJFAH.webp",
+    92629,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/public/storage/categories/01JVZJ8EXRB6DGFKF4AXYVWW2K.webp",
+    94809,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/public/storage/categories/01JW657Y33PYG7PN3D9JAWARG1.webp",
+    87631,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png",
+    49281,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png",
+    31837,
+    "image/png"
+   ]
+  ],
+  "bad": [],
+  "errs": [],
+  "fails": [
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB",
+    "net::ERR_BLOCKED_BY_ORB"
+   ],
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB&cx=c&gtm=4e6ad0",
+    "net::ERR_BLOCKED_BY_ORB"
+   ]
+  ],
+  "reqs": {
+   "https://morocco-quest.com/experiences": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, private\nmax-age=7200",
+    "ct": "text/html; charset=UTF-8",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "617"
+   },
+   "https://morocco-quest.com/assets/plugins/jquery-ui.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9383"
+   },
+   "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "13186"
+   },
+   "https://morocco-quest.com/assets/plugins/magnific-popup.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "2022"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://www.googletagmanager.com/gtm.js?id=GTM-WVCGDJ98": {
+    "status": 200,
+    "type": "script",
+    "ce": "zstd",
+    "cc": "private, max-age=900",
+    "ct": "application/javascript; charset=UTF-8",
+    "cl": "118567"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/fontawesome.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/animate.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9466"
+   },
+   "https://morocco-quest.com/assets/plugins/odometer.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "542"
+   },
+   "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "6205"
+   },
+   "https://morocco-quest.com/assets/img/logo-white.bg.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "12898"
+   },
+   "https://morocco-quest.com/assets/plugins/daterangepicker.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "1999"
+   },
+   "https://morocco-quest.com/assets/css/about.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "856"
+   },
+   "https://morocco-quest.com/assets/css/home.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "823"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "9936"
+   },
+   "https://morocco-quest.com/assets/css/new_style.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "746"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8308"
+   },
+   "https://morocco-quest.com/assets/js/vendor/jquery-3.6.0.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/jquery-ui.custom.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/moment.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/daterangepicker.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9883"
+   },
+   "https://morocco-quest.com/assets/js/swiper-bundle.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/bootstrap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/jquery.magnific-popup.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9204"
+   },
+   "https://morocco-quest.com/assets/js/gsap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollToPlugin.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "1987"
+   },
+   "https://morocco-quest.com/assets/js/ScrollTrigger.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/SplitText.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7356"
+   },
+   "https://morocco-quest.com/assets/js/main.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7157"
+   },
+   "https://morocco-quest.com/assets/img/moroccan-belly-dance-night-cultural-activity.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "82768"
+   },
+   "https://morocco-quest.com/public/storage/categories/01JXYT6JCM7T8BNYK1GZ00J2FT.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "266468"
+   },
+   "https://morocco-quest.com/public/storage/categories/01JXYT5DGS6KCQAN6AP36EPSPT.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "25474"
+   },
+   "https://morocco-quest.com/public/storage/categories/01JW6KW47V8RZ14K8M17319GQD.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "62638"
+   },
+   "https://morocco-quest.com/public/storage/categories/01JVSR6YFTDK79BX8M11GPJFAH.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "92540"
+   },
+   "https://morocco-quest.com/public/storage/categories/01JVZJ8EXRB6DGFKF4AXYVWW2K.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "94720"
+   },
+   "https://morocco-quest.com/public/storage/categories/01JW657Y33PYG7PN3D9JAWARG1.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "87542"
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "703"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49156"
+   },
+   "https://morocco-quest.com/csrf-refresh": {
+    "status": 200,
+    "type": "fetch",
+    "ce": "gzip",
+    "cc": "no-store, private, max-age=604800",
+    "ct": "text/plain; charset=UTF-8",
+    "cl": "60"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "31738"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   }
+  },
+  "n": 46
+ },
+ {
+  "url": "/destinations/marrakech",
+  "nav": {
+   "ttfb": 543.8999999761581,
+   "dcl": 9965,
+   "load": 11288.799999952316,
+   "fcp": 3484,
+   "lcp": {
+    "t": 3484,
+    "tag": "IMG",
+    "id": "",
+    "cls": "",
+    "url": "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    "size": 122500,
+    "src": "https://morocco-quest.com/assets/img/logo-white.bg.webp"
+   },
+   "cls": 0.0005787570847445057,
+   "lt": [
+    [
+     691.8999999761581,
+     253
+    ],
+    [
+     3332.100000023842,
+     130
+    ],
+    [
+     3503.1999999284744,
+     99
+    ],
+    [
+     3648.899999976158,
+     66
+    ],
+    [
+     3743.399999976158,
+     258
+    ],
+    [
+     4111,
+     401
+    ],
+    [
+     4622.399999976158,
+     115
+    ],
+    [
+     4740.5,
+     192
+    ],
+    [
+     4947.100000023842,
+     726
+    ],
+    [
+     5713.399999976158,
+     97
+    ],
+    [
+     5853.399999976158,
+     964
+    ],
+    [
+     6818.299999952316,
+     296
+    ],
+    [
+     7149,
+     138
+    ],
+    [
+     7291.199999928474,
+     153
+    ],
+    [
+     7679.5,
+     373
+    ],
+    [
+     8097.5,
+     85
+    ],
+    [
+     8182.699999928474,
+     53
+    ],
+    [
+     8236.199999928474,
+     52
+    ],
+    [
+     8392.600000023842,
+     130
+    ],
+    [
+     8535.899999976158,
+     53
+    ],
+    [
+     8606.299999952316,
+     1360
+    ],
+    [
+     10616.899999976158,
+     72
+    ],
+    [
+     11159.299999952316,
+     189
+    ]
+   ],
+   "dom": 709,
+   "rb": [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css",
+    "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834",
+    "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970",
+    "https://morocco-quest.com/assets/plugins/fontawesome.min.css",
+    "https://morocco-quest.com/assets/plugins/animate.min.css",
+    "https://morocco-quest.com/assets/plugins/jquery-ui.min.css",
+    "https://morocco-quest.com/assets/plugins/magnific-popup.min.css",
+    "https://morocco-quest.com/assets/plugins/odometer.css",
+    "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css",
+    "https://morocco-quest.com/assets/plugins/daterangepicker.css",
+    "https://morocco-quest.com/assets/css/home.css",
+    "https://morocco-quest.com/assets/css/about.css",
+    "https://morocco-quest.com/assets/css/new_style.css"
+   ]
+  },
+  "tbt": 4822,
+  "total_bytes": 2003628,
+  "cat": {
+   "document": [
+    1,
+    30355
+   ],
+   "stylesheet": [
+    13,
+    159856
+   ],
+   "image": [
+    11,
+    420821
+   ],
+   "font": [
+    7,
+    1010227
+   ],
+   "script": [
+    13,
+    381458
+   ],
+   "fetch": [
+    1,
+    911
+   ]
+  },
+  "third": {
+   "www.googletagmanager.com": [
+    1,
+    118992
+   ]
+  },
+  "fonts": [
+   [
+    "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2",
+    13232,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2",
+    19206,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2",
+    35545,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929",
+    748,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2",
+    119915,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2",
+    355252,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2",
+    466329,
+    "public, max-age=31536000, immutable"
+   ]
+  ],
+  "imgs": [
+   [
+    "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    12983,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp",
+    8374,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+    9979,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01KTV5W76HK8NW4KAGFFCSTHYW-800w.webp",
+    56844,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01K0FCDWF1CCBJCZ7BM182093W-800w.webp",
+    24892,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01KE4T7XDSEQZVH1GVDATYCSWC-480w.webp",
+    40532,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp",
+    109569,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01JVQRHTBMCX1NX96Z5W800D6D-800w.webp",
+    37885,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01JVQHMSSM15ZNZYRHQJ8QNXHM-800w.webp",
+    38691,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png",
+    49281,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png",
+    31791,
+    "image/png"
+   ]
+  ],
+  "bad": [],
+  "errs": [],
+  "fails": [
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB",
+    "net::ERR_BLOCKED_BY_ORB"
+   ],
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB&cx=c&gtm=4e6ad1h1",
+    "net::ERR_BLOCKED_BY_ORB"
+   ]
+  ],
+  "reqs": {
+   "https://morocco-quest.com/destinations/marrakech": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, private\nmax-age=7200",
+    "ct": "text/html; charset=UTF-8",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "617"
+   },
+   "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/home.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "823"
+   },
+   "https://morocco-quest.com/assets/plugins/odometer.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "542"
+   },
+   "https://morocco-quest.com/assets/img/logo-white.bg.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "12898"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8308"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "9936"
+   },
+   "https://morocco-quest.com/assets/plugins/magnific-popup.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "2022"
+   },
+   "https://morocco-quest.com/assets/plugins/daterangepicker.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "1999"
+   },
+   "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "6205"
+   },
+   "https://morocco-quest.com/assets/css/new_style.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "746"
+   },
+   "https://morocco-quest.com/assets/css/about.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "856"
+   },
+   "https://morocco-quest.com/assets/plugins/jquery-ui.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9383"
+   },
+   "https://morocco-quest.com/assets/plugins/fontawesome.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/animate.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9466"
+   },
+   "https://morocco-quest.com/storage/images/tours/01KTV5W76HK8NW4KAGFFCSTHYW-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "56750"
+   },
+   "https://morocco-quest.com/storage/images/tours/01K0FCDWF1CCBJCZ7BM182093W-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "24816"
+   },
+   "https://morocco-quest.com/storage/images/tours/01KE4T7XDSEQZVH1GVDATYCSWC-480w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "40470"
+   },
+   "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "13186"
+   },
+   "https://morocco-quest.com/assets/js/ScrollToPlugin.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "1987"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/SplitText.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7356"
+   },
+   "https://morocco-quest.com/assets/js/main.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7157"
+   },
+   "https://morocco-quest.com/assets/js/jquery.magnific-popup.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9204"
+   },
+   "https://morocco-quest.com/assets/js/daterangepicker.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9883"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/jquery-ui.custom.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/moment.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollTrigger.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/bootstrap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/gsap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/vendor/jquery-3.6.0.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/moroccan-architecture-courtyard-orange-tree-tour-banner.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "109424"
+   },
+   "https://morocco-quest.com/assets/js/swiper-bundle.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "703"
+   },
+   "https://www.googletagmanager.com/gtm.js?id=GTM-WVCGDJ98": {
+    "status": 200,
+    "type": "script",
+    "ce": "zstd",
+    "cc": "private, max-age=900",
+    "ct": "application/javascript; charset=UTF-8",
+    "cl": "118555"
+   },
+   "https://morocco-quest.com/storage/images/tours/01JVQRHTBMCX1NX96Z5W800D6D-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "37754"
+   },
+   "https://morocco-quest.com/storage/images/tours/01JVQHMSSM15ZNZYRHQJ8QNXHM-800w.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "38560"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49156"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "31738"
+   },
+   "https://morocco-quest.com/csrf-refresh": {
+    "status": 200,
+    "type": "fetch",
+    "ce": "gzip",
+    "cc": "no-store, private, max-age=604800",
+    "ct": "text/plain; charset=UTF-8",
+    "cl": "60"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   }
+  },
+  "n": 46
+ },
+ {
+  "url": "/tours/royal-cities-of-morocco-6-day-luxury-imperial-cultural-tour",
+  "nav": {
+   "ttfb": 576.3999999761581,
+   "dcl": 5947.399999976158,
+   "load": 16732,
+   "fcp": 3396,
+   "lcp": {
+    "t": 3396,
+    "tag": "IMG",
+    "id": "",
+    "cls": "",
+    "url": "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    "size": 122500,
+    "src": "https://morocco-quest.com/assets/img/logo-white.bg.webp"
+   },
+   "cls": 0.0016252241362313437,
+   "lt": [
+    [
+     691.5,
+     197
+    ],
+    [
+     3303.600000023842,
+     71
+    ],
+    [
+     3392,
+     65
+    ],
+    [
+     3510.100000023842,
+     146
+    ],
+    [
+     3675.7000000476837,
+     202
+    ],
+    [
+     3915.7000000476837,
+     102
+    ],
+    [
+     4021.5,
+     70
+    ],
+    [
+     4113.399999976158,
+     348
+    ],
+    [
+     4571.399999976158,
+     292
+    ],
+    [
+     4902.200000047684,
+     179
+    ],
+    [
+     5231.799999952316,
+     112
+    ],
+    [
+     5442.799999952316,
+     51
+    ],
+    [
+     5543,
+     405
+    ],
+    [
+     7255.200000047684,
+     246
+    ],
+    [
+     7671.100000023842,
+     129
+    ],
+    [
+     8969.5,
+     206
+    ],
+    [
+     9280.299999952316,
+     196
+    ],
+    [
+     9611.100000023842,
+     77
+    ],
+    [
+     9701.600000023842,
+     400
+    ],
+    [
+     10119.200000047684,
+     61
+    ],
+    [
+     11239.299999952316,
+     83
+    ],
+    [
+     12324.200000047684,
+     127
+    ],
+    [
+     12528.5,
+     59
+    ],
+    [
+     13050.799999952316,
+     371
+    ],
+    [
+     15414.100000023842,
+     70
+    ],
+    [
+     16588.600000023842,
+     190
+    ]
+   ],
+   "dom": 993,
+   "rb": [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css",
+    "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834",
+    "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970",
+    "https://morocco-quest.com/assets/plugins/fontawesome.min.css",
+    "https://morocco-quest.com/assets/plugins/animate.min.css",
+    "https://morocco-quest.com/assets/plugins/jquery-ui.min.css",
+    "https://morocco-quest.com/assets/plugins/magnific-popup.min.css",
+    "https://morocco-quest.com/assets/plugins/odometer.css",
+    "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css",
+    "https://morocco-quest.com/assets/plugins/daterangepicker.css",
+    "https://morocco-quest.com/assets/css/home.css",
+    "https://morocco-quest.com/assets/css/about.css",
+    "https://morocco-quest.com/assets/css/new_style.css"
+   ]
+  },
+  "tbt": 2972,
+  "total_bytes": 3235987,
+  "cat": {
+   "document": [
+    2,
+    52241
+   ],
+   "stylesheet": [
+    14,
+    163707
+   ],
+   "image": [
+    10,
+    333139
+   ],
+   "script": [
+    27,
+    843706
+   ],
+   "font": [
+    9,
+    1842253
+   ],
+   "fetch": [
+    1,
+    895
+   ],
+   "xhr": [
+    1,
+    46
+   ]
+  },
+  "third": {
+   "cdn.jsdelivr.net": [
+    2,
+    19331
+   ],
+   "www.google.com": [
+    1,
+    1870
+   ],
+   "maps.googleapis.com": [
+    14,
+    410145
+   ],
+   "maps.gstatic.com": [
+    1,
+    76634
+   ],
+   "www.googletagmanager.com": [
+    1,
+    119378
+   ]
+  },
+  "fonts": [
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2",
+    19206,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2",
+    13232,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2",
+    35545,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929",
+    748,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2",
+    119961,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2",
+    355261,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-sharp-light-300.woff2",
+    405609,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-regular-400.woff2",
+    426399,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2",
+    466292,
+    "public, max-age=31536000, immutable"
+   ]
+  ],
+  "imgs": [
+   [
+    "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    12983,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp",
+    8374,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+    9979,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/cloud.png",
+    2671,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/ballon-sclation.png",
+    3185,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/sahara-merzouga-camel-tour-sunset-morocco.webp",
+    102418,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/tours/01KE4T7XDSEQZVH1GVDATYCSWC.webp",
+    72137,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png",
+    49273,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png",
+    31791,
+    "image/png"
+   ],
+   [
+    "https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i15633&2i13027&2e1&3u7&4m2&1u316&2u380&5m6&1e0&5sfr&6sma&10b1&12b1&14i47083502&8e1&key=AIzaREDACTED&token=85524",
+    40328,
+    "image/png"
+   ]
+  ],
+  "bad": [],
+  "errs": [],
+  "fails": [
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB",
+    "net::ERR_BLOCKED_BY_ORB"
+   ],
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB&cx=c&gtm=4e6ad1",
+    "net::ERR_BLOCKED_BY_ORB"
+   ]
+  ],
+  "reqs": {
+   "https://morocco-quest.com/tours/royal-cities-of-morocco-6-day-luxury-imperial-cultural-tour": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, private\nmax-age=7200",
+    "ct": "text/html; charset=UTF-8",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "617"
+   },
+   "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/fontawesome.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/animate.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9466"
+   },
+   "https://morocco-quest.com/assets/plugins/jquery-ui.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9383"
+   },
+   "https://morocco-quest.com/assets/plugins/magnific-popup.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "2022"
+   },
+   "https://morocco-quest.com/assets/plugins/odometer.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "542"
+   },
+   "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "6205"
+   },
+   "https://morocco-quest.com/assets/plugins/daterangepicker.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "1999"
+   },
+   "https://morocco-quest.com/assets/css/home.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "823"
+   },
+   "https://morocco-quest.com/assets/css/about.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "856"
+   },
+   "https://morocco-quest.com/assets/css/new_style.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "746"
+   },
+   "https://morocco-quest.com/assets/img/logo-white.bg.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "12898"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8308"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "9936"
+   },
+   "https://morocco-quest.com/assets/img/icons/cloud.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "2620"
+   },
+   "https://morocco-quest.com/assets/img/icons/ballon-sclation.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "3142"
+   },
+   "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "br",
+    "cc": "public, max-age=604800, s-maxage=43200",
+    "ct": "text/css; charset=utf-8",
+    "cl": "3115"
+   },
+   "https://morocco-quest.com/assets/js/ScrollToPlugin.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "1987"
+   },
+   "https://morocco-quest.com/assets/js/main.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7157"
+   },
+   "https://morocco-quest.com/assets/js/SplitText.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7356"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "13186"
+   },
+   "https://morocco-quest.com/assets/js/daterangepicker.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9883"
+   },
+   "https://morocco-quest.com/assets/js/jquery.magnific-popup.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9204"
+   },
+   "https://cdn.jsdelivr.net/npm/flatpickr": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=604800, s-maxage=43200",
+    "ct": "application/javascript; charset=utf-8",
+    "cl": "15053"
+   },
+   "https://morocco-quest.com/assets/js/jquery-ui.custom.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/moment.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollTrigger.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/bootstrap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/gsap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/vendor/jquery-3.6.0.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/sahara-merzouga-camel-tour-sunset-morocco.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "102274"
+   },
+   "https://morocco-quest.com/assets/js/swiper-bundle.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/storage/images/tours/01KE4T7XDSEQZVH1GVDATYCSWC.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "72034"
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "703"
+   },
+   "https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d1716511.2112689302!2d-7.833619346561845!3d32.83039604336725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0xda63a975723fb01%3A0x36a43ade39731673!2sA%C3%A9roport%20international%20Mohammed%20V%20de%20Casablanca%2C%20Casa-Oasis%2C%20Nouasseur%2C%20Casablanca%208101!3m2!1d33.3702714!2d-7.5829065!4m5!1s0xda76b86fd52c43d%3A0xab60c0642c7f8b50!2sH%C3%B4tel%20Le%20Mus%C3%A9e%2C%20Rue%20Ben%20Ghazi%2C%20Rabat!3m2!1d34.015753499999995!2d-6.8323564!4m5!1s0xd9f8b3a5655611b%3A0xbcc78c0119322159!2sH%C3%B4tel%20L%27Escale%2C%20Avenue%20des%20Forces%20Arm%C3%A9es%20Royales%2C%20F%C3%A8s!3m2!1d34.0380846!2d-5.0050469!4m5!1s0xdafee8a6e85c699%3A0x60331afb85660ef1!2sH%C3%B4tel%20RACINE%2C%20et%20Ibn%20Atya%D8%8C%20Rue%20Oum%20Errabia%2C%20Marrakech!3m2!1d31.6318354!2d-8.0038197!4m5!1s0xda63a975723fb01%3A0x36a43ade39731673!2sA%C3%A9roport%20international%20Mohammed%20V%20de%20Casablanca%2C%20Casablanca!3m2!1d33.3702714!2d-7.5829065!5e0!3m2!1sfr!2sma!4v1749575406979!5m2!1sfr!2sma": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, must-revalidate",
+    "ct": "text/html; charset=UTF-8",
+    "cl": "1370"
+   },
+   "https://maps.googleapis.com/maps/api/js?key=AIzaREDACTED&paint_origin=&libraries=geometry,search&v=weekly&loading=async&language=fr&region=ma&experimentation=allowed&callback=onApiLoad": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=1800, stale-while-revalidate=12600",
+    "ct": "text/javascript; charset=UTF-8",
+    "cl": "2810"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/search.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "1110"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/geometry.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "2534"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49156"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "31738"
+   },
+   "https://morocco-quest.com/csrf-refresh": {
+    "status": 200,
+    "type": "fetch",
+    "ce": "gzip",
+    "cc": "no-store, private, max-age=604800",
+    "ct": "text/plain; charset=UTF-8",
+    "cl": "60"
+   },
+   "https://maps.gstatic.com/maps-api-v3/embed/js/66/9d/intl/fr_ALL/init_embed.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "76043"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/main.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "86347"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true": {
+    "status": 200,
+    "type": "xhr",
+    "ce": "gzip",
+    "cc": null,
+    "ct": "application/json; charset=UTF-8",
+    "cl": "23"
+   },
+   "https://www.googletagmanager.com/gtm.js?id=GTM-WVCGDJ98": {
+    "status": 200,
+    "type": "script",
+    "ce": "zstd",
+    "cc": "private, max-age=900",
+    "ct": "application/javascript; charset=UTF-8",
+    "cl": "118941"
+   },
+   "https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i15633&2i13027&2e1&3u7&4m2&1u316&2u380&5m6&1e0&5sfr&6sma&10b1&12b1&14i47083502&8e1&key=AIzaREDACTED&token=85524": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=86400",
+    "ct": "image/png",
+    "cl": "40299"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/places_impl.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "3637"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/search_impl.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "1315"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/onion.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "9580"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/map.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "26046"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/controls.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "26851"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/common.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "38223"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/util.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "72381"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/places.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "97729"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-sharp-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-regular-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   }
+  },
+  "n": 64
+ },
+ {
+  "url": "/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast",
+  "nav": {
+   "ttfb": 448.6999999284744,
+   "dcl": 8461.799999952316,
+   "load": 17785.199999928474,
+   "fcp": 3264,
+   "lcp": {
+    "t": 3264,
+    "tag": "IMG",
+    "id": "",
+    "cls": "",
+    "url": "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    "size": 122500,
+    "src": "https://morocco-quest.com/assets/img/logo-white.bg.webp"
+   },
+   "cls": 0.009128063880837404,
+   "lt": [
+    [
+     548.2999999523163,
+     172
+    ],
+    [
+     744.1999999284744,
+     50
+    ],
+    [
+     3113.5,
+     129
+    ],
+    [
+     3329.100000023842,
+     110
+    ],
+    [
+     3567,
+     78
+    ],
+    [
+     3646.100000023842,
+     212
+    ],
+    [
+     3859.600000023842,
+     482
+    ],
+    [
+     4389.399999976158,
+     175
+    ],
+    [
+     4585.5,
+     372
+    ],
+    [
+     5013.100000023842,
+     192
+    ],
+    [
+     5223.899999976158,
+     50
+    ],
+    [
+     5279.899999976158,
+     464
+    ],
+    [
+     5748.899999976158,
+     81
+    ],
+    [
+     5969.399999976158,
+     152
+    ],
+    [
+     6291.5,
+     130
+    ],
+    [
+     6491.299999952316,
+     345
+    ],
+    [
+     6891.399999976158,
+     56
+    ],
+    [
+     6950.799999952316,
+     52
+    ],
+    [
+     7115,
+     126
+    ],
+    [
+     7266.699999928474,
+     59
+    ],
+    [
+     7348.5,
+     1115
+    ],
+    [
+     8506.899999976158,
+     78
+    ],
+    [
+     8632.799999952316,
+     155
+    ],
+    [
+     8874.299999952316,
+     729
+    ],
+    [
+     9660,
+     147
+    ],
+    [
+     11644.799999952316,
+     323
+    ],
+    [
+     12035.899999976158,
+     51
+    ],
+    [
+     12094.299999952316,
+     258
+    ],
+    [
+     12432.699999928474,
+     89
+    ],
+    [
+     14015.899999976158,
+     213
+    ],
+    [
+     15035.699999928474,
+     61
+    ],
+    [
+     15775.600000023842,
+     193
+    ],
+    [
+     17689.699999928474,
+     117
+    ]
+   ],
+   "dom": 852,
+   "rb": [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css",
+    "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834",
+    "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970",
+    "https://morocco-quest.com/assets/plugins/fontawesome.min.css",
+    "https://morocco-quest.com/assets/plugins/animate.min.css",
+    "https://morocco-quest.com/assets/plugins/jquery-ui.min.css",
+    "https://morocco-quest.com/assets/plugins/magnific-popup.min.css",
+    "https://morocco-quest.com/assets/plugins/odometer.css",
+    "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css",
+    "https://morocco-quest.com/assets/plugins/daterangepicker.css",
+    "https://morocco-quest.com/assets/css/home.css",
+    "https://morocco-quest.com/assets/css/about.css",
+    "https://morocco-quest.com/assets/css/new_style.css"
+   ]
+  },
+  "tbt": 5165,
+  "total_bytes": 3293900,
+  "cat": {
+   "document": [
+    2,
+    42517
+   ],
+   "stylesheet": [
+    14,
+    163705
+   ],
+   "image": [
+    8,
+    401287
+   ],
+   "script": [
+    27,
+    843350
+   ],
+   "font": [
+    9,
+    1842083
+   ],
+   "fetch": [
+    1,
+    912
+   ],
+   "xhr": [
+    1,
+    46
+   ]
+  },
+  "third": {
+   "cdn.jsdelivr.net": [
+    2,
+    19328
+   ],
+   "www.google.com": [
+    1,
+    1590
+   ],
+   "maps.googleapis.com": [
+    14,
+    390927
+   ],
+   "www.googletagmanager.com": [
+    1,
+    118996
+   ],
+   "maps.gstatic.com": [
+    1,
+    76634
+   ]
+  },
+  "fonts": [
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2",
+    19206,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2",
+    13232,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2",
+    35545,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929",
+    748,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2",
+    119961,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2",
+    355298,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2",
+    466283,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-regular-400.woff2",
+    426390,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-sharp-light-300.woff2",
+    405420,
+    "public, max-age=31536000, immutable"
+   ]
+  ],
+  "imgs": [
+   [
+    "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    12983,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp",
+    8374,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+    9979,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp",
+    172987,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/storage/images/activities/01JVZK08FSAA76S3JEG4GHP3W0.webp",
+    94832,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png",
+    49258,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png",
+    31791,
+    "image/png"
+   ],
+   [
+    "https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i250351&2i213241&2e1&3u11&4m2&1u316&2u380&5m6&1e0&5sfr&6sma&10b1&12b1&14i47083502&8e1&key=AIzaREDACTED&token=19591",
+    21083,
+    "image/png"
+   ]
+  ],
+  "bad": [],
+  "errs": [],
+  "fails": [
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB",
+    "net::ERR_BLOCKED_BY_ORB"
+   ],
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB&cx=c&gtm=4e6ad1",
+    "net::ERR_BLOCKED_BY_ORB"
+   ]
+  ],
+  "reqs": {
+   "https://morocco-quest.com/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, private\nmax-age=7200",
+    "ct": "text/html; charset=UTF-8",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "617"
+   },
+   "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/fontawesome.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/animate.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9466"
+   },
+   "https://morocco-quest.com/assets/plugins/jquery-ui.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9383"
+   },
+   "https://morocco-quest.com/assets/plugins/magnific-popup.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "2022"
+   },
+   "https://morocco-quest.com/assets/plugins/odometer.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "542"
+   },
+   "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "6205"
+   },
+   "https://morocco-quest.com/assets/plugins/daterangepicker.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "1999"
+   },
+   "https://morocco-quest.com/assets/css/home.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "823"
+   },
+   "https://morocco-quest.com/assets/css/about.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "856"
+   },
+   "https://morocco-quest.com/assets/css/new_style.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "746"
+   },
+   "https://morocco-quest.com/assets/img/logo-white.bg.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "12898"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8308"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "9936"
+   },
+   "https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "br",
+    "cc": "public, max-age=604800, s-maxage=43200",
+    "ct": "text/css; charset=utf-8",
+    "cl": "3115"
+   },
+   "https://morocco-quest.com/assets/js/ScrollToPlugin.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "1987"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "13186"
+   },
+   "https://morocco-quest.com/assets/js/SplitText.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7356"
+   },
+   "https://morocco-quest.com/assets/js/main.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7157"
+   },
+   "https://morocco-quest.com/assets/js/daterangepicker.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9883"
+   },
+   "https://morocco-quest.com/assets/js/jquery.magnific-popup.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9204"
+   },
+   "https://cdn.jsdelivr.net/npm/flatpickr": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=604800, s-maxage=43200",
+    "ct": "application/javascript; charset=utf-8",
+    "cl": "15053"
+   },
+   "https://morocco-quest.com/assets/js/jquery-ui.custom.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/moment.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollTrigger.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/gsap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/bootstrap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/vendor/jquery-3.6.0.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/swiper-bundle.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "703"
+   },
+   "https://morocco-quest.com/assets/img/berber-terrace-atlas-mountains-imlil-morocco.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "172852"
+   },
+   "https://morocco-quest.com/storage/images/activities/01JVZK08FSAA76S3JEG4GHP3W0.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "94720"
+   },
+   "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d108631.22681480217!2d-8.05302978562118!3d31.69606207472244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakech!3m2!1d31.622522399999998!2d-7.989825799999999!4m5!1s0xdaf920006daac07%3A0xa5ebad6b07e6e7b6!2sJbilate!3m2!1d31.769350199999998!2d-7.980979499999999!5e0!3m2!1sfr!2sma!4v1748038014814!5m2!1sfr!2sma": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, must-revalidate",
+    "ct": "text/html; charset=UTF-8",
+    "cl": "1090"
+   },
+   "https://maps.googleapis.com/maps/api/js?key=AIzaREDACTED&paint_origin=&libraries=geometry,search&v=weekly&loading=async&language=fr&region=ma&experimentation=allowed&callback=onApiLoad": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=1800, stale-while-revalidate=12600",
+    "ct": "text/javascript; charset=UTF-8",
+    "cl": "2810"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49156"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "31738"
+   },
+   "https://morocco-quest.com/csrf-refresh": {
+    "status": 200,
+    "type": "fetch",
+    "ce": "gzip",
+    "cc": "no-store, private, max-age=604800",
+    "ct": "text/plain; charset=UTF-8",
+    "cl": "60"
+   },
+   "https://www.googletagmanager.com/gtm.js?id=GTM-WVCGDJ98": {
+    "status": 200,
+    "type": "script",
+    "ce": "zstd",
+    "cc": "private, max-age=900",
+    "ct": "application/javascript; charset=UTF-8",
+    "cl": "118559"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/search.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "1110"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/geometry.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "2534"
+   },
+   "https://maps.gstatic.com/maps-api-v3/embed/js/66/9d/intl/fr_ALL/init_embed.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "76043"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/main.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "86347"
+   },
+   "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true": {
+    "status": 200,
+    "type": "xhr",
+    "ce": "gzip",
+    "cc": null,
+    "ct": "application/json; charset=UTF-8",
+    "cl": "23"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/search_impl.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "1315"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/places_impl.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "3637"
+   },
+   "https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i250351&2i213241&2e1&3u11&4m2&1u316&2u380&5m6&1e0&5sfr&6sma&10b1&12b1&14i47083502&8e1&key=AIzaREDACTED&token=19591": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=86400",
+    "ct": "image/png",
+    "cl": "21059"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/onion.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "9580"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/map.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "26046"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/controls.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "26851"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/common.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "38223"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/util.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "72381"
+   },
+   "https://maps.googleapis.com/maps-api-v3/api/js/66/9d/intl/fr_ALL/places.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "br",
+    "cc": "public, max-age=31536000",
+    "ct": "text/javascript",
+    "cl": "97729"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-regular-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-sharp-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   }
+  },
+  "n": 62
+ },
+ {
+  "url": "/blog/top-10-unforgettable-experiences-to-have-in-morocco",
+  "nav": {
+   "ttfb": 442.89999997615814,
+   "dcl": 6900.099999904633,
+   "load": 12458.099999904633,
+   "fcp": 3448,
+   "lcp": {
+    "t": 3448,
+    "tag": "IMG",
+    "id": "",
+    "cls": "",
+    "url": "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    "size": 122500,
+    "src": "https://morocco-quest.com/assets/img/logo-white.bg.webp"
+   },
+   "cls": 0.00024848315740037835,
+   "lt": [
+    [
+     533.3999999761581,
+     154
+    ],
+    [
+     3312.0999999046326,
+     119
+    ],
+    [
+     3477.6999999284744,
+     61
+    ],
+    [
+     3586.399999976158,
+     61
+    ],
+    [
+     3668,
+     220
+    ],
+    [
+     3936.6999999284744,
+     244
+    ],
+    [
+     4207.5,
+     130
+    ],
+    [
+     4341,
+     475
+    ],
+    [
+     4844.399999976158,
+     111
+    ],
+    [
+     4977.899999976158,
+     114
+    ],
+    [
+     5148,
+     313
+    ],
+    [
+     5488.399999976158,
+     59
+    ],
+    [
+     5583.599999904633,
+     67
+    ],
+    [
+     5706.699999928474,
+     259
+    ],
+    [
+     6075.099999904633,
+     52
+    ],
+    [
+     6159.399999976158,
+     741
+    ],
+    [
+     6973,
+     582
+    ],
+    [
+     7585.599999904633,
+     129
+    ],
+    [
+     7738.099999904633,
+     145
+    ],
+    [
+     12340.399999976158,
+     139
+    ]
+   ],
+   "dom": 1056,
+   "rb": [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css",
+    "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834",
+    "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970",
+    "https://morocco-quest.com/assets/plugins/fontawesome.min.css",
+    "https://morocco-quest.com/assets/plugins/animate.min.css",
+    "https://morocco-quest.com/assets/plugins/jquery-ui.min.css",
+    "https://morocco-quest.com/assets/plugins/magnific-popup.min.css",
+    "https://morocco-quest.com/assets/plugins/odometer.css",
+    "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css",
+    "https://morocco-quest.com/assets/plugins/daterangepicker.css",
+    "https://morocco-quest.com/assets/css/home.css",
+    "https://morocco-quest.com/assets/css/about.css",
+    "https://morocco-quest.com/assets/css/new_style.css"
+   ]
+  },
+  "tbt": 3002,
+  "total_bytes": 2402566,
+  "cat": {
+   "document": [
+    1,
+    41672
+   ],
+   "stylesheet": [
+    13,
+    159833
+   ],
+   "image": [
+    24,
+    382090
+   ],
+   "script": [
+    13,
+    381365
+   ],
+   "font": [
+    8,
+    1436690
+   ],
+   "fetch": [
+    1,
+    916
+   ]
+  },
+  "third": {
+   "www.gravatar.com": [
+    1,
+    416
+   ],
+   "www.googletagmanager.com": [
+    7,
+    119118
+   ]
+  },
+  "fonts": [
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2",
+    19206,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2",
+    13232,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2",
+    35545,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929",
+    794,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2",
+    119915,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2",
+    355307,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-regular-400.woff2",
+    426399,
+    "public, max-age=31536000, immutable"
+   ],
+   [
+    "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2",
+    466292,
+    "public, max-age=31536000, immutable"
+   ]
+  ],
+  "imgs": [
+   [
+    "https://morocco-quest.com/assets/img/logo-white.bg.webp",
+    12983,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp",
+    8374,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+    9979,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/public/storage/images/blogs/7b.jpg",
+    102387,
+    "image/jpeg"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/ballon-sclation.png",
+    3193,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/blog/mounir-akajia-morocco-quest-admin-main-blog-author.webp",
+    11702,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/svg-blog-details-quote-icon-1-1.svg",
+    624,
+    "image/svg+xml"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/icons/cloud.png",
+    2663,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/Desert-Camp-Morocco-Sunset-View-Lanterns-Palm-Trees.webp",
+    1249,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp",
+    1621,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/Moroccan-Gate-Fes-Tourists-Decorative-Architecture.webp",
+    1849,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp",
+    2533,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp",
+    2559,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/Traditional-Moroccan-Dining-Event-Outdoor-Lanterns.webp",
+    2707,
+    "image/webp"
+   ],
+   [
+    "https://www.gravatar.com/avatar/04e5b02b7ff42587f334f7f5d972e0d5?s=80&d=404",
+    416,
+    "text/html; charset=utf-8"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/moroccan-souk-woman-seller-market-life-fes.webp",
+    135991,
+    "image/webp"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png",
+    49250,
+    "image/png"
+   ],
+   [
+    "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png",
+    31791,
+    "image/png"
+   ],
+   [
+    "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtm.init&eid=2&h=Ag&z=0",
+    59,
+    "text/html"
+   ],
+   [
+    "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtm.js&eid=3&h=Ag&z=0",
+    40,
+    "text/html"
+   ],
+   [
+    "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtag.config&eid=5&h=Ag&z=0",
+    49,
+    "text/html"
+   ],
+   [
+    "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=*&eid=6&h=Ag&z=0",
+    49,
+    "text/html"
+   ],
+   [
+    "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtm.dom&eid=7&h=Ag&z=0",
+    11,
+    "text/html"
+   ],
+   [
+    "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtm.load&eid=8&h=Ag&z=0",
+    11,
+    "text/html"
+   ]
+  ],
+  "bad": [
+   [
+    404,
+    "https://www.gravatar.com/avatar/04e5b02b7ff42587f334f7f5d972e0d5?s=80&d=404"
+   ]
+  ],
+  "errs": [
+   [
+    "error",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "https://www.gravatar.com/avatar/04e5b02b7ff42587f334f7f5d972e0d5?s=80&d=404"
+   ]
+  ],
+  "fails": [
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB",
+    "net::ERR_BLOCKED_BY_ORB"
+   ],
+   [
+    "https://www.googletagmanager.com/gtag/js?id=G-QXBGN7DKMB&cx=c&gtm=4e6ad1",
+    "net::ERR_BLOCKED_BY_ORB"
+   ]
+  ],
+  "reqs": {
+   "https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco": {
+    "status": 200,
+    "type": "document",
+    "ce": "gzip",
+    "cc": "no-cache, private\nmax-age=7200",
+    "ct": "text/html; charset=UTF-8",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/bootstrap-icons-subset.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "617"
+   },
+   "https://morocco-quest.com/assets/css/purged/bootstrap.min.css?v=1786548834": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/css/purged/style.min.css?v=1786979970": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/fontawesome.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/animate.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9466"
+   },
+   "https://morocco-quest.com/assets/plugins/jquery-ui.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "9383"
+   },
+   "https://morocco-quest.com/assets/plugins/magnific-popup.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "2022"
+   },
+   "https://morocco-quest.com/assets/plugins/odometer.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "542"
+   },
+   "https://morocco-quest.com/assets/plugins/swiper-bundle.min.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "6205"
+   },
+   "https://morocco-quest.com/assets/plugins/daterangepicker.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "1999"
+   },
+   "https://morocco-quest.com/assets/css/home.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "823"
+   },
+   "https://morocco-quest.com/assets/css/about.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "856"
+   },
+   "https://morocco-quest.com/assets/css/new_style.css": {
+    "status": 200,
+    "type": "stylesheet",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/css",
+    "cl": "746"
+   },
+   "https://morocco-quest.com/assets/img/logo-white.bg.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "12898"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide-white.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "8308"
+   },
+   "https://morocco-quest.com/assets/img/logo-bg-wide.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "9936"
+   },
+   "https://morocco-quest.com/public/storage/images/blogs/7b.jpg": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/jpeg",
+    "cl": "102257"
+   },
+   "https://morocco-quest.com/assets/img/icons/ballon-sclation.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "3142"
+   },
+   "https://morocco-quest.com/assets/img/blog/mounir-akajia-morocco-quest-admin-main-blog-author.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "11658"
+   },
+   "https://morocco-quest.com/assets/img/icons/svg-blog-details-quote-icon-1-1.svg": {
+    "status": 200,
+    "type": "image",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/svg+xml",
+    "cl": "568"
+   },
+   "https://morocco-quest.com/assets/img/icons/cloud.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "2620"
+   },
+   "https://morocco-quest.com/assets/img/Desert-Camp-Morocco-Sunset-View-Lanterns-Palm-Trees.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "1206"
+   },
+   "https://morocco-quest.com/assets/img/Luxury-Dinner-Setup-Wedding-Morocco-Outdoor-Event.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "1578"
+   },
+   "https://morocco-quest.com/assets/img/Moroccan-Gate-Fes-Tourists-Decorative-Architecture.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "1806"
+   },
+   "https://morocco-quest.com/assets/img/Moroccan-Palace-Restaurant-Elegant-Dining-Setup.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "2490"
+   },
+   "https://morocco-quest.com/assets/img/Moroccan-Riad-Pool-Night-View-Arch-Design.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "2516"
+   },
+   "https://morocco-quest.com/assets/img/Traditional-Moroccan-Dining-Event-Outdoor-Lanterns.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "2664"
+   },
+   "https://www.gravatar.com/avatar/04e5b02b7ff42587f334f7f5d972e0d5?s=80&d=404": {
+    "status": 404,
+    "type": "image",
+    "ce": null,
+    "cc": "max-age=300",
+    "ct": "text/html; charset=utf-8",
+    "cl": "13"
+   },
+   "https://morocco-quest.com/assets/js/ScrollToPlugin.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "1987"
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-700.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/SplitText.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7356"
+   },
+   "https://morocco-quest.com/assets/js/main.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "7157"
+   },
+   "https://morocco-quest.com/assets/fonts/abril-fatface-v25-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "13186"
+   },
+   "https://morocco-quest.com/assets/js/daterangepicker.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9883"
+   },
+   "https://morocco-quest.com/assets/js/jquery.magnific-popup.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": "9204"
+   },
+   "https://morocco-quest.com/assets/js/jquery-ui.custom.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/moment.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/ScrollTrigger.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/fonts/rubik-v31-latin-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/gsap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/bootstrap.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/vendor/jquery-3.6.0.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/js/swiper-bundle.min.js": {
+    "status": 200,
+    "type": "script",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "text/javascript",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/plugins/bootstrap-icons/fonts/bootstrap-icons-subset.woff2?v=20260929": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": "703"
+   },
+   "https://morocco-quest.com/assets/img/moroccan-souk-woman-seller-market-life-fes.webp": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/webp",
+    "cl": "135874"
+   },
+   "https://www.googletagmanager.com/gtm.js?id=GTM-WVCGDJ98": {
+    "status": 200,
+    "type": "script",
+    "ce": "zstd",
+    "cc": "private, max-age=900",
+    "ct": "application/javascript; charset=UTF-8",
+    "cl": "118568"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-style1-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "49156"
+   },
+   "https://morocco-quest.com/assets/img/footer/footer-cta-bg.png": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "image/png",
+    "cl": "31738"
+   },
+   "https://morocco-quest.com/csrf-refresh": {
+    "status": 200,
+    "type": "fetch",
+    "ce": "gzip",
+    "cc": "no-store, private, max-age=604800",
+    "ct": "text/plain; charset=UTF-8",
+    "cl": "60"
+   },
+   "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtm.init&eid=2&h=Ag&z=0": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": null,
+    "ct": "text/html",
+    "cl": "0"
+   },
+   "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtm.js&eid=3&h=Ag&z=0": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": null,
+    "ct": "text/html",
+    "cl": "0"
+   },
+   "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtag.config&eid=5&h=Ag&z=0": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": null,
+    "ct": "text/html",
+    "cl": "0"
+   },
+   "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=*&eid=6&h=Ag&z=0": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": null,
+    "ct": "text/html",
+    "cl": "0"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-brands-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtm.dom&eid=7&h=Ag&z=0": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": null,
+    "ct": "text/html",
+    "cl": "0"
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-solid-900.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-regular-400.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://morocco-quest.com/assets/webfonts/fa-light-300.woff2": {
+    "status": 200,
+    "type": "font",
+    "ce": "gzip",
+    "cc": "public, max-age=31536000, immutable",
+    "ct": "font/woff2",
+    "cl": null
+   },
+   "https://www.googletagmanager.com/a?id=GTM-WVCGDJ98&v=3&t=t&pid=1899897794&gtm=45He6ad1v9236060320za200zd9236060320xf1&cv=2&rv=6ad1&tc=0&tag_exp=100940059~115616985~115938466~115938468~118897920~118897930~120385422~120420415~120469145~120469153~121246026~121246034&es=1&e=gtm.load&eid=8&h=Ag&z=0": {
+    "status": 200,
+    "type": "image",
+    "ce": null,
+    "cc": null,
+    "ct": "text/html",
+    "cl": "0"
+   }
+  },
+  "n": 60
+ }
+]

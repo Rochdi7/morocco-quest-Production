@@ -1,0 +1,24 @@
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://morocco-quest.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Morocco Tours",
+   "item": "https://morocco-quest.com/tours"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "5-Day Marrakech Luxury City Break – Gardens, Culture & Relaxation",
+   "item": "https://morocco-quest.com/tours/5-day-marrakech-luxury-city-break-gardens-culture-relaxation"
+  }
+ ]
+}

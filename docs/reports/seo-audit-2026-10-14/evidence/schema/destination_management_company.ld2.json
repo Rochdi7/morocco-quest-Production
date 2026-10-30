@@ -1,0 +1,29 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "serviceType": "Destination Management Company Services",
+ "name": "Destination Management Company Services — Morocco Quest DMC",
+ "description": "Morocco Quest operates as a Destination Management Company in Morocco, providing ground logistics, venue and accommodation sourcing, activity programming and on-site management for event agencies, corporations and travel operators.",
+ "provider": {
+  "@id": "https://morocco-quest.com#organization"
+ },
+ "areaServed": [
+  {
+   "@type": "City",
+   "name": "Marrakech"
+  },
+  {
+   "@type": "City",
+   "name": "Casablanca"
+  },
+  {
+   "@type": "City",
+   "name": "Rabat"
+  },
+  {
+   "@type": "Country",
+   "name": "Morocco"
+  }
+ ],
+ "url": "https://morocco-quest.com/destination-management-company"
+}

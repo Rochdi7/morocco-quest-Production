@@ -1,0 +1,222 @@
+{
+ "/": {
+  "url": "https://morocco-quest.com/",
+  "raw": {
+   "title": "Private Morocco Tours & Sahara Desert Trips | Morocco Quest",
+   "desc": "Private Morocco tours, Sahara desert trips and luxury guided tours from Marrakech, planned by a licensed local agency. Tailor-made itineraries, free quote.",
+   "canonical": "https://morocco-quest.com",
+   "h1": [
+    "Morocco Tours & Private Sahara Desert Trips from Marrakech"
+   ],
+   "internal_links": 66,
+   "jsonld_blocks": 2,
+   "words": 753
+  },
+  "load_s": 47.6,
+  "preloader_visible_after_load+1s": false,
+  "rendered": {
+   "title": "Private Morocco Tours & Sahara Desert Trips | Morocco Quest",
+   "desc": "Private Morocco tours, Sahara desert trips and luxury guided tours from Marrakech, planned by a licensed local agency. Tailor-made itineraries, free quote.",
+   "canonical": "https://morocco-quest.com",
+   "h1": [
+    "Morocco Tours & Private Sahara Desert Trips from Marrakech"
+   ],
+   "internal_links": 66,
+   "jsonld_blocks": 2,
+   "words": 782
+  },
+  "overflow_px": 0,
+  "small_tap_targets": 1,
+  "tel_links": 2,
+  "whatsapp_links": 1,
+  "forms": 3,
+  "above_fold_text": {
+   "h1_top": 271,
+   "h1_visible": true
+  },
+  "console_errors": [],
+  "failed_requests": []
+ },
+ "/dmc-marrakech": {
+  "url": "https://morocco-quest.com/dmc-marrakech",
+  "raw": {
+   "title": "Morocco DMC Marrakech | MICE & Incentive Travel",
+   "desc": "Morocco DMC for travel agents, tour operators and MICE planners. Group tours, team building and incentives across Marrakech and Morocco.",
+   "canonical": "https://morocco-quest.com/dmc-marrakech",
+   "h1": [
+    "Morocco DMC & DMC Marrakech – Destination Management & MICE"
+   ],
+   "internal_links": 38,
+   "jsonld_blocks": 5,
+   "words": 3877
+  },
+  "load_s": 1.8,
+  "preloader_visible_after_load+1s": true,
+  "rendered": {
+   "title": "Morocco DMC Marrakech | MICE & Incentive Travel",
+   "desc": "Morocco DMC for travel agents, tour operators and MICE planners. Group tours, team building and incentives across Marrakech and Morocco.",
+   "canonical": "https://morocco-quest.com/dmc-marrakech",
+   "h1": [
+    "Morocco DMC & DMC Marrakech – Destination Management & MICE"
+   ],
+   "internal_links": 38,
+   "jsonld_blocks": 5,
+   "words": 4013
+  },
+  "overflow_px": 0,
+  "small_tap_targets": 3,
+  "tel_links": 4,
+  "whatsapp_links": 1,
+  "forms": 3,
+  "above_fold_text": {
+   "h1_top": 169,
+   "h1_visible": true
+  },
+  "console_errors": [],
+  "failed_requests": []
+ },
+ "/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour": {
+  "url": "https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour",
+  "raw": {
+   "title": "5-Day Sahara Desert Tour from Marrakech | Morocco Quest",
+   "desc": "A 5-day luxury Sahara desert tour from Marrakech to the Erg Chebbi dunes of Merzouga: private 4x4, a camel ride and a luxury desert camp.",
+   "canonical": "https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour",
+   "h1": [
+    "5-Day Marrakech & Sahara Luxury Desert Discovery – Adventure Tour"
+   ],
+   "internal_links": 37,
+   "jsonld_blocks": 4,
+   "words": 1727
+  },
+  "load_s": 2.1,
+  "preloader_visible_after_load+1s": false,
+  "rendered": {
+   "title": "5-Day Sahara Desert Tour from Marrakech | Morocco Quest",
+   "desc": "A 5-day luxury Sahara desert tour from Marrakech to the Erg Chebbi dunes of Merzouga: private 4x4, a camel ride and a luxury desert camp.",
+   "canonical": "https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour",
+   "h1": [
+    "5-Day Marrakech & Sahara Luxury Desert Discovery – Adventure Tour"
+   ],
+   "internal_links": 37,
+   "jsonld_blocks": 4,
+   "words": 1863
+  },
+  "overflow_px": 0,
+  "small_tap_targets": 8,
+  "tel_links": 2,
+  "whatsapp_links": 2,
+  "forms": 3,
+  "above_fold_text": {
+   "h1_top": 169,
+   "h1_visible": true
+  },
+  "console_errors": [],
+  "failed_requests": []
+ },
+ "/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast": {
+  "url": "https://morocco-quest.com/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast",
+  "raw": {
+   "title": "Hot Air Balloon Marrakech: Sunrise Ride | Morocco Quest",
+   "desc": "Book a hot air balloon ride over Marrakech at sunrise, with views of the Atlas Mountains and a traditional Berber breakfast after landing.",
+   "canonical": "https://morocco-quest.com/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast",
+   "h1": [
+    "Magical Hot Air Balloon Ride Over Marrakech with Berber Breakfast"
+   ],
+   "internal_links": 33,
+   "jsonld_blocks": 4,
+   "words": 709
+  },
+  "load_s": 10.4,
+  "preloader_visible_after_load+1s": false,
+  "rendered": {
+   "title": "Hot Air Balloon Marrakech: Sunrise Ride | Morocco Quest",
+   "desc": "Book a hot air balloon ride over Marrakech at sunrise, with views of the Atlas Mountains and a traditional Berber breakfast after landing.",
+   "canonical": "https://morocco-quest.com/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast",
+   "h1": [
+    "Magical Hot Air Balloon Ride Over Marrakech with Berber Breakfast"
+   ],
+   "internal_links": 33,
+   "jsonld_blocks": 4,
+   "words": 845
+  },
+  "overflow_px": 0,
+  "small_tap_targets": 7,
+  "tel_links": 2,
+  "whatsapp_links": 2,
+  "forms": 3,
+  "above_fold_text": {
+   "h1_top": 169,
+   "h1_visible": true
+  },
+  "console_errors": [],
+  "failed_requests": []
+ },
+ "/blog/luxury-sahara-desert-tour-morocco": {
+  "url": "https://morocco-quest.com/blog/luxury-sahara-desert-tour-morocco",
+  "raw": {
+   "title": "Luxury Sahara Desert Tour in Morocco | Morocco Quest",
+   "desc": "Plan a luxury Sahara desert tour in Morocco with private transport, desert camps, dunes, best routes and expert local travel advice.",
+   "canonical": "https://morocco-quest.com/blog/luxury-sahara-desert-tour-morocco",
+   "h1": [
+    "The Ultimate Luxury Sahara Desert Tour in Morocco: What to Expect"
+   ],
+   "internal_links": 145,
+   "jsonld_blocks": 4,
+   "words": 1564
+  },
+  "load_s": 2.9,
+  "preloader_visible_after_load+1s": false,
+  "rendered": {
+   "title": "Luxury Sahara Desert Tour in Morocco | Morocco Quest",
+   "desc": "Plan a luxury Sahara desert tour in Morocco with private transport, desert camps, dunes, best routes and expert local travel advice.",
+   "canonical": "https://morocco-quest.com/blog/luxury-sahara-desert-tour-morocco",
+   "h1": [
+    "The Ultimate Luxury Sahara Desert Tour in Morocco: What to Expect"
+   ],
+   "internal_links": 145,
+   "jsonld_blocks": 4,
+   "words": 1700
+  },
+  "overflow_px": 0,
+  "small_tap_targets": 2,
+  "tel_links": 2,
+  "whatsapp_links": 1,
+  "forms": 4,
+  "above_fold_text": {
+   "h1_top": 169,
+   "h1_visible": true
+  },
+  "console_errors": [],
+  "failed_requests": []
+ },
+ "mobile_menu_links": [
+  [
+   "",
+   "https://morocco-quest.com"
+  ],
+  [
+   "Multi-Day Tours",
+   "https://morocco-quest.com/tours/type/multi-day"
+  ],
+  [
+   "One-Day Tours",
+   "https://morocco-quest.com/experiences"
+  ],
+  [
+   "Blog",
+   "https://morocco-quest.com/blog"
+  ],
+  [
+   "DMC",
+   "https://morocco-quest.com/dmc-marrakech"
+  ],
+  [
+   "Info Hub",
+   "https://morocco-quest.com/about"
+  ],
+  [
+   "Contact",
+   "https://morocco-quest.com/contact"
+  ]
+ ]
+}

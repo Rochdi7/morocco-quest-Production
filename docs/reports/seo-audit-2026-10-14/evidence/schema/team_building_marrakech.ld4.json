@@ -1,0 +1,46 @@
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What happens to the programme if the weather turns on a desert or mountain day?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Every itinerary with an Agafay Desert or Atlas Mountain component has a covered or indoor backup built in before you arrive — usually a riad-based workshop or a covered camp activity — so a sandstorm or a cold snap in the mountains doesn't sink the day."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is insurance included for activities like quad biking or 4x4 rallies?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Activity-specific insurance and licensed operators are arranged for every physical activity we book, and safety briefings are given in your delegates' working language before anyone gets on a quad or into a rally vehicle."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What's the largest group you can run a programme for?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We've handled incentive trips above 250 people by splitting the group into activity waves — half doing the desert rally while the other half does the medina rally, then swapping — so no one is standing around waiting for a vehicle or a guide."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you handle dietary and cultural requirements across a large group?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We collect dietary and cultural requirements during planning and brief every caterer accordingly, whether that's a desert camp dinner or a riad cooking workshop, covering halal, vegetarian, vegan and allergen needs."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How far ahead should we book a team building or incentive programme?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "For groups above 50 people, plan on 3 to 5 months to lock accommodation blocks and activity providers, particularly across March to May and September to November. Smaller groups can often be confirmed within 4 to 6 weeks."
+   }
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What services does a DMC in Marrakech provide?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A destination management company handles every on-the-ground element of a programme: venue and hotel sourcing, transfers, guides, activities, dining, event production, staffing and 24/7 support. Morocco Quest acts as your local operations desk, contracting suppliers on your behalf and delivering under your brand."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How far in advance should we book a MICE programme?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "For groups of 20–60 we recommend 3–6 months; for conferences and incentives of 100+ delegates, 6–12 months to secure the best hotel blocks and exclusive-use venues, especially in peak season (March–May and October–December). Short-notice requests are welcome — we regularly deliver quality programmes on 4–6 weeks' notice."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is included in a MICE package?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Typically: accommodation blocks, airport and inter-city transfers, meeting venues, AV and production, guided tours and activities, gala dinners, on-site coordinators and 24/7 support. Every package is line-itemised so you can include or exclude any element."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you accommodate dietary restrictions?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Moroccan cuisine is naturally halal and largely vegetarian-friendly. We routinely cater for vegan, gluten-free, lactose-free, nut-allergy and kosher-style requirements, and we brief every venue and chef in writing before arrival."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the minimum group size?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "There is none. We operate private FIT travel for couples and families as well as groups of 500+. Group rates and exclusive-use venues typically become cost-effective from around 10 participants."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you offer multi-city itineraries?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Absolutely. Marrakech is the ideal base, but we design programmes across Fes, Casablanca, Rabat, Tangier, Chefchaouen, Essaouira, Agadir and the Sahara. Inter-city transfers, domestic flights and hotel changes are managed as one seamless programme."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do you ensure safety and security?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We are a licensed Moroccan tour operator with full liability insurance. Each programme includes a risk assessment, vetted transport with licensed drivers, on-site bilingual staff, medical and emergency contacts, and contingency plans for weather or venue changes. Marrakech has a dedicated tourist police unit."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What payment terms do you offer?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Standard terms are a deposit on contract signature, a second instalment before arrival and balance on completion; exact percentages depend on programme size and supplier terms. We invoice in EUR, USD, GBP or MAD and accept bank transfer and major cards. Trade accounts with credit terms are available for established partners."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you provide references from previous clients?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. On request, we share references from agencies, operators and corporate clients in your market, under NDA where required."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is your cancellation policy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We mirror the cancellation terms of our contracted suppliers and pass them through transparently in your quote, with clear release dates for hotel blocks. Where possible we negotiate flexible terms — particularly for early bookings — and we advise on travel insurance for the group."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you offer virtual site visits or pre-trip consultations?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We offer video consultations, virtual walk-throughs of hotels, riads and venues, and can host in-person site inspections for planners visiting Marrakech. Site-inspection costs are typically credited back on confirmed programmes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do you handle logistics for large groups (100+ participants)?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "With planning and staffing. For large delegations we run multi-hotel room blocks, staggered airport arrivals, colour-coded transfer manifests, hospitality desks, parallel activity tracks and a dedicated operations team on site. We have delivered programmes for 400+ delegates in Marrakech."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What languages do your guides speak?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "English, French, Spanish and Arabic as standard. German, Italian, Portuguese, Russian, Chinese and Japanese-speaking guides are available on request."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Are there seasonal considerations for Marrakech?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Spring (March–May) and autumn (October–December) offer ideal temperatures for outdoor programmes. Summer (July–August) is hot — we schedule activities early and late and lean on pools, riads and the cooler Atlas. Winter is mild and excellent value, with Sahara nights cold but spectacular. Ramadan dates shift each year and affect some venues' dining hours — we plan around them."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do you customise experiences for different industries or interests?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Every programme starts with your brief: objectives, audience profile, budget and must-haves. From there we adapt content — CSR and community projects for purpose-led companies, design and craft tours for creative industries, wellness retreats for healthcare and tech teams, high-adrenaline formats for sales incentives. Nothing is off the shelf."
+   }
+  }
+ ]
+}

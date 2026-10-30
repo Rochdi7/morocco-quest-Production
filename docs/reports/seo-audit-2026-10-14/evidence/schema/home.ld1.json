@@ -1,0 +1,86 @@
+{
+ "@context": "https://schema.org",
+ "@type": "TravelAgency",
+ "@id": "https://morocco-quest.com#organization",
+ "name": "Morocco Quest",
+ "alternateName": "Morocco Quest Tours & Travel",
+ "description": "Morocco Quest is a licensed Moroccan travel agency offering private morocco tours, sahara desert tours from Marrakech, luxury desert camps, small group tours, and tailor-made morocco tour packages.",
+ "url": "https://morocco-quest.com",
+ "logo": "https://morocco-quest.com/assets/img/logo-bg-wide.webp",
+ "image": "https://morocco-quest.com/assets/img/ait-benhaddou-morocco-travel-hero-banner.webp",
+ "priceRange": "$$-$$$",
+ "telephone": "+212-654-069-718",
+ "email": "sales@morocco-quest.com",
+ "foundingDate": "2022",
+ "hasMap": "https://maps.app.goo.gl/FtVJocKLhRVvvF377",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Khalid Ibn Al Walid Street, Gueliz",
+  "postalCode": "40000",
+  "addressLocality": "Marrakech",
+  "addressRegion": "Marrakech-Safi",
+  "addressCountry": "MA"
+ },
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": "31.6343547",
+  "longitude": "-8.00426"
+ },
+ "areaServed": [
+  {
+   "@type": "Country",
+   "name": "Morocco"
+  },
+  {
+   "@type": "City",
+   "name": "Marrakech"
+  },
+  {
+   "@type": "City",
+   "name": "Fes"
+  },
+  {
+   "@type": "City",
+   "name": "Casablanca"
+  },
+  {
+   "@type": "Place",
+   "name": "Sahara Desert"
+  },
+  {
+   "@type": "Place",
+   "name": "Merzouga"
+  }
+ ],
+ "knowsAbout": [
+  "morocco tours",
+  "private morocco tours",
+  "sahara desert tours morocco",
+  "morocco desert tours from marrakech",
+  "morocco tour package",
+  "small group tours morocco",
+  "luxury morocco tours",
+  "morocco guided tours"
+ ],
+ "sameAs": [
+  "https://www.facebook.com/profile.php?id=61578772746041",
+  "https://www.instagram.com/moroccoquestdmc/",
+  "https://www.tripadvisor.com/Attraction_Review-g293734-d33367694-Reviews-Morocco_Quest_Dmc-Marrakech_Marrakech_Safi.html"
+ ],
+ "contactPoint": {
+  "@type": "ContactPoint",
+  "telephone": "+212-654-069-718",
+  "contactType": "customer service",
+  "areaServed": [
+   "MA",
+   "US",
+   "EU",
+   "UK"
+  ],
+  "availableLanguage": [
+   "English",
+   "French",
+   "Spanish"
+  ]
+ }
+}

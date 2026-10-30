@@ -1,0 +1,50 @@
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "City Tours in Morocco",
+ "numberOfItems": 7,
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Agadir Half-Day City Tour | Private Coastal & Cultural Experience",
+   "url": "https://morocco-quest.com/activities/agadir-half-day-city-tour-private-coastal-cultural-experience"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Casablanca Half-Day City Tour | Private Cultural & Coastal Experience",
+   "url": "https://morocco-quest.com/activities/casablanca-half-day-city-tour-private-cultural-coastal-experience"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Fez Full-Day City Tour | Private Cultural Journey Through Morocco’s Spiritual Capital",
+   "url": "https://morocco-quest.com/activities/fez-full-day-city-tour-private-cultural-journey-through-moroccos-spiritual-capital"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "name": "Chefchaouen Full-Day City Tour | Private Blue City Walking Experience",
+   "url": "https://morocco-quest.com/activities/chefchaouen-full-day-city-tour-private-blue-city-walking-experience"
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "name": "Tangier Full-Day City Tour | Private Cultural Journey at the Gateway of Africa",
+   "url": "https://morocco-quest.com/activities/tangier-full-day-city-tour-private-cultural-journey-at-the-gateway-of-africa"
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "name": "Rabat Unveiled: A Journey Through Morocco’s Regal Capital",
+   "url": "https://morocco-quest.com/activities/rabat-unveiled-a-journey-through-moroccos-regal-capital"
+  },
+  {
+   "@type": "ListItem",
+   "position": 7,
+   "name": "Marrakech Medina Hidden Gems Tour – Discover Authentic Local Life with a Private Guide",
+   "url": "https://morocco-quest.com/activities/marrakech-medina-hidden-gems-tour-discover-authentic-local-life-with-a-private-guide"
+  }
+ ]
+}

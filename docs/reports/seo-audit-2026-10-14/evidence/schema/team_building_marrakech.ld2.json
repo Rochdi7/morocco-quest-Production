@@ -1,0 +1,29 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "serviceType": "Team Building and Incentive Travel",
+ "name": "Team Building & Incentive Travel — Morocco Quest DMC",
+ "description": "Morocco Quest designs and delivers team building activities and incentive travel programmes in Marrakech and across Morocco, from desert 4x4 rallies to CSR days with local cooperatives.",
+ "provider": {
+  "@id": "https://morocco-quest.com#organization"
+ },
+ "areaServed": [
+  {
+   "@type": "City",
+   "name": "Marrakech"
+  },
+  {
+   "@type": "City",
+   "name": "Casablanca"
+  },
+  {
+   "@type": "City",
+   "name": "Rabat"
+  },
+  {
+   "@type": "Country",
+   "name": "Morocco"
+  }
+ ],
+ "url": "https://morocco-quest.com/team-building-marrakech"
+}

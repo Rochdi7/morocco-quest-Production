@@ -1,0 +1,182 @@
+pages 185 status {200: 178, 404: 7} sitemap 84 queue_left 0
+html200 178 indexable(self-canon,no noindex) 117
+
+== non-200 ==
+404 https://morocco-quest.com/tag/agafay-desert -> None | inlinks: 110 | from e.g. ['https://morocco-quest.com/blog', 'https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco']
+404 https://morocco-quest.com/tag/moroccan-music -> None | inlinks: 110 | from e.g. ['https://morocco-quest.com/blog', 'https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco']
+404 https://morocco-quest.com/tag/morocco-travel-blog -> None | inlinks: 110 | from e.g. ['https://morocco-quest.com/blog', 'https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco']
+404 https://morocco-quest.com/tag/spiritual-traditions -> None | inlinks: 110 | from e.g. ['https://morocco-quest.com/blog', 'https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco']
+404 https://morocco-quest.com/tag/team-building-activities -> None | inlinks: 110 | from e.g. ['https://morocco-quest.com/blog', 'https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco']
+404 https://morocco-quest.com/tag/unique-morocco-tours -> None | inlinks: 110 | from e.g. ['https://morocco-quest.com/blog', 'https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco']
+404 https://morocco-quest.com/tag/yearroundtravel -> None | inlinks: 110 | from e.g. ['https://morocco-quest.com/blog', 'https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco']
+
+== sitemap URLs not 200/indexable ==
+200 https://morocco-quest.com/ robots INDEX,FOLLOW canon https://morocco-quest.com
+
+== indexable not in sitemap ==
+https://morocco-quest.com
+https://morocco-quest.com/category/adventure-travel
+https://morocco-quest.com/category/bucket-list-experiences
+https://morocco-quest.com/category/corporate-events
+https://morocco-quest.com/category/cultural-experiences
+https://morocco-quest.com/category/cultural-journeys
+https://morocco-quest.com/category/culture
+https://morocco-quest.com/category/desert-tours
+https://morocco-quest.com/category/destination-management
+https://morocco-quest.com/category/essaouira
+https://morocco-quest.com/category/event-planning
+https://morocco-quest.com/category/events-festivals
+https://morocco-quest.com/category/experiential-travel
+https://morocco-quest.com/category/incentive-travel
+https://morocco-quest.com/category/incentive-trips
+https://morocco-quest.com/category/local-expert-tips
+https://morocco-quest.com/category/luxury-travel
+https://morocco-quest.com/category/marrakech
+https://morocco-quest.com/category/marrakech-agafay
+https://morocco-quest.com/category/mice-corporate
+https://morocco-quest.com/category/mice-travel
+https://morocco-quest.com/category/morocco-travel
+https://morocco-quest.com/category/morocco-travel-1
+https://morocco-quest.com/category/museums
+https://morocco-quest.com/category/music
+https://morocco-quest.com/category/seasonal-travel
+https://morocco-quest.com/category/smart-travel
+https://morocco-quest.com/category/space-events
+https://morocco-quest.com/category/sustainable-local-travel
+https://morocco-quest.com/category/total-solar-eclipse-2027
+https://morocco-quest.com/category/travel-avice
+https://morocco-quest.com/category/travel-destinations
+https://morocco-quest.com/category/travel-tips
+https://morocco-quest.com/category/travel-tips-guides
+
+== canonical != url ==
+https://morocco-quest.com/ -> https://morocco-quest.com | robots INDEX,FOLLOW
+
+== duplicate title among indexable ==
+  'morocco travel — morocco travel guides & articles | morocco quest blog' ['https://morocco-quest.com/category/morocco-travel', 'https://morocco-quest.com/category/morocco-travel-1']
+
+== duplicate desc among indexable ==
+  'browse all morocco travel articles on the morocco quest travel blog — in-depth guides and ' ['https://morocco-quest.com/category/morocco-travel', 'https://morocco-quest.com/category/morocco-travel-1']
+
+== duplicate h1 among indexable ==
+  'things to do in morocco & marrakech' ['https://morocco-quest.com/experiences', 'https://morocco-quest.com/activities']
+  'morocco travel: morocco travel articles' ['https://morocco-quest.com/category/morocco-travel', 'https://morocco-quest.com/category/morocco-travel-1']
+
+== duplicate text_hash among indexable ==
+
+== H1 count != 1 ==
+
+== missing title/desc ==
+
+== thin (<300 words main) indexable ==
+91 https://morocco-quest.com/activities/category/wellness-experiences
+92 https://morocco-quest.com/activities/category/local-experiences
+105 https://morocco-quest.com/activities/category/outdoor-activities
+152 https://morocco-quest.com/activities/category/food-culinary-tours
+165 https://morocco-quest.com/activities
+177 https://morocco-quest.com/experiences
+186 https://morocco-quest.com/destinations
+186 https://morocco-quest.com/destinations/essaouira
+189 https://morocco-quest.com/destinations/casablanca
+190 https://morocco-quest.com/destinations/chefchaouen
+221 https://morocco-quest.com/destinations/tangier
+222 https://morocco-quest.com/destinations/fez
+222 https://morocco-quest.com/tours/type/Art%20Tours
+222 https://morocco-quest.com/activities/category/city-tours
+227 https://morocco-quest.com/activities/category/day-trips
+239 https://morocco-quest.com/tours/type/Garden%20Tours
+241 https://morocco-quest.com/tours/type/Classical%20Tours
+253 https://morocco-quest.com/destinations/rabat
+271 https://morocco-quest.com/contact
+
+== title length >65 or <30; desc >160 or <70 ==
+29 112 https://morocco-quest.com/cookie-policy | Cookie Policy | Morocco Quest
+72 114 https://morocco-quest.com/category/adventure-travel | Adventure Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+79 121 https://morocco-quest.com/category/bucket-list-experiences | Bucket List Experiences — Morocco Travel Guides & Articles | Morocco Quest Blog
+72 114 https://morocco-quest.com/category/corporate-events | Corporate Events — Morocco Travel Guides & Articles | Morocco Quest Blog
+76 118 https://morocco-quest.com/category/cultural-experiences | Cultural Experiences — Morocco Travel Guides & Articles | Morocco Quest Blog
+73 115 https://morocco-quest.com/category/cultural-journeys | Cultural Journeys — Morocco Travel Guides & Articles | Morocco Quest Blog
+68 110 https://morocco-quest.com/category/desert-tours | Desert Tours — Morocco Travel Guides & Articles | Morocco Quest Blog
+78 120 https://morocco-quest.com/category/destination-management | Destination Management — Morocco Travel Guides & Articles | Morocco Quest Blog
+70 112 https://morocco-quest.com/category/event-planning | Event Planning — Morocco Travel Guides & Articles | Morocco Quest Blog
+74 116 https://morocco-quest.com/category/events-festivals | Events & Festivals — Morocco Travel Guides & Articles | Morocco Quest Blog
+75 117 https://morocco-quest.com/category/experiential-travel | Experiential Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+73 115 https://morocco-quest.com/category/incentive-travel | Incentive Travel  — Morocco Travel Guides & Articles | Morocco Quest Blog
+71 113 https://morocco-quest.com/category/incentive-trips | Incentive Trips — Morocco Travel Guides & Articles | Morocco Quest Blog
+73 115 https://morocco-quest.com/category/local-expert-tips | Local Expert Tips — Morocco Travel Guides & Articles | Morocco Quest Blog
+69 111 https://morocco-quest.com/category/luxury-travel | Luxury Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+74 116 https://morocco-quest.com/category/marrakech-agafay | Marrakech & Agafay — Morocco Travel Guides & Articles | Morocco Quest Blog
+73 115 https://morocco-quest.com/category/mice-corporate | MICE & Corporate  — Morocco Travel Guides & Articles | Morocco Quest Blog
+67 109 https://morocco-quest.com/category/mice-travel | MICE Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+70 112 https://morocco-quest.com/category/morocco-travel | Morocco Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+70 112 https://morocco-quest.com/category/morocco-travel-1 | Morocco Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+71 113 https://morocco-quest.com/category/seasonal-travel | Seasonal Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+68 110 https://morocco-quest.com/category/smart-travel | Smart Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+68 110 https://morocco-quest.com/category/space-events | Space Events — Morocco Travel Guides & Articles | Morocco Quest Blog
+82 124 https://morocco-quest.com/category/sustainable-local-travel | Sustainable & Local Travel — Morocco Travel Guides & Articles | Morocco Quest Blog
+80 122 https://morocco-quest.com/category/total-solar-eclipse-2027 | Total Solar Eclipse 2027 — Morocco Travel Guides & Articles | Morocco Quest Blog
+68 110 https://morocco-quest.com/category/travel-avice | Travel Avice — Morocco Travel Guides & Articles | Morocco Quest Blog
+75 117 https://morocco-quest.com/category/travel-destinations | Travel Destinations — Morocco Travel Guides & Articles | Morocco Quest Blog
+67 109 https://morocco-quest.com/category/travel-tips | Travel Tips — Morocco Travel Guides & Articles | Morocco Quest Blog
+76 118 https://morocco-quest.com/category/travel-tips-guides | Travel Tips & Guides — Morocco Travel Guides & Articles | Morocco Quest Blog
+
+== img no alt ==
+2 / 26 https://morocco-quest.com/destination-management-company
+2 / 24 https://morocco-quest.com/meetings-conventions-management
+2 / 24 https://morocco-quest.com/professional-congress-organization
+2 / 25 https://morocco-quest.com/team-building-marrakech
+2 / 24 https://morocco-quest.com/events-production-morocco
+2 / 24 https://morocco-quest.com/sustainable-events-morocco
+2 / 24 https://morocco-quest.com/360-event-solutions
+
+== inlinks for indexable (unique source pages), lowest 40 ==
+1 https://morocco-quest.com/activities
+1 https://morocco-quest.com/activities/a-day-in-the-high-atlas-hike-tea-ritual-berber-hospitality
+1 https://morocco-quest.com/activities/marrakech-medina-hidden-gems-tour-discover-authentic-local-life-with-a-private-guide
+1 https://morocco-quest.com/activities/atlas-gardens-aromatic-delights-a-day-trip-from-marrakech
+1 https://morocco-quest.com/activities/rabat-unveiled-a-journey-through-moroccos-regal-capital
+1 https://morocco-quest.com/activities/a-day-in-the-blue-pearl-chefchaouen-day-trip-from-rabat
+1 https://morocco-quest.com/activities/volubilis-meknes-a-timeless-escape-from-fes
+1 https://morocco-quest.com/activities/a-taste-of-rural-morocco-day-trip-to-had-el-brachoua
+1 https://morocco-quest.com/activities/moroccan-wellness-ritual-private-hammam-massage-experience-in-marrakech
+1 https://morocco-quest.com/activities/tangier-full-day-city-tour-private-cultural-journey-at-the-gateway-of-africa
+2 https://morocco-quest.com/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast
+2 https://morocco-quest.com/activities/marrakech-garden-trail-from-majestic-cacti-to-medina-secrets
+2 https://morocco-quest.com/destinations/casablanca
+2 https://morocco-quest.com/destinations/chefchaouen
+2 https://morocco-quest.com/destinations/essaouira
+3 https://morocco-quest.com/destinations/tangier
+3 https://morocco-quest.com/destinations/fez
+4 https://morocco-quest.com/activities/authentic-3-hour-moroccan-cooking-class-in-marrakech-morning-afternoon-sessions
+4 https://morocco-quest.com/activities/flavors-of-fez-a-culinary-journey-at-palais-amani
+4 https://morocco-quest.com/activities/flavours-of-rabat-a-culinary-walking-tour-of-the-medina
+4 https://morocco-quest.com/activities/atlas-gardens-day-trip-from-marrakech-private-botanical-escape
+4 https://morocco-quest.com/activities/chateau-roslane-day-trip-from-fez-private-prestige-wine-experience
+4 https://morocco-quest.com/activities/chefchaouen-full-day-city-tour-private-blue-city-walking-experience
+4 https://morocco-quest.com/destinations/rabat
+6 https://morocco-quest.com/tours/5-day-rabat-luxury-city-break-rich-history-local-flavors
+6 https://morocco-quest.com/destinations/marrakech
+7 https://morocco-quest.com/tours/5-day-tangier-luxury-city-break-art-culture-coastal-charms
+7 https://morocco-quest.com/activities/fez-full-day-city-tour-private-cultural-journey-through-moroccos-spiritual-capital
+8 https://morocco-quest.com/activities/essaouira-day-trip-from-marrakech-private-atlantic-coast-experience
+9 https://morocco-quest.com/tours/5-day-marrakech-luxury-city-break-gardens-culture-relaxation
+9 https://morocco-quest.com/tours/8-day-morocco-luxury-cultural-discovery-art-heritage-culinary-delights
+9 https://morocco-quest.com/activities/casablanca-half-day-city-tour-private-cultural-coastal-experience
+9 https://morocco-quest.com/blog/agafay-vs-sahara-choosing-your-moroccan-desert-experience
+9 https://morocco-quest.com/blog/the-gnawa-museum-marrakech-spiritual-music
+11 https://morocco-quest.com/blog/top-10-unforgettable-experiences-to-have-in-morocco
+12 https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour
+12 https://morocco-quest.com/blog/luxury-sahara-desert-tour-morocco
+15 https://morocco-quest.com/blog/craft-holidays-in-morocco-pottery-knitting-weaving-textile-workshops-you-can-join
+15 https://morocco-quest.com/blog/family-travel-in-morocco-safe-fun-educational-adventures-for-all-ages
+15 https://morocco-quest.com/blog/moroccos-must-see-festivals-and-moussems-in-2025-and-2026
+
+== lang/hreflang == Counter({'en': 178}) 0
+
+== jsonld types == Counter({'WebSite': 178, 'TravelAgency': 178, 'BreadcrumbList': 169, 'TouristTrip': 31, 'ItemList': 16, 'BlogPosting': 16, 'FAQPage': 9, 'Service': 8, 'TouristDestination': 7, 'ContactPage': 1})
+
+== param links found == []
+
+== external domains == [('www.facebook.com', 405), ('www.instagram.com', 389), ('twitter.com', 227), ('wa.me', 209), ('x.com', 179), ('codesommet.com', 178), ('visaguide.world', 178), ('www.acces-maroc.ma', 178), ('www.accuweather.com', 178), ('www.iatatravelcentre.com', 178), ('www.intrepidtravel.com', 178), ('www.power-plugs-sockets.com', 178), ('www.thebrokebackpacker.com', 178), ('www.travelinsurance.com', 178), ('www.who.int', 178), ('www.xe.com', 178), ('www.linkedin.com', 16), ('pinterest.com', 6), ('www.tiktok.com', 6), ('policies.google.com', 3), ('maps.app.goo.gl', 1), ('tools.google.com', 1), ('www.unesco.org', 1), ('www.visitmorocco.com', 1)]
+
+== slow pages >2500ms == [(3592, 'https://morocco-quest.com/professional-congress-organization'), (2963, 'https://morocco-quest.com/blog'), (2767, 'https://morocco-quest.com/tours/5-day-marrakech-sahara-luxury-desert-discovery-adventure-tour'), (2929, 'https://morocco-quest.com/tag/best-morocco-private-tour'), (2846, 'https://morocco-quest.com/tag/best-places-to-visit-in-morocco'), (3103, 'https://morocco-quest.com/tag/luxury-desert-tour-morocco'), (3882, 'https://morocco-quest.com/tag/seasonaltravel')]

@@ -1,0 +1,10 @@
+{
+ "@context": "https://schema.org",
+ "@type": "TouristDestination",
+ "name": "Marrakech",
+ "url": "https://morocco-quest.com/destinations/marrakech",
+ "containedInPlace": {
+  "@type": "Country",
+  "name": "Morocco"
+ }
+}

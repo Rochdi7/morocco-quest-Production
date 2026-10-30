@@ -1,0 +1,13 @@
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "@id": "https://morocco-quest.com#website",
+ "url": "https://morocco-quest.com",
+ "name": "Morocco Quest",
+ "inLanguage": "en",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://morocco-quest.com/search?query={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}

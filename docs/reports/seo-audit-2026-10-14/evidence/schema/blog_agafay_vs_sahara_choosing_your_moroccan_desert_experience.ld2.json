@@ -1,0 +1,27 @@
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "Agafay vs. Sahara: Choosing Your Moroccan Desert Experience",
+ "description": "Morocco offers not just one, but two distinct desert experiences — the rocky, moon-like Agafay Desert just outside Marrakech, and the iconic, golden dunes of the Sahara. Each offers its own magic, mood, and meaning. Whether you're seeking a quick luxury escape or a deep nomadic immersion, this guide...",
+ "image": "https://morocco-quest.com/storage/images/blogs/Cozy Afternoon at Agafay Camp.webp",
+ "author": {
+  "@type": "Person",
+  "name": "Mounir Akajia"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "@id": "https://morocco-quest.com#organization",
+  "name": "Morocco Quest",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://morocco-quest.com/assets/img/logo-bg-wide.webp"
+  }
+ },
+ "datePublished": "2025-06-12T18:03:00+00:00",
+ "dateModified": "2025-06-12T18:11:34+00:00",
+ "mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "https://morocco-quest.com/blog/agafay-vs-sahara-choosing-your-moroccan-desert-experience"
+ },
+ "url": "https://morocco-quest.com/blog/agafay-vs-sahara-choosing-your-moroccan-desert-experience"
+}

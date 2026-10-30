@@ -1,0 +1,50 @@
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Morocco Tour Destinations",
+ "numberOfItems": 7,
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Casablanca",
+   "url": "https://morocco-quest.com/destinations/casablanca"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Chefchaouen",
+   "url": "https://morocco-quest.com/destinations/chefchaouen"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Essaouira",
+   "url": "https://morocco-quest.com/destinations/essaouira"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "name": "Fez",
+   "url": "https://morocco-quest.com/destinations/fez"
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "name": "Marrakech",
+   "url": "https://morocco-quest.com/destinations/marrakech"
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "name": "Rabat",
+   "url": "https://morocco-quest.com/destinations/rabat"
+  },
+  {
+   "@type": "ListItem",
+   "position": 7,
+   "name": "Tangier",
+   "url": "https://morocco-quest.com/destinations/tangier"
+  }
+ ]
+}

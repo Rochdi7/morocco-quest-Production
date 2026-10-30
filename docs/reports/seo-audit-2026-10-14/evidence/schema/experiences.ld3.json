@@ -1,0 +1,44 @@
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Things to Do in Morocco",
+ "numberOfItems": 6,
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "City Tours",
+   "url": "https://morocco-quest.com/activities/category/city-tours"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Day Trips",
+   "url": "https://morocco-quest.com/activities/category/day-trips"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Food & Culinary Tours",
+   "url": "https://morocco-quest.com/activities/category/food-culinary-tours"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "name": "Local Experiences",
+   "url": "https://morocco-quest.com/activities/category/local-experiences"
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "name": "Outdoor Activities",
+   "url": "https://morocco-quest.com/activities/category/outdoor-activities"
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "name": "Wellness Experiences",
+   "url": "https://morocco-quest.com/activities/category/wellness-experiences"
+  }
+ ]
+}

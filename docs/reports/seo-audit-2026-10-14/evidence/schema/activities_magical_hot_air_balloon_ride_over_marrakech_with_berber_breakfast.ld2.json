@@ -1,0 +1,19 @@
+{
+ "@context": "https://schema.org",
+ "@type": "TouristTrip",
+ "name": "Magical Hot Air Balloon Ride Over Marrakech with Berber Breakfast",
+ "description": "Soar above the breathtaking landscapes of Marrakech on a magical hot air balloon ride at sunrise. Drift peacefully over palm groves, Berber villages, and the Atlas Mountains as the morning light paints the sky. After landing, enjoy a traditional Berber breakfast in a serene countryside setting befor...",
+ "url": "https://morocco-quest.com/activities/magical-hot-air-balloon-ride-over-marrakech-with-berber-breakfast",
+ "image": "https://morocco-quest.com/storage/images/activities/01JVZK08FSAA76S3JEG4GHP3W0.webp",
+ "touristType": [
+  "Cultural",
+  "Adventure",
+  "Day Trip"
+ ],
+ "provider": {
+  "@type": "TravelAgency",
+  "name": "Morocco Quest",
+  "url": "https://morocco-quest.com",
+  "@id": "https://morocco-quest.com#organization"
+ }
+}

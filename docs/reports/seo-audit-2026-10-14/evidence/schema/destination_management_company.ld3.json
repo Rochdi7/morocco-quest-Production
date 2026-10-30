@@ -1,0 +1,24 @@
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://morocco-quest.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "DMC",
+   "item": "https://morocco-quest.com/dmc-marrakech"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Destination Management Company",
+   "item": "https://morocco-quest.com/destination-management-company"
+  }
+ ]
+}

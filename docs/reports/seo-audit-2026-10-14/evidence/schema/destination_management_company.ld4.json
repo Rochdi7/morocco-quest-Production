@@ -1,0 +1,38 @@
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How does DMC pricing and net rates actually work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A DMC contracts hotels, venues and suppliers at net rates — pricing below what those suppliers would quote a walk-in client — then adds a management fee for sourcing, contracting and on-site delivery. A transparent DMC will show that fee separately rather than folding it invisibly into a single bundled number."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What licensing should I check before signing with a DMC in Morocco?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ask for the company's Moroccan tourism operator licence number and confirm it is current, and ask for proof of liability insurance that covers your specific group size and activities. A legitimate DMC will produce both without hesitation."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can a DMC work white-label for an event agency?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Most of our agency partners keep the client relationship entirely in-house — we operate behind their brand, on their paper where needed, and our team on the ground is never presented to the delegate as anything other than the agency's local crew."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do we start a trial engagement with Morocco Quest as our DMC?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Most partnerships start with one programme, not a long-term contract — a single incentive trip, a congress, or ground support for one group. We treat that first programme as the reference point both sides use to decide whether to continue."
+   }
+  }
+ ]
+}
