@@ -237,71 +237,22 @@
                             <div class="col-md-6">
                                 <div class="footer-links">
                                     <ul class="custom-ul">
-                                        <li>
-                                            <a href="https://www.travelinsurance.com/" target="_blank"
-                                                rel="noopener noreferrer nofollow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
-                                                    <path d="m6 17 5-5-5-5" />
-                                                    <path d="m13 17 5-5-5-5" />
-                                                </svg>
-                                                Travel Insurance
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.iatatravelcentre.com/world.php" target="_blank"
-                                                rel="noopener noreferrer nofollow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
-                                                    <path d="m6 17 5-5-5-5" />
-                                                    <path d="m13 17 5-5-5-5" />
-                                                </svg>
-                                                COVID-19 Info
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.who.int/countries/mar/" target="_blank"
-                                                rel="noopener noreferrer nofollow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
-                                                    <path d="m6 17 5-5-5-5" />
-                                                    <path d="m13 17 5-5-5-5" />
-                                                </svg>
-                                                Travel Health
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.intrepidtravel.com/adventures/morocco-travel-tips/"
-                                                target="_blank" rel="noopener noreferrer nofollow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
-                                                    <path d="m6 17 5-5-5-5" />
-                                                    <path d="m13 17 5-5-5-5" />
-                                                </svg>
-                                                Travel Tips
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.power-plugs-sockets.com/morocco/" target="_blank"
-                                                rel="noopener noreferrer nofollow">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                    class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
-                                                    <path d="m6 17 5-5-5-5" />
-                                                    <path d="m13 17 5-5-5-5" />
-                                                </svg>
-                                                Electrical Plugs
-                                            </a>
-                                        </li>
+                                        {{-- Destination pages had 3-7 inlinks at depth 2 (2026-10-30 crawl);
+                                             these replace five nofollow external resources. --}}
+                                        @foreach ($footerPlaces ?? [] as $place)
+                                            <li>
+                                                <a href="{{ route('destinations.show', $place->slug) }}">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
+                                                        <path d="m6 17 5-5-5-5" />
+                                                        <path d="m13 17 5-5-5-5" />
+                                                    </svg>
+                                                    {{ $place->name }} Tours
+                                                </a>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
 

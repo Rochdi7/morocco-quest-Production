@@ -42,11 +42,11 @@ class CrawlArchitectureTest extends TestCase
         return $activity;
     }
 
-    public function test_sidebar_lists_only_tags_and_categories_that_have_posts(): void
+    public function test_sidebar_lists_only_categories_that_have_posts_and_never_links_tags(): void
     {
         $post = $this->makeBlog();
         $used = Tag::create(['name' => 'Sahara']);
-        $empty = Tag::create(['name' => 'Agafay Desert']);
+        Tag::create(['name' => 'Agafay Desert']);
         $usedCat = Category::create(['name' => 'Desert Tours']);
         $emptyCat = Category::create(['name' => 'Space Events']);
         $post->tags()->attach($used->id);
@@ -54,14 +54,14 @@ class CrawlArchitectureTest extends TestCase
 
         foreach (['/blog', '/blog/post-one', '/tag/'.$used->slug, '/category/'.$usedCat->slug] as $url) {
             $html = $this->get($url)->assertOk()->getContent();
-            $this->assertStringContainsString('/tag/'.$used->slug, $html, $url);
-            $this->assertStringNotContainsString('/tag/'.$empty->slug, $html, $url.' links an empty (404) tag');
+            // The tag archive's own <link rel="canonical"> is not a link out.
+            $this->assertDoesNotMatchRegularExpression('#<a\s[^>]*href="[^"]*/tag/#', $html, $url.' links a noindex tag archive');
             $this->assertStringContainsString('/category/'.$usedCat->slug, $html, $url);
             $this->assertStringNotContainsString('/category/'.$emptyCat->slug, $html, $url.' links an empty (404) category');
         }
     }
 
-    public function test_sidebar_tag_cloud_is_capped_but_every_tag_stays_reachable_from_its_post(): void
+    public function test_post_footer_shows_its_tags_as_plain_labels(): void
     {
         $post = $this->makeBlog();
         $tags = collect(range(1, BlogSidebar::TAG_LIMIT + 5))
@@ -71,10 +71,30 @@ class CrawlArchitectureTest extends TestCase
         $sidebar = BlogSidebar::data();
         $this->assertCount(BlogSidebar::TAG_LIMIT, $sidebar['tags']);
 
-        // The post footer still links all of the post's own tags.
         $html = $this->get('/blog/post-one')->assertOk()->getContent();
+        $this->assertDoesNotMatchRegularExpression('#<a\s[^>]*href="[^"]*/tag/#', $html);
         foreach ($tags as $tag) {
-            $this->assertStringContainsString('/tag/'.$tag->slug.'"', $html);
+            $this->assertStringContainsString('<span class="tag-cloud-link">'.$tag->name.'</span>', $html);
+        }
+    }
+
+    public function test_footer_links_destinations_that_have_tours(): void
+    {
+        $tour = new Tour;
+        $tour->forceFill(['title' => 'Fez Tour', 'slug' => 'fez-tour', 'overview' => 'O', 'duration_days' => 3])->save();
+        Place::create(['name' => 'Fez', 'slug' => 'fez'])->tours()->attach($tour->id);
+        Place::create(['name' => 'Ifrane', 'slug' => 'ifrane']);
+
+        $this->get('/contact')
+            ->assertOk()
+            ->assertSee('href="'.route('destinations.show', 'fez').'"', false)
+            ->assertDontSee(route('destinations.show', 'ifrane'), false);
+    }
+
+    public function test_no_page_links_the_canonicalised_activities_index(): void
+    {
+        foreach (['/destinations'] as $url) {
+            $this->assertStringNotContainsString('href="'.url('/activities').'"', $this->get($url)->assertOk()->getContent(), $url);
         }
     }
 

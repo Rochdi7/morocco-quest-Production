@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\View;
 use App\Models\Activity;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Place;
 use App\Models\Tag;
 use App\Models\Tour;
 use App\Providers\Filament\AdminPanelPanelProvider;
@@ -76,10 +77,19 @@ class AppServiceProvider extends ServiceProvider
         // the Ahrefs "Page has only one dofollow incoming internal link" issue
         // for tour/place/{slug} and activities/{slug} detail pages.
         //
-        // Cached for 6h. Auto-busted below when a Tour or Activity is saved.
+        // Cached for 6h. Auto-busted below when a Tour, Activity or Place is saved.
         View::composer('partials.footer', function ($view) {
-            $data = Cache::remember('footer_inlinks_v1', 21600, function () {
+            $data = Cache::remember('footer_inlinks_v2', 21600, function () {
                 return [
+                    // Same rule as the /destinations hub: places with tours or activities.
+                    'footerPlaces' => Place::query()
+                        ->select('id', 'slug', 'name')
+                        ->whereNotNull('slug')
+                        ->where('name', '!=', '')
+                        ->where(fn ($q) => $q->has('tours')->orHas('activities'))
+                        ->orderBy('name')
+                        ->take(8)
+                        ->get(),
                     'footerTours' => Tour::query()
                         ->select('id', 'slug', 'title')
                         ->latest('id')
@@ -96,8 +106,10 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $bustFooter = function () {
-            Cache::forget('footer_inlinks_v1');
+            Cache::forget('footer_inlinks_v2');
         };
+        Place::saved($bustFooter);
+        Place::deleted($bustFooter);
         Tour::saved($bustFooter);
         Tour::deleted($bustFooter);
         Activity::saved($bustFooter);

@@ -19,8 +19,9 @@ use Illuminate\Support\Facades\Cache;
  *
  * Rules:
  *  - only categories and tags that have at least one post are listed;
- *  - the sidebar cloud shows the TAG_LIMIT most-used tags; every other tag
- *    stays reachable from the footer of the posts that carry it;
+ *  - `tags` holds the TAG_LIMIT most-used tags for meta keywords only; since
+ *    2026-10-30 no template links tag archives (they are noindex and were a
+ *    third of the crawl), post footers show tags as plain labels;
  *  - categories are listed in full (they are indexable archives).
  */
 class BlogSidebar

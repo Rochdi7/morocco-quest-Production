@@ -321,30 +321,8 @@
                             @endif
                         @endisset
 
-
-
-
-                        {{-- Tags Widget --}}
-                        @isset($tags)
-                            @if ($tags->count() > 0)
-                                <div class="widget widget_meta">
-                                    <h5 class="widget_title title-shep">Tags</h5>
-                                    <div class="tagcloud">
-                                        @foreach ($tags as $t)
-                                            @if (!empty($t->slug))
-                                                {{-- Check for non-empty slug --}}
-                                                <a href="{{ route('tag.show', ['tag' => $t->slug]) }}"
-                                                    aria-label="View posts tagged with {{ $t->name }}">{{ $t->name }}</a>
-                                            @else
-                                                <span class="tag-cloud-link"
-                                                    title="Tag {{ $t->name }} (link currently unavailable)">{{ $t->name }}</span>
-                                                {{-- No link if slug is missing, provide some basic styling if needed --}}
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                </div>
-                            @endif
-                        @endisset
+                        {{-- No tag cloud: tag archives are noindex, and linking them from
+                             every blog page made them a third of the crawl (2026-10-30). --}}
                         <div class="widget">
                             <h5 class="widget_title title-shep">Follow Us</h5>
                             <div class="sidebar-gallery">

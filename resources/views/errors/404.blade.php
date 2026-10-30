@@ -79,7 +79,7 @@
                             <p class="mb-2">Alternatively, you can:</p>
                             <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-3">
                                 <li><a href="{{ route('destinations.index') }}" class="text-link">Browse Tours</a></li>
-                                <li><a href="{{ route('activities.index') }}" class="text-link">Explore Activities</a></li>
+                                <li><a href="{{ route('experiences.index') }}" class="text-link">Explore Activities</a></li>
                                 <li><a href="{{ route('blog.index') }}" class="text-link">Read Our Blog</a></li>
                                 <li><a href="{{ route('contact.show') }}" class="text-link">Contact Us</a></li>
                             </ul>

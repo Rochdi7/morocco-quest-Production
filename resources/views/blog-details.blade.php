@@ -207,13 +207,10 @@
                                 @if ($post->tags && $post->tags->count() > 0)
                                     <div class="block-tag-cloud">
                                         <span class="title">Tags:</span>
+                                        {{-- Plain labels: tag archives are noindex, so linking them only
+                                             spends crawl budget (61 noindex URLs in the 2026-10-30 crawl). --}}
                                         @foreach ($post->tags as $tag)
-                                            @if ($tag->slug && Route::has('tag.show'))
-                                                <a href="{{ route('tag.show', $tag->slug) }}" class="tag-cloud-link"
-                                                    aria-label="View posts tagged with {{ $tag->name }}">{{ $tag->name }}</a>
-                                            @else
-                                                <span class="tag-cloud-link">{{ $tag->name }}</span>
-                                            @endif
+                                            <span class="tag-cloud-link">{{ $tag->name }}</span>
                                         @endforeach
                                     </div>
                                 @endif
@@ -827,24 +824,6 @@
                             </div>
                         @endif
                     @endisset
-                    @isset($tags)
-                        @if ($tags->count() > 0)
-                            <div class="widget widget_meta">
-                                <h5 class="widget_title title-shep">Popular Tags</h5>
-                                <div class="tagcloud">
-                                    @foreach ($tags as $tag)
-                                        @if ($tag->slug && Route::has('tag.show'))
-                                            <a href="{{ route('tag.show', $tag->slug) }}" class="tag-cloud-link"
-                                                aria-label="View posts tagged with {{ $tag->name }}">{{ $tag->name }}</a>
-                                        @else
-                                            <span class="tag-cloud-link">{{ $tag->name }}</span>
-                                        @endif
-                                    @endforeach
-                                </div>
-                            </div>
-                        @endif
-                    @endisset
-
                     <div class="widget">
                         <h5 class="widget_title title-shep">Follow Us</h5>
                         <div class="sidebar-gallery">
