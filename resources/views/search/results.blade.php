@@ -104,7 +104,7 @@
                                     @if (isset($tour->price_adult))
                                         <div class="pricing-info text-end">
 
-                                            <span class="fs-xs d-block">Price On Request</span>
+                                            <span class="fs-xs d-block">@include('partials.price', ['item' => $tour, 'prefix' => 'From'])</span>
 
                                         </div>
                                     @endif
@@ -173,7 +173,7 @@
                                     {{-- Pricing Information --}}
                                     @if (isset($activity->price_adult))
                                         <div class="pricing-info text-end">
-                                            <span class="fs-xs d-block">Price On Request</span>
+                                            <span class="fs-xs d-block">@include('partials.price', ['item' => $activity, 'prefix' => 'From'])</span>
 
                                         </div>
                                     @endif

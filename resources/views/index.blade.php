@@ -327,7 +327,7 @@
                                                             </span>
                                                         @endif
                                                         <div class="price">
-                                                            <h6 class="fs-30 ff-rubik">Price On Request</h6>
+                                                            <h6 class="fs-30 ff-rubik">@include('partials.price', ['item' => $tour, 'prefix' => 'From'])</h6>
                                                         </div>
 
                                                     </div>

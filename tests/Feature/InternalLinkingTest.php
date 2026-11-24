@@ -63,7 +63,7 @@ class InternalLinkingTest extends TestCase
 
         $this->assertStringNotContainsString('Every tour in this collection departs from', $html);
         $this->assertStringNotContainsString('Prices are per person', $html);
-        $this->assertStringContainsString('prices are quoted on request', $html);
+        $this->assertStringContainsString('"from" price is per adult', $html);
         $this->assertStringContainsString('href="' . route('experiences.index') . '">day experience', $html);
     }
 

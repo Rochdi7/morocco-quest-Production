@@ -14,9 +14,8 @@
     // Schema must describe what the page shows (audit 2026-09-28):
     // - no `duration` (not a TouristTrip property) — the day-by-day
     //   itinerary shown on the page is exposed as `itinerary` instead;
-    // - no `offers`: the page shows "Price On Request", so a price in the
-    //   markup would contradict the visible content. Re-add it only if
-    //   prices are displayed on the page.
+    // - `offers` only when a price is set — it matches the "From $X"
+    //   price shown on the page (partials/price.blade.php).
     // - same image as og:image (first_image_url), entity-decoded text.
     $plainText = fn ($html) => trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags((string) $html), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
     $tourSchema = [
@@ -29,6 +28,15 @@
         'touristType' => ['Adventure', 'Cultural', 'Desert', 'Luxury'],
         'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/'), '@id' => url('/') . '#organization'],
     ];
+    if ((float) ($tour->price_adult ?? 0) > 0) {
+        $tourSchema['offers'] = [
+            '@type' => 'Offer',
+            'price' => number_format((float) $tour->price_adult, 2, '.', ''),
+            'priceCurrency' => 'USD',
+            'availability' => 'https://schema.org/InStock',
+            'url' => url()->current(),
+        ];
+    }
     if ($tour->itineraryDays && $tour->itineraryDays->isNotEmpty()) {
         $tourSchema['itinerary'] = [
             '@type' => 'ItemList',
@@ -752,7 +760,7 @@
                                             @endif
                                             <div class="package-wrapper d-flex justify-content-between gap-2">
                                                 <div class="price text-center w-100">
-                                                    <h5 class="price text-muted">Price On Request</h5>
+                                                    <h5 class="price text-muted">@include('partials.price', ['item' => $tour, 'prefix' => 'From', 'suffix' => '/Adult'])</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -1143,7 +1151,7 @@
                                             {{-- <span class="fs-xs d-block">From</span> --}}
 
                                             <span class="new-price text-theme fw-semibold fs-5">
-                                                Price on request
+                                                @include('partials.price', ['item' => $relatedTour, 'prefix' => 'From'])
                                             </span>
 
                                         </div>

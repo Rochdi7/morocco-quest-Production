@@ -53,7 +53,10 @@ class StructuredDataTest extends TestCase
 
         $this->assertNotNull($trip);
         $this->assertArrayNotHasKey('duration', $trip);
-        $this->assertArrayNotHasKey('offers', $trip, 'page shows "Price On Request"');
+        // The page shows "From $786", so the schema carries the same price.
+        $this->assertSame('Offer', $trip['offers']['@type']);
+        $this->assertSame('786.00', $trip['offers']['price']);
+        $this->assertSame('USD', $trip['offers']['priceCurrency']);
         $this->assertSame('ItemList', $trip['itinerary']['@type']);
         $this->assertSame('Day 2: Merzouga camp', $trip['itinerary']['itemListElement'][1]['name']);
         $this->assertStringNotContainsString('&amp;', $trip['description']);

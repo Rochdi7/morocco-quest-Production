@@ -99,7 +99,7 @@
                                             <span class="fs-xs d-block">
 
                                             </span>
-                                            <span class="fs-14 ff-rubik" style="font-weight:700;">Price on request</span>
+                                            <span class="fs-14 ff-rubik" style="font-weight:700;">@include('partials.price', ['item' => $tour, 'prefix' => 'From'])</span>
                                         </div>
                                     @endif
 
@@ -146,7 +146,7 @@
                                             <span class="fs-xs d-block">
 
                                             </span>
-                                            <span class="new-price text-theme fw-semibold fs-5">Price On Request</span>
+                                            <span class="new-price text-theme fw-semibold fs-5">@include('partials.price', ['item' => $activity, 'prefix' => 'From'])</span>
                                         </div>
                                     @endif
 

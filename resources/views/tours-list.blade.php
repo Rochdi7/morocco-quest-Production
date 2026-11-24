@@ -102,12 +102,12 @@
                     <div class="col-lg-9 text-center">
                         {{-- Copy corrected 2026-09-29: it claimed every tour departs from
                              Marrakech with per-person prices and 4×4 transport, none of which
-                             holds for every tour (departures vary; prices are on request). --}}
+                             holds for every tour (departures vary). Prices: "from" per adult, see partials/price. --}}
                         <h2 class="hub-intro-title h4 mb-3">
                             {{ !empty($placeName) ? 'Tours & Things to Do in ' . $placeName : 'Private & Small Group Morocco Tours' }}
                         </h2>
                         <p class="hub-intro-text">
-                            Our private and small-group Morocco tours cover Marrakech, the imperial cities, the High Atlas Mountains and the Sahara desert at <strong>Erg Chebbi, Merzouga</strong>. Compare a <a href="{{ route('tours.multi_day') }}">multi-day Morocco tour</a>, browse <a href="{{ route('destinations.index') }}">tours by destination</a>, or choose a <a href="{{ route('experiences.index') }}">day experience</a> — each is led by a licensed local guide. Every tour page lists its departure point, duration and day-by-day itinerary; prices are quoted on request for your dates and group size, so <a href="{{ route('contact.show') }}">contact us</a> for a tailor-made itinerary.
+                            Our private and small-group Morocco tours cover Marrakech, the imperial cities, the High Atlas Mountains and the Sahara desert at <strong>Erg Chebbi, Merzouga</strong>. Compare a <a href="{{ route('tours.multi_day') }}">multi-day Morocco tour</a>, browse <a href="{{ route('destinations.index') }}">tours by destination</a>, or choose a <a href="{{ route('experiences.index') }}">day experience</a> — each is led by a licensed local guide. Every tour page lists its departure point, duration and day-by-day itinerary; the "from" price is per adult and is confirmed for your dates and group size, so <a href="{{ route('contact.show') }}">contact us</a> for a tailor-made itinerary.
                         </p>
                         @if (!empty($placeName) && isset($placeActivities) && $placeActivities->isNotEmpty())
                             <p class="hub-intro-text mb-0">
@@ -184,7 +184,7 @@
                                             <div class="col-auto">
                                                 @if (isset($tour->price_adult))
                                                     <div class="tour-package-price">
-                                                        Price On Request
+                                                        @include('partials.price', ['item' => $tour, 'prefix' => 'From'])
                                                     </div>
                                                 @endif
 

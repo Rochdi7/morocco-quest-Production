@@ -7,8 +7,8 @@
 @php
     // A bookable guided activity is a TouristTrip; TouristAttraction (a
     // place) doesn't support `offers`, which made all 23 pages invalid
-    // (audit 2026-09-28). No `offers` either way: the page shows "Price On
-    // Request", so a price in the markup would contradict visible content.
+    // (audit 2026-09-28). `offers` only when a price is set — it matches
+    // the "From $X" price shown on the page (partials/price.blade.php).
     $plainText = fn ($html) => trim(preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags((string) $html), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
     $activitySchema = [
         '@context' => 'https://schema.org',
@@ -20,6 +20,15 @@
         'touristType' => ['Cultural', 'Adventure', 'Day Trip'],
         'provider' => ['@type' => 'TravelAgency', 'name' => 'Morocco Quest', 'url' => url('/'), '@id' => url('/') . '#organization'],
     ];
+    if ((float) ($activity->price_adult ?? 0) > 0) {
+        $activitySchema['offers'] = [
+            '@type' => 'Offer',
+            'price' => number_format((float) $activity->price_adult, 2, '.', ''),
+            'priceCurrency' => 'USD',
+            'availability' => 'https://schema.org/InStock',
+            'url' => url()->current(),
+        ];
+    }
 @endphp
 
 @push('jsonld')
@@ -606,7 +615,7 @@
                                             {{-- Pricing Display Logic - Kept as is --}}
                                             <div class="package-wrapper d-flex justify-content-between gap-2">
                                                 <div class="price text-center w-100">
-                                                    <h5 class="price text-muted">Price On Request</h5>
+                                                    <h5 class="price text-muted">@include('partials.price', ['item' => $activity, 'prefix' => 'From', 'suffix' => '/Adult'])</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -924,7 +933,7 @@
                                         <div class="pricing-info fw-medium"> {{-- Classes untouched --}}
                                             
                                             <h5 class="new-price">
-                                                Price on request
+                                                @include('partials.price', ['item' => $relatedActivity, 'prefix' => 'From'])
                                             </h5>
                                         </div>
 

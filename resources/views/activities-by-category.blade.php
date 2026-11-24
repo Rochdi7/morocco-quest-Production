@@ -112,7 +112,7 @@
                                             <div class="col-auto">
                                                 @if (isset($activity->price_adult))
                                                     <div class="tour-package-price">
-                                                        Price On Request
+                                                        @include('partials.price', ['item' => $activity, 'prefix' => 'From'])
                                                     </div>
                                                 @endif
 
