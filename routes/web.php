@@ -29,6 +29,8 @@ use App\Http\Controllers\MeetingsConventionsController;
 // Full-page guest cache (see CacheGuestPage) — shared-hosting TTFB ~0.7s → cached hit.
 Route::middleware(\App\Http\Middleware\CacheGuestPage::class)->group(function () {
     Route::get('/dmc-marrakech', [DmcController::class, 'index'])->name('dmc.marrakech');
+    // French version of the DMC hub (hreflang pair with /dmc-marrakech).
+    Route::get('/fr/dmc-marrakech', [DmcController::class, 'indexFr'])->name('dmc.marrakech.fr');
     Route::get('/meetings-conventions-management', [MeetingsConventionsController::class, 'index'])->name('meetings-conventions.management');
     Route::get('/professional-congress-organization', [CongressOrganizationController::class, 'index'])->name('congress-organization.morocco');
     Route::get('/destination-management-company', [DestinationManagementController::class, 'index'])->name('destination-management.company');

@@ -14,14 +14,19 @@
         ['route' => 'sustainable-events.morocco',     'icon' => 'fa-leaf',             'title' => 'Sustainable Events',            'desc' => 'Low-impact events with local, responsible sourcing.'],
         ['route' => '360-solutions.morocco',          'icon' => 'fa-arrows-rotate',    'title' => '360° Event & Travel Solutions', 'desc' => 'End-to-end delivery under one project manager.'],
     ];
+    // Optional overrides (e.g. the French DMC page): $relatedItems = [route => ['title','desc']].
+    foreach (($relatedItems ?? []) as $r => $o) {
+        foreach ($dmcServices as &$svc) { if ($svc['route'] === $r) { $svc = array_merge($svc, $o); } }
+        unset($svc);
+    }
 @endphp
 
 <section class="space pt-0 dmc-related">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center mb-4">
-                <h2 class="sec-title" style="font-size:1.5rem;">Related DMC Services</h2>
-                <p>Explore the full range of Morocco Quest ground services — every part of your programme, handled by one local partner.</p>
+                <h2 class="sec-title" style="font-size:1.5rem;">{{ $relatedHeading ?? 'Related DMC Services' }}</h2>
+                <p>{{ $relatedIntro ?? 'Explore the full range of Morocco Quest ground services — every part of your programme, handled by one local partner.' }}</p>
             </div>
         </div>
         <div class="row g-3 justify-content-center">
@@ -32,7 +37,7 @@
                         <span class="dmc-related__icon"><i class="fa-solid {{ $s['icon'] }}"></i></span>
                         <span class="dmc-related__title">{{ $s['title'] }}</span>
                         <span class="dmc-related__desc">{{ $s['desc'] }}</span>
-                        <span class="dmc-related__go">Learn more <i class="fa-solid fa-arrow-right-long"></i></span>
+                        <span class="dmc-related__go">{{ $relatedMore ?? 'Learn more' }} <i class="fa-solid fa-arrow-right-long"></i></span>
                     </a>
                 </div>
             @endforeach

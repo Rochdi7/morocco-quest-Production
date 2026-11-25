@@ -652,6 +652,11 @@
                                     <h2 class="sec-title text-white-color fade-anim" data-direction="top">
                                         Why Choose Morocco Quest for Private Tours?
                                     </h2>
+                                    <p class="text-white-color fade-anim" data-direction="top">
+                                        Travel agents, tour operators and event planners work with us as a white-label
+                                        <a href="{{ route('dmc.marrakech') }}" style="color:#fff;text-decoration:underline;">DMC in Marrakech</a>
+                                        for groups, incentives and MICE programmes across Morocco.
+                                    </p>
                                 </div>
                                 <a class="vs-btn style-4 fade-anim" data-direction="top"
                                     href="{{ route('destinations.index') }}">View All Services</a>

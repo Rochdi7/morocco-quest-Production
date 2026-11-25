@@ -117,6 +117,13 @@
                                 @endforeach
                             </p>
                         @endif
+                        @if (!empty($placeName) && \Illuminate\Support\Str::lower($placeName) === 'marrakech')
+                            {{-- Marrakech only: contextual link for group/MICE intent to the DMC hub. --}}
+                            <p class="hub-intro-text mt-3 mb-0">
+                                Planning a group trip, incentive or corporate event in Marrakech? Our
+                                <a href="{{ route('dmc.marrakech') }}">DMC Marrakech team</a> handles hotels, transfers, venues and activities for agencies and companies.
+                            </p>
+                        @endif
                     </div>
                 </div>
             </div>

@@ -102,6 +102,8 @@
                             and <a href="{{ route('tours.multi_day') }}">multi-day trip packages</a>, read
                             <a href="{{ route('about') }}">about our team in Marrakech</a>, or check the
                             <a href="{{ route('faq') }}">FAQ</a> for booking and pricing questions before you get in touch.
+                            Travel agencies, tour operators and event planners can send group and MICE requests to our
+                            <a href="{{ route('dmc.marrakech') }}">DMC team in Marrakech</a>.
                         </p>
                         <div class="vs-contact-list">
                             <div class="contact-item">

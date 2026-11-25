@@ -1,0 +1,338 @@
+[
+ {
+  "label": "c2",
+  "input_url": "https://dmc-marrakech.com/",
+  "status": 200,
+  "headers": {
+   "cache-control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+   "content-encoding": "gzip",
+   "content-type": "text/html; charset=utf-8",
+   "link": "</templates/yootheme/fonts/heebo-e5a43b1c.woff2>; rel=preload; as=font; crossorigin, </templates/yootheme/fonts/heebo-9b586da9.woff2>; rel=preload; as=font; crossorigin, </templates/yootheme_dmc/images/stars.svg>; rel=preload; as=image",
+   "server": "Apache"
+  },
+  "url": "https://dmc-marrakech.com/",
+  "title": "Home",
+  "description": null,
+  "robots": null,
+  "canonical": null,
+  "lang": "en-gb",
+  "hreflang": [],
+  "og": {},
+  "viewport": "width=device-width, initial-scale=1",
+  "heads": [
+   {
+    "tag": "H3",
+    "text": "DISCOVER Marrakech",
+    "top": 121,
+    "visible": true
+   },
+   {
+    "tag": "H1",
+    "text": "DMC Marrakech",
+    "top": 177,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "DMC Marrakech",
+    "top": 393,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "MidFar",
+    "top": 393,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "Rating",
+    "top": 748,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "Get in touch with us",
+    "top": 393,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "More about MidFar DMC",
+    "top": 921,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "Travel facts Morocco",
+    "top": 1491,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "Travel highlights",
+    "top": 1966,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "Map",
+    "top": 1966,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "More about Morocco",
+    "top": 1966,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "About MidFar DMC Marrakech",
+    "top": 2774,
+    "visible": true
+   },
+   {
+    "tag": "H3",
+    "text": "DMC Services Marrakech",
+    "top": 3197,
+    "visible": true
+   }
+  ],
+  "imgs": [
+   {
+    "src": "https://dmc-marrakech.com/media/yootheme/cache/85/midfar_logo-8514d065.webp",
+    "alt": "",
+    "loading": "lazy",
+    "srcset": false,
+    "natural": [
+     100,
+     90
+    ],
+    "rendered": [
+     100,
+     91
+    ],
+    "top": 449,
+    "bytes": 6748,
+    "transfer": 7048,
+    "width_attr": "100",
+    "height_attr": "91"
+   },
+   {
+    "src": "https://dmc-marrakech.com/media/yootheme/cache/b5/hind-morocco-b5a045cb.webp",
+    "alt": "Hind El ouali el Alami",
+    "loading": "lazy",
+    "srcset": false,
+    "natural": [
+     132,
+     157
+    ],
+    "rendered": [
+     150,
+     178
+    ],
+    "top": 469,
+    "bytes": 2162,
+    "transfer": 2462,
+    "width_attr": "150",
+    "height_attr": "178"
+   },
+   {
+    "src": "https://dmc-marrakech.com/media/yootheme/cache/85/midfar_logo-8514d065.webp",
+    "alt": "MidFar DMC Morocco",
+    "loading": "lazy",
+    "srcset": false,
+    "natural": [
+     141,
+     128
+    ],
+    "rendered": [
+     200,
+     182
+    ],
+    "top": 1269,
+    "bytes": 6748,
+    "transfer": 7048,
+    "width_attr": "200",
+    "height_attr": "182"
+   },
+   {
+    "src": "https://dmc-marrakech.com/media/yootheme/cache/69/blue-fountain-morocco-69cfcbbe.webp",
+    "alt": "",
+    "loading": "lazy",
+    "srcset": false,
+    "natural": [
+     400,
+     300
+    ],
+    "rendered": [
+     400,
+     300
+    ],
+    "top": 1491,
+    "bytes": 48824,
+    "transfer": 49124,
+    "width_attr": "400",
+    "height_attr": "300"
+   },
+   {
+    "src": "https://dmc-marrakech.com/images/mapmorocco_web.jpg",
+    "alt": "",
+    "loading": null,
+    "srcset": false,
+    "natural": [
+     1763,
+     1700
+    ],
+    "rendered": [
+     373,
+     360
+    ],
+    "top": 2039,
+    "bytes": 178890,
+    "transfer": 179190,
+    "width_attr": "1763",
+    "height_attr": "1700"
+   },
+   {
+    "src": "https://dmc-marrakech.com/media/yootheme/cache/a3/morocco-image-nw-a3552150.webp",
+    "alt": "Destination Management Marrakech",
+    "loading": "lazy",
+    "srcset": false,
+    "natural": [
+     500,
+     343
+    ],
+    "rendered": [
+     500,
+     343
+    ],
+    "top": 2794,
+    "bytes": 43568,
+    "transfer": 43868,
+    "width_attr": "500",
+    "height_attr": "343"
+   }
+  ],
+  "bgs": [
+   {
+    "src": "https://dmc-marrakech.com/media/yootheme/cache/db/dmc-marrakech-db8ea7b9.webp",
+    "el": "DIV.uk-background-norepeat",
+    "rendered": [
+     1366,
+     323
+    ],
+    "top": 0,
+    "bytes": 168198
+   },
+   {
+    "src": "https://dmc-marrakech.com/templates/yootheme_dmc/images/stars.svg",
+    "el": "DIV.rating-container",
+    "rendered": [
+     100,
+     20
+    ],
+    "top": 805,
+    "bytes": 522
+   },
+   {
+    "src": "https://dmc-marrakech.com/templates/yootheme_dmc/images/stars.svg",
+    "el": "DIV.previous-rating",
+    "rendered": [
+     90,
+     20
+    ],
+    "top": 805,
+    "bytes": 522
+   }
+  ],
+  "vids": [
+   {
+    "tag": "IFRAME",
+    "src": "https://www.youtube.com/embed/lz8Voj48zsA?v=lz8Voj48zsA&feature=youtu.be&disablekb=1",
+    "poster": null
+   }
+  ],
+  "links": [
+   {
+    "href": "https://dmc-marrakech.com/#tm-main",
+    "text": "Skip to main content",
+    "rel": ""
+   },
+   {
+    "href": "https://dmc-marrakech.com/#tm-dialog-mobile",
+    "text": ".uk-navbar-toggle-icon svg>[class*=\"line-\"]{transition:0.2s ease-in-out;transiti",
+    "rel": ""
+   },
+   {
+    "href": "https://dmc-marrakech.com/",
+    "text": "DMC Marrakech for the best incentives and events",
+    "rel": ""
+   },
+   {
+    "href": "https://dmc-marrakech.com/",
+    "text": "DMC Marrakech for the best incentives and events",
+    "rel": ""
+   },
+   {
+    "href": "mailto:info@dmc-marrakech.com",
+    "text": "info@dmc-marrakech.com",
+    "rel": ""
+   },
+   {
+    "href": "mailto:info@dmc-marrakech.com",
+    "text": "Help with your request?",
+    "rel": ""
+   },
+   {
+    "href": "http://www.holiday-times.com/public-holidays-morocco/",
+    "text": "Public holidays Morocco link",
+    "rel": ""
+   },
+   {
+    "href": "https://dmcprofessionals.com/dmc-marrakech/",
+    "text": "Event ideas Marrakech",
+    "rel": ""
+   },
+   {
+    "href": "https://dmcprofessionals.com/dmc-marrakech/",
+    "text": "Incentive ideas Marrakech",
+    "rel": ""
+   },
+   {
+    "href": "https://dmcprofessionals.com/wp-content/uploads/infographic-dmc-morocco.pdf",
+    "text": "Infographics Morocco",
+    "rel": ""
+   },
+   {
+    "href": "mailto:info@dmc-marrakech.com",
+    "text": "Need assistance with your travel to Marrakech?",
+    "rel": ""
+   }
+  ],
+  "ld": [
+   "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://dmc-marrakech.com/#/schema/Organization/base\",\"name\":\"Destination Management Company Marrakech\",\"url\":\"https://dmc-marrakech.com/\"},{\"@type\":\"WebSite\",\"@id\":\"https://dmc-marrakech.com/#/schema/WebSite/base\",\"url\":\"https://dmc-marrakech.com/\",\"name\":\"Destination Management Company Marrakech\",\"publisher\":{\"@id\":\"https://dmc-marrakech.com/#/schema/Organization/base\"}},{\"@type\":\"WebPage\",\"@id\":\"https://dmc-marrakech.com/#/schema/WebPage/base\",\"url\":\"https://dmc-marrakech.com/\",\"name\":\"Home\",\"isPartOf\":{\"@id\":\"https://dmc-marrakech.com/#/schema/WebSite/base\"},\"about\":{\"@id\":\"https://dmc-marrakech.com/#/schema/Organization/base\"},\"inLanguage\":\"en-GB\"},{\"@type\":\"Article\",\"@id\":\"https://dmc-marrakech.com/#/schema/com_content/article/33\",\"name\":\"Home\",\"headline\":\"Home\",\"inLanguage\":\"en-GB\",\"author\":{\"@type\":\"Person\",\"name\":\"Els van Oldenbarneveld\"},\"articleSection\":\"Uncategorised\",\"dateCreated\":\"2022-09-26T09:59:05+00:00\",\"interactionStatistic\":{\"@type\":\"InteractionCounter\",\"userInteractionCount\":61419},\"isPartOf\":{\"@id\":\"https://dmc-marrakech.com/#/schema/WebPage/base\"}}]}"
+  ],
+  "words": 757,
+  "text": "Skip to main content DMC Marrakech for the best incentives and events DMC Marrakech for the best incentives and events DISCOVER Marrakech DMC Marrakech DMC Marrakech DMC Marrakech DMC Marrakech - Marrakech, the city of roses, is a destination that should definitely be on your bucket list. Picture palace restaurants with bubbling water fountains, mosaic walls and rose petals scattered on table cloths where the warm air is filled with the scent of cinnamon and incense. The people still travel by donkey through the city, snake charmers perform their dance on the market and the bustling souks invite passing strangers to buy silver jewelry and hand-woven carpets. Marrakech is blessed with the most stunning hotels, historic riads and amazing restaurants where you can feast on traditional tagines and couscous. Marrakech is very easy to combine with a desert tour, where you take a camel ride and spend your night in a luxury tent under a star lit sky. Further down the page: Read about our company * Travel facts Marrakech. There is also a map of our country. MidFar Centre Comercial Allal Ben abdelah47 , Rue Allal Ben Abdelah,magasin Nº 31 ,quartier de l'horloge20 000 CasablancaMorocco info@dmc-marrakech.com Rating 4.9/5 rating (11 votes) Get in touch with us HindEl ouali el AlamiMidFarDMC Morocco Help with your request? More about MidFar DMC MidFar is an experienced DMC organising events in Marrakech and the rest of Morocco. Our aim is to satisfy our client's wishes and see them happy after experiencing a successful event set in our amazing country. Please contact us if you need ccreative ideas and great concepts in Marrakech. We have different departments to assist you with your travel to Morocco. One for MICE, - events, incentives and conferences and one for Tour operating. Our biggest strenghts are our ability to listen to the clients and work with the client - and our dedication to make the most creative proposals and make sure they run perfectly well. Travel facts Morocco Currency Dirham Language Moroccan Arabic, but French is widely spoken Local time GMT (London) - 1.00hours Public holidays Public holidays Morocco link Travel highlights Medina Souks Shopping is a treat in the beautiful souks. Marrakech's labyrinthine medina, which is the old city district is a must-see Djemaa El Fna is a vibrant market place of bric-a-brac stalls, musicians, storytellers, fortune-tellers, and snake charmers that come to life each day with entertainment carrying on until midnight. A truly Moroccan experience. Koutoubia Mosque The Koutoubia Mosque is Marrakesh's most famous landmark with its striking, 70-meter-tall minaret visible for miles in every direction. Visit the HammamSome of the more luxurious hammams also provide modern spa add-ons with a host of beauty treatments and massages available. Map More about Morocco Great links to event ideas, infographic Morocco, incentive ideas and program ideas in MarrakechEvent ideas Marrakech Incentive ideas Marrakech Infographics Morocco About MidFar DMC Marrakech At MidFar DMC Marrakech, we hold the title of Marrakech’s leading Destination Management Company. It isn’t a badge we wear; it’s an oath we honor daily. Our lifelong love of our city melds with an insatiable drive for outstanding service, giving us an advanced vantage in the vibrant, evolving culture of Moroccan travel. Whether navigating the thrumming souks or travel across a desert dune while the sun sinks, we write vivid stories that mirror the individual desires of every guest. Since every traveler dreams differently, we custom-craft plans that show Marrakech in its best possible light.DMC MarrakechLuxury stays, guided escorts through historical treasures, and access to otherwise-invisible hosts. Each journey markes something special—the markets, a sunset mirage, a traditional belly dancer performance, the best venues etc. At MidFar DMC Marrakech, we design adventures that respect ecology and elevate people. By choosing MidFar, you can make your travel dreams come true. From your very first reach out until the final wave goodbye, we promise a program that belongs to you alone. Connect with MidFar DMC Marrakech, the company where the ordinary gives way to the extraordinary. Feel the difference that has earned us the proud distinction of being Marrakech’s premier destination management company. DMC Services Marrakech Our DMC services in Marrakech include: Conferences, Conventions, Congresses, Conference Logistics, Corporate Functions, Corporate Group Travel, Corporate Meetings, Corporate Travel, Events, Event support services, Gala Dinners, Guides, Ground handling, Hotel Bookings, Local Excursions, Meetings, Meeting venues, Product Launches, Restaurant venues, Reward trips, Seminars, Special Interest Groups, Teambuilding Events, Themed Dinners, Transport, Stimulation and Motivation trips, Venue finding Need assistance with your travel to Marrakech? Copyright © Body and Soul International BV",
+  "forms": 0,
+  "tel": [],
+  "wa": false,
+  "mailto": [
+   "mailto:info@dmc-marrakech.com",
+   "mailto:info@dmc-marrakech.com",
+   "mailto:info@dmc-marrakech.com"
+  ],
+  "lab_mobile": {
+   "lcp": 8480,
+   "lcpEl": "DIV.uk-background-norepeat https://dmc-marrakech.com/media/yootheme/cache/db/dmc-marrakech-db8ea7b9.webp",
+   "cls": 0.112,
+   "ttfb": 1091,
+   "fcp": 2796,
+   "requests": 25,
+   "kb": 560,
+   "domNodes": 281
+  }
+ }
+]

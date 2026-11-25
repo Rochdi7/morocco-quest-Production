@@ -168,7 +168,8 @@
         '@type' => 'TravelAgency',
         '@id' => url('/') . '#organization',
         'name' => 'Morocco Quest',
-        'alternateName' => 'Morocco Quest Tours & Travel',
+        // Matches the brand used on the logo, Tripadvisor, Instagram and Google Maps.
+        'alternateName' => ['Morocco Quest DMC', 'Morocco Quest Tours & Travel'],
         'description' => 'Morocco Quest is a licensed Moroccan travel agency offering private morocco tours, sahara desert tours from Marrakech, luxury desert camps, small group tours, and tailor-made morocco tour packages.',
         'url' => url('/'),
         'logo' => asset('assets/img/logo-bg-wide.webp'),

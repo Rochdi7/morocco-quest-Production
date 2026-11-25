@@ -1,0 +1,48 @@
+# 16 — Blueprint: The Ideal /dmc-marrakech Page
+
+**Principles (from the evidence in 12–14):**
+1. Keep the URL, the stack (Blade), the design system and the existing depth. The page is already the most complete in the market.
+2. The page must **prove** what it claims: facts, people, places, real programmes.
+3. **"DMC Marrakech" leads**; variants appear naturally and once each where they fit. No stuffing.
+4. Every section has one job: relevance, proof or conversion.
+5. Items marked ⚑ need owner facts or assets before they can be built.
+
+Sections marked *(existing)* already exist and are kept, possibly trimmed. *(new)* sections are additions.
+
+| # | Section | Heading | Purpose | Content | Keywords (natural use) | Visual | Internal links | Trust / conversion |
+|---|---|---|---|---|---|---|---|---|
+| 0 | Breadcrumb *(existing)* | — | Hierarchy | Home › DMC Marrakech | — | — | / | BreadcrumbList schema |
+| 1 | **Hero** *(existing, updated)* | **H1:** DMC Marrakech: Destination Management Company for Travel Agents & MICE Planners | State the entity and audience in 3 seconds | 1-line subtitle: "Licensed Marrakech-based ground partner for agencies, tour operators and event planners: white-label programmes, net-rate quotes within 24 hours." Two buttons: **Request a net-rate quote** (#dmc-enquiry) and **WhatsApp the B2B desk** | dmc marrakech, destination management company marrakech | **I1** original event photo (real `<img>` with alt, preloaded) | — | 24h quote promise; ⚑ licence number in the subtitle once supplied |
+| 2 | **Verified facts bar** *(existing trust bar, rebuilt)* | visually-hidden H2 "Morocco Quest DMC at a glance" | Proof first | 4–6 checkable facts: ⚑ licence no. · ⚑ DMC operations since YYYY · ⚑ groups/pax delivered in 2025 · Marrakech office (Gueliz) · ⚑ Google rating (linked) · languages (EN/FR/ES/AR) | — | World map optional (smaller) | /about, /contact | Replace the unverifiable "20+ / 100%" stats |
+| 3 | **Intro / who we are** *(existing "A Marrakech DMC Built for Repeat B2B Business", tightened)* | **H2:** A Licensed DMC in Marrakech for Agencies, Operators and Event Planners | Definition + identity (citable by AI Overviews) | First sentence defines the job: "As a destination management company (DMC) in Marrakech, Morocco Quest plans and runs the ground part of your programme: hotels, transfers, venues, guides, activities and on-site staff." Then: who runs the desk (⚑ founder/manager name), since when, Gueliz office, white-label promise, the 5 existing check bullets | dmc in marrakech, ground handler, white-label, net rates | **I2** team photo (or retained **I3**, renamed) | /about, /destination-management-company ("what a DMC does") | Founder name; office |
+| 4 | **Service index** *(new, a navigation layer over existing content)* | **H2:** Our DMC Services in Marrakech | Show the breadth instantly | 8 tiles (icon + 1 line + link): MICE & conferences · Incentive travel · Corporate events & gala dinners · Team building · Ground handling & transfers · Hotel & riad contracting · Guided excursions & tailor-made itineraries · Nationwide programmes | MICE Marrakech, incentive travel Morocco, corporate events Marrakech | Icons (existing icon set) | Each tile → its accordion anchor **and** the matching sister page (/meetings-conventions-management, /team-building-marrakech, /events-production-morocco, /professional-congress-organization, /360-event-solutions) | — |
+| 5 | **Services guide** *(existing accordions; add content)* | H2: DMC Marrakech Services Guide for Agents, Operators & MICE Planners → H3 per accordion | Depth | Keep the 7 accordions. Add: ⚑ named venues actually used (Palais des Congrès de Marrakech, named Hivernage/Palmeraie hotels); ⚑ product launches, seminars, themed dinners, reward trips if offered; replace the 3 italic "Example:" lines with links to section 7 | meetings and conferences Marrakech, seminars, gala dinners, transfers, riads | **I4** (MICE), **I5** (incentive), **I6** (team building), **I7** (transfers), **I8** (riad/hotel), each inside its accordion, lazy | /team-building-marrakech, /sustainable-events-morocco (existing links kept) | — |
+| 6 | **Marrakech for planners** *(existing accordion content promoted + new facts table)* | **H2:** Marrakech as a MICE Destination: Facts for Planners | Helpful, citable facts | Existing 7 bullets (access, venues, hotel stock, climate, value, safety) + a facts table: RAK airport & direct-flight regions · flight times from London/Paris/Madrid · currency · time zone · visas for main markets (⚑ verify) · best event seasons · Ramadan note | Marrakech, Menara airport, Agafay, Palmeraie, Hivernage | **I12** planner map with drive times | /destinations/marrakech (if it exists) | — |
+| 7 | **Programmes we delivered** *(new)* ⚑ | **H2:** Programmes We Delivered in Marrakech | **Experience proof** (the biggest gap) | 2–3 case cards: client type, pax, dates, venues, services, outcome/quote. Optional 6–8 image gallery | incentive trip Marrakech, conference Marrakech | **I9** per case, **I14** gallery | Each case → related sister page | Real outcomes; attributable quote |
+| 8 | **Nationwide coverage** *(existing "We Operate Across All of Morocco")* | H2 (keep) | Scope | Keep the 8-city grid + Atlas road image | Morocco DMC, DMC Morocco | Existing image | /destinations | — |
+| 9 | **Why partner with us** *(existing)* + **How to choose a DMC** *(new H3)* | H2: Why Travel Agencies Choose Morocco Quest as Their DMC Morocco Partner; H3: How to Choose a DMC in Marrakech | Differentiation + comparison help | Keep the 4 reasons; add a 6–8 point checklist answered with MQ facts (licence, local office, own staff on site, insurance, references, payment terms, emergency process) | dmc morocco, marrakech dmc | Existing Koutoubia image (or I2) | /about, /faq | Licence, insurance (⚑) |
+| 10 | **How we work** *(existing process, moved out of the accordion)* | **H2:** How a Programme Works with Our Marrakech DMC Team | Reduce friction | The 7 visible steps: brief → proposal (24h) → refinement → contract → pre-arrival ops → on-site delivery → debrief | B2B quotation process | Simple numbered timeline | — | 24h / 48h promises |
+| 11 | **Quote form + B2B contact** *(existing form + new contact card)* | H2: Request a Net-Rate Quote | Conversion | Existing form (keep fields and the recaptcha). Side card: ⚑ named B2B manager, photo, languages, direct email (sales@), WhatsApp, phone, response time | — | **I10** portrait | /contact | Named person; confidentiality note (existing) |
+| 12 | **Testimonials + memberships** *(existing testimonials, verified; new logo strip)* | H2: Trusted by Travel Agents & Event Planners | Social proof | ⚑ only attributable quotes (name + company, or link to the Google/TripAdvisor review); below them a strip of ⚑ real membership/partner logos (including the Visit Marrakech MICE listing once accepted) | — | **I11** logos | Google profile, TripAdvisor "Morocco Quest DMC" listing | Link to real reviews |
+| 13 | **FAQ** *(existing, pruned)* | H2: Frequently Asked Questions — DMC Marrakech | Objections + long tail | Keep about 10 of the 15 (minimum size, booking lead time, payment terms, languages, large groups, seasons, safety, references, customisation, cancellations). Add ⚑ "Do you work directly with companies or only with agencies?" (resolves the trade-only vs direct-sales question, O-9) and "Are you licensed?" (with the number) | dmc in marrakech, mice package | — | /faq | FAQPage schema (kept; no rich results expected for non-gov/health sites) |
+| 14 | **Related DMC services** *(existing partial)* | H2 (keep) | Cluster linking | Keep | — | — | 7 DMC pages | — |
+| 15 | **Products for your clients** *(existing partial, curated)* | H2: Ready-Made Marrakech Programmes for Your Clients | Bridge to bookable product | ⚑ Curated: Agafay, Marrakech-based multi-day tours, team-building activities (not "latest") | — | Card images (existing pipeline) | /tours, /activities | B2B net-rate mention |
+| 16 | **Final CTA** *(existing)* | H2: Ready to Partner with Morocco Quest DMC? | Conversion | Quote button, sales@ email, phone, WhatsApp | — | — | #dmc-enquiry | — |
+
+## Metadata and structured data
+
+| Item | Specification |
+|---|---|
+| Title | `DMC Marrakech \| Morocco DMC & MICE \| Morocco Quest` (520 px; done locally) |
+| Description | Starts "DMC Marrakech for travel agents, tour operators and MICE planners…" (done locally) |
+| Canonical / robots | Self / index,follow (unchanged) |
+| OG / Twitter | New DMC-specific image **I13** + `og:image:alt` |
+| hreflang | When the FR page exists: `en` ↔ `fr` + `x-default` |
+| Schema | Global TravelAgency (`@id …#organization`) with ⚑ `alternateName: "Morocco Quest DMC"` (O-13), ⚑ `hasCredential` (licence), ⚑ `memberOf` (real memberships), `foundingDate` (verify that 2022 is correct for the DMC activity); page-level Service (enriched: alternateName, BusinessAudience, OfferCatalog — done locally); BreadcrumbList; FAQPage; optional `ContactPoint` for the B2B desk (contactType "sales", availableLanguage). **No AggregateRating/Review markup** unless the reviews are first-party and policy-compliant |
+| Hero image | Real `<img>` (or `<picture>` with a 4:5 mobile crop), `fetchpriority="high"`, width/height set, alt text |
+
+## Expected page shape after the changes
+
+- Same length roughly (±10%). New proof sections replace unverifiable stats, and the 15 FAQs are pruned to about 12.
+- **Above the fold (mobile):** H1, subtitle, 2 CTAs, and the start of the verified facts bar.
+- **Proof density:** at least 6 checkable facts, 2–3 real programmes, 1 named person, real reviews linked, and 8–12 original photos.

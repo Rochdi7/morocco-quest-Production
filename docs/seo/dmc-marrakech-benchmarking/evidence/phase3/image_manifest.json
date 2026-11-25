@@ -1,0 +1,439 @@
+{
+ "hero": {
+  "source": "assets/img/moroccan-traditional-dinner-event.webp",
+  "source_size": [
+   1280,
+   528
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-hero-lantern-gala-dinner-640.webp",
+    "w": 640,
+    "h": 264,
+    "kb": 39.9
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-hero-lantern-gala-dinner-960.webp",
+    "w": 960,
+    "h": 396,
+    "kb": 72.5
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-hero-lantern-gala-dinner-1280.webp",
+    "w": 1280,
+    "h": 528,
+    "kb": 104.8
+   }
+  ]
+ },
+ "tile_mice": {
+  "source": "assets/img/morocco-quest-local-sourcing-catering-sustainable-events.webp",
+  "source_size": [
+   1366,
+   641
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-corporate-event-garden-gala-400.webp",
+    "w": 400,
+    "h": 300,
+    "kb": 20.8
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-corporate-event-garden-gala-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 34.8
+   }
+  ]
+ },
+ "tile_incentive": {
+  "source": "assets/img/morocco-quest-camel-caravan-desert-team-building-marrakech.webp",
+  "source_size": [
+   1400,
+   934
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-incentive-camel-caravan-400.webp",
+    "w": 400,
+    "h": 300,
+    "kb": 9.1
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-incentive-camel-caravan-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 19.3
+   }
+  ]
+ },
+ "tile_conference": {
+  "source": "assets/img/morocco-quest-palais-des-congres-marrakech-pco-hero.webp",
+  "source_size": [
+   773,
+   460
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-conference-theatre-hall-400.webp",
+    "w": 400,
+    "h": 300,
+    "kb": 17.7
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-conference-theatre-hall-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 31.9
+   }
+  ]
+ },
+ "tile_teambuilding": {
+  "source": "assets/img/morocco-quest-team-building-activities-marrakech.webp",
+  "source_size": [
+   900,
+   607
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-team-building-quad-palm-grove-400.webp",
+    "w": 400,
+    "h": 300,
+    "kb": 28.2
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-team-building-quad-palm-grove-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 64.7
+   }
+  ]
+ },
+ "tile_luxury": {
+  "source": "assets/img/morocco-quest-luxury-berber-tent-gala-dinner-agafay-desert.webp",
+  "source_size": [
+   1400,
+   788
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-luxury-desert-tent-dinner-400.webp",
+    "w": 400,
+    "h": 300,
+    "kb": 17.3
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-luxury-desert-tent-dinner-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 35.6
+   }
+  ]
+ },
+ "tile_transport": {
+  "source": "assets/img/morocco-desert-4x4-adventure-tour-rural-landscape.webp",
+  "source_size": [
+   1600,
+   1200
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-transport-4x4-fleet-400.webp",
+    "w": 400,
+    "h": 300,
+    "kb": 13.9
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-transport-4x4-fleet-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 32.6
+   }
+  ]
+ },
+ "tile_hotels": {
+  "source": "assets/img/morocco-quest-gala-courtyard-riad-night-marrakech.webp",
+  "source_size": [
+   1400,
+   934
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-riad-courtyard-accommodation-400.webp",
+    "w": 400,
+    "h": 300,
+    "kb": 23.1
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-riad-courtyard-accommodation-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 47.3
+   }
+  ]
+ },
+ "tile_excursions": {
+  "source": "assets/img/guide-dar-el-bacha-marrakech-tour-moroccan-culture.webp",
+  "source_size": [
+   1067,
+   497
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-guided-visit-dar-el-bacha-400.webp",
+    "w": 400,
+    "h": 300,
+    "kb": 30.2
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-guided-visit-dar-el-bacha-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 62.3
+   }
+  ]
+ },
+ "guide_meetings": {
+  "source": "assets/img/morocco-quest-conference-interpreting-booth-delegate-logistics.webp",
+  "source_size": [
+   1024,
+   491
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-conference-interpreting-booth-480.webp",
+    "w": 480,
+    "h": 320,
+    "kb": 17.0
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-conference-interpreting-booth-720.webp",
+    "w": 720,
+    "h": 480,
+    "kb": 28.0
+   }
+  ]
+ },
+ "guide_gala": {
+  "source": "assets/img/morocco-quest-riad-restaurant-service-360-hero.webp",
+  "source_size": [
+   1600,
+   1068
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-palace-restaurant-service-480.webp",
+    "w": 480,
+    "h": 320,
+    "kb": 27.0
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-palace-restaurant-service-720.webp",
+    "w": 720,
+    "h": 480,
+    "kb": 48.2
+   }
+  ]
+ },
+ "guide_incentive": {
+  "source": "assets/img/hot-air-balloon-ride-morocco-desert-adventure.webp",
+  "source_size": [
+   1600,
+   578
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-hot-air-balloon-sunrise-480.webp",
+    "w": 480,
+    "h": 320,
+    "kb": 9.5
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-hot-air-balloon-sunrise-720.webp",
+    "w": 720,
+    "h": 480,
+    "kb": 16.7
+   }
+  ]
+ },
+ "guide_dining": {
+  "source": "assets/img/morocco-quest-gala-dinner-moroccan-cuisine-mice-marrakech.webp",
+  "source_size": [
+   1400,
+   788
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-moroccan-gala-dinner-cuisine-480.webp",
+    "w": 480,
+    "h": 320,
+    "kb": 13.5
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-moroccan-gala-dinner-cuisine-720.webp",
+    "w": 720,
+    "h": 480,
+    "kb": 23.0
+   }
+  ]
+ },
+ "planner": {
+  "source": "assets/img/morocco-quest-marrakech-skyline-atlas-conventions.webp",
+  "source_size": [
+   1400,
+   935
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-jemaa-el-fna-square-dusk-600.webp",
+    "w": 600,
+    "h": 400,
+    "kb": 33.9
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-jemaa-el-fna-square-dusk-900.webp",
+    "w": 900,
+    "h": 600,
+    "kb": 64.6
+   }
+  ]
+ },
+ "sample_conference": {
+  "source": "assets/img/morocco-quest-guests-red-carpet-arrival-event-venue-morocco.webp",
+  "source_size": [
+   1400,
+   934
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-guests-arrival-event-venue-480.webp",
+    "w": 480,
+    "h": 320,
+    "kb": 23.6
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-guests-arrival-event-venue-720.webp",
+    "w": 720,
+    "h": 480,
+    "kb": 42.9
+   }
+  ]
+ },
+ "sample_incentive": {
+  "source": "assets/img/agafay-desert-luxury-camp-camel-trek-morocco.webp",
+  "source_size": [
+   4032,
+   1624
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-agafay-desert-camp-480.webp",
+    "w": 480,
+    "h": 320,
+    "kb": 27.5
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-agafay-desert-camp-720.webp",
+    "w": 720,
+    "h": 480,
+    "kb": 54.8
+   }
+  ]
+ },
+ "sample_sahara": {
+  "source": "assets/img/desert-luxury-camp-morocco-sunset-traditional-tents.webp",
+  "source_size": [
+   1280,
+   959
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-sahara-camp-sunset-extension-480.webp",
+    "w": 480,
+    "h": 320,
+    "kb": 21.5
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-sahara-camp-sunset-extension-720.webp",
+    "w": 720,
+    "h": 480,
+    "kb": 40.8
+   }
+  ]
+ },
+ "who": {
+  "source": "assets/img/morocco-quest-marrakech-medina-rooftops-atlas-view.webp",
+  "source_size": [
+   1100,
+   732
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-medina-street-jemaa-el-fna-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 44.9
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-medina-street-jemaa-el-fna-900.webp",
+    "w": 900,
+    "h": 675,
+    "kb": 84.8
+   }
+  ]
+ },
+ "why": {
+  "source": "assets/img/morocco-quest-koutoubia-mosque-marrakech-why-us.webp",
+  "source_size": [
+   1400,
+   1051
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-b2b-partnership-handshake-600.webp",
+    "w": 600,
+    "h": 450,
+    "kb": 18.0
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-b2b-partnership-handshake-900.webp",
+    "w": 900,
+    "h": 675,
+    "kb": 31.1
+   }
+  ]
+ },
+ "coverage": {
+  "source": "assets/img/morocco-quest-atlas-mountain-road-morocco-dmc-hero.webp",
+  "source_size": [
+   1600,
+   1066
+  ],
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-atlas-mountain-road-coverage-640.webp",
+    "w": 640,
+    "h": 360,
+    "kb": 33.6
+   },
+   {
+    "path": "assets/img/dmc-marrakech/dmc-marrakech-atlas-mountain-road-coverage-1000.webp",
+    "w": 1000,
+    "h": 562,
+    "kb": 69.0
+   }
+  ]
+ },
+ "og": {
+  "source": "assets/img/moroccan-traditional-dinner-event.webp (composited)",
+  "variants": [
+   {
+    "path": "assets/img/dmc-marrakech/og-dmc-marrakech-morocco-quest-1200x630.jpg",
+    "w": 1200,
+    "h": 630,
+    "kb": 157.3
+   }
+  ]
+ }
+}

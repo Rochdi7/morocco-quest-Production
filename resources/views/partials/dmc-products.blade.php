@@ -4,13 +4,26 @@
      data (cached 1h) so the DMC controllers stay untouched.
 ═══════════════════════════════════════════════════════ --}}
 @php
-    $dmcTours = \Illuminate\Support\Facades\Cache::remember('dmc_products_tours', 3600, function () {
-        return \App\Models\Tour::with(['firstImage'])->latest()->take(3)->get();
-    });
-
-    $dmcActivities = \Illuminate\Support\Facades\Cache::remember('dmc_products_activities', 3600, function () {
-        return \App\Models\Activity::with(['firstImage', 'category'])->latest()->take(3)->get();
-    });
+    // Optional $curatedTourSlugs / $curatedActivitySlugs (e.g. /dmc-marrakech shows
+    // Marrakech-relevant products). Missing slugs fall back to the latest items, so
+    // the section never renders empty. Pages that pass nothing keep the old behaviour.
+    $pick = function (string $model, array $with, array $slugs, string $key) {
+        return \Illuminate\Support\Facades\Cache::remember($key, 3600, function () use ($model, $with, $slugs) {
+            $items = collect();
+            if ($slugs) {
+                $items = $model::with($with)->whereIn('slug', $slugs)->get()
+                    ->sortBy(fn ($m) => array_search($m->slug, $slugs))->values();
+            }
+            if ($items->count() < 3) {
+                $items = $items->concat($model::with($with)->whereNotIn('id', $items->pluck('id'))->latest()->take(3 - $items->count())->get());
+            }
+            return $items;
+        });
+    };
+    $tourSlugs = $curatedTourSlugs ?? [];
+    $activitySlugs = $curatedActivitySlugs ?? [];
+    $dmcTours = $pick(\App\Models\Tour::class, ['firstImage'], $tourSlugs, $tourSlugs ? 'dmc_products_tours_' . md5(implode('|', $tourSlugs)) : 'dmc_products_tours');
+    $dmcActivities = $pick(\App\Models\Activity::class, ['firstImage', 'category'], $activitySlugs, $activitySlugs ? 'dmc_products_activities_' . md5(implode('|', $activitySlugs)) : 'dmc_products_activities');
 @endphp
 
 @if($dmcTours->isNotEmpty() || $dmcActivities->isNotEmpty())
@@ -18,9 +31,9 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center mb-5">
-                <span class="sec-subtitle">Build Your Packages</span>
-                <h2 class="sec-title">Explore Our Morocco Products</h2>
-                <p>Ready-made itineraries and destination content to build your client packages from — all available on a B2B net-rate basis.</p>
+                <span class="sec-subtitle">{{ $productsSubtitle ?? 'Build Your Packages' }}</span>
+                <h2 class="sec-title">{{ $productsHeading ?? 'Explore Our Morocco Products' }}</h2>
+                <p>{{ $productsIntro ?? 'Ready-made itineraries and destination content to build your client packages from — all available on a B2B net-rate basis.' }}</p>
             </div>
         </div>
 
@@ -117,12 +130,12 @@
 
         <div class="row g-3 justify-content-center mt-4">
             <div class="col-12 col-sm-auto">
-                <a href="{{ route('tours.index') }}" class="vs-btn d-block">Browse All Tours</a>
+                <a href="{{ route('tours.index') }}" class="vs-btn d-block">{{ $browseToursLabel ?? 'Browse All Tours' }}</a>
             </div>
             <div class="col-12 col-sm-auto">
                 <a href="{{ route('experiences.index') }}" class="vs-btn d-block"
                    style="background:transparent;border:2px solid var(--theme-color);color:var(--theme-color);">
-                    Browse All Activities
+                    {{ $browseActivitiesLabel ?? 'Browse All Activities' }}
                 </a>
             </div>
         </div>

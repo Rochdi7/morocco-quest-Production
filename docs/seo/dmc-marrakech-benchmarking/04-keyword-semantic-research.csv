@@ -1,0 +1,18 @@
+keyword,role,search_volume_us_monthly,kd_us,cpc_usd,competition,intent,target_url,mq_position_measured,data_source,notes
+dmc marrakech,primary,40,7,0,0.52,commercial / B2B navigational,/dmc-marrakech,"not in top 94 Google MA (2026-11-24); #35 Google MA (2026-08-26); not in Semrush US top 30",Semrush phrase_these + phrase_kdi (us); Google live scrape,MA/UK/FR Semrush DBs return no data; real demand is international B2B buyers + Moroccan market
+marrakech dmc,secondary,10,0,0,0.33,commercial,/dmc-marrakech,not measured,Semrush (us),same SERP family as primary
+dmc in marrakech,secondary,0 (reported),n/a,0,0.17,commercial,/dmc-marrakech,not measured,Semrush (us),below Semrush reporting threshold
+destination management company marrakech,secondary,0 (reported),n/a,0,0.33,commercial,/dmc-marrakech,not measured,Semrush (us),covered by new H1 wording
+morocco dmc,secondary (highest volume),260,0,6.24,0.75,commercial,/dmc-marrakech,"Semrush US #20 via /tag/morocco-dmc (pre-noindex snapshot); not in top 48 Google MA",Semrush + Google live scrape,tag page now noindex so equity should consolidate on /dmc-marrakech
+dmc morocco,secondary,30,12,5.74,0.20,commercial,/dmc-marrakech,Semrush US #43 (/dmc-marrakech),Semrush,
+destination management company morocco,secondary,0 (reported),n/a,6.24,0.75,commercial,/destination-management-company,not measured,Semrush (us),kept on the explainer page per docs/seo-fix/KEYWORD_MAP.md to avoid cannibalisation; /dmc-marrakech supports it semantically only
+what is a dmc,explainer,480 (per KEYWORD_MAP.md),16 (per KEYWORD_MAP.md),n/a,n/a,informational,/destination-management-company,not measured,docs/seo-fix/KEYWORD_MAP.md (earlier Semrush pull),not re-queried to save units
+destination management company,explainer,2900 (per KEYWORD_MAP.md),19 (per KEYWORD_MAP.md),n/a,n/a,informational,/destination-management-company,not measured,docs/seo-fix/KEYWORD_MAP.md,not re-queried
+mice morocco,supporting,20,not queried,0,0.33,commercial,/meetings-conventions-management (primary) + /dmc-marrakech (supporting),not measured,Semrush (us),
+incoming travel agency marrakech,supporting,no data returned,n/a,n/a,n/a,commercial B2B,/dmc-marrakech,not measured,Semrush (us),absent from Semrush response = no tracked volume
+b2b travel agency morocco,supporting,no data returned,n/a,n/a,n/a,commercial B2B,/dmc-marrakech,not measured,Semrush (us),absent from Semrush response
+ground handler marrakech,supporting,no data returned,n/a,n/a,n/a,commercial B2B,/dmc-marrakech,not measured,Semrush (us),term already used in page body (ground handling x2)
+incentive travel marrakech,supporting,no data returned,n/a,n/a,n/a,commercial,/team-building-marrakech,not measured,Semrush (us),
+dmc marrakech receptive,related search (Google),n/a,n/a,n/a,n/a,commercial,/dmc-marrakech,not measured,Google related searches 2026-08-26,'agence réceptive' is the French trade term; FR content opportunity
+agence de voyage marrakech (variants),related search (Google),n/a,n/a,n/a,n/a,mixed B2C/B2B (FR),not targeted,not measured,Google related searches 2026-11-24,B2C/French intent; not for this page
+visit morocco dmc,related search (Google),n/a,n/a,n/a,n/a,navigational (competitor brand),not targeted,not measured,Google related searches 2026-08-26,competitor brand

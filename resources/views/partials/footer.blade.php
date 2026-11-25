@@ -134,6 +134,9 @@
                         </div>
                         <script>
                             document.addEventListener('DOMContentLoaded', function() {
+                                // Toastify is not loaded on every layout; without this guard a form
+                                // submission threw "Toastify is not defined" on those pages.
+                                if (typeof Toastify !== 'function') return;
                                 @if (session('success'))
                                     Toastify({
                                         text: "{{ session('success') }}",

@@ -156,6 +156,9 @@
                                 values that drive everything we do. Whether you’re looking to explore the bustling souks of
                                 Marrakech, the golden dunes of the Sahara, or the serene coasts of Essaouira, Morocco Quest
                                 is here to make your journey unforgettable.
+                                For travel agencies, tour operators and corporate planners, the same Marrakech team works as a
+                                <a href="{{ route('dmc.marrakech') }}">destination management company (DMC) in Marrakech</a>,
+                                handling groups, incentives and events across Morocco.
                             </p>
                             {{-- Phase 6: Entity mentions for topical authority and AI citation --}}
                             <p>

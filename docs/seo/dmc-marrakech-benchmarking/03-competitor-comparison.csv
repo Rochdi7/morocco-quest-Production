@@ -1,0 +1,28 @@
+SEO factor,Morocco Quest /dmc-marrakech (before),Morocco Quest (after this change),dmc-marrakech.com,dmcmarrakech.com,your-morocco-dmc.com,originallymorocco.com,visitmoroccodmc.com,themoroccoway.com/en/dmc-marrakech,Best competitor,Source
+URL benchmarked,https://morocco-quest.com/dmc-marrakech,https://morocco-quest.com/dmc-marrakech,https://dmc-marrakech.com/,https://dmcmarrakech.com/,https://your-morocco-dmc.com/home/,https://www.originallymorocco.com/,https://visitmoroccodmc.com/,https://themoroccoway.com/en/dmc-marrakech,,
+Google MA position 2026-11-24 (dmc marrakech),not in top 94 (was #35 on 2026-08-26),not yet re-measured,2,8,4,not in top 10,not in top 10,not in top 10,dmc-marrakech.com (#2; #1 is a directory),Google live scrape gl=ma
+Semrush US position (dmc marrakech),not in top 30,n/a,1,2,7,10,5,24,dmc-marrakech.com,Semrush phrase_organic us
+Ranking URL type,inner page on B2C-led site,inner page,homepage (DMC-only site),homepage (DMC-only site),homepage (DMC-only site),homepage (DMC-only site),homepage (DMC-only site),inner page (mixed site),homepage of DMC-only site,observed
+Exact-match / DMC in domain,no,no,yes (exact),yes (exact),partial,no,partial,no,exact-match domain,observed
+SEO title,Morocco DMC Marrakech | MICE & Incentive Travel,DMC Marrakech | Morocco DMC & MICE | Morocco Quest,Home,DMC Marrakech - Your Premier Event Management,"Your Morocco DMC, Marrakech destination management company",DMC & MICE Agency in Marrakech | Originally Morocco,DMC Morocco since 1994 | Visit Morocco Travel & Events,DMC Marrakech | The Morocco Way,"exact phrase first, brand second",raw HTML
+Exact phrase leads title,no (preceded by 'Morocco'),yes,no,yes,no,no,no,yes,yes,raw HTML
+Meta description,present (no exact phrase first),present (exact phrase first),missing,present,present (long),present,present,present,present,raw HTML
+H1,Morocco DMC & DMC Marrakech – Destination Management & MICE,DMC Marrakech: Destination Management Company for Travel Agents & MICE Planners,DMC Marrakech,Your Trusted Partner for Corporate Travel and Events is DMC Marrakech,YOUR MOROCCO DMC THE POWER OF LOCAL KNOWLEDGE,Originally Morocco: Your Premier DMC for MICE & Incentives,"Morocco, beyond the expected",DMC Marrakech,exact phrase H1,raw HTML
+H1 quality,keyword-stacked (DMC twice),natural + exact phrase first,exact but bare,natural,brand-led,brand-led,brand-only,exact but bare,natural + exact,assessment
+Content depth (main words),3713,3648 (unchanged body),761,1566,1233,1360,447,231,Morocco Quest is longest,analyze.py word count
+Search intent match (B2B DMC),strong,strong,strong,strong,strong,strong,strong,strong,tie,assessment
+Semantic coverage (MICE/incentive/ground handling/net rates/transfers),very broad (incentive 17 / MICE 14 / net rate 12 / transfer 11),same,narrow,narrow,incentive-focused,MICE/incentive-focused,narrow,narrow,Morocco Quest,term counts
+FAQ section,15 Q&A + FAQPage,same,no,yes,no,yes + FAQPage,no,yes + FAQPage,Morocco Quest,raw HTML
+Schema on page,"WebSite, TravelAgency, Service, BreadcrumbList, FAQPage","same + Service.audience, alternateName, OfferCatalog","Organization, WebSite, WebPage, Article","TravelAgency, WebPage, BreadcrumbList, WebSite","WebPage, BreadcrumbList, WebSite","WebPage, BreadcrumbList, WebSite, Organization, FAQPage","Organization, WebSite, WebPage, Article","TravelAgency/LocalBusiness, FAQPage",Morocco Quest,raw HTML
+Image alt coverage,24/24,22/22 (local render),3/6,6/26,6/17,n/m,1/1,3/16,Morocco Quest,raw HTML
+Internal links to target page (body/contextual),nav + 7 DMC pages + 1 blog post; none from homepage body,+1 contextual link from homepage,n/a (homepage),n/a (homepage),n/a (homepage),n/a (homepage),n/a (homepage),n/m,homepage targets inherit all equity,grep + live HTML
+Backlinks to the ranking URL,0 known (Semrush: no data for URL),0,all domain links (homepage),all domain links (homepage),all domain links (homepage),all domain links (homepage),all domain links (homepage),n/m,homepage targets,Semrush backlinks_overview
+Domain Authority Score,2,2,6,7,6,7,9,n/m,visitmoroccodmc.com (9),Semrush
+Referring domains (domain),2103,2103,2324,2305,2140,2196,2540,n/m,visitmoroccodmc.com,Semrush
+Share of RDs with AS 0-2,94.5%,94.5%,94.0%,n/m,n/m,n/m,n/m,n/m,similar low-quality profiles,Semrush ascore_profile
+TTFB (single fetch from Morocco 2026-11-24),0.56 s,0.56 s,1.80 s,5.78 s,1.49 s,1.64 s,1.93 s,0.95 s,Morocco Quest,curl
+Page speed (lab),mobile LCP ~4.6 s local lab (2026-10-14); PSI quota exhausted today,unchanged,not measured,not measured,not measured,not measured,not measured,not measured,unknown,repo evidence
+Mobile experience,responsive; H1 wraps to 3 lines at 390px with no overflow,verified 390px + 1366px,n/m,n/m,n/m,n/m,n/m,n/m,n/m,Selenium screenshot
+E-E-A-T proof,"stats (20+ groups/yr, 11 countries), 4 anonymised testimonials, licence claim without number, TripAdvisor listing",unchanged (needs owner facts),Rating block,"'years of experience', case study mention",client logos ('They trusted us') + testimonials,"20+ yrs, 14 testimonial mentions, GBP 5.0★",since 1994 in title,licence mention,originallymorocco / visitmoroccodmc,raw HTML + Aug local pack
+Google Business Profile in local pack,not seen,not seen,"yes ('Dmc Marrakech', 5.0, 4 reviews)",n/m,n/m,"yes (5.0, 20+ yrs)",n/m,n/m,originallymorocco,2026-08-26 SERP
+Conversion (form / phone / WhatsApp / email),"B2B form, tel, WhatsApp, sales@ email, 24h quote",same,contact block,contact + FAQ,contact,contact,contact,contact,Morocco Quest,raw HTML

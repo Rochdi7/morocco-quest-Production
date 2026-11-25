@@ -1,0 +1,2944 @@
+[
+ {
+  "label": "c1",
+  "input_url": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/",
+  "status": 200,
+  "headers": {
+   "cache-control": "public, s-maxage=216000",
+   "content-type": "text/html; charset=UTF-8",
+   "link": "<https://mice.visitmarrakech.com/wp-json/>; rel=\"https://api.w.org/\", <https://mice.visitmarrakech.com/wp-json/wp/v2/pages/459>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://mice.visitmarrakech.com/?p=459>; rel=shortlink",
+   "server": "cloudflare",
+   "x-powered-by": "PHP/8.0.30"
+  },
+  "url": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/",
+  "title": "Les agences réceptives (DMC) | MICE in Marrakech",
+  "description": "Vos partenaires pour un événement inoubliable Organiser un événement à Marrakech, qu’il s’agisse d’un séminaire, d’un congrès, d’un mariage ou d’un voyage d’entreprise, nécessite des experts locaux capables de transformer vos idées en réalité. Les agences réceptives (DMC - Destination Management Companies) de Marrakech possèdent l’expertise, les contacts et la créativité pour concevoir des expériences",
+  "robots": "max-image-preview:large",
+  "canonical": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/",
+  "lang": "fr-FR",
+  "hreflang": [
+   [
+    "fr",
+    "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/"
+   ],
+   [
+    "en",
+    "https://mice.visitmarrakech.com/en/se-reunir/les-agences-receptives-dmc/"
+   ]
+  ],
+  "og": {
+   "og:locale": "fr_FR",
+   "og:site_name": "MICE in Marrakech | Incentive; Congrés; Conférence; Evenement",
+   "og:type": "article",
+   "og:title": "Les agences réceptives (DMC) | MICE in Marrakech",
+   "og:description": "Vos partenaires pour un événement inoubliable Organiser un événement à Marrakech, qu’il s’agisse d’un séminaire, d’un congrès, d’un mariage ou d’un voyage d’entreprise, nécessite des experts locaux capables de transformer vos idées en réalité. Les agences réceptives (DMC - Destination Management Companies) de Marrakech possèdent l’expertise, les contacts et la créativité pour concevoir des expériences",
+   "og:url": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/",
+   "og:image": "https://mice2024.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+   "og:image:secure_url": "https://mice2024.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+   "twitter:card": "summary_large_image",
+   "twitter:title": "Les agences réceptives (DMC) | MICE in Marrakech",
+   "twitter:description": "Vos partenaires pour un événement inoubliable Organiser un événement à Marrakech, qu’il s’agisse d’un séminaire, d’un congrès, d’un mariage ou d’un voyage d’entreprise, nécessite des experts locaux capables de transformer vos idées en réalité. Les agences réceptives (DMC - Destination Management Companies) de Marrakech possèdent l’expertise, les contacts et la créativité pour concevoir des expériences",
+   "twitter:image": "https://mice2024.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg"
+  },
+  "viewport": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+  "heads": [
+   {
+    "tag": "H1",
+    "text": "Les agences réceptives (DMC)",
+    "top": 503,
+    "visible": true
+   },
+   {
+    "tag": "H2",
+    "text": "Vos partenaires pour un événement inoubliable",
+    "top": 690,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Pampa Voyage",
+    "top": 870,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "CHECK INN MOROCCO",
+    "top": 870,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MOROCCO 5 SENSES LEISURE & EVENTS",
+    "top": 870,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Infinite Morocco",
+    "top": 1033,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "ABERCROMBIE & KENT",
+    "top": 1033,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Terres et voyages",
+    "top": 1033,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "L’ATELIER DU VOYAGE",
+    "top": 1195,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Complete Tour",
+    "top": 1195,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "ORIGINALLY MOROCCO",
+    "top": 1195,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Ahsane voyage",
+    "top": 1358,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "APADANA MARRAKESH TRAVEL",
+    "top": 1358,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "IDEAL TRAVEL MOROCCO",
+    "top": 1358,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "HIBISCUS TRAVEL",
+    "top": 1520,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MOROCCO PRIVATE TRAVEL",
+    "top": 1520,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "JCI TOURS",
+    "top": 1520,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MY MOROCCO TRAVEL",
+    "top": 1683,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "DELIGHT EVENT MANAGEMENT",
+    "top": 1683,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Intrepid DMC Marrakech",
+    "top": 1683,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MOROCCO DISCOVERY",
+    "top": 1845,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Terra Sud Services",
+    "top": 1845,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "VIAJES MARRAKECH TOURS",
+    "top": 1845,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "STARWAY",
+    "top": 2008,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "ACROSS MOROCCO",
+    "top": 2008,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Maroc Expedition Travel",
+    "top": 2008,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Sentier BERBERE",
+    "top": 2170,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MONARCH TRAVEL Marrakech",
+    "top": 2170,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MARRAKECH GARDENS TRAVEL",
+    "top": 2170,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Ponctuel voyages",
+    "top": 2354,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Tafoukt Travel",
+    "top": 2354,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MOUNTAIN VOYAGE",
+    "top": 2354,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "RJ Travel agency",
+    "top": 2516,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "SOUMA TRAVEL",
+    "top": 2516,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "VOYAGES 21",
+    "top": 2516,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "INTOUR",
+    "top": 2679,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Incircle",
+    "top": 2679,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Nomade Experience Travel",
+    "top": 2679,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "HABTI VOYAGE",
+    "top": 2841,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "FIRST CLASS TRAVEL INTERNATIONAL",
+    "top": 2841,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Travel Link Morocco",
+    "top": 2841,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "DESTINATION EVASION MAROC",
+    "top": 3004,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "UNITOUR MAROC",
+    "top": 3004,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "SPORT TRAVEL",
+    "top": 3004,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Golden Palms Groupes",
+    "top": 3166,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "NG TRAVEL & EVENT",
+    "top": 3166,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "KMT",
+    "top": 3166,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Travel Quest",
+    "top": 3329,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "ENTOURAGE TRAVEL INCORPORATED",
+    "top": 3329,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "S TOURS (S)",
+    "top": 3329,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MICE In Marrakech",
+    "top": 3647,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Sites Connexes",
+    "top": 3647,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Choisir Marrakech",
+    "top": 3647,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Infos Pratiques",
+    "top": 3647,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Sign in",
+    "top": 0,
+    "visible": false
+   },
+   {
+    "tag": "H4",
+    "text": "Send Message",
+    "top": 0,
+    "visible": false
+   },
+   {
+    "tag": "H4",
+    "text": "My favorites",
+    "top": 0,
+    "visible": false
+   }
+  ],
+  "imgs": [
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+    "alt": "MICE in Marrakech",
+    "loading": null,
+    "srcset": false,
+    "natural": [
+     300,
+     93
+    ],
+    "rendered": [
+     100,
+     31
+    ],
+    "top": 612,
+    "bytes": 6584,
+    "transfer": null,
+    "width_attr": "1128",
+    "height_attr": "348"
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+    "alt": "",
+    "loading": null,
+    "srcset": false,
+    "natural": [
+     300,
+     93
+    ],
+    "rendered": [
+     0,
+     0
+    ],
+    "top": 0,
+    "bytes": 6584,
+    "transfer": null,
+    "width_attr": "1128",
+    "height_attr": "348"
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+    "alt": "",
+    "loading": null,
+    "srcset": false,
+    "natural": [
+     300,
+     93
+    ],
+    "rendered": [
+     170,
+     52
+    ],
+    "top": 54,
+    "bytes": 6584,
+    "transfer": null,
+    "width_attr": "1128",
+    "height_attr": "348"
+   }
+  ],
+  "bgs": [
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/DSC_8997.jpg",
+    "el": "DIV.elementor-element",
+    "rendered": [
+     1351,
+     500
+    ],
+    "top": 113,
+    "bytes": 495947
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arih-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 28959
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arwm-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 5030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/crt-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 14634
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/unwto-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 4600
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/wtcf.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 59030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/logo-aravms.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 151671
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/logo-asso-fra.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 44250
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/onmt-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 6241
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/ville-de-marrakech-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 33311
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/region.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 25915
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/mechouar-kasbah.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 101057
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arih-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 28959
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arwm-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 5030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/crt-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 14634
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/unwto-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 4600
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/wtcf.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 59030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/logo-aravms.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 151671
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/logo-asso-fra.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 44250
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/onmt-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 6241
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/ville-de-marrakech-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 33311
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/region.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 25915
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/mechouar-kasbah.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 101057
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arih-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 28959
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arwm-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 5030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/crt-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 4164,
+    "bytes": 14634
+   }
+  ],
+  "vids": [],
+  "links": [
+   {
+    "href": "https://mice.visitmarrakech.com/",
+    "text": "",
+    "rel": "home"
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/#cmplz-manage-consent-container",
+    "text": "Gérer les options",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/#cmplz-cookies-overview",
+    "text": "Gérer les services",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/#cmplz-tcf-wrapper",
+    "text": "Gérer {vendor_count} fournisseurs",
+    "rel": ""
+   },
+   {
+    "href": "https://cookiedatabase.org/tcf/purposes/",
+    "text": "En savoir plus sur ces finalités",
+    "rel": "noopener noreferrer nofollow"
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/#cmplz-manage-consent-container",
+    "text": "Voir les préférences",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/",
+    "text": "Politique de cookies",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-confidentialite/",
+    "text": "Politique de confidentialité",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/#",
+    "text": "{title}",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "Infos pratiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Trouver un Prestataire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/",
+    "text": "Se réunir",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/",
+    "text": "La destination",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/votre-evenement-marrakech/",
+    "text": "Votre événement",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/",
+    "text": "Visit Marrakech & Region",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "Professionnels",
+    "rel": ""
+   },
+   {
+    "href": "https://data.visitmarrakech.com/",
+    "text": "Open Data",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/",
+    "text": "Visit Marrakech & Region",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "Professionnels",
+    "rel": ""
+   },
+   {
+    "href": "https://data.visitmarrakech.com/",
+    "text": "Open Data",
+    "rel": ""
+   },
+   {
+    "href": "https://www.facebook.com/visitmarrakechregion/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.instagram.com/visitmarrakechregion/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.youtube.com/@visitmarrakechregion7152",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://x.com/visit_marrakech",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/",
+    "text": "Se réunir",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/",
+    "text": "La destination",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/votre-evenement-marrakech/",
+    "text": "Votre événement",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/",
+    "text": "Se réunir",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/",
+    "text": "La destination",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/votre-evenement-marrakech/",
+    "text": "Votre événement",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "Infos pratiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Trouver un Prestataire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/",
+    "text": "Home",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/",
+    "text": "Se réunir",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/pampa-voyage/",
+    "text": "Pampa Voyage Pampa est une agence événementielle basée à Casablanca, spécialisée",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/check-inn-morocco/",
+    "text": "CHECK INN MOROCCO Check Inn Morocco est une société de gestion de destination qu",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/morocco-5-senses-leisure-events/",
+    "text": "MOROCCO 5 SENSES LEISURE & EVENTS L'équipe est formée d'experts capables de conc",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/infinite-morocco/",
+    "text": "Infinite Morocco Infinite Morocco est une agence experte en organisation d’événe",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/abercrombie-kent/",
+    "text": "ABERCROMBIE & KENT Abercrombie & Kent est le plus grand réseau mondial de sociét",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/terres-et-voyages/",
+    "text": "Terres et voyages Terres et Voyages organise des voyages et événements sur mesur",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/latelier-du-voyage/",
+    "text": "L’ATELIER DU VOYAGE Fondé en 1998, L'Atelier du Voyage a intégré le groupe SATGU",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/complete-tour/",
+    "text": "Complete Tour Complete Tour, une agence de voyage et DMC (Destination Management",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/originally-morocco/",
+    "text": "ORIGINALLY MOROCCO Originally Morocco est l'une des principales sociétés de gest",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/ahsane-voyage/",
+    "text": "Ahsane voyage Chez Ahsane Voyage, la focus est mis sur l’organisation de voyages",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/apadana-travel/",
+    "text": "APADANA MARRAKESH TRAVEL Apadana Marrakesh Travel est une agence de voyage d'aff",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/ideal-travel-morocco/",
+    "text": "IDEAL TRAVEL MOROCCO Ideal Travel Morocco, agence de voyage marocaine basée à Ma",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/hibiscus-travel/",
+    "text": "HIBISCUS TRAVEL Expert dans ce domaine, opérons avec conviction et une forte vol",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/morocco-private-travel/",
+    "text": "MOROCCO PRIVATE TRAVEL Votre rêve de découvrir le Maroc depuis Marrakech ou Casa",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/jci-tours/",
+    "text": "JCI TOURS JCI Tours, avec son équipe dynamique, compétente et motivée, s'engage ",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/my-morocco-travel/",
+    "text": "MY MOROCCO TRAVEL Nous avons compris qu’aujourd’hui les gens recherchent bien pl",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/delight-event-management/",
+    "text": "DELIGHT EVENT MANAGEMENT Basée à Marrakech, DELIGHT Event Management est une age",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/intrepid-dmc-marrakech/",
+    "text": "Intrepid DMC Marrakech Intrepid DMC Marrakech organise des événements uniques et",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/morocco-discovery/",
+    "text": "MOROCCO DISCOVERY Morocco Discovery est un voyagiste spécialisé et une agence de",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/terra-sud-services/",
+    "text": "Terra Sud Services Terra Sud Adventures organise des voyages d’aventure et des é",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/viajes-marrakech-tours/",
+    "text": "VIAJES MARRAKECH TOURS Viajes Marrakech organise des circuits, excursions et évé",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/starway/",
+    "text": "STARWAY",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/across-morocco/",
+    "text": "ACROSS MOROCCO Across Morocco met son savoir-faire et son expérience à votre dis",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/maroc-expedition-travel/",
+    "text": "Maroc Expedition Travel Morocco Expedition Travel est une entreprise de voyages ",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/sentier-berbere/",
+    "text": "Sentier BERBERE Sentier Berbère organise des événements authentiques et immersif",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/monarch-travel-marrakech/",
+    "text": "MONARCH TRAVEL Marrakech Monarch Travel propose des solutions sur mesure pour l’",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/marrakech-gardens-travel/",
+    "text": "MARRAKECH GARDENS TRAVEL Marrakech Gardens Travel offre des solutions personnali",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/ponctuel-voyages/",
+    "text": "Ponctuel voyages Ponctuel Voyages à Marrakech propose des solutions MICE et des ",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/tafoukt-travel/",
+    "text": "Tafoukt Travel Tafoukt Travel organise des événements et séjours sur mesure à Ma",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/mountain-voyage/",
+    "text": "MOUNTAIN VOYAGE Mountain Voyage a été crée pour nous permettre de fournir un ser",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/rj-travel-agency/",
+    "text": "RJ Travel agency RJ Travel Agency propose des services sur mesure pour l’organis",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/souma-travel/",
+    "text": "SOUMA TRAVEL Souma Travel, entreprise de gestion de voyages basée à Marrakech, p",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/voyages-21/",
+    "text": "VOYAGES 21 VOYAGES 21 propose des séjours, pèlerinages et événements sur mesure,",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/intour/",
+    "text": "INTOUR Spécialiste des voyages incentives et du tourisme, INTOUR organise vos sé",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/incircle/",
+    "text": "Incircle Leur mission implique l'assemblage de spécialistes de chaque domaine d'",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/nomade-experience-travel/",
+    "text": "Nomade Experience Travel L'objectif et la vision de 'Nomad Experience' se concen",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/habti-voyage/",
+    "text": "HABTI VOYAGE HABTI VOYAGE, opérant depuis 1978, se spécialise dans une variété d",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/first-class-travel-international/",
+    "text": "FIRST CLASS TRAVEL INTERNATIONAL Créée en 1995, \"First Class Travel Internationa",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/travel-link-morocco/",
+    "text": "Travel Link Morocco Grâce à notre expertise, nos connaissances et notre compréhe",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/destination-evasion-maroc/",
+    "text": "DESTINATION EVASION MAROC L'agence de voyage Destination Evasion vous convie à u",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/unitour-maroc/",
+    "text": "UNITOUR MAROC UNITOUR Maroc est votre DMC à Marrakech et spécialiste de l'incent",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/sport-travel/",
+    "text": "SPORT TRAVEL Sport Travel c’est avant tout une équipe de professionnels passionn",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/golden-palms-groupes/",
+    "text": "Golden Palms Groupes Golden Palms group est l'une des principales entreprises in",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/ng-travel-event/",
+    "text": "NG TRAVEL & EVENT NG TRAVEL & EVENT est une agence de voyage nouvellement créée ",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/kmt/",
+    "text": "KMT L'agence se spécialise dans l'organisation d'événements, la planification de",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/travel-quest/",
+    "text": "Travel Quest TravelQuest Experience est une agence Destination Management Compan",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/entourage-travel-incorporated/",
+    "text": "ENTOURAGE TRAVEL INCORPORATED Entourage Travel Morocco, cependant, il ne s'agit ",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/listing/s-tours-s/",
+    "text": "S TOURS (S) Depuis plus de 38 ans, STOURS met véritablement tout en œuvre pour…",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=agences-dmc-voyages",
+    "text": "Consultez la liste complète",
+    "rel": ""
+   },
+   {
+    "href": "https://www.facebook.com/visitmarrakechregion/",
+    "text": "Facebook-f",
+    "rel": ""
+   },
+   {
+    "href": "https://www.instagram.com/visitmarrakechregion/",
+    "text": "Instagram",
+    "rel": ""
+   },
+   {
+    "href": "https://www.youtube.com/channel/UCNmiNvxaq0K-CdK_z20BJLA",
+    "text": "Youtube",
+    "rel": ""
+   },
+   {
+    "href": "https://x.com/visit_marrakech",
+    "text": "X-twitter",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/",
+    "text": "SITE GRAND PUBLIC",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "PORTAIL DES PROFESSIONNELS",
+    "rel": ""
+   },
+   {
+    "href": "https://data.visitmarrakech.com/",
+    "text": "PORTAIL OPEN DATA",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/evenements/",
+    "text": "VISIT MARRAKECH CALENDAR",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/",
+    "text": "SITE GRAND PUBLIC",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "PORTAIL DES PROFESSIONNELS",
+    "rel": ""
+   },
+   {
+    "href": "https://data.visitmarrakech.com/",
+    "text": "PORTAIL OPEN DATA",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/evenements/",
+    "text": "VISIT MARRAKECH CALENDAR",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/centres-de-congres-et-dexposition/",
+    "text": "Centres de congrès et d’exposition",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/lieux-evenementiels/",
+    "text": "Lieux Événementiels",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/hotels-receptifs/",
+    "text": "Hôtels Réceptifs",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=agences-dmc-voyages",
+    "text": "Les agences réceptives (DMC)",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/centres-de-congres-et-dexposition/",
+    "text": "Centres de congrès et d’exposition",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/lieux-evenementiels/",
+    "text": "Lieux Événementiels",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/hotels-receptifs/",
+    "text": "Hôtels Réceptifs",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=agences-dmc-voyages",
+    "text": "Les agences réceptives (DMC)",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Trouver un prestataire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "Informations pratiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/actualites/",
+    "text": "Actualités",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Trouver un prestataire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "Informations pratiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/actualites/",
+    "text": "Actualités",
+    "rel": ""
+   },
+   {
+    "href": "https://www.facebook.com/visitmarrakechregion/",
+    "text": "Facebook-f",
+    "rel": ""
+   },
+   {
+    "href": "https://www.instagram.com/visitmarrakechregion/",
+    "text": "Instagram",
+    "rel": ""
+   },
+   {
+    "href": "https://www.youtube.com/channel/UCNmiNvxaq0K-CdK_z20BJLA",
+    "text": "Youtube",
+    "rel": ""
+   },
+   {
+    "href": "https://x.com/visit_marrakech",
+    "text": "X-twitter",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-confidentialite/",
+    "text": "Politique de confidentialité",
+    "rel": "privacy-policy"
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/",
+    "text": "Politique de cookies",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/nous-contacter/",
+    "text": "Nous contacter",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-confidentialite/",
+    "text": "Politique de confidentialité",
+    "rel": "privacy-policy"
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/",
+    "text": "Politique de cookies",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/nous-contacter/",
+    "text": "Nous contacter",
+    "rel": ""
+   },
+   {
+    "href": "https://www.logictechnologies.ma/",
+    "text": "LOGIC TEHNOLOGIES",
+    "rel": "noopener"
+   },
+   {
+    "href": "https://arihmarrakechsafi.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.arwm.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.visitmorocco.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.ville-marrakech.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.regionmarrakech-safi.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mechouarkasbah.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://arihmarrakechsafi.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.arwm.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.visitmorocco.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.ville-marrakech.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.regionmarrakech-safi.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mechouarkasbah.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://arihmarrakechsafi.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.arwm.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/#",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/#",
+    "text": "Lost your password?",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/#",
+    "text": "Sign in",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/#",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/les-agences-receptives-dmc/#",
+    "text": "",
+    "rel": ""
+   }
+  ],
+  "ld": [
+   "\n\t\t\t{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#breadcrumblist\",\"itemListElement\":[{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com#listItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/mice.visitmarrakech.com\",\"nextItem\":{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/#listItem\",\"name\":\"Se r\\u00e9unir\"}},{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/#listItem\",\"position\":2,\"name\":\"Se r\\u00e9unir\",\"item\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/\",\"nextItem\":{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#listItem\",\"name\":\"Les agences r\\u00e9ceptives (DMC)\"},\"previousItem\":{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com#listItem\",\"name\":\"Home\"}},{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#listItem\",\"position\":3,\"name\":\"Les agences r\\u00e9ceptives (DMC)\",\"previousItem\":{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/#listItem\",\"name\":\"Se r\\u00e9unir\"}}]},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#organization\",\"name\":\"MICE in Marrakech\",\"description\":\"Incentive; Congr\\u00e9s; Conf\\u00e9rence; Evenement\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/wp-content\\/uploads\\/2024\\/07\\/logo_dark.svg\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#organizationLogo\",\"width\":1128,\"height\":348},\"image\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#organizationLogo\"}},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#webpage\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/\",\"name\":\"Les agences r\\u00e9ceptives (DMC) | MICE in Marrakech\",\"description\":\"Vos partenaires pour un \\u00e9v\\u00e9nement inoubliable Organiser un \\u00e9v\\u00e9nement \\u00e0 Marrakech, qu\\u2019il s\\u2019agisse d\\u2019un s\\u00e9minaire, d\\u2019un congr\\u00e8s, d\\u2019un mariage ou d\\u2019un voyage d\\u2019entreprise, n\\u00e9cessite des experts locaux capables de transformer vos id\\u00e9es en r\\u00e9alit\\u00e9. Les agences r\\u00e9ceptives (DMC - Destination Management Companies) de Marrakech poss\\u00e8dent l\\u2019expertise, les contacts et la cr\\u00e9ativit\\u00e9 pour concevoir des exp\\u00e9riences\",\"inLanguage\":\"fr-FR\",\"isPartOf\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#breadcrumblist\"},\"image\":{\"@type\":\"ImageObject\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/wp-content\\/uploads\\/2024\\/12\\/DSC_8997.jpg\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#mainImage\",\"width\":1419,\"height\":944},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/se-reunir\\/les-agences-receptives-dmc\\/#mainImage\"},\"datePublished\":\"2022-07-30T00:01:47+02:00\",\"dateModified\":\"2024-12-24T12:01:50+01:00\"},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#website\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/\",\"name\":\"MICE in Marrakech\",\"alternateName\":\"Incentive; Congr\\u00e9s; Conf\\u00e9rence; Mise au vert; Team building; Meetings \\u2026 MICE Marrakech & Convention Bureau\",\"description\":\"Incentive; Congr\\u00e9s; Conf\\u00e9rence; Evenement\",\"inLanguage\":\"fr-FR\",\"publisher\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#organization\"}}]}\n\t\t"
+  ],
+  "words": 1299,
+  "text": "Avis de confidentialité Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé L’accès ou le stockage technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’utilisateur, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing L’accès ou le stockage technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’utilisateur sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences Politique de cookies Politique de confidentialité {title} Infos pratiques Trouver un Prestataire Se réunir La destination Votre événement Espace communication Visit Marrakech & Region Professionnels Open Data Visit Marrakech & Region Professionnels Open Data The Official Website of Marrakech MICE Select LanguageEnglishFrançais Se réunir La destination Votre événement Espace communication Se réunir La destination Votre événement Espace communication Infos pratiques Trouver un Prestataire Les agences réceptives (DMC) Home | Se réunir | Les agences réceptives (DMC) Vos partenaires pour un événement inoubliable Organiser un événement à Marrakech, qu’il s’agisse d’un séminaire, d’un congrès, d’un mariage ou d’un voyage d’entreprise, nécessite des experts locaux capables de transformer vos idées en réalité. Les agences réceptives (DMC - Destination Management Companies) de Marrakech possèdent l’expertise, les contacts et la créativité pour concevoir des expériences sur-mesure, adaptées à vos besoins et à vos ambitions. Pampa Voyage Pampa est une agence événementielle basée à Casablanca, spécialisée dans la conception… CHECK INN MOROCCO Check Inn Morocco est une société de gestion de destination qui aspire… MOROCCO 5 SENSES LEISURE & EVENTS L'équipe est formée d'experts capables de concevoir une présentation parfaite du Maroc… Infinite Morocco Infinite Morocco est une agence experte en organisation d’événements et de voyages… ABERCROMBIE & KENT Abercrombie & Kent est le plus grand réseau mondial de sociétés de… Terres et voyages Terres et Voyages organise des voyages et événements sur mesure au Maroc,… L’ATELIER DU VOYAGE Fondé en 1998, L'Atelier du Voyage a intégré le groupe SATGURU en… Complete Tour Complete Tour, une agence de voyage et DMC (Destination Management Company), s'illustre… ORIGINALLY MOROCCO Originally Morocco est l'une des principales sociétés de gestion de destinations au… Ahsane voyage Chez Ahsane Voyage, la focus est mis sur l’organisation de voyages pour… APADANA MARRAKESH TRAVEL Apadana Marrakesh Travel est une agence de voyage d'affaires de premier plan… IDEAL TRAVEL MOROCCO Ideal Travel Morocco, agence de voyage marocaine basée à Marrakech, propose une… HIBISCUS TRAVEL Expert dans ce domaine, opérons avec conviction et une forte volonté d'innovation,… MOROCCO PRIVATE TRAVEL Votre rêve de découvrir le Maroc depuis Marrakech ou Casablanca est sur… JCI TOURS JCI Tours, avec son équipe dynamique, compétente et motivée, s'engage à créer… MY MOROCCO TRAVEL Nous avons compris qu’aujourd’hui les gens recherchent bien plus que le simple… DELIGHT EVENT MANAGEMENT Basée à Marrakech, DELIGHT Event Management est une agence spécialisée dans la… Intrepid DMC Marrakech Intrepid DMC Marrakech organise des événements uniques et responsables, offrant des solutions… MOROCCO DISCOVERY Morocco Discovery est un voyagiste spécialisé et une agence de voyage de… Terra Sud Services Terra Sud Adventures organise des voyages d’aventure et des événements sur mesure… VIAJES MARRAKECH TOURS Viajes Marrakech organise des circuits, excursions et événements sur mesure au Maroc,… STARWAY ACROSS MOROCCO Across Morocco met son savoir-faire et son expérience à votre disposition. Nous… Maroc Expedition Travel Morocco Expedition Travel est une entreprise de voyages indépendante et locale basée… Sentier BERBERE Sentier Berbère organise des événements authentiques et immersifs à Marrakech, mettant en… MONARCH TRAVEL Marrakech Monarch Travel propose des solutions sur mesure pour l’organisation d’événements et de… MARRAKECH GARDENS TRAVEL Marrakech Gardens Travel offre des solutions personnalisées pour l’organisation d’événements et d’expériences… Ponctuel voyages Ponctuel Voyages à Marrakech propose des solutions MICE et des séjours personnalisés,… Tafoukt Travel Tafoukt Travel organise des événements et séjours sur mesure à Marrakech, combinant… MOUNTAIN VOYAGE Mountain Voyage a été crée pour nous permettre de fournir un service… RJ Travel agency RJ Travel Agency propose des services sur mesure pour l’organisation d’événements et… SOUMA TRAVEL Souma Travel, entreprise de gestion de voyages basée à Marrakech, propose des… VOYAGES 21 VOYAGES 21 propose des séjours, pèlerinages et événements sur mesure, avec plus… INTOUR Spécialiste des voyages incentives et du tourisme, INTOUR organise vos séminaires et… Incircle Leur mission implique l'assemblage de spécialistes de chaque domaine d'expertise et la… Nomade Experience Travel L'objectif et la vision de 'Nomad Experience' se concentrent sur la création… HABTI VOYAGE HABTI VOYAGE, opérant depuis 1978, se spécialise dans une variété de voyages.… FIRST CLASS TRAVEL INTERNATIONAL Créée en 1995, \"First Class Travel International\" est une agence réceptive basée… Travel Link Morocco Grâce à notre expertise, nos connaissances et notre compréhension, nous créons une… DESTINATION EVASION MAROC L'agence de voyage Destination Evasion vous convie à une aventure authentique au… UNITOUR MAROC UNITOUR Maroc est votre DMC à Marrakech et spécialiste de l'incentive fondé… SPORT TRAVEL Sport Travel c’est avant tout une équipe de professionnels passionnés du Maroc,… Golden Palms Groupes Golden Palms group est l'une des principales entreprises internationales spécialisées dans la… NG TRAVEL & EVENT NG TRAVEL & EVENT est une agence de voyage nouvellement créée par… KMT L'agence se spécialise dans l'organisation d'événements, la planification de séminaires, de congrès… Travel Quest TravelQuest Experience est une agence Destination Management Company (DMC) basée à Marrakech,… ENTOURAGE TRAVEL INCORPORATED Entourage Travel Morocco, cependant, il ne s'agit pas seulement de préparer un… S TOURS (S) Depuis plus de 38 ans, STOURS met véritablement tout en œuvre pour… Consultez la liste complète Facebook-f Instagram Youtube X-twitter MICE in Marrakech Ce site est édité et géré par le Conseil Régional du Tourisme de Marrakech-Safi (CRT), l’organisme officiel dédié à la promotion du tourisme MICE dans la région Marrakech-Safi.Tél.: 0524433407 / 0524433406/09Email : contact@visitmarrakech.com Sites connexes SITE GRAND PUBLIC PORTAIL DES PROFESSIONNELS PORTAIL OPEN DATA VISIT MARRAKECH CALENDAR SITE GRAND PUBLIC PORTAIL DES PROFESSIONNELS PORTAIL OPEN DATA VISIT MARRAKECH CALENDAR Choisir Marrakech Centres de congrès et d’exposition Lieux Événementiels Hôtels Réceptifs Les agences réceptives (DMC) Centres de congrès et d’exposition Lieux Événementiels Hôtels Réceptifs Les agences réceptives (DMC) Infos pratiques Trouver un prestataire Informations pratiques Espace communication Actualités Trouver un prestataire Informations pratiques Espace communication Actualités Facebook-f Instagram Youtube X-twitter Politique de confidentialité Politique de cookies Nous contacter Politique de confidentialité Politique de cookies Nous contacter Copyright © Ce site est géré par le Conseil Régional du Tourisme de Marrakech-Safi (CRT).Made with LOGIC TEHNOLOGIES. Sign in Sign in Lost your password? Please enter your email address. You will receive a link to create a new password via email. Reset password Please check your email for more details. Sign in Send Message My favorites Avis de confidentialité",
+  "forms": 2,
+  "tel": [],
+  "wa": false,
+  "mailto": [],
+  "lab_mobile": {
+   "lcp": 27788,
+   "lcpEl": "DIV.elementor-element https://mice.visitmarrakech.com/wp-content/uploads/2024/12/DSC_8997.jpg",
+   "cls": 0.005,
+   "ttfb": 204,
+   "fcp": 9772,
+   "requests": 94,
+   "kb": 5500,
+   "domNodes": 1176
+  }
+ },
+ {
+  "label": "c1",
+  "input_url": "https://mice.visitmarrakech.com/",
+  "status": 200,
+  "headers": {
+   "cache-control": "public, s-maxage=216000",
+   "content-type": "text/html; charset=UTF-8",
+   "link": "<https://mice.visitmarrakech.com/wp-json/>; rel=\"https://api.w.org/\", <https://mice.visitmarrakech.com/wp-json/wp/v2/pages/12>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://mice.visitmarrakech.com/>; rel=shortlink",
+   "server": "cloudflare",
+   "x-powered-by": "PHP/8.0.30"
+  },
+  "url": "https://mice.visitmarrakech.com/",
+  "title": "MICE Marrakech : Organisation de meetings, incentives, congrès, conférences et événements",
+  "description": "MICE Marrakech, Destination Par Excellence pour Tous Vos Événements Accueillante et pleine de surprises, Marrakech est idéale pour tous vos événements. Que ce soit pour des incentives, des congrès, des conférences, des événements, des mises au vert ou des team buildings, Marrakech saura répondre à vos attentes. Grâce à ses paysages uniques, sa nature chaleureuse et",
+  "robots": "max-image-preview:large",
+  "canonical": "https://mice.visitmarrakech.com/",
+  "lang": "fr-FR",
+  "hreflang": [
+   [
+    "fr",
+    "https://mice.visitmarrakech.com/"
+   ],
+   [
+    "en",
+    "https://mice.visitmarrakech.com/en/"
+   ]
+  ],
+  "og": {
+   "og:locale": "fr_FR",
+   "og:site_name": "MICE in Marrakech | Incentive; Congrés; Conférence; Evenement",
+   "og:type": "website",
+   "og:title": "MICE Marrakech : Organisation de meetings, incentives, congrès, conférences et événements",
+   "og:description": "MICE Marrakech, Destination Par Excellence pour Tous Vos Événements Accueillante et pleine de surprises, Marrakech est idéale pour tous vos événements. Que ce soit pour des incentives, des congrès, des conférences, des événements, des mises au vert ou des team buildings, Marrakech saura répondre à vos attentes. Grâce à ses paysages uniques, sa nature chaleureuse et",
+   "og:url": "https://mice.visitmarrakech.com/",
+   "og:image": "https://mice2024.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+   "og:image:secure_url": "https://mice2024.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+   "twitter:card": "summary_large_image",
+   "twitter:title": "MICE Marrakech : Organisation de meetings, incentives, congrès, conférences et événements",
+   "twitter:description": "MICE Marrakech, Destination Par Excellence pour Tous Vos Événements Accueillante et pleine de surprises, Marrakech est idéale pour tous vos événements. Que ce soit pour des incentives, des congrès, des conférences, des événements, des mises au vert ou des team buildings, Marrakech saura répondre à vos attentes. Grâce à ses paysages uniques, sa nature chaleureuse et",
+   "twitter:image": "https://mice2024.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg"
+  },
+  "viewport": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+  "heads": [
+   {
+    "tag": "H2",
+    "text": "Marrakech, Destination Par Excellence pour Tous Vos Événements",
+    "top": 939,
+    "visible": true
+   },
+   {
+    "tag": "H2",
+    "text": "Chiffres Clés",
+    "top": 1150,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech",
+    "top": 1326,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech",
+    "top": 1326,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech",
+    "top": 1326,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech",
+    "top": 1326,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech",
+    "top": 1546,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech",
+    "top": 1546,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech",
+    "top": 1546,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech",
+    "top": 1546,
+    "visible": true
+   },
+   {
+    "tag": "H2",
+    "text": "Choisir Marrakech",
+    "top": 1716,
+    "visible": true
+   },
+   {
+    "tag": "H2",
+    "text": "Trouvez l'inspiration",
+    "top": 2411,
+    "visible": true
+   },
+   {
+    "tag": "H2",
+    "text": "Tout pour un Événement Inoubliable à Marrakech",
+    "top": 3058,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Marrakech est une destination à la hauteur d'évènements de toute taille",
+    "top": 3754,
+    "visible": true
+   },
+   {
+    "tag": "H2",
+    "text": "Agenda Bahja des Événements de la Région (Land of Joy, Terre de Bahja)",
+    "top": 4084,
+    "visible": true
+   },
+   {
+    "tag": "H2",
+    "text": "Actualités",
+    "top": 4365,
+    "visible": true
+   },
+   {
+    "tag": "H2",
+    "text": "Marrakech & les célébrités",
+    "top": 5073,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "MICE In Marrakech",
+    "top": 5897,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Sites Connexes",
+    "top": 5897,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Choisir Marrakech",
+    "top": 5897,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Infos Pratiques",
+    "top": 5897,
+    "visible": true
+   },
+   {
+    "tag": "H4",
+    "text": "Sign in",
+    "top": 0,
+    "visible": false
+   },
+   {
+    "tag": "H4",
+    "text": "Send Message",
+    "top": 0,
+    "visible": false
+   },
+   {
+    "tag": "H4",
+    "text": "My favorites",
+    "top": 0,
+    "visible": false
+   }
+  ],
+  "imgs": [
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+    "alt": "MICE in Marrakech",
+    "loading": null,
+    "srcset": false,
+    "natural": [
+     300,
+     93
+    ],
+    "rendered": [
+     100,
+     31
+    ],
+    "top": 612,
+    "bytes": 6584,
+    "transfer": null,
+    "width_attr": "1128",
+    "height_attr": "348"
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+    "alt": "",
+    "loading": null,
+    "srcset": false,
+    "natural": [
+     300,
+     93
+    ],
+    "rendered": [
+     0,
+     0
+    ],
+    "top": 0,
+    "bytes": 6584,
+    "transfer": null,
+    "width_attr": "1128",
+    "height_attr": "348"
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/logo_dark.svg",
+    "alt": "",
+    "loading": null,
+    "srcset": false,
+    "natural": [
+     300,
+     93
+    ],
+    "rendered": [
+     170,
+     52
+    ],
+    "top": 54,
+    "bytes": 6584,
+    "transfer": null,
+    "width_attr": "1128",
+    "height_attr": "348"
+   }
+  ],
+  "bgs": [
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/day05_23.jpg",
+    "el": "DIV.elementor-custom-embed-image-overlay",
+    "rendered": [
+     1351,
+     760
+    ],
+    "top": 113,
+    "bytes": 388144
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/10_bonnes_raisons-1086x734.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     558,
+     474
+    ],
+    "top": 1889,
+    "bytes": 168308
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/LRG_DSC07479-1086x1050.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     558,
+     225
+    ],
+    "top": 1889,
+    "bytes": 163185
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/tourists-study-the-map-of-city-attractions-1086x935.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     558,
+     225
+    ],
+    "top": 2138,
+    "bytes": 129233
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/slide1-1086x944.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     558,
+     225
+    ],
+    "top": 2536,
+    "bytes": 237708
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/conference-543x525.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     267,
+     225
+    ],
+    "top": 2536,
+    "bytes": 35003
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/team-building-outdoor-543x525.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     267,
+     225
+    ],
+    "top": 2536,
+    "bytes": 71998
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/DSC_2085-1086x934.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     558,
+     225
+    ],
+    "top": 2785,
+    "bytes": 82965
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/wedding-table-543x525.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     267,
+     225
+    ],
+    "top": 2785,
+    "bytes": 67359
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/DSC_4261-543x525.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     267,
+     225
+    ],
+    "top": 2785,
+    "bytes": 65485
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/DSC_9439-1086x701.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     558,
+     474
+    ],
+    "top": 3207,
+    "bytes": 117802
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/sofitel4-543x525.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     267,
+     225
+    ],
+    "top": 3207,
+    "bytes": 82579
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/slide2-543x525.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     267,
+     225
+    ],
+    "top": 3207,
+    "bytes": 36533
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/slide1-543x525.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     267,
+     225
+    ],
+    "top": 3456,
+    "bytes": 81838
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/FLASH_STYLE-543x525.jpg",
+    "el": "A.brk-bx-item",
+    "rendered": [
+     267,
+     225
+    ],
+    "top": 3456,
+    "bytes": 89401
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/Photos-jury-et-laureats-%C2%A9%EF%B8%8Fassaoud-FIFM24-scaled-1-800x528.jpg",
+    "el": "DIV.brk--img",
+    "rendered": [
+     364,
+     242
+    ],
+    "top": 4514,
+    "bytes": 75668
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/GITEX-AFRICA-3-800x528.jpg",
+    "el": "DIV.brk--img",
+    "rendered": [
+     364,
+     242
+    ],
+    "top": 4514,
+    "bytes": 131177
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/07/13901-800x528.jpg",
+    "el": "DIV.brk--img",
+    "rendered": [
+     364,
+     242
+    ],
+    "top": 4514,
+    "bytes": 65225
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/e41f20228462e4252fce4edd571483cb-800x528.jpg",
+    "el": "DIV.brk--img",
+    "rendered": [
+     364,
+     242
+    ],
+    "top": 5174,
+    "bytes": 100735
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/marrakech-film-800x528.jpg",
+    "el": "DIV.brk--img",
+    "rendered": [
+     364,
+     242
+    ],
+    "top": 5174,
+    "bytes": 71536
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/GETQ5YZXDBBUFN2HQE35TSY23A-800x528.avif",
+    "el": "DIV.brk--img",
+    "rendered": [
+     364,
+     242
+    ],
+    "top": 5174,
+    "bytes": 103030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arih-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 28959
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arwm-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 5030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/crt-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 14634
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/unwto-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 4600
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/wtcf.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 59030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/logo-aravms.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 151671
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/logo-asso-fra.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 44250
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/onmt-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 6241
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/ville-de-marrakech-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 33311
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/region.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 25915
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/mechouar-kasbah.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 101057
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arih-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 28959
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arwm-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 5030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/crt-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 14634
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/unwto-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 4600
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/wtcf.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 59030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/logo-aravms.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 151671
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/logo-asso-fra.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 44250
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/onmt-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 6241
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/ville-de-marrakech-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 33311
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/region.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 25915
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/mechouar-kasbah.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 101057
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arih-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 28959
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/arwm-1.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 5030
+   },
+   {
+    "src": "https://mice.visitmarrakech.com/wp-content/uploads/2024/12/crt-logo.svg",
+    "el": "DIV.elementor-carousel-image",
+    "rendered": [
+     176,
+     80
+    ],
+    "top": 6413,
+    "bytes": 14634
+   }
+  ],
+  "vids": [],
+  "links": [
+   {
+    "href": "https://mice.visitmarrakech.com/",
+    "text": "",
+    "rel": "home"
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/#cmplz-manage-consent-container",
+    "text": "Gérer les options",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/#cmplz-cookies-overview",
+    "text": "Gérer les services",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/#cmplz-tcf-wrapper",
+    "text": "Gérer {vendor_count} fournisseurs",
+    "rel": ""
+   },
+   {
+    "href": "https://cookiedatabase.org/tcf/purposes/",
+    "text": "En savoir plus sur ces finalités",
+    "rel": "noopener noreferrer nofollow"
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/#cmplz-manage-consent-container",
+    "text": "Voir les préférences",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/",
+    "text": "Politique de cookies",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-confidentialite/",
+    "text": "Politique de confidentialité",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "{title}",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "Infos pratiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Trouver un Prestataire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/",
+    "text": "Se réunir",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/",
+    "text": "La destination",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/votre-evenement-marrakech/",
+    "text": "Votre événement",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/",
+    "text": "Visit Marrakech & Region",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "Professionnels",
+    "rel": ""
+   },
+   {
+    "href": "https://data.visitmarrakech.com/",
+    "text": "Open Data",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/",
+    "text": "Visit Marrakech & Region",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "Professionnels",
+    "rel": ""
+   },
+   {
+    "href": "https://data.visitmarrakech.com/",
+    "text": "Open Data",
+    "rel": ""
+   },
+   {
+    "href": "https://www.facebook.com/visitmarrakechregion/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.instagram.com/visitmarrakechregion/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.youtube.com/@visitmarrakechregion7152",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://x.com/visit_marrakech",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/",
+    "text": "Se réunir",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/",
+    "text": "La destination",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/votre-evenement-marrakech/",
+    "text": "Votre événement",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/",
+    "text": "Se réunir",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/",
+    "text": "La destination",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/votre-evenement-marrakech/",
+    "text": "Votre événement",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "Infos pratiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Trouver un Prestataire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/10-raisons-de-choisir-marrakech/",
+    "text": "10 Raisons de Choisir Marrakech Marrakech est une destination de choix, incluant",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/chiffres-cles/",
+    "text": "Chiffres clés Plusieurs atouts placent Marrakech sur le podium Marocain du march",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication Des brochures, plans et guides pour vous aider à planifier ",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "Conférence, réunions, événements",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "Séminaire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "Team building",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "Mariage, Anniversaire, Lune de miel",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "Soirée et Diner de Gala",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "Enregistrement d'un clip vidéo",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=lieux-evenementiels",
+    "text": "Un lieu Pour accueillir vos événements",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=hotels-receptifs",
+    "text": "Hôtels Réceptifs Avec salles de réunion",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Un prestataire Pour vous épauler",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=agences-dmc-voyages",
+    "text": "Une agence Pour vous guider",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=activites-et-loisirs",
+    "text": "Des activités Et animations extraordinaires",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/votre-evenement-de-a-a-z/",
+    "text": "Marrakech est une destination à la hauteur d'évènements de toute taille Marrakec",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/evenements/",
+    "text": "Cliquez ici pour accéder à l'agenda",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/le-festival-international-du-film-de-marrakech-un-carrefour-mondial-du-7e-art/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/le-festival-international-du-film-de-marrakech-un-carrefour-mondial-du-7e-art/",
+    "text": "Le Festival International du Film de Marrakech : Un carrefour mondial du 7e art",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/category/evenementiel/",
+    "text": "Événementiel",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/le-festival-international-du-film-de-marrakech-un-carrefour-mondial-du-7e-art/",
+    "text": "Continue reading",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/marrakech-capitale-mice-du-maroc-pourquoi-elle-attire-tant-les-evenements-daffaires/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/marrakech-capitale-mice-du-maroc-pourquoi-elle-attire-tant-les-evenements-daffaires/",
+    "text": "Marrakech : Capitale MICE du Maroc, pourquoi elle attire tant les événements d’a",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/category/chiffres-et-statistiques/",
+    "text": "Chiffres et Statistiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/marrakech-capitale-mice-du-maroc-pourquoi-elle-attire-tant-les-evenements-daffaires/",
+    "text": "Continue reading",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/nouveaux-details-sur-le-futur-palais-des-congres-de-marrakech-prevu-en-2025/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/nouveaux-details-sur-le-futur-palais-des-congres-de-marrakech-prevu-en-2025/",
+    "text": "Nouveaux détails sur le futur palais des congrès de Marrakech prévu en 2025",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/category/destination/",
+    "text": "Destination",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/nouveaux-details-sur-le-futur-palais-des-congres-de-marrakech-prevu-en-2025/",
+    "text": "Continue reading",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/quand-marrakech-devient-le-theatre-de-mariages-de-stars/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/quand-marrakech-devient-le-theatre-de-mariages-de-stars/",
+    "text": "Quand Marrakech devient le théâtre de mariages de stars",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/category/marrakech-les-celebrites/",
+    "text": "Marrakech & les célébrités",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/quand-marrakech-devient-le-theatre-de-mariages-de-stars/",
+    "text": "Continue reading",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/les-grandes-productions-cinematographiques-tournees-a-marrakech/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/les-grandes-productions-cinematographiques-tournees-a-marrakech/",
+    "text": "Les grandes productions cinématographiques tournées à Marrakech",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/category/marrakech-les-celebrites/",
+    "text": "Marrakech & les célébrités",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/les-grandes-productions-cinematographiques-tournees-a-marrakech/",
+    "text": "Continue reading",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/marrakech-le-refuge-prefere-des-stars-internationales/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/marrakech-le-refuge-prefere-des-stars-internationales/",
+    "text": "Marrakech : Le refuge préféré des stars internationales",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/category/marrakech-les-celebrites/",
+    "text": "Marrakech & les célébrités",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/marrakech-le-refuge-prefere-des-stars-internationales/",
+    "text": "Continue reading",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/actualites/",
+    "text": "Voir plus d'articles",
+    "rel": ""
+   },
+   {
+    "href": "https://www.facebook.com/visitmarrakechregion/",
+    "text": "Facebook-f",
+    "rel": ""
+   },
+   {
+    "href": "https://www.instagram.com/visitmarrakechregion/",
+    "text": "Instagram",
+    "rel": ""
+   },
+   {
+    "href": "https://www.youtube.com/channel/UCNmiNvxaq0K-CdK_z20BJLA",
+    "text": "Youtube",
+    "rel": ""
+   },
+   {
+    "href": "https://x.com/visit_marrakech",
+    "text": "X-twitter",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/",
+    "text": "SITE GRAND PUBLIC",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "PORTAIL DES PROFESSIONNELS",
+    "rel": ""
+   },
+   {
+    "href": "https://data.visitmarrakech.com/",
+    "text": "PORTAIL OPEN DATA",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/evenements/",
+    "text": "VISIT MARRAKECH CALENDAR",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/",
+    "text": "SITE GRAND PUBLIC",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "PORTAIL DES PROFESSIONNELS",
+    "rel": ""
+   },
+   {
+    "href": "https://data.visitmarrakech.com/",
+    "text": "PORTAIL OPEN DATA",
+    "rel": ""
+   },
+   {
+    "href": "https://visitmarrakech.com/evenements/",
+    "text": "VISIT MARRAKECH CALENDAR",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/centres-de-congres-et-dexposition/",
+    "text": "Centres de congrès et d’exposition",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/lieux-evenementiels/",
+    "text": "Lieux Événementiels",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/hotels-receptifs/",
+    "text": "Hôtels Réceptifs",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=agences-dmc-voyages",
+    "text": "Les agences réceptives (DMC)",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/centres-de-congres-et-dexposition/",
+    "text": "Centres de congrès et d’exposition",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/lieux-evenementiels/",
+    "text": "Lieux Événementiels",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/se-reunir/hotels-receptifs/",
+    "text": "Hôtels Réceptifs",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/?type=agences-dmc-voyages",
+    "text": "Les agences réceptives (DMC)",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Trouver un prestataire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "Informations pratiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/actualites/",
+    "text": "Actualités",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/travel-trade/",
+    "text": "Trouver un prestataire",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/la-destination/informations-pratiques/",
+    "text": "Informations pratiques",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/espace-communication/",
+    "text": "Espace communication",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/actualites/",
+    "text": "Actualités",
+    "rel": ""
+   },
+   {
+    "href": "https://www.facebook.com/visitmarrakechregion/",
+    "text": "Facebook-f",
+    "rel": ""
+   },
+   {
+    "href": "https://www.instagram.com/visitmarrakechregion/",
+    "text": "Instagram",
+    "rel": ""
+   },
+   {
+    "href": "https://www.youtube.com/channel/UCNmiNvxaq0K-CdK_z20BJLA",
+    "text": "Youtube",
+    "rel": ""
+   },
+   {
+    "href": "https://x.com/visit_marrakech",
+    "text": "X-twitter",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-confidentialite/",
+    "text": "Politique de confidentialité",
+    "rel": "privacy-policy"
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/",
+    "text": "Politique de cookies",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/nous-contacter/",
+    "text": "Nous contacter",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-confidentialite/",
+    "text": "Politique de confidentialité",
+    "rel": "privacy-policy"
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/politique-de-cookies/",
+    "text": "Politique de cookies",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/nous-contacter/",
+    "text": "Nous contacter",
+    "rel": ""
+   },
+   {
+    "href": "https://www.logictechnologies.ma/",
+    "text": "LOGIC TEHNOLOGIES",
+    "rel": "noopener"
+   },
+   {
+    "href": "https://arihmarrakechsafi.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.arwm.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.visitmorocco.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.ville-marrakech.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.regionmarrakech-safi.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mechouarkasbah.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://arihmarrakechsafi.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.arwm.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.visitmorocco.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.ville-marrakech.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.regionmarrakech-safi.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mechouarkasbah.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://arihmarrakechsafi.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://www.arwm.ma/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://pro.visitmarrakech.com/",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "Lost your password?",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "Sign in",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "",
+    "rel": ""
+   },
+   {
+    "href": "https://mice.visitmarrakech.com/#",
+    "text": "",
+    "rel": ""
+   }
+  ],
+  "ld": [
+   "\n\t\t\t{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#breadcrumblist\",\"itemListElement\":[{\"@type\":\"ListItem\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com#listItem\",\"position\":1,\"name\":\"Home\"}]},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#organization\",\"name\":\"MICE in Marrakech\",\"description\":\"Incentive; Congr\\u00e9s; Conf\\u00e9rence; Evenement\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/wp-content\\/uploads\\/2024\\/07\\/logo_dark.svg\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#organizationLogo\",\"width\":1128,\"height\":348},\"image\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#organizationLogo\"}},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#webpage\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/\",\"name\":\"MICE Marrakech : Organisation de meetings, incentives, congr\\u00e8s, conf\\u00e9rences et \\u00e9v\\u00e9nements\",\"description\":\"MICE Marrakech, Destination Par Excellence pour Tous Vos \\u00c9v\\u00e9nements Accueillante et pleine de surprises, Marrakech est id\\u00e9ale pour tous vos \\u00e9v\\u00e9nements. Que ce soit pour des incentives, des congr\\u00e8s, des conf\\u00e9rences, des \\u00e9v\\u00e9nements, des mises au vert ou des team buildings, Marrakech saura r\\u00e9pondre \\u00e0 vos attentes. Gr\\u00e2ce \\u00e0 ses paysages uniques, sa nature chaleureuse et\",\"inLanguage\":\"fr-FR\",\"isPartOf\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#breadcrumblist\"},\"image\":{\"@type\":\"ImageObject\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/wp-content\\/uploads\\/2022\\/08\\/day05_23.jpg\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#mainImage\",\"width\":1440,\"height\":960},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#mainImage\"},\"datePublished\":\"2024-07-05T22:18:58+02:00\",\"dateModified\":\"2024-12-25T21:47:49+01:00\"},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#website\",\"url\":\"https:\\/\\/mice.visitmarrakech.com\\/\",\"name\":\"MICE in Marrakech\",\"alternateName\":\"Incentive; Congr\\u00e9s; Conf\\u00e9rence; Mise au vert; Team building; Meetings \\u2026 MICE Marrakech & Convention Bureau\",\"description\":\"Incentive; Congr\\u00e9s; Conf\\u00e9rence; Evenement\",\"inLanguage\":\"fr-FR\",\"publisher\":{\"@id\":\"https:\\/\\/mice.visitmarrakech.com\\/#organization\"}}]}\n\t\t"
+  ],
+  "words": 1388,
+  "text": "Avis de confidentialité Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé L’accès ou le stockage technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’utilisateur, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing L’accès ou le stockage technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’utilisateur sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences Politique de cookies Politique de confidentialité {title} Infos pratiques Trouver un Prestataire Se réunir La destination Votre événement Espace communication Visit Marrakech & Region Professionnels Open Data Visit Marrakech & Region Professionnels Open Data The Official Website of Marrakech MICE Select LanguageEnglishFrançais Se réunir La destination Votre événement Espace communication Se réunir La destination Votre événement Espace communication Infos pratiques Trouver un Prestataire Marrakech, Destination Par Excellence pour Tous Vos Événements Accueillante et pleine de surprises, Marrakech est idéale pour tous vos événements. Que ce soit pour des incentives, des congrès, des conférences, des événements, des mises au vert ou des team buildings, Marrakech saura répondre à vos attentes. Grâce à ses paysages uniques, sa nature chaleureuse et accueillante, sa créativité et ses infrastructures de haut standing, Marrakech présente des trésors insoupçonnés pour toutes vos réunions et rencontres professionnelles. Chiffres Clés Premier pôle touristique marocain, Marrakech surprend par sa diversité patrimoniale, culturelle, naturelle et touristique. Marrakech Patrimoine Mondial de l'humanité (UNESCO) Marrakech Délices de la cuisine Marocaine et Internationale Marrakech Capitale Mondiale de l’artisanat traditionnel Marrakech Une destination golfique Marrakech Destination de Surf, Windsurf et Kitesurf Marrakech Certifiée ISO 14001, pour l'écotourisme Marrakech Capitale incontournable du tourisme d'affaires Marrakech \"Travellers' Choice\" meilleure destination 2015 Choisir Marrakech Marrakech, ville emblématique du Maroc, charme par son patrimoine exceptionnel, sa richesse culturelle, et son art de vivre authentique. Destination gastronomique et événementielle par excellence, elle offre une expérience unique alliant traditions et modernité. Retrouvez ici 10 bonnes raisons de choisir Marrakech, des informations pratiques pour organiser votre séjour ou événement, ainsi que des brochures, guides et vidéos interactives pour une découverte immersive de la ville. 10 Raisons de Choisir Marrakech Marrakech est une destination de choix, incluant des aspects culturels, historiques, gastronomiques et de loisirs Chiffres clés Plusieurs atouts placent Marrakech sur le podium Marocain du marché MICE Espace communication Des brochures, plans et guides pour vous aider à planifier votre séjour et organiser votre événement Trouvez l'inspiration Vous avez envie d’organiser votre événement à Marrakech ? Vous avez une idée ? Laissez-vous inspirer par nos propositions diverses et variées. Conférence, réunions, événements Séminaire Team building Mariage, Anniversaire, Lune de miel Soirée et Diner de Gala Enregistrement d'un clip vidéo Tout pour un Événement Inoubliable à Marrakech Organisez un événement à Marrakech avec l'assurance de profiter de lieux d'exception, d'hôtels réceptifs avec salles de réunion, de prestataires qualifiés, d'agences expertes pour vous guider et d'activités extraordinaires pour divertir vos invités. Marrakech a tout ce qu'il faut pour faire de votre événement un succès mémorable. Un lieu Pour accueillir vos événements Hôtels Réceptifs Avec salles de réunion Un prestataire Pour vous épauler Une agence Pour vous guider Des activités Et animations extraordinaires Marrakech est une destination à la hauteur d'évènements de toute taille Marrakech s’impose comme une destination incontournable pour l’organisation de grands événements internationaux grâce à ses infrastructures modernes et ses lieux uniques. La ville accueille des manifestations prestigieuses telles que les Assemblées annuelles 2023 du Groupe de la Banque mondiale et du FMI, le GITEX AFRICA, plus grand événement technologique en Afrique, ou encore la Marrakech Fashion Week, mettant en avant la créativité marocaine. Des festivals comme le Lost Nomads Festival, dédié à la musique électronique, et le Festival Gnaoua et Musiques du Monde, célébrant la richesse musicale, viennent enrichir son calendrier. Marrakech a également été le théâtre d’événements majeurs tels que la COP 22, réunissant des chefs d’État, le Festival International du Film de Marrakech, ou encore le Marrakech du Rire, l’un des plus grands festivals d’humour francophone. Avec ses nombreux palais, ses salles de congrès modernes et son charme unique, Marrakech est une destination idéale pour des congrès, festivals et incentives d’exception. Agenda Bahja des Événements de la Région (Land of Joy, Terre de Bahja) Consultez l’agenda en ligne sur www.visitmarrakech.com pour découvrir une liste exhaustive d'activités culturelles, festives et communautaires. Mis à jour régulièrement ! Cliquez ici pour accéder à l'agenda Actualités Découvrez les dernières tendances et actualités de la destination Marrakech : des ouvertures d'hôtels luxueux aux rénovations des lieux emblématiques, des nouveaux restaurants aux espaces de réception exclusifs. Restez informé sur tout ce qui fait la une dans la vibrante ville de Marrakech Le Festival International du Film de Marrakech : Un carrefour mondial du 7e art Événementiel 25 décembre 2024 Depuis sa création en 2001, le Festival International du Film de Marrakech s’est imposé comme… Continue reading Marrakech : Capitale MICE du Maroc, pourquoi elle attire tant les événements d’affaires ? Chiffres et Statistiques 10 juillet 2024 La ville ocre brille d’abord par la qualité de ses infrastructures d’accueil, consolidant ainsi sa… Continue reading Nouveaux détails sur le futur palais des congrès de Marrakech prévu en 2025 Destination 10 juillet 2024 Le futur centre de congrès et d’expositions de Marrakech pourra accueillir jusqu’à 20.000 personnes lors… Continue reading Marrakech & les célébrités Des stars et des personnalités du Maroc et de l'étranger. Une belle histoire d'amour. Quand Marrakech devient le théâtre de mariages de stars Marrakech & les célébrités 25 décembre 2024 Marrakech, avec son charme intemporel et ses décors somptueux, est devenue l’une des destinations les… Continue reading Les grandes productions cinématographiques tournées à Marrakech Marrakech & les célébrités 25 décembre 2024 Marrakech, avec ses paysages uniques, son architecture majestueuse et son atmosphère authentique, est depuis des… Continue reading Marrakech : Le refuge préféré des stars internationales Marrakech & les célébrités 25 décembre 2024 Avec son mélange unique de tradition et de luxe, Marrakech est devenue un véritable havre… Continue reading Voir plus d'articles Facebook-f Instagram Youtube X-twitter MICE in Marrakech Ce site est édité et géré par le Conseil Régional du Tourisme de Marrakech-Safi (CRT), l’organisme officiel dédié à la promotion du tourisme MICE dans la région Marrakech-Safi.Tél.: 0524433407 / 0524433406/09Email : contact@visitmarrakech.com Sites connexes SITE GRAND PUBLIC PORTAIL DES PROFESSIONNELS PORTAIL OPEN DATA VISIT MARRAKECH CALENDAR SITE GRAND PUBLIC PORTAIL DES PROFESSIONNELS PORTAIL OPEN DATA VISIT MARRAKECH CALENDAR Choisir Marrakech Centres de congrès et d’exposition Lieux Événementiels Hôtels Réceptifs Les agences réceptives (DMC) Centres de congrès et d’exposition Lieux Événementiels Hôtels Réceptifs Les agences réceptives (DMC) Infos pratiques Trouver un prestataire Informations pratiques Espace communication Actualités Trouver un prestataire Informations pratiques Espace communication Actualités Facebook-f Instagram Youtube X-twitter Politique de confidentialité Politique de cookies Nous contacter Politique de confidentialité Politique de cookies Nous contacter Copyright © Ce site est géré par le Conseil Régional du Tourisme de Marrakech-Safi (CRT).Made with LOGIC TEHNOLOGIES. Sign in Sign in Lost your password? Please enter your email address. You will receive a link to create a new password via email. Reset password Please check your email for more details. Sign in Send Message My favorites Avis de confidentialité",
+  "forms": 2,
+  "tel": [],
+  "wa": false,
+  "mailto": [],
+  "lab_mobile": {
+   "lcp": 33904,
+   "lcpEl": "DIV.elementor-custom-embed-image-overlay https://mice.visitmarrakech.com/wp-content/uploads/2024/07/day05_23.jpg",
+   "cls": 0.055,
+   "ttfb": 175,
+   "fcp": 11204,
+   "requests": 116,
+   "kb": 7268,
+   "domNodes": 1123
+  }
+ }
+]
