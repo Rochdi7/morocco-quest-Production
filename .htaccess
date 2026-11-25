@@ -24,7 +24,7 @@
     # -------------------------------------------------
     RewriteRule (^|/)\.(?!well-known(/|$)) - [R=404,L]
     RewriteRule ^(app|bootstrap|config|content|database|docs|lang|node_modules|resources|routes|scripts|skills|tests|vendor|Mounir|morocco-quest\.com)(/|$) - [R=404,L]
-    RewriteRule \.(md|log|lock|py|sh|sql|bak|dist|ya?ml|pub|ini|env|mjs)$ - [R=404,L]
+    RewriteRule \.(md|csv|tsv|xlsx?|log|lock|py|sh|sql|bak|dist|ya?ml|pub|ini|env|mjs)$ - [R=404,L]
     RewriteRule ^(artisan|composer\.json|package(-lock)?\.json|vite\.config\.js|purgecss\.config\.js|phpunit\.xml|readme\.html|license\.txt|____\.htaccess)$ - [R=404,L]
     RewriteRule (^|/)error_log$ - [R=404,L]
     RewriteRule ^(?!index\.php$).+\.php$ - [R=404,L]
